@@ -141,21 +141,21 @@ $EndComp
 $Comp
 L ax7010_servo_reva:R RGS1
 U 1 1 6600002E
-P 7950 1650
-F 0 "RGS1" H 8050 1750 50  0000 C CNN
-F 1 "10k" H 8050 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 1650 50  0001 C CNN
-	1    7950 1650
+P 7700 1650
+F 0 "RGS1" H 7800 1750 50  0000 C CNN
+F 1 "10k" H 7800 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 1650 50  0001 C CNN
+	1    7700 1650
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R RGS2
 U 1 1 6600002F
-P 7950 2750
-F 0 "RGS2" H 8050 2850 50  0000 C CNN
-F 1 "10k" H 8050 2650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 2750 50  0001 C CNN
-	1    7950 2750
+P 7700 2750
+F 0 "RGS2" H 7800 2850 50  0000 C CNN
+F 1 "10k" H 7800 2650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 2750 50  0001 C CNN
+	1    7700 2750
 	1 0 0 -1
 $EndComp
 $Comp
@@ -231,21 +231,21 @@ $EndComp
 $Comp
 L ax7010_servo_reva:R RGS3
 U 1 1 66000037
-P 7950 3600
-F 0 "RGS3" H 8050 3700 50  0000 C CNN
-F 1 "10k" H 8050 3500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 3600 50  0001 C CNN
-	1    7950 3600
+P 7700 3600
+F 0 "RGS3" H 7800 3700 50  0000 C CNN
+F 1 "10k" H 7800 3500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 3600 50  0001 C CNN
+	1    7700 3600
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R RGS4
 U 1 1 66000038
-P 7950 4700
-F 0 "RGS4" H 8050 4800 50  0000 C CNN
-F 1 "10k" H 8050 4600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 4700 50  0001 C CNN
-	1    7950 4700
+P 7700 4700
+F 0 "RGS4" H 7800 4800 50  0000 C CNN
+F 1 "10k" H 7800 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 4700 50  0001 C CNN
+	1    7700 4700
 	1 0 0 -1
 $EndComp
 $Comp
@@ -321,21 +321,21 @@ $EndComp
 $Comp
 L ax7010_servo_reva:R RGS5
 U 1 1 66000040
-P 7950 5550
-F 0 "RGS5" H 8050 5650 50  0000 C CNN
-F 1 "10k" H 8050 5450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 5550 50  0001 C CNN
-	1    7950 5550
+P 7700 5550
+F 0 "RGS5" H 7800 5650 50  0000 C CNN
+F 1 "10k" H 7800 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 5550 50  0001 C CNN
+	1    7700 5550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R RGS6
 U 1 1 66000041
-P 7950 6650
-F 0 "RGS6" H 8050 6750 50  0000 C CNN
-F 1 "10k" H 8050 6550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7950 6650 50  0001 C CNN
-	1    7950 6650
+P 7700 6650
+F 0 "RGS6" H 7800 6750 50  0000 C CNN
+F 1 "10k" H 7800 6550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7700 6650 50  0001 C CNN
+	1    7700 6650
 	1 0 0 -1
 $EndComp
 $Comp
@@ -485,9 +485,9 @@ MOTOR OUTPUT
 Text Notes 650 6750 0    42   ~ 12
 RUN_OK = GATE_EN & PWR_GOOD & OCP_N. FPGA deadtime remains >=500 ns; FD6288 internal deadtime is not the primary deadtime mechanism.
 Text Notes 650 6890 0    42   ~ 12
-Bootstrap relationship is explicit per phase: VDRV_12V -> diode -> BST_x; CBOOT is between BST_x and SW_x; FD6288 VBx/VSx use the same named nets.
+Bootstrap relationship: VDRV_12V -> diode -> BST_x; CBOOT is between BST_x and SW_x; FD6288 VBx/VSx use the same named nets.
 Text Notes 650 7030 0    42   ~ 12
-RG starts at 10R; RGS=10k. Tune RG from measured VGS/SW ringing, dV/dt and switching loss. Shunt Kelvin pads are wired to the same force nodes but must route separately in PCB.
+RG starts at 10R; RGS=10k. Tune RG from measured VGS/SW ringing and loss. Shunt Kelvin pads share the force nets electrically but route separately in PCB.
 Wire Wire Line
 	500 1100 720 1100
 Wire Wire Line
@@ -819,19 +819,19 @@ GL_U
 Wire Wire Line
 	7650 2400 7650 2400
 Wire Wire Line
-	7650 1650 7650 1650
+	7400 1650 7650 1650
 Wire Wire Line
 	7650 1650 7650 1300
 Wire Wire Line
-	8250 1650 8250 1650
+	8000 1650 8250 1650
 Wire Wire Line
 	8250 1650 8250 1950
 Wire Wire Line
-	7650 2750 7650 2750
+	7400 2750 7650 2750
 Wire Wire Line
 	7650 2750 7650 2400
 Wire Wire Line
-	8250 2750 8250 2750
+	8000 2750 8250 2750
 Wire Wire Line
 	8250 2750 8250 3050
 Wire Wire Line
@@ -884,19 +884,19 @@ GL_V
 Wire Wire Line
 	7650 4350 7650 4350
 Wire Wire Line
-	7650 3600 7650 3600
+	7400 3600 7650 3600
 Wire Wire Line
 	7650 3600 7650 3250
 Wire Wire Line
-	8250 3600 8250 3600
+	8000 3600 8250 3600
 Wire Wire Line
 	8250 3600 8250 3900
 Wire Wire Line
-	7650 4700 7650 4700
+	7400 4700 7650 4700
 Wire Wire Line
 	7650 4700 7650 4350
 Wire Wire Line
-	8250 4700 8250 4700
+	8000 4700 8250 4700
 Wire Wire Line
 	8250 4700 8250 5000
 Wire Wire Line
@@ -949,19 +949,19 @@ GL_W
 Wire Wire Line
 	7650 6300 7650 6300
 Wire Wire Line
-	7650 5550 7650 5550
+	7400 5550 7650 5550
 Wire Wire Line
 	7650 5550 7650 5200
 Wire Wire Line
-	8250 5550 8250 5550
+	8000 5550 8250 5550
 Wire Wire Line
 	8250 5550 8250 5850
 Wire Wire Line
-	7650 6650 7650 6650
+	7400 6650 7650 6650
 Wire Wire Line
 	7650 6650 7650 6300
 Wire Wire Line
-	8250 6650 8250 6650
+	8000 6650 8250 6650
 Wire Wire Line
 	8250 6650 8250 6950
 Wire Wire Line
