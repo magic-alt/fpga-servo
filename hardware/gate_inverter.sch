@@ -468,7 +468,6 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 5350 5000 50  0001 C CNN
 	1    5350 5000
 	1 0 0 -1
 $EndComp
-
 Text Notes 650 450 0    62   ~ 12
 FPGA PWM -> HARDWARE RUN GATING -> FD6288 -> GATE R -> 3-PHASE BRIDGE -> 5mR SHUNT -> MOTOR
 Text Notes 650 6850 0    44   ~ 12
