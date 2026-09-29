@@ -50,59 +50,66 @@ F11 "PWM_VL" I L 8500 3500 50
 F12 "PWM_WH" I L 8500 3700 50
 F13 "PWM_WL" I L 8500 3900 50
 F14 "GND" B L 8500 4250 50
-F15 "U_SH_P" O R 13100 1800 50
-F16 "U_SH_N" O R 13100 2000 50
-F17 "V_SH_P" O R 13100 2300 50
-F18 "V_SH_N" O R 13100 2500 50
-F19 "W_SH_P" O R 13100 2800 50
-F20 "W_SH_N" O R 13100 3000 50
+F15 "SW_U" O R 13100 1800 50
+F16 "PH_U" O R 13100 2000 50
+F17 "SW_V" O R 13100 2300 50
+F18 "PH_V" O R 13100 2500 50
+F19 "SW_W" O R 13100 2800 50
+F20 "PH_W" O R 13100 3000 50
 $EndSheet
 $Sheet
-S 800 5100 2900 3300
+S 800 5100 2900 4400
 U 69000004
 F0 "AX7010 PL Interface" 50
 F1 "ax7010_interface.sch" 50
 F2 "VIO_3V3" O R 3700 5400 50
-F3 "PWM_UH" O R 3700 5650 50
-F4 "PWM_UL" O R 3700 5850 50
-F5 "PWM_VH" O R 3700 6050 50
-F6 "PWM_VL" O R 3700 6250 50
-F7 "PWM_WH" O R 3700 6450 50
-F8 "PWM_WL" O R 3700 6650 50
-F9 "GATE_EN" O R 3700 6850 50
-F10 "ADC_CONVST" O R 3700 7050 50
-F11 "ADC_SCLK" O R 3700 7250 50
-F12 "ADC_CS_N" O R 3700 7450 50
-F13 "ADC_RESET" O R 3700 7650 50
-F14 "ADC_DOUTA" I R 3700 7850 50
-F15 "ADC_DOUTB" I R 3700 8000 50
-F16 "ADC_BUSY" I R 3700 8150 50
-F17 "ADC_FRSTDATA" I R 3700 8300 50
-F18 "GND" B R 3700 8400 50
+F3 "PWM_UH" O R 3700 5600 50
+F4 "PWM_UL" O R 3700 5800 50
+F5 "PWM_VH" O R 3700 6000 50
+F6 "PWM_VL" O R 3700 6200 50
+F7 "PWM_WH" O R 3700 6400 50
+F8 "PWM_WL" O R 3700 6600 50
+F9 "GATE_EN" O R 3700 6800 50
+F10 "FAULT_CLEAR" O R 3700 7000 50
+F11 "ADC_CONVST" O R 3700 7200 50
+F12 "ADC_SCLK" O R 3700 7400 50
+F13 "ADC_CS_N" O R 3700 7600 50
+F14 "ADC_RESET" O R 3700 7800 50
+F15 "ADC_DOUTA" I R 3700 8000 50
+F16 "ADC_DOUTB" I R 3700 8150 50
+F17 "ADC_BUSY" I R 3700 8300 50
+F18 "ADC_FRSTDATA" I R 3700 8450 50
+F19 "ENC_A" I R 3700 8600 50
+F20 "ENC_B" I R 3700 8750 50
+F21 "ENC_Z" I R 3700 8900 50
+F22 "OCP_N" I R 3700 9050 50
+F23 "PWR_GOOD" I R 3700 9200 50
+F24 "GND" B R 3700 9350 50
 $EndSheet
 $Sheet
-S 5000 5200 3300 3300
+S 5000 5200 3300 3900
 U 69000005
 F0 "Current Sense / OCP / ADC" 50
 F1 "current_adc.sch" 50
 F2 "VIO_3V3" I L 5000 5500 50
 F3 "VA_5V" I L 5000 5750 50
-F4 "ADC_CONVST" I L 5000 6100 50
-F5 "ADC_SCLK" I L 5000 6300 50
-F6 "ADC_CS_N" I L 5000 6500 50
-F7 "ADC_RESET" I L 5000 6700 50
-F8 "ADC_DOUTA" O L 5000 7000 50
-F9 "ADC_DOUTB" O L 5000 7200 50
-F10 "ADC_BUSY" O L 5000 7400 50
-F11 "ADC_FRSTDATA" O L 5000 7600 50
-F12 "OCP_N" O L 5000 7900 50
-F13 "GND" B L 5000 8250 50
-F14 "U_SH_P" I R 8300 5650 50
-F15 "U_SH_N" I R 8300 5850 50
-F16 "V_SH_P" I R 8300 6150 50
-F17 "V_SH_N" I R 8300 6350 50
-F18 "W_SH_P" I R 8300 6650 50
-F19 "W_SH_N" I R 8300 6850 50
+F4 "GND" B L 5000 6000 50
+F5 "VBUS_ADC" I L 5000 6250 50
+F6 "ADC_CONVST" I L 5000 6500 50
+F7 "ADC_SCLK" I L 5000 6700 50
+F8 "ADC_CS_N" I L 5000 6900 50
+F9 "ADC_RESET" I L 5000 7100 50
+F10 "ADC_DOUTA" O L 5000 7400 50
+F11 "ADC_DOUTB" O L 5000 7600 50
+F12 "ADC_BUSY" O L 5000 7800 50
+F13 "ADC_FRSTDATA" O L 5000 8000 50
+F14 "OCP_N" O L 5000 8300 50
+F15 "SW_U" I R 8300 5650 50
+F16 "PH_U" I R 8300 5850 50
+F17 "SW_V" I R 8300 6150 50
+F18 "PH_V" I R 8300 6350 50
+F19 "SW_W" I R 8300 6650 50
+F20 "PH_W" I R 8300 6850 50
 $EndSheet
 $Sheet
 S 9800 6000 3000 1900
@@ -116,128 +123,299 @@ F5 "ENC_A" O R 12800 6400 50
 F6 "ENC_B" O R 12800 6700 50
 F7 "ENC_Z" O R 12800 7000 50
 $EndSheet
-Wire Wire Line
-	3400 1850 4400 1850
-Text Label 3700 1850 0    45   ~ 0
-VBUS_PROT
-Wire Wire Line
-	7100 1800 8500 1650
-Text Label 7450 1800 0    45   ~ 0
-VDRV_12V
-Text Label 7100 2200 0    45   ~ 0
-VA_5V
-Text Label 7100 2600 0    45   ~ 0
-PWR_GOOD
-Text Label 8500 2150 2    45   ~ 0
-PWR_GOOD
-Text Label 8500 2400 2    45   ~ 0
-OCP_N
-Text Label 5000 7900 2    45   ~ 0
-OCP_N
-Text Label 3700 5400 0    45   ~ 0
-VIO_3V3
-Text Label 5000 5500 2    45   ~ 0
-VIO_3V3
-Text Label 8500 1900 2    45   ~ 0
-VIO_3V3
-Text Label 9800 6600 2    45   ~ 0
-VIO_3V3
-Text Label 5000 5750 2    45   ~ 0
-VA_5V
-Text Label 9800 6350 2    45   ~ 0
-VA_5V
-Text Label 3700 5650 0    45   ~ 0
-PWM_UH
-Text Label 8500 2900 2    45   ~ 0
-PWM_UH
-Text Label 3700 5850 0    45   ~ 0
-PWM_UL
-Text Label 8500 3100 2    45   ~ 0
-PWM_UL
-Text Label 3700 6050 0    45   ~ 0
-PWM_VH
-Text Label 8500 3300 2    45   ~ 0
-PWM_VH
-Text Label 3700 6250 0    45   ~ 0
-PWM_VL
-Text Label 8500 3500 2    45   ~ 0
-PWM_VL
-Text Label 3700 6450 0    45   ~ 0
-PWM_WH
-Text Label 8500 3700 2    45   ~ 0
-PWM_WH
-Text Label 3700 6650 0    45   ~ 0
-PWM_WL
-Text Label 8500 3900 2    45   ~ 0
-PWM_WL
-Text Label 3700 6850 0    45   ~ 0
-GATE_EN
-Text Label 8500 2650 2    45   ~ 0
-GATE_EN
-Text Label 3700 7050 0    45   ~ 0
-ADC_CONVST
-Text Label 5000 6100 2    45   ~ 0
-ADC_CONVST
-Text Label 3700 7250 0    45   ~ 0
-ADC_SCLK
-Text Label 5000 6300 2    45   ~ 0
-ADC_SCLK
-Text Label 3700 7450 0    45   ~ 0
-ADC_CS_N
-Text Label 5000 6500 2    45   ~ 0
-ADC_CS_N
-Text Label 3700 7650 0    45   ~ 0
-ADC_RESET
-Text Label 5000 6700 2    45   ~ 0
-ADC_RESET
-Text Label 3700 7850 0    45   ~ 0
-ADC_DOUTA
-Text Label 5000 7000 2    45   ~ 0
-ADC_DOUTA
-Text Label 3700 8000 0    45   ~ 0
-ADC_DOUTB
-Text Label 5000 7200 2    45   ~ 0
-ADC_DOUTB
-Text Label 3700 8150 0    45   ~ 0
-ADC_BUSY
-Text Label 5000 7400 2    45   ~ 0
-ADC_BUSY
-Text Label 3700 8300 0    45   ~ 0
-ADC_FRSTDATA
-Text Label 5000 7600 2    45   ~ 0
-ADC_FRSTDATA
-Text Label 13100 1800 0    45   ~ 0
-U_SH_P
-Text Label 8300 5650 2    45   ~ 0
-U_SH_P
-Text Label 13100 2000 0    45   ~ 0
-U_SH_N
-Text Label 8300 5850 2    45   ~ 0
-U_SH_N
-Text Label 13100 2300 0    45   ~ 0
-V_SH_P
-Text Label 8300 6150 2    45   ~ 0
-V_SH_P
-Text Label 13100 2500 0    45   ~ 0
-V_SH_N
-Text Label 8300 6350 2    45   ~ 0
-V_SH_N
-Text Label 13100 2800 0    45   ~ 0
-W_SH_P
-Text Label 8300 6650 2    45   ~ 0
-W_SH_P
-Text Label 13100 3000 0    45   ~ 0
-W_SH_N
-Text Label 8300 6850 2    45   ~ 0
-W_SH_N
-Text Label 12800 6400 0    45   ~ 0
-ENC_A
-Text Label 12800 6700 0    45   ~ 0
-ENC_B
-Text Label 12800 7000 0    45   ~ 0
-ENC_Z
 Text Notes 600 9600 0    60   ~ 12
 Major power rails are drawn directly; dense real-time/control nets use named hierarchical stubs on the top sheet.
 Text Notes 600 9750 0    60   ~ 12
 One continuous GND reference is intended; separation is by placement and return-current control, not by arbitrary split planes.
+Text Notes 600 10150 0    60   ~ 12
+TOP-LEVEL WIRING: major rails and all cross-sheet real-time/safety signals have explicit wire stubs; FAULT_CLEAR is reserved and NoConn.
+Wire Wire Line
+	3400 1850 4400 1850
+Text Label 3850 1850 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	7100 1800 8500 1650
+Text Label 7600 1800 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	3400 2250 3850 2250
+Text Label 3850 2250 0    45   ~ 0
+VBUS_ADC
+Wire Wire Line
+	3400 2750 3850 2750
+Text Label 3850 2750 0    45   ~ 0
+GND
+Wire Wire Line
+	7100 2200 7550 2200
+Text Label 7550 2200 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	7100 2600 7550 2600
+Text Label 7550 2600 0    45   ~ 0
+PWR_GOOD
+Wire Wire Line
+	4400 2750 3950 2750
+Text Label 3950 2750 0    45   ~ 0
+GND
+Wire Wire Line
+	3700 5400 4150 5400
+Text Label 4150 5400 0    45   ~ 0
+VIO_3V3
+Wire Wire Line
+	3700 5600 4150 5600
+Text Label 4150 5600 0    45   ~ 0
+PWM_UH
+Wire Wire Line
+	3700 5800 4150 5800
+Text Label 4150 5800 0    45   ~ 0
+PWM_UL
+Wire Wire Line
+	3700 6000 4150 6000
+Text Label 4150 6000 0    45   ~ 0
+PWM_VH
+Wire Wire Line
+	3700 6200 4150 6200
+Text Label 4150 6200 0    45   ~ 0
+PWM_VL
+Wire Wire Line
+	3700 6400 4150 6400
+Text Label 4150 6400 0    45   ~ 0
+PWM_WH
+Wire Wire Line
+	3700 6600 4150 6600
+Text Label 4150 6600 0    45   ~ 0
+PWM_WL
+Wire Wire Line
+	3700 6800 4150 6800
+Text Label 4150 6800 0    45   ~ 0
+GATE_EN
+Wire Wire Line
+	3700 7200 4150 7200
+Text Label 4150 7200 0    45   ~ 0
+ADC_CONVST
+Wire Wire Line
+	3700 7400 4150 7400
+Text Label 4150 7400 0    45   ~ 0
+ADC_SCLK
+Wire Wire Line
+	3700 7600 4150 7600
+Text Label 4150 7600 0    45   ~ 0
+ADC_CS_N
+Wire Wire Line
+	3700 7800 4150 7800
+Text Label 4150 7800 0    45   ~ 0
+ADC_RESET
+NoConn ~ 3700 7000
+Wire Wire Line
+	3700 8000 4150 8000
+Text Label 4150 8000 0    45   ~ 0
+ADC_DOUTA
+Wire Wire Line
+	3700 8150 4150 8150
+Text Label 4150 8150 0    45   ~ 0
+ADC_DOUTB
+Wire Wire Line
+	3700 8300 4150 8300
+Text Label 4150 8300 0    45   ~ 0
+ADC_BUSY
+Wire Wire Line
+	3700 8450 4150 8450
+Text Label 4150 8450 0    45   ~ 0
+ADC_FRSTDATA
+Wire Wire Line
+	3700 8600 4150 8600
+Text Label 4150 8600 0    45   ~ 0
+ENC_A
+Wire Wire Line
+	3700 8750 4150 8750
+Text Label 4150 8750 0    45   ~ 0
+ENC_B
+Wire Wire Line
+	3700 8900 4150 8900
+Text Label 4150 8900 0    45   ~ 0
+ENC_Z
+Wire Wire Line
+	3700 9050 4150 9050
+Text Label 4150 9050 0    45   ~ 0
+OCP_N
+Wire Wire Line
+	3700 9200 4150 9200
+Text Label 4150 9200 0    45   ~ 0
+PWR_GOOD
+Wire Wire Line
+	3700 9350 4150 9350
+Text Label 4150 9350 0    45   ~ 0
+GND
+Wire Wire Line
+	5000 5500 4550 5500
+Text Label 4550 5500 0    45   ~ 0
+VIO_3V3
+Wire Wire Line
+	5000 5750 4550 5750
+Text Label 4550 5750 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	5000 6000 4550 6000
+Text Label 4550 6000 0    45   ~ 0
+GND
+Wire Wire Line
+	5000 6250 4550 6250
+Text Label 4550 6250 0    45   ~ 0
+VBUS_ADC
+Wire Wire Line
+	5000 6500 4550 6500
+Text Label 4550 6500 0    45   ~ 0
+ADC_CONVST
+Wire Wire Line
+	5000 6700 4550 6700
+Text Label 4550 6700 0    45   ~ 0
+ADC_SCLK
+Wire Wire Line
+	5000 6900 4550 6900
+Text Label 4550 6900 0    45   ~ 0
+ADC_CS_N
+Wire Wire Line
+	5000 7100 4550 7100
+Text Label 4550 7100 0    45   ~ 0
+ADC_RESET
+Wire Wire Line
+	5000 7400 4550 7400
+Text Label 4550 7400 0    45   ~ 0
+ADC_DOUTA
+Wire Wire Line
+	5000 7600 4550 7600
+Text Label 4550 7600 0    45   ~ 0
+ADC_DOUTB
+Wire Wire Line
+	5000 7800 4550 7800
+Text Label 4550 7800 0    45   ~ 0
+ADC_BUSY
+Wire Wire Line
+	5000 8000 4550 8000
+Text Label 4550 8000 0    45   ~ 0
+ADC_FRSTDATA
+Wire Wire Line
+	5000 8300 4550 8300
+Text Label 4550 8300 0    45   ~ 0
+OCP_N
+Wire Wire Line
+	8300 5650 8750 5650
+Text Label 8750 5650 0    45   ~ 0
+SW_U
+Wire Wire Line
+	8300 5850 8750 5850
+Text Label 8750 5850 0    45   ~ 0
+PH_U
+Wire Wire Line
+	8300 6150 8750 6150
+Text Label 8750 6150 0    45   ~ 0
+SW_V
+Wire Wire Line
+	8300 6350 8750 6350
+Text Label 8750 6350 0    45   ~ 0
+PH_V
+Wire Wire Line
+	8300 6650 8750 6650
+Text Label 8750 6650 0    45   ~ 0
+SW_W
+Wire Wire Line
+	8300 6850 8750 6850
+Text Label 8750 6850 0    45   ~ 0
+PH_W
+Wire Wire Line
+	8500 1400 8050 1400
+Text Label 8050 1400 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	8500 1900 8050 1900
+Text Label 8050 1900 0    45   ~ 0
+VIO_3V3
+Wire Wire Line
+	8500 2150 8050 2150
+Text Label 8050 2150 0    45   ~ 0
+PWR_GOOD
+Wire Wire Line
+	8500 2400 8050 2400
+Text Label 8050 2400 0    45   ~ 0
+OCP_N
+Wire Wire Line
+	8500 2650 8050 2650
+Text Label 8050 2650 0    45   ~ 0
+GATE_EN
+Wire Wire Line
+	8500 2900 8050 2900
+Text Label 8050 2900 0    45   ~ 0
+PWM_UH
+Wire Wire Line
+	8500 3100 8050 3100
+Text Label 8050 3100 0    45   ~ 0
+PWM_UL
+Wire Wire Line
+	8500 3300 8050 3300
+Text Label 8050 3300 0    45   ~ 0
+PWM_VH
+Wire Wire Line
+	8500 3500 8050 3500
+Text Label 8050 3500 0    45   ~ 0
+PWM_VL
+Wire Wire Line
+	8500 3700 8050 3700
+Text Label 8050 3700 0    45   ~ 0
+PWM_WH
+Wire Wire Line
+	8500 3900 8050 3900
+Text Label 8050 3900 0    45   ~ 0
+PWM_WL
+Wire Wire Line
+	8500 4250 8050 4250
+Text Label 8050 4250 0    45   ~ 0
+GND
+Wire Wire Line
+	13100 1800 13550 1800
+Text Label 13550 1800 0    45   ~ 0
+SW_U
+Wire Wire Line
+	13100 2000 13550 2000
+Text Label 13550 2000 0    45   ~ 0
+PH_U
+Wire Wire Line
+	13100 2300 13550 2300
+Text Label 13550 2300 0    45   ~ 0
+SW_V
+Wire Wire Line
+	13100 2500 13550 2500
+Text Label 13550 2500 0    45   ~ 0
+PH_V
+Wire Wire Line
+	13100 2800 13550 2800
+Text Label 13550 2800 0    45   ~ 0
+SW_W
+Wire Wire Line
+	13100 3000 13550 3000
+Text Label 13550 3000 0    45   ~ 0
+PH_W
+Wire Wire Line
+	9800 6350 9350 6350
+Text Label 9350 6350 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	9800 6600 9350 6600
+Text Label 9350 6600 0    45   ~ 0
+VIO_3V3
+Wire Wire Line
+	9800 7150 9350 7150
+Text Label 9350 7150 0    45   ~ 0
+GND
+Wire Wire Line
+	12800 6400 13250 6400
+Text Label 13250 6400 0    45   ~ 0
+ENC_A
+Wire Wire Line
+	12800 6700 13250 6700
+Text Label 13250 6700 0    45   ~ 0
+ENC_B
+Wire Wire Line
+	12800 7000 13250 7000
+Text Label 13250 7000 0    45   ~ 0
+ENC_Z
 $EndSCHEMATC
