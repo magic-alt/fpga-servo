@@ -51,6 +51,12 @@ for p in schematic_paths:
     if "$EndSCHEMATC" not in txt:
         errors.append(f"legacy schematic missing $EndSCHEMATC: {p.relative_to(ROOT)}")
 
+    # Project drafting standard: all schematic pages use A4 landscape.
+    if "$Descr A4 11693 8268" not in txt:
+        errors.append(
+            f"all schematic pages must use A4 landscape: {p.relative_to(ROOT)}"
+        )
+
     # KiCad legacy readers are line-oriented and some versions reject blank
     # physical lines as top-level unknown tokens.
     blank_lines = [
