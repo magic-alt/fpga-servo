@@ -10,15 +10,19 @@ on:
 jobs:
   erc:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install KiCad CLI
+      - name: Install KiCad 10 CLI
         run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends kicad
           kicad-cli --version
+          kicad-cli sch erc --help
 
       - name: Run KiCad ERC
         run: |
