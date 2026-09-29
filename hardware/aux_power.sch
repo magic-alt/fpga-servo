@@ -12,15 +12,15 @@ Comment1 "LM5164 48V->12V + TPS62163 fixed 5V"
 $EndDescr
 Text Notes 650 450 0    65   ~ 12
 VBUS_PROT -> LM5164 12V / 1A -> TPS62163 5V / 1A. PGOOD outputs are wired-AND.
-Text HLabel 700 1500 0 50 Input ~ 0
+Text HLabel 1500 NaNundefined
 VBUS_PROT
-Text HLabel 700 6100 0 50 BiDi ~ 0
+Text HLabel 6100 NaNundefined
 GND
-Text HLabel 10800 1960 2 50 Output ~ 0
+Text HLabel 1950 NaNundefined
 VDRV_12V
-Text HLabel 10800 5050 2 50 Output ~ 0
+Text HLabel 5050 NaNundefined
 VA_5V
-Text HLabel 10800 5900 2 50 Output ~ 0
+Text HLabel 5900 NaNundefined
 PWR_GOOD
 $Comp
 L ax7010_servo_reva:LM5164 U12
@@ -234,204 +234,204 @@ Text Notes 650 7140 0    50   ~ 12
 VISIBLE WIRING: LM5164 and TPS62163 rails use explicit wire stubs; DNP parts are explicit NoConn.
 Wire Wire Line
 	3400 3100 3400 3250
-Text Label 3400 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 GND
 Wire Wire Line
 	2600 2050 2450 2050
-Text Label 2450 2050 0    40   ~ 0
+Text Label 2050 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	2600 2200 2450 2200
-Text Label 2450 2200 0    40   ~ 0
+Text Label 2200 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	2600 2350 2450 2350
-Text Label 2450 2350 0    40   ~ 0
+Text Label 2350 NaNundefined
 RON_SET
 Wire Wire Line
 	4200 2300 4350 2300
-Text Label 4350 2300 0    40   ~ 0
+Text Label 2300 NaNundefined
 FB_12V
 Wire Wire Line
 	4200 2450 4350 2450
-Text Label 4350 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 PWR_GOOD
 Wire Wire Line
 	4200 2100 4350 2100
-Text Label 4350 2100 0    40   ~ 0
+Text Label 2100 NaNundefined
 BST_12V
 Wire Wire Line
 	4200 1950 4350 1950
-Text Label 4350 1950 0    40   ~ 0
+Text Label 1950 NaNundefined
 SW_12V
 Wire Wire Line
 	1350 2350 1350 2200
-Text Label 1350 2200 0    40   ~ 0
+Text Label 2200 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	1350 2850 1350 3000
-Text Label 1350 3000 0    40   ~ 0
+Text Label 3000 NaNundefined
 GND
 Wire Wire Line
 	1900 2350 1900 2200
-Text Label 1900 2200 0    40   ~ 0
+Text Label 2200 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	1900 2850 1900 3000
-Text Label 1900 3000 0    40   ~ 0
+Text Label 3000 NaNundefined
 GND
 Wire Wire Line
 	2100 3250 1950 3250
-Text Label 1950 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 GND
 Wire Wire Line
 	2700 3250 2850 3250
-Text Label 2850 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 RON_SET
 Wire Wire Line
 	4700 2750 4700 2600
-Text Label 4700 2600 0    40   ~ 0
+Text Label 2600 NaNundefined
 BST_12V
 Wire Wire Line
 	4700 3250 4700 3400
-Text Label 4700 3400 0    40   ~ 0
+Text Label 3400 NaNundefined
 SW_12V
 Wire Wire Line
 	5200 1950 5050 1950
-Text Label 5050 1950 0    40   ~ 0
+Text Label 1950 NaNundefined
 SW_12V
 Wire Wire Line
 	5900 1950 6050 1950
-Text Label 6050 1950 0    40   ~ 0
+Text Label 1950 NaNundefined
 VDRV_12V
 Wire Wire Line
 	6500 2350 6500 2200
-Text Label 6500 2200 0    40   ~ 0
+Text Label 2200 NaNundefined
 VDRV_12V
 Wire Wire Line
 	6500 2850 6500 3000
-Text Label 6500 3000 0    40   ~ 0
+Text Label 3000 NaNundefined
 GND
 Wire Wire Line
 	7050 2350 7050 2200
-Text Label 7050 2200 0    40   ~ 0
+Text Label 2200 NaNundefined
 VDRV_12V
 Wire Wire Line
 	7050 2850 7050 3000
-Text Label 7050 3000 0    40   ~ 0
+Text Label 3000 NaNundefined
 GND
 Wire Wire Line
 	7500 2450 7350 2450
-Text Label 7350 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 VDRV_12V
 Wire Wire Line
 	8100 2450 8250 2450
-Text Label 8250 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 FB_12V
 Wire Wire Line
 	8300 2450 8150 2450
-Text Label 8150 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 FB_12V
 Wire Wire Line
 	8900 2450 9050 2450
-Text Label 9050 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 GND
 Wire Wire Line
 	5800 3650 5650 3650
-Text Label 5650 3650 0    40   ~ 0
+Text Label 3650 NaNundefined
 SW_12V
 Wire Wire Line
 	6400 3650 6550 3650
-Text Label 6550 3650 0    40   ~ 0
+Text Label 3650 NaNundefined
 RIPPLE_A
 Wire Wire Line
 	6900 3400 6900 3250
-Text Label 6900 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 RIPPLE_A
 Wire Wire Line
 	6900 3900 6900 4050
-Text Label 6900 4050 0    40   ~ 0
+Text Label 4050 NaNundefined
 VDRV_12V
 Wire Wire Line
 	7700 3400 7700 3250
-Text Label 7700 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 RIPPLE_A
 Wire Wire Line
 	7700 3900 7700 4050
-Text Label 7700 4050 0    40   ~ 0
+Text Label 4050 NaNundefined
 FB_12V
 Wire Wire Line
 	9400 2200 9400 2350
-Text Label 9400 2350 0    40   ~ 0
+Text Label 2350 NaNundefined
 VDRV_12V
 Wire Wire Line
 	4850 5750 4850 5900
-Text Label 4850 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 GND
 Wire Wire Line
 	4250 4800 4100 4800
-Text Label 4100 4800 0    40   ~ 0
+Text Label 4800 NaNundefined
 VDRV_12V
 Wire Wire Line
 	4250 5000 4100 5000
-Text Label 4100 5000 0    40   ~ 0
+Text Label 5000 NaNundefined
 VDRV_12V
 Wire Wire Line
 	5150 5750 5150 5900
-Text Label 5150 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 GND
 Wire Wire Line
 	5750 5300 5900 5300
-Text Label 5900 5300 0    40   ~ 0
+Text Label 5300 NaNundefined
 GND
 Wire Wire Line
 	5750 5150 5900 5150
-Text Label 5900 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VA_5V
 Wire Wire Line
 	5750 4950 5900 4950
-Text Label 5900 4950 0    40   ~ 0
+Text Label 4950 NaNundefined
 SW_5V
 Wire Wire Line
 	5750 4750 5900 4750
-Text Label 5900 4750 0    40   ~ 0
+Text Label 4750 NaNundefined
 PWR_GOOD
 Wire Wire Line
 	3550 5300 3550 5150
-Text Label 3550 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VDRV_12V
 Wire Wire Line
 	3550 5800 3550 5950
-Text Label 3550 5950 0    40   ~ 0
+Text Label 5950 NaNundefined
 GND
 Wire Wire Line
 	6000 4950 5850 4950
-Text Label 5850 4950 0    40   ~ 0
+Text Label 4950 NaNundefined
 SW_5V
 Wire Wire Line
 	6700 4950 6850 4950
-Text Label 6850 4950 0    40   ~ 0
+Text Label 4950 NaNundefined
 VA_5V
 Wire Wire Line
 	7400 5300 7400 5150
-Text Label 7400 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VA_5V
 Wire Wire Line
 	7400 5800 7400 5950
-Text Label 7400 5950 0    40   ~ 0
+Text Label 5950 NaNundefined
 GND
 NoConn ~ 8200 6100
 NoConn ~ 8800 6100
 Wire Wire Line
 	8750 5300 8750 5450
-Text Label 8750 5450 0    40   ~ 0
+Text Label 5450 NaNundefined
 VA_5V
 Wire Wire Line
 	700 1500 900 1500
 Wire Wire Line
 	700 6100 900 6100
 Wire Wire Line
-	10800 1960 10600 1960
+	10800 1950 10600 1950
 Wire Wire Line
 	10800 5050 10600 5050
 Wire Wire Line

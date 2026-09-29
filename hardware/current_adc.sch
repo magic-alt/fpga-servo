@@ -10,43 +10,43 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S"
 $EndDescr
-Text HLabel 500 1250 0 50 Input ~ 0
+Text HLabel 1250 NaNundefined
 SW_U
-Text HLabel 500 1450 0 50 Input ~ 0
+Text HLabel 1450 NaNundefined
 PH_U
-Text HLabel 500 2750 0 50 Input ~ 0
+Text HLabel 2750 NaNundefined
 SW_V
-Text HLabel 500 2950 0 50 Input ~ 0
+Text HLabel 2950 NaNundefined
 PH_V
-Text HLabel 500 4250 0 50 Input ~ 0
+Text HLabel 4250 NaNundefined
 SW_W
-Text HLabel 500 4450 0 50 Input ~ 0
+Text HLabel 4450 NaNundefined
 PH_W
-Text HLabel 500 5050 0 50 Input ~ 0
+Text HLabel 5050 NaNundefined
 VA_5V
-Text HLabel 500 5250 0 50 Input ~ 0
+Text HLabel 5250 NaNundefined
 VIO_3V3
-Text HLabel 500 5450 0 50 Input ~ 0
+Text HLabel 5450 NaNundefined
 GND
-Text HLabel 500 5650 0 50 Input ~ 0
+Text HLabel 5650 NaNundefined
 VBUS_ADC
-Text HLabel 500 5850 0 50 Input ~ 0
+Text HLabel 5850 NaNundefined
 ADC_CONVST
-Text HLabel 500 6050 0 50 Input ~ 0
+Text HLabel 6050 NaNundefined
 ADC_SCLK
-Text HLabel 500 6250 0 50 Input ~ 0
+Text HLabel 6250 NaNundefined
 ADC_CS_N
-Text HLabel 500 6450 0 50 Input ~ 0
+Text HLabel 6450 NaNundefined
 ADC_RESET
-Text HLabel 11100 1450 2 50 Output ~ 0
+Text HLabel 1450 NaNundefined
 ADC_DOUTA
-Text HLabel 11100 1700 2 50 Output ~ 0
+Text HLabel 1700 NaNundefined
 ADC_DOUTB
-Text HLabel 11100 1950 2 50 Output ~ 0
+Text HLabel 1950 NaNundefined
 ADC_BUSY
-Text HLabel 11100 2200 2 50 Output ~ 0
+Text HLabel 2200 NaNundefined
 ADC_FRSTDATA
-Text HLabel 11100 6100 2 50 Output ~ 0
+Text HLabel 6100 NaNundefined
 OCP_N
 $Comp
 L ax7010_servo_reva:INA241A2 U2
@@ -440,27 +440,27 @@ Wire Wire Line
 	11100 6100 10900 6100
 Wire Wire Line
 	1400 1450 1250 1450
-Text Label 1250 1450 0    40   ~ 0
+Text Label 1450 NaNundefined
 PH_U
 Wire Wire Line
 	1400 1650 1250 1650
-Text Label 1250 1650 0    40   ~ 0
+Text Label 1650 NaNundefined
 SW_U
 Wire Wire Line
 	2100 650 2100 500
-Text Label 2100 500 0    40   ~ 0
+Text Label 500 NaNundefined
 VA_5V
 Wire Wire Line
 	2300 650 2300 500
-Text Label 2300 500 0    40   ~ 0
+Text Label 500 NaNundefined
 VA_5V
 Wire Wire Line
 	2050 2450 2050 2600
-Text Label 2050 2600 0    40   ~ 0
+Text Label 2600 NaNundefined
 GND
 Wire Wire Line
 	2200 2450 2200 2600
-Text Label 2200 2600 0    40   ~ 0
+Text Label 2600 NaNundefined
 GND
 NoConn ~ 2350 2450
 Wire Wire Line
@@ -469,43 +469,43 @@ Wire Wire Line
 	3650 1550 4050 1550
 Wire Wire Line
 	4050 1550 4050 1800
-Text Label 3750 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 IU_ADC
 Wire Wire Line
 	4050 2300 4050 2450
-Text Label 4050 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 GND
 Wire Wire Line
 	2200 2450 2200 2300
-Text Label 2200 2300 0    40   ~ 0
+Text Label 2300 NaNundefined
 VA_5V
 Wire Wire Line
 	2200 2950 2200 3100
-Text Label 2200 3100 0    40   ~ 0
+Text Label 3100 NaNundefined
 GND
 Wire Wire Line
 	1400 2950 1250 2950
-Text Label 1250 2950 0    40   ~ 0
+Text Label 2950 NaNundefined
 PH_V
 Wire Wire Line
 	1400 3150 1250 3150
-Text Label 1250 3150 0    40   ~ 0
+Text Label 3150 NaNundefined
 SW_V
 Wire Wire Line
 	2100 2150 2100 2000
-Text Label 2100 2000 0    40   ~ 0
+Text Label 2000 NaNundefined
 VA_5V
 Wire Wire Line
 	2300 2150 2300 2000
-Text Label 2300 2000 0    40   ~ 0
+Text Label 2000 NaNundefined
 VA_5V
 Wire Wire Line
 	2050 3950 2050 4100
-Text Label 2050 4100 0    40   ~ 0
+Text Label 4100 NaNundefined
 GND
 Wire Wire Line
 	2200 3950 2200 4100
-Text Label 2200 4100 0    40   ~ 0
+Text Label 4100 NaNundefined
 GND
 NoConn ~ 2350 3950
 Wire Wire Line
@@ -514,43 +514,43 @@ Wire Wire Line
 	3650 3050 4050 3050
 Wire Wire Line
 	4050 3050 4050 3300
-Text Label 3750 3050 0    40   ~ 0
+Text Label 3050 NaNundefined
 IV_ADC
 Wire Wire Line
 	4050 3800 4050 3950
-Text Label 4050 3950 0    40   ~ 0
+Text Label 3950 NaNundefined
 GND
 Wire Wire Line
 	2200 3950 2200 3800
-Text Label 2200 3800 0    40   ~ 0
+Text Label 3800 NaNundefined
 VA_5V
 Wire Wire Line
 	2200 4450 2200 4600
-Text Label 2200 4600 0    40   ~ 0
+Text Label 4600 NaNundefined
 GND
 Wire Wire Line
 	1400 4450 1250 4450
-Text Label 1250 4450 0    40   ~ 0
+Text Label 4450 NaNundefined
 PH_W
 Wire Wire Line
 	1400 4650 1250 4650
-Text Label 1250 4650 0    40   ~ 0
+Text Label 4650 NaNundefined
 SW_W
 Wire Wire Line
 	2100 3650 2100 3500
-Text Label 2100 3500 0    40   ~ 0
+Text Label 3500 NaNundefined
 VA_5V
 Wire Wire Line
 	2300 3650 2300 3500
-Text Label 2300 3500 0    40   ~ 0
+Text Label 3500 NaNundefined
 VA_5V
 Wire Wire Line
 	2050 5450 2050 5600
-Text Label 2050 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 GND
 Wire Wire Line
 	2200 5450 2200 5600
-Text Label 2200 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 GND
 NoConn ~ 2350 5450
 Wire Wire Line
@@ -559,148 +559,148 @@ Wire Wire Line
 	3650 4550 4050 4550
 Wire Wire Line
 	4050 4550 4050 4800
-Text Label 3750 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 IW_ADC
 Wire Wire Line
 	4050 5300 4050 5450
-Text Label 4050 5450 0    40   ~ 0
+Text Label 5450 NaNundefined
 GND
 Wire Wire Line
 	2200 5450 2200 5300
-Text Label 2200 5300 0    40   ~ 0
+Text Label 5300 NaNundefined
 VA_5V
 Wire Wire Line
 	2200 5950 2200 6100
-Text Label 2200 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 GND
 Wire Wire Line
 	1500 6100 1700 6100
 Wire Wire Line
 	900 6100 750 6100
-Text Label 750 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 VA_5V
 Wire Wire Line
 	2300 6100 2450 6100
-Text Label 2450 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 GND
-Text Label 1600 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 NTC_BOARD
 Wire Wire Line
 	1500 6500 1700 6500
 Wire Wire Line
 	900 6500 750 6500
-Text Label 750 6500 0    40   ~ 0
+Text Label 6500 NaNundefined
 VA_5V
 Wire Wire Line
 	2300 6500 2450 6500
-Text Label 2450 6500 0    40   ~ 0
+Text Label 6500 NaNundefined
 GND
-Text Label 1600 6500 0    40   ~ 0
+Text Label 6500 NaNundefined
 NTC_MOTOR
 Wire Wire Line
 	3700 5600 3750 5600
 Wire Wire Line
 	3100 5600 2950 5600
-Text Label 2950 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 VA_5V
 Wire Wire Line
 	4350 5600 4500 5600
-Text Label 4500 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 GND
-Text Label 3800 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 OCP_HI_REF
 Wire Wire Line
 	3700 6100 3750 6100
 Wire Wire Line
 	3100 6100 2950 6100
-Text Label 2950 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 VA_5V
 Wire Wire Line
 	4350 6100 4500 6100
-Text Label 4500 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 GND
-Text Label 3800 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 OCP_LO_REF
 Wire Wire Line
 	4350 5600 4200 5600
-Text Label 4200 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 IU_ADC
 Wire Wire Line
 	4350 5750 4200 5750
-Text Label 4200 5750 0    40   ~ 0
+Text Label 5750 NaNundefined
 OCP_HI_REF
 Wire Wire Line
 	4350 5900 4200 5900
-Text Label 4200 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 IV_ADC
 Wire Wire Line
 	4350 6100 4200 6100
-Text Label 4200 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 OCP_HI_REF
 Wire Wire Line
 	4350 6250 4200 6250
-Text Label 4200 6250 0    40   ~ 0
+Text Label 6250 NaNundefined
 IW_ADC
 Wire Wire Line
 	4350 6400 4200 6400
-Text Label 4200 6400 0    40   ~ 0
+Text Label 6400 NaNundefined
 OCP_HI_REF
 Wire Wire Line
 	5200 5200 5200 5050
-Text Label 5200 5050 0    40   ~ 0
+Text Label 5050 NaNundefined
 VA_5V
 Wire Wire Line
 	5200 7000 5200 7150
-Text Label 5200 7150 0    40   ~ 0
+Text Label 7150 NaNundefined
 GND
 Wire Wire Line
 	4350 6550 4200 6550
-Text Label 4200 6550 0    40   ~ 0
+Text Label 6550 NaNundefined
 GND
 Wire Wire Line
 	4350 6700 4200 6700
-Text Label 4200 6700 0    40   ~ 0
+Text Label 6700 NaNundefined
 GND
 NoConn ~ 6050 6550
 Wire Wire Line
 	6250 5600 6100 5600
-Text Label 6100 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 OCP_LO_REF
 Wire Wire Line
 	6250 5750 6100 5750
-Text Label 6100 5750 0    40   ~ 0
+Text Label 5750 NaNundefined
 IU_ADC
 Wire Wire Line
 	6250 5900 6100 5900
-Text Label 6100 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 OCP_LO_REF
 Wire Wire Line
 	6250 6100 6100 6100
-Text Label 6100 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 IV_ADC
 Wire Wire Line
 	6250 6250 6100 6250
-Text Label 6100 6250 0    40   ~ 0
+Text Label 6250 NaNundefined
 OCP_LO_REF
 Wire Wire Line
 	6250 6400 6100 6400
-Text Label 6100 6400 0    40   ~ 0
+Text Label 6400 NaNundefined
 IW_ADC
 Wire Wire Line
 	7100 5200 7100 5050
-Text Label 7100 5050 0    40   ~ 0
+Text Label 5050 NaNundefined
 VA_5V
 Wire Wire Line
 	7100 7000 7100 7150
-Text Label 7100 7150 0    40   ~ 0
+Text Label 7150 NaNundefined
 GND
 Wire Wire Line
 	6250 6550 6100 6550
-Text Label 6100 6550 0    40   ~ 0
+Text Label 6550 NaNundefined
 GND
 Wire Wire Line
 	6250 6700 6100 6700
-Text Label 6100 6700 0    40   ~ 0
+Text Label 6700 NaNundefined
 GND
 NoConn ~ 7950 6550
 Wire Wire Line
@@ -711,7 +711,7 @@ Wire Wire Line
 	6050 6400 6100 6400
 Wire Wire Line
 	6100 5600 6100 6400
-Text Label 6100 5750 0    40   ~ 0
+Text Label 5750 NaNundefined
 OCP_N
 Wire Wire Line
 	7950 5600 8000 5600
@@ -721,127 +721,127 @@ Wire Wire Line
 	7950 6400 8000 6400
 Wire Wire Line
 	8000 5600 8000 6400
-Text Label 8000 5750 0    40   ~ 0
+Text Label 5750 NaNundefined
 OCP_N
 Wire Wire Line
 	9000 6100 8850 6100
-Text Label 8850 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 OCP_N
 Wire Wire Line
 	9600 6100 9750 6100
-Text Label 9750 6100 0    40   ~ 0
+Text Label 6100 NaNundefined
 VIO_3V3
 Wire Wire Line
 	7300 1600 7150 1600
-Text Label 7150 1600 0    40   ~ 0
+Text Label 1600 NaNundefined
 IU_ADC
 Wire Wire Line
 	7300 1750 7150 1750
-Text Label 7150 1750 0    40   ~ 0
+Text Label 1750 NaNundefined
 GND
 Wire Wire Line
 	7300 1900 7150 1900
-Text Label 7150 1900 0    40   ~ 0
+Text Label 1900 NaNundefined
 IV_ADC
 Wire Wire Line
 	7300 2050 7150 2050
-Text Label 7150 2050 0    40   ~ 0
+Text Label 2050 NaNundefined
 GND
 Wire Wire Line
 	7300 2250 7150 2250
-Text Label 7150 2250 0    40   ~ 0
+Text Label 2250 NaNundefined
 IW_ADC
 Wire Wire Line
 	7300 2400 7150 2400
-Text Label 7150 2400 0    40   ~ 0
+Text Label 2400 NaNundefined
 GND
 Wire Wire Line
 	7300 2550 7150 2550
-Text Label 7150 2550 0    40   ~ 0
+Text Label 2550 NaNundefined
 VBUS_ADC
 Wire Wire Line
 	7300 2700 7150 2700
-Text Label 7150 2700 0    40   ~ 0
+Text Label 2700 NaNundefined
 GND
 Wire Wire Line
 	7300 2900 7150 2900
-Text Label 7150 2900 0    40   ~ 0
+Text Label 2900 NaNundefined
 NTC_BOARD
 Wire Wire Line
 	7300 3000 7150 3000
-Text Label 7150 3000 0    40   ~ 0
+Text Label 3000 NaNundefined
 GND
 Wire Wire Line
 	7300 3200 7150 3200
-Text Label 7150 3200 0    40   ~ 0
+Text Label 3200 NaNundefined
 NTC_MOTOR
 Wire Wire Line
 	7300 3350 7150 3350
-Text Label 7150 3350 0    40   ~ 0
+Text Label 3350 NaNundefined
 GND
 Wire Wire Line
 	7300 3500 7150 3500
-Text Label 7150 3500 0    40   ~ 0
+Text Label 3500 NaNundefined
 AIN_SPARE0
 Wire Wire Line
 	7300 3650 7150 3650
-Text Label 7150 3650 0    40   ~ 0
+Text Label 3650 NaNundefined
 GND
 Wire Wire Line
 	7300 3850 7150 3850
-Text Label 7150 3850 0    40   ~ 0
+Text Label 3850 NaNundefined
 AIN_SPARE1
 Wire Wire Line
 	7300 4000 7150 4000
-Text Label 7150 4000 0    40   ~ 0
+Text Label 4000 NaNundefined
 GND
 Wire Wire Line
 	7600 1000 7600 850
-Text Label 7600 850 0    40   ~ 0
+Text Label 850 NaNundefined
 GND
 Wire Wire Line
 	7750 1000 7750 850
-Text Label 7750 850 0    40   ~ 0
+Text Label 850 NaNundefined
 GND
 Wire Wire Line
 	7900 1000 7900 850
-Text Label 7900 850 0    40   ~ 0
+Text Label 850 NaNundefined
 GND
 Wire Wire Line
 	8100 1000 8100 850
-Text Label 8100 850 0    40   ~ 0
+Text Label 850 NaNundefined
 VIO_3V3
 Wire Wire Line
 	8250 1000 8250 850
-Text Label 8250 850 0    40   ~ 0
+Text Label 850 NaNundefined
 VIO_3V3
 Wire Wire Line
 	8400 1000 8400 850
-Text Label 8400 850 0    40   ~ 0
+Text Label 850 NaNundefined
 GND
 Wire Wire Line
 	8600 1000 8600 850
-Text Label 8600 850 0    40   ~ 0
+Text Label 850 NaNundefined
 ADC_CONVST
 Wire Wire Line
 	8750 1000 8750 850
-Text Label 8750 850 0    40   ~ 0
+Text Label 850 NaNundefined
 ADC_CONVST
 Wire Wire Line
 	8900 1000 8900 850
-Text Label 8900 850 0    40   ~ 0
+Text Label 850 NaNundefined
 ADC_RESET
 Wire Wire Line
 	9100 1000 9100 850
-Text Label 9100 850 0    40   ~ 0
+Text Label 850 NaNundefined
 ADC_SCLK
 Wire Wire Line
 	9250 1000 9250 850
-Text Label 9250 850 0    40   ~ 0
+Text Label 850 NaNundefined
 ADC_CS_N
 Wire Wire Line
 	9400 1000 9400 850
-Text Label 9400 850 0    40   ~ 0
+Text Label 850 NaNundefined
 VIO_3V3
 NoConn ~ 9700 1550
 NoConn ~ 9700 1700
@@ -858,105 +858,105 @@ NoConn ~ 9700 3100
 NoConn ~ 9700 3250
 Wire Wire Line
 	9700 2400 9850 2400
-Text Label 9850 2400 0    40   ~ 0
+Text Label 2400 NaNundefined
 ADC_DOUTA
 Wire Wire Line
 	9700 2500 9850 2500
-Text Label 9850 2500 0    40   ~ 0
+Text Label 2500 NaNundefined
 ADC_DOUTB
 Wire Wire Line
 	9700 3600 9850 3600
-Text Label 9850 3600 0    40   ~ 0
+Text Label 3600 NaNundefined
 ADC_BUSY
 Wire Wire Line
 	9700 3750 9850 3750
-Text Label 9850 3750 0    40   ~ 0
+Text Label 3750 NaNundefined
 ADC_FRSTDATA
 Wire Wire Line
 	9700 3350 9850 3350
-Text Label 9850 3350 0    40   ~ 0
+Text Label 3350 NaNundefined
 GND
 Wire Wire Line
 	7550 5000 7550 5150
-Text Label 7550 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VA_5V
 Wire Wire Line
 	7650 5000 7650 5150
-Text Label 7650 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	7800 5000 7800 5150
-Text Label 7800 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VIO_3V3
 Wire Wire Line
 	7900 5000 7900 5150
-Text Label 7900 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	8000 5000 8000 5150
-Text Label 8000 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	8250 5000 8250 5150
-Text Label 8250 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VA_5V
 Wire Wire Line
 	8400 5000 8400 5150
-Text Label 8400 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VA_5V
 Wire Wire Line
 	8600 5000 8600 5150
-Text Label 8600 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	8750 5000 8750 5150
-Text Label 8750 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	9000 5000 9000 5150
-Text Label 9000 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	9350 5000 9350 5150
-Text Label 9350 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	9450 5000 9450 5150
-Text Label 9450 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 GND
 Wire Wire Line
 	9600 5000 9600 5150
-Text Label 9600 5150 0    40   ~ 0
+Text Label 5150 NaNundefined
 VA_5V
 Wire Wire Line
 	8150 5000 8150 5250
 Wire Wire Line
 	8150 5250 8150 5250
-Text Label 8150 5250 0    40   ~ 0
+Text Label 5250 NaNundefined
 REGCAP1
 Wire Wire Line
 	8150 5750 8150 5900
-Text Label 8150 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 GND
 Wire Wire Line
 	8500 5000 8500 5250
 Wire Wire Line
 	8500 5250 8500 5250
-Text Label 8500 5250 0    40   ~ 0
+Text Label 5250 NaNundefined
 REGCAP2
 Wire Wire Line
 	8500 5750 8500 5900
-Text Label 8500 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 GND
 Wire Wire Line
 	8850 5000 8850 5250
 Wire Wire Line
 	8850 5250 8850 5250
-Text Label 8850 5250 0    40   ~ 0
+Text Label 5250 NaNundefined
 REFIO_2V5
 Wire Wire Line
 	8850 5750 8850 5900
-Text Label 8850 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 GND
 Wire Wire Line
 	9100 5000 9100 5250
@@ -966,50 +966,50 @@ Wire Wire Line
 	9200 5000 9200 5250
 Wire Wire Line
 	9200 5250 9150 5250
-Text Label 9150 5250 0    40   ~ 0
+Text Label 5250 NaNundefined
 REFCAP_4V
 Wire Wire Line
 	9150 5750 9150 5900
-Text Label 9150 5900 0    40   ~ 0
+Text Label 5900 NaNundefined
 GND
 Wire Wire Line
 	8000 6300 8000 6150
-Text Label 8000 6150 0    40   ~ 0
+Text Label 6150 NaNundefined
 VA_5V
 Wire Wire Line
 	8000 6800 8000 6950
-Text Label 8000 6950 0    40   ~ 0
+Text Label 6950 NaNundefined
 GND
 Wire Wire Line
 	8500 6300 8500 6150
-Text Label 8500 6150 0    40   ~ 0
+Text Label 6150 NaNundefined
 VA_5V
 Wire Wire Line
 	8500 6800 8500 6950
-Text Label 8500 6950 0    40   ~ 0
+Text Label 6950 NaNundefined
 GND
 Wire Wire Line
 	9000 6300 9000 6150
-Text Label 9000 6150 0    40   ~ 0
+Text Label 6150 NaNundefined
 VA_5V
 Wire Wire Line
 	9000 6800 9000 6950
-Text Label 9000 6950 0    40   ~ 0
+Text Label 6950 NaNundefined
 GND
 Wire Wire Line
 	9500 6300 9500 6150
-Text Label 9500 6150 0    40   ~ 0
+Text Label 6150 NaNundefined
 VA_5V
 Wire Wire Line
 	9500 6800 9500 6950
-Text Label 9500 6950 0    40   ~ 0
+Text Label 6950 NaNundefined
 GND
 Wire Wire Line
 	10000 6300 10000 6150
-Text Label 10000 6150 0    40   ~ 0
+Text Label 6150 NaNundefined
 VIO_3V3
 Wire Wire Line
 	10000 6800 10000 6950
-Text Label 10000 6950 0    40   ~ 0
+Text Label 6950 NaNundefined
 GND
 $EndSCHEMATC

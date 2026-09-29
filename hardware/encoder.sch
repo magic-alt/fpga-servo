@@ -10,17 +10,17 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "RS-422 receiver + selectable termination + interface protection"
 $EndDescr
-Text HLabel 700 1600 0 50 Input ~ 0
+Text HLabel 1600 NaNundefined
 VA_5V
-Text HLabel 700 2000 0 50 Input ~ 0
+Text HLabel 2000 NaNundefined
 VIO_3V3
-Text HLabel 700 2400 0 50 BiDi ~ 0
+Text HLabel 2400 NaNundefined
 GND
-Text HLabel 10800 3100 2 50 Output ~ 0
+Text HLabel 3100 NaNundefined
 ENC_A
-Text HLabel 10800 3500 2 50 Output ~ 0
+Text HLabel 3500 NaNundefined
 ENC_B
-Text HLabel 10800 3900 2 50 Output ~ 0
+Text HLabel 3900 NaNundefined
 ENC_Z
 $Comp
 L ax7010_servo_reva:ENCODER_DIFF J5
@@ -122,171 +122,171 @@ Text Notes 650 6980 0    50   ~ 12
 VISIBLE WIRING: differential ABZ pairs, termination, ESD, line receiver and encoder power are explicitly wired.
 Wire Wire Line
 	850 3100 700 3100
-Text Label 700 3100 0    40   ~ 0
+Text Label 3100 NaNundefined
 ENC_A_P
 Wire Wire Line
 	850 3250 700 3250
-Text Label 700 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 ENC_A_N
 Wire Wire Line
 	850 3400 700 3400
-Text Label 700 3400 0    40   ~ 0
+Text Label 3400 NaNundefined
 ENC_B_P
 Wire Wire Line
 	850 3600 700 3600
-Text Label 700 3600 0    40   ~ 0
+Text Label 3600 NaNundefined
 ENC_B_N
 Wire Wire Line
 	850 3750 700 3750
-Text Label 700 3750 0    40   ~ 0
+Text Label 3750 NaNundefined
 ENC_Z_P
 Wire Wire Line
 	850 3900 700 3900
-Text Label 700 3900 0    40   ~ 0
+Text Label 3900 NaNundefined
 ENC_Z_N
 Wire Wire Line
 	2150 3250 2300 3250
-Text Label 2300 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 ENC_5V
 Wire Wire Line
 	2150 3400 2300 3400
-Text Label 2300 3400 0    40   ~ 0
+Text Label 3400 NaNundefined
 GND
 Wire Wire Line
 	2150 3600 2300 3600
-Text Label 2300 3600 0    40   ~ 0
+Text Label 3600 NaNundefined
 SHIELD
 NoConn ~ 2150 3750
 Wire Wire Line
 	3000 2700 2850 2700
-Text Label 2850 2700 0    40   ~ 0
+Text Label 2700 NaNundefined
 ENC_A_P
 Wire Wire Line
 	3600 2700 3750 2700
-Text Label 3750 2700 0    40   ~ 0
+Text Label 2700 NaNundefined
 ENC_A_N
 Wire Wire Line
 	3000 3500 2850 3500
-Text Label 2850 3500 0    40   ~ 0
+Text Label 3500 NaNundefined
 ENC_B_P
 Wire Wire Line
 	3600 3500 3750 3500
-Text Label 3750 3500 0    40   ~ 0
+Text Label 3500 NaNundefined
 ENC_B_N
 Wire Wire Line
 	3000 4300 2850 4300
-Text Label 2850 4300 0    40   ~ 0
+Text Label 4300 NaNundefined
 ENC_Z_P
 Wire Wire Line
 	3600 4300 3750 4300
-Text Label 3750 4300 0    40   ~ 0
+Text Label 4300 NaNundefined
 ENC_Z_N
 Wire Wire Line
 	6000 2950 5850 2950
-Text Label 5850 2950 0    40   ~ 0
+Text Label 2950 NaNundefined
 ENC_A_P
 Wire Wire Line
 	6000 3100 5850 3100
-Text Label 5850 3100 0    40   ~ 0
+Text Label 3100 NaNundefined
 ENC_A_N
 Wire Wire Line
 	7800 3250 7950 3250
-Text Label 7950 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 ENC_A
 Wire Wire Line
 	6000 3250 5850 3250
-Text Label 5850 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 ENC_B_P
 Wire Wire Line
 	6000 3400 5850 3400
-Text Label 5850 3400 0    40   ~ 0
+Text Label 3400 NaNundefined
 ENC_B_N
 Wire Wire Line
 	7800 3400 7950 3400
-Text Label 7950 3400 0    40   ~ 0
+Text Label 3400 NaNundefined
 ENC_B
 Wire Wire Line
 	6900 2400 6900 2250
-Text Label 6900 2250 0    40   ~ 0
+Text Label 2250 NaNundefined
 VIO_3V3
 Wire Wire Line
 	6900 4600 6900 4750
-Text Label 6900 4750 0    40   ~ 0
+Text Label 4750 NaNundefined
 GND
 Wire Wire Line
 	7800 3600 7950 3600
-Text Label 7950 3600 0    40   ~ 0
+Text Label 3600 NaNundefined
 ENC_Z
 Wire Wire Line
 	6000 3600 5850 3600
-Text Label 5850 3600 0    40   ~ 0
+Text Label 3600 NaNundefined
 ENC_Z_P
 Wire Wire Line
 	6000 3750 5850 3750
-Text Label 5850 3750 0    40   ~ 0
+Text Label 3750 NaNundefined
 ENC_Z_N
 NoConn ~ 7800 3750
 NoConn ~ 6000 3900
 NoConn ~ 6000 4050
 Wire Wire Line
 	7050 2400 7050 2250
-Text Label 7050 2250 0    40   ~ 0
+Text Label 2250 NaNundefined
 GND
 Wire Wire Line
 	6750 2400 6750 2250
-Text Label 6750 2250 0    40   ~ 0
+Text Label 2250 NaNundefined
 VIO_3V3
 Wire Wire Line
 	1800 1600 1650 1600
-Text Label 1650 1600 0    40   ~ 0
+Text Label 1600 NaNundefined
 VA_5V
 Wire Wire Line
 	2400 1600 2550 1600
-Text Label 2550 1600 0    40   ~ 0
+Text Label 1600 NaNundefined
 ENC_5V
 Wire Wire Line
 	6900 4950 6900 4800
-Text Label 6900 4800 0    40   ~ 0
+Text Label 4800 NaNundefined
 VIO_3V3
 Wire Wire Line
 	6900 5450 6900 5600
-Text Label 6900 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 GND
 Wire Wire Line
 	7550 4950 7550 4800
-Text Label 7550 4800 0    40   ~ 0
+Text Label 4800 NaNundefined
 VIO_3V3
 Wire Wire Line
 	7550 5450 7550 5600
-Text Label 7550 5600 0    40   ~ 0
+Text Label 5600 NaNundefined
 GND
 Wire Wire Line
 	4000 3000 3850 3000
-Text Label 3850 3000 0    40   ~ 0
+Text Label 3000 NaNundefined
 ENC_A_P
 Wire Wire Line
 	4000 3200 3850 3200
-Text Label 3850 3200 0    40   ~ 0
+Text Label 3200 NaNundefined
 ENC_A_N
 Wire Wire Line
 	4000 3400 3850 3400
-Text Label 3850 3400 0    40   ~ 0
+Text Label 3400 NaNundefined
 ENC_B_N
 Wire Wire Line
 	4000 3600 3850 3600
-Text Label 3850 3600 0    40   ~ 0
+Text Label 3600 NaNundefined
 ENC_B_N
 Wire Wire Line
 	4000 3800 3850 3800
-Text Label 3850 3800 0    40   ~ 0
+Text Label 3800 NaNundefined
 ENC_Z_P
 Wire Wire Line
 	4000 4000 3850 4000
-Text Label 3850 4000 0    40   ~ 0
+Text Label 4000 NaNundefined
 ENC_Z_N
 Wire Wire Line
 	4700 4400 4700 4550
-Text Label 4700 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 GND
 Wire Wire Line
 	700 1600 900 1600

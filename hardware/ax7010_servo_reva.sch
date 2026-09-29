@@ -125,292 +125,292 @@ F7 "ENC_Z" O R 10600 5200 50
 $EndSheet
 Wire Wire Line
 	2800 1500 3400 1500
-Text Label 3000 1500 0    42   ~ 0
+Text Label 1500 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	5600 1450 6600 1300
-Text Label 5900 1450 0    42   ~ 0
+Text Label 1450 NaNundefined
 VDRV_12V
 Wire Wire Line
-	2800 1850 3020 1850
-Text Label 3020 1850 0    42   ~ 0
+	2800 1850 3000 1850
+Text Label 1850 NaNundefined
 VBUS_ADC
 Wire Wire Line
-	2800 2200 3020 2200
-Text Label 3020 2200 0    42   ~ 0
+	2800 2200 3000 2200
+Text Label 2200 NaNundefined
 GND
 Wire Wire Line
-	3400 2200 3180 2200
-Text Label 3180 2200 0    42   ~ 0
+	3400 2200 3200 2200
+Text Label 2200 NaNundefined
 GND
 Wire Wire Line
-	5600 1800 5820 1800
-Text Label 5820 1800 0    42   ~ 0
+	5600 1800 5800 1800
+Text Label 1800 NaNundefined
 VA_5V
 Wire Wire Line
-	5600 2150 5820 2150
-Text Label 5820 2150 0    42   ~ 0
+	5600 2150 5800 2150
+Text Label 2150 NaNundefined
 PWR_GOOD
 Wire Wire Line
-	3200 4050 3420 4050
-Text Label 3420 4050 0    42   ~ 0
+	3200 4050 3400 4050
+Text Label 4050 NaNundefined
 VIO_3V3
 Wire Wire Line
-	3200 4200 3420 4200
-Text Label 3420 4200 0    42   ~ 0
+	3200 4200 3400 4200
+Text Label 4200 NaNundefined
 PWM_UH
 Wire Wire Line
-	3200 4350 3420 4350
-Text Label 3420 4350 0    42   ~ 0
+	3200 4350 3400 4350
+Text Label 4350 NaNundefined
 PWM_UL
 Wire Wire Line
-	3200 4500 3420 4500
-Text Label 3420 4500 0    42   ~ 0
+	3200 4500 3400 4500
+Text Label 4500 NaNundefined
 PWM_VH
 Wire Wire Line
-	3200 4650 3420 4650
-Text Label 3420 4650 0    42   ~ 0
+	3200 4650 3400 4650
+Text Label 4650 NaNundefined
 PWM_VL
 Wire Wire Line
-	3200 4800 3420 4800
-Text Label 3420 4800 0    42   ~ 0
+	3200 4800 3400 4800
+Text Label 4800 NaNundefined
 PWM_WH
 Wire Wire Line
-	3200 4950 3420 4950
-Text Label 3420 4950 0    42   ~ 0
+	3200 4950 3400 4950
+Text Label 4950 NaNundefined
 PWM_WL
 Wire Wire Line
-	3200 5100 3420 5100
-Text Label 3420 5100 0    42   ~ 0
+	3200 5100 3400 5100
+Text Label 5100 NaNundefined
 GATE_EN
 Wire Wire Line
-	3200 5450 3420 5450
-Text Label 3420 5450 0    42   ~ 0
+	3200 5450 3400 5450
+Text Label 5450 NaNundefined
 ADC_CONVST
 Wire Wire Line
-	3200 5600 3420 5600
-Text Label 3420 5600 0    42   ~ 0
+	3200 5600 3400 5600
+Text Label 5600 NaNundefined
 ADC_SCLK
 Wire Wire Line
-	3200 5750 3420 5750
-Text Label 3420 5750 0    42   ~ 0
+	3200 5750 3400 5750
+Text Label 5750 NaNundefined
 ADC_CS_N
 Wire Wire Line
-	3200 5900 3420 5900
-Text Label 3420 5900 0    42   ~ 0
+	3200 5900 3400 5900
+Text Label 5900 NaNundefined
 ADC_RESET
 Wire Wire Line
-	3200 6100 3420 6100
-Text Label 3420 6100 0    42   ~ 0
+	3200 6100 3400 6100
+Text Label 6100 NaNundefined
 ADC_DOUTA
 Wire Wire Line
-	3200 6250 3420 6250
-Text Label 3420 6250 0    42   ~ 0
+	3200 6250 3400 6250
+Text Label 6250 NaNundefined
 ADC_DOUTB
 Wire Wire Line
-	3200 6400 3420 6400
-Text Label 3420 6400 0    42   ~ 0
+	3200 6400 3400 6400
+Text Label 6400 NaNundefined
 ADC_BUSY
 Wire Wire Line
-	3200 6550 3420 6550
-Text Label 3420 6550 0    42   ~ 0
+	3200 6550 3400 6550
+Text Label 6550 NaNundefined
 ADC_FRSTDATA
 Wire Wire Line
-	3200 6700 3420 6700
-Text Label 3420 6700 0    42   ~ 0
+	3200 6700 3400 6700
+Text Label 6700 NaNundefined
 ENC_A
 Wire Wire Line
-	3200 6850 3420 6850
-Text Label 3420 6850 0    42   ~ 0
+	3200 6850 3400 6850
+Text Label 6850 NaNundefined
 ENC_B
 Wire Wire Line
-	3200 7000 3420 7000
-Text Label 3420 7000 0    42   ~ 0
+	3200 7000 3400 7000
+Text Label 7000 NaNundefined
 ENC_Z
 Wire Wire Line
-	3200 7150 3420 7150
-Text Label 3420 7150 0    42   ~ 0
+	3200 7150 3400 7150
+Text Label 7150 NaNundefined
 OCP_N
 Wire Wire Line
-	3200 7300 3420 7300
-Text Label 3420 7300 0    42   ~ 0
+	3200 7300 3400 7300
+Text Label 7300 NaNundefined
 PWR_GOOD
 Wire Wire Line
-	3200 7450 3420 7450
-Text Label 3420 7450 0    42   ~ 0
+	3200 7450 3400 7450
+Text Label 7450 NaNundefined
 GND
 NoConn ~ 3200 5250
 Wire Wire Line
-	4000 4100 3780 4100
-Text Label 3780 4100 0    42   ~ 0
+	4000 4100 3800 4100
+Text Label 4100 NaNundefined
 VIO_3V3
 Wire Wire Line
-	4000 4300 3780 4300
-Text Label 3780 4300 0    42   ~ 0
+	4000 4300 3800 4300
+Text Label 4300 NaNundefined
 VA_5V
 Wire Wire Line
-	4000 4500 3780 4500
-Text Label 3780 4500 0    42   ~ 0
+	4000 4500 3800 4500
+Text Label 4500 NaNundefined
 GND
 Wire Wire Line
-	4000 4700 3780 4700
-Text Label 3780 4700 0    42   ~ 0
+	4000 4700 3800 4700
+Text Label 4700 NaNundefined
 VBUS_ADC
 Wire Wire Line
-	4000 4900 3780 4900
-Text Label 3780 4900 0    42   ~ 0
+	4000 4900 3800 4900
+Text Label 4900 NaNundefined
 ADC_CONVST
 Wire Wire Line
-	4000 5050 3780 5050
-Text Label 3780 5050 0    42   ~ 0
+	4000 5050 3800 5050
+Text Label 5050 NaNundefined
 ADC_SCLK
 Wire Wire Line
-	4000 5200 3780 5200
-Text Label 3780 5200 0    42   ~ 0
+	4000 5200 3800 5200
+Text Label 5200 NaNundefined
 ADC_CS_N
 Wire Wire Line
-	4000 5350 3780 5350
-Text Label 3780 5350 0    42   ~ 0
+	4000 5350 3800 5350
+Text Label 5350 NaNundefined
 ADC_RESET
 Wire Wire Line
-	4000 5600 3780 5600
-Text Label 3780 5600 0    42   ~ 0
+	4000 5600 3800 5600
+Text Label 5600 NaNundefined
 ADC_DOUTA
 Wire Wire Line
-	4000 5750 3780 5750
-Text Label 3780 5750 0    42   ~ 0
+	4000 5750 3800 5750
+Text Label 5750 NaNundefined
 ADC_DOUTB
 Wire Wire Line
-	4000 5900 3780 5900
-Text Label 3780 5900 0    42   ~ 0
+	4000 5900 3800 5900
+Text Label 5900 NaNundefined
 ADC_BUSY
 Wire Wire Line
-	4000 6050 3780 6050
-Text Label 3780 6050 0    42   ~ 0
+	4000 6050 3800 6050
+Text Label 6050 NaNundefined
 ADC_FRSTDATA
 Wire Wire Line
-	4000 6250 3780 6250
-Text Label 3780 6250 0    42   ~ 0
+	4000 6250 3800 6250
+Text Label 6250 NaNundefined
 OCP_N
 Wire Wire Line
-	7000 4300 7220 4300
-Text Label 7220 4300 0    42   ~ 0
+	7000 4300 7200 4300
+Text Label 4300 NaNundefined
 SW_U
 Wire Wire Line
-	7000 4500 7220 4500
-Text Label 7220 4500 0    42   ~ 0
+	7000 4500 7200 4500
+Text Label 4500 NaNundefined
 PH_U
 Wire Wire Line
-	7000 4900 7220 4900
-Text Label 7220 4900 0    42   ~ 0
+	7000 4900 7200 4900
+Text Label 4900 NaNundefined
 SW_V
 Wire Wire Line
-	7000 5100 7220 5100
-Text Label 7220 5100 0    42   ~ 0
+	7000 5100 7200 5100
+Text Label 5100 NaNundefined
 PH_V
 Wire Wire Line
-	7000 5500 7220 5500
-Text Label 7220 5500 0    42   ~ 0
+	7000 5500 7200 5500
+Text Label 5500 NaNundefined
 SW_W
 Wire Wire Line
-	7000 5700 7220 5700
-Text Label 7220 5700 0    42   ~ 0
+	7000 5700 7200 5700
+Text Label 5700 NaNundefined
 PH_W
 Wire Wire Line
-	6600 1100 6380 1100
-Text Label 6380 1100 0    42   ~ 0
+	6600 1100 6400 1100
+Text Label 1100 NaNundefined
 VBUS_PROT
 Wire Wire Line
-	6600 1500 6380 1500
-Text Label 6380 1500 0    42   ~ 0
+	6600 1500 6400 1500
+Text Label 1500 NaNundefined
 VIO_3V3
 Wire Wire Line
-	6600 1700 6380 1700
-Text Label 6380 1700 0    42   ~ 0
+	6600 1700 6400 1700
+Text Label 1700 NaNundefined
 PWR_GOOD
 Wire Wire Line
-	6600 1900 6380 1900
-Text Label 6380 1900 0    42   ~ 0
+	6600 1900 6400 1900
+Text Label 1900 NaNundefined
 OCP_N
 Wire Wire Line
-	6600 2100 6380 2100
-Text Label 6380 2100 0    42   ~ 0
+	6600 2100 6400 2100
+Text Label 2100 NaNundefined
 GATE_EN
 Wire Wire Line
-	6600 2300 6380 2300
-Text Label 6380 2300 0    42   ~ 0
+	6600 2300 6400 2300
+Text Label 2300 NaNundefined
 PWM_UH
 Wire Wire Line
-	6600 2450 6380 2450
-Text Label 6380 2450 0    42   ~ 0
+	6600 2450 6400 2450
+Text Label 2450 NaNundefined
 PWM_UL
 Wire Wire Line
-	6600 2600 6380 2600
-Text Label 6380 2600 0    42   ~ 0
+	6600 2600 6400 2600
+Text Label 2600 NaNundefined
 PWM_VH
 Wire Wire Line
-	6600 2750 6380 2750
-Text Label 6380 2750 0    42   ~ 0
+	6600 2750 6400 2750
+Text Label 2750 NaNundefined
 PWM_VL
 Wire Wire Line
-	6600 2900 6380 2900
-Text Label 6380 2900 0    42   ~ 0
+	6600 2900 6400 2900
+Text Label 2900 NaNundefined
 PWM_WH
 Wire Wire Line
-	6600 3050 6380 3050
-Text Label 6380 3050 0    42   ~ 0
+	6600 3050 6400 3050
+Text Label 3050 NaNundefined
 PWM_WL
 Wire Wire Line
-	6600 3300 6380 3300
-Text Label 6380 3300 0    42   ~ 0
+	6600 3300 6400 3300
+Text Label 3300 NaNundefined
 GND
 Wire Wire Line
-	10800 1300 11020 1300
-Text Label 11020 1300 0    42   ~ 0
+	10800 1300 11000 1300
+Text Label 1300 NaNundefined
 SW_U
 Wire Wire Line
-	10800 1500 11020 1500
-Text Label 11020 1500 0    42   ~ 0
+	10800 1500 11000 1500
+Text Label 1500 NaNundefined
 PH_U
 Wire Wire Line
-	10800 1900 11020 1900
-Text Label 11020 1900 0    42   ~ 0
+	10800 1900 11000 1900
+Text Label 1900 NaNundefined
 SW_V
 Wire Wire Line
-	10800 2100 11020 2100
-Text Label 11020 2100 0    42   ~ 0
+	10800 2100 11000 2100
+Text Label 2100 NaNundefined
 PH_V
 Wire Wire Line
-	10800 2500 11020 2500
-Text Label 11020 2500 0    42   ~ 0
+	10800 2500 11000 2500
+Text Label 2500 NaNundefined
 SW_W
 Wire Wire Line
-	10800 2700 11020 2700
-Text Label 11020 2700 0    42   ~ 0
+	10800 2700 11000 2700
+Text Label 2700 NaNundefined
 PH_W
 Wire Wire Line
-	8100 4550 7880 4550
-Text Label 7880 4550 0    42   ~ 0
+	8100 4550 7900 4550
+Text Label 4550 NaNundefined
 VA_5V
 Wire Wire Line
-	8100 4800 7880 4800
-Text Label 7880 4800 0    42   ~ 0
+	8100 4800 7900 4800
+Text Label 4800 NaNundefined
 VIO_3V3
 Wire Wire Line
-	8100 5200 7880 5200
-Text Label 7880 5200 0    42   ~ 0
+	8100 5200 7900 5200
+Text Label 5200 NaNundefined
 GND
 Wire Wire Line
-	10600 4600 10820 4600
-Text Label 10820 4600 0    42   ~ 0
+	10600 4600 10800 4600
+Text Label 4600 NaNundefined
 ENC_A
 Wire Wire Line
-	10600 4900 10820 4900
-Text Label 10820 4900 0    42   ~ 0
+	10600 4900 10800 4900
+Text Label 4900 NaNundefined
 ENC_B
 Wire Wire Line
-	10600 5200 10820 5200
-Text Label 10820 5200 0    42   ~ 0
+	10600 5200 10800 5200
+Text Label 5200 NaNundefined
 ENC_Z
 Text Notes 650 7200 0    48   ~ 12
 Major power rails are drawn directly; named stubs keep dense real-time and safety nets readable on A4.

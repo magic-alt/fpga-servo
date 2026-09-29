@@ -192,11 +192,11 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9600 3300 50  0001 C CNN
 	1    9600 3300
 	1 0 0 -1
 $EndComp
-Text HLabel 10800 1550 2 50 Output ~ 0
+Text HLabel 1550 NaNundefined
 VBUS_PROT
-Text HLabel 10800 4550 2 50 Output ~ 0
+Text HLabel 4550 NaNundefined
 VBUS_ADC
-Text HLabel 10800 3300 2 50 BiDi ~ 0
+Text HLabel 3300 NaNundefined
 GND
 Text Notes 600 5600 0    60   ~ 12
 Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. The controller has no reverse-current blocking when enabled, so regeneration can return to a receptive source.
@@ -210,168 +210,168 @@ Text Notes 650 6660 0    50   ~ 12
 VISIBLE WIRING: power input and protection pins use explicit wire stubs; unused pins are explicit NoConn.
 Wire Wire Line
 	400 1700 250 1700
-Text Label 250 1700 0    40   ~ 0
+Text Label 1700 NaNundefined
 VIN_RAW
 Wire Wire Line
 	1500 1700 1650 1700
-Text Label 1650 1700 0    40   ~ 0
+Text Label 1700 NaNundefined
 GND
 Wire Wire Line
 	1800 1550 1650 1550
-Text Label 1650 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 VIN_RAW
 Wire Wire Line
 	2400 1550 2550 1550
-Text Label 2550 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 VIN_FUSED
 Wire Wire Line
 	3600 2100 3600 2250
-Text Label 3600 2250 0    40   ~ 0
+Text Label 2250 NaNundefined
 RPP_GATE
 Wire Wire Line
 	4200 1550 4350 1550
-Text Label 4350 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 RPP_SRC
 Wire Wire Line
 	3000 1550 2850 1550
-Text Label 2850 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 VIN_FUSED
 Wire Wire Line
 	4850 2100 4850 2250
-Text Label 4850 2250 0    40   ~ 0
+Text Label 2250 NaNundefined
 RPP_GATE
 Wire Wire Line
 	4250 1550 4100 1550
-Text Label 4100 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 RPP_SRC
 Wire Wire Line
 	5450 1550 5600 1550
-Text Label 5600 1550 0    40   ~ 0
+Text Label 1550 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	5200 3600 5200 3450
-Text Label 5200 3450 0    40   ~ 0
+Text Label 3450 NaNundefined
 VIN_FUSED
 Wire Wire Line
 	5200 4100 5200 4250
-Text Label 5200 4250 0    40   ~ 0
+Text Label 4250 NaNundefined
 GND
 Wire Wire Line
 	2750 2900 2600 2900
-Text Label 2600 2900 0    40   ~ 0
+Text Label 2900 NaNundefined
 VIN_FUSED
 Wire Wire Line
 	3500 3900 3500 4050
-Text Label 3500 4050 0    40   ~ 0
+Text Label 4050 NaNundefined
 GND
 NoConn ~ 2750 3500
 Wire Wire Line
 	4250 3450 4400 3450
-Text Label 4400 3450 0    40   ~ 0
+Text Label 3450 NaNundefined
 VCAP_RPP
 Wire Wire Line
 	4250 3300 4400 3300
-Text Label 4400 3300 0    40   ~ 0
+Text Label 3300 NaNundefined
 VIN_FUSED
 Wire Wire Line
 	4250 3100 4400 3100
-Text Label 4400 3100 0    40   ~ 0
+Text Label 3100 NaNundefined
 RPP_GATE
 Wire Wire Line
 	2750 3300 2600 3300
-Text Label 2600 3300 0    40   ~ 0
+Text Label 3300 NaNundefined
 GND
 Wire Wire Line
 	4250 2900 4400 2900
-Text Label 4400 2900 0    40   ~ 0
+Text Label 2900 NaNundefined
 RPP_SRC
 Wire Wire Line
 	4550 3600 4550 3450
-Text Label 4550 3450 0    40   ~ 0
+Text Label 3450 NaNundefined
 VCAP_RPP
 Wire Wire Line
 	4550 4100 4550 4250
-Text Label 4550 4250 0    40   ~ 0
+Text Label 4250 NaNundefined
 VIN_FUSED
 Wire Wire Line
 	5750 3150 5750 3300
-Text Label 5750 3300 0    40   ~ 0
+Text Label 3300 NaNundefined
 GND
 Wire Wire Line
 	5750 2550 5750 2400
-Text Label 5750 2400 0    40   ~ 0
+Text Label 2400 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	6600 2600 6600 2450
-Text Label 6600 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	6600 3100 6600 3250
-Text Label 6600 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 GND
 Wire Wire Line
 	7250 2600 7250 2450
-Text Label 7250 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	7250 3100 7250 3250
-Text Label 7250 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 GND
 Wire Wire Line
 	7900 2600 7900 2450
-Text Label 7900 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	7900 3100 7900 3250
-Text Label 7900 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 GND
 Wire Wire Line
 	8550 2600 8550 2450
-Text Label 8550 2450 0    40   ~ 0
+Text Label 2450 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	8550 3100 8550 3250
-Text Label 8550 3250 0    40   ~ 0
+Text Label 3250 NaNundefined
 GND
 Wire Wire Line
 	5800 4550 5650 4550
-Text Label 5650 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	6400 4550 6550 4550
-Text Label 6550 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 VBUS_DIV_MID
 Wire Wire Line
 	6700 4550 6550 4550
-Text Label 6550 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 VBUS_DIV_MID
 Wire Wire Line
 	7300 4550 7450 4550
-Text Label 7450 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 VBUS_ADC
 Wire Wire Line
 	7600 4550 7450 4550
-Text Label 7450 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 VBUS_ADC
 Wire Wire Line
 	8200 4550 8350 4550
-Text Label 8350 4550 0    40   ~ 0
+Text Label 4550 NaNundefined
 GND
 Wire Wire Line
 	8600 4800 8600 4650
-Text Label 8600 4650 0    40   ~ 0
+Text Label 4650 NaNundefined
 VBUS_ADC
 Wire Wire Line
 	8600 5300 8600 5450
-Text Label 8600 5450 0    40   ~ 0
+Text Label 5450 NaNundefined
 GND
 Wire Wire Line
 	9600 1800 9600 1950
-Text Label 9600 1950 0    40   ~ 0
+Text Label 1950 NaNundefined
 VBUS_PROT
 Wire Wire Line
 	9600 3550 9600 3700
-Text Label 9600 3700 0    40   ~ 0
+Text Label 3700 NaNundefined
 GND
 Wire Wire Line
 	10800 1550 10600 1550
