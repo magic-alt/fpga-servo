@@ -10,43 +10,43 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S"
 $EndDescr
-Text HLabel 500 1250 0 50 Input ~ 0
+Text HLabel 700 1250 0 50 Input ~ 0
 SW_U
-Text HLabel 500 1450 0 50 Input ~ 0
+Text HLabel 700 1450 0 50 Input ~ 0
 PH_U
-Text HLabel 500 2750 0 50 Input ~ 0
+Text HLabel 700 2750 0 50 Input ~ 0
 SW_V
-Text HLabel 500 2950 0 50 Input ~ 0
+Text HLabel 700 2950 0 50 Input ~ 0
 PH_V
-Text HLabel 500 4250 0 50 Input ~ 0
+Text HLabel 700 4250 0 50 Input ~ 0
 SW_W
-Text HLabel 500 4450 0 50 Input ~ 0
+Text HLabel 700 4450 0 50 Input ~ 0
 PH_W
-Text HLabel 500 5050 0 50 Input ~ 0
+Text HLabel 700 5050 0 50 Input ~ 0
 VA_5V
-Text HLabel 500 5250 0 50 Input ~ 0
+Text HLabel 700 5250 0 50 Input ~ 0
 VIO_3V3
-Text HLabel 500 5450 0 50 Input ~ 0
+Text HLabel 700 5450 0 50 Input ~ 0
 GND
-Text HLabel 500 5650 0 50 Input ~ 0
+Text HLabel 700 5650 0 50 Input ~ 0
 VBUS_ADC
-Text HLabel 500 5850 0 50 Input ~ 0
+Text HLabel 700 5850 0 50 Input ~ 0
 ADC_CONVST
-Text HLabel 500 6050 0 50 Input ~ 0
+Text HLabel 700 6050 0 50 Input ~ 0
 ADC_SCLK
-Text HLabel 500 6250 0 50 Input ~ 0
+Text HLabel 700 6250 0 50 Input ~ 0
 ADC_CS_N
-Text HLabel 500 6450 0 50 Input ~ 0
+Text HLabel 700 6450 0 50 Input ~ 0
 ADC_RESET
-Text HLabel 11100 1450 2 50 Output ~ 0
+Text HLabel 10600 2400 2 50 Output ~ 0
 ADC_DOUTA
-Text HLabel 11100 1700 2 50 Output ~ 0
+Text HLabel 10600 2500 2 50 Output ~ 0
 ADC_DOUTB
-Text HLabel 11100 1950 2 50 Output ~ 0
+Text HLabel 10600 3600 2 50 Output ~ 0
 ADC_BUSY
-Text HLabel 11100 2200 2 50 Output ~ 0
+Text HLabel 10600 3750 2 50 Output ~ 0
 ADC_FRSTDATA
-Text HLabel 11100 6100 2 50 Output ~ 0
+Text HLabel 8600 6100 0 50 Output ~ 0
 OCP_N
 $Comp
 L ax7010_servo_reva:INA241A2 U2
@@ -399,45 +399,7 @@ INA241A2 gain=20 V/V with 5mR gives 0.1 V/A; REF1=5V and REF2=GND center the out
 Text Notes 650 7240 0    42   ~ 12
 ADS8588S straps: OS=000, PAR/SER=1, STBY=1, RANGE=0 (+/-5V), REFSEL=1. DB15/BYTE_SEL is low for serial mode.
 Text Notes 650 7380 0    42   ~ 12
-OCP thresholds use dedicated TLV9024 comparators and open-drain fault OR; this path does not depend on FPGA firmware or ADC conversion.
-Wire Wire Line
-	500 1250 700 1250
-Wire Wire Line
-	500 1450 700 1450
-Wire Wire Line
-	500 2750 700 2750
-Wire Wire Line
-	500 2950 700 2950
-Wire Wire Line
-	500 4250 700 4250
-Wire Wire Line
-	500 4450 700 4450
-Wire Wire Line
-	500 5050 700 5050
-Wire Wire Line
-	500 5250 700 5250
-Wire Wire Line
-	500 5450 700 5450
-Wire Wire Line
-	500 5650 700 5650
-Wire Wire Line
-	500 5850 700 5850
-Wire Wire Line
-	500 6050 700 6050
-Wire Wire Line
-	500 6250 700 6250
-Wire Wire Line
-	500 6450 700 6450
-Wire Wire Line
-	11100 1450 10900 1450
-Wire Wire Line
-	11100 1700 10900 1700
-Wire Wire Line
-	11100 1950 10900 1950
-Wire Wire Line
-	11100 2200 10900 2200
-Wire Wire Line
-	11100 6100 10900 6100
+OCP thresholds use dedicated TLV9024 comparators and open-drain fault OR; high-side output OR (x=6100) is physically separated from the low-threshold input stubs (x=6200), avoiding an accidental comparator-input short. This path does not depend on FPGA firmware or ADC conversion.
 Wire Wire Line
 	1400 1450 1250 1450
 Text Label 1250 1450 0    40   ~ 0
@@ -663,28 +625,28 @@ Text Label 4200 6700 0    40   ~ 0
 GND
 NoConn ~ 6050 6550
 Wire Wire Line
-	6250 5600 6100 5600
-Text Label 6100 5600 0    40   ~ 0
+	6250 5600 6200 5600
+Text Label 6200 5600 2    40   ~ 0
 OCP_LO_REF
 Wire Wire Line
-	6250 5750 6100 5750
-Text Label 6100 5750 0    40   ~ 0
+	6250 5750 6200 5750
+Text Label 6200 5750 2    40   ~ 0
 IU_ADC
 Wire Wire Line
-	6250 5900 6100 5900
-Text Label 6100 5900 0    40   ~ 0
+	6250 5900 6200 5900
+Text Label 6200 5900 2    40   ~ 0
 OCP_LO_REF
 Wire Wire Line
-	6250 6100 6100 6100
-Text Label 6100 6100 0    40   ~ 0
+	6250 6100 6200 6100
+Text Label 6200 6100 2    40   ~ 0
 IV_ADC
 Wire Wire Line
-	6250 6250 6100 6250
-Text Label 6100 6250 0    40   ~ 0
+	6250 6250 6200 6250
+Text Label 6200 6250 2    40   ~ 0
 OCP_LO_REF
 Wire Wire Line
-	6250 6400 6100 6400
-Text Label 6100 6400 0    40   ~ 0
+	6250 6400 6200 6400
+Text Label 6200 6400 2    40   ~ 0
 IW_ADC
 Wire Wire Line
 	7100 5200 7100 5050
@@ -724,9 +686,7 @@ Wire Wire Line
 Text Label 8000 5750 0    40   ~ 0
 OCP_N
 Wire Wire Line
-	9000 6100 8850 6100
-Text Label 8850 6100 0    40   ~ 0
-OCP_N
+	9000 6100 8600 6100
 Wire Wire Line
 	9600 6100 9750 6100
 Text Label 9750 6100 0    40   ~ 0
@@ -857,21 +817,13 @@ NoConn ~ 9700 3000
 NoConn ~ 9700 3100
 NoConn ~ 9700 3250
 Wire Wire Line
-	9700 2400 9850 2400
-Text Label 9850 2400 0    40   ~ 0
-ADC_DOUTA
+	9700 2400 10600 2400
 Wire Wire Line
-	9700 2500 9850 2500
-Text Label 9850 2500 0    40   ~ 0
-ADC_DOUTB
+	9700 2500 10600 2500
 Wire Wire Line
-	9700 3600 9850 3600
-Text Label 9850 3600 0    40   ~ 0
-ADC_BUSY
+	9700 3600 10600 3600
 Wire Wire Line
-	9700 3750 9850 3750
-Text Label 9850 3750 0    40   ~ 0
-ADC_FRSTDATA
+	9700 3750 10600 3750
 Wire Wire Line
 	9700 3350 9850 3350
 Text Label 9850 3350 0    40   ~ 0
@@ -930,8 +882,6 @@ Text Label 9600 5150 0    40   ~ 0
 VA_5V
 Wire Wire Line
 	8150 5000 8150 5250
-Wire Wire Line
-	8150 5250 8150 5250
 Text Label 8150 5250 0    40   ~ 0
 REGCAP1
 Wire Wire Line
@@ -940,8 +890,6 @@ Text Label 8150 5900 0    40   ~ 0
 GND
 Wire Wire Line
 	8500 5000 8500 5250
-Wire Wire Line
-	8500 5250 8500 5250
 Text Label 8500 5250 0    40   ~ 0
 REGCAP2
 Wire Wire Line
@@ -950,8 +898,6 @@ Text Label 8500 5900 0    40   ~ 0
 GND
 Wire Wire Line
 	8850 5000 8850 5250
-Wire Wire Line
-	8850 5250 8850 5250
 Text Label 8850 5250 0    40   ~ 0
 REFIO_2V5
 Wire Wire Line

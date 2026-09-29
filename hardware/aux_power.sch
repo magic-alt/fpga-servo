@@ -12,16 +12,6 @@ Comment1 "LM5164 48V->12V + TPS62163 fixed 5V"
 $EndDescr
 Text Notes 650 450 0    65   ~ 12
 VBUS_PROT -> LM5164 12V / 1A -> TPS62163 5V / 1A. PGOOD outputs are wired-AND.
-Text HLabel 700 1500 0 50 Input ~ 0
-VBUS_PROT
-Text HLabel 700 6100 0 50 BiDi ~ 0
-GND
-Text HLabel 10800 1950 2 50 Output ~ 0
-VDRV_12V
-Text HLabel 10800 5050 2 50 Output ~ 0
-VA_5V
-Text HLabel 10800 5900 2 50 Output ~ 0
-PWR_GOOD
 $Comp
 L ax7010_servo_reva:LM5164 U12
 U 1 1 6A000001
@@ -231,14 +221,14 @@ LM5164 PGOOD and TPS62163 PG are open-drain and share PWR_GOOD. Pull-up is provi
 Text Notes 650 6980 0    50   ~ 12
 12V bus is only a limited bring-up condition. Full-function lower input target is 15V because the 12V rail needs regulation headroom.
 Text Notes 650 7140 0    50   ~ 12
-VISIBLE WIRING: LM5164 and TPS62163 rails use explicit wire stubs; DNP parts are explicit NoConn.
+VISIBLE WIRING: hierarchy ports are attached directly to converter input/output nodes; DNP parts remain explicit NoConn.
 Wire Wire Line
 	3400 3100 3400 3250
-Text Label 3400 3250 0    40   ~ 0
+Text HLabel 3400 3250 1 50 BiDi ~ 0
 GND
 Wire Wire Line
 	2600 2050 2450 2050
-Text Label 2450 2050 0    40   ~ 0
+Text HLabel 2450 2050 0 50 Input ~ 0
 VBUS_PROT
 Wire Wire Line
 	2600 2200 2450 2200
@@ -302,7 +292,7 @@ Text Label 5050 1950 0    40   ~ 0
 SW_12V
 Wire Wire Line
 	5900 1950 6050 1950
-Text Label 6050 1950 0    40   ~ 0
+Text HLabel 6050 1950 2 50 Output ~ 0
 VDRV_12V
 Wire Wire Line
 	6500 2350 6500 2200
@@ -394,7 +384,7 @@ Text Label 5900 4950 0    40   ~ 0
 SW_5V
 Wire Wire Line
 	5750 4750 5900 4750
-Text Label 5900 4750 0    40   ~ 0
+Text HLabel 5900 4750 2 50 Output ~ 0
 PWR_GOOD
 Wire Wire Line
 	3550 5300 3550 5150
@@ -410,7 +400,7 @@ Text Label 5850 4950 0    40   ~ 0
 SW_5V
 Wire Wire Line
 	6700 4950 6850 4950
-Text Label 6850 4950 0    40   ~ 0
+Text HLabel 6850 4950 2 50 Output ~ 0
 VA_5V
 Wire Wire Line
 	7400 5300 7400 5150
@@ -426,14 +416,4 @@ Wire Wire Line
 	8750 5300 8750 5450
 Text Label 8750 5450 0    40   ~ 0
 VA_5V
-Wire Wire Line
-	700 1500 900 1500
-Wire Wire Line
-	700 6100 900 6100
-Wire Wire Line
-	10800 1950 10600 1950
-Wire Wire Line
-	10800 5050 10600 5050
-Wire Wire Line
-	10800 5900 10600 5900
 $EndSCHEMATC

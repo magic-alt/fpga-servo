@@ -16,11 +16,11 @@ Text HLabel 700 2000 0 50 Input ~ 0
 VIO_3V3
 Text HLabel 700 2400 0 50 BiDi ~ 0
 GND
-Text HLabel 10800 3100 2 50 Output ~ 0
+Text HLabel 9000 3250 2 50 Output ~ 0
 ENC_A
-Text HLabel 10800 3500 2 50 Output ~ 0
+Text HLabel 9000 3400 2 50 Output ~ 0
 ENC_B
-Text HLabel 10800 3900 2 50 Output ~ 0
+Text HLabel 9000 3600 2 50 Output ~ 0
 ENC_Z
 $Comp
 L ax7010_servo_reva:ENCODER_DIFF J5
@@ -119,7 +119,7 @@ F 2 "" H 4700 3500 50  0001 C CNN
 	1 0 0 -1
 $EndComp
 Text Notes 650 6980 0    50   ~ 12
-VISIBLE WIRING: differential ABZ pairs, termination, ESD, line receiver and encoder power are explicitly wired.
+VISIBLE WIRING: differential ABZ pairs, termination, ESD, line receiver and encoder power are explicitly wired; receiver outputs go directly to hierarchy ports.
 Wire Wire Line
 	850 3100 700 3100
 Text Label 700 3100 0    40   ~ 0
@@ -190,9 +190,7 @@ Wire Wire Line
 Text Label 5850 3100 0    40   ~ 0
 ENC_A_N
 Wire Wire Line
-	7800 3250 7950 3250
-Text Label 7950 3250 0    40   ~ 0
-ENC_A
+	7800 3250 9000 3250
 Wire Wire Line
 	6000 3250 5850 3250
 Text Label 5850 3250 0    40   ~ 0
@@ -202,9 +200,7 @@ Wire Wire Line
 Text Label 5850 3400 0    40   ~ 0
 ENC_B_N
 Wire Wire Line
-	7800 3400 7950 3400
-Text Label 7950 3400 0    40   ~ 0
-ENC_B
+	7800 3400 9000 3400
 Wire Wire Line
 	6900 2400 6900 2250
 Text Label 6900 2250 0    40   ~ 0
@@ -214,9 +210,7 @@ Wire Wire Line
 Text Label 6900 4750 0    40   ~ 0
 GND
 Wire Wire Line
-	7800 3600 7950 3600
-Text Label 7950 3600 0    40   ~ 0
-ENC_Z
+	7800 3600 9000 3600
 Wire Wire Line
 	6000 3600 5850 3600
 Text Label 5850 3600 0    40   ~ 0
@@ -271,7 +265,7 @@ ENC_A_N
 Wire Wire Line
 	4000 3400 3850 3400
 Text Label 3850 3400 0    40   ~ 0
-ENC_B_N
+ENC_B_P
 Wire Wire Line
 	4000 3600 3850 3600
 Text Label 3850 3600 0    40   ~ 0
@@ -294,10 +288,4 @@ Wire Wire Line
 	700 2000 900 2000
 Wire Wire Line
 	700 2400 900 2400
-Wire Wire Line
-	10800 3100 10600 3100
-Wire Wire Line
-	10800 3500 10600 3500
-Wire Wire Line
-	10800 3900 10600 3900
 $EndSCHEMATC

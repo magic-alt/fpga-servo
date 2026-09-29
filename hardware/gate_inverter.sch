@@ -10,43 +10,43 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "FD6288 + 100V MOSFET bridge + inline 5mR Kelvin shunts"
 $EndDescr
-Text HLabel 500 1100 0 50 Input ~ 0
+Text HLabel 700 1100 0 50 Input ~ 0
 PWM_UH
-Text HLabel 500 1300 0 50 Input ~ 0
+Text HLabel 700 1300 0 50 Input ~ 0
 PWM_UL
-Text HLabel 500 1500 0 50 Input ~ 0
+Text HLabel 700 1500 0 50 Input ~ 0
 PWM_VH
-Text HLabel 500 1700 0 50 Input ~ 0
+Text HLabel 700 1700 0 50 Input ~ 0
 PWM_VL
-Text HLabel 500 1900 0 50 Input ~ 0
+Text HLabel 700 1900 0 50 Input ~ 0
 PWM_WH
-Text HLabel 500 2100 0 50 Input ~ 0
+Text HLabel 700 2100 0 50 Input ~ 0
 PWM_WL
-Text HLabel 500 2500 0 50 Input ~ 0
+Text HLabel 700 2500 0 50 Input ~ 0
 GATE_EN
-Text HLabel 500 2700 0 50 Input ~ 0
+Text HLabel 700 2700 0 50 Input ~ 0
 PWR_GOOD
-Text HLabel 500 2900 0 50 Input ~ 0
+Text HLabel 700 2900 0 50 Input ~ 0
 OCP_N
-Text HLabel 500 3300 0 50 Input ~ 0
+Text HLabel 700 3300 0 50 Input ~ 0
 VIO_3V3
-Text HLabel 500 3500 0 50 Input ~ 0
+Text HLabel 700 3500 0 50 Input ~ 0
 VDRV_12V
-Text HLabel 500 3700 0 50 Input ~ 0
+Text HLabel 700 3700 0 50 Input ~ 0
 VBUS_PROT
-Text HLabel 500 3900 0 50 Input ~ 0
+Text HLabel 700 3900 0 50 Input ~ 0
 GND
-Text HLabel 11100 1650 2 50 Output ~ 0
+Text HLabel 10900 1650 2 50 Output ~ 0
 SW_U
-Text HLabel 11100 1850 2 50 Output ~ 0
+Text HLabel 10900 1850 2 50 Output ~ 0
 PH_U
-Text HLabel 11100 3600 2 50 Output ~ 0
+Text HLabel 10900 3600 2 50 Output ~ 0
 SW_V
-Text HLabel 11100 3800 2 50 Output ~ 0
+Text HLabel 10900 3800 2 50 Output ~ 0
 PH_V
-Text HLabel 11100 5550 2 50 Output ~ 0
+Text HLabel 10900 5550 2 50 Output ~ 0
 SW_W
-Text HLabel 11100 5750 2 50 Output ~ 0
+Text HLabel 10900 5750 2 50 Output ~ 0
 PH_W
 $Comp
 L ax7010_servo_reva:SN74LVC2G08 U8
@@ -487,45 +487,7 @@ RUN_OK = GATE_EN & PWR_GOOD & OCP_N. FPGA deadtime remains >=500 ns; FD6288 inte
 Text Notes 650 6890 0    42   ~ 12
 Bootstrap relationship: VDRV_12V -> diode -> BST_x; CBOOT is between BST_x and SW_x; FD6288 VBx/VSx use the same named nets.
 Text Notes 650 7030 0    42   ~ 12
-RG starts at 10R; RGS=10k. Tune RG from measured VGS/SW ringing and loss. Shunt Kelvin pads share the force nets electrically but route separately in PCB.
-Wire Wire Line
-	500 1100 700 1100
-Wire Wire Line
-	500 1300 700 1300
-Wire Wire Line
-	500 1500 700 1500
-Wire Wire Line
-	500 1700 700 1700
-Wire Wire Line
-	500 1900 700 1900
-Wire Wire Line
-	500 2100 700 2100
-Wire Wire Line
-	500 2500 700 2500
-Wire Wire Line
-	500 2700 700 2700
-Wire Wire Line
-	500 2900 700 2900
-Wire Wire Line
-	500 3300 700 3300
-Wire Wire Line
-	500 3500 700 3500
-Wire Wire Line
-	500 3700 700 3700
-Wire Wire Line
-	500 3900 700 3900
-Wire Wire Line
-	11100 1650 10900 1650
-Wire Wire Line
-	11100 1850 10900 1850
-Wire Wire Line
-	11100 3600 10900 3600
-Wire Wire Line
-	11100 3800 10900 3800
-Wire Wire Line
-	11100 5550 10900 5550
-Wire Wire Line
-	11100 5750 10900 5750
+RG starts at 10R; RGS=10k. Tune RG from measured VGS/SW ringing and loss. Hierarchy ports are kept inside the A4 frame; no-op/zero-length drafting wires are removed. Shunt Kelvin pads share the force nets electrically but route separately in PCB.
 Wire Wire Line
 	750 2750 600 2750
 Text Label 600 2750 0    40   ~ 0
@@ -811,13 +773,9 @@ Wire Wire Line
 Text Label 6900 1300 0    40   ~ 0
 GH_U
 Wire Wire Line
-	7650 1300 7650 1300
-Wire Wire Line
 	7050 2400 6900 2400
 Text Label 6900 2400 0    40   ~ 0
 GL_U
-Wire Wire Line
-	7650 2400 7650 2400
 Wire Wire Line
 	7400 1650 7650 1650
 Wire Wire Line
@@ -876,13 +834,9 @@ Wire Wire Line
 Text Label 6900 3250 0    40   ~ 0
 GH_V
 Wire Wire Line
-	7650 3250 7650 3250
-Wire Wire Line
 	7050 4350 6900 4350
 Text Label 6900 4350 0    40   ~ 0
 GL_V
-Wire Wire Line
-	7650 4350 7650 4350
 Wire Wire Line
 	7400 3600 7650 3600
 Wire Wire Line
@@ -941,13 +895,9 @@ Wire Wire Line
 Text Label 6900 5200 0    40   ~ 0
 GH_W
 Wire Wire Line
-	7650 5200 7650 5200
-Wire Wire Line
 	7050 6300 6900 6300
 Text Label 6900 6300 0    40   ~ 0
 GL_W
-Wire Wire Line
-	7650 6300 7650 6300
 Wire Wire Line
 	7400 5550 7650 5550
 Wire Wire Line

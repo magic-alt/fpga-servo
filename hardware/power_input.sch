@@ -192,12 +192,6 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9600 3300 50  0001 C CNN
 	1    9600 3300
 	1 0 0 -1
 $EndComp
-Text HLabel 10800 1550 2 50 Output ~ 0
-VBUS_PROT
-Text HLabel 10800 4550 2 50 Output ~ 0
-VBUS_ADC
-Text HLabel 10800 3300 2 50 BiDi ~ 0
-GND
 Text Notes 600 5600 0    60   ~ 12
 Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. The controller has no reverse-current blocking when enabled, so regeneration can return to a receptive source.
 Text Notes 600 5770 0    60   ~ 12
@@ -207,10 +201,10 @@ D1 remains a DNP TVS footprint until clamping voltage is selected from the actua
 Text Notes 650 6500 0    50   ~ 12
 VBUS_ADC divider = 280k + 280k over 39k, plus 10nF at the ADC node. Keep the high-side resistors split for voltage stress and route the sense return away from commutation current.
 Text Notes 650 6660 0    50   ~ 12
-VISIBLE WIRING: power input and protection pins use explicit wire stubs; unused pins are explicit NoConn.
+VISIBLE WIRING: hierarchy ports sit on their functional nets; the divider midpoint and protected bus are explicitly joined; unused pins remain explicit NoConn.
 Wire Wire Line
-	400 1700 250 1700
-Text Label 250 1700 0    40   ~ 0
+	400 1700 450 1700
+Text Label 450 1700 0    40   ~ 0
 VIN_RAW
 Wire Wire Line
 	1500 1700 1650 1700
@@ -246,7 +240,7 @@ Text Label 4100 1550 0    40   ~ 0
 RPP_SRC
 Wire Wire Line
 	5450 1550 5600 1550
-Text Label 5600 1550 0    40   ~ 0
+Text HLabel 5600 1550 2 50 Output ~ 0
 VBUS_PROT
 Wire Wire Line
 	5200 3600 5200 3450
@@ -346,12 +340,8 @@ Wire Wire Line
 Text Label 6550 4550 0    40   ~ 0
 VBUS_DIV_MID
 Wire Wire Line
-	7300 4550 7450 4550
-Text Label 7450 4550 0    40   ~ 0
-VBUS_ADC
-Wire Wire Line
-	7600 4550 7450 4550
-Text Label 7450 4550 0    40   ~ 0
+	7300 4550 7600 4550
+Text HLabel 7450 4550 1 50 Output ~ 0
 VBUS_ADC
 Wire Wire Line
 	8200 4550 8350 4550
@@ -371,12 +361,6 @@ Text Label 9600 1950 0    40   ~ 0
 VBUS_PROT
 Wire Wire Line
 	9600 3550 9600 3700
-Text Label 9600 3700 0    40   ~ 0
+Text HLabel 9600 3700 1 50 BiDi ~ 0
 GND
-Wire Wire Line
-	10800 1550 10600 1550
-Wire Wire Line
-	10800 4550 10600 4550
-Wire Wire Line
-	10800 3300 10600 3300
 $EndSCHEMATC
