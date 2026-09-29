@@ -1,0 +1,251 @@
+EESchema Schematic File Version 4
+LIBS:ax7010_servo_reva
+EELAYER 29 0
+EELAYER END
+$Descr A3 16535 11693
+Sheet 1 1
+Title "Rev.A1 - DC Input & Protection"
+Date "2026-09-29"
+Rev "A1"
+Comp "magic-alt/fpga-servo"
+Comment1 "48V nominal; 15..55V full-function design window"
+$EndDescr
+Text Notes 600 500 0    70   ~ 12
+DC INPUT -> FUSE -> REVERSE-POLARITY MOSFET -> LOCAL TVS / DC-LINK
+$Comp
+L ax7010_servo_reva:TERM2 J3
+U 1 1 66000001
+P 1000 1800
+F 0 "J3" H 1100 1900 50  0000 C CNN
+F 1 "DC_IN_48V" H 1100 1700 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P7.62mm" H 1000 1800 50  0001 C CNN
+	1    1000 1800
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:FUSE F1
+U 1 1 66000002
+P 2200 1650
+F 0 "F1" H 2300 1750 50  0000 C CNN
+F 1 "EXT_FUSE_OR_25A_FUSE" H 2300 1550 50  0000 C CNN
+F 2 "Fuse:Fuse_2920_7451Metric" H 2200 1650 50  0001 C CNN
+	1    2200 1650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:MOSFET_N Q7
+U 1 1 66000003
+P 5600 1650
+F 0 "Q7" H 5700 1750 50  0000 C CNN
+F 1 "BSC040N10NS5_RPP" H 5700 1550 50  0000 C CNN
+F 2 "Package_DirectFET:DirectFET_L4" H 5600 1650 50  0001 C CNN
+	1    5600 1650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:LM74502 U18
+U 1 1 66000004
+P 4100 2700
+F 0 "U18" H 4200 2800 50  0000 C CNN
+F 1 "LM74502DDFR" H 4200 2600 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-8" H 4100 2700 50  0001 C CNN
+	1    4100 2700
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C18
+U 1 1 66000005
+P 5000 3350
+F 0 "C18" H 5100 3450 50  0000 C CNN
+F 1 "220nF_25V_VCAP" H 5100 3250 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5000 3350 50  0001 C CNN
+	1    5000 3350
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:TVS D1
+U 1 1 66000006
+P 6800 2800
+F 0 "D1" H 6900 2900 50  0000 C CNN
+F 1 "SMCJ54A_DNP_VERIFY_CLAMP" H 6900 2700 50  0000 C CNN
+F 2 "Diode_SMD:D_SMC" H 6800 2800 50  0001 C CNN
+	1    6800 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C1
+U 1 1 66000007
+P 7800 2800
+F 0 "C1" H 7900 2900 50  0000 C CNN
+F 1 "100uF_100V" H 7900 2700 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 7800 2800 50  0001 C CNN
+	1    7800 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C2
+U 1 1 66000008
+P 8500 2800
+F 0 "C2" H 8600 2900 50  0000 C CNN
+F 1 "100uF_100V" H 8600 2700 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm" H 8500 2800 50  0001 C CNN
+	1    8500 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C3
+U 1 1 66000009
+P 9200 2800
+F 0 "C3" H 9300 2900 50  0000 C CNN
+F 1 "1uF_100V_FILM" H 9300 2700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 9200 2800 50  0001 C CNN
+	1    9200 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C4
+U 1 1 6600000A
+P 9900 2800
+F 0 "C4" H 10000 2900 50  0000 C CNN
+F 1 "100nF_100V_C0G" H 10000 2700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 9900 2800 50  0001 C CNN
+	1    9900 2800
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:R R1
+U 1 1 6600000B
+P 7600 4300
+F 0 "R1" H 7700 4400 50  0000 C CNN
+F 1 "280k_0.1%" H 7700 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7600 4300 50  0001 C CNN
+	1    7600 4300
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:R R2
+U 1 1 6600000C
+P 8600 4300
+F 0 "R2" H 8700 4400 50  0000 C CNN
+F 1 "280k_0.1%" H 8700 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 8600 4300 50  0001 C CNN
+	1    8600 4300
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:R R3
+U 1 1 6600000D
+P 9600 4300
+F 0 "R3" H 9700 4400 50  0000 C CNN
+F 1 "39k_0.1%" H 9700 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9600 4300 50  0001 C CNN
+	1    9600 4300
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C5
+U 1 1 6600000E
+P 10400 4750
+F 0 "C5" H 10500 4850 50  0000 C CNN
+F 1 "10nF_VBUS_SENSE" H 10500 4650 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10400 4750 50  0001 C CNN
+	1    10400 4750
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:TP TP1
+U 1 1 6600000F
+P 10900 1650
+F 0 "TP1" H 11000 1750 50  0000 C CNN
+F 1 "TP_VBUS_PROT" H 11000 1550 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10900 1650 50  0001 C CNN
+	1    10900 1650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:TP TP2
+U 1 1 66000010
+P 10900 3300
+F 0 "TP2" H 11000 3400 50  0000 C CNN
+F 1 "TP_GND" H 11000 3200 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10900 3300 50  0001 C CNN
+	1    10900 3300
+	1 0 0 -1
+$EndComp
+Text HLabel 12100 1650 2    50   O ~ 0
+VBUS_PROT
+Text HLabel 12100 4300 2    50   O ~ 0
+VBUS_ADC
+Text HLabel 12100 3300 1    50   B ~ 0
+GND
+Text Notes 600 5600 0    70   ~ 12
+LM74502 is used only as reverse-polarity / soft-start controller. It does NOT block regenerative reverse current.
+Text Notes 600 5750 0    70   ~ 12
+Positive surge must remain within LM74502 absolute limits; 54V TVS footprint is DNP/qualification-gated until source transient is measured.
+Text Notes 600 5900 0    70   ~ 12
+F1 is a PCB placeholder; an upstream source-rated fuse is mandatory for first power-up.
+Wire Wire Line
+	1200 1800 1900 1800
+Wire Wire Line
+	1900 1800 1900 1650
+Wire Wire Line
+	1900 1650 1900 1650
+Wire Wire Line
+	2500 1650 5000 1650
+Text Label 1300 1800 0    45   ~ 0
+VIN_RAW
+Text Label 2700 1650 0    45   ~ 0
+VIN_FUSED
+Text Label 5900 1650 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	6200 1650 12100 1650
+Wire Wire Line
+	1000 2200 1000 3300
+Wire Wire Line
+	1000 3300 12100 3300
+Text Label 1200 3300 0    45   ~ 0
+GND
+Wire Wire Line
+	6800 2500 6800 1650
+Wire Wire Line
+	6800 3100 6800 3300
+Wire Wire Line
+	7800 2550 7800 1650
+Wire Wire Line
+	7800 3050 7800 3300
+Wire Wire Line
+	8500 2550 8500 1650
+Wire Wire Line
+	8500 3050 8500 3300
+Wire Wire Line
+	9200 2550 9200 1650
+Wire Wire Line
+	9200 3050 9200 3300
+Wire Wire Line
+	9900 2550 9900 1650
+Wire Wire Line
+	9900 3050 9900 3300
+Wire Wire Line
+	7300 4300 7000 4300
+Text Label 7000 4300 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	7900 4300 8300 4300
+Wire Wire Line
+	8900 4300 9300 4300
+Wire Wire Line
+	9900 4300 12100 4300
+Wire Wire Line
+	9600 4600 9600 5100
+Wire Wire Line
+	9600 5100 9600 5100
+Text Label 9600 5100 0    45   ~ 0
+GND
+Wire Wire Line
+	10400 4500 10400 4300
+Wire Wire Line
+	10400 5000 10400 5100
+Text Label 10400 5100 0    45   ~ 0
+GND
+$EndSCHEMATC
