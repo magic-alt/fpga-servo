@@ -10,1088 +10,1006 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S"
 $EndDescr
-Text HLabel 500 1350 0 50 Input ~ 0
+Text HLabel 500 1250 0 50 Input ~ 0
 SW_U
-Text HLabel 500 1550 0 50 Input ~ 0
+Text HLabel 500 1450 0 50 Input ~ 0
 PH_U
-Text HLabel 500 2900 0 50 Input ~ 0
+Text HLabel 500 2750 0 50 Input ~ 0
 SW_V
-Text HLabel 500 3100 0 50 Input ~ 0
+Text HLabel 500 2950 0 50 Input ~ 0
 PH_V
-Text HLabel 500 4450 0 50 Input ~ 0
+Text HLabel 500 4250 0 50 Input ~ 0
 SW_W
-Text HLabel 500 4650 0 50 Input ~ 0
+Text HLabel 500 4450 0 50 Input ~ 0
 PH_W
-Text HLabel 500 5200 0 50 Input ~ 0
+Text HLabel 500 5050 0 50 Input ~ 0
 VA_5V
-Text HLabel 500 5400 0 50 Input ~ 0
+Text HLabel 500 5250 0 50 Input ~ 0
 VIO_3V3
-Text HLabel 500 5600 0 50 Input ~ 0
+Text HLabel 500 5450 0 50 Input ~ 0
 GND
-Text HLabel 500 5800 0 50 Input ~ 0
+Text HLabel 500 5650 0 50 Input ~ 0
 VBUS_ADC
-Text HLabel 500 6000 0 50 Input ~ 0
+Text HLabel 500 5850 0 50 Input ~ 0
 ADC_CONVST
-Text HLabel 500 6200 0 50 Input ~ 0
+Text HLabel 500 6050 0 50 Input ~ 0
 ADC_SCLK
-Text HLabel 500 6400 0 50 Input ~ 0
+Text HLabel 500 6250 0 50 Input ~ 0
 ADC_CS_N
-Text HLabel 500 6600 0 50 Input ~ 0
+Text HLabel 500 6450 0 50 Input ~ 0
 ADC_RESET
-Text HLabel 11100 1550 2 50 Output ~ 0
+Text HLabel 11100 1450 2 50 Output ~ 0
 ADC_DOUTA
-Text HLabel 11100 1800 2 50 Output ~ 0
+Text HLabel 11100 1700 2 50 Output ~ 0
 ADC_DOUTB
-Text HLabel 11100 2050 2 50 Output ~ 0
+Text HLabel 11100 1950 2 50 Output ~ 0
 ADC_BUSY
-Text HLabel 11100 2300 2 50 Output ~ 0
+Text HLabel 11100 2200 2 50 Output ~ 0
 ADC_FRSTDATA
-Text HLabel 11100 6550 2 50 Output ~ 0
+Text HLabel 11100 6100 2 50 Output ~ 0
 OCP_N
 $Comp
 L ax7010_servo_reva:INA241A2 U2
 U 1 1 6A000015
-P 2200 1600
-F 0 "U2" H 2300 1700 50  0000 C CNN
-F 1 "INA241A2ID_U" H 2300 1500 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2200 1600 50  0001 C CNN
-	1    2200 1600
+P 2200 1550
+F 0 "U2" H 2300 1650 50  0000 C CNN
+F 1 "INA241A2ID_U" H 2300 1450 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2200 1550 50  0001 C CNN
+	1    2200 1550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R40
 U 1 1 6A000016
-P 3350 1600
-F 0 "R40" H 3450 1700 50  0000 C CNN
-F 1 "47R_ADC_ISOLATION" H 3450 1500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 1600 50  0001 C CNN
-	1    3350 1600
+P 3350 1550
+F 0 "R40" H 3450 1650 50  0000 C CNN
+F 1 "47R_ADC_ISOLATION" H 3450 1450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 1550 50  0001 C CNN
+	1    3350 1550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C40
 U 1 1 6A000017
-P 4050 2100
-F 0 "C40" H 4150 2200 50  0000 C CNN
-F 1 "1nF_C0G_ADC" H 4150 2000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 2100 50  0001 C CNN
-	1    4050 2100
+P 4050 2050
+F 0 "C40" H 4150 2150 50  0000 C CNN
+F 1 "1nF_C0G_ADC" H 4150 1950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 2050 50  0001 C CNN
+	1    4050 2050
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C43
 U 1 1 6A000018
-P 2200 2750
-F 0 "C43" H 2300 2850 50  0000 C CNN
-F 1 "100nF_INA_DECOUPLE" H 2300 2650 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 2750 50  0001 C CNN
-	1    2200 2750
+P 2200 2700
+F 0 "C43" H 2300 2800 50  0000 C CNN
+F 1 "100nF_INA_DECOUPLE" H 2300 2600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 2700 50  0001 C CNN
+	1    2200 2700
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:INA241A2 U3
 U 1 1 6A000019
-P 2200 3100
-F 0 "U3" H 2300 3200 50  0000 C CNN
-F 1 "INA241A2ID_V" H 2300 3000 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2200 3100 50  0001 C CNN
-	1    2200 3100
+P 2200 3050
+F 0 "U3" H 2300 3150 50  0000 C CNN
+F 1 "INA241A2ID_V" H 2300 2950 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2200 3050 50  0001 C CNN
+	1    2200 3050
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R41
 U 1 1 6A00001A
-P 3350 3100
-F 0 "R41" H 3450 3200 50  0000 C CNN
-F 1 "47R_ADC_ISOLATION" H 3450 3000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 3100 50  0001 C CNN
-	1    3350 3100
+P 3350 3050
+F 0 "R41" H 3450 3150 50  0000 C CNN
+F 1 "47R_ADC_ISOLATION" H 3450 2950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 3050 50  0001 C CNN
+	1    3350 3050
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C41
 U 1 1 6A00001B
-P 4050 3600
-F 0 "C41" H 4150 3700 50  0000 C CNN
-F 1 "1nF_C0G_ADC" H 4150 3500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 3600 50  0001 C CNN
-	1    4050 3600
+P 4050 3550
+F 0 "C41" H 4150 3650 50  0000 C CNN
+F 1 "1nF_C0G_ADC" H 4150 3450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 3550 50  0001 C CNN
+	1    4050 3550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C44
 U 1 1 6A00001C
-P 2200 4250
-F 0 "C44" H 2300 4350 50  0000 C CNN
-F 1 "100nF_INA_DECOUPLE" H 2300 4150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 4250 50  0001 C CNN
-	1    2200 4250
+P 2200 4200
+F 0 "C44" H 2300 4300 50  0000 C CNN
+F 1 "100nF_INA_DECOUPLE" H 2300 4100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 4200 50  0001 C CNN
+	1    2200 4200
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:INA241A2 U4
 U 1 1 6A00001D
-P 2200 4600
-F 0 "U4" H 2300 4700 50  0000 C CNN
-F 1 "INA241A2ID_W" H 2300 4500 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2200 4600 50  0001 C CNN
-	1    2200 4600
+P 2200 4550
+F 0 "U4" H 2300 4650 50  0000 C CNN
+F 1 "INA241A2ID_W" H 2300 4450 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2200 4550 50  0001 C CNN
+	1    2200 4550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R42
 U 1 1 6A00001E
-P 3350 4600
-F 0 "R42" H 3450 4700 50  0000 C CNN
-F 1 "47R_ADC_ISOLATION" H 3450 4500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 4600 50  0001 C CNN
-	1    3350 4600
+P 3350 4550
+F 0 "R42" H 3450 4650 50  0000 C CNN
+F 1 "47R_ADC_ISOLATION" H 3450 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3350 4550 50  0001 C CNN
+	1    3350 4550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C42
 U 1 1 6A00001F
-P 4050 5100
-F 0 "C42" H 4150 5200 50  0000 C CNN
-F 1 "1nF_C0G_ADC" H 4150 5000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 5100 50  0001 C CNN
-	1    4050 5100
+P 4050 5050
+F 0 "C42" H 4150 5150 50  0000 C CNN
+F 1 "1nF_C0G_ADC" H 4150 4950 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4050 5050 50  0001 C CNN
+	1    4050 5050
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C45
 U 1 1 6A000020
-P 2200 5750
-F 0 "C45" H 2300 5850 50  0000 C CNN
-F 1 "100nF_INA_DECOUPLE" H 2300 5650 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 5750 50  0001 C CNN
-	1    2200 5750
+P 2200 5700
+F 0 "C45" H 2300 5800 50  0000 C CNN
+F 1 "100nF_INA_DECOUPLE" H 2300 5600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2200 5700 50  0001 C CNN
+	1    2200 5700
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R50
 U 1 1 6A000021
-P 3950 5450
-F 0 "R50" H 4050 5550 50  0000 C CNN
-F 1 "10k_0.1%_OCP_HI_TOP" H 4050 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3950 5450 50  0001 C CNN
-	1    3950 5450
+P 3400 5600
+F 0 "R50" H 3500 5700 50  0000 C CNN
+F 1 "10k_0.1%_OCP_HI_TOP" H 3500 5500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 5600 50  0001 C CNN
+	1    3400 5600
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R51
 U 1 1 6A000022
-P 4550 5450
-F 0 "R51" H 4650 5550 50  0000 C CNN
-F 1 "160k_0.1%_OCP_HI_BOT" H 4650 5350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4550 5450 50  0001 C CNN
-	1    4550 5450
+P 4050 5600
+F 0 "R51" H 4150 5700 50  0000 C CNN
+F 1 "160k_0.1%_OCP_HI_BOT" H 4150 5500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 5600 50  0001 C CNN
+	1    4050 5600
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R52
 U 1 1 6A000023
-P 3950 6000
-F 0 "R52" H 4050 6100 50  0000 C CNN
-F 1 "160k_0.1%_OCP_LO_TOP" H 4050 5900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 3950 6000 50  0001 C CNN
-	1    3950 6000
+P 3400 6100
+F 0 "R52" H 3500 6200 50  0000 C CNN
+F 1 "160k_0.1%_OCP_LO_TOP" H 3500 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 6100 50  0001 C CNN
+	1    3400 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R53
 U 1 1 6A000024
-P 4550 6000
-F 0 "R53" H 4650 6100 50  0000 C CNN
-F 1 "10k_0.1%_OCP_LO_BOT" H 4650 5900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4550 6000 50  0001 C CNN
-	1    4550 6000
+P 4050 6100
+F 0 "R53" H 4150 6200 50  0000 C CNN
+F 1 "10k_0.1%_OCP_LO_BOT" H 4150 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 6100 50  0001 C CNN
+	1    4050 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:TLV9024 U15
 U 1 1 6A000025
-P 5500 5900
-F 0 "U15" H 5600 6000 50  0000 C CNN
-F 1 "TLV9024PWR_HIGH" H 5600 5800 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5500 5900 50  0001 C CNN
-	1    5500 5900
+P 5200 6100
+F 0 "U15" H 5300 6200 50  0000 C CNN
+F 1 "TLV9024PWR_HIGH" H 5300 6000 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 5200 6100 50  0001 C CNN
+	1    5200 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:TLV9024 U16
 U 1 1 6A000026
-P 7650 5900
-F 0 "U16" H 7750 6000 50  0000 C CNN
-F 1 "TLV9024PWR_LOW" H 7750 5800 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7650 5900 50  0001 C CNN
-	1    7650 5900
+P 7100 6100
+F 0 "U16" H 7200 6200 50  0000 C CNN
+F 1 "TLV9024PWR_LOW" H 7200 6000 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 7100 6100 50  0001 C CNN
+	1    7100 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R54
 U 1 1 6A000027
-P 9500 5900
-F 0 "R54" H 9600 6000 50  0000 C CNN
-F 1 "4.7k_OCP_PULLUP_TO_VIO" H 9600 5800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 9500 5900 50  0001 C CNN
-	1    9500 5900
+P 8600 6100
+F 0 "R54" H 8700 6200 50  0000 C CNN
+F 1 "4.7k_OCP_PULLUP_TO_VIO" H 8700 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 8600 6100 50  0001 C CNN
+	1    8600 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:ADS8588S U6
 U 1 1 6A000028
-P 8500 3100
-F 0 "U6" H 8600 3200 50  0000 C CNN
-F 1 "ADS8588SIPM" H 8600 3000 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 8500 3100 50  0001 C CNN
-	1    8500 3100
+P 8500 3000
+F 0 "U6" H 8600 3100 50  0000 C CNN
+F 1 "ADS8588SIPM" H 8600 2900 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 8500 3000 50  0001 C CNN
+	1    8500 3000
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C60
 U 1 1 6A000029
-P 8150 5550
-F 0 "C60" H 8250 5650 50  0000 C CNN
-F 1 "10uF_REFIO_X7R" H 8250 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8150 5550 50  0001 C CNN
-	1    8150 5550
+P 8860 5500
+F 0 "C60" H 8960 5600 50  0000 C CNN
+F 1 "10uF_REFIO_X7R" H 8960 5400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8860 5500 50  0001 C CNN
+	1    8860 5500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C61
 U 1 1 6A00002A
-P 8550 5550
-F 0 "C61" H 8650 5650 50  0000 C CNN
-F 1 "10uF_REFCAP_X7R" H 8650 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 8550 5550 50  0001 C CNN
-	1    8550 5550
+P 9160 5500
+F 0 "C61" H 9260 5600 50  0000 C CNN
+F 1 "10uF_REFCAP_X7R" H 9260 5400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 9160 5500 50  0001 C CNN
+	1    9160 5500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C62
 U 1 1 6A00002B
-P 7300 5550
-F 0 "C62" H 7400 5650 50  0000 C CNN
-F 1 "1uF_REGCAP1" H 7400 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7300 5550 50  0001 C CNN
-	1    7300 5550
+P 8140 5500
+F 0 "C62" H 8240 5600 50  0000 C CNN
+F 1 "1uF_REGCAP1" H 8240 5400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8140 5500 50  0001 C CNN
+	1    8140 5500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C63
 U 1 1 6A00002C
-P 7700 5550
-F 0 "C63" H 7800 5650 50  0000 C CNN
-F 1 "1uF_REGCAP2" H 7800 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7700 5550 50  0001 C CNN
-	1    7700 5550
+P 8500 5500
+F 0 "C63" H 8600 5600 50  0000 C CNN
+F 1 "1uF_REGCAP2" H 8600 5400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8500 5500 50  0001 C CNN
+	1    8500 5500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C64
 U 1 1 6ABAF00A
-P 9000 5550
-F 0 "C64" H 9100 5650 50  0000 C CNN
-F 1 "1uF_AVDD1" H 9100 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9000 5550 50  0001 C CNN
-	1    9000 5550
+P 7600 6550
+F 0 "C64" H 7700 6650 50  0000 C CNN
+F 1 "1uF_AVDD1" H 7700 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7600 6550 50  0001 C CNN
+	1    7600 6550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C65
 U 1 1 6ABAF00B
-P 9350 5550
-F 0 "C65" H 9450 5650 50  0000 C CNN
-F 1 "1uF_AVDD2" H 9450 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9350 5550 50  0001 C CNN
-	1    9350 5550
+P 8200 6550
+F 0 "C65" H 8300 6650 50  0000 C CNN
+F 1 "1uF_AVDD2" H 8300 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8200 6550 50  0001 C CNN
+	1    8200 6550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C66
 U 1 1 6ABAF00C
-P 9700 5550
-F 0 "C66" H 9800 5650 50  0000 C CNN
-F 1 "1uF_AVDD3" H 9800 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 9700 5550 50  0001 C CNN
-	1    9700 5550
+P 8800 6550
+F 0 "C66" H 8900 6650 50  0000 C CNN
+F 1 "1uF_AVDD3" H 8900 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8800 6550 50  0001 C CNN
+	1    8800 6550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C67
 U 1 1 6ABAF00D
-P 10050 5550
-F 0 "C67" H 10150 5650 50  0000 C CNN
-F 1 "1uF_AVDD4" H 10150 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10050 5550 50  0001 C CNN
-	1    10050 5550
+P 9400 6550
+F 0 "C67" H 9500 6650 50  0000 C CNN
+F 1 "1uF_AVDD4" H 9500 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9400 6550 50  0001 C CNN
+	1    9400 6550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C68
 U 1 1 6ABAF00E
-P 6900 5550
-F 0 "C68" H 7000 5650 50  0000 C CNN
-F 1 "1uF_DVDD" H 7000 5450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6900 5550 50  0001 C CNN
-	1    6900 5550
+P 10000 6550
+F 0 "C68" H 10100 6650 50  0000 C CNN
+F 1 "1uF_DVDD" H 10100 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10000 6550 50  0001 C CNN
+	1    10000 6550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R70
 U 1 1 6ABAF00F
-P 1400 6200
-F 0 "R70" H 1500 6300 50  0000 C CNN
-F 1 "10k_0.1%_NTC_PULLUP" H 1500 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1400 6200 50  0001 C CNN
-	1    1400 6200
+P 1200 6100
+F 0 "R70" H 1300 6200 50  0000 C CNN
+F 1 "10k_0.1%_NTC_PULLUP" H 1300 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1200 6100 50  0001 C CNN
+	1    1200 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R NTC1
 U 1 1 6ABAF010
-P 2250 6200
-F 0 "NTC1" H 2350 6300 50  0000 C CNN
-F 1 "10k_B3950_BOARD" H 2350 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 2250 6200 50  0001 C CNN
-	1    2250 6200
+P 2000 6100
+F 0 "NTC1" H 2100 6200 50  0000 C CNN
+F 1 "10k_B3950_BOARD" H 2100 6000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2000 6100 50  0001 C CNN
+	1    2000 6100
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R71
 U 1 1 6ABAF011
-P 1400 6650
-F 0 "R71" H 1500 6750 50  0000 C CNN
-F 1 "10k_0.1%_NTC_PULLUP" H 1500 6550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 1400 6650 50  0001 C CNN
-	1    1400 6650
+P 1200 6500
+F 0 "R71" H 1300 6600 50  0000 C CNN
+F 1 "10k_0.1%_NTC_PULLUP" H 1300 6400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1200 6500 50  0001 C CNN
+	1    1200 6500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R NTC2
 U 1 1 6ABAF012
-P 2250 6650
-F 0 "NTC2" H 2350 6750 50  0000 C CNN
-F 1 "10k_B3950_MOTOR" H 2350 6550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 2250 6650 50  0001 C CNN
-	1    2250 6650
+P 2000 6500
+F 0 "NTC2" H 2100 6600 50  0000 C CNN
+F 1 "10k_B3950_MOTOR" H 2100 6400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2000 6500 50  0001 C CNN
+	1    2000 6500
 	1 0 0 -1
 $EndComp
-Text Notes 650 450 0    62   ~ 12
-5mR KELVIN SHUNT -> INA241A2 (20 V/V) -> 47R/1nF -> ADS8588S; comparator OCP is firmware-independent.
-Text Notes 650 7150 0    44   ~ 12
-The 47R/1nF network is an amplifier-output isolation / RF filter. Its pole is ~3.39MHz, well above the servo signal bandwidth.
-Text Notes 650 7280 0    44   ~ 12
-INA241A2: gain 20V/V and 5mR gives 0.1V/A. REF1=5V and REF2=GND centers the output near 2.5V.
-Text Notes 650 7410 0    44   ~ 12
-OCP divider references are 4.706V and 0.294V, nominally about +22.06A and -22.06A. TLV9024 open-drain outputs are fault-ORed.
-Text Notes 650 7540 0    44   ~ 12
-ADS8588S straps: OS[2:0]=000, PAR/SER=1, STBY=1, RANGE=0 (+/-5V), REFSEL=1, DB15/BYTE_SEL=0 for serial mode.
-Text Notes 650 7670 0    44   ~ 12
-ADS8588S reference network: internal 2.5V REFIO; REFCAPA/B tied at 4V buffer node; 10uF on REFIO/REFCAP, 1uF on each AVDD and DVDD pin group.
-Text Notes 650 6450 0    44   ~ 12
-Visible wiring follows shunt/INA241 filtering -> simultaneous ADC, with independent TLV9024 hardware OCP below.
+Text Notes 650 450 0    58   ~ 12
+CURRENT SENSE / ADC / OCP: 3x SHUNT SENSE -> INA241 -> FILTER -> ADS8588S; OCP REMAINS HARDWARE-INDEPENDENT
+Text Notes 1050 850 0    48   ~ 12
+PHASE CURRENT SENSE
+Text Notes 7300 850 0    48   ~ 12
+ADS8588S SIMULTANEOUS ADC
+Text Notes 900 5850 0    44   ~ 12
+TEMPERATURE INPUTS
+Text Notes 3150 5300 0    44   ~ 12
+OCP REFERENCES
+Text Notes 4750 5300 0    44   ~ 12
+WINDOW OCP / OPEN-DRAIN FAULT OR
+Text Notes 7450 5250 0    44   ~ 12
+REFERENCE / REGCAP
+Text Notes 7350 6200 0    44   ~ 12
+ADC SUPPLY DECOUPLING BANK
+Text Notes 650 7100 0    42   ~ 12
+INA241A2 gain=20 V/V with 5mR gives 0.1 V/A; REF1=5V and REF2=GND center the output near 2.5V.
+Text Notes 650 7240 0    42   ~ 12
+ADS8588S straps: OS=000, PAR/SER=1, STBY=1, RANGE=0 (+/-5V), REFSEL=1. DB15/BYTE_SEL is low for serial mode.
+Text Notes 650 7380 0    42   ~ 12
+OCP thresholds use dedicated TLV9024 comparators and open-drain fault OR; this path does not depend on FPGA firmware or ADC conversion.
 Wire Wire Line
-	1400 1520 1230 1520
-Text Label 1230 1520 0    40   ~ 0
+	500 1250 720 1250
+Wire Wire Line
+	500 1450 720 1450
+Wire Wire Line
+	500 2750 720 2750
+Wire Wire Line
+	500 2950 720 2950
+Wire Wire Line
+	500 4250 720 4250
+Wire Wire Line
+	500 4450 720 4450
+Wire Wire Line
+	500 5050 720 5050
+Wire Wire Line
+	500 5250 720 5250
+Wire Wire Line
+	500 5450 720 5450
+Wire Wire Line
+	500 5650 720 5650
+Wire Wire Line
+	500 5850 720 5850
+Wire Wire Line
+	500 6050 720 6050
+Wire Wire Line
+	500 6250 720 6250
+Wire Wire Line
+	500 6450 720 6450
+Wire Wire Line
+	11100 1450 10880 1450
+Wire Wire Line
+	11100 1700 10880 1700
+Wire Wire Line
+	11100 1950 10880 1950
+Wire Wire Line
+	11100 2200 10880 2200
+Wire Wire Line
+	11100 6100 10880 6100
+Wire Wire Line
+	1400 1470 1260 1470
+Text Label 1260 1470 0    40   ~ 0
 PH_U
 Wire Wire Line
-	2040 2500 2040 2670
-Text Label 2040 2670 0    40   ~ 0
-GND
-Wire Wire Line
-	2200 2500 2200 2670
-Text Label 2200 2670 0    40   ~ 0
-GND
-NoConn ~ 2360 2500
-Wire Wire Line
-	3000 1600 3170 1600
-Text Label 3170 1600 0    40   ~ 0
-IU_RAW
-Wire Wire Line
-	2120 700 2120 530
-Text Label 2120 530 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	2280 700 2280 530
-Text Label 2280 530 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	1400 1680 1230 1680
-Text Label 1230 1680 0    40   ~ 0
+	1400 1630 1260 1630
+Text Label 1260 1630 0    40   ~ 0
 SW_U
 Wire Wire Line
-	3050 1600 2880 1600
-Text Label 2880 1600 0    40   ~ 0
-IU_RAW
-Wire Wire Line
-	3650 1600 3820 1600
-Text Label 3820 1600 0    40   ~ 0
-IU_ADC
-Wire Wire Line
-	4050 1850 4050 1680
-Text Label 4050 1680 0    40   ~ 0
-IU_ADC
-Wire Wire Line
-	4050 2350 4050 2520
-Text Label 4050 2520 0    40   ~ 0
-GND
-Wire Wire Line
-	2200 2500 2200 2330
-Text Label 2200 2330 0    40   ~ 0
+	2120 650 2120 520
+Text Label 2120 520 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	2200 3000 2200 3170
-Text Label 2200 3170 0    40   ~ 0
+	2280 650 2280 520
+Text Label 2280 520 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	2040 2450 2040 2580
+Text Label 2040 2580 0    40   ~ 0
 GND
 Wire Wire Line
-	1400 3020 1230 3020
-Text Label 1230 3020 0    40   ~ 0
+	2200 2450 2200 2580
+Text Label 2200 2580 0    40   ~ 0
+GND
+NoConn ~ 2360 2450
+Wire Wire Line
+	3000 1550 3050 1550
+Wire Wire Line
+	3650 1550 4050 1550
+Wire Wire Line
+	4050 1550 4050 1800
+Text Label 3750 1550 0    40   ~ 0
+IU_ADC
+Wire Wire Line
+	4050 2300 4050 2430
+Text Label 4050 2430 0    40   ~ 0
+GND
+Wire Wire Line
+	2200 2450 2200 2320
+Text Label 2200 2320 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	2200 2950 2200 3080
+Text Label 2200 3080 0    40   ~ 0
+GND
+Wire Wire Line
+	1400 2970 1260 2970
+Text Label 1260 2970 0    40   ~ 0
 PH_V
 Wire Wire Line
-	2040 4000 2040 4170
-Text Label 2040 4170 0    40   ~ 0
-GND
-Wire Wire Line
-	2200 4000 2200 4170
-Text Label 2200 4170 0    40   ~ 0
-GND
-NoConn ~ 2360 4000
-Wire Wire Line
-	3000 3100 3170 3100
-Text Label 3170 3100 0    40   ~ 0
-IV_RAW
-Wire Wire Line
-	2120 2200 2120 2030
-Text Label 2120 2030 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	2280 2200 2280 2030
-Text Label 2280 2030 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	1400 3180 1230 3180
-Text Label 1230 3180 0    40   ~ 0
+	1400 3130 1260 3130
+Text Label 1260 3130 0    40   ~ 0
 SW_V
 Wire Wire Line
-	3050 3100 2880 3100
-Text Label 2880 3100 0    40   ~ 0
-IV_RAW
-Wire Wire Line
-	3650 3100 3820 3100
-Text Label 3820 3100 0    40   ~ 0
-IV_ADC
-Wire Wire Line
-	4050 3350 4050 3180
-Text Label 4050 3180 0    40   ~ 0
-IV_ADC
-Wire Wire Line
-	4050 3850 4050 4020
-Text Label 4050 4020 0    40   ~ 0
-GND
-Wire Wire Line
-	2200 4000 2200 3830
-Text Label 2200 3830 0    40   ~ 0
+	2120 2150 2120 2020
+Text Label 2120 2020 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	2200 4500 2200 4670
-Text Label 2200 4670 0    40   ~ 0
+	2280 2150 2280 2020
+Text Label 2280 2020 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	2040 3950 2040 4080
+Text Label 2040 4080 0    40   ~ 0
 GND
 Wire Wire Line
-	1400 4520 1230 4520
-Text Label 1230 4520 0    40   ~ 0
+	2200 3950 2200 4080
+Text Label 2200 4080 0    40   ~ 0
+GND
+NoConn ~ 2360 3950
+Wire Wire Line
+	3000 3050 3050 3050
+Wire Wire Line
+	3650 3050 4050 3050
+Wire Wire Line
+	4050 3050 4050 3300
+Text Label 3750 3050 0    40   ~ 0
+IV_ADC
+Wire Wire Line
+	4050 3800 4050 3930
+Text Label 4050 3930 0    40   ~ 0
+GND
+Wire Wire Line
+	2200 3950 2200 3820
+Text Label 2200 3820 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	2200 4450 2200 4580
+Text Label 2200 4580 0    40   ~ 0
+GND
+Wire Wire Line
+	1400 4470 1260 4470
+Text Label 1260 4470 0    40   ~ 0
 PH_W
 Wire Wire Line
-	2040 5500 2040 5670
-Text Label 2040 5670 0    40   ~ 0
-GND
-Wire Wire Line
-	2200 5500 2200 5670
-Text Label 2200 5670 0    40   ~ 0
-GND
-NoConn ~ 2360 5500
-Wire Wire Line
-	3000 4600 3170 4600
-Text Label 3170 4600 0    40   ~ 0
-IW_RAW
-Wire Wire Line
-	2120 3700 2120 3530
-Text Label 2120 3530 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	2280 3700 2280 3530
-Text Label 2280 3530 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	1400 4680 1230 4680
-Text Label 1230 4680 0    40   ~ 0
+	1400 4630 1260 4630
+Text Label 1260 4630 0    40   ~ 0
 SW_W
 Wire Wire Line
-	3050 4600 2880 4600
-Text Label 2880 4600 0    40   ~ 0
-IW_RAW
+	2120 3650 2120 3520
+Text Label 2120 3520 0    40   ~ 0
+VA_5V
 Wire Wire Line
-	3650 4600 3820 4600
-Text Label 3820 4600 0    40   ~ 0
+	2280 3650 2280 3520
+Text Label 2280 3520 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	2040 5450 2040 5580
+Text Label 2040 5580 0    40   ~ 0
+GND
+Wire Wire Line
+	2200 5450 2200 5580
+Text Label 2200 5580 0    40   ~ 0
+GND
+NoConn ~ 2360 5450
+Wire Wire Line
+	3000 4550 3050 4550
+Wire Wire Line
+	3650 4550 4050 4550
+Wire Wire Line
+	4050 4550 4050 4800
+Text Label 3750 4550 0    40   ~ 0
 IW_ADC
 Wire Wire Line
-	4050 4850 4050 4680
-Text Label 4050 4680 0    40   ~ 0
-IW_ADC
-Wire Wire Line
-	4050 5350 4050 5520
-Text Label 4050 5520 0    40   ~ 0
+	4050 5300 4050 5430
+Text Label 4050 5430 0    40   ~ 0
 GND
 Wire Wire Line
-	2200 5500 2200 5330
-Text Label 2200 5330 0    40   ~ 0
+	2200 5450 2200 5320
+Text Label 2200 5320 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	2200 6000 2200 6170
-Text Label 2200 6170 0    40   ~ 0
+	2200 5950 2200 6080
+Text Label 2200 6080 0    40   ~ 0
 GND
 Wire Wire Line
-	3650 5450 3480 5450
-Text Label 3480 5450 0    40   ~ 0
+	1500 6100 1700 6100
+Wire Wire Line
+	900 6100 770 6100
+Text Label 770 6100 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	4250 5450 4420 5450
-Text Label 4420 5450 0    40   ~ 0
-OCP_HI_REF
-Wire Wire Line
-	4250 5450 4080 5450
-Text Label 4080 5450 0    40   ~ 0
-OCP_HI_REF
-Wire Wire Line
-	4850 5450 5020 5450
-Text Label 5020 5450 0    40   ~ 0
+	2300 6100 2430 6100
+Text Label 2430 6100 0    40   ~ 0
 GND
-Wire Wire Line
-	3650 6000 3480 6000
-Text Label 3480 6000 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	4250 6000 4420 6000
-Text Label 4420 6000 0    40   ~ 0
-OCP_LO_REF
-Wire Wire Line
-	4250 6000 4080 6000
-Text Label 4080 6000 0    40   ~ 0
-OCP_LO_REF
-Wire Wire Line
-	4850 6000 5020 6000
-Text Label 5020 6000 0    40   ~ 0
-GND
-Wire Wire Line
-	6350 5380 6520 5380
-Text Label 6520 5380 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	6350 5540 6520 5540
-Text Label 6520 5540 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	5500 4980 5500 4810
-Text Label 5500 4810 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	4650 5400 4480 5400
-Text Label 4480 5400 0    40   ~ 0
-IU_ADC
-Wire Wire Line
-	4650 5560 4480 5560
-Text Label 4480 5560 0    40   ~ 0
-OCP_HI_REF
-Wire Wire Line
-	4650 5720 4480 5720
-Text Label 4480 5720 0    40   ~ 0
-IV_ADC
-Wire Wire Line
-	4650 5880 4480 5880
-Text Label 4480 5880 0    40   ~ 0
-OCP_HI_REF
-Wire Wire Line
-	4650 6040 4480 6040
-Text Label 4480 6040 0    40   ~ 0
-IW_ADC
-Wire Wire Line
-	4650 6200 4480 6200
-Text Label 4480 6200 0    40   ~ 0
-OCP_HI_REF
-Wire Wire Line
-	4650 6360 4480 6360
-Text Label 4480 6360 0    40   ~ 0
-GND
-Wire Wire Line
-	4650 6520 4480 6520
-Text Label 4480 6520 0    40   ~ 0
-GND
-Wire Wire Line
-	5500 6820 5500 6990
-Text Label 5500 6990 0    40   ~ 0
-GND
-NoConn ~ 6350 6340
-Wire Wire Line
-	6350 6180 6520 6180
-Text Label 6520 6180 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	8500 5380 8670 5380
-Text Label 8670 5380 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	8500 5540 8670 5540
-Text Label 8670 5540 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	7650 4980 7650 4810
-Text Label 7650 4810 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	6800 5400 6630 5400
-Text Label 6630 5400 0    40   ~ 0
-OCP_LO_REF
-Wire Wire Line
-	6800 5560 6630 5560
-Text Label 6630 5560 0    40   ~ 0
-IU_ADC
-Wire Wire Line
-	6800 5720 6630 5720
-Text Label 6630 5720 0    40   ~ 0
-OCP_LO_REF
-Wire Wire Line
-	6800 5880 6630 5880
-Text Label 6630 5880 0    40   ~ 0
-IV_ADC
-Wire Wire Line
-	6800 6040 6630 6040
-Text Label 6630 6040 0    40   ~ 0
-OCP_LO_REF
-Wire Wire Line
-	6800 6200 6630 6200
-Text Label 6630 6200 0    40   ~ 0
-IW_ADC
-Wire Wire Line
-	6800 6360 6630 6360
-Text Label 6630 6360 0    40   ~ 0
-GND
-Wire Wire Line
-	6800 6520 6630 6520
-Text Label 6630 6520 0    40   ~ 0
-GND
-Wire Wire Line
-	7650 6820 7650 6990
-Text Label 7650 6990 0    40   ~ 0
-GND
-NoConn ~ 8500 6340
-Wire Wire Line
-	8500 6180 8670 6180
-Text Label 8670 6180 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	9200 5900 9030 5900
-Text Label 9030 5900 0    40   ~ 0
-OCP_N
-Wire Wire Line
-	9800 5900 9970 5900
-Text Label 9970 5900 0    40   ~ 0
-VIO_3V3
-Wire Wire Line
-	7540 5100 7540 5270
-Text Label 7540 5270 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	7660 5100 7660 5270
-Text Label 7660 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	7600 1100 7600 930
-Text Label 7600 930 0    40   ~ 0
-GND
-Wire Wire Line
-	7760 1100 7760 930
-Text Label 7760 930 0    40   ~ 0
-GND
-Wire Wire Line
-	7920 1100 7920 930
-Text Label 7920 930 0    40   ~ 0
-GND
-Wire Wire Line
-	8080 1100 8080 930
-Text Label 8080 930 0    40   ~ 0
-VIO_3V3
-Wire Wire Line
-	8240 1100 8240 930
-Text Label 8240 930 0    40   ~ 0
-VIO_3V3
-Wire Wire Line
-	8400 1100 8400 930
-Text Label 8400 930 0    40   ~ 0
-GND
-Wire Wire Line
-	8600 1100 8600 930
-Text Label 8600 930 0    40   ~ 0
-ADC_CONVST
-Wire Wire Line
-	8760 1100 8760 930
-Text Label 8760 930 0    40   ~ 0
-ADC_CONVST
-Wire Wire Line
-	8920 1100 8920 930
-Text Label 8920 930 0    40   ~ 0
-ADC_RESET
-Wire Wire Line
-	9080 1100 9080 930
-Text Label 9080 930 0    40   ~ 0
-ADC_SCLK
-Wire Wire Line
-	9240 1100 9240 930
-Text Label 9240 930 0    40   ~ 0
-ADC_CS_N
-Wire Wire Line
-	9700 3720 9870 3720
-Text Label 9870 3720 0    40   ~ 0
-ADC_BUSY
-Wire Wire Line
-	9700 3860 9870 3860
-Text Label 9870 3860 0    40   ~ 0
-ADC_FRSTDATA
-NoConn ~ 9700 1660
-NoConn ~ 9700 1780
-NoConn ~ 9700 1900
-NoConn ~ 9700 2020
-NoConn ~ 9700 2140
-NoConn ~ 9700 2260
-NoConn ~ 9700 2380
-Wire Wire Line
-	7780 5100 7780 5270
-Text Label 7780 5270 0    40   ~ 0
-VIO_3V3
-Wire Wire Line
-	9700 2500 9870 2500
-Text Label 9870 2500 0    40   ~ 0
-ADC_DOUTA
-Wire Wire Line
-	9700 2620 9870 2620
-Text Label 9870 2620 0    40   ~ 0
-ADC_DOUTB
-Wire Wire Line
-	7900 5100 7900 5270
-Text Label 7900 5270 0    40   ~ 0
-GND
-NoConn ~ 9700 2740
-NoConn ~ 9700 2860
-NoConn ~ 9700 2980
-NoConn ~ 9700 3100
-NoConn ~ 9700 3220
-NoConn ~ 9700 3340
-Wire Wire Line
-	9700 3460 9870 3460
-Text Label 9870 3460 0    40   ~ 0
-GND
-Wire Wire Line
-	9400 1100 9400 930
-Text Label 9400 930 0    40   ~ 0
-VIO_3V3
-Wire Wire Line
-	8020 5100 8020 5270
-Text Label 8020 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	8140 5100 8140 5270
-Text Label 8140 5270 0    40   ~ 0
-REGCAP1
-Wire Wire Line
-	8260 5100 8260 5270
-Text Label 8260 5270 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	8380 5100 8380 5270
-Text Label 8380 5270 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	8500 5100 8500 5270
-Text Label 8500 5270 0    40   ~ 0
-REGCAP2
-Wire Wire Line
-	8620 5100 8620 5270
-Text Label 8620 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	8740 5100 8740 5270
-Text Label 8740 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	8860 5100 8860 5270
-Text Label 8860 5270 0    40   ~ 0
-REFIO_2V5
-Wire Wire Line
-	8980 5100 8980 5270
-Text Label 8980 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	9100 5100 9100 5270
-Text Label 9100 5270 0    40   ~ 0
-REFCAP_4V
-Wire Wire Line
-	9220 5100 9220 5270
-Text Label 9220 5270 0    40   ~ 0
-REFCAP_4V
-Wire Wire Line
-	9340 5100 9340 5270
-Text Label 9340 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	9460 5100 9460 5270
-Text Label 9460 5270 0    40   ~ 0
-GND
-Wire Wire Line
-	9580 5100 9580 5270
-Text Label 9580 5270 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	7300 1700 7130 1700
-Text Label 7130 1700 0    40   ~ 0
-IU_ADC
-Wire Wire Line
-	7300 1840 7130 1840
-Text Label 7130 1840 0    40   ~ 0
-GND
-Wire Wire Line
-	7300 2020 7130 2020
-Text Label 7130 2020 0    40   ~ 0
-IV_ADC
-Wire Wire Line
-	7300 2160 7130 2160
-Text Label 7130 2160 0    40   ~ 0
-GND
-Wire Wire Line
-	7300 2340 7130 2340
-Text Label 7130 2340 0    40   ~ 0
-IW_ADC
-Wire Wire Line
-	7300 2480 7130 2480
-Text Label 7130 2480 0    40   ~ 0
-GND
-Wire Wire Line
-	7300 2660 7130 2660
-Text Label 7130 2660 0    40   ~ 0
-VBUS_ADC
-Wire Wire Line
-	7300 2800 7130 2800
-Text Label 7130 2800 0    40   ~ 0
-GND
-Wire Wire Line
-	7300 2980 7130 2980
-Text Label 7130 2980 0    40   ~ 0
+Text Label 1580 6100 0    40   ~ 0
 NTC_BOARD
 Wire Wire Line
-	7300 3120 7130 3120
-Text Label 7130 3120 0    40   ~ 0
-GND
+	1500 6500 1700 6500
 Wire Wire Line
-	7300 3300 7130 3300
-Text Label 7130 3300 0    40   ~ 0
+	900 6500 770 6500
+Text Label 770 6500 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	2300 6500 2430 6500
+Text Label 2430 6500 0    40   ~ 0
+GND
+Text Label 1580 6500 0    40   ~ 0
 NTC_MOTOR
 Wire Wire Line
-	7300 3440 7130 3440
-Text Label 7130 3440 0    40   ~ 0
+	3700 5600 3750 5600
+Wire Wire Line
+	3100 5600 2970 5600
+Text Label 2970 5600 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	4350 5600 4480 5600
+Text Label 4480 5600 0    40   ~ 0
+GND
+Text Label 3780 5600 0    40   ~ 0
+OCP_HI_REF
+Wire Wire Line
+	3700 6100 3750 6100
+Wire Wire Line
+	3100 6100 2970 6100
+Text Label 2970 6100 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	4350 6100 4480 6100
+Text Label 4480 6100 0    40   ~ 0
+GND
+Text Label 3780 6100 0    40   ~ 0
+OCP_LO_REF
+Wire Wire Line
+	4350 5600 4225 5600
+Text Label 4225 5600 0    40   ~ 0
+IU_ADC
+Wire Wire Line
+	4350 5760 4225 5760
+Text Label 4225 5760 0    40   ~ 0
+OCP_HI_REF
+Wire Wire Line
+	4350 5920 4225 5920
+Text Label 4225 5920 0    40   ~ 0
+IV_ADC
+Wire Wire Line
+	4350 6080 4225 6080
+Text Label 4225 6080 0    40   ~ 0
+OCP_HI_REF
+Wire Wire Line
+	4350 6240 4225 6240
+Text Label 4225 6240 0    40   ~ 0
+IW_ADC
+Wire Wire Line
+	4350 6400 4225 6400
+Text Label 4225 6400 0    40   ~ 0
+OCP_HI_REF
+Wire Wire Line
+	5200 5180 5200 5055
+Text Label 5200 5055 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	5200 7020 5200 7145
+Text Label 5200 7145 0    40   ~ 0
 GND
 Wire Wire Line
-	7300 3620 7130 3620
-Text Label 7130 3620 0    40   ~ 0
+	4350 6560 4225 6560
+Text Label 4225 6560 0    40   ~ 0
+GND
+Wire Wire Line
+	4350 6720 4225 6720
+Text Label 4225 6720 0    40   ~ 0
+GND
+NoConn ~ 6050 6540
+Wire Wire Line
+	6250 5600 6125 5600
+Text Label 6125 5600 0    40   ~ 0
+OCP_LO_REF
+Wire Wire Line
+	6250 5760 6125 5760
+Text Label 6125 5760 0    40   ~ 0
+IU_ADC
+Wire Wire Line
+	6250 5920 6125 5920
+Text Label 6125 5920 0    40   ~ 0
+OCP_LO_REF
+Wire Wire Line
+	6250 6080 6125 6080
+Text Label 6125 6080 0    40   ~ 0
+IV_ADC
+Wire Wire Line
+	6250 6240 6125 6240
+Text Label 6125 6240 0    40   ~ 0
+OCP_LO_REF
+Wire Wire Line
+	6250 6400 6125 6400
+Text Label 6125 6400 0    40   ~ 0
+IW_ADC
+Wire Wire Line
+	7100 5180 7100 5055
+Text Label 7100 5055 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	7100 7020 7100 7145
+Text Label 7100 7145 0    40   ~ 0
+GND
+Wire Wire Line
+	6250 6560 6125 6560
+Text Label 6125 6560 0    40   ~ 0
+GND
+Wire Wire Line
+	6250 6720 6125 6720
+Text Label 6125 6720 0    40   ~ 0
+GND
+NoConn ~ 7950 6540
+Wire Wire Line
+	6050 5580 6100 5580
+Wire Wire Line
+	6050 5740 6100 5740
+Wire Wire Line
+	6050 6380 6100 6380
+Wire Wire Line
+	6100 5580 6100 6380
+Text Label 6100 5720 0    40   ~ 0
+OCP_N
+Wire Wire Line
+	7950 5580 8000 5580
+Wire Wire Line
+	7950 5740 8000 5740
+Wire Wire Line
+	7950 6380 8000 6380
+Wire Wire Line
+	8000 5580 8000 6380
+Text Label 8000 5720 0    40   ~ 0
+OCP_N
+Wire Wire Line
+	8300 6100 8180 6100
+Text Label 8180 6100 0    40   ~ 0
+OCP_N
+Wire Wire Line
+	8900 6100 9020 6100
+Text Label 9020 6100 0    40   ~ 0
+VIO_3V3
+Wire Wire Line
+	7300 1600 7160 1600
+Text Label 7160 1600 0    40   ~ 0
+IU_ADC
+Wire Wire Line
+	7300 1740 7160 1740
+Text Label 7160 1740 0    40   ~ 0
+GND
+Wire Wire Line
+	7300 1920 7160 1920
+Text Label 7160 1920 0    40   ~ 0
+IV_ADC
+Wire Wire Line
+	7300 2060 7160 2060
+Text Label 7160 2060 0    40   ~ 0
+GND
+Wire Wire Line
+	7300 2240 7160 2240
+Text Label 7160 2240 0    40   ~ 0
+IW_ADC
+Wire Wire Line
+	7300 2380 7160 2380
+Text Label 7160 2380 0    40   ~ 0
+GND
+Wire Wire Line
+	7300 2560 7160 2560
+Text Label 7160 2560 0    40   ~ 0
+VBUS_ADC
+Wire Wire Line
+	7300 2700 7160 2700
+Text Label 7160 2700 0    40   ~ 0
+GND
+Wire Wire Line
+	7300 2880 7160 2880
+Text Label 7160 2880 0    40   ~ 0
+NTC_BOARD
+Wire Wire Line
+	7300 3020 7160 3020
+Text Label 7160 3020 0    40   ~ 0
+GND
+Wire Wire Line
+	7300 3200 7160 3200
+Text Label 7160 3200 0    40   ~ 0
+NTC_MOTOR
+Wire Wire Line
+	7300 3340 7160 3340
+Text Label 7160 3340 0    40   ~ 0
+GND
+Wire Wire Line
+	7300 3520 7160 3520
+Text Label 7160 3520 0    40   ~ 0
 AIN_SPARE0
 Wire Wire Line
-	7300 3760 7130 3760
-Text Label 7130 3760 0    40   ~ 0
+	7300 3660 7160 3660
+Text Label 7160 3660 0    40   ~ 0
 GND
 Wire Wire Line
-	7300 3940 7130 3940
-Text Label 7130 3940 0    40   ~ 0
+	7300 3840 7160 3840
+Text Label 7160 3840 0    40   ~ 0
 AIN_SPARE1
 Wire Wire Line
-	7300 4080 7130 4080
-Text Label 7130 4080 0    40   ~ 0
+	7300 3980 7160 3980
+Text Label 7160 3980 0    40   ~ 0
 GND
 Wire Wire Line
-	8150 5300 8150 5130
-Text Label 8150 5130 0    40   ~ 0
-REFIO_2V5
-Wire Wire Line
-	8150 5800 8150 5970
-Text Label 8150 5970 0    40   ~ 0
+	7600 1000 7600 880
+Text Label 7600 880 0    40   ~ 0
 GND
 Wire Wire Line
-	8550 5300 8550 5130
-Text Label 8550 5130 0    40   ~ 0
-REFCAP_4V
-Wire Wire Line
-	8550 5800 8550 5970
-Text Label 8550 5970 0    40   ~ 0
+	7760 1000 7760 880
+Text Label 7760 880 0    40   ~ 0
 GND
 Wire Wire Line
-	7300 5300 7300 5130
-Text Label 7300 5130 0    40   ~ 0
-REGCAP1
-Wire Wire Line
-	7300 5800 7300 5970
-Text Label 7300 5970 0    40   ~ 0
+	7920 1000 7920 880
+Text Label 7920 880 0    40   ~ 0
 GND
 Wire Wire Line
-	7700 5300 7700 5130
-Text Label 7700 5130 0    40   ~ 0
-REGCAP2
-Wire Wire Line
-	7700 5800 7700 5970
-Text Label 7700 5970 0    40   ~ 0
-GND
-Wire Wire Line
-	9000 5300 9000 5130
-Text Label 9000 5130 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	9000 5800 9000 5970
-Text Label 9000 5970 0    40   ~ 0
-GND
-Wire Wire Line
-	9350 5300 9350 5130
-Text Label 9350 5130 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	9350 5800 9350 5970
-Text Label 9350 5970 0    40   ~ 0
-GND
-Wire Wire Line
-	9700 5300 9700 5130
-Text Label 9700 5130 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	9700 5800 9700 5970
-Text Label 9700 5970 0    40   ~ 0
-GND
-Wire Wire Line
-	10050 5300 10050 5130
-Text Label 10050 5130 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	10050 5800 10050 5970
-Text Label 10050 5970 0    40   ~ 0
-GND
-Wire Wire Line
-	6900 5300 6900 5130
-Text Label 6900 5130 0    40   ~ 0
+	8080 1000 8080 880
+Text Label 8080 880 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	6900 5800 6900 5970
-Text Label 6900 5970 0    40   ~ 0
-GND
-Wire Wire Line
-	1100 6200 930 6200
-Text Label 930 6200 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	1700 6200 1870 6200
-Text Label 1870 6200 0    40   ~ 0
-NTC_BOARD
-Wire Wire Line
-	1950 6200 1780 6200
-Text Label 1780 6200 0    40   ~ 0
-NTC_BOARD
-Wire Wire Line
-	2550 6200 2720 6200
-Text Label 2720 6200 0    40   ~ 0
-GND
-Wire Wire Line
-	1100 6650 930 6650
-Text Label 930 6650 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	1700 6650 1870 6650
-Text Label 1870 6650 0    40   ~ 0
-NTC_MOTOR
-Wire Wire Line
-	1950 6650 1780 6650
-Text Label 1780 6650 0    40   ~ 0
-NTC_MOTOR
-Wire Wire Line
-	2550 6650 2720 6650
-Text Label 2720 6650 0    40   ~ 0
-GND
-Wire Wire Line
-	500 1350 700 1350
-Text Label 700 1350 0    40   ~ 0
-SW_U
-Wire Wire Line
-	500 1550 700 1550
-Text Label 700 1550 0    40   ~ 0
-PH_U
-Wire Wire Line
-	500 2900 700 2900
-Text Label 700 2900 0    40   ~ 0
-SW_V
-Wire Wire Line
-	500 3100 700 3100
-Text Label 700 3100 0    40   ~ 0
-PH_V
-Wire Wire Line
-	500 4450 700 4450
-Text Label 700 4450 0    40   ~ 0
-SW_W
-Wire Wire Line
-	500 4650 700 4650
-Text Label 700 4650 0    40   ~ 0
-PH_W
-Wire Wire Line
-	500 5200 700 5200
-Text Label 700 5200 0    40   ~ 0
-VA_5V
-Wire Wire Line
-	500 5400 700 5400
-Text Label 700 5400 0    40   ~ 0
+	8240 1000 8240 880
+Text Label 8240 880 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	500 5600 700 5600
-Text Label 700 5600 0    40   ~ 0
+	8400 1000 8400 880
+Text Label 8400 880 0    40   ~ 0
 GND
 Wire Wire Line
-	500 5800 700 5800
-Text Label 700 5800 0    40   ~ 0
-VBUS_ADC
-Wire Wire Line
-	500 6000 700 6000
-Text Label 700 6000 0    40   ~ 0
+	8600 1000 8600 880
+Text Label 8600 880 0    40   ~ 0
 ADC_CONVST
 Wire Wire Line
-	500 6200 700 6200
-Text Label 700 6200 0    40   ~ 0
-ADC_SCLK
+	8760 1000 8760 880
+Text Label 8760 880 0    40   ~ 0
+ADC_CONVST
 Wire Wire Line
-	500 6400 700 6400
-Text Label 700 6400 0    40   ~ 0
-ADC_CS_N
-Wire Wire Line
-	500 6600 700 6600
-Text Label 700 6600 0    40   ~ 0
+	8920 1000 8920 880
+Text Label 8920 880 0    40   ~ 0
 ADC_RESET
 Wire Wire Line
-	11100 1550 10900 1550
-Text Label 10900 1550 0    40   ~ 0
+	9080 1000 9080 880
+Text Label 9080 880 0    40   ~ 0
+ADC_SCLK
+Wire Wire Line
+	9240 1000 9240 880
+Text Label 9240 880 0    40   ~ 0
+ADC_CS_N
+Wire Wire Line
+	9400 1000 9400 880
+Text Label 9400 880 0    40   ~ 0
+VIO_3V3
+NoConn ~ 9700 1560
+NoConn ~ 9700 1680
+NoConn ~ 9700 1800
+NoConn ~ 9700 1920
+NoConn ~ 9700 2040
+NoConn ~ 9700 2160
+NoConn ~ 9700 2280
+NoConn ~ 9700 2640
+NoConn ~ 9700 2760
+NoConn ~ 9700 2880
+NoConn ~ 9700 3000
+NoConn ~ 9700 3120
+NoConn ~ 9700 3240
+Wire Wire Line
+	9700 2400 9830 2400
+Text Label 9830 2400 0    40   ~ 0
 ADC_DOUTA
 Wire Wire Line
-	11100 1800 10900 1800
-Text Label 10900 1800 0    40   ~ 0
+	9700 2520 9830 2520
+Text Label 9830 2520 0    40   ~ 0
 ADC_DOUTB
 Wire Wire Line
-	11100 2050 10900 2050
-Text Label 10900 2050 0    40   ~ 0
+	9700 3620 9830 3620
+Text Label 9830 3620 0    40   ~ 0
 ADC_BUSY
 Wire Wire Line
-	11100 2300 10900 2300
-Text Label 10900 2300 0    40   ~ 0
+	9700 3760 9830 3760
+Text Label 9830 3760 0    40   ~ 0
 ADC_FRSTDATA
 Wire Wire Line
-	11100 6550 10900 6550
-Text Label 10900 6550 0    40   ~ 0
-OCP_N
+	9700 3360 9820 3360
+Text Label 9820 3360 0    40   ~ 0
+GND
+Wire Wire Line
+	7540 5000 7540 5110
+Text Label 7540 5110 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	7660 5000 7660 5110
+Text Label 7660 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	7780 5000 7780 5110
+Text Label 7780 5110 0    40   ~ 0
+VIO_3V3
+Wire Wire Line
+	7900 5000 7900 5110
+Text Label 7900 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	8020 5000 8020 5110
+Text Label 8020 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	8260 5000 8260 5110
+Text Label 8260 5110 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	8380 5000 8380 5110
+Text Label 8380 5110 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	8620 5000 8620 5110
+Text Label 8620 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	8740 5000 8740 5110
+Text Label 8740 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	8980 5000 8980 5110
+Text Label 8980 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	9340 5000 9340 5110
+Text Label 9340 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	9460 5000 9460 5110
+Text Label 9460 5110 0    40   ~ 0
+GND
+Wire Wire Line
+	9580 5000 9580 5110
+Text Label 9580 5110 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	8140 5000 8140 5250
+Wire Wire Line
+	8140 5250 8140 5250
+Text Label 8140 5250 0    40   ~ 0
+REGCAP1
+Wire Wire Line
+	8140 5750 8140 5860
+Text Label 8140 5860 0    40   ~ 0
+GND
+Wire Wire Line
+	8500 5000 8500 5250
+Wire Wire Line
+	8500 5250 8500 5250
+Text Label 8500 5250 0    40   ~ 0
+REGCAP2
+Wire Wire Line
+	8500 5750 8500 5860
+Text Label 8500 5860 0    40   ~ 0
+GND
+Wire Wire Line
+	8860 5000 8860 5250
+Wire Wire Line
+	8860 5250 8860 5250
+Text Label 8860 5250 0    40   ~ 0
+REFIO_2V5
+Wire Wire Line
+	8860 5750 8860 5860
+Text Label 8860 5860 0    40   ~ 0
+GND
+Wire Wire Line
+	9100 5000 9100 5250
+Wire Wire Line
+	9100 5250 9160 5250
+Wire Wire Line
+	9220 5000 9220 5250
+Wire Wire Line
+	9220 5250 9160 5250
+Text Label 9160 5250 0    40   ~ 0
+REFCAP_4V
+Wire Wire Line
+	9160 5750 9160 5860
+Text Label 9160 5860 0    40   ~ 0
+GND
+Wire Wire Line
+	7600 6300 7600 6190
+Text Label 7600 6190 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	7600 6800 7600 6910
+Text Label 7600 6910 0    40   ~ 0
+GND
+Wire Wire Line
+	8200 6300 8200 6190
+Text Label 8200 6190 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	8200 6800 8200 6910
+Text Label 8200 6910 0    40   ~ 0
+GND
+Wire Wire Line
+	8800 6300 8800 6190
+Text Label 8800 6190 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	8800 6800 8800 6910
+Text Label 8800 6910 0    40   ~ 0
+GND
+Wire Wire Line
+	9400 6300 9400 6190
+Text Label 9400 6190 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	9400 6800 9400 6910
+Text Label 9400 6910 0    40   ~ 0
+GND
+Wire Wire Line
+	10000 6300 10000 6190
+Text Label 10000 6190 0    40   ~ 0
+VIO_3V3
+Wire Wire Line
+	10000 6800 10000 6910
+Text Label 10000 6910 0    40   ~ 0
+GND
 $EndSCHEMATC
