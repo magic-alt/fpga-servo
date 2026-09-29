@@ -206,4 +206,183 @@ Text Notes 600 5940 0    60   ~ 12
 D1 remains a DNP TVS footprint until clamping voltage is selected from the actual source impedance. F1 is a local placeholder; upstream source-rated over-current protection is mandatory.
 Text Notes 600 6110 0    60   ~ 12
 VBUS_ADC divider = 280k + 280k over 39k, plus 10nF at the ADC node. Keep the high-side resistors split for voltage stress and route the sense return away from commutation current.
+Text Notes 600 10450 0    55   ~ 12
+VISIBLE WIRING: power input and protection pins use explicit wire stubs; unused pins are explicit NoConn.
+Wire Wire Line
+	450 1800 100 1800
+Text Label 100 1800 0    45   ~ 0
+VIN_RAW
+Wire Wire Line
+	1550 1800 1900 1800
+Text Label 1900 1800 0    45   ~ 0
+GND
+Wire Wire Line
+	1890 1650 1540 1650
+Text Label 1540 1650 0    45   ~ 0
+VIN_RAW
+Wire Wire Line
+	2510 1650 2860 1650
+Text Label 2860 1650 0    45   ~ 0
+VIN_FUSED
+Wire Wire Line
+	5600 2200 5600 2550
+Text Label 5600 2550 0    45   ~ 0
+RPP_GATE
+Wire Wire Line
+	6200 1650 6550 1650
+Text Label 6550 1650 0    45   ~ 0
+RPP_SRC
+Wire Wire Line
+	5000 1650 4650 1650
+Text Label 4650 1650 0    45   ~ 0
+VIN_FUSED
+Wire Wire Line
+	6800 2200 6800 2550
+Text Label 6800 2550 0    45   ~ 0
+RPP_GATE
+Wire Wire Line
+	6200 1650 5850 1650
+Text Label 5850 1650 0    45   ~ 0
+RPP_SRC
+Wire Wire Line
+	7400 1650 7750 1650
+Text Label 7750 1650 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	3350 2420 3000 2420
+Text Label 3000 2420 0    45   ~ 0
+VIN_FUSED
+Wire Wire Line
+	4100 3420 4100 3770
+Text Label 4100 3770 0    45   ~ 0
+GND
+NoConn ~ 3350 2980
+Wire Wire Line
+	4850 2960 5200 2960
+Text Label 5200 2960 0    45   ~ 0
+VCAP_RPP
+Wire Wire Line
+	4850 2780 5200 2780
+Text Label 5200 2780 0    45   ~ 0
+VIN_FUSED
+Wire Wire Line
+	4850 2600 5200 2600
+Text Label 5200 2600 0    45   ~ 0
+RPP_GATE
+Wire Wire Line
+	3350 2780 3000 2780
+Text Label 3000 2780 0    45   ~ 0
+GND
+Wire Wire Line
+	4850 2420 5200 2420
+Text Label 5200 2420 0    45   ~ 0
+RPP_SRC
+Wire Wire Line
+	5000 3100 5000 2750
+Text Label 5000 2750 0    45   ~ 0
+VCAP_RPP
+Wire Wire Line
+	5000 3600 5000 3950
+Text Label 5000 3950 0    45   ~ 0
+VIN_FUSED
+Wire Wire Line
+	5850 3200 5850 2850
+Text Label 5850 2850 0    45   ~ 0
+VIN_FUSED
+Wire Wire Line
+	5850 3700 5850 4050
+Text Label 5850 4050 0    45   ~ 0
+GND
+Wire Wire Line
+	6800 3100 6800 3450
+Text Label 6800 3450 0    45   ~ 0
+GND
+Wire Wire Line
+	6800 2500 6800 2150
+Text Label 6800 2150 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	7800 2550 7800 2200
+Text Label 7800 2200 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	7800 3050 7800 3400
+Text Label 7800 3400 0    45   ~ 0
+GND
+Wire Wire Line
+	8500 2550 8500 2200
+Text Label 8500 2200 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	8500 3050 8500 3400
+Text Label 8500 3400 0    45   ~ 0
+GND
+Wire Wire Line
+	9200 2550 9200 2200
+Text Label 9200 2200 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	9200 3050 9200 3400
+Text Label 9200 3400 0    45   ~ 0
+GND
+Wire Wire Line
+	9900 2550 9900 2200
+Text Label 9900 2200 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	9900 3050 9900 3400
+Text Label 9900 3400 0    45   ~ 0
+GND
+Wire Wire Line
+	7300 4300 6950 4300
+Text Label 6950 4300 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	7900 4300 8250 4300
+Text Label 8250 4300 0    45   ~ 0
+VBUS_DIV_MID
+Wire Wire Line
+	8300 4300 7950 4300
+Text Label 7950 4300 0    45   ~ 0
+VBUS_DIV_MID
+Wire Wire Line
+	8900 4300 9250 4300
+Text Label 9250 4300 0    45   ~ 0
+VBUS_ADC
+Wire Wire Line
+	9300 4300 8950 4300
+Text Label 8950 4300 0    45   ~ 0
+VBUS_ADC
+Wire Wire Line
+	9900 4300 10250 4300
+Text Label 10250 4300 0    45   ~ 0
+GND
+Wire Wire Line
+	10400 4500 10400 4150
+Text Label 10400 4150 0    45   ~ 0
+VBUS_ADC
+Wire Wire Line
+	10400 5000 10400 5350
+Text Label 10400 5350 0    45   ~ 0
+GND
+Wire Wire Line
+	10900 1900 10900 2250
+Text Label 10900 2250 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	10900 3550 10900 3900
+Text Label 10900 3900 0    45   ~ 0
+GND
+Wire Wire Line
+	12100 1650 11650 1650
+Text Label 11650 1650 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	12100 4300 11650 4300
+Text Label 11650 4300 0    45   ~ 0
+VBUS_ADC
+Wire Wire Line
+	12100 3300 11650 3300
+Text Label 11650 3300 0    45   ~ 0
+GND
 $EndSCHEMATC
