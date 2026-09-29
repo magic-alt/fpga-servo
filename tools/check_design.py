@@ -51,6 +51,27 @@ for p in schematic_paths:
     if "$EndSCHEMATC" not in txt:
         errors.append(f"legacy schematic missing $EndSCHEMATC: {p.relative_to(ROOT)}")
 
+    # KiCad legacy readers are line-oriented and some versions reject blank
+    # physical lines as top-level unknown tokens.
+    blank_lines = [
+        lineno for lineno, line in enumerate(txt.splitlines(), start=1)
+        if not line.strip()
+    ]
+    if blank_lines:
+        errors.append(
+            f"legacy schematic contains blank physical lines: "
+            f"{p.relative_to(ROOT)}:{blank_lines[:8]}"
+        )
+
+    # Component U records must carry a conventional 8-hex legacy timestamp.
+    for lineno, line in enumerate(txt.splitlines(), start=1):
+        if line.startswith("U "):
+            if not re.fullmatch(r"U\s+\d+\s+\d+\s+[0-9A-Fa-f]{8}", line):
+                errors.append(
+                    f"invalid component legacy timestamp record: "
+                    f"{p.relative_to(ROOT)}:{lineno}: {line}"
+                )
+
     for lineno, line in enumerate(txt.splitlines(), start=1):
         if line.startswith("Text HLabel "):
             match = hlabel_re.match(line)
