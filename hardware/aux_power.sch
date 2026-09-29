@@ -266,25 +266,27 @@ Text Label 7450 2750 0    45   ~ 0
 VDRV_12V
 Text Label 7450 3250 0    45   ~ 0
 GND
-Wire Wire Line
-	7900 2700 7900 2580
-Wire Wire Line
-	7900 2580 4800 2580
+Text Label 7900 2700 2    45   ~ 0
+VDRV_12V
 Wire Wire Line
 	8500 2700 8700 2700
-Text Label 7900 2700 0    45   ~ 0
+Text Label 8600 2700 0    45   ~ 0
 FB_12V
 Text Label 9300 2700 0    45   ~ 0
 GND
 Text Label 4800 2580 0    45   ~ 0
 FB_12V
-Text Label 6200 3900 0    45   ~ 0
+Text Label 6200 3900 2    45   ~ 0
 SW_12V
-Wire Wire Line
-	6800 3900 7100 3900
-Wire Wire Line
-	7600 3900 7900 3900
-Text Label 8500 3900 0    45   ~ 0
+Text Label 6800 3900 0    45   ~ 0
+RIPPLE_X
+Text Label 7350 3650 0    45   ~ 0
+RIPPLE_X
+Text Label 7350 4150 0    45   ~ 0
+VDRV_12V
+Text Label 8200 3650 0    45   ~ 0
+RIPPLE_X
+Text Label 8200 4150 0    45   ~ 0
 FB_12V
 Text Label 4000 3400 0    45   ~ 0
 GND
@@ -294,7 +296,7 @@ Text Label 10050 5140 2    45   ~ 0
 VDRV_12V
 Text Label 10050 5340 2    45   ~ 0
 VDRV_12V
-Text Label 10340 6120 0    45   ~ 0
+Text Label 10640 6120 0    45   ~ 0
 GND
 Text Label 10960 6120 0    45   ~ 0
 GND
@@ -308,7 +310,7 @@ Text Label 12700 5280 0    45   ~ 0
 VA_5V
 Text Label 11550 5480 0    45   ~ 0
 VA_5V
-Text Label 11550 5200 0    45   ~ 0
+Text Label 11550 5100 0    45   ~ 0
 PWR_GOOD
 Text Label 9500 5650 0    45   ~ 0
 VDRV_12V

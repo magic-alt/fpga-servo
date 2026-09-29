@@ -96,14 +96,6 @@ Text Label 2200 4480 2    45   ~ 0
 U_SH_P
 Wire Wire Line
 	3800 4400 3700 4400
-Wire Wire Line
-	3800 4400 3700 4400
-Wire Wire Line
-	3800 4400 3700 4400
-Wire Wire Line
-	3800 4400 3700 4400
-Wire Wire Line
-	3800 4400 3700 4400
 Text Label 4300 4400 0    45   ~ 0
 IU_ADC
 Wire Wire Line
@@ -170,14 +162,6 @@ Text Label 4700 4480 2    45   ~ 0
 V_SH_P
 Wire Wire Line
 	6300 4400 6200 4400
-Wire Wire Line
-	6300 4400 6200 4400
-Wire Wire Line
-	6300 4400 6200 4400
-Wire Wire Line
-	6300 4400 6200 4400
-Wire Wire Line
-	6300 4400 6200 4400
 Text Label 6800 4400 0    45   ~ 0
 IV_ADC
 Wire Wire Line
@@ -242,14 +226,6 @@ Text Label 7200 4320 2    45   ~ 0
 W_SH_N
 Text Label 7200 4480 2    45   ~ 0
 W_SH_P
-Wire Wire Line
-	8800 4400 8700 4400
-Wire Wire Line
-	8800 4400 8700 4400
-Wire Wire Line
-	8800 4400 8700 4400
-Wire Wire Line
-	8800 4400 8700 4400
 Wire Wire Line
 	8800 4400 8700 4400
 Text Label 9300 4400 0    45   ~ 0
@@ -404,6 +380,14 @@ Text Label 10800 6680 0    45   ~ 0
 VA_5V
 Text Label 10800 8520 0    45   ~ 0
 GND
+Text Label 7850 8060 2    45   ~ 0
+GND
+Text Label 7850 8220 2    45   ~ 0
+GND
+Text Label 9950 8060 2    45   ~ 0
+GND
+Text Label 9950 8220 2    45   ~ 0
+GND
 Text Label 12500 7600 2    45   ~ 0
 OCP_N
 Text Label 13100 7600 0    45   ~ 0
@@ -451,17 +435,19 @@ AIN_SPARE1
 Text Label 11100 4880 2    45   ~ 0
 GND
 Text Label 11400 1900 0    45   ~ 0
-OS0
+GND
 Text Label 11560 1900 0    45   ~ 0
-OS1
+GND
 Text Label 11720 1900 0    45   ~ 0
-OS2
+GND
 Text Label 11880 1900 0    45   ~ 0
-ADC_PAR_SER
+VIO_3V3
 Text Label 12040 1900 0    45   ~ 0
-ADC_STBY
+VIO_3V3
 Text Label 12200 1900 0    45   ~ 0
-ADC_RANGE
+GND
+Text Label 13200 1900 0    45   ~ 0
+VIO_3V3
 Text Label 12400 1900 0    45   ~ 0
 ADC_CONVST
 Text Label 12560 1900 0    45   ~ 0
@@ -472,22 +458,6 @@ Text Label 12880 1900 0    45   ~ 0
 ADC_SCLK
 Text Label 13040 1900 0    45   ~ 0
 ADC_CS_N
-Text Label 13200 1900 0    45   ~ 0
-ADC_REFSEL
-Text Label 11400 1900 0    45   ~ 0
-GND
-Text Label 11560 1900 0    45   ~ 0
-GND
-Text Label 11720 1900 0    45   ~ 0
-GND
-Text Label 11880 1900 0    45   ~ 0
-VIO_3V3
-Text Label 12040 1900 0    45   ~ 0
-VIO_3V3
-Text Label 12200 1900 0    45   ~ 0
-GND
-Text Label 13200 1900 0    45   ~ 0
-VIO_3V3
 Text Label 13500 3300 0    45   ~ 0
 ADC_DOUTA
 Text Label 13500 3420 0    45   ~ 0
@@ -496,7 +466,7 @@ Text Label 13500 4520 0    45   ~ 0
 ADC_BUSY
 Text Label 13500 4660 0    45   ~ 0
 ADC_FRSTDATA
-Text Label 13500 2220 0    45   ~ 0
+Text Label 13500 4260 0    45   ~ 0
 GND
 Text Label 11340 5900 0    45   ~ 0
 VA_5V
@@ -590,6 +560,128 @@ Text Label 12300 6250 0    45   ~ 0
 REGCAP2
 Text Label 12300 6750 0    45   ~ 0
 GND
+$Comp
+L ax7010_servo_reva:C C64
+U 1 1 6B000010
+P 11150 6650
+F 0 "C64" H 11250 6750 50  0000 C CNN
+F 1 "1uF_AVDD1" H 11250 6550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11150 6650 50  0001 C CNN
+	1    11150 6650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C65
+U 1 1 6B000011
+P 11450 6650
+F 0 "C65" H 11550 6750 50  0000 C CNN
+F 1 "1uF_AVDD2" H 11550 6550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11450 6650 50  0001 C CNN
+	1    11450 6650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C66
+U 1 1 6B000012
+P 11750 6650
+F 0 "C66" H 11850 6750 50  0000 C CNN
+F 1 "1uF_AVDD3" H 11850 6550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11750 6650 50  0001 C CNN
+	1    11750 6650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C67
+U 1 1 6B000013
+P 12050 6650
+F 0 "C67" H 12150 6750 50  0000 C CNN
+F 1 "1uF_AVDD4" H 12150 6550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12050 6650 50  0001 C CNN
+	1    12050 6650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C68
+U 1 1 6B000014
+P 10900 6650
+F 0 "C68" H 11000 6750 50  0000 C CNN
+F 1 "1uF_DVDD" H 11000 6550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10900 6650 50  0001 C CNN
+	1    10900 6650
+	1 0 0 -1
+$EndComp
+Text Label 11150 6400 0    45   ~ 0
+VA_5V
+Text Label 11450 6400 0    45   ~ 0
+VA_5V
+Text Label 11750 6400 0    45   ~ 0
+VA_5V
+Text Label 12050 6400 0    45   ~ 0
+VA_5V
+Text Label 10900 6400 0    45   ~ 0
+VIO_3V3
+Text Label 11150 6900 0    45   ~ 0
+GND
+Text Label 11450 6900 0    45   ~ 0
+GND
+Text Label 11750 6900 0    45   ~ 0
+GND
+Text Label 12050 6900 0    45   ~ 0
+GND
+Text Label 10900 6900 0    45   ~ 0
+GND
+$Comp
+L ax7010_servo_reva:R R70
+U 1 1 6B000015
+P 2500 7600
+F 0 "R70" H 2600 7700 50  0000 C CNN
+F 1 "10k_0.1%_NTC_PULLUP" H 2600 7500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2500 7600 50  0001 C CNN
+	1    2500 7600
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:R NTC1
+U 1 1 6B000016
+P 3400 7600
+F 0 "NTC1" H 3500 7700 50  0000 C CNN
+F 1 "10k_B3950_BOARD" H 3500 7500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 7600 50  0001 C CNN
+	1    3400 7600
+	1 0 0 -1
+$EndComp
+Text Label 2200 7600 2    45   ~ 0
+VA_5V
+Text Label 2950 7600 0    45   ~ 0
+NTC_BOARD
+Text Label 3700 7600 0    45   ~ 0
+GND
+$Comp
+L ax7010_servo_reva:R R71
+U 1 1 6B000017
+P 2500 8150
+F 0 "R71" H 2600 8250 50  0000 C CNN
+F 1 "10k_0.1%_NTC_PULLUP" H 2600 8050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2500 8150 50  0001 C CNN
+	1    2500 8150
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:R NTC2
+U 1 1 6B000018
+P 3400 8150
+F 0 "NTC2" H 3500 8250 50  0000 C CNN
+F 1 "10k_B3950_MOTOR" H 3500 8050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 3400 8150 50  0001 C CNN
+	1    3400 8150
+	1 0 0 -1
+$EndComp
+Text Label 2200 8150 2    45   ~ 0
+VA_5V
+Text Label 2950 8150 0    45   ~ 0
+NTC_MOTOR
+Text Label 3700 8150 0    45   ~ 0
+GND
 Text Notes 500 9300 0    60   ~ 12
 INA241A2: gain 20V/V and 5mR gives 0.1V/A. REF1=5V and REF2=GND centers the output near 2.5V.
 Text Notes 500 9470 0    60   ~ 12
@@ -597,5 +689,5 @@ OCP divider references are 4.706V and 0.294V, nominally about +22.06A and -22.06
 Text Notes 500 9640 0    60   ~ 12
 ADS8588S straps: OS[2:0]=000, PAR/SER=1, STBY=1, RANGE=0 (+/-5V), REFSEL=1, DB15/BYTE_SEL=0 for serial mode.
 Text Notes 500 9810 0    60   ~ 12
-ADS8588S reference network: internal 2.5V REFIO; REFCAPA/B tied at 4V buffer node; 10uF on REFIO and REFCAP node.
+ADS8588S reference network: internal 2.5V REFIO; REFCAPA/B tied at 4V buffer node; 10uF on REFIO/REFCAP, 1uF on each AVDD and DVDD pin group.
 $EndSCHEMATC

@@ -105,7 +105,105 @@ $EndComp
 Text Notes 650 6900 0    70   ~ 12
 A/B/Z are differential RS-422 pairs. 120R termination is fitted only when this board is the cable end.
 Text Notes 650 7050 0    70   ~ 12
-Connector-side low-capacitance ESD footprint is mandatory before fabrication; exact part is gated by encoder cable voltage/EMC test.
+TPD6E05U06 provides six low-capacitance shunt ESD channels directly at A+/A-/B+/B-/Z+/Z-. Keep it adjacent to J5; exact UQFN footprint remains a fabrication gate.
 Text Notes 650 7200 0    70   ~ 12
 AM26LV32E is powered from FPGA VIO_3V3 so its outputs cannot over-drive an unpowered AX7010 domain.
+$Comp
+L ax7010_servo_reva:TPD6E05U06 U19
+U 1 1 6B000040
+P 4800 4300
+F 0 "U19" H 4900 4400 50  0000 C CNN
+F 1 "TPD6E05U06RVZR" H 4900 4200 50  0000 C CNN
+F 2 "" H 4800 4300 50  0001 C CNN
+	1    4800 4300
+	1 0 0 -1
+$EndComp
+Text Label 1250 3900 2    45   ~ 0
+ENC_A_P
+Text Label 1250 4060 2    45   ~ 0
+ENC_A_N
+Text Label 1250 4220 2    45   ~ 0
+ENC_B_P
+Text Label 1250 4380 2    45   ~ 0
+ENC_B_N
+Text Label 1250 4540 2    45   ~ 0
+ENC_Z_P
+Text Label 1250 4700 2    45   ~ 0
+ENC_Z_N
+Text Label 2550 4060 0    45   ~ 0
+ENC_5V
+Text Label 2550 4220 0    45   ~ 0
+GND
+Text Label 2550 4380 0    45   ~ 0
+SHIELD
+Text Label 3900 3800 2    45   ~ 0
+ENC_A_P
+Text Label 3900 4000 2    45   ~ 0
+ENC_A_N
+Text Label 3900 4200 2    45   ~ 0
+ENC_B_P
+Text Label 3900 4400 2    45   ~ 0
+ENC_B_N
+Text Label 3900 4600 2    45   ~ 0
+ENC_Z_P
+Text Label 3900 4800 2    45   ~ 0
+ENC_Z_N
+Text Label 4800 5200 0    45   ~ 0
+GND
+Text Label 3500 3300 2    45   ~ 0
+ENC_A_P
+Text Label 4100 3300 0    45   ~ 0
+ENC_A_N
+Text Label 3500 4200 2    45   ~ 0
+ENC_B_P
+Text Label 4100 4200 0    45   ~ 0
+ENC_B_N
+Text Label 3500 5100 2    45   ~ 0
+ENC_Z_P
+Text Label 4100 5100 0    45   ~ 0
+ENC_Z_N
+Text Label 7100 3740 2    45   ~ 0
+ENC_A_P
+Text Label 7100 3900 2    45   ~ 0
+ENC_A_N
+Text Label 7100 4060 2    45   ~ 0
+ENC_B_P
+Text Label 7100 4220 2    45   ~ 0
+ENC_B_N
+Text Label 7100 4380 2    45   ~ 0
+ENC_Z_P
+Text Label 7100 4540 2    45   ~ 0
+ENC_Z_N
+Text Label 8900 4060 0    45   ~ 0
+ENC_A
+Text Label 8900 4220 0    45   ~ 0
+ENC_B
+Text Label 8900 4380 0    45   ~ 0
+ENC_Z
+Text Label 7840 3200 0    45   ~ 0
+VIO_3V3
+Text Label 8000 3200 0    45   ~ 0
+VIO_3V3
+Text Label 8160 3200 0    45   ~ 0
+GND
+Text Label 8000 5400 0    45   ~ 0
+GND
+Text Label 2690 2100 2    45   ~ 0
+VA_5V
+Text Label 3310 2100 0    45   ~ 0
+ENC_5V
+Text Label 7200 5650 0    45   ~ 0
+VIO_3V3
+Text Label 7200 6150 0    45   ~ 0
+GND
+Text Label 7800 5650 0    45   ~ 0
+VIO_3V3
+Text Label 7800 6150 0    45   ~ 0
+GND
+Text Label 14500 2200 2    45   ~ 0
+ENC_A
+Text Label 14500 2600 2    45   ~ 0
+ENC_B
+Text Label 14500 3000 2    45   ~ 0
+ENC_Z
 $EndSCHEMATC

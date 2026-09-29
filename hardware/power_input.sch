@@ -8,10 +8,10 @@ Title "Rev.A1 - DC Input & Protection"
 Date "2026-09-29"
 Rev "A1"
 Comp "magic-alt/fpga-servo"
-Comment1 "48V nominal; 15..55V full-function design window"
+Comment1 "48V-class bus; 15..55V design window; source transient qualification required"
 $EndDescr
 Text Notes 600 500 0    70   ~ 12
-DC INPUT -> FUSE -> REVERSE-POLARITY MOSFET -> LOCAL TVS / DC-LINK
+DC INPUT -> FUSE -> LM74502 + BACK-TO-BACK NFET RPP -> LOCAL DC-LINK
 $Comp
 L ax7010_servo_reva:TERM2 J3
 U 1 1 66000001
@@ -37,9 +37,29 @@ L ax7010_servo_reva:NFET_HORIZ Q7
 U 1 1 66000003
 P 5600 1650
 F 0 "Q7" H 5700 1750 50  0000 C CNN
-F 1 "BSC040N10NS5_RPP" H 5700 1550 50  0000 C CNN
+F 1 "BSC040N10NS5_RPP_Q7" H 5700 1550 50  0000 C CNN
 F 2 "Package_DFN_QFN:TDSON-8-1_5x6mm_P1.27mm" H 5600 1650 50  0001 C CNN
 	1    5600 1650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:NFET_HORIZ_REV Q8
+U 1 1 6B000001
+P 6800 1650
+F 0 "Q8" H 6900 1750 50  0000 C CNN
+F 1 "BSC040N10NS5_RPP_Q8" H 6900 1550 50  0000 C CNN
+F 2 "Package_DFN_QFN:TDSON-8-1_5x6mm_P1.27mm" H 6800 1650 50  0001 C CNN
+	1    6800 1650
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:C C19
+U 1 1 6B000002
+P 5850 3450
+F 0 "C19" H 5950 3550 50  0000 C CNN
+F 1 "100nF_VS_BYPASS" H 5950 3350 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5850 3450 50  0001 C CNN
+	1    5850 3450
 	1 0 0 -1
 $EndComp
 $Comp
@@ -178,99 +198,14 @@ Text HLabel 12100 4300 2    50   O ~ 0
 VBUS_ADC
 Text HLabel 12100 3300 1    50   B ~ 0
 GND
-Text Notes 600 5600 0    70   ~ 12
-LM74502 is used only as reverse-polarity / soft-start controller. It does NOT block regenerative reverse current.
-Text Notes 600 5750 0    70   ~ 12
-Positive surge must remain within LM74502 absolute limits; 54V TVS footprint is DNP/qualification-gated until source transient is measured.
-Text Notes 600 5900 0    70   ~ 12
-F1 is a PCB placeholder; an upstream source-rated fuse is mandatory for first power-up.
-Wire Wire Line
-	1200 1800 1900 1800
-Wire Wire Line
-	1900 1800 1900 1650
-Wire Wire Line
-	1900 1650 1900 1650
-Wire Wire Line
-	2500 1650 5000 1650
-Text Label 1300 1800 0    45   ~ 0
-VIN_RAW
-Text Label 2700 1650 0    45   ~ 0
-VIN_FUSED
-Text Label 5900 1650 0    45   ~ 0
-VBUS_PROT
-Wire Wire Line
-	6200 1650 12100 1650
-Wire Wire Line
-	1000 2200 1000 3300
-Wire Wire Line
-	1000 3300 12100 3300
-Text Label 1200 3300 0    45   ~ 0
-GND
-Wire Wire Line
-	6800 2500 6800 1650
-Wire Wire Line
-	6800 3100 6800 3300
-Wire Wire Line
-	7800 2550 7800 1650
-Wire Wire Line
-	7800 3050 7800 3300
-Wire Wire Line
-	8500 2550 8500 1650
-Wire Wire Line
-	8500 3050 8500 3300
-Wire Wire Line
-	9200 2550 9200 1650
-Wire Wire Line
-	9200 3050 9200 3300
-Wire Wire Line
-	9900 2550 9900 1650
-Wire Wire Line
-	9900 3050 9900 3300
-Wire Wire Line
-	7300 4300 7000 4300
-Text Label 7000 4300 0    45   ~ 0
-VBUS_PROT
-Wire Wire Line
-	7900 4300 8300 4300
-Wire Wire Line
-	8900 4300 9300 4300
-Wire Wire Line
-	9900 4300 12100 4300
-Wire Wire Line
-	9600 4600 9600 5100
-Wire Wire Line
-	9600 5100 9600 5100
-Text Label 9600 5100 0    45   ~ 0
-GND
-Wire Wire Line
-	10400 4500 10400 4300
-Wire Wire Line
-	10400 5000 10400 5100
-Text Label 10400 5100 0    45   ~ 0
-GND
-Wire Wire Line
-	4850 2600 5600 2600
-Wire Wire Line
-	5600 2600 5600 2200
-Text Label 5100 2600 0    45   ~ 0
-RPP_GATE
-Wire Wire Line
-	4850 2420 6200 2420
-Wire Wire Line
-	6200 2420 6200 1650
-Text Label 5150 2420 0    45   ~ 0
-RPP_SRC
-Wire Wire Line
-	4850 2780 6200 2780
-Wire Wire Line
-	6200 2780 6200 2420
-Text Label 5150 2780 0    45   ~ 0
-RPP_VS
-Wire Wire Line
-	4100 3420 4100 3600
-Text Label 4100 3600 0    45   ~ 0
-GND
-Text Notes 600 6100 0    55   ~ 12
-Q7 uses a horizontal D->S project symbol so VIN_FUSED -> Q7 -> VBUS_PROT is unambiguous. Verify controller pin wiring against the current LM74502 datasheet during ERC review.
+Text Notes 600 5600 0    60   ~ 12
+Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. The controller has no reverse-current blocking when enabled, so regeneration can return to a receptive source.
+Text Notes 600 5770 0    60   ~ 12
+LM74502 OV is tied low in Rev.A1; positive surge is NOT claimed as closed. The 48V source/cable transient must be measured and kept inside the controller/downstream qualification envelope.
+Text Notes 600 5940 0    60   ~ 12
+D1 remains a DNP TVS footprint until clamping voltage is selected from the actual source impedance. F1 is a local placeholder; upstream source-rated over-current protection is mandatory.
+Text Notes 600 6110 0    60   ~ 12
+VBUS_ADC divider = 280k + 280k over 39k, plus 10nF at the ADC node. Keep the high-side resistors split for voltage stress and route the sense return away from commutation current.
 $EndSCHEMATC
+
 
