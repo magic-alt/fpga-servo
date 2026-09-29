@@ -44,7 +44,7 @@ F 2 "Package_DFN_QFN:TDSON-8-1_5x6mm_P1.27mm" H 5600 1650 50  0001 C CNN
 $EndComp
 $Comp
 L ax7010_servo_reva:NFET_HORIZ_REV Q8
-U 1 1 6B000001
+U 1 1 6ABAF000
 P 6800 1650
 F 0 "Q8" H 6900 1750 50  0000 C CNN
 F 1 "BSC040N10NS5_RPP_Q8" H 6900 1550 50  0000 C CNN
@@ -54,7 +54,7 @@ F 2 "Package_DFN_QFN:TDSON-8-1_5x6mm_P1.27mm" H 6800 1650 50  0001 C CNN
 $EndComp
 $Comp
 L ax7010_servo_reva:C C19
-U 1 1 6B000002
+U 1 1 6ABAF001
 P 5850 3450
 F 0 "C19" H 5950 3550 50  0000 C CNN
 F 1 "100nF_VS_BYPASS" H 5950 3350 50  0000 C CNN
@@ -207,5 +207,3 @@ D1 remains a DNP TVS footprint until clamping voltage is selected from the actua
 Text Notes 600 6110 0    60   ~ 12
 VBUS_ADC divider = 280k + 280k over 39k, plus 10nF at the ADC node. Keep the high-side resistors split for voltage stress and route the sense return away from commutation current.
 $EndSCHEMATC
-
-

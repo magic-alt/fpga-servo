@@ -434,7 +434,7 @@ Text Label 1800 4540 0    45   ~ 0
 GND
 $Comp
 L ax7010_servo_reva:R R56
-U 1 1 6B000030
+U 1 1 6ABAF002
 P 3400 7350
 F 0 "R56" H 3500 7450 50  0000 C CNN
 F 1 "100k_PWM_INPUT_PULLDOWN" H 3500 7250 50  0000 C CNN
@@ -448,7 +448,7 @@ Text Label 3700 7350 0    45   ~ 0
 GND
 $Comp
 L ax7010_servo_reva:R R57
-U 1 1 6B000031
+U 1 1 6ABAF003
 P 3400 7650
 F 0 "R57" H 3500 7750 50  0000 C CNN
 F 1 "100k_PWM_INPUT_PULLDOWN" H 3500 7550 50  0000 C CNN
@@ -462,7 +462,7 @@ Text Label 3700 7650 0    45   ~ 0
 GND
 $Comp
 L ax7010_servo_reva:R R58
-U 1 1 6B000032
+U 1 1 6ABAF004
 P 3400 7950
 F 0 "R58" H 3500 8050 50  0000 C CNN
 F 1 "100k_PWM_INPUT_PULLDOWN" H 3500 7850 50  0000 C CNN
@@ -476,7 +476,7 @@ Text Label 3700 7950 0    45   ~ 0
 GND
 $Comp
 L ax7010_servo_reva:R R59
-U 1 1 6B000033
+U 1 1 6ABAF005
 P 3400 8250
 F 0 "R59" H 3500 8350 50  0000 C CNN
 F 1 "100k_PWM_INPUT_PULLDOWN" H 3500 8150 50  0000 C CNN
@@ -490,7 +490,7 @@ Text Label 3700 8250 0    45   ~ 0
 GND
 $Comp
 L ax7010_servo_reva:R R60
-U 1 1 6B000034
+U 1 1 6ABAF006
 P 3400 8550
 F 0 "R60" H 3500 8650 50  0000 C CNN
 F 1 "100k_PWM_INPUT_PULLDOWN" H 3500 8450 50  0000 C CNN
@@ -504,7 +504,7 @@ Text Label 3700 8550 0    45   ~ 0
 GND
 $Comp
 L ax7010_servo_reva:R R61
-U 1 1 6B000035
+U 1 1 6ABAF007
 P 3400 8850
 F 0 "R61" H 3500 8950 50  0000 C CNN
 F 1 "100k_PWM_INPUT_PULLDOWN" H 3500 8750 50  0000 C CNN
@@ -528,7 +528,7 @@ Text Notes 650 9150 0    70   ~ 12
 RG=10R is the first-spin start value. Bench tune 4.7..22R from measured VGS/SW ringing, dV/dt and switching loss.
 $Comp
 L ax7010_servo_reva:R R55
-U 1 1 6B000020
+U 1 1 6ABAF008
 P 1800 5100
 F 0 "R55" H 1900 5200 50  0000 C CNN
 F 1 "10k_PWR_GOOD_PULLUP" H 1900 5000 50  0000 C CNN
@@ -542,7 +542,7 @@ Text Label 2100 5100 0    45   ~ 0
 VIO_3V3
 $Comp
 L ax7010_servo_reva:C C46
-U 1 1 6B000021
+U 1 1 6ABAF009
 P 5500 4700
 F 0 "C46" H 5600 4800 50  0000 C CNN
 F 1 "100nF_DRV" H 5600 4600 50  0000 C CNN
@@ -562,7 +562,6 @@ Text Label 6000 1900 0    45   ~ 0
 VDRV_12V
 Text Label 6000 4100 0    45   ~ 0
 GND
-
 Text Label 2450 1350 2    45   ~ 0
 PWM_UH
 Text Label 2450 1510 2    45   ~ 0
@@ -575,7 +574,6 @@ Text Label 2450 1950 2    45   ~ 0
 RUN_OK
 Text Label 3950 1910 0    45   ~ 0
 LIN_U_SAFE
-
 Text Label 2450 2700 2    45   ~ 0
 PWM_VH
 Text Label 2450 2860 2    45   ~ 0
@@ -588,7 +586,6 @@ Text Label 2450 3300 2    45   ~ 0
 RUN_OK
 Text Label 3950 3260 0    45   ~ 0
 LIN_V_SAFE
-
 Text Label 2450 4050 2    45   ~ 0
 PWM_WH
 Text Label 2450 4210 2    45   ~ 0
@@ -601,7 +598,6 @@ Text Label 2450 4650 2    45   ~ 0
 RUN_OK
 Text Label 3950 4610 0    45   ~ 0
 LIN_W_SAFE
-
 Text Label 5100 2600 2    45   ~ 0
 HIN_U_SAFE
 Text Label 5100 2760 2    45   ~ 0
@@ -614,7 +610,6 @@ Text Label 5100 3240 2    45   ~ 0
 LIN_V_SAFE
 Text Label 5100 3400 2    45   ~ 0
 LIN_W_SAFE
-
 Text Label 6900 2504 0    45   ~ 0
 GL_U
 Text Label 6900 3638 0    45   ~ 0
@@ -639,7 +634,6 @@ Text Label 6900 2645 0    45   ~ 0
 SW_W
 Text Label 6900 2929 0    45   ~ 0
 BST_W
-
 Text Label 6800 950 2    45   ~ 0
 VDRV_12V
 Text Label 7400 950 0    45   ~ 0
@@ -664,7 +658,6 @@ Text Label 7900 4900 0    45   ~ 0
 BST_W
 Text Label 7900 5400 0    45   ~ 0
 SW_W
-
 Text Label 8300 1350 2    45   ~ 0
 GH_U
 Text Label 8900 1350 0    45   ~ 0
@@ -701,7 +694,6 @@ Text Label 12400 1300 0    45   ~ 0
 U_SH_P
 Text Label 12400 2200 0    45   ~ 0
 U_SH_N
-
 Text Label 8300 3450 2    45   ~ 0
 GH_V
 Text Label 8900 3450 0    45   ~ 0
@@ -738,7 +730,6 @@ Text Label 12400 3400 0    45   ~ 0
 V_SH_P
 Text Label 12400 4300 0    45   ~ 0
 V_SH_N
-
 Text Label 8300 5550 2    45   ~ 0
 GH_W
 Text Label 8900 5550 0    45   ~ 0
@@ -775,7 +766,6 @@ Text Label 12400 5500 0    45   ~ 0
 W_SH_P
 Text Label 12400 6400 0    45   ~ 0
 W_SH_N
-
 Text Label 14250 3740 2    45   ~ 0
 PH_U
 Text Label 14250 3900 2    45   ~ 0
@@ -783,4 +773,3 @@ PH_V
 Text Label 14250 4060 2    45   ~ 0
 PH_W
 $EndSCHEMATC
-

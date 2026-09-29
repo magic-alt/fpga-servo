@@ -110,7 +110,7 @@ Text Notes 650 7200 0    70   ~ 12
 AM26LV32E is powered from FPGA VIO_3V3 so its outputs cannot over-drive an unpowered AX7010 domain.
 $Comp
 L ax7010_servo_reva:TPD6E05U06 U19
-U 1 1 6B000040
+U 1 1 6ABAF013
 P 4800 4300
 F 0 "U19" H 4900 4400 50  0000 C CNN
 F 1 "TPD6E05U06RVZR" H 4900 4200 50  0000 C CNN
