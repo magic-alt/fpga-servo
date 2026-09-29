@@ -233,217 +233,207 @@ Text Notes 650 6980 0    50   ~ 12
 Text Notes 650 7140 0    50   ~ 12
 VISIBLE WIRING: LM5164 and TPS62163 rails use explicit wire stubs; DNP parts are explicit NoConn.
 Wire Wire Line
-	3400 3100 3400 3320
-Text Label 3400 3320 0    45   ~ 0
+	3400 3100 3400 3250
+Text Label 3400 3250 0    40   ~ 0
 GND
 Wire Wire Line
-	2600 2040 2380 2040
-Text Label 2380 2040 0    45   ~ 0
+	2600 2050 2450 2050
+Text Label 2450 2050 0    40   ~ 0
 VBUS_PROT
 Wire Wire Line
-	2600 2200 2380 2200
-Text Label 2380 2200 0    45   ~ 0
+	2600 2200 2450 2200
+Text Label 2450 2200 0    40   ~ 0
 VBUS_PROT
 Wire Wire Line
-	2600 2360 2380 2360
-Text Label 2380 2360 0    45   ~ 0
+	2600 2350 2450 2350
+Text Label 2450 2350 0    40   ~ 0
 RON_SET
 Wire Wire Line
-	4200 2280 4420 2280
-Text Label 4420 2280 0    45   ~ 0
+	4200 2300 4350 2300
+Text Label 4350 2300 0    40   ~ 0
 FB_12V
 Wire Wire Line
-	4200 2440 4420 2440
-Text Label 4420 2440 0    45   ~ 0
+	4200 2450 4350 2450
+Text Label 4350 2450 0    40   ~ 0
 PWR_GOOD
 Wire Wire Line
-	4200 2120 4420 2120
-Text Label 4420 2120 0    45   ~ 0
+	4200 2100 4350 2100
+Text Label 4350 2100 0    40   ~ 0
 BST_12V
 Wire Wire Line
-	4200 1960 4420 1960
-Text Label 4420 1960 0    45   ~ 0
+	4200 1950 4350 1950
+Text Label 4350 1950 0    40   ~ 0
 SW_12V
 Wire Wire Line
-	1350 2350 1350 2130
-Text Label 1350 2130 0    45   ~ 0
+	1350 2350 1350 2200
+Text Label 1350 2200 0    40   ~ 0
 VBUS_PROT
 Wire Wire Line
-	1350 2850 1350 3070
-Text Label 1350 3070 0    45   ~ 0
+	1350 2850 1350 3000
+Text Label 1350 3000 0    40   ~ 0
 GND
 Wire Wire Line
-	1900 2350 1900 2130
-Text Label 1900 2130 0    45   ~ 0
+	1900 2350 1900 2200
+Text Label 1900 2200 0    40   ~ 0
 VBUS_PROT
 Wire Wire Line
-	1900 2850 1900 3070
-Text Label 1900 3070 0    45   ~ 0
+	1900 2850 1900 3000
+Text Label 1900 3000 0    40   ~ 0
 GND
 Wire Wire Line
-	2100 3250 1880 3250
-Text Label 1880 3250 0    45   ~ 0
+	2100 3250 1950 3250
+Text Label 1950 3250 0    40   ~ 0
 GND
 Wire Wire Line
-	2700 3250 2920 3250
-Text Label 2920 3250 0    45   ~ 0
+	2700 3250 2850 3250
+Text Label 2850 3250 0    40   ~ 0
 RON_SET
 Wire Wire Line
-	4700 2750 4700 2530
-Text Label 4700 2530 0    45   ~ 0
+	4700 2750 4700 2600
+Text Label 4700 2600 0    40   ~ 0
 BST_12V
 Wire Wire Line
-	4700 3250 4700 3470
-Text Label 4700 3470 0    45   ~ 0
+	4700 3250 4700 3400
+Text Label 4700 3400 0    40   ~ 0
 SW_12V
 Wire Wire Line
-	5220 1960 5000 1960
-Text Label 5000 1960 0    45   ~ 0
+	5200 1960 5050 1960
+Text Label 5050 1960 0    40   ~ 0
 SW_12V
 Wire Wire Line
-	5880 1960 6100 1960
-Text Label 6100 1960 0    45   ~ 0
+	5900 1960 6050 1960
+Text Label 6050 1960 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	6500 2350 6500 2130
-Text Label 6500 2130 0    45   ~ 0
+	6500 2350 6500 2200
+Text Label 6500 2200 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	6500 2850 6500 3070
-Text Label 6500 3070 0    45   ~ 0
+	6500 2850 6500 3000
+Text Label 6500 3000 0    40   ~ 0
 GND
 Wire Wire Line
-	7050 2350 7050 2130
-Text Label 7050 2130 0    45   ~ 0
+	7050 2350 7050 2200
+Text Label 7050 2200 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	7050 2850 7050 3070
-Text Label 7050 3070 0    45   ~ 0
+	7050 2850 7050 3000
+Text Label 7050 3000 0    40   ~ 0
 GND
 Wire Wire Line
-	7500 2450 7280 2450
-Text Label 7280 2450 0    45   ~ 0
+	7500 2450 7350 2450
+Text Label 7350 2450 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	8100 2450 8320 2450
-Text Label 8320 2450 0    45   ~ 0
+	8100 2450 8250 2450
+Text Label 8250 2450 0    40   ~ 0
 FB_12V
 Wire Wire Line
-	8300 2450 8080 2450
-Text Label 8080 2450 0    45   ~ 0
+	8300 2450 8150 2450
+Text Label 8150 2450 0    40   ~ 0
 FB_12V
 Wire Wire Line
-	8900 2450 9120 2450
-Text Label 9120 2450 0    45   ~ 0
+	8900 2450 9050 2450
+Text Label 9050 2450 0    40   ~ 0
 GND
 Wire Wire Line
-	5800 3650 5580 3650
-Text Label 5580 3650 0    45   ~ 0
+	5800 3650 5650 3650
+Text Label 5650 3650 0    40   ~ 0
 SW_12V
 Wire Wire Line
-	6400 3650 6620 3650
-Text Label 6620 3650 0    45   ~ 0
+	6400 3650 6550 3650
+Text Label 6550 3650 0    40   ~ 0
 RIPPLE_A
 Wire Wire Line
-	6900 3400 6900 3180
-Text Label 6900 3180 0    45   ~ 0
+	6900 3400 6900 3250
+Text Label 6900 3250 0    40   ~ 0
 RIPPLE_A
 Wire Wire Line
-	6900 3900 6900 4120
-Text Label 6900 4120 0    45   ~ 0
+	6900 3900 6900 4050
+Text Label 6900 4050 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	7700 3400 7700 3180
-Text Label 7700 3180 0    45   ~ 0
+	7700 3400 7700 3250
+Text Label 7700 3250 0    40   ~ 0
 RIPPLE_A
 Wire Wire Line
-	7700 3900 7700 4120
-Text Label 7700 4120 0    45   ~ 0
+	7700 3900 7700 4050
+Text Label 7700 4050 0    40   ~ 0
 FB_12V
 Wire Wire Line
-	9400 2210 9400 2430
-Text Label 9400 2430 0    45   ~ 0
+	9400 2210 9400 2360
+Text Label 9400 2360 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	4840 5770 4840 5990
-Text Label 4840 5990 0    45   ~ 0
+	4850 5750 4850 5900
+Text Label 4850 5900 0    40   ~ 0
 GND
 Wire Wire Line
-	4250 4790 4030 4790
-Text Label 4030 4790 0    45   ~ 0
+	4250 4800 4100 4800
+Text Label 4100 4800 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	4250 4990 4030 4990
-Text Label 4030 4990 0    45   ~ 0
+	4250 5000 4100 5000
+Text Label 4100 5000 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	5160 5770 5160 5990
-Text Label 5160 5990 0    45   ~ 0
+	5150 5750 5150 5900
+Text Label 5150 5900 0    40   ~ 0
 GND
 Wire Wire Line
-	5750 5310 5970 5310
-Text Label 5970 5310 0    45   ~ 0
+	5750 5300 5900 5300
+Text Label 5900 5300 0    40   ~ 0
 GND
 Wire Wire Line
-	5750 5130 5970 5130
-Text Label 5970 5130 0    45   ~ 0
+	5750 5150 5900 5150
+Text Label 5900 5150 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	5750 4930 5970 4930
-Text Label 5970 4930 0    45   ~ 0
+	5750 4950 5900 4950
+Text Label 5900 4950 0    40   ~ 0
 SW_5V
 Wire Wire Line
-	5750 4750 5970 4750
-Text Label 5970 4750 0    45   ~ 0
+	5750 4750 5900 4750
+Text Label 5900 4750 0    40   ~ 0
 PWR_GOOD
 Wire Wire Line
-	3550 5300 3550 5080
-Text Label 3550 5080 0    45   ~ 0
+	3550 5300 3550 5150
+Text Label 3550 5150 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
-	3550 5800 3550 6020
-Text Label 3550 6020 0    45   ~ 0
+	3550 5800 3550 5950
+Text Label 3550 5950 0    40   ~ 0
 GND
 Wire Wire Line
-	6020 4930 5800 4930
-Text Label 5800 4930 0    45   ~ 0
+	6000 4930 5850 4930
+Text Label 5850 4930 0    40   ~ 0
 SW_5V
 Wire Wire Line
-	6680 4930 6900 4930
-Text Label 6900 4930 0    45   ~ 0
+	6700 4930 6850 4930
+Text Label 6850 4930 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	7400 5300 7400 5080
-Text Label 7400 5080 0    45   ~ 0
+	7400 5300 7400 5150
+Text Label 7400 5150 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	7400 5800 7400 6020
-Text Label 7400 6020 0    45   ~ 0
+	7400 5800 7400 5950
+Text Label 7400 5950 0    40   ~ 0
 GND
 NoConn ~ 8200 6100
 NoConn ~ 8800 6100
 Wire Wire Line
-	8750 5300 8750 5520
-Text Label 8750 5520 0    45   ~ 0
+	8750 5300 8750 5450
+Text Label 8750 5450 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	700 1500 960 1500
-Text Label 960 1500 0    45   ~ 0
-VBUS_PROT
+	700 1500 900 1500
 Wire Wire Line
-	700 6100 960 6100
-Text Label 960 6100 0    45   ~ 0
-GND
+	700 6100 900 6100
 Wire Wire Line
-	10800 1960 10540 1960
-Text Label 10540 1960 0    45   ~ 0
-VDRV_12V
+	10800 1960 10600 1960
 Wire Wire Line
-	10800 5050 10540 5050
-Text Label 10540 5050 0    45   ~ 0
-VA_5V
+	10800 5050 10600 5050
 Wire Wire Line
-	10800 5900 10540 5900
-Text Label 10540 5900 0    45   ~ 0
-PWR_GOOD
+	10800 5900 10600 5900
 $EndSCHEMATC
