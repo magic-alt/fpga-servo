@@ -33,12 +33,12 @@ F 2 "Fuse:Fuse_2920_7451Metric" H 2200 1650 50  0001 C CNN
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:MOSFET_N Q7
+L ax7010_servo_reva:NFET_HORIZ Q7
 U 1 1 66000003
 P 5600 1650
 F 0 "Q7" H 5700 1750 50  0000 C CNN
 F 1 "BSC040N10NS5_RPP" H 5700 1550 50  0000 C CNN
-F 2 "Package_DirectFET:DirectFET_L4" H 5600 1650 50  0001 C CNN
+F 2 "Package_DFN_QFN:TDSON-8-1_5x6mm_P1.27mm" H 5600 1650 50  0001 C CNN
 	1    5600 1650
 	1 0 0 -1
 $EndComp
@@ -248,4 +248,29 @@ Wire Wire Line
 	10400 5000 10400 5100
 Text Label 10400 5100 0    45   ~ 0
 GND
+Wire Wire Line
+	4850 2600 5600 2600
+Wire Wire Line
+	5600 2600 5600 2200
+Text Label 5100 2600 0    45   ~ 0
+RPP_GATE
+Wire Wire Line
+	4850 2420 6200 2420
+Wire Wire Line
+	6200 2420 6200 1650
+Text Label 5150 2420 0    45   ~ 0
+RPP_SRC
+Wire Wire Line
+	4850 2780 6200 2780
+Wire Wire Line
+	6200 2780 6200 2420
+Text Label 5150 2780 0    45   ~ 0
+RPP_VS
+Wire Wire Line
+	4100 3420 4100 3600
+Text Label 4100 3600 0    45   ~ 0
+GND
+Text Notes 600 6100 0    55   ~ 12
+Q7 uses a horizontal D->S project symbol so VIN_FUSED -> Q7 -> VBUS_PROT is unambiguous. Verify controller pin wiring against the current LM74502 datasheet during ERC review.
 $EndSCHEMATC
+

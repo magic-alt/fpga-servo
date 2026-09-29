@@ -8,126 +8,236 @@ Title "AX7010 Servo Drive Rev.A1 - System"
 Date "2026-09-29"
 Rev "A1"
 Comp "magic-alt/fpga-servo"
-Comment1 "Hierarchical engineering schematic; 48V nominal, 15..55V full-function"
+Comment1 "48V nominal; 15..55V full-function; hierarchical engineering schematic"
 $EndDescr
 Text Notes 650 450 0    80   ~ 12
-SYSTEM ARCHITECTURE - power and safety paths are explicit; details are in functional sheets
+SYSTEM ARCHITECTURE - POWER FLOW / SAFETY FLOW / REAL-TIME I/O
 $Sheet
-S 900 1600 2700 1900
-U 67000001
+S 800 1400 2600 1700
+U 69000001
 F0 "DC Input & Protection" 50
 F1 "power_input.sch" 50
-F2 "VBUS_PROT" O R 3600 2100 50
-F3 "VBUS_ADC" O R 3600 2500 50
-F4 "GND" B R 3600 3000 50
+F2 "VBUS_PROT" O R 3400 1850 50
+F3 "VBUS_ADC" O R 3400 2250 50
+F4 "GND" B R 3400 2750 50
 $EndSheet
 $Sheet
-S 4700 1600 2800 1900
-U 67000002
+S 4400 1400 2700 1700
+U 69000002
 F0 "Auxiliary Power" 50
 F1 "aux_power.sch" 50
-F2 "VBUS_PROT" I L 4700 2100 50
-F3 "GND" B L 4700 3000 50
-F4 "VDRV_12V" O R 7500 2050 50
-F5 "VA_5V" O R 7500 2450 50
-F6 "PWR_GOOD" O R 7500 2850 50
+F2 "VBUS_PROT" I L 4400 1850 50
+F3 "GND" B L 4400 2750 50
+F4 "VDRV_12V" O R 7100 1800 50
+F5 "VA_5V" O R 7100 2200 50
+F6 "PWR_GOOD" O R 7100 2600 50
 $EndSheet
 $Sheet
-S 900 5200 3000 3000
-U 67000003
-F0 "AX7010 PL Interface" 50
-F1 "ax7010_interface.sch" 50
-F2 "VIO_3V3" O R 3900 5500 50
-F3 "PWM_UH" O R 3900 5750 50
-F4 "PWM_UL" O R 3900 5950 50
-F5 "PWM_VH" O R 3900 6150 50
-F6 "PWM_VL" O R 3900 6350 50
-F7 "PWM_WH" O R 3900 6550 50
-F8 "PWM_WL" O R 3900 6750 50
-F9 "GATE_EN" O R 3900 6950 50
-F10 "ADC_CONVST" O R 3900 7150 50
-F11 "ADC_SCLK" O R 3900 7350 50
-F12 "ADC_CS_N" O R 3900 7550 50
-F13 "ADC_RESET" O R 3900 7750 50
-F14 "GND" B R 3900 8000 50
-$EndSheet
-$Sheet
-S 5200 5100 3200 3000
-U 67000004
-F0 "Current Sense / OCP / ADC" 50
-F1 "current_adc.sch" 50
-F2 "VIO_3V3" I L 5200 5400 50
-F3 "VA_5V" I L 5200 5650 50
-F4 "ADC_CONVST" I L 5200 6000 50
-F5 "ADC_SCLK" I L 5200 6200 50
-F6 "ADC_CS_N" I L 5200 6400 50
-F7 "ADC_RESET" I L 5200 6600 50
-F8 "U_SH_P" I R 8400 5600 50
-F9 "U_SH_N" I R 8400 5800 50
-F10 "V_SH_P" I R 8400 6000 50
-F11 "V_SH_N" I R 8400 6200 50
-F12 "W_SH_P" I R 8400 6400 50
-F13 "W_SH_N" I R 8400 6600 50
-F14 "OCP_N" O L 5200 7000 50
-F15 "GND" B L 5200 7700 50
-$EndSheet
-$Sheet
-S 9500 1600 4100 4200
-U 67000005
+S 8500 1100 4600 3500
+U 69000003
 F0 "Gate Driver / Inverter" 50
 F1 "gate_inverter.sch" 50
-F2 "VBUS_PROT" I L 9500 1900 50
-F3 "VDRV_12V" I L 9500 2150 50
-F4 "VIO_3V3" I L 9500 2400 50
-F5 "PWR_GOOD" I L 9500 2650 50
-F6 "OCP_N" I L 9500 2900 50
-F7 "GATE_EN" I L 9500 3150 50
-F8 "PWM_UH" I L 9500 3400 50
-F9 "PWM_UL" I L 9500 3600 50
-F10 "PWM_VH" I L 9500 3800 50
-F11 "PWM_VL" I L 9500 4000 50
-F12 "PWM_WH" I L 9500 4200 50
-F13 "PWM_WL" I L 9500 4400 50
-F14 "GND" B L 9500 5100 50
-F15 "U_SH_P" O R 13600 2500 50
-F16 "U_SH_N" O R 13600 2700 50
-F17 "V_SH_P" O R 13600 3000 50
-F18 "V_SH_N" O R 13600 3200 50
-F19 "W_SH_P" O R 13600 3500 50
-F20 "W_SH_N" O R 13600 3700 50
+F2 "VBUS_PROT" I L 8500 1400 50
+F3 "VDRV_12V" I L 8500 1650 50
+F4 "VIO_3V3" I L 8500 1900 50
+F5 "PWR_GOOD" I L 8500 2150 50
+F6 "OCP_N" I L 8500 2400 50
+F7 "GATE_EN" I L 8500 2650 50
+F8 "PWM_UH" I L 8500 2900 50
+F9 "PWM_UL" I L 8500 3100 50
+F10 "PWM_VH" I L 8500 3300 50
+F11 "PWM_VL" I L 8500 3500 50
+F12 "PWM_WH" I L 8500 3700 50
+F13 "PWM_WL" I L 8500 3900 50
+F14 "GND" B L 8500 4250 50
+F15 "U_SH_P" O R 13100 1800 50
+F16 "U_SH_N" O R 13100 2000 50
+F17 "V_SH_P" O R 13100 2300 50
+F18 "V_SH_N" O R 13100 2500 50
+F19 "W_SH_P" O R 13100 2800 50
+F20 "W_SH_N" O R 13100 3000 50
 $EndSheet
 $Sheet
-S 9500 6900 3400 1800
-U 67000006
+S 800 5100 2900 3300
+U 69000004
+F0 "AX7010 PL Interface" 50
+F1 "ax7010_interface.sch" 50
+F2 "VIO_3V3" O R 3700 5400 50
+F3 "PWM_UH" O R 3700 5650 50
+F4 "PWM_UL" O R 3700 5850 50
+F5 "PWM_VH" O R 3700 6050 50
+F6 "PWM_VL" O R 3700 6250 50
+F7 "PWM_WH" O R 3700 6450 50
+F8 "PWM_WL" O R 3700 6650 50
+F9 "GATE_EN" O R 3700 6850 50
+F10 "ADC_CONVST" O R 3700 7050 50
+F11 "ADC_SCLK" O R 3700 7250 50
+F12 "ADC_CS_N" O R 3700 7450 50
+F13 "ADC_RESET" O R 3700 7650 50
+F14 "ADC_DOUTA" I R 3700 7850 50
+F15 "ADC_DOUTB" I R 3700 8000 50
+F16 "ADC_BUSY" I R 3700 8150 50
+F17 "ADC_FRSTDATA" I R 3700 8300 50
+F18 "GND" B R 3700 8400 50
+$EndSheet
+$Sheet
+S 5000 5200 3300 3300
+U 69000005
+F0 "Current Sense / OCP / ADC" 50
+F1 "current_adc.sch" 50
+F2 "VIO_3V3" I L 5000 5500 50
+F3 "VA_5V" I L 5000 5750 50
+F4 "ADC_CONVST" I L 5000 6100 50
+F5 "ADC_SCLK" I L 5000 6300 50
+F6 "ADC_CS_N" I L 5000 6500 50
+F7 "ADC_RESET" I L 5000 6700 50
+F8 "ADC_DOUTA" O L 5000 7000 50
+F9 "ADC_DOUTB" O L 5000 7200 50
+F10 "ADC_BUSY" O L 5000 7400 50
+F11 "ADC_FRSTDATA" O L 5000 7600 50
+F12 "OCP_N" O L 5000 7900 50
+F13 "GND" B L 5000 8250 50
+F14 "U_SH_P" I R 8300 5650 50
+F15 "U_SH_N" I R 8300 5850 50
+F16 "V_SH_P" I R 8300 6150 50
+F17 "V_SH_N" I R 8300 6350 50
+F18 "W_SH_P" I R 8300 6650 50
+F19 "W_SH_N" I R 8300 6850 50
+$EndSheet
+$Sheet
+S 9800 6000 3000 1900
+U 69000006
 F0 "Differential ABZ Encoder" 50
 F1 "encoder.sch" 50
-F2 "VA_5V" I L 9500 7250 50
-F3 "VIO_3V3" I L 9500 7500 50
-F4 "GND" B L 9500 8000 50
-F5 "ENC_A" O R 12900 7300 50
-F6 "ENC_B" O R 12900 7600 50
-F7 "ENC_Z" O R 12900 7900 50
+F2 "VA_5V" I L 9800 6350 50
+F3 "VIO_3V3" I L 9800 6600 50
+F4 "GND" B L 9800 7150 50
+F5 "ENC_A" O R 12800 6400 50
+F6 "ENC_B" O R 12800 6700 50
+F7 "ENC_Z" O R 12800 7000 50
 $EndSheet
-Text Notes 600 10100 0    60   ~ 12
-Top-level rule: direct power/safety connections are visible; dense digital interfaces are named hierarchical pins, not global-label islands.
-Text Notes 600 10250 0    60   ~ 12
-PCB remains a layout baseline and must be synchronized to this A1 schematic before fabrication.
 Wire Wire Line
-	3600 2100 4700 2100
-Text Label 3800 2100 0    45   ~ 0
+	3400 1850 4400 1850
+Text Label 3700 1850 0    45   ~ 0
 VBUS_PROT
 Wire Wire Line
-	3600 3000 4300 3000
-Wire Wire Line
-	4300 3000 4300 3000
-Text Label 3750 3000 0    45   ~ 0
-GND
-Wire Wire Line
-	7500 2050 9500 2150
-Text Label 7900 2050 0    45   ~ 0
+	7100 1800 8500 1650
+Text Label 7450 1800 0    45   ~ 0
 VDRV_12V
-Wire Wire Line
-	3600 2500 4400 2500
-Text Label 3800 2500 0    45   ~ 0
-VBUS_ADC
+Text Label 7100 2200 0    45   ~ 0
+VA_5V
+Text Label 7100 2600 0    45   ~ 0
+PWR_GOOD
+Text Label 8500 2150 2    45   ~ 0
+PWR_GOOD
+Text Label 8500 2400 2    45   ~ 0
+OCP_N
+Text Label 5000 7900 2    45   ~ 0
+OCP_N
+Text Label 3700 5400 0    45   ~ 0
+VIO_3V3
+Text Label 5000 5500 2    45   ~ 0
+VIO_3V3
+Text Label 8500 1900 2    45   ~ 0
+VIO_3V3
+Text Label 9800 6600 2    45   ~ 0
+VIO_3V3
+Text Label 5000 5750 2    45   ~ 0
+VA_5V
+Text Label 9800 6350 2    45   ~ 0
+VA_5V
+Text Label 3700 5650 0    45   ~ 0
+PWM_UH
+Text Label 8500 2900 2    45   ~ 0
+PWM_UH
+Text Label 3700 5850 0    45   ~ 0
+PWM_UL
+Text Label 8500 3100 2    45   ~ 0
+PWM_UL
+Text Label 3700 6050 0    45   ~ 0
+PWM_VH
+Text Label 8500 3300 2    45   ~ 0
+PWM_VH
+Text Label 3700 6250 0    45   ~ 0
+PWM_VL
+Text Label 8500 3500 2    45   ~ 0
+PWM_VL
+Text Label 3700 6450 0    45   ~ 0
+PWM_WH
+Text Label 8500 3700 2    45   ~ 0
+PWM_WH
+Text Label 3700 6650 0    45   ~ 0
+PWM_WL
+Text Label 8500 3900 2    45   ~ 0
+PWM_WL
+Text Label 3700 6850 0    45   ~ 0
+GATE_EN
+Text Label 8500 2650 2    45   ~ 0
+GATE_EN
+Text Label 3700 7050 0    45   ~ 0
+ADC_CONVST
+Text Label 5000 6100 2    45   ~ 0
+ADC_CONVST
+Text Label 3700 7250 0    45   ~ 0
+ADC_SCLK
+Text Label 5000 6300 2    45   ~ 0
+ADC_SCLK
+Text Label 3700 7450 0    45   ~ 0
+ADC_CS_N
+Text Label 5000 6500 2    45   ~ 0
+ADC_CS_N
+Text Label 3700 7650 0    45   ~ 0
+ADC_RESET
+Text Label 5000 6700 2    45   ~ 0
+ADC_RESET
+Text Label 3700 7850 0    45   ~ 0
+ADC_DOUTA
+Text Label 5000 7000 2    45   ~ 0
+ADC_DOUTA
+Text Label 3700 8000 0    45   ~ 0
+ADC_DOUTB
+Text Label 5000 7200 2    45   ~ 0
+ADC_DOUTB
+Text Label 3700 8150 0    45   ~ 0
+ADC_BUSY
+Text Label 5000 7400 2    45   ~ 0
+ADC_BUSY
+Text Label 3700 8300 0    45   ~ 0
+ADC_FRSTDATA
+Text Label 5000 7600 2    45   ~ 0
+ADC_FRSTDATA
+Text Label 13100 1800 0    45   ~ 0
+U_SH_P
+Text Label 8300 5650 2    45   ~ 0
+U_SH_P
+Text Label 13100 2000 0    45   ~ 0
+U_SH_N
+Text Label 8300 5850 2    45   ~ 0
+U_SH_N
+Text Label 13100 2300 0    45   ~ 0
+V_SH_P
+Text Label 8300 6150 2    45   ~ 0
+V_SH_P
+Text Label 13100 2500 0    45   ~ 0
+V_SH_N
+Text Label 8300 6350 2    45   ~ 0
+V_SH_N
+Text Label 13100 2800 0    45   ~ 0
+W_SH_P
+Text Label 8300 6650 2    45   ~ 0
+W_SH_P
+Text Label 13100 3000 0    45   ~ 0
+W_SH_N
+Text Label 8300 6850 2    45   ~ 0
+W_SH_N
+Text Label 12800 6400 0    45   ~ 0
+ENC_A
+Text Label 12800 6700 0    45   ~ 0
+ENC_B
+Text Label 12800 7000 0    45   ~ 0
+ENC_Z
+Text Notes 600 9600 0    60   ~ 12
+Major power rails are drawn directly; dense real-time/control nets use named hierarchical stubs on the top sheet.
+Text Notes 600 9750 0    60   ~ 12
+One continuous GND reference is intended; separation is by placement and return-current control, not by arbitrary split planes.
 $EndSCHEMATC
