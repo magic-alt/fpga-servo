@@ -64,8 +64,17 @@ for p in schematic_paths:
         )
 
     # Component U records must carry a conventional 8-hex legacy timestamp.
+    # Sheet UUID records also begin with "U " but have a different grammar,
+    # so only validate U records while inside a $Comp/$EndComp block.
+    in_comp = False
     for lineno, line in enumerate(txt.splitlines(), start=1):
-        if line.startswith("U "):
+        if line == "$Comp":
+            in_comp = True
+            continue
+        if line == "$EndComp":
+            in_comp = False
+            continue
+        if in_comp and line.startswith("U "):
             if not re.fullmatch(r"U\s+\d+\s+\d+\s+[0-9A-Fa-f]{8}", line):
                 errors.append(
                     f"invalid component legacy timestamp record: "
