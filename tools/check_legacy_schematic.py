@@ -123,6 +123,14 @@ def parse_legacy(path: Path) -> list[str]:
             continue
 
         if re.match(r"Text (Label|HLabel|GLabel|Notes) ", line):
+            if line.startswith("Text HLabel ") and not re.fullmatch(
+                r"Text HLabel -?\d+ -?\d+ \d+ \d+ "
+                r"(Input|Output|BiDi|TriState|UnSpc) ~ \d+",
+                line,
+            ):
+                errors.append(
+                    f"{path.name}:{i+1}: malformed Text HLabel grammar: {line!r}"
+                )
             if i + 1 >= len(lines) or lines[i + 1] == "":
                 errors.append(f"{path.name}:{i+1}: Text record missing payload line")
             i += 2
