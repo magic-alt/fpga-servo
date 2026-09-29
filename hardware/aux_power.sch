@@ -222,106 +222,6 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 14000 5400 50  0001 C CNN
 	1    14000 5400
 	1 0 0 -1
 $EndComp
-Wire Wire Line
-	600 1500 3200 1500
-Wire Wire Line
-	3200 1500 3200 2340
-Text Label 900 1500 0    45   ~ 0
-VBUS_PROT
-Text Label 3200 2500 2    45   ~ 0
-VBUS_PROT
-Text Label 1800 2600 0    45   ~ 0
-VBUS_PROT
-Text Label 1800 3100 0    45   ~ 0
-GND
-Text Label 2350 2600 0    45   ~ 0
-VBUS_PROT
-Text Label 2350 3100 0    45   ~ 0
-GND
-Wire Wire Line
-	2900 3300 3200 3300
-Wire Wire Line
-	3200 3300 3200 2660
-Text Label 2300 3300 2    45   ~ 0
-GND
-Wire Wire Line
-	4800 2260 5570 2260
-Wire Wire Line
-	6230 2260 14900 2250
-Text Label 6500 2260 0    45   ~ 0
-VDRV_12V
-Text Label 4800 2420 0    45   ~ 0
-BST
-Text Label 5250 3050 0    45   ~ 0
-BST
-Text Label 5250 3550 0    45   ~ 0
-SW_12V
-Text Label 4800 2260 0    45   ~ 0
-SW_12V
-Text Label 6900 2750 0    45   ~ 0
-VDRV_12V
-Text Label 6900 3250 0    45   ~ 0
-GND
-Text Label 7450 2750 0    45   ~ 0
-VDRV_12V
-Text Label 7450 3250 0    45   ~ 0
-GND
-Text Label 7900 2700 2    45   ~ 0
-VDRV_12V
-Wire Wire Line
-	8500 2700 8700 2700
-Text Label 8600 2700 0    45   ~ 0
-FB_12V
-Text Label 9300 2700 0    45   ~ 0
-GND
-Text Label 4800 2580 0    45   ~ 0
-FB_12V
-Text Label 6200 3900 2    45   ~ 0
-SW_12V
-Text Label 6800 3900 0    45   ~ 0
-RIPPLE_X
-Text Label 7350 3650 0    45   ~ 0
-RIPPLE_X
-Text Label 7350 4150 0    45   ~ 0
-VDRV_12V
-Text Label 8200 3650 0    45   ~ 0
-RIPPLE_X
-Text Label 8200 4150 0    45   ~ 0
-FB_12V
-Text Label 4000 3400 0    45   ~ 0
-GND
-Text Label 4800 2740 0    45   ~ 0
-PWR_GOOD
-Text Label 10050 5140 2    45   ~ 0
-VDRV_12V
-Text Label 10050 5340 2    45   ~ 0
-VDRV_12V
-Text Label 10640 6120 0    45   ~ 0
-GND
-Text Label 10960 6120 0    45   ~ 0
-GND
-Text Label 11550 5660 0    45   ~ 0
-GND
-Wire Wire Line
-	11550 5280 11770 5280
-Wire Wire Line
-	12430 5280 14900 5400
-Text Label 12700 5280 0    45   ~ 0
-VA_5V
-Text Label 11550 5480 0    45   ~ 0
-VA_5V
-Text Label 11550 5100 0    45   ~ 0
-PWR_GOOD
-Text Label 9500 5650 0    45   ~ 0
-VDRV_12V
-Text Label 9500 6150 0    45   ~ 0
-GND
-Text Label 13200 5650 0    45   ~ 0
-VA_5V
-Text Label 13200 6150 0    45   ~ 0
-GND
-Text Label 14900 6500 2    45   ~ 0
-PWR_GOOD
 Text Notes 550 7900 0    60   ~ 12
 LM5164 values follow TI Figure 7-1: 15..100V in, 12V/1A, 300kHz, 68uH, 2x2.2uF CIN, 2x22uF COUT, 453k/49.9k feedback.
 Text Notes 550 8070 0    60   ~ 12
@@ -330,4 +230,220 @@ Text Notes 550 8240 0    60   ~ 12
 LM5164 PGOOD and TPS62163 PG are open-drain and share PWR_GOOD. Pull-up is provided in the 3.3V safety-logic domain, not on this sheet.
 Text Notes 550 8410 0    60   ~ 12
 12V bus is only a limited bring-up condition. Full-function lower input target is 15V because the 12V rail needs regulation headroom.
+Text Notes 600 10450 0    55   ~ 12
+VISIBLE WIRING: LM5164 and TPS62163 rails use explicit wire stubs; DNP parts are explicit NoConn.
+Wire Wire Line
+	4000 3400 4000 3750
+Text Label 4000 3750 0    45   ~ 0
+GND
+Wire Wire Line
+	3200 2340 2850 2340
+Text Label 2850 2340 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	3200 2500 2850 2500
+Text Label 2850 2500 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	3200 2660 2850 2660
+Text Label 2850 2660 0    45   ~ 0
+RON_SET
+Wire Wire Line
+	4800 2580 5150 2580
+Text Label 5150 2580 0    45   ~ 0
+FB_12V
+Wire Wire Line
+	4800 2740 5150 2740
+Text Label 5150 2740 0    45   ~ 0
+PWR_GOOD
+Wire Wire Line
+	4800 2420 5150 2420
+Text Label 5150 2420 0    45   ~ 0
+BST_12V
+Wire Wire Line
+	4800 2260 5150 2260
+Text Label 5150 2260 0    45   ~ 0
+SW_12V
+Wire Wire Line
+	1800 2600 1800 2250
+Text Label 1800 2250 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	1800 3100 1800 3450
+Text Label 1800 3450 0    45   ~ 0
+GND
+Wire Wire Line
+	2350 2600 2350 2250
+Text Label 2350 2250 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	2350 3100 2350 3450
+Text Label 2350 3450 0    45   ~ 0
+GND
+Wire Wire Line
+	2300 3300 1950 3300
+Text Label 1950 3300 0    45   ~ 0
+GND
+Wire Wire Line
+	2900 3300 3250 3300
+Text Label 3250 3300 0    45   ~ 0
+RON_SET
+Wire Wire Line
+	5250 3050 5250 2700
+Text Label 5250 2700 0    45   ~ 0
+BST_12V
+Wire Wire Line
+	5250 3550 5250 3900
+Text Label 5250 3900 0    45   ~ 0
+SW_12V
+Wire Wire Line
+	5570 2260 5220 2260
+Text Label 5220 2260 0    45   ~ 0
+SW_12V
+Wire Wire Line
+	6230 2260 6580 2260
+Text Label 6580 2260 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	6900 2750 6900 2400
+Text Label 6900 2400 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	6900 3250 6900 3600
+Text Label 6900 3600 0    45   ~ 0
+GND
+Wire Wire Line
+	7450 2750 7450 2400
+Text Label 7450 2400 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	7450 3250 7450 3600
+Text Label 7450 3600 0    45   ~ 0
+GND
+Wire Wire Line
+	7900 2700 7550 2700
+Text Label 7550 2700 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	8500 2700 8850 2700
+Text Label 8850 2700 0    45   ~ 0
+FB_12V
+Wire Wire Line
+	8700 2700 8350 2700
+Text Label 8350 2700 0    45   ~ 0
+FB_12V
+Wire Wire Line
+	9300 2700 9650 2700
+Text Label 9650 2700 0    45   ~ 0
+GND
+Wire Wire Line
+	6200 3900 5850 3900
+Text Label 5850 3900 0    45   ~ 0
+SW_12V
+Wire Wire Line
+	6800 3900 7150 3900
+Text Label 7150 3900 0    45   ~ 0
+RIPPLE_A
+Wire Wire Line
+	7350 3650 7350 3300
+Text Label 7350 3300 0    45   ~ 0
+RIPPLE_A
+Wire Wire Line
+	7350 4150 7350 4500
+Text Label 7350 4500 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	8200 3650 8200 3300
+Text Label 8200 3300 0    45   ~ 0
+RIPPLE_A
+Wire Wire Line
+	8200 4150 8200 4500
+Text Label 8200 4500 0    45   ~ 0
+FB_12V
+Wire Wire Line
+	9700 2500 9700 2850
+Text Label 9700 2850 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	10640 6120 10640 6470
+Text Label 10640 6470 0    45   ~ 0
+GND
+Wire Wire Line
+	10050 5140 9700 5140
+Text Label 9700 5140 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	10050 5340 9700 5340
+Text Label 9700 5340 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	10960 6120 10960 6470
+Text Label 10960 6470 0    45   ~ 0
+GND
+Wire Wire Line
+	11550 5660 11900 5660
+Text Label 11900 5660 0    45   ~ 0
+GND
+Wire Wire Line
+	11550 5480 11900 5480
+Text Label 11900 5480 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	11550 5280 11900 5280
+Text Label 11900 5280 0    45   ~ 0
+SW_5V
+Wire Wire Line
+	11550 5100 11900 5100
+Text Label 11900 5100 0    45   ~ 0
+PWR_GOOD
+Wire Wire Line
+	9500 5650 9500 5300
+Text Label 9500 5300 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	9500 6150 9500 6500
+Text Label 9500 6500 0    45   ~ 0
+GND
+Wire Wire Line
+	11770 5280 11420 5280
+Text Label 11420 5280 0    45   ~ 0
+SW_5V
+Wire Wire Line
+	12430 5280 12780 5280
+Text Label 12780 5280 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	13200 5650 13200 5300
+Text Label 13200 5300 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	13200 6150 13200 6500
+Text Label 13200 6500 0    45   ~ 0
+GND
+NoConn ~ 13700 6900
+NoConn ~ 14300 6900
+Wire Wire Line
+	14000 5650 14000 6000
+Text Label 14000 6000 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	600 1500 1050 1500
+Text Label 1050 1500 0    45   ~ 0
+VBUS_PROT
+Wire Wire Line
+	600 9000 1050 9000
+Text Label 1050 9000 0    45   ~ 0
+GND
+Wire Wire Line
+	14900 2250 14450 2250
+Text Label 14450 2250 0    45   ~ 0
+VDRV_12V
+Wire Wire Line
+	14900 5400 14450 5400
+Text Label 14450 5400 0    45   ~ 0
+VA_5V
+Wire Wire Line
+	14900 6500 14450 6500
+Text Label 14450 6500 0    45   ~ 0
+PWR_GOOD
 $EndSCHEMATC
