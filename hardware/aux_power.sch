@@ -75,11 +75,11 @@ $EndComp
 $Comp
 L ax7010_servo_reva:L L1
 U 1 1 6A000006
-P 5550 1960
-F 0 "L1" H 5650 2060 50  0000 C CNN
-F 1 "68uH_MSS1246T-683MLB" H 5650 1860 50  0000 C CNN
-F 2 "Inductor_SMD:L_Coilcraft_MSS1246" H 5550 1960 50  0001 C CNN
-	1    5550 1960
+P 5550 1950
+F 0 "L1" H 5650 2050 50  0000 C CNN
+F 1 "68uH_MSS1246T-683MLB" H 5650 1850 50  0000 C CNN
+F 2 "Inductor_SMD:L_Coilcraft_MSS1246" H 5550 1950 50  0001 C CNN
+	1    5550 1950
 	1 0 0 -1
 $EndComp
 $Comp
@@ -155,11 +155,11 @@ $EndComp
 $Comp
 L ax7010_servo_reva:TP TP3
 U 1 1 6A00000E
-P 9400 1960
-F 0 "TP3" H 9500 2060 50  0000 C CNN
-F 1 "TP_12V" H 9500 1860 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9400 1960 50  0001 C CNN
-	1    9400 1960
+P 9400 1950
+F 0 "TP3" H 9500 2050 50  0000 C CNN
+F 1 "TP_12V" H 9500 1850 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9400 1950 50  0001 C CNN
+	1    9400 1950
 	1 0 0 -1
 $EndComp
 $Comp
@@ -185,11 +185,11 @@ $EndComp
 $Comp
 L ax7010_servo_reva:L L2
 U 1 1 6A000011
-P 6350 4930
-F 0 "L2" H 6450 5030 50  0000 C CNN
-F 1 "2.2uH_>=1.5A" H 6450 4830 50  0000 C CNN
-F 2 "Inductor_SMD:L_4.0x4.0mm_H2.0mm" H 6350 4930 50  0001 C CNN
-	1    6350 4930
+P 6350 4950
+F 0 "L2" H 6450 5050 50  0000 C CNN
+F 1 "2.2uH_>=1.5A" H 6450 4850 50  0000 C CNN
+F 2 "Inductor_SMD:L_4.0x4.0mm_H2.0mm" H 6350 4950 50  0001 C CNN
+	1    6350 4950
 	1 0 0 -1
 $EndComp
 $Comp
@@ -297,12 +297,12 @@ Wire Wire Line
 Text Label 4700 3400 0    40   ~ 0
 SW_12V
 Wire Wire Line
-	5200 1960 5050 1960
-Text Label 5050 1960 0    40   ~ 0
+	5200 1950 5050 1950
+Text Label 5050 1950 0    40   ~ 0
 SW_12V
 Wire Wire Line
-	5900 1960 6050 1960
-Text Label 6050 1960 0    40   ~ 0
+	5900 1950 6050 1950
+Text Label 6050 1950 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
 	6500 2350 6500 2200
@@ -361,8 +361,8 @@ Wire Wire Line
 Text Label 7700 4050 0    40   ~ 0
 FB_12V
 Wire Wire Line
-	9400 2210 9400 2360
-Text Label 9400 2360 0    40   ~ 0
+	9400 2200 9400 2350
+Text Label 9400 2350 0    40   ~ 0
 VDRV_12V
 Wire Wire Line
 	4850 5750 4850 5900
@@ -405,12 +405,12 @@ Wire Wire Line
 Text Label 3550 5950 0    40   ~ 0
 GND
 Wire Wire Line
-	6000 4930 5850 4930
-Text Label 5850 4930 0    40   ~ 0
+	6000 4950 5850 4950
+Text Label 5850 4950 0    40   ~ 0
 SW_5V
 Wire Wire Line
-	6700 4930 6850 4930
-Text Label 6850 4930 0    40   ~ 0
+	6700 4950 6850 4950
+Text Label 6850 4950 0    40   ~ 0
 VA_5V
 Wire Wire Line
 	7400 5300 7400 5150
