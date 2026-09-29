@@ -20,7 +20,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends software-properties-common
           sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends kicad
+          sudo apt-get install -y --no-install-recommends kicad kicad-footprints
           kicad-cli --version
           kicad-cli sch erc --help
 
@@ -28,11 +28,12 @@ jobs:
         run: |
           mkdir -p artifacts
           set +e
+          cd hardware
           kicad-cli sch erc \
             --exit-code-violations \
             --severity-all \
-            --output artifacts/ax7010_servo_reva_erc.rpt \
-            hardware/ax7010_servo_reva.sch
+            --output ../artifacts/ax7010_servo_reva_erc.rpt \
+            ax7010_servo_reva.sch
           rc=$?
           set -e
           cat artifacts/ax7010_servo_reva_erc.rpt || true
