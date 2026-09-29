@@ -24,6 +24,15 @@ jobs:
           kicad-cli --version
           kicad-cli sch erc --help
 
+      - name: Export KiCad netlist
+        run: |
+          mkdir -p artifacts
+          cd hardware
+          kicad-cli sch export netlist \
+            --output ../artifacts/ax7010_servo_reva.net \
+            ax7010_servo_reva.sch
+          grep -n -E 'J3|F1|U2|U1|VIN_RAW|VBUS_PROT|IU_ADC|PWM_UH' ../artifacts/ax7010_servo_reva.net | head -n 120 || true
+
       - name: Run KiCad ERC
         run: |
           mkdir -p artifacts
@@ -36,7 +45,7 @@ jobs:
             ax7010_servo_reva.sch
           rc=$?
           set -e
-          cat artifacts/ax7010_servo_reva_erc.rpt || true
+          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
           exit $rc
 
       - name: Upload ERC report
@@ -44,5 +53,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: kicad-erc-report
-          path: artifacts/ax7010_servo_reva_erc.rpt
+          path: |
+            artifacts/ax7010_servo_reva_erc.rpt
+            artifacts/ax7010_servo_reva.net
           if-no-files-found: warn
