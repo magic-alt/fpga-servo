@@ -12,4 +12,5 @@ jobs:
         with:
           python-version: '3.12'
       - run: python tools/check_legacy_schematic.py
+      - run: python tools/check_schematic_connectivity.py
       - run: python tools/check_design.py

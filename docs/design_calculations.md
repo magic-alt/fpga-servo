@@ -88,3 +88,14 @@ BSC040N10NS5 total gate charge is on the order of tens of nC. With a 20 kHz PWM 
 ## Two-layer current routing
 
 The high-current path must not rely on a single narrow trace. Rev.A layout uses wide top-layer copper regions with bottom-layer reinforcement and dense stitching near terminals/MOSFETs/shunts. Final copper temperature rise must be verified on the actual stack-up and copper weight.
+
+
+## Kelvin electrical-node modeling
+
+A four-terminal current shunt has separate force and sense pads, but the Kelvin pad on each side is electrically the same node as the corresponding force pad. Rev.A1 therefore models each side with the same net name:
+
+- U phase: `SW_U` and `PH_U`
+- V phase: `SW_V` and `PH_V`
+- W phase: `SW_W` and `PH_W`
+
+Kelvin behavior is enforced in PCB routing: each INA241 input trace must originate independently at the dedicated shunt sense pad and must not share load-current copper before that terminal. Separate schematic pseudo-nets would incorrectly make the four-terminal shunt electrically open unless a formal net-tie model were added.
