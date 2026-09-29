@@ -10,17 +10,17 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "RS-422 receiver + selectable termination + interface protection"
 $EndDescr
-Text HLabel 650 2000 0    50   I ~ 0
+Text HLabel 650 2000 0    50   Input ~ 0
 VA_5V
-Text HLabel 650 2400 0    50   I ~ 0
+Text HLabel 650 2400 0    50   Input ~ 0
 VIO_3V3
-Text HLabel 650 2800 1    50   B ~ 0
+Text HLabel 650 2800 1    50   BiDi ~ 0
 GND
-Text HLabel 14500 2200 2    50   O ~ 0
+Text HLabel 14500 2200 2    50   Output ~ 0
 ENC_A
-Text HLabel 14500 2600 2    50   O ~ 0
+Text HLabel 14500 2600 2    50   Output ~ 0
 ENC_B
-Text HLabel 14500 3000 2    50   O ~ 0
+Text HLabel 14500 3000 2    50   Output ~ 0
 ENC_Z
 $Comp
 L ax7010_servo_reva:ENCODER_DIFF J5

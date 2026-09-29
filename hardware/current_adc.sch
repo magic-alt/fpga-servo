@@ -12,43 +12,43 @@ Comment1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S"
 $EndDescr
 Text Notes 500 450 0    60   ~ 12
 5mR KELVIN SHUNT -> INA241A2 (20 V/V) -> 47R/1nF -> ADS8588S; comparator OCP is firmware-independent.
-Text HLabel 500 950 0    50   I ~ 0
+Text HLabel 500 950 0    50   Input ~ 0
 U_SH_P
-Text HLabel 500 1190 0    50   I ~ 0
+Text HLabel 500 1190 0    50   Input ~ 0
 U_SH_N
-Text HLabel 500 1430 0    50   I ~ 0
+Text HLabel 500 1430 0    50   Input ~ 0
 V_SH_P
-Text HLabel 500 1670 0    50   I ~ 0
+Text HLabel 500 1670 0    50   Input ~ 0
 V_SH_N
-Text HLabel 500 1910 0    50   I ~ 0
+Text HLabel 500 1910 0    50   Input ~ 0
 W_SH_P
-Text HLabel 500 2150 0    50   I ~ 0
+Text HLabel 500 2150 0    50   Input ~ 0
 W_SH_N
-Text HLabel 500 2390 0    50   I ~ 0
+Text HLabel 500 2390 0    50   Input ~ 0
 VA_5V
-Text HLabel 500 2630 0    50   I ~ 0
+Text HLabel 500 2630 0    50   Input ~ 0
 VIO_3V3
-Text HLabel 500 2870 0    50   I ~ 0
+Text HLabel 500 2870 0    50   Input ~ 0
 GND
-Text HLabel 500 3110 0    50   I ~ 0
+Text HLabel 500 3110 0    50   Input ~ 0
 VBUS_ADC
-Text HLabel 500 3350 0    50   I ~ 0
+Text HLabel 500 3350 0    50   Input ~ 0
 ADC_CONVST
-Text HLabel 500 3590 0    50   I ~ 0
+Text HLabel 500 3590 0    50   Input ~ 0
 ADC_SCLK
-Text HLabel 500 3830 0    50   I ~ 0
+Text HLabel 500 3830 0    50   Input ~ 0
 ADC_CS_N
-Text HLabel 500 4070 0    50   I ~ 0
+Text HLabel 500 4070 0    50   Input ~ 0
 ADC_RESET
-Text HLabel 15100 1050 2    50   O ~ 0
+Text HLabel 15100 1050 2    50   Output ~ 0
 ADC_DOUTA
-Text HLabel 15100 1370 2    50   O ~ 0
+Text HLabel 15100 1370 2    50   Output ~ 0
 ADC_DOUTB
-Text HLabel 15100 1690 2    50   O ~ 0
+Text HLabel 15100 1690 2    50   Output ~ 0
 ADC_BUSY
-Text HLabel 15100 2010 2    50   O ~ 0
+Text HLabel 15100 2010 2    50   Output ~ 0
 ADC_FRSTDATA
-Text HLabel 15100 2330 2    50   O ~ 0
+Text HLabel 15100 2330 2    50   Output ~ 0
 OCP_N
 $Comp
 L ax7010_servo_reva:INA241A2 U2

@@ -12,15 +12,15 @@ Comment1 "LM5164 48V->12V + TPS62163 fixed 5V"
 $EndDescr
 Text Notes 550 450 0    60   ~ 12
 VBUS_PROT -> LM5164 12V / 1A -> TPS62163 5V / 1A. PGOOD outputs are wired-AND.
-Text HLabel 600 1500 0    50   I ~ 0
+Text HLabel 600 1500 0    50   Input ~ 0
 VBUS_PROT
-Text HLabel 600 9000 1    50   B ~ 0
+Text HLabel 600 9000 1    50   BiDi ~ 0
 GND
-Text HLabel 14900 2250 2    50   O ~ 0
+Text HLabel 14900 2250 2    50   Output ~ 0
 VDRV_12V
-Text HLabel 14900 5400 2    50   O ~ 0
+Text HLabel 14900 5400 2    50   Output ~ 0
 VA_5V
-Text HLabel 14900 6500 2    50   O ~ 0
+Text HLabel 14900 6500 2    50   Output ~ 0
 PWR_GOOD
 $Comp
 L ax7010_servo_reva:LM5164 U12

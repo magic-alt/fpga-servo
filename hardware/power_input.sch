@@ -192,11 +192,11 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10900 3300 50  0001 C CNN
 	1    10900 3300
 	1 0 0 -1
 $EndComp
-Text HLabel 12100 1650 2    50   O ~ 0
+Text HLabel 12100 1650 2    50   Output ~ 0
 VBUS_PROT
-Text HLabel 12100 4300 2    50   O ~ 0
+Text HLabel 12100 4300 2    50   Output ~ 0
 VBUS_ADC
-Text HLabel 12100 3300 1    50   B ~ 0
+Text HLabel 12100 3300 1    50   BiDi ~ 0
 GND
 Text Notes 600 5600 0    60   ~ 12
 Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. The controller has no reverse-current blocking when enabled, so regeneration can return to a receptive source.

@@ -30,51 +30,51 @@ F 2 "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical" H 7800 4300 50  0001 C CNN
 	1    7800 4300
 	1 0 0 -1
 $EndComp
-Text HLabel 14500 1300 2    50   O ~ 0
+Text HLabel 14500 1300 2    50   Output ~ 0
 VIO_3V3
-Text HLabel 14500 1800 2    50   O ~ 0
+Text HLabel 14500 1800 2    50   Output ~ 0
 PWM_UH
-Text HLabel 14500 2060 2    50   O ~ 0
+Text HLabel 14500 2060 2    50   Output ~ 0
 PWM_UL
-Text HLabel 14500 2320 2    50   O ~ 0
+Text HLabel 14500 2320 2    50   Output ~ 0
 PWM_VH
-Text HLabel 14500 2580 2    50   O ~ 0
+Text HLabel 14500 2580 2    50   Output ~ 0
 PWM_VL
-Text HLabel 14500 2840 2    50   O ~ 0
+Text HLabel 14500 2840 2    50   Output ~ 0
 PWM_WH
-Text HLabel 14500 3100 2    50   O ~ 0
+Text HLabel 14500 3100 2    50   Output ~ 0
 PWM_WL
-Text HLabel 14500 3360 2    50   O ~ 0
+Text HLabel 14500 3360 2    50   Output ~ 0
 GATE_EN
-Text HLabel 14500 3620 2    50   O ~ 0
+Text HLabel 14500 3620 2    50   Output ~ 0
 FAULT_CLEAR
-Text HLabel 14500 3880 2    50   O ~ 0
+Text HLabel 14500 3880 2    50   Output ~ 0
 ADC_CONVST
-Text HLabel 14500 4140 2    50   O ~ 0
+Text HLabel 14500 4140 2    50   Output ~ 0
 ADC_SCLK
-Text HLabel 14500 4400 2    50   O ~ 0
+Text HLabel 14500 4400 2    50   Output ~ 0
 ADC_CS_N
-Text HLabel 14500 4660 2    50   O ~ 0
+Text HLabel 14500 4660 2    50   Output ~ 0
 ADC_RESET
-Text HLabel 14500 5200 0    50   I ~ 0
+Text HLabel 14500 5200 0    50   Input ~ 0
 ADC_DOUTA
-Text HLabel 14500 5460 0    50   I ~ 0
+Text HLabel 14500 5460 0    50   Input ~ 0
 ADC_DOUTB
-Text HLabel 14500 5720 0    50   I ~ 0
+Text HLabel 14500 5720 0    50   Input ~ 0
 ADC_BUSY
-Text HLabel 14500 5980 0    50   I ~ 0
+Text HLabel 14500 5980 0    50   Input ~ 0
 ADC_FRSTDATA
-Text HLabel 14500 6240 0    50   I ~ 0
+Text HLabel 14500 6240 0    50   Input ~ 0
 ENC_A
-Text HLabel 14500 6500 0    50   I ~ 0
+Text HLabel 14500 6500 0    50   Input ~ 0
 ENC_B
-Text HLabel 14500 6760 0    50   I ~ 0
+Text HLabel 14500 6760 0    50   Input ~ 0
 ENC_Z
-Text HLabel 14500 7020 0    50   I ~ 0
+Text HLabel 14500 7020 0    50   Input ~ 0
 OCP_N
-Text HLabel 14500 7280 0    50   I ~ 0
+Text HLabel 14500 7280 0    50   Input ~ 0
 PWR_GOOD
-Text HLabel 14500 7800 1    50   B ~ 0
+Text HLabel 14500 7800 1    50   BiDi ~ 0
 GND
 Text Notes 600 9000 0    70   ~ 12
 Electrical mapping is defined in docs/ax7010_interface.md and fpga/ax7010_servo_reva.xdc.

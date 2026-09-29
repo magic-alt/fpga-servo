@@ -12,43 +12,43 @@ Comment1 "FD6288 + 100V MOSFET bridge + inline 5mR Kelvin shunts"
 $EndDescr
 Text Notes 500 450 0    70   ~ 12
 FPGA PWM -> HARDWARE RUN GATING -> FD6288 -> GATE R -> 3-PHASE BRIDGE -> 5mR SHUNT -> MOTOR
-Text HLabel 600 1150 0    50   I ~ 0
+Text HLabel 600 1150 0    50   Input ~ 0
 PWM_UH
-Text HLabel 600 1450 0    50   I ~ 0
+Text HLabel 600 1450 0    50   Input ~ 0
 PWM_UL
-Text HLabel 600 1750 0    50   I ~ 0
+Text HLabel 600 1750 0    50   Input ~ 0
 PWM_VH
-Text HLabel 600 2050 0    50   I ~ 0
+Text HLabel 600 2050 0    50   Input ~ 0
 PWM_VL
-Text HLabel 600 2350 0    50   I ~ 0
+Text HLabel 600 2350 0    50   Input ~ 0
 PWM_WH
-Text HLabel 600 2650 0    50   I ~ 0
+Text HLabel 600 2650 0    50   Input ~ 0
 PWM_WL
-Text HLabel 600 2950 0    50   I ~ 0
+Text HLabel 600 2950 0    50   Input ~ 0
 GATE_EN
-Text HLabel 600 3250 0    50   I ~ 0
+Text HLabel 600 3250 0    50   Input ~ 0
 PWR_GOOD
-Text HLabel 600 3550 0    50   I ~ 0
+Text HLabel 600 3550 0    50   Input ~ 0
 OCP_N
-Text HLabel 600 3850 0    50   I ~ 0
+Text HLabel 600 3850 0    50   Input ~ 0
 VIO_3V3
-Text HLabel 600 4150 0    50   I ~ 0
+Text HLabel 600 4150 0    50   Input ~ 0
 VDRV_12V
-Text HLabel 600 4450 0    50   I ~ 0
+Text HLabel 600 4450 0    50   Input ~ 0
 VBUS_PROT
-Text HLabel 600 4750 0    50   I ~ 0
+Text HLabel 600 4750 0    50   Input ~ 0
 GND
-Text HLabel 15100 6250 2    50   O ~ 0
+Text HLabel 15100 6250 2    50   Output ~ 0
 U_SH_P
-Text HLabel 15100 6550 2    50   O ~ 0
+Text HLabel 15100 6550 2    50   Output ~ 0
 U_SH_N
-Text HLabel 15100 6850 2    50   O ~ 0
+Text HLabel 15100 6850 2    50   Output ~ 0
 V_SH_P
-Text HLabel 15100 7150 2    50   O ~ 0
+Text HLabel 15100 7150 2    50   Output ~ 0
 V_SH_N
-Text HLabel 15100 7450 2    50   O ~ 0
+Text HLabel 15100 7450 2    50   Output ~ 0
 W_SH_P
-Text HLabel 15100 7750 2    50   O ~ 0
+Text HLabel 15100 7750 2    50   Output ~ 0
 W_SH_N
 $Comp
 L ax7010_servo_reva:SN74LVC2G08 U8
