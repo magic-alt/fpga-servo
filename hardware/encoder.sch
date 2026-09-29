@@ -121,195 +121,183 @@ $EndComp
 Text Notes 650 6980 0    50   ~ 12
 VISIBLE WIRING: differential ABZ pairs, termination, ESD, line receiver and encoder power are explicitly wired.
 Wire Wire Line
-	850 3100 630 3100
-Text Label 630 3100 0    45   ~ 0
+	850 3100 700 3100
+Text Label 700 3100 0    40   ~ 0
 ENC_A_P
 Wire Wire Line
-	850 3260 630 3260
-Text Label 630 3260 0    45   ~ 0
+	850 3250 700 3250
+Text Label 700 3250 0    40   ~ 0
 ENC_A_N
 Wire Wire Line
-	850 3420 630 3420
-Text Label 630 3420 0    45   ~ 0
+	850 3400 700 3400
+Text Label 700 3400 0    40   ~ 0
 ENC_B_P
 Wire Wire Line
-	850 3580 630 3580
-Text Label 630 3580 0    45   ~ 0
+	850 3600 700 3600
+Text Label 700 3600 0    40   ~ 0
 ENC_B_N
 Wire Wire Line
-	850 3740 630 3740
-Text Label 630 3740 0    45   ~ 0
+	850 3750 700 3750
+Text Label 700 3750 0    40   ~ 0
 ENC_Z_P
 Wire Wire Line
-	850 3900 630 3900
-Text Label 630 3900 0    45   ~ 0
+	850 3900 700 3900
+Text Label 700 3900 0    40   ~ 0
 ENC_Z_N
 Wire Wire Line
-	2150 3260 2370 3260
-Text Label 2370 3260 0    45   ~ 0
+	2150 3250 2300 3250
+Text Label 2300 3250 0    40   ~ 0
 ENC_5V
 Wire Wire Line
-	2150 3420 2370 3420
-Text Label 2370 3420 0    45   ~ 0
+	2150 3400 2300 3400
+Text Label 2300 3400 0    40   ~ 0
 GND
 Wire Wire Line
-	2150 3580 2370 3580
-Text Label 2370 3580 0    45   ~ 0
+	2150 3600 2300 3600
+Text Label 2300 3600 0    40   ~ 0
 SHIELD
-NoConn ~ 2150 3740
+NoConn ~ 2150 3750
 Wire Wire Line
-	3000 2700 2780 2700
-Text Label 2780 2700 0    45   ~ 0
+	3000 2700 2850 2700
+Text Label 2850 2700 0    40   ~ 0
 ENC_A_P
 Wire Wire Line
-	3600 2700 3820 2700
-Text Label 3820 2700 0    45   ~ 0
+	3600 2700 3750 2700
+Text Label 3750 2700 0    40   ~ 0
 ENC_A_N
 Wire Wire Line
-	3000 3500 2780 3500
-Text Label 2780 3500 0    45   ~ 0
+	3000 3500 2850 3500
+Text Label 2850 3500 0    40   ~ 0
 ENC_B_P
 Wire Wire Line
-	3600 3500 3820 3500
-Text Label 3820 3500 0    45   ~ 0
+	3600 3500 3750 3500
+Text Label 3750 3500 0    40   ~ 0
 ENC_B_N
 Wire Wire Line
-	3000 4300 2780 4300
-Text Label 2780 4300 0    45   ~ 0
+	3000 4300 2850 4300
+Text Label 2850 4300 0    40   ~ 0
 ENC_Z_P
 Wire Wire Line
-	3600 4300 3820 4300
-Text Label 3820 4300 0    45   ~ 0
+	3600 4300 3750 4300
+Text Label 3750 4300 0    40   ~ 0
 ENC_Z_N
 Wire Wire Line
-	6000 2940 5780 2940
-Text Label 5780 2940 0    45   ~ 0
+	6000 2950 5850 2950
+Text Label 5850 2950 0    40   ~ 0
 ENC_A_P
 Wire Wire Line
-	6000 3100 5780 3100
-Text Label 5780 3100 0    45   ~ 0
+	6000 3100 5850 3100
+Text Label 5850 3100 0    40   ~ 0
 ENC_A_N
 Wire Wire Line
-	7800 3260 8020 3260
-Text Label 8020 3260 0    45   ~ 0
+	7800 3250 7950 3250
+Text Label 7950 3250 0    40   ~ 0
 ENC_A
 Wire Wire Line
-	6000 3260 5780 3260
-Text Label 5780 3260 0    45   ~ 0
+	6000 3250 5850 3250
+Text Label 5850 3250 0    40   ~ 0
 ENC_B_P
 Wire Wire Line
-	6000 3420 5780 3420
-Text Label 5780 3420 0    45   ~ 0
+	6000 3400 5850 3400
+Text Label 5850 3400 0    40   ~ 0
 ENC_B_N
 Wire Wire Line
-	7800 3420 8020 3420
-Text Label 8020 3420 0    45   ~ 0
+	7800 3400 7950 3400
+Text Label 7950 3400 0    40   ~ 0
 ENC_B
 Wire Wire Line
-	6900 2400 6900 2180
-Text Label 6900 2180 0    45   ~ 0
+	6900 2400 6900 2250
+Text Label 6900 2250 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	6900 4600 6900 4820
-Text Label 6900 4820 0    45   ~ 0
+	6900 4600 6900 4750
+Text Label 6900 4750 0    40   ~ 0
 GND
 Wire Wire Line
-	7800 3580 8020 3580
-Text Label 8020 3580 0    45   ~ 0
+	7800 3600 7950 3600
+Text Label 7950 3600 0    40   ~ 0
 ENC_Z
 Wire Wire Line
-	6000 3580 5780 3580
-Text Label 5780 3580 0    45   ~ 0
+	6000 3600 5850 3600
+Text Label 5850 3600 0    40   ~ 0
 ENC_Z_P
 Wire Wire Line
-	6000 3740 5780 3740
-Text Label 5780 3740 0    45   ~ 0
+	6000 3750 5850 3750
+Text Label 5850 3750 0    40   ~ 0
 ENC_Z_N
-NoConn ~ 7800 3740
+NoConn ~ 7800 3750
 NoConn ~ 6000 3900
-NoConn ~ 6000 4060
+NoConn ~ 6000 4050
 Wire Wire Line
-	7060 2400 7060 2180
-Text Label 7060 2180 0    45   ~ 0
+	7050 2400 7050 2250
+Text Label 7050 2250 0    40   ~ 0
 GND
 Wire Wire Line
-	6740 2400 6740 2180
-Text Label 6740 2180 0    45   ~ 0
+	6750 2400 6750 2250
+Text Label 6750 2250 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	1790 1600 1570 1600
-Text Label 1570 1600 0    45   ~ 0
+	1800 1600 1650 1600
+Text Label 1650 1600 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	2410 1600 2630 1600
-Text Label 2630 1600 0    45   ~ 0
+	2400 1600 2550 1600
+Text Label 2550 1600 0    40   ~ 0
 ENC_5V
 Wire Wire Line
-	6900 4950 6900 4730
-Text Label 6900 4730 0    45   ~ 0
+	6900 4950 6900 4800
+Text Label 6900 4800 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	6900 5450 6900 5670
-Text Label 6900 5670 0    45   ~ 0
+	6900 5450 6900 5600
+Text Label 6900 5600 0    40   ~ 0
 GND
 Wire Wire Line
-	7550 4950 7550 4730
-Text Label 7550 4730 0    45   ~ 0
+	7550 4950 7550 4800
+Text Label 7550 4800 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	7550 5450 7550 5670
-Text Label 7550 5670 0    45   ~ 0
+	7550 5450 7550 5600
+Text Label 7550 5600 0    40   ~ 0
 GND
 Wire Wire Line
-	4000 3000 3780 3000
-Text Label 3780 3000 0    45   ~ 0
+	4000 3000 3850 3000
+Text Label 3850 3000 0    40   ~ 0
 ENC_A_P
 Wire Wire Line
-	4000 3200 3780 3200
-Text Label 3780 3200 0    45   ~ 0
+	4000 3200 3850 3200
+Text Label 3850 3200 0    40   ~ 0
 ENC_A_N
 Wire Wire Line
-	4000 3400 3780 3400
-Text Label 3780 3400 0    45   ~ 0
+	4000 3400 3850 3400
+Text Label 3850 3400 0    40   ~ 0
 ENC_B_N
 Wire Wire Line
-	4000 3600 3780 3600
-Text Label 3780 3600 0    45   ~ 0
+	4000 3600 3850 3600
+Text Label 3850 3600 0    40   ~ 0
 ENC_B_N
 Wire Wire Line
-	4000 3800 3780 3800
-Text Label 3780 3800 0    45   ~ 0
+	4000 3800 3850 3800
+Text Label 3850 3800 0    40   ~ 0
 ENC_Z_P
 Wire Wire Line
-	4000 4000 3780 4000
-Text Label 3780 4000 0    45   ~ 0
+	4000 4000 3850 4000
+Text Label 3850 4000 0    40   ~ 0
 ENC_Z_N
 Wire Wire Line
-	4700 4400 4700 4620
-Text Label 4700 4620 0    45   ~ 0
+	4700 4400 4700 4550
+Text Label 4700 4550 0    40   ~ 0
 GND
 Wire Wire Line
-	700 1600 960 1600
-Text Label 960 1600 0    45   ~ 0
-VA_5V
+	700 1600 900 1600
 Wire Wire Line
-	700 2000 960 2000
-Text Label 960 2000 0    45   ~ 0
-VIO_3V3
+	700 2000 900 2000
 Wire Wire Line
-	700 2400 960 2400
-Text Label 960 2400 0    45   ~ 0
-GND
+	700 2400 900 2400
 Wire Wire Line
-	10800 3100 10540 3100
-Text Label 10540 3100 0    45   ~ 0
-ENC_A
+	10800 3100 10600 3100
 Wire Wire Line
-	10800 3500 10540 3500
-Text Label 10540 3500 0    45   ~ 0
-ENC_B
+	10800 3500 10600 3500
 Wire Wire Line
-	10800 3900 10540 3900
-Text Label 10540 3900 0    45   ~ 0
-ENC_Z
+	10800 3900 10600 3900
 $EndSCHEMATC
