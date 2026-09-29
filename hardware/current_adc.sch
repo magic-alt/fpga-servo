@@ -8,280 +8,594 @@ Title "Rev.A1 - Current Sense, OCP & ADC"
 Date "2026-09-29"
 Rev "A1"
 Comp "magic-alt/fpga-servo"
-Comment1 "3x INA241A2 + TLV9024 window OCP + ADS8588S"
+Comment1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S"
 $EndDescr
-Text Notes 500 450 0    70   ~ 12
-KELVIN SHUNT -> INA241A2 -> RC -> ADS8588S / INDEPENDENT WINDOW OCP
-Text HLabel 550 1050 0    50   I ~ 0
+Text Notes 500 450 0    60   ~ 12
+5mR KELVIN SHUNT -> INA241A2 (20 V/V) -> 47R/1nF -> ADS8588S; comparator OCP is firmware-independent.
+Text HLabel 500 950 0    50   I ~ 0
 U_SH_P
-Text HLabel 550 1330 0    50   I ~ 0
+Text HLabel 500 1190 0    50   I ~ 0
 U_SH_N
-Text HLabel 550 1610 0    50   I ~ 0
+Text HLabel 500 1430 0    50   I ~ 0
 V_SH_P
-Text HLabel 550 1890 0    50   I ~ 0
+Text HLabel 500 1670 0    50   I ~ 0
 V_SH_N
-Text HLabel 550 2170 0    50   I ~ 0
+Text HLabel 500 1910 0    50   I ~ 0
 W_SH_P
-Text HLabel 550 2450 0    50   I ~ 0
+Text HLabel 500 2150 0    50   I ~ 0
 W_SH_N
-Text HLabel 550 2730 0    50   I ~ 0
+Text HLabel 500 2390 0    50   I ~ 0
 VA_5V
-Text HLabel 550 3010 0    50   I ~ 0
+Text HLabel 500 2630 0    50   I ~ 0
 VIO_3V3
-Text HLabel 550 3290 0    50   I ~ 0
+Text HLabel 500 2870 0    50   I ~ 0
 GND
-Text HLabel 550 3570 0    50   I ~ 0
+Text HLabel 500 3110 0    50   I ~ 0
+VBUS_ADC
+Text HLabel 500 3350 0    50   I ~ 0
 ADC_CONVST
-Text HLabel 550 3850 0    50   I ~ 0
+Text HLabel 500 3590 0    50   I ~ 0
 ADC_SCLK
-Text HLabel 550 4130 0    50   I ~ 0
+Text HLabel 500 3830 0    50   I ~ 0
 ADC_CS_N
-Text HLabel 550 4410 0    50   I ~ 0
+Text HLabel 500 4070 0    50   I ~ 0
 ADC_RESET
-Text HLabel 15100 1150 2    50   O ~ 0
+Text HLabel 15100 1050 2    50   O ~ 0
 ADC_DOUTA
-Text HLabel 15100 1500 2    50   O ~ 0
+Text HLabel 15100 1370 2    50   O ~ 0
 ADC_DOUTB
-Text HLabel 15100 1850 2    50   O ~ 0
+Text HLabel 15100 1690 2    50   O ~ 0
 ADC_BUSY
-Text HLabel 15100 2200 2    50   O ~ 0
+Text HLabel 15100 2010 2    50   O ~ 0
 ADC_FRSTDATA
-Text HLabel 15100 2550 2    50   O ~ 0
+Text HLabel 15100 2330 2    50   O ~ 0
 OCP_N
 $Comp
 L ax7010_servo_reva:INA241A2 U2
-U 1 1 66000046
-P 3200 4700
-F 0 "U2" H 3300 4800 50  0000 C CNN
-F 1 "INA241A2ID_U" H 3300 4600 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3200 4700 50  0001 C CNN
-	1    3200 4700
+U 1 1 6A000015
+P 3000 4400
+F 0 "U2" H 3100 4500 50  0000 C CNN
+F 1 "INA241A2ID_U" H 3100 4300 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 3000 4400 50  0001 C CNN
+	1    3000 4400
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:R RF1
-U 1 1 66000047
-P 4200 4700
-F 0 "RF1" H 4300 4800 50  0000 C CNN
-F 1 "47R_ADC_ISOLATION" H 4300 4600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4200 4700 50  0001 C CNN
-	1    4200 4700
+L ax7010_servo_reva:R R40
+U 1 1 6A000016
+P 4000 4400
+F 0 "R40" H 4100 4500 50  0000 C CNN
+F 1 "47R_ADC_ISOLATION" H 4100 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4000 4400 50  0001 C CNN
+	1    4000 4400
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:C CF1
-U 1 1 66000048
-P 5000 5250
-F 0 "CF1" H 5100 5350 50  0000 C CNN
-F 1 "1nF_C0G_ADC" H 5100 5150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5000 5250 50  0001 C CNN
-	1    5000 5250
+L ax7010_servo_reva:C C40
+U 1 1 6A000017
+P 4750 4950
+F 0 "C40" H 4850 5050 50  0000 C CNN
+F 1 "1nF_C0G_ADC" H 4850 4850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4750 4950 50  0001 C CNN
+	1    4750 4950
 	1 0 0 -1
 $EndComp
-Text Label 2100 4500 0    45   ~ 0
-U_SH_P
-Text Label 2100 4900 0    45   ~ 0
+$Comp
+L ax7010_servo_reva:C C43
+U 1 1 6A000018
+P 3000 6100
+F 0 "C43" H 3100 6200 50  0000 C CNN
+F 1 "100nF_INA_DECOUPLE" H 3100 6000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3000 6100 50  0001 C CNN
+	1    3000 6100
+	1 0 0 -1
+$EndComp
+Text Label 2200 4320 2    45   ~ 0
 U_SH_N
-Text Label 4500 4700 0    45   ~ 0
+Text Label 2200 4480 2    45   ~ 0
+U_SH_P
+Wire Wire Line
+	3800 4400 3700 4400
+Wire Wire Line
+	3800 4400 3700 4400
+Wire Wire Line
+	3800 4400 3700 4400
+Wire Wire Line
+	3800 4400 3700 4400
+Wire Wire Line
+	3800 4400 3700 4400
+Text Label 4300 4400 0    45   ~ 0
 IU_ADC
+Wire Wire Line
+	4300 4400 4750 4400
+Wire Wire Line
+	4750 4400 4750 4700
+Text Label 4750 5200 0    45   ~ 0
+GND
+Text Label 2920 3500 0    45   ~ 0
+VA_5V
+Text Label 3080 3500 0    45   ~ 0
+VA_5V
+Text Label 2840 5300 0    45   ~ 0
+GND
+Text Label 3000 5300 0    45   ~ 0
+GND
+Text Label 3000 5850 0    45   ~ 0
+VA_5V
+Text Label 3000 6350 0    45   ~ 0
+GND
 $Comp
 L ax7010_servo_reva:INA241A2 U3
-U 1 1 66000049
-P 5700 4700
-F 0 "U3" H 5800 4800 50  0000 C CNN
-F 1 "INA241A2ID_V" H 5800 4600 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5700 4700 50  0001 C CNN
-	1    5700 4700
+U 1 1 6A000019
+P 5500 4400
+F 0 "U3" H 5600 4500 50  0000 C CNN
+F 1 "INA241A2ID_V" H 5600 4300 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5500 4400 50  0001 C CNN
+	1    5500 4400
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:R RF2
-U 1 1 6600004A
-P 6700 4700
-F 0 "RF2" H 6800 4800 50  0000 C CNN
-F 1 "47R_ADC_ISOLATION" H 6800 4600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6700 4700 50  0001 C CNN
-	1    6700 4700
+L ax7010_servo_reva:R R41
+U 1 1 6A00001A
+P 6500 4400
+F 0 "R41" H 6600 4500 50  0000 C CNN
+F 1 "47R_ADC_ISOLATION" H 6600 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6500 4400 50  0001 C CNN
+	1    6500 4400
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:C CF2
-U 1 1 6600004B
-P 7500 5250
-F 0 "CF2" H 7600 5350 50  0000 C CNN
-F 1 "1nF_C0G_ADC" H 7600 5150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7500 5250 50  0001 C CNN
-	1    7500 5250
+L ax7010_servo_reva:C C41
+U 1 1 6A00001B
+P 7250 4950
+F 0 "C41" H 7350 5050 50  0000 C CNN
+F 1 "1nF_C0G_ADC" H 7350 4850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7250 4950 50  0001 C CNN
+	1    7250 4950
 	1 0 0 -1
 $EndComp
-Text Label 4600 4500 0    45   ~ 0
-V_SH_P
-Text Label 4600 4900 0    45   ~ 0
+$Comp
+L ax7010_servo_reva:C C44
+U 1 1 6A00001C
+P 5500 6100
+F 0 "C44" H 5600 6200 50  0000 C CNN
+F 1 "100nF_INA_DECOUPLE" H 5600 6000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5500 6100 50  0001 C CNN
+	1    5500 6100
+	1 0 0 -1
+$EndComp
+Text Label 4700 4320 2    45   ~ 0
 V_SH_N
-Text Label 7000 4700 0    45   ~ 0
+Text Label 4700 4480 2    45   ~ 0
+V_SH_P
+Wire Wire Line
+	6300 4400 6200 4400
+Wire Wire Line
+	6300 4400 6200 4400
+Wire Wire Line
+	6300 4400 6200 4400
+Wire Wire Line
+	6300 4400 6200 4400
+Wire Wire Line
+	6300 4400 6200 4400
+Text Label 6800 4400 0    45   ~ 0
 IV_ADC
+Wire Wire Line
+	6800 4400 7250 4400
+Wire Wire Line
+	7250 4400 7250 4700
+Text Label 7250 5200 0    45   ~ 0
+GND
+Text Label 5420 3500 0    45   ~ 0
+VA_5V
+Text Label 5580 3500 0    45   ~ 0
+VA_5V
+Text Label 5340 5300 0    45   ~ 0
+GND
+Text Label 5500 5300 0    45   ~ 0
+GND
+Text Label 5500 5850 0    45   ~ 0
+VA_5V
+Text Label 5500 6350 0    45   ~ 0
+GND
 $Comp
 L ax7010_servo_reva:INA241A2 U4
-U 1 1 6600004C
-P 8200 4700
-F 0 "U4" H 8300 4800 50  0000 C CNN
-F 1 "INA241A2ID_W" H 8300 4600 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8200 4700 50  0001 C CNN
-	1    8200 4700
+U 1 1 6A00001D
+P 8000 4400
+F 0 "U4" H 8100 4500 50  0000 C CNN
+F 1 "INA241A2ID_W" H 8100 4300 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 8000 4400 50  0001 C CNN
+	1    8000 4400
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:R RF3
-U 1 1 6600004D
-P 9200 4700
-F 0 "RF3" H 9300 4800 50  0000 C CNN
-F 1 "47R_ADC_ISOLATION" H 9300 4600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 9200 4700 50  0001 C CNN
-	1    9200 4700
+L ax7010_servo_reva:R R42
+U 1 1 6A00001E
+P 9000 4400
+F 0 "R42" H 9100 4500 50  0000 C CNN
+F 1 "47R_ADC_ISOLATION" H 9100 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 9000 4400 50  0001 C CNN
+	1    9000 4400
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:C CF3
-U 1 1 6600004E
-P 10000 5250
-F 0 "CF3" H 10100 5350 50  0000 C CNN
-F 1 "1nF_C0G_ADC" H 10100 5150 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 10000 5250 50  0001 C CNN
-	1    10000 5250
+L ax7010_servo_reva:C C42
+U 1 1 6A00001F
+P 9750 4950
+F 0 "C42" H 9850 5050 50  0000 C CNN
+F 1 "1nF_C0G_ADC" H 9850 4850 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9750 4950 50  0001 C CNN
+	1    9750 4950
 	1 0 0 -1
 $EndComp
-Text Label 7100 4500 0    45   ~ 0
-W_SH_P
-Text Label 7100 4900 0    45   ~ 0
+$Comp
+L ax7010_servo_reva:C C45
+U 1 1 6A000020
+P 8000 6100
+F 0 "C45" H 8100 6200 50  0000 C CNN
+F 1 "100nF_INA_DECOUPLE" H 8100 6000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8000 6100 50  0001 C CNN
+	1    8000 6100
+	1 0 0 -1
+$EndComp
+Text Label 7200 4320 2    45   ~ 0
 W_SH_N
-Text Label 9500 4700 0    45   ~ 0
+Text Label 7200 4480 2    45   ~ 0
+W_SH_P
+Wire Wire Line
+	8800 4400 8700 4400
+Wire Wire Line
+	8800 4400 8700 4400
+Wire Wire Line
+	8800 4400 8700 4400
+Wire Wire Line
+	8800 4400 8700 4400
+Wire Wire Line
+	8800 4400 8700 4400
+Text Label 9300 4400 0    45   ~ 0
 IW_ADC
-$Comp
-L ax7010_servo_reva:TLV9024 U15
-U 1 1 6600004F
-P 8300 7000
-F 0 "U15" H 8400 7100 50  0000 C CNN
-F 1 "TLV9024PWR_HI" H 8400 6900 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 8300 7000 50  0001 C CNN
-	1    8300 7000
-	1 0 0 -1
-$EndComp
-$Comp
-L ax7010_servo_reva:TLV9024 U16
-U 1 1 66000050
-P 10300 7000
-F 0 "U16" H 10400 7100 50  0000 C CNN
-F 1 "TLV9024PWR_LO" H 10400 6900 50  0000 C CNN
-F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10300 7000 50  0001 C CNN
-	1    10300 7000
-	1 0 0 -1
-$EndComp
+Wire Wire Line
+	9300 4400 9750 4400
+Wire Wire Line
+	9750 4400 9750 4700
+Text Label 9750 5200 0    45   ~ 0
+GND
+Text Label 7920 3500 0    45   ~ 0
+VA_5V
+Text Label 8080 3500 0    45   ~ 0
+VA_5V
+Text Label 7840 5300 0    45   ~ 0
+GND
+Text Label 8000 5300 0    45   ~ 0
+GND
+Text Label 8000 5850 0    45   ~ 0
+VA_5V
+Text Label 8000 6350 0    45   ~ 0
+GND
+Text Notes 500 6550 0    60   ~ 12
+The 47R/1nF network is an amplifier-output isolation / RF filter. Its pole is ~3.39MHz, well above the servo signal bandwidth.
 $Comp
 L ax7010_servo_reva:R R50
-U 1 1 66000051
-P 6900 7600
-F 0 "R50" H 7000 7700 50  0000 C CNN
-F 1 "10k_OCP_HI_TOP" H 7000 7500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6900 7600 50  0001 C CNN
-	1    6900 7600
+U 1 1 6A000021
+P 6500 7550
+F 0 "R50" H 6600 7650 50  0000 C CNN
+F 1 "10k_0.1%_OCP_HI_TOP" H 6600 7450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6500 7550 50  0001 C CNN
+	1    6500 7550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R51
-U 1 1 66000052
-P 7600 7600
-F 0 "R51" H 7700 7700 50  0000 C CNN
-F 1 "160k_OCP_HI_BOT" H 7700 7500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7600 7600 50  0001 C CNN
-	1    7600 7600
+U 1 1 6A000022
+P 7300 7550
+F 0 "R51" H 7400 7650 50  0000 C CNN
+F 1 "160k_0.1%_OCP_HI_BOT" H 7400 7450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7300 7550 50  0001 C CNN
+	1    7300 7550
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R52
-U 1 1 66000053
-P 6900 8100
-F 0 "R52" H 7000 8200 50  0000 C CNN
-F 1 "160k_OCP_LO_TOP" H 7000 8000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 6900 8100 50  0001 C CNN
-	1    6900 8100
+U 1 1 6A000023
+P 6500 8050
+F 0 "R52" H 6600 8150 50  0000 C CNN
+F 1 "160k_0.1%_OCP_LO_TOP" H 6600 7950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6500 8050 50  0001 C CNN
+	1    6500 8050
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R53
-U 1 1 66000054
-P 7600 8100
-F 0 "R53" H 7700 8200 50  0000 C CNN
-F 1 "10k_OCP_LO_BOT" H 7700 8000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 7600 8100 50  0001 C CNN
-	1    7600 8100
+U 1 1 6A000024
+P 7300 8050
+F 0 "R53" H 7400 8150 50  0000 C CNN
+F 1 "10k_0.1%_OCP_LO_BOT" H 7400 7950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7300 8050 50  0001 C CNN
+	1    7300 8050
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:TLV9024 U15
+U 1 1 6A000025
+P 8700 7600
+F 0 "U15" H 8800 7700 50  0000 C CNN
+F 1 "TLV9024PWR_HIGH" H 8800 7500 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 8700 7600 50  0001 C CNN
+	1    8700 7600
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:TLV9024 U16
+U 1 1 6A000026
+P 10800 7600
+F 0 "U16" H 10900 7700 50  0000 C CNN
+F 1 "TLV9024PWR_LOW" H 10900 7500 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 10800 7600 50  0001 C CNN
+	1    10800 7600
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:R R54
-U 1 1 66000055
-P 12100 7000
-F 0 "R54" H 12200 7100 50  0000 C CNN
-F 1 "4.7k_OCP_PULLUP_VIO" H 12200 6900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 12100 7000 50  0001 C CNN
-	1    12100 7000
+U 1 1 6A000027
+P 12800 7600
+F 0 "R54" H 12900 7700 50  0000 C CNN
+F 1 "4.7k_OCP_PULLUP_TO_VIO" H 12900 7500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 12800 7600 50  0001 C CNN
+	1    12800 7600
 	1 0 0 -1
 $EndComp
+Text Label 6200 7550 2    45   ~ 0
+VA_5V
+Wire Wire Line
+	6800 7550 7000 7550
+Text Label 7000 7550 0    45   ~ 0
+OCP_HI_REF
+Text Label 7600 7550 0    45   ~ 0
+GND
+Text Label 6200 8050 2    45   ~ 0
+VA_5V
+Wire Wire Line
+	6800 8050 7000 8050
+Text Label 7000 8050 0    45   ~ 0
+OCP_LO_REF
+Text Label 7600 8050 0    45   ~ 0
+GND
+Text Label 7850 7100 2    45   ~ 0
+IU_ADC
+Text Label 7850 7260 2    45   ~ 0
+OCP_HI_REF
+Text Label 9550 7240 0    45   ~ 0
+OCP_N
+Text Label 7850 7420 2    45   ~ 0
+IV_ADC
+Text Label 7850 7580 2    45   ~ 0
+OCP_HI_REF
+Text Label 9550 7080 0    45   ~ 0
+OCP_N
+Text Label 7850 7740 2    45   ~ 0
+IW_ADC
+Text Label 7850 7900 2    45   ~ 0
+OCP_HI_REF
+Text Label 9550 7880 0    45   ~ 0
+OCP_N
+Text Label 8700 6680 0    45   ~ 0
+VA_5V
+Text Label 8700 8520 0    45   ~ 0
+GND
+Text Label 9950 7100 2    45   ~ 0
+OCP_LO_REF
+Text Label 9950 7260 2    45   ~ 0
+IU_ADC
+Text Label 11650 7240 0    45   ~ 0
+OCP_N
+Text Label 9950 7420 2    45   ~ 0
+OCP_LO_REF
+Text Label 9950 7580 2    45   ~ 0
+IV_ADC
+Text Label 11650 7080 0    45   ~ 0
+OCP_N
+Text Label 9950 7740 2    45   ~ 0
+OCP_LO_REF
+Text Label 9950 7900 2    45   ~ 0
+IW_ADC
+Text Label 11650 7880 0    45   ~ 0
+OCP_N
+Text Label 10800 6680 0    45   ~ 0
+VA_5V
+Text Label 10800 8520 0    45   ~ 0
+GND
+Text Label 12500 7600 2    45   ~ 0
+OCP_N
+Text Label 13100 7600 0    45   ~ 0
+VIO_3V3
 $Comp
 L ax7010_servo_reva:ADS8588S U6
-U 1 1 66000056
-P 12300 4200
-F 0 "U6" H 12400 4300 50  0000 C CNN
-F 1 "ADS8588SIPM" H 12400 4100 50  0000 C CNN
-F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 12300 4200 50  0001 C CNN
-	1    12300 4200
+U 1 1 6A000028
+P 12300 3900
+F 0 "U6" H 12400 4000 50  0000 C CNN
+F 1 "ADS8588SIPM" H 12400 3800 50  0000 C CNN
+F 2 "Package_QFP:LQFP-64_10x10mm_P0.5mm" H 12300 3900 50  0001 C CNN
+	1    12300 3900
 	1 0 0 -1
 $EndComp
+Text Label 11100 2500 2    45   ~ 0
+IU_ADC
+Text Label 11100 2640 2    45   ~ 0
+GND
+Text Label 11100 2820 2    45   ~ 0
+IV_ADC
+Text Label 11100 2960 2    45   ~ 0
+GND
+Text Label 11100 3140 2    45   ~ 0
+IW_ADC
+Text Label 11100 3280 2    45   ~ 0
+GND
+Text Label 11100 3460 2    45   ~ 0
+VBUS_ADC
+Text Label 11100 3600 2    45   ~ 0
+GND
+Text Label 11100 3780 2    45   ~ 0
+NTC_BOARD
+Text Label 11100 3920 2    45   ~ 0
+GND
+Text Label 11100 4100 2    45   ~ 0
+NTC_MOTOR
+Text Label 11100 4240 2    45   ~ 0
+GND
+Text Label 11100 4420 2    45   ~ 0
+AIN_SPARE0
+Text Label 11100 4560 2    45   ~ 0
+GND
+Text Label 11100 4740 2    45   ~ 0
+AIN_SPARE1
+Text Label 11100 4880 2    45   ~ 0
+GND
+Text Label 11400 1900 0    45   ~ 0
+OS0
+Text Label 11560 1900 0    45   ~ 0
+OS1
+Text Label 11720 1900 0    45   ~ 0
+OS2
+Text Label 11880 1900 0    45   ~ 0
+ADC_PAR_SER
+Text Label 12040 1900 0    45   ~ 0
+ADC_STBY
+Text Label 12200 1900 0    45   ~ 0
+ADC_RANGE
+Text Label 12400 1900 0    45   ~ 0
+ADC_CONVST
+Text Label 12560 1900 0    45   ~ 0
+ADC_CONVST
+Text Label 12720 1900 0    45   ~ 0
+ADC_RESET
+Text Label 12880 1900 0    45   ~ 0
+ADC_SCLK
+Text Label 13040 1900 0    45   ~ 0
+ADC_CS_N
+Text Label 13200 1900 0    45   ~ 0
+ADC_REFSEL
+Text Label 11400 1900 0    45   ~ 0
+GND
+Text Label 11560 1900 0    45   ~ 0
+GND
+Text Label 11720 1900 0    45   ~ 0
+GND
+Text Label 11880 1900 0    45   ~ 0
+VIO_3V3
+Text Label 12040 1900 0    45   ~ 0
+VIO_3V3
+Text Label 12200 1900 0    45   ~ 0
+GND
+Text Label 13200 1900 0    45   ~ 0
+VIO_3V3
+Text Label 13500 3300 0    45   ~ 0
+ADC_DOUTA
+Text Label 13500 3420 0    45   ~ 0
+ADC_DOUTB
+Text Label 13500 4520 0    45   ~ 0
+ADC_BUSY
+Text Label 13500 4660 0    45   ~ 0
+ADC_FRSTDATA
+Text Label 13500 2220 0    45   ~ 0
+GND
+Text Label 11340 5900 0    45   ~ 0
+VA_5V
+Text Label 11460 5900 0    45   ~ 0
+GND
+Text Label 11580 5900 0    45   ~ 0
+VIO_3V3
+Text Label 11700 5900 0    45   ~ 0
+GND
+Text Label 11820 5900 0    45   ~ 0
+GND
+Text Label 11940 5900 0    45   ~ 0
+REGCAP1
+Text Label 12060 5900 0    45   ~ 0
+VA_5V
+Text Label 12180 5900 0    45   ~ 0
+VA_5V
+Text Label 12300 5900 0    45   ~ 0
+REGCAP2
+Text Label 12420 5900 0    45   ~ 0
+GND
+Text Label 12540 5900 0    45   ~ 0
+GND
+Text Label 12660 5900 0    45   ~ 0
+REFIO_2V5
+Text Label 12780 5900 0    45   ~ 0
+GND
+Text Label 12900 5900 0    45   ~ 0
+REFCAP_4V
+Text Label 13020 5900 0    45   ~ 0
+REFCAP_4V
+Text Label 13140 5900 0    45   ~ 0
+GND
+Text Label 13260 5900 0    45   ~ 0
+GND
+Text Label 13380 5900 0    45   ~ 0
+VA_5V
 $Comp
 L ax7010_servo_reva:C C60
-U 1 1 66000057
-P 11300 6100
-F 0 "C60" H 11400 6200 50  0000 C CNN
-F 1 "10uF_REFCAP" H 11400 6000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 11300 6100 50  0001 C CNN
-	1    11300 6100
+U 1 1 6A000029
+P 12700 6500
+F 0 "C60" H 12800 6600 50  0000 C CNN
+F 1 "10uF_REFIO_X7R" H 12800 6400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 12700 6500 50  0001 C CNN
+	1    12700 6500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C61
-U 1 1 66000058
-P 12400 6100
-F 0 "C61" H 12500 6200 50  0000 C CNN
-F 1 "10uF_REFIO" H 12500 6000 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 12400 6100 50  0001 C CNN
-	1    12400 6100
+U 1 1 6A00002A
+P 13100 6500
+F 0 "C61" H 13200 6600 50  0000 C CNN
+F 1 "10uF_REFCAP_X7R" H 13200 6400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 13100 6500 50  0001 C CNN
+	1    13100 6500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C62
-U 1 1 66000059
-P 13600 5600
-F 0 "C62" H 13700 5700 50  0000 C CNN
-F 1 "100nF_AVDD" H 13700 5500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 13600 5600 50  0001 C CNN
-	1    13600 5600
+U 1 1 6A00002B
+P 11950 6500
+F 0 "C62" H 12050 6600 50  0000 C CNN
+F 1 "1uF_REGCAP1" H 12050 6400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11950 6500 50  0001 C CNN
+	1    11950 6500
 	1 0 0 -1
 $EndComp
 $Comp
 L ax7010_servo_reva:C C63
-U 1 1 6600005A
-P 14200 5600
-F 0 "C63" H 14300 5700 50  0000 C CNN
-F 1 "100nF_DVDD" H 14300 5500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 14200 5600 50  0001 C CNN
-	1    14200 5600
+U 1 1 6A00002C
+P 12300 6500
+F 0 "C63" H 12400 6600 50  0000 C CNN
+F 1 "1uF_REGCAP2" H 12400 6400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12300 6500 50  0001 C CNN
+	1    12300 6500
 	1 0 0 -1
 $EndComp
-Text Notes 500 9300 0    70   ~ 12
-INA241A2: Rshunt=5mR, gain=20V/V => 0.1V/A. REF1=5V and REF2=GND => ~2.5V at zero current.
-Text Notes 500 9450 0    70   ~ 12
-OCP reference dividers: 4.706V high and 0.294V low => approximately +/-22.1A hardware trip before tolerance/hysteresis.
-Text Notes 500 9600 0    70   ~ 12
-ADS8588S: +/-5V RANGE; internal 2.5V reference; REFCAPA/REFCAPB shorted and >=10uF to REFGND; REFIO >=10uF.
-Text Notes 500 9750 0    70   ~ 12
-Default interface is serial: PAR/SER=1, DB15/BYTE_SEL=0; DOUTA=DB7 and DOUTB=DB8. Parallel pins remain optional on PL_B.
+Text Label 12700 6250 0    45   ~ 0
+REFIO_2V5
+Text Label 12700 6750 0    45   ~ 0
+GND
+Text Label 13100 6250 0    45   ~ 0
+REFCAP_4V
+Text Label 13100 6750 0    45   ~ 0
+GND
+Text Label 11950 6250 0    45   ~ 0
+REGCAP1
+Text Label 11950 6750 0    45   ~ 0
+GND
+Text Label 12300 6250 0    45   ~ 0
+REGCAP2
+Text Label 12300 6750 0    45   ~ 0
+GND
+Text Notes 500 9300 0    60   ~ 12
+INA241A2: gain 20V/V and 5mR gives 0.1V/A. REF1=5V and REF2=GND centers the output near 2.5V.
+Text Notes 500 9470 0    60   ~ 12
+OCP divider references are 4.706V and 0.294V, nominally about +22.06A and -22.06A. TLV9024 open-drain outputs are fault-ORed.
+Text Notes 500 9640 0    60   ~ 12
+ADS8588S straps: OS[2:0]=000, PAR/SER=1, STBY=1, RANGE=0 (+/-5V), REFSEL=1, DB15/BYTE_SEL=0 for serial mode.
+Text Notes 500 9810 0    60   ~ 12
+ADS8588S reference network: internal 2.5V REFIO; REFCAPA/B tied at 4V buffer node; 10uF on REFIO and REFCAP node.
 $EndSCHEMATC
