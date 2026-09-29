@@ -99,363 +99,363 @@ J1 carries the release-critical servo path. J2 is optional expansion and must no
 Text Notes 650 7180 0    42   ~ 12
 Pin allocation remains cross-checked against fpga/ax7010_servo_reva.xdc and docs/ax7010_interface.md.
 Wire Wire Line
-	10600 900 10420 900
+	10600 900 10400 900
 Wire Wire Line
-	10600 1350 10420 1350
+	10600 1350 10400 1350
 Wire Wire Line
-	10600 1550 10420 1550
+	10600 1550 10400 1550
 Wire Wire Line
-	10600 1750 10420 1750
+	10600 1750 10400 1750
 Wire Wire Line
-	10600 1950 10420 1950
+	10600 1950 10400 1950
 Wire Wire Line
-	10600 2150 10420 2150
+	10600 2150 10400 2150
 Wire Wire Line
-	10600 2350 10420 2350
+	10600 2350 10400 2350
 Wire Wire Line
-	10600 2600 10420 2600
+	10600 2600 10400 2600
 Wire Wire Line
-	10600 2800 10420 2800
+	10600 2800 10400 2800
 Wire Wire Line
-	10600 3250 10420 3250
+	10600 3250 10400 3250
 Wire Wire Line
-	10600 3450 10420 3450
+	10600 3450 10400 3450
 Wire Wire Line
-	10600 3650 10420 3650
+	10600 3650 10400 3650
 Wire Wire Line
-	10600 3850 10420 3850
+	10600 3850 10400 3850
 Wire Wire Line
-	10600 4300 10780 4300
+	10600 4300 10800 4300
 Wire Wire Line
-	10600 4500 10780 4500
+	10600 4500 10800 4500
 Wire Wire Line
-	10600 4700 10780 4700
+	10600 4700 10800 4700
 Wire Wire Line
-	10600 4900 10780 4900
+	10600 4900 10800 4900
 Wire Wire Line
-	10600 5350 10780 5350
+	10600 5350 10800 5350
 Wire Wire Line
-	10600 5550 10780 5550
+	10600 5550 10800 5550
 Wire Wire Line
-	10600 5750 10780 5750
+	10600 5750 10800 5750
 Wire Wire Line
-	10600 6100 10780 6100
+	10600 6100 10800 6100
 Wire Wire Line
-	10600 6300 10780 6300
+	10600 6300 10800 6300
 Wire Wire Line
-	10600 6600 10600 6780
+	10600 6600 10600 6800
 Wire Wire Line
-	1800 2120 1695 2120
-Text Label 1695 2120 0    40   ~ 0
+	1800 2100 1650 2100
+Text Label 1650 2100 0    40   ~ 0
 GND
-NoConn ~ 3600 2120
+NoConn ~ 3600 2100
 Wire Wire Line
-	1800 2265 1695 2265
-Text Label 1695 2265 0    40   ~ 0
+	1800 2250 1650 2250
+Text Label 1650 2250 0    40   ~ 0
 PWM_UH
 Wire Wire Line
-	3600 2265 3705 2265
-Text Label 3705 2265 0    40   ~ 0
+	3600 2250 3750 2250
+Text Label 3750 2250 0    40   ~ 0
 PWM_UL
 Wire Wire Line
-	1800 2411 1695 2411
-Text Label 1695 2411 0    40   ~ 0
+	1800 2400 1650 2400
+Text Label 1650 2400 0    40   ~ 0
 PWM_VH
 Wire Wire Line
-	3600 2411 3705 2411
-Text Label 3705 2411 0    40   ~ 0
+	3600 2400 3750 2400
+Text Label 3750 2400 0    40   ~ 0
 PWM_VL
 Wire Wire Line
-	1800 2556 1695 2556
-Text Label 1695 2556 0    40   ~ 0
+	1800 2550 1650 2550
+Text Label 1650 2550 0    40   ~ 0
 PWM_WH
 Wire Wire Line
-	3600 2556 3705 2556
-Text Label 3705 2556 0    40   ~ 0
+	3600 2550 3750 2550
+Text Label 3750 2550 0    40   ~ 0
 PWM_WL
 Wire Wire Line
-	1800 2701 1695 2701
-Text Label 1695 2701 0    40   ~ 0
+	1800 2700 1650 2700
+Text Label 1650 2700 0    40   ~ 0
 GATE_EN
 Wire Wire Line
-	3600 2701 3705 2701
-Text Label 3705 2701 0    40   ~ 0
+	3600 2700 3750 2700
+Text Label 3750 2700 0    40   ~ 0
 FAULT_CLEAR
 Wire Wire Line
-	1800 2846 1695 2846
-Text Label 1695 2846 0    40   ~ 0
+	1800 2850 1650 2850
+Text Label 1650 2850 0    40   ~ 0
 ADC_CONVST
 Wire Wire Line
-	3600 2846 3705 2846
-Text Label 3705 2846 0    40   ~ 0
+	3600 2850 3750 2850
+Text Label 3750 2850 0    40   ~ 0
 ADC_SCLK
 Wire Wire Line
-	1800 2992 1695 2992
-Text Label 1695 2992 0    40   ~ 0
+	1800 3000 1650 3000
+Text Label 1650 3000 0    40   ~ 0
 ADC_CS_N
 Wire Wire Line
-	3600 2992 3705 2992
-Text Label 3705 2992 0    40   ~ 0
+	3600 3000 3750 3000
+Text Label 3750 3000 0    40   ~ 0
 ADC_RESET
 Wire Wire Line
-	1800 3137 1695 3137
-Text Label 1695 3137 0    40   ~ 0
+	1800 3150 1650 3150
+Text Label 1650 3150 0    40   ~ 0
 ADC_DOUTA
 Wire Wire Line
-	3600 3137 3705 3137
-Text Label 3705 3137 0    40   ~ 0
+	3600 3150 3750 3150
+Text Label 3750 3150 0    40   ~ 0
 ADC_DOUTB
 Wire Wire Line
-	1800 3282 1695 3282
-Text Label 1695 3282 0    40   ~ 0
+	1800 3300 1650 3300
+Text Label 1650 3300 0    40   ~ 0
 ADC_BUSY
 Wire Wire Line
-	3600 3282 3705 3282
-Text Label 3705 3282 0    40   ~ 0
+	3600 3300 3750 3300
+Text Label 3750 3300 0    40   ~ 0
 ADC_FRSTDATA
 Wire Wire Line
-	1800 3427 1695 3427
-Text Label 1695 3427 0    40   ~ 0
+	1800 3450 1650 3450
+Text Label 1650 3450 0    40   ~ 0
 ENC_A
 Wire Wire Line
-	3600 3427 3705 3427
-Text Label 3705 3427 0    40   ~ 0
+	3600 3450 3750 3450
+Text Label 3750 3450 0    40   ~ 0
 ENC_B
 Wire Wire Line
-	1800 3573 1695 3573
-Text Label 1695 3573 0    40   ~ 0
+	1800 3550 1650 3550
+Text Label 1650 3550 0    40   ~ 0
 ENC_Z
 Wire Wire Line
-	3600 3573 3705 3573
-Text Label 3705 3573 0    40   ~ 0
+	3600 3550 3750 3550
+Text Label 3750 3550 0    40   ~ 0
 ENC_FAULT_N
 Wire Wire Line
-	1800 3718 1695 3718
-Text Label 1695 3718 0    40   ~ 0
+	1800 3700 1650 3700
+Text Label 1650 3700 0    40   ~ 0
 OCP_N
 Wire Wire Line
-	3600 3718 3705 3718
-Text Label 3705 3718 0    40   ~ 0
+	3600 3700 3750 3700
+Text Label 3750 3700 0    40   ~ 0
 PWR_GOOD
 Wire Wire Line
-	1800 3863 1695 3863
-Text Label 1695 3863 0    40   ~ 0
+	1800 3850 1650 3850
+Text Label 1650 3850 0    40   ~ 0
 AUX_IN0
 Wire Wire Line
-	3600 3863 3705 3863
-Text Label 3705 3863 0    40   ~ 0
+	3600 3850 3750 3850
+Text Label 3750 3850 0    40   ~ 0
 AUX_IN1
 Wire Wire Line
-	1800 4008 1695 4008
-Text Label 1695 4008 0    40   ~ 0
+	1800 4000 1650 4000
+Text Label 1650 4000 0    40   ~ 0
 AUX_OUT0
 Wire Wire Line
-	3600 4008 3705 4008
-Text Label 3705 4008 0    40   ~ 0
+	3600 4000 3750 4000
+Text Label 3750 4000 0    40   ~ 0
 AUX_OUT1
 Wire Wire Line
-	1800 4154 1695 4154
-Text Label 1695 4154 0    40   ~ 0
+	1800 4150 1650 4150
+Text Label 1650 4150 0    40   ~ 0
 SPARE_A0
 Wire Wire Line
-	3600 4154 3705 4154
-Text Label 3705 4154 0    40   ~ 0
+	3600 4150 3750 4150
+Text Label 3750 4150 0    40   ~ 0
 SPARE_A1
 Wire Wire Line
-	1800 4299 1695 4299
-Text Label 1695 4299 0    40   ~ 0
+	1800 4300 1650 4300
+Text Label 1650 4300 0    40   ~ 0
 SPARE_A2
 Wire Wire Line
-	3600 4299 3705 4299
-Text Label 3705 4299 0    40   ~ 0
+	3600 4300 3750 4300
+Text Label 3750 4300 0    40   ~ 0
 SPARE_A3
 Wire Wire Line
-	1800 4444 1695 4444
-Text Label 1695 4444 0    40   ~ 0
+	1800 4450 1650 4450
+Text Label 1650 4450 0    40   ~ 0
 SPARE_A4
 Wire Wire Line
-	3600 4444 3705 4444
-Text Label 3705 4444 0    40   ~ 0
+	3600 4450 3750 4450
+Text Label 3750 4450 0    40   ~ 0
 SPARE_A5
 Wire Wire Line
-	1800 4589 1695 4589
-Text Label 1695 4589 0    40   ~ 0
+	1800 4600 1650 4600
+Text Label 1650 4600 0    40   ~ 0
 SPARE_A6
 Wire Wire Line
-	3600 4589 3705 4589
-Text Label 3705 4589 0    40   ~ 0
+	3600 4600 3750 4600
+Text Label 3750 4600 0    40   ~ 0
 SPARE_A7
 Wire Wire Line
-	1800 4735 1695 4735
-Text Label 1695 4735 0    40   ~ 0
+	1800 4750 1650 4750
+Text Label 1650 4750 0    40   ~ 0
 GND
 Wire Wire Line
-	3600 4735 3705 4735
-Text Label 3705 4735 0    40   ~ 0
+	3600 4750 3750 4750
+Text Label 3750 4750 0    40   ~ 0
 GND
 Wire Wire Line
-	1800 4880 1695 4880
-Text Label 1695 4880 0    40   ~ 0
+	1800 4900 1650 4900
+Text Label 1650 4900 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	3600 4880 3705 4880
-Text Label 3705 4880 0    40   ~ 0
+	3600 4900 3750 4900
+Text Label 3750 4900 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	5100 2120 4995 2120
-Text Label 4995 2120 0    40   ~ 0
+	5100 2100 4950 2100
+Text Label 4950 2100 0    40   ~ 0
 GND
-NoConn ~ 6900 2120
+NoConn ~ 6900 2100
 Wire Wire Line
-	5100 2265 4995 2265
-Text Label 4995 2265 0    40   ~ 0
+	5100 2250 4950 2250
+Text Label 4950 2250 0    40   ~ 0
 ADC_DB0
 Wire Wire Line
-	6900 2265 7005 2265
-Text Label 7005 2265 0    40   ~ 0
+	6900 2250 7050 2250
+Text Label 7050 2250 0    40   ~ 0
 ADC_DB1
 Wire Wire Line
-	5100 2411 4995 2411
-Text Label 4995 2411 0    40   ~ 0
+	5100 2400 4950 2400
+Text Label 4950 2400 0    40   ~ 0
 ADC_DB2
 Wire Wire Line
-	6900 2411 7005 2411
-Text Label 7005 2411 0    40   ~ 0
+	6900 2400 7050 2400
+Text Label 7050 2400 0    40   ~ 0
 ADC_DB3
 Wire Wire Line
-	5100 2556 4995 2556
-Text Label 4995 2556 0    40   ~ 0
+	5100 2550 4950 2550
+Text Label 4950 2550 0    40   ~ 0
 ADC_DB4
 Wire Wire Line
-	6900 2556 7005 2556
-Text Label 7005 2556 0    40   ~ 0
+	6900 2550 7050 2550
+Text Label 7050 2550 0    40   ~ 0
 ADC_DB5
 Wire Wire Line
-	5100 2701 4995 2701
-Text Label 4995 2701 0    40   ~ 0
+	5100 2700 4950 2700
+Text Label 4950 2700 0    40   ~ 0
 ADC_DB6
 Wire Wire Line
-	6900 2701 7005 2701
-Text Label 7005 2701 0    40   ~ 0
+	6900 2700 7050 2700
+Text Label 7050 2700 0    40   ~ 0
 ADC_DB7
 Wire Wire Line
-	5100 2846 4995 2846
-Text Label 4995 2846 0    40   ~ 0
+	5100 2850 4950 2850
+Text Label 4950 2850 0    40   ~ 0
 ADC_DB8
 Wire Wire Line
-	6900 2846 7005 2846
-Text Label 7005 2846 0    40   ~ 0
+	6900 2850 7050 2850
+Text Label 7050 2850 0    40   ~ 0
 ADC_DB9
 Wire Wire Line
-	5100 2992 4995 2992
-Text Label 4995 2992 0    40   ~ 0
+	5100 3000 4950 3000
+Text Label 4950 3000 0    40   ~ 0
 ADC_DB10
 Wire Wire Line
-	6900 2992 7005 2992
-Text Label 7005 2992 0    40   ~ 0
+	6900 3000 7050 3000
+Text Label 7050 3000 0    40   ~ 0
 ADC_DB11
 Wire Wire Line
-	5100 3137 4995 3137
-Text Label 4995 3137 0    40   ~ 0
+	5100 3150 4950 3150
+Text Label 4950 3150 0    40   ~ 0
 ADC_DB12
 Wire Wire Line
-	6900 3137 7005 3137
-Text Label 7005 3137 0    40   ~ 0
+	6900 3150 7050 3150
+Text Label 7050 3150 0    40   ~ 0
 ADC_DB13
 Wire Wire Line
-	5100 3282 4995 3282
-Text Label 4995 3282 0    40   ~ 0
+	5100 3300 4950 3300
+Text Label 4950 3300 0    40   ~ 0
 ADC_DB14
 Wire Wire Line
-	6900 3282 7005 3282
-Text Label 7005 3282 0    40   ~ 0
+	6900 3300 7050 3300
+Text Label 7050 3300 0    40   ~ 0
 ADC_DB15
 Wire Wire Line
-	5100 3427 4995 3427
-Text Label 4995 3427 0    40   ~ 0
+	5100 3450 4950 3450
+Text Label 4950 3450 0    40   ~ 0
 ADC_RD_N
 Wire Wire Line
-	6900 3427 7005 3427
-Text Label 7005 3427 0    40   ~ 0
+	6900 3450 7050 3450
+Text Label 7050 3450 0    40   ~ 0
 ADC_BYTE_SEL
 Wire Wire Line
-	5100 3573 4995 3573
-Text Label 4995 3573 0    40   ~ 0
+	5100 3550 4950 3550
+Text Label 4950 3550 0    40   ~ 0
 ADC_RANGE
 Wire Wire Line
-	6900 3573 7005 3573
-Text Label 7005 3573 0    40   ~ 0
+	6900 3550 7050 3550
+Text Label 7050 3550 0    40   ~ 0
 ADC_OS0
 Wire Wire Line
-	5100 3718 4995 3718
-Text Label 4995 3718 0    40   ~ 0
+	5100 3700 4950 3700
+Text Label 4950 3700 0    40   ~ 0
 ADC_OS1
 Wire Wire Line
-	6900 3718 7005 3718
-Text Label 7005 3718 0    40   ~ 0
+	6900 3700 7050 3700
+Text Label 7050 3700 0    40   ~ 0
 ADC_OS2
 Wire Wire Line
-	5100 3863 4995 3863
-Text Label 4995 3863 0    40   ~ 0
+	5100 3850 4950 3850
+Text Label 4950 3850 0    40   ~ 0
 ADC_STBY
 Wire Wire Line
-	6900 3863 7005 3863
-Text Label 7005 3863 0    40   ~ 0
+	6900 3850 7050 3850
+Text Label 7050 3850 0    40   ~ 0
 ADC_PAR_SER
 Wire Wire Line
-	5100 4008 4995 4008
-Text Label 4995 4008 0    40   ~ 0
+	5100 4000 4950 4000
+Text Label 4950 4000 0    40   ~ 0
 HALL_U
 Wire Wire Line
-	6900 4008 7005 4008
-Text Label 7005 4008 0    40   ~ 0
+	6900 4000 7050 4000
+Text Label 7050 4000 0    40   ~ 0
 HALL_V
 Wire Wire Line
-	5100 4154 4995 4154
-Text Label 4995 4154 0    40   ~ 0
+	5100 4150 4950 4150
+Text Label 4950 4150 0    40   ~ 0
 HALL_W
 Wire Wire Line
-	6900 4154 7005 4154
-Text Label 7005 4154 0    40   ~ 0
+	6900 4150 7050 4150
+Text Label 7050 4150 0    40   ~ 0
 BRAKE_OUT
 Wire Wire Line
-	5100 4299 4995 4299
-Text Label 4995 4299 0    40   ~ 0
+	5100 4300 4950 4300
+Text Label 4950 4300 0    40   ~ 0
 EXT_FAULT_N
 Wire Wire Line
-	6900 4299 7005 4299
-Text Label 7005 4299 0    40   ~ 0
+	6900 4300 7050 4300
+Text Label 7050 4300 0    40   ~ 0
 TEST_TRIG
 Wire Wire Line
-	5100 4444 4995 4444
-Text Label 4995 4444 0    40   ~ 0
+	5100 4450 4950 4450
+Text Label 4950 4450 0    40   ~ 0
 SPARE_B0
 Wire Wire Line
-	6900 4444 7005 4444
-Text Label 7005 4444 0    40   ~ 0
+	6900 4450 7050 4450
+Text Label 7050 4450 0    40   ~ 0
 SPARE_B1
 Wire Wire Line
-	5100 4589 4995 4589
-Text Label 4995 4589 0    40   ~ 0
+	5100 4600 4950 4600
+Text Label 4950 4600 0    40   ~ 0
 SPARE_B2
 Wire Wire Line
-	6900 4589 7005 4589
-Text Label 7005 4589 0    40   ~ 0
+	6900 4600 7050 4600
+Text Label 7050 4600 0    40   ~ 0
 SPARE_B3
 Wire Wire Line
-	5100 4735 4995 4735
-Text Label 4995 4735 0    40   ~ 0
+	5100 4750 4950 4750
+Text Label 4950 4750 0    40   ~ 0
 GND
 Wire Wire Line
-	6900 4735 7005 4735
-Text Label 7005 4735 0    40   ~ 0
+	6900 4750 7050 4750
+Text Label 7050 4750 0    40   ~ 0
 GND
 Wire Wire Line
-	5100 4880 4995 4880
-Text Label 4995 4880 0    40   ~ 0
+	5100 4900 4950 4900
+Text Label 4950 4900 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
-	6900 4880 7005 4880
-Text Label 7005 4880 0    40   ~ 0
+	6900 4900 7050 4900
+Text Label 7050 4900 0    40   ~ 0
 VIO_3V3
 $EndSCHEMATC
