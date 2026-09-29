@@ -378,7 +378,6 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 2250 6650 50  0001 C CNN
 	1    2250 6650
 	1 0 0 -1
 $EndComp
-
 Text Notes 650 450 0    62   ~ 12
 5mR KELVIN SHUNT -> INA241A2 (20 V/V) -> 47R/1nF -> ADS8588S; comparator OCP is firmware-independent.
 Text Notes 650 7150 0    44   ~ 12
