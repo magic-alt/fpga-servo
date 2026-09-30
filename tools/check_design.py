@@ -20,6 +20,7 @@ schematic_paths = [
 
 required = [
     *schematic_paths,
+    HW / "ax7010_servo_reva.kicad_sym",
     HW / "ax7010_servo_reva.kicad_pro",
     HW / "ax7010_servo_reva.kicad_pcb",
     HW / "bom.csv",
