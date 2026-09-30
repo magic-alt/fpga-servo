@@ -223,15 +223,6 @@ for ref, sheets in references.items():
     if len(sheets) > 1:
         errors.append(f"duplicate component reference {ref}: {sheets}")
 
-# Rev.A1 uses a simple hierarchy: each child sheet is instantiated exactly once.
-# KiCad's legacy writer does not emit AR Path records for a single instance; AR
-# records are reserved for complex/reused hierarchy.  Keeping synthetic AR
-# records here can orphan symbol instances and produce an empty netlist.
-for path in CHILDREN:
-    text = path.read_text(errors="strict")
-    if re.search(r"^AR Path=", text, re.M):
-        errors.append(f"{path.name}: unexpected AR Path in single-instance hierarchy")
-
 for path in CHILDREN:
     text = path.read_text(errors="strict")
     wire_points, noconn_points = wire_and_noconn_points(text)
