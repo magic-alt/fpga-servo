@@ -1,0 +1,18 @@
+name: hardware-sanity
+on:
+  push:
+  pull_request:
+
+jobs:
+  repository-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/check_legacy_schematic.py
+      - run: python tools/check_kicad_grid.py
+      - run: python tools/check_schematic_layout.py
+      - run: python tools/check_schematic_connectivity.py
+      - run: python tools/check_design.py

@@ -1,0 +1,59 @@
+name: kicad-erc
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'hardware/**'
+      - '.github/workflows/kicad-erc.yml'
+
+jobs:
+  erc:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install KiCad 10 CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends kicad kicad-footprints
+          kicad-cli --version
+          kicad-cli sch erc --help
+
+      - name: Export KiCad netlist
+        run: |
+          mkdir -p artifacts
+          cd hardware
+          kicad-cli sch export netlist \
+            --output ../artifacts/ax7010_servo_reva.net \
+            ax7010_servo_reva.sch
+          grep -n -E 'J3|F1|U2|U1|VIN_RAW|VBUS_PROT|IU_ADC|PWM_UH' ../artifacts/ax7010_servo_reva.net | head -n 120 || true
+
+      - name: Run KiCad ERC
+        run: |
+          mkdir -p artifacts
+          set +e
+          cd hardware
+          kicad-cli sch erc \
+            --exit-code-violations \
+            --severity-all \
+            --output ../artifacts/ax7010_servo_reva_erc.rpt \
+            ax7010_servo_reva.sch
+          rc=$?
+          set -e
+          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
+          exit $rc
+
+      - name: Upload ERC report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-erc-report
+          path: |
+            artifacts/ax7010_servo_reva_erc.rpt
+            artifacts/ax7010_servo_reva.net
+          if-no-files-found: warn

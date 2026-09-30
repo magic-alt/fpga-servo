@@ -1,0 +1,19 @@
+{
+  "board": {},
+  "boards": [],
+  "cvpcb": {},
+  "erc": {},
+  "libraries": {},
+  "meta": {"filename": "ax7010_servo_reva.kicad_pro", "version": 1},
+  "net_settings": {
+    "classes": [
+      {"name":"Default","clearance":0.20,"track_width":0.25,"via_diameter":0.80,"via_drill":0.40},
+      {"name":"GATE","clearance":0.25,"track_width":0.40,"via_diameter":0.80,"via_drill":0.40},
+      {"name":"ANALOG","clearance":0.25,"track_width":0.25,"via_diameter":0.80,"via_drill":0.40},
+      {"name":"POWER","clearance":0.80,"track_width":3.00,"via_diameter":1.60,"via_drill":0.80}
+    ]
+  },
+  "pcbnew": {},
+  "schematic": {},
+  "text_variables": {}
+}
