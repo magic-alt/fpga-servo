@@ -16,7 +16,19 @@ CHILD_NAMES = [
     "encoder.kicad_sch",
 ]
 SCHEMATICS = [TOP, *(HW / name for name in CHILD_NAMES)]
+SYMBOL_LIB = HW / "ax7010_servo_reva.kicad_sym"
 errors: list[str] = []
+
+if not SYMBOL_LIB.exists() or SYMBOL_LIB.stat().st_size == 0:
+    errors.append("missing/empty native symbol library: hardware/ax7010_servo_reva.kicad_sym")
+else:
+    symbol_text = SYMBOL_LIB.read_text(encoding="utf-8", errors="strict")
+    if not re.match(r"^\(kicad_symbol_lib\s+\(version\s+\d+\)", symbol_text):
+        errors.append("ax7010_servo_reva.kicad_sym: invalid KiCad native symbol library header")
+    try:
+        assert_balanced(symbol_text)
+    except ValueError as exc:
+        errors.append(f"ax7010_servo_reva.kicad_sym: {exc}")
 
 legacy = sorted(HW.glob("*.sch"))
 if legacy:
