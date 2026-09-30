@@ -30,11 +30,19 @@ jobs:
           cfg="$HOME/.config/kicad/10.0"
           mkdir -p "$cfg"
 
-          if [ -f /usr/share/kicad/template/sym-lib-table ]; then
-            cp /usr/share/kicad/template/sym-lib-table "$cfg/sym-lib-table"
-          else
-            printf '(sym_lib_table)\n' > "$cfg/sym-lib-table"
-          fi
+          cat > /tmp/ax7010_servo_reva.lib <<'LIB'
+          EESchema-LIBRARY Version 2.4
+          #encoding utf-8
+          #
+          #End Library
+          LIB
+
+          cat > "$cfg/sym-lib-table" <<'TABLE'
+          (sym_lib_table
+            (version 7)
+            (lib (name "ax7010_servo_reva")(type "Legacy")(uri "/tmp/ax7010_servo_reva.lib")(options "")(descr "CI-only resolver for symbols embedded in tracked native schematics"))
+          )
+          TABLE
 
           if [ -f /usr/share/kicad/template/fp-lib-table ]; then
             cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
