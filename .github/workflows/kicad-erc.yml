@@ -20,20 +20,50 @@ jobs:
           sudo apt-get install -y --no-install-recommends software-properties-common
           sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends kicad kicad-footprints
+          sudo apt-get install -y --no-install-recommends kicad kicad-footprints kicad-symbols
           kicad-cli --version
+          kicad-cli sch upgrade --help
           kicad-cli sch erc --help
 
-      - name: Export KiCad netlist
+      - name: Upgrade legacy schematics to KiCad 10 native format
+        run: |
+          cd hardware
+          for sch in \
+            power_input.sch \
+            aux_power.sch \
+            gate_inverter.sch \
+            current_adc.sch \
+            encoder.sch \
+            ax7010_interface.sch \
+            ax7010_servo_reva.sch
+          do
+            kicad-cli sch upgrade "$sch"
+          done
+          test -s ax7010_servo_reva.kicad_sch
+          for native in \
+            power_input.kicad_sch \
+            aux_power.kicad_sch \
+            gate_inverter.kicad_sch \
+            current_adc.kicad_sch \
+            encoder.kicad_sch \
+            ax7010_interface.kicad_sch \
+            ax7010_servo_reva.kicad_sch
+          do
+            test -s "$native"
+          done
+          grep -n -E 'power_input|aux_power|gate_inverter|current_adc|encoder|ax7010_interface' \
+            ax7010_servo_reva.kicad_sch | head -n 80 || true
+
+      - name: Export native KiCad netlist
         run: |
           mkdir -p artifacts
           cd hardware
           kicad-cli sch export netlist \
             --output ../artifacts/ax7010_servo_reva.net \
-            ax7010_servo_reva.sch
+            ax7010_servo_reva.kicad_sch
           grep -n -E 'J3|F1|U2|U1|VIN_RAW|VBUS_PROT|IU_ADC|PWM_UH' ../artifacts/ax7010_servo_reva.net | head -n 120 || true
 
-      - name: Run KiCad ERC
+      - name: Run KiCad 10 native ERC
         run: |
           mkdir -p artifacts
           set +e
@@ -42,13 +72,13 @@ jobs:
             --exit-code-violations \
             --severity-all \
             --output ../artifacts/ax7010_servo_reva_erc.rpt \
-            ax7010_servo_reva.sch
+            ax7010_servo_reva.kicad_sch
           rc=$?
           set -e
           cat ../artifacts/ax7010_servo_reva_erc.rpt || true
           exit $rc
 
-      - name: Upload ERC report
+      - name: Upload native schematics and ERC report
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -56,4 +86,5 @@ jobs:
           path: |
             artifacts/ax7010_servo_reva_erc.rpt
             artifacts/ax7010_servo_reva.net
+            hardware/*.kicad_sch
           if-no-files-found: warn
