@@ -1,136 +1,107 @@
 from pathlib import Path
-import re
 import sys
+
+from kicad_native import extract_forms, head_string, parse_at, parse_xy, strip_form
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / "hardware"
-SCHEMATICS = [
-    HW / "ax7010_servo_reva.sch",
-    HW / "power_input.sch",
-    HW / "aux_power.sch",
-    HW / "gate_inverter.sch",
-    HW / "current_adc.sch",
-    HW / "encoder.sch",
-    HW / "ax7010_interface.sch",
-]
+SCHEMATICS = sorted(HW.glob("*.kicad_sch"))
 
-errors = []
-
-# Legacy KiCad A4 coordinates are mils. Keep all authored schematic objects
-# comfortably inside the 11693 x 8268 frame so conversion/rendering cannot
-# clip labels, wires or symbols into the title block/frame.
-SAFE_DRAW_X = (300, 11393)
-SAFE_DRAW_Y = (300, 7968)
-SAFE_HLABEL_X = (600, 11000)
-SAFE_HLABEL_Y = (450, 7500)
+# Legacy safe envelope converted exactly from mils to millimetres.
+SAFE_DRAW_X = (7.62, 289.3822)
+SAFE_DRAW_Y = (7.62, 202.3872)
+SAFE_HLABEL_X = (15.24, 279.4)
+SAFE_HLABEL_Y = (11.43, 190.5)
+TOL = 1e-6
+errors: list[str] = []
 
 
-def check_point(path: Path, line_no: int, kind: str, x: int, y: int):
-    if not (SAFE_DRAW_X[0] <= x <= SAFE_DRAW_X[1]):
+def in_range(value: float, bounds: tuple[float, float]) -> bool:
+    return bounds[0] - TOL <= value <= bounds[1] + TOL
+
+
+def check_point(
+    path: Path,
+    line: int,
+    kind: str,
+    point: tuple[float, float],
+    *,
+    hlabel: bool = False,
+) -> None:
+    x, y = point
+    if not in_range(x, SAFE_DRAW_X) or not in_range(y, SAFE_DRAW_Y):
         errors.append(
-            f"{path.name}:{line_no}: {kind} x={x} is too close to/outside A4 frame"
+            f"{path.name}:{line}: {kind} at ({x}, {y}) outside A4 drawing-safe region"
         )
-    if not (SAFE_DRAW_Y[0] <= y <= SAFE_DRAW_Y[1]):
+    if hlabel and (
+        not in_range(x, SAFE_HLABEL_X) or not in_range(y, SAFE_HLABEL_Y)
+    ):
         errors.append(
-            f"{path.name}:{line_no}: {kind} y={y} is too close to/outside A4 frame"
+            f"{path.name}:{line}: {kind} at ({x}, {y}) too close to A4 frame"
         )
 
 
 for path in SCHEMATICS:
-    lines = path.read_text(errors="strict").splitlines()
-    labels_at = {}
-    hlabels = {}
+    text = strip_form(
+        path.read_text(encoding="utf-8", errors="strict"), "lib_symbols"
+    )
 
-    i = 0
-    while i < len(lines):
-        line = lines[i]
+    for form in extract_forms(text, "global_label"):
+        errors.append(f"{path.name}:{form.line}: Global Label is forbidden")
 
-        pm = re.match(r"^P\s+(-?\d+)\s+(-?\d+)$", line)
-        if pm:
-            x, y = map(int, pm.groups())
-            check_point(path, i + 1, "component origin", x, y)
-            i += 1
-            continue
+    local_at: dict[tuple[float, float], str] = {}
+    for form in extract_forms(text, "label"):
+        at = parse_at(form.text)
+        name = head_string(form.text, "label") or "<unnamed>"
+        if at:
+            check_point(path, form.line, f"local label {name}", at)
+            if at in local_at:
+                errors.append(
+                    f"{path.name}:{form.line}: duplicate/conflicting local label at "
+                    f"{at}: {local_at[at]!r} vs {name!r}"
+                )
+            local_at[at] = name
 
-        gm = re.match(r"^Text GLabel\s+(-?\d+)\s+(-?\d+)\s+", line)
-        if gm:
-            x, y = map(int, gm.groups())
-            name = lines[i + 1] if i + 1 < len(lines) else ""
-            errors.append(
-                f"{path.name}:{i+1}: Global Label {name!r} is forbidden in this "
-                "hierarchical design; use HLabel+sheet pin for cross-sheet nets, "
-                "or direct wire/local label within one sheet"
+    hnames: set[str] = set()
+    for form in extract_forms(text, "hierarchical_label"):
+        at = parse_at(form.text)
+        name = head_string(form.text, "hierarchical_label") or "<unnamed>"
+        if at:
+            check_point(
+                path, form.line, f"hierarchical label {name}", at, hlabel=True
             )
-            check_point(path, i + 1, f"GLabel {name}", x, y)
-            i += 2
-            continue
+        if name in hnames:
+            errors.append(f"{path.name}:{form.line}: duplicate hierarchy port {name}")
+        hnames.add(name)
 
-        hm = re.match(r"^Text HLabel\s+(-?\d+)\s+(-?\d+)\s+", line)
-        if hm:
-            x, y = map(int, hm.groups())
-            name = lines[i + 1] if i + 1 < len(lines) else ""
-            check_point(path, i + 1, f"HLabel {name}", x, y)
-            if not (SAFE_HLABEL_X[0] <= x <= SAFE_HLABEL_X[1]):
-                errors.append(
-                    f"{path.name}:{i+1}: HLabel {name} x={x} is too close to/outside A4 frame"
-                )
-            if not (SAFE_HLABEL_Y[0] <= y <= SAFE_HLABEL_Y[1]):
-                errors.append(
-                    f"{path.name}:{i+1}: HLabel {name} y={y} is too close to/outside A4 frame"
-                )
-            if name in hlabels:
-                errors.append(f"{path.name}:{i+1}: duplicate hierarchy port {name}")
-            hlabels[name] = i + 1
-            i += 2
-            continue
+    for head in ["junction", "no_connect"]:
+        for form in extract_forms(text, head):
+            at = parse_at(form.text)
+            if at:
+                check_point(path, form.line, head, at)
 
-        lm = re.match(r"^Text Label\s+(-?\d+)\s+(-?\d+)\s+", line)
-        if lm:
-            coord = tuple(map(int, lm.groups()))
-            name = lines[i + 1] if i + 1 < len(lines) else ""
-            check_point(path, i + 1, f"local label {name}", *coord)
-            previous = labels_at.get(coord)
-            if previous is not None:
-                if previous == name:
-                    errors.append(
-                        f"{path.name}:{i+1}: duplicate local label {name!r} at {coord}"
-                    )
-                else:
-                    errors.append(
-                        f"{path.name}:{i+1}: conflicting local labels at {coord}: "
-                        f"{previous!r} vs {name!r}"
-                    )
-            labels_at[coord] = name
-            i += 2
-            continue
+    for form in extract_forms(text, "wire"):
+        points = parse_xy(form.text)
+        for point in points:
+            check_point(path, form.line, "wire endpoint", point)
+        if len(points) >= 2 and points[0] == points[-1]:
+            errors.append(f"{path.name}:{form.line}: zero-length wire at {points[0]}")
 
-        tm = re.match(r"^Text Notes\s+(-?\d+)\s+(-?\d+)\s+", line)
-        if tm:
-            x, y = map(int, tm.groups())
-            check_point(path, i + 1, "note", x, y)
-            i += 2
+    for form in extract_forms(text, "symbol"):
+        if "(lib_id " not in form.text:
             continue
+        at = parse_at(form.text)
+        if at:
+            check_point(path, form.line, "symbol origin", at)
 
-        mm = re.match(r"^(?:Connection|NoConn) ~ (-?\d+) (-?\d+)$", line)
-        if mm:
-            x, y = map(int, mm.groups())
-            check_point(path, i + 1, "connection marker", x, y)
-            i += 1
-            continue
-
-        if line == "Wire Wire Line" and i + 1 < len(lines):
-            coords = [int(v) for v in lines[i + 1].split()]
-            if len(coords) == 4:
-                check_point(path, i + 2, "wire endpoint", coords[0], coords[1])
-                check_point(path, i + 2, "wire endpoint", coords[2], coords[3])
-                if coords[0] == coords[2] and coords[1] == coords[3]:
-                    errors.append(
-                        f"{path.name}:{i+2}: zero-length wire at ({coords[0]}, {coords[1]})"
-                    )
-            i += 2
-            continue
-
-        i += 1
+    for sheet in extract_forms(text, "sheet"):
+        at = parse_at(sheet.text)
+        if at:
+            check_point(path, sheet.line, "sheet origin", at)
+        for pin in extract_forms(sheet.text, "pin"):
+            pin_at = parse_at(pin.text)
+            if pin_at:
+                check_point(path, sheet.line, "sheet pin", pin_at)
 
 if errors:
     print("SCHEMATIC LAYOUT CHECK FAILED")
