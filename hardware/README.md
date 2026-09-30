@@ -4,11 +4,12 @@
 
 - `ax7010_servo_reva.kicad_sch` - KiCad 10-native top-level schematic
 - `power_input.kicad_sch`, `aux_power.kicad_sch`, `gate_inverter.kicad_sch`, `current_adc.kicad_sch`, `encoder.kicad_sch`, `ax7010_interface.kicad_sch` - native hierarchical child sheets
+- `ax7010_servo_reva.kicad_sym` - versioned KiCad 10-native project symbol library
 - `ax7010_servo_reva.kicad_pcb` - 2-layer PCB placement / critical-routing baseline
 - `ax7010_servo_reva.kicad_pro` - KiCad project settings
 - `bom.csv` - first-pass BOM and sourcing gates
 
-Local KiCad state such as `sym-lib-table`, `*.kicad_prl` and lock files is intentionally ignored and is not part of the design source.
+Local KiCad state such as `sym-lib-table`, `*.kicad_prl` and lock files is intentionally ignored and is not part of the design source. The ignored `sym-lib-table` should map the nickname `ax7010_servo_reva` to the tracked `ax7010_servo_reva.kicad_sym`; CI creates that mapping in the runner user configuration.
 
 ## Layout partitioning
 
