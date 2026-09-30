@@ -1,1 +1,5 @@
 .local/
+hardware/sym-lib-table
+hardware/*.kicad_prl
+hardware/~*.lck
+tools/__pycache__/

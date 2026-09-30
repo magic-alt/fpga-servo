@@ -581,8 +581,6 @@ GND
 Text Label 1600 6500 0    40   ~ 0
 NTC_MOTOR
 Wire Wire Line
-	3700 5600 3750 5600
-Wire Wire Line
 	3100 5600 2950 5600
 Text Label 2950 5600 0    40   ~ 0
 VA_5V
@@ -596,8 +594,6 @@ Wire Wire Line
 	3700 5400 3750 5400
 Text Label 3750 5400 0    40   ~ 0
 OCP_HI_REF
-Wire Wire Line
-	3700 6100 3750 6100
 Wire Wire Line
 	3100 6100 2950 6100
 Text Label 2950 6100 0    40   ~ 0
@@ -771,7 +767,7 @@ GND
 Wire Wire Line
 	7300 3500 7150 3500
 Text Label 7150 3500 0    40   ~ 0
-AIN_SPARE0
+GND
 Wire Wire Line
 	7300 3650 7150 3650
 Text Label 7150 3650 0    40   ~ 0
@@ -779,7 +775,7 @@ GND
 Wire Wire Line
 	7300 3850 7150 3850
 Text Label 7150 3850 0    40   ~ 0
-AIN_SPARE1
+GND
 Wire Wire Line
 	7300 4000 7150 4000
 Text Label 7150 4000 0    40   ~ 0

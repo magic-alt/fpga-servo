@@ -125,10 +125,7 @@ Wire Wire Line
 	1800 3550 1000 3550
 Text HLabel 1000 3550 0 50 Input ~ 0
 ENC_Z
-Wire Wire Line
-	3600 3550 3750 3550
-Text Label 3750 3550 0    40   ~ 0
-ENC_FAULT_N
+NoConn ~ 3600 3550
 Wire Wire Line
 	1800 3700 1000 3700
 Text HLabel 1000 3700 0 50 Input ~ 0
@@ -137,54 +134,18 @@ Wire Wire Line
 	3600 3700 4400 3700
 Text HLabel 4400 3700 2 50 Input ~ 0
 PWR_GOOD
-Wire Wire Line
-	1800 3850 1650 3850
-Text Label 1650 3850 0    40   ~ 0
-AUX_IN0
-Wire Wire Line
-	3600 3850 3750 3850
-Text Label 3750 3850 0    40   ~ 0
-AUX_IN1
-Wire Wire Line
-	1800 4000 1650 4000
-Text Label 1650 4000 0    40   ~ 0
-AUX_OUT0
-Wire Wire Line
-	3600 4000 3750 4000
-Text Label 3750 4000 0    40   ~ 0
-AUX_OUT1
-Wire Wire Line
-	1800 4150 1650 4150
-Text Label 1650 4150 0    40   ~ 0
-SPARE_A0
-Wire Wire Line
-	3600 4150 3750 4150
-Text Label 3750 4150 0    40   ~ 0
-SPARE_A1
-Wire Wire Line
-	1800 4300 1650 4300
-Text Label 1650 4300 0    40   ~ 0
-SPARE_A2
-Wire Wire Line
-	3600 4300 3750 4300
-Text Label 3750 4300 0    40   ~ 0
-SPARE_A3
-Wire Wire Line
-	1800 4450 1650 4450
-Text Label 1650 4450 0    40   ~ 0
-SPARE_A4
-Wire Wire Line
-	3600 4450 3750 4450
-Text Label 3750 4450 0    40   ~ 0
-SPARE_A5
-Wire Wire Line
-	1800 4600 1650 4600
-Text Label 1650 4600 0    40   ~ 0
-SPARE_A6
-Wire Wire Line
-	3600 4600 3750 4600
-Text Label 3750 4600 0    40   ~ 0
-SPARE_A7
+NoConn ~ 1800 3850
+NoConn ~ 3600 3850
+NoConn ~ 1800 4000
+NoConn ~ 3600 4000
+NoConn ~ 1800 4150
+NoConn ~ 3600 4150
+NoConn ~ 1800 4300
+NoConn ~ 3600 4300
+NoConn ~ 1800 4450
+NoConn ~ 3600 4450
+NoConn ~ 1800 4600
+NoConn ~ 3600 4600
 Wire Wire Line
 	1800 4750 1650 4750
 Text Label 1650 4750 0    40   ~ 0
@@ -206,142 +167,40 @@ Wire Wire Line
 Text Label 4950 2100 0    40   ~ 0
 GND
 NoConn ~ 6900 2100
-Wire Wire Line
-	5100 2250 4950 2250
-Text Label 4950 2250 0    40   ~ 0
-ADC_DB0
-Wire Wire Line
-	6900 2250 7050 2250
-Text Label 7050 2250 0    40   ~ 0
-ADC_DB1
-Wire Wire Line
-	5100 2400 4950 2400
-Text Label 4950 2400 0    40   ~ 0
-ADC_DB2
-Wire Wire Line
-	6900 2400 7050 2400
-Text Label 7050 2400 0    40   ~ 0
-ADC_DB3
-Wire Wire Line
-	5100 2550 4950 2550
-Text Label 4950 2550 0    40   ~ 0
-ADC_DB4
-Wire Wire Line
-	6900 2550 7050 2550
-Text Label 7050 2550 0    40   ~ 0
-ADC_DB5
-Wire Wire Line
-	5100 2700 4950 2700
-Text Label 4950 2700 0    40   ~ 0
-ADC_DB6
-Wire Wire Line
-	6900 2700 7050 2700
-Text Label 7050 2700 0    40   ~ 0
-ADC_DB7
-Wire Wire Line
-	5100 2850 4950 2850
-Text Label 4950 2850 0    40   ~ 0
-ADC_DB8
-Wire Wire Line
-	6900 2850 7050 2850
-Text Label 7050 2850 0    40   ~ 0
-ADC_DB9
-Wire Wire Line
-	5100 3000 4950 3000
-Text Label 4950 3000 0    40   ~ 0
-ADC_DB10
-Wire Wire Line
-	6900 3000 7050 3000
-Text Label 7050 3000 0    40   ~ 0
-ADC_DB11
-Wire Wire Line
-	5100 3150 4950 3150
-Text Label 4950 3150 0    40   ~ 0
-ADC_DB12
-Wire Wire Line
-	6900 3150 7050 3150
-Text Label 7050 3150 0    40   ~ 0
-ADC_DB13
-Wire Wire Line
-	5100 3300 4950 3300
-Text Label 4950 3300 0    40   ~ 0
-ADC_DB14
-Wire Wire Line
-	6900 3300 7050 3300
-Text Label 7050 3300 0    40   ~ 0
-ADC_DB15
-Wire Wire Line
-	5100 3450 4950 3450
-Text Label 4950 3450 0    40   ~ 0
-ADC_RD_N
-Wire Wire Line
-	6900 3450 7050 3450
-Text Label 7050 3450 0    40   ~ 0
-ADC_BYTE_SEL
-Wire Wire Line
-	5100 3550 4950 3550
-Text Label 4950 3550 0    40   ~ 0
-ADC_RANGE
-Wire Wire Line
-	6900 3550 7050 3550
-Text Label 7050 3550 0    40   ~ 0
-ADC_OS0
-Wire Wire Line
-	5100 3700 4950 3700
-Text Label 4950 3700 0    40   ~ 0
-ADC_OS1
-Wire Wire Line
-	6900 3700 7050 3700
-Text Label 7050 3700 0    40   ~ 0
-ADC_OS2
-Wire Wire Line
-	5100 3850 4950 3850
-Text Label 4950 3850 0    40   ~ 0
-ADC_STBY
-Wire Wire Line
-	6900 3850 7050 3850
-Text Label 7050 3850 0    40   ~ 0
-ADC_PAR_SER
-Wire Wire Line
-	5100 4000 4950 4000
-Text Label 4950 4000 0    40   ~ 0
-HALL_U
-Wire Wire Line
-	6900 4000 7050 4000
-Text Label 7050 4000 0    40   ~ 0
-HALL_V
-Wire Wire Line
-	5100 4150 4950 4150
-Text Label 4950 4150 0    40   ~ 0
-HALL_W
-Wire Wire Line
-	6900 4150 7050 4150
-Text Label 7050 4150 0    40   ~ 0
-BRAKE_OUT
-Wire Wire Line
-	5100 4300 4950 4300
-Text Label 4950 4300 0    40   ~ 0
-EXT_FAULT_N
-Wire Wire Line
-	6900 4300 7050 4300
-Text Label 7050 4300 0    40   ~ 0
-TEST_TRIG
-Wire Wire Line
-	5100 4450 4950 4450
-Text Label 4950 4450 0    40   ~ 0
-SPARE_B0
-Wire Wire Line
-	6900 4450 7050 4450
-Text Label 7050 4450 0    40   ~ 0
-SPARE_B1
-Wire Wire Line
-	5100 4600 4950 4600
-Text Label 4950 4600 0    40   ~ 0
-SPARE_B2
-Wire Wire Line
-	6900 4600 7050 4600
-Text Label 7050 4600 0    40   ~ 0
-SPARE_B3
+NoConn ~ 5100 2250
+NoConn ~ 6900 2250
+NoConn ~ 5100 2400
+NoConn ~ 6900 2400
+NoConn ~ 5100 2550
+NoConn ~ 6900 2550
+NoConn ~ 5100 2700
+NoConn ~ 6900 2700
+NoConn ~ 5100 2850
+NoConn ~ 6900 2850
+NoConn ~ 5100 3000
+NoConn ~ 6900 3000
+NoConn ~ 5100 3150
+NoConn ~ 6900 3150
+NoConn ~ 5100 3300
+NoConn ~ 6900 3300
+NoConn ~ 5100 3450
+NoConn ~ 6900 3450
+NoConn ~ 5100 3550
+NoConn ~ 6900 3550
+NoConn ~ 5100 3700
+NoConn ~ 6900 3700
+NoConn ~ 5100 3850
+NoConn ~ 6900 3850
+NoConn ~ 5100 4000
+NoConn ~ 6900 4000
+NoConn ~ 5100 4150
+NoConn ~ 6900 4150
+NoConn ~ 5100 4300
+NoConn ~ 6900 4300
+NoConn ~ 5100 4450
+NoConn ~ 6900 4450
+NoConn ~ 5100 4600
+NoConn ~ 6900 4600
 Wire Wire Line
 	5100 4750 4950 4750
 Text Label 4950 4750 0    40   ~ 0

@@ -29,7 +29,7 @@ P 1500 3500
 AR Path="/69000006/6600005B" Ref="J5"  Part="1"
 F 0 "J5" H 1600 3600 50  0000 C CNN
 F 1 "ABZ_DIFF_ENCODER" H 1600 3400 50  0000 C CNN
-F 2 "Connector_Generic:Conn_02x05_Odd_Even" H 1500 3500 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical" H 1500 3500 50  0001 C CNN
 	1    1500 3500
 	1 0 0 -1
 $EndComp
@@ -161,10 +161,7 @@ Wire Wire Line
 	2150 3400 2300 3400
 Text Label 2300 3400 0    40   ~ 0
 GND
-Wire Wire Line
-	2150 3600 2300 3600
-Text Label 2300 3600 0    40   ~ 0
-SHIELD
+NoConn ~ 2150 3600
 NoConn ~ 2150 3750
 Wire Wire Line
 	3000 2700 2850 2700
@@ -293,8 +290,14 @@ Text Label 4700 4550 0    40   ~ 0
 GND
 Wire Wire Line
 	700 1600 900 1600
+Text Label 900 1600 0    40   ~ 0
+VA_5V
 Wire Wire Line
 	700 2000 900 2000
+Text Label 900 2000 0    40   ~ 0
+VIO_3V3
 Wire Wire Line
 	700 2400 900 2400
+Text Label 900 2400 0    40   ~ 0
+GND
 $EndSCHEMATC
