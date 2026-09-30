@@ -10,64 +10,117 @@ on:
 jobs:
   erc:
     runs-on: ubuntu-24.04
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install KiCad 10 CLI
+      - name: Install KiCad 10 and GUI automation tools
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends software-properties-common
           sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends kicad kicad-footprints kicad-symbols
+          sudo apt-get install -y --no-install-recommends \
+            kicad kicad-footprints kicad-symbols xvfb xdotool scrot dbus-x11
           kicad-cli --version
-          kicad-cli sch erc --help
+          eeschema --help || true
 
-      - name: Diagnose standalone and hierarchical netlists
+      - name: Convert legacy hierarchy through Eeschema
         run: |
-          mkdir -p artifacts/netlists
+          mkdir -p artifacts
           cd hardware
-          for sch in \
-            power_input.sch \
-            aux_power.sch \
-            gate_inverter.sch \
-            current_adc.sch \
-            encoder.sch \
-            ax7010_interface.sch \
-            ax7010_servo_reva.sch
-          do
-            stem="${sch%.sch}"
-            kicad-cli sch export netlist \
-              --output "../artifacts/netlists/${stem}.net" \
-              "$sch"
-          done
+          set +e
+          xvfb-run -a bash -c '
+            set -u
+            export NO_AT_BRIDGE=1
+            eeschema ax7010_servo_reva.sch >../artifacts/eeschema.log 2>&1 &
+            pid=$!
+            echo "eeschema pid=$pid"
+
+            # Allow first-start/library/rescue dialogs to appear, then accept the
+            # default non-destructive choices. The project carries its KiCad-5
+            # cache library, so no symbol rescue should be required.
+            for i in $(seq 1 30); do
+              sleep 1
+              xdotool search --onlyvisible --name "Configure Global Symbol Library Table" key Return 2>/dev/null || true
+              xdotool search --onlyvisible --name "Project Rescue Helper" key Return 2>/dev/null || true
+              xdotool search --onlyvisible --name "Remap Symbols" key Return 2>/dev/null || true
+              if xdotool search --onlyvisible --name "Schematic Editor" >/tmp/eeschema_windows 2>/dev/null; then
+                break
+              fi
+            done
+
+            echo "visible windows before save:"
+            for wid in $(xdotool search --onlyvisible --name ".*" 2>/dev/null || true); do
+              printf "%s " "$wid"
+              xdotool getwindowname "$wid" 2>/dev/null || true
+            done
+
+            wid=$(xdotool search --onlyvisible --name "Schematic Editor" 2>/dev/null | tail -n1)
+            if [ -z "$wid" ]; then
+              scrot ../artifacts/eeschema-no-window.png || true
+              kill "$pid" 2>/dev/null || true
+              exit 20
+            fi
+
+            xdotool windowactivate --sync "$wid"
+            xdotool key --window "$wid" ctrl+s
+            sleep 3
+
+            # Legacy save may show a filename/upgrade confirmation. Accept the
+            # proposed modern .kicad_sch destination without changing source.
+            for i in $(seq 1 15); do
+              sleep 1
+              for did in $(xdotool search --onlyvisible --name "Save|Confirm|Warning|Rescue|Schematic" 2>/dev/null || true); do
+                name=$(xdotool getwindowname "$did" 2>/dev/null || true)
+                case "$name" in
+                  *"Save"*|*"Confirm"*|*"Warning"*|*"Rescue"*)
+                    xdotool windowactivate "$did" 2>/dev/null || true
+                    xdotool key Return 2>/dev/null || true
+                    ;;
+                esac
+              done
+              ls *.kicad_sch >/dev/null 2>&1 && break
+            done
+
+            sleep 3
+            scrot ../artifacts/eeschema-after-save.png || true
+            echo "native files:"
+            ls -l *.kicad_sch 2>/dev/null || true
+
+            xdotool key --window "$wid" alt+F4 2>/dev/null || true
+            sleep 2
+            kill "$pid" 2>/dev/null || true
+          '
+          gui_rc=$?
+          set -e
+          cat ../artifacts/eeschema.log || true
+          echo "GUI conversion rc=$gui_rc"
+          ls -la *.kicad_sch || true
+          test "$gui_rc" -eq 0
+          test -s ax7010_servo_reva.kicad_sch
+
+      - name: Verify native hierarchy and netlist
+        run: |
+          mkdir -p artifacts
+          cd hardware
+          kicad-cli sch export netlist \
+            --output ../artifacts/ax7010_servo_reva.net \
+            ax7010_servo_reva.kicad_sch
           python3 - <<'PY'
           from pathlib import Path
           import re
-          root = Path("../artifacts/netlists")
-          total_components = 0
-          for path in sorted(root.glob("*.net")):
-              text = path.read_text()
-              components = len(re.findall(r"\(comp\s+\(ref\s+", text))
-              nets = len(re.findall(r"\(net\s+\(code\s+", text))
-              print(f"{path.stem}: components={components} nets={nets}")
-              if path.stem != "ax7010_servo_reva":
-                  total_components += components
-          if total_components != 124:
-              raise SystemExit(f"standalone child component total expected 124, got {total_components}")
-          top = (root / "ax7010_servo_reva.net").read_text()
-          top_components = len(re.findall(r"\(comp\s+\(ref\s+", top))
-          top_nets = len(re.findall(r"\(net\s+\(code\s+", top))
-          if top_components != 124 or top_nets == 0:
-              raise SystemExit(
-                  f"hierarchical netlist invalid: components={top_components} nets={top_nets}"
-              )
+          text = Path("../artifacts/ax7010_servo_reva.net").read_text()
+          components = len(re.findall(r"\(comp\s+\(ref\s+", text))
+          nets = len(re.findall(r"\(net\s+\(code\s+", text))
+          print(f"netlist components={components} nets={nets}")
+          if components != 124:
+              raise SystemExit(f"expected 124 components, got {components}")
+          if nets == 0:
+              raise SystemExit("native netlist contains zero nets")
           PY
-          cp ../artifacts/netlists/ax7010_servo_reva.net ../artifacts/ax7010_servo_reva.net
-          grep -n -E 'J3|F1|U2|U1|VIN_RAW|VBUS_PROT|IU_ADC|PWM_UH' ../artifacts/ax7010_servo_reva.net | head -n 120 || true
 
-      - name: Run KiCad ERC
+      - name: Run KiCad 10 native ERC
         run: |
           mkdir -p artifacts
           set +e
@@ -76,19 +129,18 @@ jobs:
             --exit-code-violations \
             --severity-all \
             --output ../artifacts/ax7010_servo_reva_erc.rpt \
-            ax7010_servo_reva.sch
+            ax7010_servo_reva.kicad_sch
           rc=$?
           set -e
           cat ../artifacts/ax7010_servo_reva_erc.rpt || true
           exit $rc
 
-      - name: Upload ERC report
+      - name: Upload conversion and ERC evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kicad-erc-report
           path: |
-            artifacts/ax7010_servo_reva_erc.rpt
-            artifacts/ax7010_servo_reva.net
-            artifacts/netlists/*.net
+            artifacts/**
+            hardware/*.kicad_sch
           if-no-files-found: warn
