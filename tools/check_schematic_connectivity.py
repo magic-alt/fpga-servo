@@ -223,31 +223,14 @@ for ref, sheets in references.items():
     if len(sheets) > 1:
         errors.append(f"duplicate component reference {ref}: {sheets}")
 
-# Legacy hierarchical schematics need AR records so child symbols are
-# instantiated on the parent sheet path. Without them KiCad can render the
-# drawings yet export an empty component/net list.
-SHEET_IDS = {
-    "power_input.sch": "69000001",
-    "aux_power.sch": "69000002",
-    "gate_inverter.sch": "69000003",
-    "ax7010_interface.sch": "69000004",
-    "current_adc.sch": "69000005",
-    "encoder.sch": "69000006",
-}
+# Each Rev.A child sheet is instantiated exactly once. Synthetic AR Path
+# records are for complex/reused legacy hierarchy and can cause KiCad 10 to
+# suppress all child components from exported netlists when the instance path
+# does not resolve exactly.
 for path in CHILDREN:
     text = path.read_text(errors="strict")
-    expected_sheet = SHEET_IDS[path.name]
-    for block in text.split("$Comp\n")[1:]:
-        body = block.split("$EndComp", 1)[0]
-        um = re.search(r"^U\s+\d+\s+\d+\s+([0-9A-Fa-f]{8})$", body, re.M)
-        lm = re.search(r"^L\s+\S+\s+(\S+)$", body, re.M)
-        if not um or not lm:
-            continue
-        stamp = um.group(1).upper()
-        ref = lm.group(1)
-        expected = f'AR Path="/{expected_sheet}/{stamp}" Ref="{ref}"  Part="1"'
-        if expected not in body:
-            errors.append(f"{path.name}: {ref} missing hierarchy AR record {expected}")
+    if re.search(r"^AR Path=", text, re.M):
+        errors.append(f"{path.name}: synthetic AR Path record is forbidden in single-instance hierarchy")
 
 for path in CHILDREN:
     text = path.read_text(errors="strict")
