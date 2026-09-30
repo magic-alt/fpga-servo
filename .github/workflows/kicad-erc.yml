@@ -60,6 +60,15 @@ jobs:
           eeschema_pid=$!
           echo "eeschema pid=$eeschema_pid"
 
+          # Fresh GitHub runners display a Chromium additional-terms WebView
+          # above KiCad Setup on first launch.  The Xvfb screen is fixed at
+          # 1920x1080; click the visible Accept button before handling KiCad's
+          # own setup dialog.
+          sleep 5
+          xdotool mousemove --sync 1030 650 click 1 2>/dev/null || true
+          sleep 2
+          scrot ../artifacts/eeschema-after-chromium-accept.png || true
+
           loaded=""
           for i in $(seq 1 90); do
             sleep 1
