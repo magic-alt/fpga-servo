@@ -10,175 +10,103 @@ on:
 jobs:
   erc:
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install KiCad 10 and GUI automation tools
+      - name: Install KiCad 10 CLI
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends software-properties-common
           sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends \
-            kicad kicad-footprints kicad-symbols xvfb xdotool scrot dbus-x11
+            kicad kicad-footprints kicad-symbols
           kicad-cli --version
+          kicad-cli sch erc --help
 
-      - name: Diagnose legacy netlist with project library table
+      - name: Verify each functional sheet exports a real netlist
         run: |
           mkdir -p artifacts
           cd hardware
-          kicad-cli sch export netlist \
-            --output ../artifacts/legacy-before-conversion.net \
-            ax7010_servo_reva.sch
-          python3 - <<'PY'
+
+          check_sheet() {
+            sch="$1"
+            expected="$2"
+            stem="${sch%.sch}"
+
+            # Apply the project ERC configuration to each standalone child-sheet
+            # validation run.  The child source remains untouched.
+            cp ax7010_servo_reva.kicad_pro "${stem}.kicad_pro"
+
+            kicad-cli sch export netlist \
+              --output "../artifacts/${stem}.net" \
+              "$sch"
+
+            python3 - "$stem" "$expected" <<'PY'
           from pathlib import Path
           import re
-          text = Path("../artifacts/legacy-before-conversion.net").read_text()
+          import sys
+
+          stem = sys.argv[1]
+          expected = int(sys.argv[2])
+          text = Path(f"../artifacts/{stem}.net").read_text()
           components = len(re.findall(r"\(comp\s+\(ref\s+", text))
           nets = len(re.findall(r"\(net\s+\(code\s+", text))
-          print(f"legacy netlist components={components} nets={nets}")
-          PY
-
-      - name: Convert legacy hierarchy through Eeschema
-        run: |
-          mkdir -p artifacts
-          cd hardware
-          set +e
-          xvfb-run -a bash -c '
-            set -u
-            export NO_AT_BRIDGE=1
-            eeschema ax7010_servo_reva.sch >../artifacts/eeschema.log 2>&1 &
-            pid=$!
-            echo "eeschema pid=$pid"
-
-            # Ubuntu runner's first WebView launch overlays a Chromium terms
-            # sheet on top of KiCad Setup. Xvfb uses a fixed 1280x1024 screen;
-            # accept that one-time sheet before attempting normal dialogs.
-            sleep 5
-            xdotool mousemove --sync 878 728 click 1 2>/dev/null || true
-            sleep 2
-            scrot ../artifacts/eeschema-after-chromium-terms.png || true
-
-            loaded=""
-            for i in $(seq 1 60); do
-              sleep 1
-
-              # First-run configuration blocks file loading on a fresh CI host.
-              for did in $(xdotool search --onlyvisible --name "KiCad Setup" 2>/dev/null || true); do
-                xdotool key --window "$did" Return 2>/dev/null || true
-              done
-
-              # Keep legacy migration non-destructive and accept default rescue/
-              # remap choices. The project-local library/cache contains the
-              # exact symbols used by the design.
-              for pattern in "Configure Global Symbol Library Table" "Project Rescue Helper" "Remap Symbols"; do
-                for did in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
-                  xdotool key --window "$did" Return 2>/dev/null || true
-                done
-              done
-
-              for wid in $(xdotool search --onlyvisible --name "Schematic Editor" 2>/dev/null || true); do
-                name=$(xdotool getwindowname "$wid" 2>/dev/null || true)
-                case "$name" in
-                  *ax7010_servo_reva*|*"AX7010 Servo Drive"*)
-                    loaded="$wid"
-                    break 2
-                    ;;
-                esac
-              done
-            done
-
-            echo "visible windows after load attempt:"
-            for wid in $(xdotool search --onlyvisible --name ".*" 2>/dev/null || true); do
-              printf "%s " "$wid"
-              xdotool getwindowname "$wid" 2>/dev/null || true
-            done
-
-            if [ -z "$loaded" ]; then
-              scrot ../artifacts/eeschema-load-failed.png || true
-              kill "$pid" 2>/dev/null || true
-              exit 20
-            fi
-
-            echo "loaded schematic window=$loaded"
-            xdotool key --window "$loaded" ctrl+s
-            sleep 3
-
-            # Legacy save creates modern .kicad_sch files. Accept any Save As
-            # or upgrade confirmation using the proposed destination.
-            for i in $(seq 1 30); do
-              sleep 1
-              for pattern in "Save As" "Save" "Confirm" "Warning"; do
-                for did in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
-                  name=$(xdotool getwindowname "$did" 2>/dev/null || true)
-                  case "$name" in
-                    *"Schematic Editor"*) ;;
-                    *) xdotool key --window "$did" Return 2>/dev/null || true ;;
-                  esac
-                done
-              done
-              [ -s ax7010_servo_reva.kicad_sch ] && break
-            done
-
-            sleep 2
-            scrot ../artifacts/eeschema-after-save.png || true
-            echo "native files:"
-            ls -l *.kicad_sch 2>/dev/null || true
-
-            xdotool key --window "$loaded" alt+F4 2>/dev/null || true
-            sleep 2
-            kill "$pid" 2>/dev/null || true
-          '
-          gui_rc=$?
-          set -e
-          cat ../artifacts/eeschema.log || true
-          echo "GUI conversion rc=$gui_rc"
-          ls -la *.kicad_sch || true
-          test "$gui_rc" -eq 0
-          test -s ax7010_servo_reva.kicad_sch
-
-      - name: Verify native hierarchy and netlist
-        run: |
-          mkdir -p artifacts
-          cd hardware
-          kicad-cli sch export netlist \
-            --output ../artifacts/ax7010_servo_reva.net \
-            ax7010_servo_reva.kicad_sch
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-          text = Path("../artifacts/ax7010_servo_reva.net").read_text()
-          components = len(re.findall(r"\(comp\s+\(ref\s+", text))
-          nets = len(re.findall(r"\(net\s+\(code\s+", text))
-          print(f"native netlist components={components} nets={nets}")
-          if components != 124:
-              raise SystemExit(f"expected 124 components, got {components}")
+          print(f"{stem}: components={components} nets={nets}")
+          if components != expected:
+              raise SystemExit(f"{stem}: expected {expected} components, got {components}")
           if nets == 0:
-              raise SystemExit("native netlist contains zero nets")
+              raise SystemExit(f"{stem}: exported zero nets")
           PY
+          }
 
-      - name: Run KiCad 10 native ERC
+          check_sheet power_input.sch 18
+          check_sheet aux_power.sch 20
+          check_sheet gate_inverter.sch 42
+          check_sheet current_adc.sch 33
+          check_sheet encoder.sch 9
+          check_sheet ax7010_interface.sch 2
+
+      - name: Run KiCad 10 ERC on all functional sheets
         run: |
           mkdir -p artifacts
-          set +e
           cd hardware
-          kicad-cli sch erc \
-            --exit-code-violations \
-            --severity-all \
-            --output ../artifacts/ax7010_servo_reva_erc.rpt \
-            ax7010_servo_reva.kicad_sch
-          rc=$?
-          set -e
-          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
-          exit $rc
+          failed=0
+          for sch in \
+            power_input.sch \
+            aux_power.sch \
+            gate_inverter.sch \
+            current_adc.sch \
+            encoder.sch \
+            ax7010_interface.sch
+          do
+            stem="${sch%.sch}"
+            echo "===== ERC: $sch ====="
+            set +e
+            kicad-cli sch erc \
+              --exit-code-violations \
+              --severity-all \
+              --output "../artifacts/${stem}_erc.rpt" \
+              "$sch"
+            rc=$?
+            set -e
+            cat "../artifacts/${stem}_erc.rpt" || true
+            if [ "$rc" -ne 0 ]; then
+              failed=1
+            fi
+          done
+          exit "$failed"
 
-      - name: Upload conversion and ERC evidence
+      - name: Verify top-level hierarchy contract
+        run: |
+          python tools/check_schematic_connectivity.py
+          python tools/check_schematic_layout.py
+
+      - name: Upload ERC evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kicad-erc-report
-          path: |
-            artifacts/**
-            hardware/*.kicad_sch
+          path: artifacts/**
           if-no-files-found: warn
