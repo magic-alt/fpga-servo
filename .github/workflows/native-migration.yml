@@ -152,7 +152,7 @@ jobs:
         run: |
           git rm hardware/*.sch
           git rm hardware/*.lib
-          git rm hardware/sym-lib-table
+          git rm -f hardware/sym-lib-table
           git add hardware/*.kicad_sch
 
           test -z "$(find hardware -maxdepth 1 -name '*.sch' -type f -print -quit)"
