@@ -355,8 +355,6 @@ Text Label 6550 4550 0    40   ~ 0
 VBUS_DIV_MID
 Wire Wire Line
 	6700 4550 6550 4550
-Text Label 6550 4550 0    40   ~ 0
-VBUS_DIV_MID
 Wire Wire Line
 	7300 4550 7600 4550
 Text HLabel 7450 4550 1 50 Output ~ 0
