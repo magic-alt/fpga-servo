@@ -1,92 +1,59 @@
 from pathlib import Path
-import re
 import sys
+
+from kicad_native import extract_forms, parse_at, parse_xy, strip_form
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / "hardware"
-GRID = 50
-
-SCHEMATICS = [
-    HW / "ax7010_servo_reva.sch",
-    HW / "power_input.sch",
-    HW / "aux_power.sch",
-    HW / "gate_inverter.sch",
-    HW / "current_adc.sch",
-    HW / "encoder.sch",
-    HW / "ax7010_interface.sch",
-]
-
-errors = []
+SCHEMATICS = sorted(HW.glob("*.kicad_sch"))
+GRID_MM = 1.27  # 50 mil
+TOL = 1e-6
+errors: list[str] = []
 
 
-def on_grid(value: int) -> bool:
-    return value % GRID == 0
+def on_grid(value: float) -> bool:
+    return abs(value / GRID_MM - round(value / GRID_MM)) <= TOL
 
 
-def check_coords(path: Path, lineno: int, kind: str, values: list[int]) -> None:
-    bad = [value for value in values if not on_grid(value)]
-    if bad:
+def check_point(
+    path: Path, line: int, kind: str, point: tuple[float, float]
+) -> None:
+    if any(not on_grid(value) for value in point):
         errors.append(
-            f"{path.relative_to(ROOT)}:{lineno}: {kind} off {GRID}mil grid: "
-            f"{values}"
+            f"{path.relative_to(ROOT)}:{line}: {kind} off 50mil/1.27mm grid: {point}"
         )
 
 
-# Custom-symbol connection points must align with the same grid as the schematic.
-lib = HW / "ax7010_servo_reva.lib"
-for lineno, line in enumerate(lib.read_text(errors="strict").splitlines(), start=1):
-    if not line.startswith("X "):
-        continue
-    parts = line.split()
-    if len(parts) < 6:
-        errors.append(f"{lib.relative_to(ROOT)}:{lineno}: malformed X pin: {line}")
-        continue
-    check_coords(
-        lib,
-        lineno,
-        "symbol pin x/y/length",
-        [int(parts[3]), int(parts[4]), int(parts[5])],
+for path in SCHEMATICS:
+    text = strip_form(
+        path.read_text(encoding="utf-8", errors="strict"), "lib_symbols"
     )
 
-for path in SCHEMATICS:
-    lines = path.read_text(errors="strict").splitlines()
-    i = 0
-    while i < len(lines):
-        line = lines[i]
+    for head in ["label", "hierarchical_label", "junction", "no_connect"]:
+        for form in extract_forms(text, head):
+            at = parse_at(form.text)
+            if at:
+                check_point(path, form.line, head, at)
 
-        m = re.fullmatch(r"P (-?\d+) (-?\d+)", line)
-        if m:
-            check_coords(path, i + 1, "component origin", [int(m.group(1)), int(m.group(2))])
-            i += 1
+    for form in extract_forms(text, "wire"):
+        for point in parse_xy(form.text):
+            check_point(path, form.line, "wire point", point)
+
+    for form in extract_forms(text, "symbol"):
+        if "(lib_id " not in form.text:
             continue
+        at = parse_at(form.text)
+        if at:
+            check_point(path, form.line, "symbol origin", at)
 
-        if line == "Wire Wire Line":
-            if i + 1 >= len(lines):
-                errors.append(f"{path.relative_to(ROOT)}:{i+1}: Wire without coordinates")
-                break
-            coords = [int(v) for v in lines[i + 1].split()]
-            if len(coords) == 4:
-                check_coords(path, i + 2, "wire", coords)
-            i += 2
-            continue
-
-        m = re.match(r"Text (?:Label|HLabel|GLabel) (-?\d+) (-?\d+)", line)
-        if m:
-            check_coords(path, i + 1, "electrical label", [int(m.group(1)), int(m.group(2))])
-            i += 1
-            continue
-
-        m = re.fullmatch(r"(?:NoConn|Connection) ~ (-?\d+) (-?\d+)", line)
-        if m:
-            check_coords(path, i + 1, "connection marker", [int(m.group(1)), int(m.group(2))])
-            i += 1
-            continue
-
-        m = re.match(r'F\d+ "[^"]+" [IOBT] [LRUD] (-?\d+) (-?\d+) \d+$', line)
-        if m:
-            check_coords(path, i + 1, "hierarchical sheet pin", [int(m.group(1)), int(m.group(2))])
-
-        i += 1
+    for sheet in extract_forms(text, "sheet"):
+        at = parse_at(sheet.text)
+        if at:
+            check_point(path, sheet.line, "sheet origin", at)
+        for pin in extract_forms(sheet.text, "pin"):
+            pin_at = parse_at(pin.text)
+            if pin_at:
+                check_point(path, sheet.line, "sheet pin", pin_at)
 
 if errors:
     print("KICAD GRID CHECK FAILED")
