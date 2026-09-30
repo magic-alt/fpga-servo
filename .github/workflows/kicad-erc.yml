@@ -52,6 +52,14 @@ jobs:
             pid=$!
             echo "eeschema pid=$pid"
 
+            # Ubuntu runner's first WebView launch overlays a Chromium terms
+            # sheet on top of KiCad Setup. Xvfb uses a fixed 1280x1024 screen;
+            # accept that one-time sheet before attempting normal dialogs.
+            sleep 5
+            xdotool mousemove --sync 878 728 click 1 2>/dev/null || true
+            sleep 2
+            scrot ../artifacts/eeschema-after-chromium-terms.png || true
+
             loaded=""
             for i in $(seq 1 60); do
               sleep 1
