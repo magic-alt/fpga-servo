@@ -25,6 +25,25 @@ jobs:
             kicad kicad-footprints kicad-symbols
           kicad-cli --version
 
+      - name: Preseed KiCad 10 user library tables
+        run: |
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg"
+
+          if [ -f /usr/share/kicad/template/sym-lib-table ]; then
+            cp /usr/share/kicad/template/sym-lib-table "$cfg/sym-lib-table"
+          else
+            printf '(sym_lib_table)\n' > "$cfg/sym-lib-table"
+          fi
+
+          if [ -f /usr/share/kicad/template/fp-lib-table ]; then
+            cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+          else
+            printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
+          fi
+
+          ls -lh "$cfg/sym-lib-table" "$cfg/fp-lib-table"
+
       - name: Verify native schematic source contract
         run: |
           python tools/check_native_schematic.py
