@@ -30,17 +30,10 @@ jobs:
           cfg="$HOME/.config/kicad/10.0"
           mkdir -p "$cfg"
 
-          cat > /tmp/ax7010_servo_reva.lib <<'LIB'
-          EESchema-LIBRARY Version 2.4
-          #encoding utf-8
-          #
-          #End Library
-          LIB
-
-          cat > "$cfg/sym-lib-table" <<'TABLE'
+          cat > "$cfg/sym-lib-table" <<TABLE
           (sym_lib_table
             (version 7)
-            (lib (name "ax7010_servo_reva")(type "Legacy")(uri "/tmp/ax7010_servo_reva.lib")(options "")(descr "CI-only resolver for symbols embedded in tracked native schematics"))
+            (lib (name "ax7010_servo_reva")(type "KiCad")(uri "$GITHUB_WORKSPACE/hardware/ax7010_servo_reva.kicad_sym")(options "")(descr "Tracked native project symbols"))
           )
           TABLE
 
@@ -60,6 +53,7 @@ jobs:
           python tools/check_schematic_layout.py
 
           test "$(find hardware -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 7
+          test -s hardware/ax7010_servo_reva.kicad_sym
           test -z "$(find hardware -maxdepth 1 -name '*.sch' -type f -print -quit)"
           test -z "$(find hardware -maxdepth 1 -name '*.lib' -type f -print -quit)"
           test ! -e hardware/sym-lib-table
