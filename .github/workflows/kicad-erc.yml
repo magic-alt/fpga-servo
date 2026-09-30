@@ -25,6 +25,37 @@ jobs:
             xvfb xdotool scrot dbus-x11 x11-utils
           kicad-cli --version
 
+      - name: Preseed KiCad 10 user configuration
+        run: |
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg"
+
+          cat >"$cfg/kicad_common.json" <<'JSON'
+          {
+            "meta": {
+              "filename": "kicad_common.json",
+              "version": 6
+            }
+          }
+          JSON
+
+          # Avoid first-run library-table dialogs.  The project also carries a
+          # project-local sym-lib-table for ax7010_servo_reva.
+          if [ -f /usr/share/kicad/template/sym-lib-table ]; then
+            cp /usr/share/kicad/template/sym-lib-table "$cfg/sym-lib-table"
+          else
+            printf '(sym_lib_table)\n' > "$cfg/sym-lib-table"
+          fi
+
+          if [ -f /usr/share/kicad/template/fp-lib-table ]; then
+            cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+          else
+            printf '(fp_lib_table)\n' > "$cfg/fp-lib-table"
+          fi
+
+          python3 -m json.tool "$cfg/kicad_common.json" >/dev/null
+          ls -la "$cfg"
+
       - name: Convert legacy hierarchy with Eeschema
         run: |
           mkdir -p artifacts
@@ -60,26 +91,19 @@ jobs:
           eeschema_pid=$!
           echo "eeschema pid=$eeschema_pid"
 
-          # Fresh GitHub runners display a Chromium additional-terms WebView
-          # above KiCad Setup on first launch.  The Xvfb screen is fixed at
-          # 1920x1080; click the visible Accept button before handling KiCad's
-          # own setup dialog.
-          sleep 5
-          xdotool mousemove --sync 1030 650 click 1 2>/dev/null || true
-          sleep 2
-          scrot ../artifacts/eeschema-after-chromium-accept.png || true
-
           loaded=""
           for i in $(seq 1 90); do
             sleep 1
 
-            # First-run setup. Return accepts the recommended/default choice.
-            for pattern in \
-              "KiCad Setup" \
-              "Configure Global Symbol Library Table" \
-              "Project Rescue Helper" \
-              "Remap Symbols"
-            do
+            for wid in $(xdotool search --onlyvisible --name "KiCad Setup" 2>/dev/null || true); do
+              echo "unexpected KiCad Setup dialog after config preseed"
+              scrot ../artifacts/unexpected-kicad-setup.png || true
+              kill "$eeschema_pid" 2>/dev/null || true
+              kill "$xvfb_pid" 2>/dev/null || true
+              exit 23
+            done
+
+            for pattern in "Configure Global Symbol Library Table" "Project Rescue Helper" "Remap Symbols"; do
               for wid in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
                 echo "accepting dialog: $(xdotool getwindowname "$wid" 2>/dev/null || true)"
                 xdotool key --window "$wid" Return 2>/dev/null || true
