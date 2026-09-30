@@ -45,6 +45,13 @@ jobs:
 
           ls -lh "$cfg/sym-lib-table" "$cfg/fp-lib-table"
 
+      - name: Validate native project symbol library with KiCad
+        run: |
+          kicad-cli sym upgrade --force \
+            --output /tmp/ax7010_servo_reva.validated.kicad_sym \
+            hardware/ax7010_servo_reva.kicad_sym
+          test -s /tmp/ax7010_servo_reva.validated.kicad_sym
+
       - name: Verify native schematic source contract
         run: |
           python tools/check_native_schematic.py
