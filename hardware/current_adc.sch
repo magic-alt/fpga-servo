@@ -194,12 +194,12 @@ $EndComp
 $Comp
 L ax7010_servo_reva:R R51
 U 1 1 6A000022
-P 4050 5600
+P 4050 5400
 AR Path="/69000005/6A000022" Ref="R51"  Part="1"
-F 0 "R51" H 4150 5700 50  0000 C CNN
-F 1 "160k_0.1%_OCP_HI_BOT" H 4150 5500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 5600 50  0001 C CNN
-	1    4050 5600
+F 0 "R51" H 4150 5500 50  0000 C CNN
+F 1 "160k_0.1%_OCP_HI_BOT" H 4150 5300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 5400 50  0001 C CNN
+	1    4050 5400
 	1 0 0 -1
 $EndComp
 $Comp
@@ -216,12 +216,12 @@ $EndComp
 $Comp
 L ax7010_servo_reva:R R53
 U 1 1 6A000024
-P 4050 6100
+P 4050 6600
 AR Path="/69000005/6A000024" Ref="R53"  Part="1"
-F 0 "R53" H 4150 6200 50  0000 C CNN
-F 1 "10k_0.1%_OCP_LO_BOT" H 4150 6000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 6100 50  0001 C CNN
-	1    4050 6100
+F 0 "R53" H 4150 6700 50  0000 C CNN
+F 1 "10k_0.1%_OCP_LO_BOT" H 4150 6500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 4050 6600 50  0001 C CNN
+	1    4050 6600
 	1 0 0 -1
 $EndComp
 $Comp
@@ -315,12 +315,12 @@ $EndComp
 $Comp
 L ax7010_servo_reva:C C64
 U 1 1 6ABAF00A
-P 8000 6550
+P 7800 6550
 AR Path="/69000005/6ABAF00A" Ref="C64"  Part="1"
-F 0 "C64" H 8100 6650 50  0000 C CNN
-F 1 "1uF_AVDD1" H 8100 6450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 8000 6550 50  0001 C CNN
-	1    8000 6550
+F 0 "C64" H 7900 6650 50  0000 C CNN
+F 1 "1uF_AVDD1" H 7900 6450 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7800 6550 50  0001 C CNN
+	1    7800 6550
 	1 0 0 -1
 $EndComp
 $Comp
@@ -411,7 +411,7 @@ F 2 "Resistor_SMD:R_0603_1608Metric" H 2000 6500 50  0001 C CNN
 	1    2000 6500
 	1 0 0 -1
 $EndComp
-Text Notes 650 450 0    58   ~ 12
+Text Notes 650 650 0    58   ~ 12
 CURRENT SENSE / ADC / OCP: 3x SHUNT SENSE -> INA241 -> FILTER -> ADS8588S; OCP REMAINS HARDWARE-INDEPENDENT
 Text Notes 1050 850 0    48   ~ 12
 PHASE CURRENT SENSE
@@ -428,11 +428,11 @@ REFERENCE / REGCAP
 Text Notes 7850 6200 0    44   ~ 12
 ADC SUPPLY DECOUPLING BANK
 Text Notes 650 7100 0    42   ~ 12
-INA241A2 gain=20 V/V with 5mR gives 0.1 V/A; REF1=5V and REF2=GND center the output near 2.5V.
+INA241A2: REF1=VA_5V, REF2=GND; 5mR x 20V/V = 0.1V/A.
 Text Notes 650 7240 0    42   ~ 12
-ADS8588S straps: OS=000, PAR/SER=1, STBY=1, RANGE=0 (+/-5V), REFSEL=1. DB15/BYTE_SEL is low for serial mode.
+ADS8588S: OS=000, PAR/SER=1, STBY=1, RANGE=0, REFSEL=1.
 Text Notes 650 7380 0    42   ~ 12
-OCP thresholds use dedicated TLV9024 comparators and open-drain fault OR; high-side output OR (x=6100) is physically separated from the low-threshold input stubs (x=6200), avoiding an accidental comparator-input short. This path does not depend on FPGA firmware or ADC conversion.
+OCP uses independent comparators and an open-drain fault OR.
 Wire Wire Line
 	1400 1450 1250 1450
 Text Label 1250 1450 0    40   ~ 0
@@ -470,10 +470,6 @@ Wire Wire Line
 	4050 2300 4050 2450
 Text Label 4050 2450 0    40   ~ 0
 GND
-Wire Wire Line
-	2200 2450 2200 2300
-Text Label 2200 2300 0    40   ~ 0
-VA_5V
 Wire Wire Line
 	2200 2950 2200 3100
 Text Label 2200 3100 0    40   ~ 0
@@ -516,10 +512,6 @@ Wire Wire Line
 Text Label 4050 3950 0    40   ~ 0
 GND
 Wire Wire Line
-	2200 3950 2200 3800
-Text Label 2200 3800 0    40   ~ 0
-VA_5V
-Wire Wire Line
 	2200 4450 2200 4600
 Text Label 2200 4600 0    40   ~ 0
 GND
@@ -561,10 +553,6 @@ Wire Wire Line
 Text Label 4050 5450 0    40   ~ 0
 GND
 Wire Wire Line
-	2200 5450 2200 5300
-Text Label 2200 5300 0    40   ~ 0
-VA_5V
-Wire Wire Line
 	2200 5950 2200 6100
 Text Label 2200 6100 0    40   ~ 0
 GND
@@ -599,10 +587,14 @@ Wire Wire Line
 Text Label 2950 5600 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	4350 5600 4500 5600
-Text Label 4500 5600 0    40   ~ 0
+	4350 5400 4500 5400
+Text Label 4500 5400 0    40   ~ 0
 GND
-Text Label 3800 5600 0    40   ~ 0
+Wire Wire Line
+	3700 5600 3700 5400
+Wire Wire Line
+	3700 5400 3750 5400
+Text Label 3750 5400 0    40   ~ 0
 OCP_HI_REF
 Wire Wire Line
 	3700 6100 3750 6100
@@ -611,10 +603,14 @@ Wire Wire Line
 Text Label 2950 6100 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	4350 6100 4500 6100
-Text Label 4500 6100 0    40   ~ 0
+	4350 6600 4500 6600
+Text Label 4500 6600 0    40   ~ 0
 GND
-Text Label 3800 6100 0    40   ~ 0
+Wire Wire Line
+	3700 6100 3700 6600
+Wire Wire Line
+	3700 6600 3750 6600
+Text Label 3750 6600 0    40   ~ 0
 OCP_LO_REF
 Wire Wire Line
 	4350 5600 4200 5600
@@ -952,12 +948,12 @@ Wire Wire Line
 Text Label 9150 5900 0    40   ~ 0
 GND
 Wire Wire Line
-	8000 6300 8000 6150
-Text Label 8000 6150 0    40   ~ 0
+	7800 6300 7800 6150
+Text Label 7800 6150 0    40   ~ 0
 VA_5V
 Wire Wire Line
-	8000 6800 8000 6950
-Text Label 8000 6950 0    40   ~ 0
+	7800 6800 7800 6950
+Text Label 7800 6950 0    40   ~ 0
 GND
 Wire Wire Line
 	8500 6300 8500 6150
@@ -991,4 +987,60 @@ Wire Wire Line
 	10000 6800 10000 6950
 Text Label 10000 6950 0    40   ~ 0
 GND
+Wire Wire Line
+	700 1250 850 1250
+Text Label 850 1250 0    40   ~ 0
+SW_U
+Wire Wire Line
+	700 1450 850 1450
+Text Label 850 1450 0    40   ~ 0
+PH_U
+Wire Wire Line
+	700 2750 850 2750
+Text Label 850 2750 0    40   ~ 0
+SW_V
+Wire Wire Line
+	700 2950 850 2950
+Text Label 850 2950 0    40   ~ 0
+PH_V
+Wire Wire Line
+	700 4250 850 4250
+Text Label 850 4250 0    40   ~ 0
+SW_W
+Wire Wire Line
+	700 4450 850 4450
+Text Label 850 4450 0    40   ~ 0
+PH_W
+Wire Wire Line
+	700 5050 850 5050
+Text Label 850 5050 0    40   ~ 0
+VA_5V
+Wire Wire Line
+	700 5250 850 5250
+Text Label 850 5250 0    40   ~ 0
+VIO_3V3
+Wire Wire Line
+	700 5450 850 5450
+Text Label 850 5450 0    40   ~ 0
+GND
+Wire Wire Line
+	700 5650 850 5650
+Text Label 850 5650 0    40   ~ 0
+VBUS_ADC
+Wire Wire Line
+	700 5850 850 5850
+Text Label 850 5850 0    40   ~ 0
+ADC_CONVST
+Wire Wire Line
+	700 6050 850 6050
+Text Label 850 6050 0    40   ~ 0
+ADC_SCLK
+Wire Wire Line
+	700 6250 850 6250
+Text Label 850 6250 0    40   ~ 0
+ADC_CS_N
+Wire Wire Line
+	700 6450 850 6450
+Text Label 850 6450 0    40   ~ 0
+ADC_RESET
 $EndSCHEMATC

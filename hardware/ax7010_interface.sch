@@ -32,18 +32,18 @@ F 2 "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical" H 6000 3500 50  0001 C CNN
 	1    6000 3500
 	1 0 0 -1
 $EndComp
-Text Notes 650 450 0    58   ~ 12
+Text Notes 650 650 0    58   ~ 12
 AX7010 PL INTERFACE: J1 = SERVO REAL-TIME / SAFETY; J2 = OPTIONAL PARALLEL ADC / AUXILIARY I/O
 Text Notes 1500 950 0    46   ~ 12
 J1 - REAL-TIME SERVO, SERIAL ADC, ABZ, SAFETY
 Text Notes 4850 950 0    46   ~ 12
 J2 - OPTIONAL PARALLEL ADC / HALL / BRAKE / SPARES
 Text Notes 650 6900 0    42   ~ 12
-AX7010 +5V header pins remain deliberately NoConn. Board logic uses only the FPGA VIO_3V3 domain; do not parallel the carrier +5V with local VA_5V.
+AX7010 +5V header pins are NoConn; do not tie carrier +5V to VA_5V.
 Text Notes 650 7040 0    42   ~ 12
-J1 carries the release-critical servo path. J2 is optional expansion and must not become a hidden dependency for basic PWM/current/encoder operation.
+J1 carries core servo I/O; J2 is optional expansion.
 Text Notes 650 7180 0    42   ~ 12
-Release-critical J1 hierarchy ports are wired directly beside J1; local net labels are reserved for duplicate rails and optional J2-only signals. Pin allocation remains cross-checked against fpga/ax7010_servo_reva.xdc and docs/ax7010_interface.md.
+Check J1 pin allocation against the XDC and docs/ax7010_interface.md.
 Wire Wire Line
 	1800 2100 1650 2100
 Text Label 1650 2100 0    40   ~ 0

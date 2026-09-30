@@ -11,6 +11,8 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## Schematic
 
+- [ ] Save and validate a KiCad 10-native schematic copy: CLI export of the current legacy `.sch` yields an empty component/net list, so its ERC report cannot establish electrical completeness.
+- [ ] Verify the reflowed top-sheet AX7010/ADC label area in a native KiCad schematic; move the gate-driver phase-W and ADC decoupling regions clear of their A4 title blocks.
 - [ ] KiCad ERC clean or all waivers documented.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
 - [ ] Verify FD6288 bootstrap network against current datasheet typical application.
@@ -29,6 +31,8 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## PCB
 
+- [ ] Reconcile all schematic references, footprints and nets with the partial board. The current PCB baseline has 32 footprints; the schematic has 124 symbols.
+- [ ] Close the current PCB DRC baseline (358 violations and 129 unconnected items in KiCad 10.0.3) after schematic-to-board parity is restored.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
 - [ ] 2 oz copper stack-up confirmed with fabricator.

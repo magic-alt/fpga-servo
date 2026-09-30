@@ -93,11 +93,11 @@ F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 5000 3000 50  0001 C CNN
 	1 0 0 -1
 $EndComp
 $Comp
-L ax7010_servo_reva:C C40
+L ax7010_servo_reva:C C69
 U 1 1 66000029
 P 4650 5150
-AR Path="/69000003/66000029" Ref="C40"  Part="1"
-F 0 "C40" H 4750 5250 50  0000 C CNN
+AR Path="/69000003/66000029" Ref="C69"  Part="1"
+F 0 "C69" H 4750 5250 50  0000 C CNN
 F 1 "10uF_25V_DRV" H 4750 5050 50  0000 C CNN
 F 2 "Capacitor_SMD:C_1206_3216Metric" H 4650 5150 50  0001 C CNN
 	1    4650 5150
@@ -510,7 +510,7 @@ F 2 "Capacitor_SMD:C_0603_1608Metric" H 5350 5150 50  0001 C CNN
 	1    5350 5150
 	1 0 0 -1
 $EndComp
-Text Notes 650 450 0    58   ~ 12
+Text Notes 650 650 0    58   ~ 12
 GATE / INVERTER: SAFE ENABLE -> PWM GATING -> FD6288 -> GATE NETWORK -> 3-PHASE BRIDGE
 Text Notes 900 850 0    48   ~ 12
 SAFE ENABLE & PWM GATING
@@ -525,11 +525,11 @@ PHASE W POWER STAGE
 Text Notes 9700 3450 0    46   ~ 12
 MOTOR OUTPUT
 Text Notes 650 6750 0    42   ~ 12
-RUN_OK = GATE_EN & PWR_GOOD & OCP_N. FPGA deadtime remains >=500 ns; FD6288 internal deadtime is not the primary deadtime mechanism.
+RUN_OK = GATE_EN & PWR_GOOD & OCP_N; FPGA deadtime >=500ns.
 Text Notes 650 6890 0    42   ~ 12
-Bootstrap relationship: VDRV_12V -> diode -> BST_x; CBOOT is between BST_x and SW_x; FD6288 VBx/VSx use the same named nets.
+Bootstrap: VDRV_12V -> diode -> BST_x; CBOOT between BST_x and SW_x.
 Text Notes 650 7030 0    42   ~ 12
-RG starts at 10R; RGS=10k. Tune RG from measured VGS/SW ringing and loss. Hierarchy ports are kept inside the A4 frame; no-op/zero-length drafting wires are removed. Shunt Kelvin pads share the force nets electrically but route separately in PCB.
+RG=10R, RGS=10k initially; route shunt Kelvin paths separately.
 Wire Wire Line
 	750 2750 600 2750
 Text Label 600 2750 0    40   ~ 0
@@ -567,8 +567,8 @@ Wire Wire Line
 Text Label 3900 1650 0    40   ~ 0
 LIN_U_SAFE
 Wire Wire Line
-	3000 2100 3000 2250
-Text Label 3000 2250 0    40   ~ 0
+	3000 2100 2800 2100
+Text Label 2800 2100 0    40   ~ 0
 GND
 Wire Wire Line
 	2250 1550 2100 1550
@@ -599,8 +599,8 @@ Wire Wire Line
 Text Label 3900 3250 0    40   ~ 0
 LIN_V_SAFE
 Wire Wire Line
-	3000 3700 3000 3850
-Text Label 3000 3850 0    40   ~ 0
+	3000 3700 2800 3700
+Text Label 2800 3700 0    40   ~ 0
 GND
 Wire Wire Line
 	2250 3150 2100 3150
@@ -615,8 +615,8 @@ Wire Wire Line
 Text Label 3900 2750 0    40   ~ 0
 HIN_V_SAFE
 Wire Wire Line
-	3000 2300 3000 2150
-Text Label 3000 2150 0    40   ~ 0
+	3000 2300 2800 2300
+Text Label 2800 2300 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
 	2250 4300 2100 4300
@@ -647,8 +647,8 @@ Wire Wire Line
 Text Label 3900 4350 0    40   ~ 0
 HIN_W_SAFE
 Wire Wire Line
-	3000 3900 3000 3750
-Text Label 3000 3750 0    40   ~ 0
+	3000 3900 2800 3900
+Text Label 2800 3900 0    40   ~ 0
 VIO_3V3
 Wire Wire Line
 	4100 2600 3950 2600
@@ -743,12 +743,12 @@ Wire Wire Line
 Text Label 2000 5700 0    40   ~ 0
 HIN_U_SAFE
 Wire Wire Line
-	2750 5700 2900 5700
-Text Label 2900 5700 0    40   ~ 0
+	2750 5700 2800 5700
+Text Label 2800 5700 0    40   ~ 0
 GND
 Wire Wire Line
-	3000 5700 2850 5700
-Text Label 2850 5700 0    40   ~ 0
+	3000 5700 2950 5700
+Text Label 2950 5700 0    40   ~ 0
 LIN_U_SAFE
 Wire Wire Line
 	3600 5700 3750 5700
@@ -759,12 +759,12 @@ Wire Wire Line
 Text Label 2000 6000 0    40   ~ 0
 HIN_V_SAFE
 Wire Wire Line
-	2750 6000 2900 6000
-Text Label 2900 6000 0    40   ~ 0
+	2750 6000 2800 6000
+Text Label 2800 6000 0    40   ~ 0
 GND
 Wire Wire Line
-	3000 6000 2850 6000
-Text Label 2850 6000 0    40   ~ 0
+	3000 6000 2950 6000
+Text Label 2950 6000 0    40   ~ 0
 LIN_V_SAFE
 Wire Wire Line
 	3600 6000 3750 6000
@@ -775,12 +775,12 @@ Wire Wire Line
 Text Label 2000 6300 0    40   ~ 0
 HIN_W_SAFE
 Wire Wire Line
-	2750 6300 2900 6300
-Text Label 2900 6300 0    40   ~ 0
+	2750 6300 2800 6300
+Text Label 2800 6300 0    40   ~ 0
 GND
 Wire Wire Line
-	3000 6300 2850 6300
-Text Label 2850 6300 0    40   ~ 0
+	3000 6300 2950 6300
+Text Label 2950 6300 0    40   ~ 0
 LIN_W_SAFE
 Wire Wire Line
 	3600 6300 3750 6300
@@ -861,6 +861,8 @@ Wire Wire Line
 	9500 2300 10100 2300
 Wire Wire Line
 	10100 2300 10100 1850
+Wire Wire Line
+	10100 1850 10900 1850
 Text Label 10200 1850 0    40   ~ 0
 PH_U
 Wire Wire Line
@@ -922,6 +924,8 @@ Wire Wire Line
 	9500 4250 10100 4250
 Wire Wire Line
 	10100 4250 10100 3800
+Wire Wire Line
+	10100 3800 10900 3800
 Text Label 10200 3800 0    40   ~ 0
 PH_V
 Wire Wire Line
@@ -983,6 +987,8 @@ Wire Wire Line
 	9500 6200 10100 6200
 Wire Wire Line
 	10100 6200 10100 5750
+Wire Wire Line
+	10100 5750 10900 5750
 Text Label 10200 5750 0    40   ~ 0
 PH_W
 Wire Wire Line
@@ -997,4 +1003,68 @@ Wire Wire Line
 	9950 3950 9800 3950
 Text Label 9800 3950 0    40   ~ 0
 PH_W
+Wire Wire Line
+	700 1100 850 1100
+Text Label 850 1100 0    40   ~ 0
+PWM_UH
+Wire Wire Line
+	700 1300 850 1300
+Text Label 850 1300 0    40   ~ 0
+PWM_UL
+Wire Wire Line
+	700 1500 850 1500
+Text Label 850 1500 0    40   ~ 0
+PWM_VH
+Wire Wire Line
+	700 1700 850 1700
+Text Label 850 1700 0    40   ~ 0
+PWM_VL
+Wire Wire Line
+	700 1900 850 1900
+Text Label 850 1900 0    40   ~ 0
+PWM_WH
+Wire Wire Line
+	700 2100 850 2100
+Text Label 850 2100 0    40   ~ 0
+PWM_WL
+Wire Wire Line
+	700 2500 850 2500
+Text Label 850 2500 0    40   ~ 0
+GATE_EN
+Wire Wire Line
+	700 2700 850 2700
+Text Label 850 2700 0    40   ~ 0
+PWR_GOOD
+Wire Wire Line
+	700 2900 850 2900
+Text Label 850 2900 0    40   ~ 0
+OCP_N
+Wire Wire Line
+	700 3300 850 3300
+Text Label 850 3300 0    40   ~ 0
+VIO_3V3
+Wire Wire Line
+	700 3500 850 3500
+Text Label 850 3500 0    40   ~ 0
+VDRV_12V
+Wire Wire Line
+	700 3700 850 3700
+Text Label 850 3700 0    40   ~ 0
+VBUS_PROT
+Wire Wire Line
+	700 3900 850 3900
+Text Label 850 3900 0    40   ~ 0
+GND
+Wire Wire Line
+	10750 1650 10900 1650
+Text Label 10750 1650 0    40   ~ 0
+SW_U
+Wire Wire Line
+	10750 3600 10900 3600
+Text Label 10750 3600 0    40   ~ 0
+SW_V
+Wire Wire Line
+	10750 5550 10900 5550
+Text Label 10750 5550 0    40   ~ 0
+SW_W
 $EndSCHEMATC

@@ -10,7 +10,7 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "48V-class bus; 15..55V design window; source transient qualification required"
 $EndDescr
-Text Notes 650 450 0    65   ~ 12
+Text Notes 650 650 0    65   ~ 12
 DC INPUT -> FUSE -> LM74502 + BACK-TO-BACK NFET RPP -> LOCAL DC-LINK
 $Comp
 L ax7010_servo_reva:TERM2 J3

@@ -10,7 +10,7 @@ Rev "A1"
 Comp "magic-alt/fpga-servo"
 Comment1 "LM5164 48V->12V + TPS62163 fixed 5V"
 $EndDescr
-Text Notes 650 450 0    65   ~ 12
+Text Notes 650 650 0    65   ~ 12
 VBUS_PROT -> LM5164 12V / 1A -> TPS62163 5V / 1A. PGOOD outputs are wired-AND.
 $Comp
 L ax7010_servo_reva:LM5164 U12
@@ -237,11 +237,11 @@ LM5164 values follow TI Figure 7-1: 15..100V in, 12V/1A, 300kHz, 68uH, 2x2.2uF C
 Text Notes 650 6660 0    50   ~ 12
 TPS62163 is the fixed 5V member of TPS6216x. Use 2.2uH + 22uF; connect FB to AGND and VOS to the 5V output.
 Text Notes 650 6820 0    50   ~ 12
-LM5164 PGOOD and TPS62163 PG are open-drain and share PWR_GOOD. Pull-up is provided in the 3.3V safety-logic domain, not on this sheet.
+LM5164 PGOOD and TPS62163 PG share PWR_GOOD; pull up at 3.3V safety logic.
 Text Notes 650 6980 0    50   ~ 12
-12V bus is only a limited bring-up condition. Full-function lower input target is 15V because the 12V rail needs regulation headroom.
+12V input is for limited bring-up; full-function minimum is 15V.
 Text Notes 650 7140 0    50   ~ 12
-VISIBLE WIRING: hierarchy ports are attached directly to converter input/output nodes; DNP parts remain explicit NoConn.
+Hierarchy ports attach to converter nets; DNP parts remain NoConn.
 Wire Wire Line
 	3400 3100 3400 3250
 Text HLabel 3400 3250 1 50 BiDi ~ 0

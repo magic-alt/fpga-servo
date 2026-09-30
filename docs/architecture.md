@@ -68,6 +68,10 @@ FD6288 has no single global hardware enable pin, so all six PWM inputs are hardw
 
 Hardware over-current detection is based on the conditioned current-sense outputs and a window-comparator network. The FPGA fault path remains a second, independent diagnostic path.
 
+The INA241A2 references use `REF1=VA_5V` and `REF2=GND`, placing zero current near 2.5 V. The 5 mOhm shunt and 20 V/V gain give 0.1 V/A. ADS8588S straps are `OS=000`, `PAR/SER=1`, `STBY=1`, `RANGE=0` (bipolar 5 V), and `REFSEL=1`; `DB15/BYTE_SEL` is low for serial mode. Dedicated TLV9024 comparators and an open-drain fault OR implement OCP without relying on FPGA firmware or ADC conversion. Comparator threshold and latch behavior still require tolerance and bench validation.
+
+`RUN_OK = GATE_EN & PWR_GOOD & OCP_N`. FPGA deadtime is at least 500 ns; FD6288 internal deadtime is not the primary mechanism. Each high-side bootstrap path runs from `VDRV_12V` through a diode to `BST_x`, with `CBOOT` between `BST_x` and `SW_x`. Gate series resistors start at 10 ohm and gate-source pull-downs at 10 kohm; tune from measured switching waveforms. Shunt Kelvin paths share the force nets electrically but must reach the shunt pads independently in PCB copper.
+
 ## Grounding strategy
 
 The PCB uses one continuous ground reference on the bottom layer. High-current bridge return paths stay local to the DC-link negative node and do not share narrow traces with ADC/encoder return currents. The analog section is physically isolated from switch nodes rather than separated with a slit plane.
