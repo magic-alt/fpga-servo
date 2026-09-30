@@ -32,7 +32,7 @@ for path in SCHEMATICS:
         errors.append(f"missing/empty native schematic: {path.relative_to(ROOT)}")
         continue
     text = path.read_text(encoding="utf-8", errors="strict")
-    if not re.match(r"^\\(kicad_sch\\s+\\(version\\s+\\d+\\)", text):
+    if not re.match(r"^\(kicad_sch\s+\(version\s+\d+\)", text):
         errors.append(f"{path.name}: invalid KiCad native schematic header")
     try:
         assert_balanced(text)
@@ -46,7 +46,7 @@ for path in SCHEMATICS:
     authored = strip_form(text, "lib_symbols")
     if extract_forms(authored, "global_label"):
         errors.append(f"{path.name}: Global Labels are forbidden")
-    if re.search(r'\\.sch"', authored):
+    if re.search(r'\.sch"', authored):
         errors.append(f"{path.name}: legacy .sch reference remains in native source")
 
 if TOP.exists():
