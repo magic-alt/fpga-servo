@@ -64,7 +64,6 @@ def label_names(text: str, head: str):
     return result
 
 
-# Duplicate references are checked across placed symbols, excluding embedded lib_symbols.
 refs = defaultdict(list)
 for path in CHILDREN:
     text = authored(path)
@@ -88,7 +87,6 @@ for path in CHILDREN:
             if not any(on_segment(point, a, b) for a, b in segments):
                 errors.append(f"{path.name}:{line}: floating {head} {name} at {point}")
 
-# Parent/child hierarchical interface must match exactly.
 top = authored(TOP)
 parent: dict[str, list[str]] = {}
 for sheet in extract_forms(top, "sheet"):
@@ -97,7 +95,7 @@ for sheet in extract_forms(top, "sheet"):
         continue
     pins = []
     for pin in extract_forms(sheet.text, "pin"):
-        match = re.match(r'\\(pin\\s+"((?:\\\\.|[^"\\\\])*)"', pin.text)
+        match = re.match(r'\(pin\s+"((?:\\.|[^"\\])*)"', pin.text)
         if match:
             pins.append(match.group(1))
     parent[file] = sorted(pins)
