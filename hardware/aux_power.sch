@@ -212,6 +212,24 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8750 5050 50  0001 C CNN
 	1    8750 5050
 	1 0 0 -1
 $EndComp
+$Comp
+L ax7010_servo_reva:PWR_FLAG #FLG0104
+U 1 1 6AC00004
+P 6500 2200
+F 0 "#FLG0104" H 6500 2275 40  0001 C CNN
+F 1 "PWR_FLAG" H 6500 2375 40  0000 C CNN
+	1    6500 2200
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:PWR_FLAG #FLG0105
+U 1 1 6AC00005
+P 6850 4950
+F 0 "#FLG0105" H 6850 5025 40  0001 C CNN
+F 1 "PWR_FLAG" H 6850 5125 40  0000 C CNN
+	1    6850 4950
+	1 0 0 -1
+$EndComp
 Text Notes 650 6500 0    50   ~ 12
 LM5164 values follow TI Figure 7-1: 15..100V in, 12V/1A, 300kHz, 68uH, 2x2.2uF CIN, 2x22uF COUT, 453k/49.9k feedback.
 Text Notes 650 6660 0    50   ~ 12

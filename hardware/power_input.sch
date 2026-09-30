@@ -192,6 +192,33 @@ F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9600 3300 50  0001 C CNN
 	1    9600 3300
 	1 0 0 -1
 $EndComp
+$Comp
+L ax7010_servo_reva:PWR_FLAG #FLG0101
+U 1 1 6AC00001
+P 2550 1550
+F 0 "#FLG0101" H 2550 1625 40  0001 C CNN
+F 1 "PWR_FLAG" H 2550 1725 40  0000 C CNN
+	1    2550 1550
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:PWR_FLAG #FLG0102
+U 1 1 6AC00002
+P 6600 2450
+F 0 "#FLG0102" H 6600 2525 40  0001 C CNN
+F 1 "PWR_FLAG" H 6600 2625 40  0000 C CNN
+	1    6600 2450
+	1 0 0 -1
+$EndComp
+$Comp
+L ax7010_servo_reva:PWR_FLAG #FLG0103
+U 1 1 6AC00003
+P 6600 3250
+F 0 "#FLG0103" H 6600 3325 40  0001 C CNN
+F 1 "PWR_FLAG" H 6600 3425 40  0000 C CNN
+	1    6600 3250
+	1 0 0 -1
+$EndComp
 Text Notes 600 5600 0    60   ~ 12
 Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. The controller has no reverse-current blocking when enabled, so regeneration can return to a receptive source.
 Text Notes 600 5770 0    60   ~ 12
