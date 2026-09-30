@@ -1,0 +1,170 @@
+name: one-shot-kicad-native-migration
+
+on:
+  push:
+    branches:
+      - fix/kicad-native-source
+    paths:
+      - '.github/workflows/native-migration.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/kicad-native-source
+          fetch-depth: 0
+
+      - name: Install KiCad 10 and headless GUI tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            kicad kicad-footprints kicad-symbols \
+            xvfb xdotool scrot dbus-x11 x11-utils
+          kicad-cli --version
+
+      - name: Preseed KiCad 10 user configuration
+        run: |
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg"
+
+          cat >"$cfg/kicad_common.json" <<'JSON'
+          {
+            "meta": {
+              "filename": "kicad_common.json",
+              "version": 6
+            },
+            "do_not_show_again": {
+              "data_collection_prompt": true,
+              "update_check_prompt": true
+            }
+          }
+          JSON
+
+          if [ -f /usr/share/kicad/template/sym-lib-table ]; then
+            cp /usr/share/kicad/template/sym-lib-table "$cfg/sym-lib-table"
+          else
+            printf '(sym_lib_table)\n' > "$cfg/sym-lib-table"
+          fi
+
+          if [ -f /usr/share/kicad/template/fp-lib-table ]; then
+            cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+          else
+            printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
+          fi
+
+          if [ -f /usr/share/kicad/template/design-block-lib-table ]; then
+            cp /usr/share/kicad/template/design-block-lib-table "$cfg/design-block-lib-table"
+          else
+            printf '(design_block_lib_table\n  (version 7)\n)\n' > "$cfg/design-block-lib-table"
+          fi
+
+      - name: Convert checked-in legacy hierarchy once
+        run: |
+          mkdir -p artifacts
+          cd hardware
+
+          Xvfb :99 -screen 0 1920x1080x24 -ac >../artifacts/xvfb.log 2>&1 &
+          xvfb_pid=$!
+          export DISPLAY=:99
+          export NO_AT_BRIDGE=1
+          export XDG_RUNTIME_DIR=/tmp/kicad-xdg-runtime
+          mkdir -p "$XDG_RUNTIME_DIR"
+          chmod 700 "$XDG_RUNTIME_DIR"
+
+          for i in $(seq 1 30); do
+            xdpyinfo -display "$DISPLAY" >/dev/null 2>&1 && break
+            sleep 1
+          done
+          xdpyinfo -display "$DISPLAY" >/dev/null
+
+          eeschema ax7010_servo_reva.sch >../artifacts/eeschema.log 2>&1 &
+          eeschema_pid=$!
+
+          loaded=""
+          for i in $(seq 1 90); do
+            sleep 1
+
+            for pattern in "Configure Global Symbol Library Table" "Project Rescue Helper" "Remap Symbols"; do
+              for wid in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
+                xdotool key --window "$wid" Return 2>/dev/null || true
+              done
+            done
+
+            for wid in $(xdotool search --onlyvisible --name "Schematic Editor" 2>/dev/null || true); do
+              name=$(xdotool getwindowname "$wid" 2>/dev/null || true)
+              case "$name" in
+                *ax7010_servo_reva*|*"AX7010 Servo Drive"*)
+                  loaded="$wid"
+                  break 2
+                  ;;
+              esac
+            done
+          done
+
+          if [ -z "$loaded" ]; then
+            cat ../artifacts/eeschema.log || true
+            exit 22
+          fi
+
+          xdotool windowactivate --sync "$loaded" 2>/dev/null || true
+          xdotool key --window "$loaded" ctrl+s
+
+          for i in $(seq 1 45); do
+            sleep 1
+            for pattern in "Save As" "Confirm" "Warning" "Rescue Symbols"; do
+              for wid in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
+                name=$(xdotool getwindowname "$wid" 2>/dev/null || true)
+                case "$name" in
+                  *"Schematic Editor"*) ;;
+                  *) xdotool key --window "$wid" Return 2>/dev/null || true ;;
+                esac
+              done
+            done
+            [ -s ax7010_servo_reva.kicad_sch ] && break
+          done
+
+          xdotool key --window "$loaded" alt+F4 2>/dev/null || true
+          sleep 2
+          kill "$eeschema_pid" 2>/dev/null || true
+          kill "$xvfb_pid" 2>/dev/null || true
+
+          test -s ax7010_servo_reva.kicad_sch
+          test "$(find . -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 7
+
+          for child in \
+            power_input.kicad_sch aux_power.kicad_sch gate_inverter.kicad_sch \
+            ax7010_interface.kicad_sch current_adc.kicad_sch encoder.kicad_sch
+          do
+            test -s "$child"
+            grep -F "\"$child\"" ax7010_servo_reva.kicad_sch >/dev/null
+          done
+
+      - name: Replace legacy schematic source with native KiCad 10 source
+        run: |
+          git rm hardware/*.sch
+          git rm hardware/*.lib
+          git rm hardware/sym-lib-table
+          git add hardware/*.kicad_sch
+
+          test -z "$(find hardware -maxdepth 1 -name '*.sch' -type f -print -quit)"
+          test -z "$(find hardware -maxdepth 1 -name '*.lib' -type f -print -quit)"
+          test ! -e hardware/sym-lib-table
+          test "$(find hardware -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 7
+
+          git status --short
+
+      - name: Commit native source migration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(kicad): migrate schematic source to native KiCad 10"
+          git push origin HEAD:fix/kicad-native-source
