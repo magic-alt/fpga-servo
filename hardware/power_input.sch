@@ -18,7 +18,7 @@ U 1 1 66000001
 P 950 1700
 F 0 "J3" H 1050 1800 50  0000 C CNN
 F 1 "DC_IN_48V" H 1050 1600 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-2_P7.62mm" H 950 1700 50  0001 C CNN
+F 2 "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBA_2,5_2-G-7,62_1x02_P7.62mm_Horizontal" H 950 1700 50  0001 C CNN
 	1    950 1700
 	1 0 0 -1
 $EndComp

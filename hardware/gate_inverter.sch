@@ -374,7 +374,7 @@ U 1 1 66000045
 P 10500 3800
 F 0 "J4" H 10600 3900 50  0000 C CNN
 F 1 "MOTOR_UVW" H 10600 3700 50  0000 C CNN
-F 2 "TerminalBlock:TerminalBlock_bornier-3_P7.62mm" H 10500 3800 50  0001 C CNN
+F 2 "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBA_2,5_3-G-7,62_1x03_P7.62mm_Horizontal" H 10500 3800 50  0001 C CNN
 	1    10500 3800
 	1 0 0 -1
 $EndComp
