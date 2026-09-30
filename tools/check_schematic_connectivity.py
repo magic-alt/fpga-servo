@@ -223,6 +223,15 @@ for ref, sheets in references.items():
     if len(sheets) > 1:
         errors.append(f"duplicate component reference {ref}: {sheets}")
 
+# Each Rev.A child sheet is instantiated exactly once. Synthetic AR Path
+# records are for complex/reused legacy hierarchy and can cause KiCad 10 to
+# suppress all child components from exported netlists when the instance path
+# does not resolve exactly.
+for path in CHILDREN:
+    text = path.read_text(errors="strict")
+    if re.search(r"^AR Path=", text, re.M):
+        errors.append(f"{path.name}: synthetic AR Path record is forbidden in single-instance hierarchy")
+
 for path in CHILDREN:
     text = path.read_text(errors="strict")
     wire_points, noconn_points = wire_and_noconn_points(text)
