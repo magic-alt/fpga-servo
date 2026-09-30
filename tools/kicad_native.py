@@ -3,7 +3,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-NUMBER = r"-?\\d+(?:\\.\\d+)?"
+NUMBER = r"-?\d+(?:\.\d+)?"
 
 
 @dataclass(frozen=True)
@@ -40,14 +40,14 @@ def _scan_balanced(text: str, start: int) -> int:
 
 
 def extract_forms(text: str, head: str) -> list[Form]:
-    pattern = re.compile(r"\\(" + re.escape(head) + r"(?=\\s|\\))")
+    pattern = re.compile(r"\(" + re.escape(head) + r"(?=\s|\))")
     forms: list[Form] = []
     for match in pattern.finditer(text):
         end = _scan_balanced(text, match.start())
         forms.append(
             Form(
                 text=text[match.start():end],
-                line=text.count("\\n", 0, match.start()) + 1,
+                line=text.count("\n", 0, match.start()) + 1,
             )
         )
     return forms
@@ -64,7 +64,7 @@ def strip_form(text: str, head: str) -> str:
         if idx < 0:
             continue
         for i in range(idx, idx + len(form.text)):
-            if chars[i] != "\\n":
+            if chars[i] != "\n":
                 chars[i] = " "
         search_from = idx + len(form.text)
     return "".join(chars)
@@ -99,7 +99,7 @@ def assert_balanced(text: str) -> None:
 
 def parse_at(form: str) -> tuple[float, float] | None:
     match = re.search(
-        r"\\(at\\s+(" + NUMBER + r")\\s+(" + NUMBER + r")(?:\\s+" + NUMBER + r")?\\)",
+        r"\(at\s+(" + NUMBER + r")\s+(" + NUMBER + r")(?:\s+" + NUMBER + r")?\)",
         form,
     )
     if not match:
@@ -111,23 +111,23 @@ def parse_xy(form: str) -> list[tuple[float, float]]:
     return [
         (float(match.group(1)), float(match.group(2)))
         for match in re.finditer(
-            r"\\(xy\\s+(" + NUMBER + r")\\s+(" + NUMBER + r")\\)", form
+            r"\(xy\s+(" + NUMBER + r")\s+(" + NUMBER + r")\)", form
         )
     ]
 
 
 def head_string(form: str, head: str) -> str | None:
     match = re.match(
-        r"\\(" + re.escape(head) + r'\\s+"((?:\\\\.|[^"\\\\])*)"', form
+        r"\(" + re.escape(head) + r'\s+"((?:\\.|[^"\\])*)"', form
     )
     return match.group(1) if match else None
 
 
 def property_value(form: str, name: str) -> str | None:
     match = re.search(
-        r'\\(property\\s+"'
+        r'\(property\s+"'
         + re.escape(name)
-        + r'"\\s+"((?:\\\\.|[^"\\\\])*)"',
+        + r'"\s+"((?:\\.|[^"\\])*)"',
         form,
     )
     return match.group(1) if match else None
