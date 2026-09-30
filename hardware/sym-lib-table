@@ -1,4 +1,0 @@
-(sym_lib_table
-  (version 7)
-  (lib (name "ax7010_servo_reva")(type "Legacy")(uri "${KIPRJMOD}/ax7010_servo_reva.lib")(options "")(descr "fpga-servo Rev.A local legacy symbols"))
-)

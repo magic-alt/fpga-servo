@@ -2,12 +2,14 @@
 
 ## Files
 
-- `ax7010_servo_reva.sch` - KiCad legacy-format schematic baseline; modern KiCad opens and converts it
-- `ax7010_servo_reva.lib` - project-local legacy symbol library
+- `ax7010_servo_reva.kicad_sch` - KiCad 10-native top-level schematic
+- `power_input.kicad_sch`, `aux_power.kicad_sch`, `gate_inverter.kicad_sch`, `current_adc.kicad_sch`, `encoder.kicad_sch`, `ax7010_interface.kicad_sch` - native hierarchical child sheets
+- `ax7010_servo_reva.kicad_sym` - versioned KiCad 10-native project symbol library
 - `ax7010_servo_reva.kicad_pcb` - 2-layer PCB placement / critical-routing baseline
-- `ax7010_servo_reva.kicad_pro` - project settings placeholder for modern KiCad
-- `sym-lib-table` - points KiCad to the local legacy symbol library
+- `ax7010_servo_reva.kicad_pro` - KiCad project settings
 - `bom.csv` - first-pass BOM and sourcing gates
+
+Local KiCad state such as `sym-lib-table`, `*.kicad_prl` and lock files is intentionally ignored and is not part of the design source. The ignored `sym-lib-table` should map the nickname `ax7010_servo_reva` to the tracked `ax7010_servo_reva.kicad_sym`; CI creates that mapping in the runner user configuration.
 
 ## Layout partitioning
 
@@ -25,15 +27,14 @@ The auxiliary buck supply is kept along the top edge, away from the current-sens
 
 The Rev.A1 schematic is now validated through the same path used for release review:
 
-- source remains the checked-in KiCad legacy hierarchy so the existing project is preserved
-- CI opens the hierarchy with KiCad 10 Eeschema and saves a native `.kicad_sch` conversion
-- the converted hierarchy exports a populated netlist with **124 functional components / 163 nets**
-- KiCad 10 ERC runs with `--severity-all --exit-code-violations` and currently reports **0 errors / 0 warnings**
-- repository checks reject Global Labels, objects outside the A4 drawing-safe region, duplicate hierarchy ports, floating labels, zero-length wires, missing symbol-pin endpoints and invalid simple-hierarchy AR records
+- source of truth is the checked-in KiCad 10-native `.kicad_sch` hierarchy; legacy `.sch` and `.lib` files are no longer tracked
+- CI exports the netlist directly from `ax7010_servo_reva.kicad_sch` and requires **124 functional components / 163 nets**
+- KiCad 10 ERC runs directly on the tracked native hierarchy with `--severity-all --exit-code-violations` and requires **0 errors / 0 warnings**
+- repository checks reject Global Labels, objects outside the A4 drawing-safe region, duplicate hierarchy ports, floating labels and zero-length wires
 - cross-sheet signals use hierarchical labels/sheet pins; Global Labels are intentionally **0**
 - same-sheet local labels are retained only where they avoid long or crossing wires; they are required to terminate on real wire geometry
 
-The ERC gate also verifies that the legacy-to-native conversion remains usable. An empty legacy CLI netlist is not treated as evidence; the authoritative netlist/ERC is generated from the KiCad 10 native conversion.
+There is no CI conversion step anymore: the file opened by KiCad, reviewed in Git, exported to the netlist and checked by ERC is the same tracked native source.
 
 Current footprint decisions made while closing ERC:
 

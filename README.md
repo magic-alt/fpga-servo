@@ -20,7 +20,7 @@ The official recent AX7010 documentation names the two 40-pin PL expansion conne
 
 ## Repository layout
 
-- `hardware/` KiCad schematic / PCB baseline, legacy symbol library, BOM and design notes
+- `hardware/` KiCad 10-native schematic / PCB baseline, BOM and design notes
 - `fpga/` AX7010 XDC pin constraints matching the hardware pin map
 - `docs/` architecture, calculations, bring-up and release gates
 - `tools/` lightweight repository checks that do not require KiCad to be installed

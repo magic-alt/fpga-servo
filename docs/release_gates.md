@@ -11,9 +11,9 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## Schematic
 
-- [ ] Save and validate a KiCad 10-native schematic copy: CLI export of the current legacy `.sch` yields an empty component/net list, so its ERC report cannot establish electrical completeness.
-- [ ] Verify the reflowed top-sheet AX7010/ADC label area in a native KiCad schematic; move the gate-driver phase-W and ADC decoupling regions clear of their A4 title blocks.
-- [ ] KiCad ERC clean or all waivers documented.
+- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **124 components / 163 nets**.
+- [x] Native schematic layout/A4-boundary checks pass for the top sheet and all six child sheets.
+- [x] KiCad 10 ERC is clean: **0 errors / 0 warnings** on the tracked native hierarchy.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
 - [ ] Verify FD6288 bootstrap network against current datasheet typical application.
 - [ ] Verify regulator component values with vendor calculation/reference design.
