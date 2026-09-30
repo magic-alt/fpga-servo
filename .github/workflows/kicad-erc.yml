@@ -23,7 +23,22 @@ jobs:
           sudo apt-get install -y --no-install-recommends \
             kicad kicad-footprints kicad-symbols xvfb xdotool scrot dbus-x11
           kicad-cli --version
-          eeschema --help || true
+
+      - name: Diagnose legacy netlist with project library table
+        run: |
+          mkdir -p artifacts
+          cd hardware
+          kicad-cli sch export netlist \
+            --output ../artifacts/legacy-before-conversion.net \
+            ax7010_servo_reva.sch
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          text = Path("../artifacts/legacy-before-conversion.net").read_text()
+          components = len(re.findall(r"\(comp\s+\(ref\s+", text))
+          nets = len(re.findall(r"\(net\s+\(code\s+", text))
+          print(f"legacy netlist components={components} nets={nets}")
+          PY
 
       - name: Convert legacy hierarchy through Eeschema
         run: |
@@ -37,58 +52,73 @@ jobs:
             pid=$!
             echo "eeschema pid=$pid"
 
-            # Allow first-start/library/rescue dialogs to appear, then accept the
-            # default non-destructive choices. The project carries its KiCad-5
-            # cache library, so no symbol rescue should be required.
-            for i in $(seq 1 30); do
+            loaded=""
+            for i in $(seq 1 60); do
               sleep 1
-              xdotool search --onlyvisible --name "Configure Global Symbol Library Table" key Return 2>/dev/null || true
-              xdotool search --onlyvisible --name "Project Rescue Helper" key Return 2>/dev/null || true
-              xdotool search --onlyvisible --name "Remap Symbols" key Return 2>/dev/null || true
-              if xdotool search --onlyvisible --name "Schematic Editor" >/tmp/eeschema_windows 2>/dev/null; then
-                break
-              fi
+
+              # First-run configuration blocks file loading on a fresh CI host.
+              for did in $(xdotool search --onlyvisible --name "KiCad Setup" 2>/dev/null || true); do
+                xdotool key --window "$did" Return 2>/dev/null || true
+              done
+
+              # Keep legacy migration non-destructive and accept default rescue/
+              # remap choices. The project-local library/cache contains the
+              # exact symbols used by the design.
+              for pattern in "Configure Global Symbol Library Table" "Project Rescue Helper" "Remap Symbols"; do
+                for did in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
+                  xdotool key --window "$did" Return 2>/dev/null || true
+                done
+              done
+
+              for wid in $(xdotool search --onlyvisible --name "Schematic Editor" 2>/dev/null || true); do
+                name=$(xdotool getwindowname "$wid" 2>/dev/null || true)
+                case "$name" in
+                  *ax7010_servo_reva*|*"AX7010 Servo Drive"*)
+                    loaded="$wid"
+                    break 2
+                    ;;
+                esac
+              done
             done
 
-            echo "visible windows before save:"
+            echo "visible windows after load attempt:"
             for wid in $(xdotool search --onlyvisible --name ".*" 2>/dev/null || true); do
               printf "%s " "$wid"
               xdotool getwindowname "$wid" 2>/dev/null || true
             done
 
-            wid=$(xdotool search --onlyvisible --name "Schematic Editor" 2>/dev/null | tail -n1)
-            if [ -z "$wid" ]; then
-              scrot ../artifacts/eeschema-no-window.png || true
+            if [ -z "$loaded" ]; then
+              scrot ../artifacts/eeschema-load-failed.png || true
               kill "$pid" 2>/dev/null || true
               exit 20
             fi
 
-            xdotool windowactivate --sync "$wid"
-            xdotool key --window "$wid" ctrl+s
+            echo "loaded schematic window=$loaded"
+            xdotool key --window "$loaded" ctrl+s
             sleep 3
 
-            # Legacy save may show a filename/upgrade confirmation. Accept the
-            # proposed modern .kicad_sch destination without changing source.
-            for i in $(seq 1 15); do
+            # Legacy save creates modern .kicad_sch files. Accept any Save As
+            # or upgrade confirmation using the proposed destination.
+            for i in $(seq 1 30); do
               sleep 1
-              for did in $(xdotool search --onlyvisible --name "Save|Confirm|Warning|Rescue|Schematic" 2>/dev/null || true); do
-                name=$(xdotool getwindowname "$did" 2>/dev/null || true)
-                case "$name" in
-                  *"Save"*|*"Confirm"*|*"Warning"*|*"Rescue"*)
-                    xdotool windowactivate "$did" 2>/dev/null || true
-                    xdotool key Return 2>/dev/null || true
-                    ;;
-                esac
+              for pattern in "Save As" "Save" "Confirm" "Warning"; do
+                for did in $(xdotool search --onlyvisible --name "$pattern" 2>/dev/null || true); do
+                  name=$(xdotool getwindowname "$did" 2>/dev/null || true)
+                  case "$name" in
+                    *"Schematic Editor"*) ;;
+                    *) xdotool key --window "$did" Return 2>/dev/null || true ;;
+                  esac
+                done
               done
-              ls *.kicad_sch >/dev/null 2>&1 && break
+              [ -s ax7010_servo_reva.kicad_sch ] && break
             done
 
-            sleep 3
+            sleep 2
             scrot ../artifacts/eeschema-after-save.png || true
             echo "native files:"
             ls -l *.kicad_sch 2>/dev/null || true
 
-            xdotool key --window "$wid" alt+F4 2>/dev/null || true
+            xdotool key --window "$loaded" alt+F4 2>/dev/null || true
             sleep 2
             kill "$pid" 2>/dev/null || true
           '
@@ -113,7 +143,7 @@ jobs:
           text = Path("../artifacts/ax7010_servo_reva.net").read_text()
           components = len(re.findall(r"\(comp\s+\(ref\s+", text))
           nets = len(re.findall(r"\(net\s+\(code\s+", text))
-          print(f"netlist components={components} nets={nets}")
+          print(f"native netlist components={components} nets={nets}")
           if components != 124:
               raise SystemExit(f"expected 124 components, got {components}")
           if nets == 0:
