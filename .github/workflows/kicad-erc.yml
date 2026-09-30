@@ -24,25 +24,47 @@ jobs:
           kicad-cli --version
           kicad-cli sch erc --help
 
-      - name: Export KiCad netlist
+      - name: Diagnose standalone and hierarchical netlists
         run: |
-          mkdir -p artifacts
+          mkdir -p artifacts/netlists
           cd hardware
-          kicad-cli sch export netlist \
-            --output ../artifacts/ax7010_servo_reva.net \
+          for sch in \
+            power_input.sch \
+            aux_power.sch \
+            gate_inverter.sch \
+            current_adc.sch \
+            encoder.sch \
+            ax7010_interface.sch \
             ax7010_servo_reva.sch
+          do
+            stem="${sch%.sch}"
+            kicad-cli sch export netlist \
+              --output "../artifacts/netlists/${stem}.net" \
+              "$sch"
+          done
           python3 - <<'PY'
           from pathlib import Path
           import re
-          text = Path("../artifacts/ax7010_servo_reva.net").read_text()
-          components = len(re.findall(r"\(comp\s+\(ref\s+", text))
-          nets = len(re.findall(r"\(net\s+\(code\s+", text))
-          print(f"netlist components={components} nets={nets}")
-          if components != 124:
-              raise SystemExit(f"expected 124 components, got {components}")
-          if nets == 0:
-              raise SystemExit("netlist contains zero nets")
+          root = Path("../artifacts/netlists")
+          total_components = 0
+          for path in sorted(root.glob("*.net")):
+              text = path.read_text()
+              components = len(re.findall(r"\(comp\s+\(ref\s+", text))
+              nets = len(re.findall(r"\(net\s+\(code\s+", text))
+              print(f"{path.stem}: components={components} nets={nets}")
+              if path.stem != "ax7010_servo_reva":
+                  total_components += components
+          if total_components != 124:
+              raise SystemExit(f"standalone child component total expected 124, got {total_components}")
+          top = (root / "ax7010_servo_reva.net").read_text()
+          top_components = len(re.findall(r"\(comp\s+\(ref\s+", top))
+          top_nets = len(re.findall(r"\(net\s+\(code\s+", top))
+          if top_components != 124 or top_nets == 0:
+              raise SystemExit(
+                  f"hierarchical netlist invalid: components={top_components} nets={top_nets}"
+              )
           PY
+          cp ../artifacts/netlists/ax7010_servo_reva.net ../artifacts/ax7010_servo_reva.net
           grep -n -E 'J3|F1|U2|U1|VIN_RAW|VBUS_PROT|IU_ADC|PWM_UH' ../artifacts/ax7010_servo_reva.net | head -n 120 || true
 
       - name: Run KiCad ERC
@@ -68,4 +90,5 @@ jobs:
           path: |
             artifacts/ax7010_servo_reva_erc.rpt
             artifacts/ax7010_servo_reva.net
+            artifacts/netlists/*.net
           if-no-files-found: warn
