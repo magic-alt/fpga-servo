@@ -54,7 +54,13 @@ jobs:
           if [ -f /usr/share/kicad/template/fp-lib-table ]; then
             cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
           else
-            printf '(fp_lib_table)\n' > "$cfg/fp-lib-table"
+            printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
+          fi
+
+          if [ -f /usr/share/kicad/template/design-block-lib-table ]; then
+            cp /usr/share/kicad/template/design-block-lib-table "$cfg/design-block-lib-table"
+          else
+            printf '(design_block_lib_table\n  (version 7)\n)\n' > "$cfg/design-block-lib-table"
           fi
 
           python3 -m json.tool "$cfg/kicad_common.json" >/dev/null
