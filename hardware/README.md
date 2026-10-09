@@ -50,8 +50,10 @@ Current footprint decisions made while closing ERC:
 
 The **schematic is ERC-clean**, but the PCB is still a **development layout, not a released manufacturing file**. The 2026-10-09 synchronization now contains 158 electrical footprints plus four mounting holes, complete physical-pad/net/DNP parity and preliminary placement. Latest saved/refilled DRC: **271 violations / 466 unconnected / 0 schematic parity issues**. The 20 legacy tracks and original copper zone remain for endpoint-qualified replacement; known shorts remain. Do not fabricate or energize this board. See `docs/pcb_repair_progress_2026-10-09.md`.
 
-Before fabrication, complete fine digital routing, fanout, copper-pour refill, PCB DRC, creepage/clearance review, thermal/current-density review and final land-pattern verification. In particular, terminal-block/shunt fit, current and thermal qualification, actual AX7010 revision and the exact F1 implementation remain fabrication gates; an ERC-valid footprint assignment does not by itself qualify connector current capability.
+Before fabrication, complete fine digital routing, fanout, copper-pour refill, PCB DRC, creepage/clearance review, thermal/current-density review and final land-pattern verification. In particular, terminal-block/shunt fit, current and thermal qualification, actual AX7010 physical continuity and external F1 coordination remain fabrication gates (user confirms 2022/J10; F1 selected as KLKD025.T + LPSM0001Z); an ERC-valid footprint assignment does not by itself qualify connector current capability.
 
 OCP latch implementation and timing gates: `docs/ocp_latch_review_2026-10-09.md`. Latest PDF has eight pages.
 
 INA241 correction during package review: U2/U3/U4 reserved pin 4 connects to GND per TI SBOSA30D Table 5-1, despite its NC name. Symbol electrical type, schematic wiring and PCB pad nets match; net count changed from 183 to 180. `check_netlist_safety.py` rejects regression to the former floating pins.
+
+2026-10-09 schematic-only update: F1 is external, J6 represents the external PSU connection, and J3.1 is VIN_FUSED. System BOM: 159 rows; PCB netlist: 157 components / 179 nets. PCB intentionally unchanged and requires later F1 removal/J3 net synchronization. See `docs/schematic_optimization_2022_j10_2026-10-09.md`.

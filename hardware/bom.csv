@@ -55,13 +55,14 @@ D1,1,SMCJ54A,TBD,TBD,Diode_SMD:D_SMC,SMCJ54A_DNP_VERIFY_CLAMP,DNP; populate only
 D2,1,ES1J,TBD,TBD,Diode_SMD:D_SMA,ES1J_BOOTSTRAP,Fitted; exact MPN / rating qualification open
 D3,1,ES1J,TBD,TBD,Diode_SMD:D_SMA,ES1J_BOOTSTRAP,Fitted; exact MPN / rating qualification open
 D4,1,ES1J,TBD,TBD,Diode_SMD:D_SMA,ES1J_BOOTSTRAP,Fitted; exact MPN / rating qualification open
-F1,1,EXT_FUSE_OR_25A_FUSE,TBD,TBD,Fuse:Fuse_2920_7451Metric,See schematic,Fitted; exact MPN / rating qualification open
+F1,1,25A_EXT_KLKD025,Littelfuse,KLKD025.T,,EXTERNAL source-positive fuse before J3.1; 25A 600VDC 10x38mm; holder LPSM0001Z; never fit on servo PCB,External; NOT fitted to PCB; required holder LPSM0001Z
 F2,1,0.5A_PTC_ENCODER_5V,TBD,TBD,Fuse:Fuse_1812_4532Metric,See schematic,Fitted; exact MPN / rating qualification open
 J1,1,AX7010_PL_A,TBD,TBD,Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
 J2,1,AX7010_PL_B,TBD,TBD,Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
 J3,1,DC_IN_48V,Phoenix Contact,1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,MKDS_5_2_9.5_32A_external_protection_required,Fitted
 J4,1,MOTOR_UVW,Phoenix Contact,1714984,fpga-servo:PhoenixContact_MKDS_5_3_9.52mm,MKDS_5_3_9.5_32A_motor_terminal,Fitted
 J5,1,ABZ_DIFF_ENCODER,TBD,TBD,Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
+J6,1,PSU_EXT,System interface,TBD,,External PSU output terminal; system wiring only; F1 must be near source positive,External; NOT fitted to PCB; exact MPN / rating qualification open
 L1,1,68uH,Coilcraft,MSS1246T-683MLC,Inductor_SMD:L_Coilcraft_MSS1246T-XXX,68uH_MSS1246T-683MLC,Fitted
 L2,1,2.2uH,Wurth Elektronik,74438356022,Inductor_SMD:L_Wuerth_MAPI-4020,2.2uH_74438356022_WE-MAPI-4020,Fitted
 NTC1,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_B3950_BOARD,Fitted; exact MPN / rating qualification open

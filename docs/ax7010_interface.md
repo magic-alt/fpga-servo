@@ -1,5 +1,13 @@
 # AX7010 interface allocation
 
+## Confirmed hardware baseline (2026-10-09)
+
+User confirms ALINX AX7010 **2022** hardware and **J10** for the active serial interface (servo J1). Manufacturer V2.0 schematic file, sheets 5/15, was cross-checked visually: J10 pin1/37/38 = GND, pin2 = 5V (NC here), pin39/40 = 3.3V. All 34 signal-pin package mappings in the table below agree with that drawing. The supplied drawing title block is dated 2018; the user's 2022 identity is not a claim that this public PDF is a 2022 release. Physical continuity and bank-voltage verification remain acceptance tests.
+
+Source: [ALINX official hardware schematic folder](https://github.com/alinxalinx/AX7010_2023.1/tree/master/Hardware/01_SCH). Local source PDF/hash and reviewed pages: `artifacts/schematic_opt_2022/`.
+
+J2/J11 remains optional and is not required for the current serial implementation. No pin assignments changed this round.
+
 ## Connector naming
 
 Recent ALINX AX7010 documentation calls the two 40-pin PL expansion connectors **J10** and **J11**. The servo board intentionally calls them `AX7010_PL_A` and `AX7010_PL_B` so that older AX7010 board revisions with different silk-reference designators are not confused with the electrical pinout.

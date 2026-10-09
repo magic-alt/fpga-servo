@@ -15,6 +15,11 @@ for path in sorted((root / "hardware").glob("*.kicad_sch")):
         mpn = property_value(symbol.text, "MPN") or "TBD"
         dnp = "(dnp yes)" in symbol.text
         note = "DNP; populate only after option review" if dnp else "Fitted"
+        if "(on_board no)" in symbol.text:
+            note = "External; NOT fitted to PCB"
+            holder = property_value(symbol.text, "Holder_MPN")
+            if holder:
+                note += "; required holder " + holder
         if mpn == "TBD":
             note += "; exact MPN / rating qualification open"
         rows.append({

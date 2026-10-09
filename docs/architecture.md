@@ -26,7 +26,8 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 ## Functional blocks
 
 1. **DC-link / protection**
-   - external upstream fuse required
+   - external upstream F1: Littelfuse KLKD025.T 25A / 600VDC in LPSM0001Z holder, near source positive; J3 is the fused board input; F1/J6 are system wiring, excluded from PCB
+   - confirm actual bus-current/inrush, cable and fault-energy coordination before higher-power operation
    - input TVS and bulk capacitance close to bridge
    - bus-voltage divider to ADC
 

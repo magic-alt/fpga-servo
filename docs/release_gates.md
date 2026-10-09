@@ -4,14 +4,14 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## Connector / FPGA
 
-- [ ] Confirm the physical AX7010 board revision in hand and whether its silk references are J10/J11 or another revision.
+- [x] User confirms ALINX AX7010 2022 hardware, active connector J10 (2026-10-09). Manufacturer drawing sheets 5/15 cross-checked; physical continuity remains open below.
 - [ ] Pin-by-pin continuity check against the actual AX7010 schematic.
 - [ ] Vivado IOSTANDARD=LVCMOS33 review for every used PL pin.
 - [ ] Verify no used pin conflicts with another on-board AX7010 function in the selected project.
 
 ## Schematic
 
-- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **158 components / 180 nets**.
+- [x] KiCad 10-native hierarchy is now the checked-in source of truth; current PCB netlist export produces **157 board components / 179 nets**; system schematic/BOM has 159 objects including external F1 and PSU wiring terminal J6.
 - [x] Native schematic layout/A4-boundary checks pass for the top sheet and all seven child sheets.
 - [x] KiCad 10 ERC is clean: **0 errors / 0 warnings** on the tracked native hierarchy.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
@@ -47,8 +47,8 @@ ERC is clean and initial placement studies can proceed. Final component placemen
 
 ## PCB
 
-- [x] Reconcile schematic references, physical pad numbers, DNP states, footprint IDs and nets: 158 electrical + 4 mechanical footprints; fresh native DRC schematic parity 0. See `docs/pcb_repair_progress_2026-10-09.md`.
-- [ ] Close the synchronized PCB DRC: latest saved/refilled KiCad 10.0.3 run has **271 violations (220 errors / 51 warnings), 466 unconnected items, 0 schematic parity issues**. Original partial-board 357/129 is historical; counts are not directly comparable after adding missing components. No new exclusions or severity reductions. Five inherited/default ignored DRC check types remain and must be reviewed before release.
+- [ ] Reconcile the new external-fuse schematic with the PCB later: prior stage had 158 electrical + 4 mechanical footprints and native parity 0. The schematic-only optimization now exports 157 board components; unchanged PCB has obsolete F1 and J3.1 on its old net. Do not reuse the prior parity PASS. See `docs/schematic_optimization_2022_j10_2026-10-09.md`.
+- [ ] Close the synchronized PCB DRC: last saved/refilled KiCad 10.0.3 run BEFORE the external-fuse schematic change had **271 violations (220 errors / 51 warnings), 466 unconnected items, 0 schematic parity issues**. Original partial-board 357/129 is historical; counts are not directly comparable after adding missing components. No new exclusions or severity reductions. Five inherited/default ignored DRC check types remain and must be reviewed before release.
 - [x] Correct H1..H4 M3-labelled mounting-hole drills from 1.0 mm to 3.2 mm, preserving centers and the board outline; `check_design.py` rejects undersized M3-labelled holes.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
@@ -86,3 +86,12 @@ Latest physical-pin PCB audit and mechanical-hole repair: `docs/pcb_pre_sync_rev
 Latest implementation evidence and unfinished routing: `docs/pcb_repair_progress_2026-10-09.md`. Package drawings and qualifications: `docs/pcb_package_qualification_2026-10-09.md`. The selected shunt/terminal part numbers do not close the unchecked footprint, thermal or mechanical gates above.
 
 - [x] INA241 U2/U3/U4 pin 4 grounded according to TI SBOSA30D Table 5-1; the reserved NC name must not be interpreted as permission to float it. Fresh ERC remains zero and physical PCB parity passes.
+
+## Schematic-only optimization: confirmed AX7010 2022 / J10
+
+- [x] Select external F1 KLKD025.T (25A / 600VDC), required LPSM0001Z holder near source positive; remove the unqualified board-mounted 2920 fuse placeholder from the schematic. F1/J6 are off-board, not DNP and not PCB placement parts.
+- [x] J3.1 is the fused source input; native safety regression requires it to connect to Q7.5 and U18.1/.5. J10 ground, VIO and active signal pins have focused regression coverage.
+- [ ] Validate fuse/holder ambient derating, actual DC source fault current/time constant, cable ampacity, short-circuit clearing energy and startup-inrush coordination. Fuse selection alone does not establish MOSFET protection, surge protection or regenerative-energy handling.
+- [ ] Deferred PCB synchronization: obsolete F1 and J3.1 net mismatch remain visible. No PCB layout/sync/routing performed by user instruction.
+
+Fresh schematic ERC is 0 errors / 0 warnings / 0 exclusions; no ignored checks or severities changed. Full details and source evidence: `docs/schematic_optimization_2022_j10_2026-10-09.md`.

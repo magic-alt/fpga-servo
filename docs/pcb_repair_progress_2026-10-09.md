@@ -60,3 +60,8 @@ TI INA241 datasheet SBOSA30D Table 5-1 explicitly requires reserved pin 4 to con
 Manufacturer basis: https://www.ti.com/lit/ds/symlink/ina241a.pdf (SBOSA30D, Table 5-1, page 2). The isolated NC nets disappearing is an electrical correction, not a routing improvement.
 
 Independent read-only review: all three Important checker findings were reproduced and fixed; a second review confirmed the INA241 manufacturer requirement, minimal schematic diff, /GND on all three physical pad4 instances, 158/180 netlist count and fresh 271/466/0 DRC evidence. No remaining Critical/Important finding in the implemented stage. Full routing and release qualification remain unfinished. Changes are local on fix/ocp-latch-industrial-review; no push or merge.
+
+
+## Superseding schematic-only change: AX7010 2022 / J10 and external F1
+
+User confirms AX7010 2022 / J10 and requests schematic optimization with PCB layout deferred. Selected external KLKD025.T + LPSM0001Z; added external PSU wiring terminal J6; J3.1 is now VIN_FUSED. System BOM has 159 objects, current PCB netlist 157 components / 179 nets. Board file unchanged, physical parity deliberately pending (old F1 extra and J3.1 net mismatch). Prior parity 0 and DRC 271/466 above remain historical. Do not synchronize or route the PCB until that phase is requested. See `docs/schematic_optimization_2022_j10_2026-10-09.md` for current source verification and remaining qualifications.

@@ -92,6 +92,32 @@ for token in ["U_SH_P", "U_SH_N", "V_SH_P", "V_SH_N", "W_SH_P", "W_SH_N"]:
     if token in schematic_text:
         errors.append(f"obsolete schematic construct remains: {token}")
 
+# The selected source fuse is system wiring, not a placeholder PCB land pattern.
+power_authored = strip_form((HW / "power_input.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
+fuses = [x.text for x in extract_forms(power_authored, "symbol")
+         if property_value(x.text, "Reference") == "F1"]
+if len(fuses) != 1:
+    errors.append("exactly one external F1 system symbol required")
+else:
+    fuse = fuses[0]
+    if "(on_board no)" not in fuse or "(in_pos_files no)" not in fuse:
+        errors.append("F1 must be external and excluded from PCB/placement")
+    if property_value(fuse, "Footprint"):
+        errors.append("external F1 must not retain a PCB placeholder footprint")
+    for prop, expected in [("MPN", "KLKD025.T"), ("Holder_MPN", "LPSM0001Z")]:
+        if property_value(fuse, prop) != expected:
+            errors.append(f"F1: selected external {prop} missing")
+
+interface_authored = strip_form((HW / "ax7010_interface.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
+j1 = next(x.text for x in extract_forms(interface_authored, "symbol")
+          if property_value(x.text, "Reference") == "J1")
+if property_value(j1, "Board_Revision") != "ALINX AX7010 2022" or property_value(j1, "Board_Connector") != "J10":
+    errors.append("J1 must identify the confirmed AX7010 2022 / J10 interface")
+j6 = next((x.text for x in extract_forms(power_authored, "symbol")
+           if property_value(x.text, "Reference") == "J6"), "")
+if "(on_board no)" not in j6 or property_value(j6, "Footprint"):
+    errors.append("J6 must remain an external source wiring terminal without a PCB footprint")
+
 pcb_path = HW / "ax7010_servo_reva.kicad_pcb"
 if pcb_path.exists():
     pcb = pcb_path.read_text(errors="ignore")

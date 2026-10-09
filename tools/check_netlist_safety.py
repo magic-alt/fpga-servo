@@ -34,8 +34,28 @@ def rail(ref, pin, name):
     if pin_nets.get((ref, pin)) != "/" + name:
         errors.append(f"{ref}.{pin} must connect to {name}")
 
-if len(values) != 158 or len(net_nodes) != 180:
-    errors.append(f"expected 158 components / 180 nets, got {len(values)} / {len(net_nodes)}")
+if len(values) != 157 or len(net_nodes) != 179:
+    errors.append(f"expected 157 board components / 179 nets (external F1 excluded), got {len(values)} / {len(net_nodes)}")
+# External source fuse is represented in the system schematic, not the PCB netlist.
+if any(ref in values for ref in ("F1", "J6")):
+    errors.append("F1/J6 must be external and excluded from the PCB netlist")
+same(("J3", "1"), ("Q7", "5"), ("U18", "1"), ("U18", "5"))
+# ALINX J10 manufacturer schematic: ground 1/37/38, 3.3V 39/40, 5V 2 NC.
+for pin in ("1", "37", "38"):
+    rail("J1", pin, "GND")
+for pin in ("39", "40"):
+    rail("J1", pin, "VIO_3V3")
+if not pin_nets.get(("J1", "2"), "").startswith("unconnected-"):
+    errors.append("J10 +5V pin2 must stay NC; never tie to local VA_5V")
+active_j10 = {
+    "3": "PWM_UH", "4": "PWM_UL", "5": "PWM_VH", "6": "PWM_VL",
+    "7": "PWM_WH", "8": "PWM_WL", "9": "GATE_EN", "10": "FAULT_CLEAR",
+    "11": "ADC_CONVST", "12": "ADC_SCLK", "13": "ADC_CS_N", "14": "ADC_RESET",
+    "15": "ADC_DOUTA", "16": "ADC_DOUTB", "17": "ADC_BUSY", "18": "ADC_FRSTDATA",
+    "19": "ENC_A", "20": "ENC_B", "21": "ENC_Z", "23": "OCP_N", "24": "PWR_GOOD",
+}
+for pin, name in active_j10.items():
+    rail("J1", pin, name)
 for i, pin in enumerate(["3", "4", "5", "6", "7", "8", "9"]):
     ref = f"R{80 + i}"
     same(("J1", pin), (ref, "1"))

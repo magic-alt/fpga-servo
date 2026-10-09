@@ -2000,6 +2000,8 @@
 				)
 			)
 		 (hide yes))
+		(property "Board_Revision" "ALINX AX7010 2022" (at 68.58 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Board_Connector" "J10" (at 68.58 88.9 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(pin "1"
 			(uuid "4ddd2bde-049f-4737-bece-26ddc31c4697")
 		)
