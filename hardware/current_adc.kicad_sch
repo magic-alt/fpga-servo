@@ -12,7 +12,7 @@
 		(comment 1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S")
 	)
 (lib_symbols
-		(symbol "ax7010_servo_reva:ADS8588S"
+		(symbol "ax7010_servo_reva:ADS8588S_SERIAL"
 			(pin_names
 				(offset 1.016)
 			)
@@ -31,7 +31,7 @@
 					)
 				)
 			)
-			(property "Value" "ADS8588S"
+			(property "Value" "ADS8588S_SERIAL"
 				(at 0 -50.292 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -74,7 +74,7 @@
 					)
 				)
 			)
-			(symbol "ADS8588S_0_1"
+			(symbol "ADS8588S_SERIAL_0_1"
 				(rectangle
 					(start -25.4 53.34)
 					(end 25.4 -55.88)
@@ -87,7 +87,7 @@
 					)
 				)
 			)
-			(symbol "ADS8588S_1_1"
+			(symbol "ADS8588S_SERIAL_1_1"
 				(pin power_in line
 					(at -17.78 58.42 270)
 					(length 5.08)
@@ -358,7 +358,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 15.24 180)
 					(length 5.08)
 					(name "DB0"
@@ -376,7 +376,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 12.7 180)
 					(length 5.08)
 					(name "DB1"
@@ -394,7 +394,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 10.16 180)
 					(length 5.08)
 					(name "DB2"
@@ -412,7 +412,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 7.62 180)
 					(length 5.08)
 					(name "DB3"
@@ -430,7 +430,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 5.08 180)
 					(length 5.08)
 					(name "DB4"
@@ -448,7 +448,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 2.54 180)
 					(length 5.08)
 					(name "DB5"
@@ -466,7 +466,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 0.0 180)
 					(length 5.08)
 					(name "DB6"
@@ -556,7 +556,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 -2.54 180)
 					(length 5.08)
 					(name "DB9"
@@ -574,7 +574,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 -5.08 180)
 					(length 5.08)
 					(name "DB10"
@@ -592,7 +592,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 -7.62 180)
 					(length 5.08)
 					(name "DB11"
@@ -610,7 +610,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 -10.16 180)
 					(length 5.08)
 					(name "DB12"
@@ -628,7 +628,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 -12.7 180)
 					(length 5.08)
 					(name "DB13"
@@ -646,7 +646,7 @@
 						)
 					)
 				)
-				(pin bidirectional line
+				(pin input line
 					(at 30.48 -15.24 180)
 					(length 5.08)
 					(name "DB14_HBEN"
@@ -3678,7 +3678,7 @@
 		)
 	)
 (symbol
-		(lib_id "ax7010_servo_reva:ADS8588S")
+		(lib_id "ax7010_servo_reva:ADS8588S_SERIAL")
 		(at 228.6 96.52 0.0)
 		(unit 1)
 		(body_style 1)
@@ -5507,19 +5507,19 @@
 (label "GND" (at 175.26 113.03 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "7b764408-8f88-4858-9a49-4fdfeac6813e"))
 (no_connect (at 167.64 81.28) (uuid "bc4ccbe7-2190-4851-b317-22474e85b114"))
 (no_connect (at 167.64 143.51) (uuid "50e00acf-ec2e-4b1c-8dc8-12c48f258b48"))
-(no_connect (at 259.08 81.28) (uuid "e5913d4a-4e05-40ba-bae2-f30ee78ed747"))
-(no_connect (at 259.08 83.82) (uuid "fe777653-4c24-4b18-9bff-1a0fd6368862"))
-(no_connect (at 259.08 86.36) (uuid "73552140-7ec5-4469-a13d-7491d88868a3"))
-(no_connect (at 259.08 88.9) (uuid "b723dd61-7bd6-464b-8f71-597b0f1e5eed"))
-(no_connect (at 259.08 91.44) (uuid "f17e408e-52ff-4eda-916f-eb2bf017b918"))
-(no_connect (at 259.08 93.98) (uuid "741cab9f-6695-48f1-8fee-a0f4d38ec2dd"))
-(no_connect (at 259.08 96.52) (uuid "22726842-58fa-4639-b339-a6ee8f56b829"))
-(no_connect (at 259.08 99.06) (uuid "ebd3ad47-6fdf-4540-981b-8c0d15e5c88d"))
-(no_connect (at 259.08 101.6) (uuid "16df9bc7-af4e-414f-8ae9-63a885c6e163"))
-(no_connect (at 259.08 104.14) (uuid "f839adf9-2e34-4bec-a05e-7991a5da575c"))
-(no_connect (at 259.08 106.68) (uuid "481eafa3-b1ba-46c0-9c43-34faeb56ba78"))
-(no_connect (at 259.08 109.22) (uuid "48e88a10-9c5a-49ec-a620-17c68825a210"))
-(no_connect (at 259.08 111.76) (uuid "7802a7a3-9679-4ee7-b552-78b7c0b00ba8"))
+
+
+
+
+
+
+
+
+
+
+
+
+
 (junction (at 190.5 21.59) (diameter 0) (color 0 0 0 0) (uuid "0c061542-8517-4eab-baee-eafdb98d3ca5"))
 (junction (at 220.98 35.56) (diameter 0) (color 0 0 0 0) (uuid "eb2cabac-b9e4-467e-81ba-55a977949981"))
 (junction (at 146.05 44.45) (diameter 0) (color 0 0 0 0) (uuid "eeb339b2-ee16-42f2-85ea-53989defb61e"))
@@ -5604,4 +5604,49 @@
 
 
 (wire (pts (xy 50.8 25.4) (xy 73.66 25.4)) (stroke (width 0) (type default)) (uuid "5226a031-7def-4adc-964f-926be90e3a40"))
+
+(wire (pts (xy 264.16 78.74) (xy 264.16 81.28)) (stroke (width 0) (type default)) (uuid "e0382520-04a7-4c64-9084-26f8fba612a1"))
+(wire (pts (xy 264.16 81.28) (xy 264.16 83.82)) (stroke (width 0) (type default)) (uuid "0b0473eb-1959-4100-8ad7-f164c7f9acfc"))
+(wire (pts (xy 264.16 83.82) (xy 264.16 86.36)) (stroke (width 0) (type default)) (uuid "89f178da-c155-4f17-a2b9-0ac38e6a6406"))
+(wire (pts (xy 264.16 86.36) (xy 264.16 88.9)) (stroke (width 0) (type default)) (uuid "8d7a4dd1-2ac9-426c-996d-d529b76f6fbb"))
+(wire (pts (xy 264.16 88.9) (xy 264.16 91.44)) (stroke (width 0) (type default)) (uuid "2a0a8fd1-c7c4-4001-b381-0a50c21d2d5d"))
+(wire (pts (xy 264.16 91.44) (xy 264.16 93.98)) (stroke (width 0) (type default)) (uuid "1540231c-4ebd-4c05-bc68-e36c5fe43833"))
+(wire (pts (xy 264.16 93.98) (xy 264.16 96.52)) (stroke (width 0) (type default)) (uuid "d80f8ec7-1863-449d-9576-7a6c3863cae5"))
+(wire (pts (xy 264.16 96.52) (xy 264.16 99.06)) (stroke (width 0) (type default)) (uuid "da2c467a-5b22-4147-a8ce-8356ff684e72"))
+(wire (pts (xy 264.16 99.06) (xy 264.16 101.6)) (stroke (width 0) (type default)) (uuid "0dd40ca4-c916-49b1-980d-46edb8451d94"))
+(wire (pts (xy 264.16 101.6) (xy 264.16 104.14)) (stroke (width 0) (type default)) (uuid "1201eac1-80cd-40d7-be69-e13e4e8af5e5"))
+(wire (pts (xy 264.16 104.14) (xy 264.16 106.68)) (stroke (width 0) (type default)) (uuid "857eeac0-40e7-4371-b385-5a3bf01f98f9"))
+(wire (pts (xy 264.16 106.68) (xy 264.16 109.22)) (stroke (width 0) (type default)) (uuid "2eec8b80-453b-4e66-a9d9-56408beddac3"))
+(wire (pts (xy 264.16 109.22) (xy 264.16 111.76)) (stroke (width 0) (type default)) (uuid "fadb7c37-8ba0-4b0c-853a-ea23b9662d16"))
+(wire (pts (xy 259.08 81.28) (xy 264.16 81.28)) (stroke (width 0) (type default)) (uuid "59b67ca5-720a-4a8a-ac21-9609767952ce"))
+(junction (at 264.16 81.28) (diameter 0) (color 0 0 0 0) (uuid "de008831-807b-4d1e-aba8-f13abac8ac5a"))
+(wire (pts (xy 259.08 83.82) (xy 264.16 83.82)) (stroke (width 0) (type default)) (uuid "b964c0c4-d0d5-434a-bb3e-c75983cf338e"))
+(junction (at 264.16 83.82) (diameter 0) (color 0 0 0 0) (uuid "c18c3df2-852b-4cf0-bc71-31adb0c137c9"))
+(wire (pts (xy 259.08 86.36) (xy 264.16 86.36)) (stroke (width 0) (type default)) (uuid "b5f4ab45-a7d0-4df7-b282-4b8520bad1ce"))
+(junction (at 264.16 86.36) (diameter 0) (color 0 0 0 0) (uuid "7dbd6949-78b3-4013-8e88-b4df6ddf7ace"))
+(wire (pts (xy 259.08 88.9) (xy 264.16 88.9)) (stroke (width 0) (type default)) (uuid "f8a9285a-fdd2-4baf-8bee-cf59cf398d49"))
+(junction (at 264.16 88.9) (diameter 0) (color 0 0 0 0) (uuid "dcadd5a9-179a-4006-95d5-3626c9722ef0"))
+(wire (pts (xy 259.08 91.44) (xy 264.16 91.44)) (stroke (width 0) (type default)) (uuid "ea75a00f-f9dd-4bd1-9361-08a763dc659d"))
+(junction (at 264.16 91.44) (diameter 0) (color 0 0 0 0) (uuid "5a931517-08cb-4737-acdb-8d3effd62445"))
+(wire (pts (xy 259.08 93.98) (xy 264.16 93.98)) (stroke (width 0) (type default)) (uuid "08b98fd8-ce3f-4d80-b118-dce8fab8e57f"))
+(junction (at 264.16 93.98) (diameter 0) (color 0 0 0 0) (uuid "f3eb3e31-5c05-4775-9ac9-07a7d96f46c8"))
+(wire (pts (xy 259.08 96.52) (xy 264.16 96.52)) (stroke (width 0) (type default)) (uuid "f7cac130-9784-4eee-b3a9-d52729516bab"))
+(junction (at 264.16 96.52) (diameter 0) (color 0 0 0 0) (uuid "61db748e-0cac-42d7-b162-13d9dc959421"))
+(wire (pts (xy 259.08 99.06) (xy 264.16 99.06)) (stroke (width 0) (type default)) (uuid "f9b6ee8b-ce23-4961-ae10-728fbabf7841"))
+(junction (at 264.16 99.06) (diameter 0) (color 0 0 0 0) (uuid "f43bb33b-ead2-4e76-a58d-61cbb97d0d5d"))
+(wire (pts (xy 259.08 101.6) (xy 264.16 101.6)) (stroke (width 0) (type default)) (uuid "9509b0f2-4ad6-4802-ae3c-f742231249d5"))
+(junction (at 264.16 101.6) (diameter 0) (color 0 0 0 0) (uuid "8e9ec3ac-4aee-43da-88ae-5a95ba43669f"))
+(wire (pts (xy 259.08 104.14) (xy 264.16 104.14)) (stroke (width 0) (type default)) (uuid "0d4e2d11-36d2-488e-9b67-f053a7222f63"))
+(junction (at 264.16 104.14) (diameter 0) (color 0 0 0 0) (uuid "fde55063-85b2-4221-bc94-8d1ff89e3eb2"))
+(wire (pts (xy 259.08 106.68) (xy 264.16 106.68)) (stroke (width 0) (type default)) (uuid "d2aac545-1d30-4ea0-8ad9-8ee1a2bbd62e"))
+(junction (at 264.16 106.68) (diameter 0) (color 0 0 0 0) (uuid "6ea09b43-355f-44b0-a137-68696ec2f32d"))
+(wire (pts (xy 259.08 109.22) (xy 264.16 109.22)) (stroke (width 0) (type default)) (uuid "da2eb32b-67dd-4e2c-8e8d-e15aaa32f523"))
+(junction (at 264.16 109.22) (diameter 0) (color 0 0 0 0) (uuid "9d9527d8-5774-4bd0-a6f7-637eeecdc7bf"))
+(wire (pts (xy 259.08 111.76) (xy 264.16 111.76)) (stroke (width 0) (type default)) (uuid "26f5f722-1803-4a9a-b2f5-29568937a9d6"))
+(wire (pts (xy 264.16 78.74) (xy 271.78 78.74)) (stroke (width 0) (type default)) (uuid "29fc4ea2-a652-4da9-aa8b-73bbc62d5cde"))
+(label "GND" (at 271.78 78.74 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "9a6ab907-9ea0-4d6d-8f43-98e337c28693"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 271.78 78.74 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "1029a897-13a2-40fa-ab2b-9f112a190c3a")
+(property "Reference" "#PWR1299" (at 271.78 78.74 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 271.78 78.74 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "bad67016-ad82-48d0-b05f-1438726ae7a2")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005" (reference "#PWR1299") (unit 1)))))
 )

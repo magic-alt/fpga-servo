@@ -1,0 +1,1835 @@
+{
+  "source": "static S-expression + KiCad XML netlist; NOT KiCad native parity or DRC",
+  "schematic_components": 159,
+  "schematic_nets": 180,
+  "pcb_footprints": 162,
+  "pcb_matched_references": 158,
+  "pcb_extra_refs": [],
+  "pcb_only_mechanical": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "missing_pcb_references": [
+    "J6"
+  ],
+  "missing_pcb_reference_count": 1,
+  "schematic_symbols_missing_footprint": [
+    "F1",
+    "J6"
+  ],
+  "pcb_nets": 194,
+  "schematic_net_names_absent_from_board": [],
+  "pcb_tracks": 20,
+  "pcb_vias": 0,
+  "pcb_zones": 5,
+  "pcb_file_version": "20260206",
+  "footprints_missing_schematic_link": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "board_footprints": {
+    "C60": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "NTC1": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R52": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RGS2": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C66": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C68": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R55": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R51": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U9": {
+      "lib_id": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "Q8": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "U7": {
+      "lib_id": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+      "pads": 16,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "R81": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C84": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R87": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U18": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-23-8",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "U15": {
+      "lib_id": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "pads": 14,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "RG4": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C81": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C25": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "J5": {
+      "lib_id": "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical",
+      "pads": 10,
+      "pad_numbers": [
+        "1",
+        "10",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "TP5": {
+      "lib_id": "TestPoint:TestPoint_Pad_D1.5mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": true
+    },
+    "C20": {
+      "lib_id": "Capacitor_SMD:C_1210_3225Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U25": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-23-6",
+      "pads": 6,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "has_schematic_link": true
+    },
+    "U4": {
+      "lib_id": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "RG3": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R61": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "H4": {
+      "lib_id": "fpga-servo:MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": false
+    },
+    "C31": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U20": {
+      "lib_id": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "D1": {
+      "lib_id": "Diode_SMD:D_SMC",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C67": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "CBOOT2": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "CBOOT3": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RSH1": {
+      "lib_id": "fpga-servo:Ohmite_650_4T_P25.40x6.35mm",
+      "pads": 4,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "has_schematic_link": true
+    },
+    "C82": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C90": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R70": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "J1": {
+      "lib_id": "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical",
+      "pads": 40,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "4",
+        "40",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "U8": {
+      "lib_id": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "R32": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "J3": {
+      "lib_id": "fpga-servo:PhoenixContact_MKDS_5_2_9.52mm",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U2": {
+      "lib_id": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "U26": {
+      "lib_id": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "U12": {
+      "lib_id": "Package_SO:TI_SO-PowerPAD-8",
+      "pads": 12,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "C3": {
+      "lib_id": "Capacitor_SMD:C_1210_3225Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "TP1": {
+      "lib_id": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": true
+    },
+    "C62": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R2": {
+      "lib_id": "Resistor_SMD:R_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RG6": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C65": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R82": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RG1": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U3": {
+      "lib_id": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "R89": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RGS3": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C43": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C93": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R58": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R22": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C21": {
+      "lib_id": "Capacitor_SMD:C_1210_3225Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R86": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R54": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "TP3": {
+      "lib_id": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": true
+    },
+    "J2": {
+      "lib_id": "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical",
+      "pads": 40,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "4",
+        "40",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "L2": {
+      "lib_id": "Inductor_SMD:L_Wuerth_MAPI-4020",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C45": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "H3": {
+      "lib_id": "fpga-servo:MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": false
+    },
+    "H1": {
+      "lib_id": "fpga-servo:MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": false
+    },
+    "C64": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q6": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "C42": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q5": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "C41": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "D4": {
+      "lib_id": "Diode_SMD:D_SMA",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C40": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C88": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "F1": {
+      "lib_id": "Fuse:Fuse_2920_7451Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R90": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C22": {
+      "lib_id": "Capacitor_SMD:C_1210_3225Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U19": {
+      "lib_id": "Package_SON:Texas_R-PUSON-N14",
+      "pads": 14,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "C23": {
+      "lib_id": "Capacitor_SMD:C_1210_3225Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q3": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "RT1": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R53": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U1": {
+      "lib_id": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+      "pads": 20,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "R59": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C5": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R57": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R88": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U10": {
+      "lib_id": "Package_SO:VSSOP-8_2.3x2mm_P0.5mm",
+      "pads": 8,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "has_schematic_link": true
+    },
+    "C19": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C63": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C18": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U13": {
+      "lib_id": "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm",
+      "pads": 11,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "L1": {
+      "lib_id": "Inductor_SMD:L_Coilcraft_MSS1246T-XXX",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U24": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-23-6",
+      "pads": 6,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "has_schematic_link": true
+    },
+    "C2": {
+      "lib_id": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C1": {
+      "lib_id": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U11": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+      "pads": 6,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "has_schematic_link": true
+    },
+    "CBOOT1": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "TP4": {
+      "lib_id": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": true
+    },
+    "RT2": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R1": {
+      "lib_id": "Resistor_SMD:R_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C80": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "D2": {
+      "lib_id": "Diode_SMD:D_SMA",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C89": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C71": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R56": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R3": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q1": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "C69": {
+      "lib_id": "Capacitor_SMD:C_1206_3216Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R83": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RSH3": {
+      "lib_id": "fpga-servo:Ohmite_650_4T_P25.40x6.35mm",
+      "pads": 4,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "has_schematic_link": true
+    },
+    "RGS4": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q2": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "F2": {
+      "lib_id": "Fuse:Fuse_1812_4532Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "H2": {
+      "lib_id": "fpga-servo:MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": false
+    },
+    "NTC2": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C4": {
+      "lib_id": "Capacitor_SMD:C_1210_3225Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RGS5": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R80": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R71": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R50": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U23": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-363_SC-70-6",
+      "pads": 6,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "has_schematic_link": true
+    },
+    "C30": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C87": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "D3": {
+      "lib_id": "Diode_SMD:D_SMA",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C26": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q4": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "RG5": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "Q7": {
+      "lib_id": "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm",
+      "pads": 21,
+      "pad_numbers": [
+        "",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "U21": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-23-5",
+      "pads": 5,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "R60": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R85": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C46": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C44": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R91": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C85": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RSH2": {
+      "lib_id": "fpga-servo:Ohmite_650_4T_P25.40x6.35mm",
+      "pads": 4,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "has_schematic_link": true
+    },
+    "RT3": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RGS1": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R21": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R41": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RGS6": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "RG2": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R23": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C92": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "J4": {
+      "lib_id": "fpga-servo:PhoenixContact_MKDS_5_3_9.52mm",
+      "pads": 3,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3"
+      ],
+      "has_schematic_link": true
+    },
+    "C83": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C24": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U16": {
+      "lib_id": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "pads": 14,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "R40": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C61": {
+      "lib_id": "Capacitor_SMD:C_0805_2012Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R42": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C91": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "C70": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "R84": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "TP2": {
+      "lib_id": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pads": 1,
+      "pad_numbers": [
+        "1"
+      ],
+      "has_schematic_link": true
+    },
+    "U6": {
+      "lib_id": "Package_QFP:LQFP-64_10x10mm_P0.5mm",
+      "pads": 64,
+      "pad_numbers": [
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "3",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "4",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "5",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "6",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "7",
+        "8",
+        "9"
+      ],
+      "has_schematic_link": true
+    },
+    "R20": {
+      "lib_id": "Resistor_SMD:R_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    },
+    "U22": {
+      "lib_id": "Package_TO_SOT_SMD:SOT-23-5",
+      "pads": 5,
+      "pad_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "has_schematic_link": true
+    },
+    "C86": {
+      "lib_id": "Capacitor_SMD:C_0603_1608Metric",
+      "pads": 2,
+      "pad_numbers": [
+        "1",
+        "2"
+      ],
+      "has_schematic_link": true
+    }
+  },
+  "blocking": true,
+  "caveats": [
+    "Reference equality is only the first parity dimension: pad-net correspondence and UUID link require native KiCad F8/DRC --schematic-parity.",
+    "Board-only mechanical H refs are not schematic mismatches if they have been reviewed.",
+    "A nonzero blocking result is diagnostic; this script does not certify a zero result as fab ready."
+  ]
+}

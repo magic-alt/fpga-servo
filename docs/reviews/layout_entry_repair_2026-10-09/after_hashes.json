@@ -1,0 +1,14 @@
+{
+  "hardware/aux_power.kicad_sch": "ff46451ba50db70f3d040e81a5e1cb0b8544aa80121ca65109c60df57666762d",
+  "hardware/ax7010_interface.kicad_sch": "4f0dbd2f6c761ac21dc0cc412e1d2d76c4677afb81c923cec7b62f7a2de875db",
+  "hardware/ax7010_servo_reva.kicad_sch": "5a80b1eb6e4b1d03a0e5b34efbeb496e79923582f4008581d234e9ac5cbd8895",
+  "hardware/current_adc.kicad_sch": "7570a75e7069672d7cb89444726e030636e6920d65d47d6e001edc3b1c550419",
+  "hardware/encoder.kicad_sch": "bdf7d0ce95eb800751205be712f6f0e9c07fb8a9edaa7e4bfa9f3cfca089e4de",
+  "hardware/gate_inverter.kicad_sch": "717dd07b67e8464bf642e963e04e7aabd807fc2ad69c58380197c095cb82771d",
+  "hardware/ocp_latch.kicad_sch": "dbcbc175c68f6e2303a40b58e183d34755892f4537930deed669b99144d42d9b",
+  "hardware/power_input.kicad_sch": "d7490c86745af31f9d468b6fdd5980f7030232d19c50c66a96c8ea247f3e64e7",
+  "hardware/ax7010_servo_reva.kicad_sym": "3794545b4b2c0c1515bed34eaacb5accfccdbc68efa32f9bfc661cf35cd169ce",
+  "hardware/ax7010_servo_reva.kicad_pcb": "a292e671cfac8617747523077f6ea9cf91869e8fb74618e02d5a96943b5b714b",
+  "hardware/ax7010_servo_reva.kicad_pro": "afe1395bb634f7c9225f7e59cead82905a03f28f7ee1399479bd3e82a97eec4e",
+  "hardware/bom.csv": "e55b6942cfcb363e3fe1c371b899ab47218aac984a3321e1f2d7fd7e3596dd6e"
+}

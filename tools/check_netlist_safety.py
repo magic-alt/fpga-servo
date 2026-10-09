@@ -34,8 +34,18 @@ def rail(ref, pin, name):
     if pin_nets.get((ref, pin)) != "/" + name:
         errors.append(f"{ref}.{pin} must connect to {name}")
 
-if len(values) != 157 or len(net_nodes) != 179:
-    errors.append(f"expected 157 board components / 179 nets (external F1 excluded), got {len(values)} / {len(net_nodes)}")
+if len(values) != 157 or len(net_nodes) != 166:
+    errors.append(f"expected 157 board components / 166 nets (external F1 excluded; ADC serial pins grounded), got {len(values)} / {len(net_nodes)}")
+# Official D_SMA/D_SMC pad 1 is cathode; never infer polarity from drawing alone.
+rail("D1", "1", "VBUS_PROT")
+rail("D1", "2", "GND")
+for diode, cap, driver_pin in [("D2", "CBOOT1", "20"), ("D3", "CBOOT2", "17"), ("D4", "CBOOT3", "14")]:
+    same((diode, "1"), (cap, "1"), ("U1", driver_pin))
+    rail(diode, "2", "VDRV_12V")
+# TI ADS8588S SBAS642A section8.4.1.13/.14/.17, serial mode.
+rail("U6", "6", "VIO_3V3")
+for pin in [*range(16, 23), *range(27, 34)]:
+    rail("U6", str(pin), "GND")
 # External source fuse is represented in the system schematic, not the PCB netlist.
 if any(ref in values for ref in ("F1", "J6")):
     errors.append("F1/J6 must be external and excluded from the PCB netlist")

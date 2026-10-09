@@ -1,0 +1,134 @@
+{
+  "same_components_values_footprints": true,
+  "same_physical_pin_set": true,
+  "changed_memberships": [
+    {
+      "ref": "D1",
+      "pin": "1",
+      "before": "/GND",
+      "after": "/VBUS_PROT"
+    },
+    {
+      "ref": "D1",
+      "pin": "2",
+      "before": "/VBUS_PROT",
+      "after": "/GND"
+    },
+    {
+      "ref": "D2",
+      "pin": "1",
+      "before": "/VDRV_12V",
+      "after": "/Gate Driver / Inverter/BST_U"
+    },
+    {
+      "ref": "D2",
+      "pin": "2",
+      "before": "/Gate Driver / Inverter/BST_U",
+      "after": "/VDRV_12V"
+    },
+    {
+      "ref": "D3",
+      "pin": "1",
+      "before": "/VDRV_12V",
+      "after": "/Gate Driver / Inverter/BST_V"
+    },
+    {
+      "ref": "D3",
+      "pin": "2",
+      "before": "/Gate Driver / Inverter/BST_V",
+      "after": "/VDRV_12V"
+    },
+    {
+      "ref": "D4",
+      "pin": "1",
+      "before": "/VDRV_12V",
+      "after": "/Gate Driver / Inverter/BST_W"
+    },
+    {
+      "ref": "D4",
+      "pin": "2",
+      "before": "/Gate Driver / Inverter/BST_W",
+      "after": "/VDRV_12V"
+    },
+    {
+      "ref": "U6",
+      "pin": "16",
+      "before": "unconnected-(U6-DB0-Pad16)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "17",
+      "before": "unconnected-(U6-DB1-Pad17)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "18",
+      "before": "unconnected-(U6-DB2-Pad18)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "19",
+      "before": "unconnected-(U6-DB3-Pad19)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "20",
+      "before": "unconnected-(U6-DB4-Pad20)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "21",
+      "before": "unconnected-(U6-DB5-Pad21)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "22",
+      "before": "unconnected-(U6-DB6-Pad22)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "27",
+      "before": "unconnected-(U6-DB9-Pad27)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "28",
+      "before": "unconnected-(U6-DB10-Pad28)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "29",
+      "before": "unconnected-(U6-DB11-Pad29)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "30",
+      "before": "unconnected-(U6-DB12-Pad30)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "31",
+      "before": "unconnected-(U6-DB13-Pad31)",
+      "after": "/GND"
+    },
+    {
+      "ref": "U6",
+      "pin": "32",
+      "before": "unconnected-(U6-DB14_HBEN-Pad32)",
+      "after": "/GND"
+    }
+  ],
+  "system_components": 159,
+  "system_nets": 167
+}

@@ -1,0 +1,23 @@
+NETLIST SAFETY CHECK FAILED
+ - expected 157 board components / 166 nets (external F1 excluded; ADC serial pins grounded), got 157 / 179
+ - D1.1 must connect to VBUS_PROT
+ - D1.2 must connect to GND
+ - required connection missing: (('D2', '1'), ('CBOOT1', '1'), ('U1', '20')): ['/VDRV_12V', '/Gate Driver {slash} Inverter/BST_U', '/Gate Driver {slash} Inverter/BST_U']
+ - D2.2 must connect to VDRV_12V
+ - required connection missing: (('D3', '1'), ('CBOOT2', '1'), ('U1', '17')): ['/VDRV_12V', '/Gate Driver {slash} Inverter/BST_V', '/Gate Driver {slash} Inverter/BST_V']
+ - D3.2 must connect to VDRV_12V
+ - required connection missing: (('D4', '1'), ('CBOOT3', '1'), ('U1', '14')): ['/VDRV_12V', '/Gate Driver {slash} Inverter/BST_W', '/Gate Driver {slash} Inverter/BST_W']
+ - D4.2 must connect to VDRV_12V
+ - U6.16 must connect to GND
+ - U6.17 must connect to GND
+ - U6.18 must connect to GND
+ - U6.19 must connect to GND
+ - U6.20 must connect to GND
+ - U6.21 must connect to GND
+ - U6.22 must connect to GND
+ - U6.27 must connect to GND
+ - U6.28 must connect to GND
+ - U6.29 must connect to GND
+ - U6.30 must connect to GND
+ - U6.31 must connect to GND
+ - U6.32 must connect to GND

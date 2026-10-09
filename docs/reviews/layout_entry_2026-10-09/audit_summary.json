@@ -1,0 +1,39 @@
+{
+  "baseline_commit": "79dd6fc",
+  "design_sources_unchanged": true,
+  "erc_errors": 0,
+  "erc_warnings": 0,
+  "erc_exclusions": 0,
+  "drc_violations": 271,
+  "drc_severities": {
+    "error": 220,
+    "warning": 51
+  },
+  "drc_types": {
+    "tracks_crossing": 2,
+    "shorting_items": 17,
+    "clearance": 113,
+    "solder_mask_bridge": 88,
+    "track_dangling": 8,
+    "isolated_copper": 43
+  },
+  "unconnected_items": 466,
+  "schematic_parity_items": 3,
+  "schematic_parity_types": {
+    "net_conflict": 1,
+    "footprint_symbol_field_mismatch": 1,
+    "extra_footprint": 1
+  },
+  "ignored_drc_types": [
+    "missing_courtyard",
+    "track_not_centered_on_via",
+    "tuning_profile_track_geometries",
+    "footprint_filters_mismatch",
+    "footprint_type_mismatch"
+  ],
+  "layout_freeze": "BLOCKED",
+  "hardware_changes_this_round": false,
+  "python_local": "3.13.9",
+  "kicad": "10.0.3",
+  "simulation": "ngspice-46 passive/ideal only"
+}

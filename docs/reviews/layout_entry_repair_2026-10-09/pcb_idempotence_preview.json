@@ -1,0 +1,11 @@
+{
+  "applied": false,
+  "physical_pad_changes": [],
+  "removed_off_board_references": [],
+  "j1_fields": {
+    "Board_Revision": "ALINX AX7010 2022",
+    "Board_Connector": "J10"
+  },
+  "mount_centers_unchanged": true,
+  "routing_changed": false
+}

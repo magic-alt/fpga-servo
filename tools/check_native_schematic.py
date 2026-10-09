@@ -2,7 +2,7 @@ from pathlib import Path
 import re
 import sys
 
-from kicad_native import assert_balanced, extract_forms, property_value, strip_form
+from kicad_native import assert_balanced, extract_forms, head_string, property_value, strip_form
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / "hardware"
@@ -20,10 +20,46 @@ SCHEMATICS = [TOP, *(HW / name for name in CHILD_NAMES)]
 SYMBOL_LIB = HW / "ax7010_servo_reva.kicad_sym"
 errors: list[str] = []
 
+
+def check_diode_terminals(text: str, source: str) -> None:
+    for form in extract_forms(text, "symbol"):
+        name = head_string(form.text, "symbol")
+        if name not in {"DIODE", "TVS", "ax7010_servo_reva:DIODE", "ax7010_servo_reva:TVS"}:
+            continue
+        terminals = {}
+        for pin in extract_forms(form.text, "pin"):
+            numbers = extract_forms(pin.text, "number")
+            names = extract_forms(pin.text, "name")
+            if numbers and names:
+                terminals[head_string(numbers[0].text, "number")] = head_string(names[0].text, "name")
+        if terminals != {"1": "K", "2": "A"}:
+            errors.append(f"{source}: {name} must match D_SMA/D_SMC cathode pad1, anode pad2: {terminals}")
+
+
+def check_serial_adc(text: str, source: str, required_name: str) -> None:
+    matches = [f.text for f in extract_forms(text, "symbol")
+               if head_string(f.text, "symbol") == required_name]
+    if len(matches) != 1:
+        errors.append(f"{source}: exactly one {required_name} definition required")
+        return
+    pins = {}
+    for pin in extract_forms(matches[0], "pin"):
+        numbers = extract_forms(pin.text, "number")
+        if numbers:
+            pins[head_string(numbers[0].text, "number")] = pin.text.split()[1]
+    for number in [*range(16, 23), *range(27, 34)]:
+        if pins.get(str(number)) != "input":
+            errors.append(f"{source}: serial ADC pin{number} must be modeled as input")
+    for number in [14, 15, 24, 25]:
+        if pins.get(str(number)) != "output":
+            errors.append(f"{source}: ADC status/DOUT pin{number} must remain output")
+
 if not SYMBOL_LIB.exists() or SYMBOL_LIB.stat().st_size == 0:
     errors.append("missing/empty native symbol library: hardware/ax7010_servo_reva.kicad_sym")
 else:
     symbol_text = SYMBOL_LIB.read_text(encoding="utf-8", errors="strict")
+    check_diode_terminals(symbol_text, SYMBOL_LIB.name)
+    check_serial_adc(symbol_text, SYMBOL_LIB.name, "ADS8588S_SERIAL")
     if not re.match(r"^\(kicad_symbol_lib\s+\(version\s+\d+\)", symbol_text):
         errors.append("ax7010_servo_reva.kicad_sym: invalid KiCad native symbol library header")
     try:
@@ -45,6 +81,9 @@ for path in SCHEMATICS:
         errors.append(f"missing/empty native schematic: {path.relative_to(ROOT)}")
         continue
     text = path.read_text(encoding="utf-8", errors="strict")
+    check_diode_terminals(text, path.name)
+    if path.name == "current_adc.kicad_sch":
+        check_serial_adc(text, path.name, "ax7010_servo_reva:ADS8588S_SERIAL")
     if not re.match(r"^\(kicad_sch\s+\(version\s+\d+\)", text):
         errors.append(f"{path.name}: invalid KiCad native schematic header")
     try:

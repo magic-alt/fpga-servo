@@ -1,0 +1,3 @@
+# Keep machine-produced evidence byte-for-byte for its SHA256 manifests.
+docs/reviews/layout_entry_2026-10-09/** -text whitespace=cr-at-eol
+docs/reviews/layout_entry_repair_2026-10-09/** -text whitespace=cr-at-eol
