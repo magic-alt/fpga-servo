@@ -1,0 +1,33 @@
+{
+  "source_archive": "AI_PCB_fpga_servo_engineering_guide_V1.0.zip",
+  "archive_sha256": "bdb3f219fd651fe705fdd94428ac5f8b55d5001919bb6d7551e23d699cb662bc",
+  "original_member_sha256": {
+    ".agents/skills/kicad-audit/SKILL.md": "7d60ae8286d44a40699d8b0e4d8bd36004cbb0e080ec39aa84bd44423efe7c10",
+    ".agents/skills/kicad-layout/SKILL.md": "819cc2e955f4a3f0e643faa65e68d63404ef5ea06b179b5975dba02ac48a558b",
+    ".agents/skills/kicad-release/SKILL.md": "3582297f8d71d38680f00f82e9ff28ffb26f0d658d37c82343ec990e27138e7e",
+    ".agents/skills/kicad-schematic/SKILL.md": "ad6a489b0731fa612fefc14df8b9d88838d5b10a710efef5fc4ed03e72652a57",
+    "scripts/board_parity_audit.py": "7cbbf61bbc504de1fd87cc69997032cd2eacffa59b7baf5a093fd6a5ffce600e",
+    "scripts/run_kicad_qa.ps1": "e0ef24ef63a8b512a708ed715bd4b7e9a41420c0c338f5aec4936e0b5a719b57",
+    "scripts/run_kicad_qa.sh": "10e9c75ee3633b88ed5a1ef3e50a3cc832cbd4412dd41197a1f1edcc163cfc43",
+    "templates/review_matrix.md": "da5a1b611df4318852795a27d2f0c6a8ff8daa839ee33ac5925cc81c02520ee7",
+    "tests/test_board_parity_audit.py": "0ad5f0f35c9746debf650f19fc813fff8a9e04b420a4e0c36ce1837f266d9515"
+  },
+  "adaptations": [
+    "Skill references and branch/authorization wording aligned with project rules",
+    "PowerShell KiCad default path and supplemental audit path adapted; version subcommand used",
+    "Root AGENTS.md, global configuration and original tutorial documents preserved",
+    "KiCad 10 embedded net names and {slash} escaping supported with two failing-then-passing regressions",
+    "PowerShell QA includes existing repository/safety/OCP/physical-parity/constraints and tutorial tests; dependent audits require successful fresh export",
+    "Bash supplemental audit path adapted; not executed on this Windows host"
+  ],
+  "installed_sha256": {
+    "tools/ai_pcb_guide/scripts/board_parity_audit.py": "8232dcd50e5ded4d5b215a246ab20d886eb93231be1a8e7b29aa014a67cbb08d",
+    "tools/ai_pcb_guide/tests/test_board_parity_audit.py": "43e428b36986e44bb4d324aa2ff075cb4a928c9476e661a022588dcb6bc17ec4",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.ps1": "ec7b9fce7ef67b248bb26dc4fe2cff1a9615c47d8856e5aea605969f24edc525",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.sh": "3fd3ed42c56c761cd10ca42159b6200b4652ea84f42e336e8fdad051dd8b931a",
+    ".agents/skills/kicad-audit/SKILL.md": "cfe0a6506d72dd0f62ff034b5f565501eb057bfdbe225c9def9bfb922732a678",
+    ".agents/skills/kicad-layout/SKILL.md": "85f06d8adfcae1c29b9a6cc266ab3e97df52d70cddc10b1c85d5c8fdb9df3c37",
+    ".agents/skills/kicad-release/SKILL.md": "56452855c244d7bc903e6ce21f51d8a748f09e7b12c2f9de39b2de7d433c73f9",
+    ".agents/skills/kicad-schematic/SKILL.md": "54e34e88b324bf070f094cd5bd6dc01bbde3cf1a5a34b74f8423d9835fe25460"
+  }
+}
