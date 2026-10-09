@@ -247,7 +247,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -265,7 +265,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2289,10 +2289,10 @@
 				)
 			)
 		 (hide yes))
-		(pin "1"
+		(pin "2"
 			(uuid "68498394-b51b-483d-8e7e-73b81f2f2d6a")
 		)
-		(pin "2"
+		(pin "1"
 			(uuid "89ef422f-0213-4e03-85e5-d84844e67a22")
 		)
 		(instances
@@ -3014,10 +3014,10 @@
 				)
 			)
 		 (hide yes))
-		(pin "1"
+		(pin "2"
 			(uuid "81d31927-802b-4f17-80dc-eff32ae081b7")
 		)
-		(pin "2"
+		(pin "1"
 			(uuid "81e9709f-c408-4b07-95e9-362ded19dbf1")
 		)
 		(instances
@@ -3739,10 +3739,10 @@
 				)
 			)
 		 (hide yes))
-		(pin "1"
+		(pin "2"
 			(uuid "6692cfc2-2aac-4ce4-a264-d89f99c28d0c")
 		)
-		(pin "2"
+		(pin "1"
 			(uuid "729c48cf-0870-4dd8-a3ae-dd5c37b7e59e")
 		)
 		(instances

@@ -1,0 +1,6 @@
+{
+  "case": "R40.2 renamed to99 in copied XML",
+  "returncode": 1,
+  "expected": "reject before simulator load",
+  "result": "PASS"
+}

@@ -8,12 +8,12 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 
 | Item | Rev.A target |
 |---|---:|
-| DC bus | 12-48 V nominal |
-| Recommended continuous bus max | 55 V |
+| DC bus | 24-48 V (confirmed 2026-10-09) |
+| Operating bus maximum | 48 V; transient clamp/energy limit pending |
 | MOSFET VDS | 100 V |
-| PWM | 10-40 kHz, 20 kHz nominal |
-| Continuous phase current | 15 A with validated airflow/copper |
-| Short peak phase current | 25 A, <=5 s target |
+| PWM | 20 kHz |
+| Continuous phase current | 10 A; thermal calculations provisionally use RMS |
+| Short peak phase current | Pending; historical 25 A / <=5 s conflicts with nominal 22.06 A OCP |
 | Current shunt | 5 mOhm, >=5 W, Kelvin |
 | Current gain | 20 V/V |
 | Current transfer | 0.1 V/A |
@@ -28,7 +28,7 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 1. **DC-link / protection**
    - external upstream F1: Littelfuse KLKD025.T 25A / 600VDC in LPSM0001Z holder, near source positive; J3 is the fused board input; F1/J6 are system wiring, excluded from PCB
    - confirm actual bus-current/inrush, cable and fault-energy coordination before higher-power operation
-   - input TVS and bulk capacitance close to bridge
+   - bulk capacitance close to bridge; D1 TVS is DNP, so no fitted TVS protection or qualified regeneration sink
    - bus-voltage divider to ADC
 
 2. **Three-phase inverter**
@@ -49,17 +49,18 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
    - CH4: VBUS
    - CH5: MOSFET-board NTC
    - CH6: motor/connector NTC
-   - CH7/8: spare analog inputs
-   - serial interface is the default FPGA interface; the second AX7010 connector exposes parallel data as an optional development path
+   - CH7/8: unused, currently tied to GND
+   - serial interface uses two DOUT lines; J2 is DNP, not an implemented parallel-data path
+   - serial-mode DB0..6, DB9..13 and DB14/HBEN now visibly grounded; U6 uses the dedicated ADS8588S_SERIAL symbol
 
 5. **Encoder**
    - AM26LV32E quad RS-422 receiver at 3.3 V
-   - 120 ohm termination footprints on A/B/Z, default fitted only when board is the line end
-   - connector provides protected 5 V encoder power
+   - 120 ohm termination footprints on A/B/Z are currently DNP; fit decision depends on actual cable/encoder
+   - shared VA_5V encoder supply through F2 PTC; exact PTC and short-circuit isolation remain unqualified
 
 6. **Auxiliary power**
    - LM5164: DC bus -> 12 V gate/aux rail
-   - TPS62160-class 12 V -> 5 V rail
+   - TPS62163DSGR fixed-output 12 V -> 5 V rail
    - 3.3 V logic is supplied by AX7010 VIO; there is no local 3.3 V LDO in the current schematic
    - safety AND gates and encoder receiver run from AX7010 `VIO_3V3`; ADC DVDD also uses this rail
    - dedicated digital isolation/buffer arrays are not fitted; partial-power behavior remains a qualification gate

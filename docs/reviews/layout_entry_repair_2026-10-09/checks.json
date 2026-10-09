@@ -1,0 +1,122 @@
+[
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_native_schematic.py"
+    ],
+    "returncode": 0,
+    "output": "NATIVE SCHEMATIC CHECK PASSED\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_kicad_grid.py"
+    ],
+    "returncode": 0,
+    "output": "KICAD GRID CHECK PASSED\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_schematic_layout.py"
+    ],
+    "returncode": 0,
+    "output": "SCHEMATIC LAYOUT CHECK PASSED\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_schematic_connectivity.py"
+    ],
+    "returncode": 0,
+    "output": "SCHEMATIC CONNECTIVITY CHECK PASSED\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_power_wiring.py"
+    ],
+    "returncode": 0,
+    "output": "POWER WIRING CHECK PASSED: every power graphic and child port reaches a real pin by visible wires\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_design.py"
+    ],
+    "returncode": 0,
+    "output": "DESIGN CHECK PASSED\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/test_pcb_checks.py"
+    ],
+    "returncode": 0,
+    "output": "...........\r\n----------------------------------------------------------------------\r\nRan 11 tests in 0.010s\r\n\r\nOK\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_netlist_safety.py",
+      "artifacts\\layout_entry_repair_2026-10-09\\final.net"
+    ],
+    "returncode": 0,
+    "output": "NETLIST SAFETY CHECK PASSED: 157 components / 166 nets\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_ocp_behavior.py",
+      "artifacts\\layout_entry_repair_2026-10-09\\final.net"
+    ],
+    "returncode": 0,
+    "output": "NETLIST SAFETY CHECK PASSED: 157 components / 166 nets\r\nOCP DIGITAL BEHAVIOR CHECK PASSED: 531 scenarios; stable levels only\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_pcb_constraints.py",
+      "artifacts\\layout_entry_repair_2026-10-09\\final.net"
+    ],
+    "returncode": 0,
+    "output": "PCB CONSTRAINTS PASSED\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_pcb_parity.py",
+      "artifacts\\layout_entry_repair_2026-10-09\\final.net",
+      "--output",
+      "artifacts\\layout_entry_repair_2026-10-09\\pcb_parity.json"
+    ],
+    "returncode": 0,
+    "output": "PCB PARITY PASSED: 157 components / 166 nets / 161 footprints\r\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/simulate_layout_entry.py",
+      "artifacts\\layout_entry_repair_2026-10-09\\final.xml",
+      "--ngspice-library",
+      "D:/Software/KiCad/10.0/bin/ngspice.dll",
+      "--output",
+      "artifacts\\layout_entry_repair_2026-10-09\\simulation"
+    ],
+    "returncode": 0,
+    "output": "{\r\n  \"scope\": \"passive/ideal sources only; no vendor active-device or switching models\",\r\n  \"target\": {\r\n    \"bus_V\": [\r\n      24,\r\n      48\r\n    ],\r\n    \"continuous_phase_A\": 10,\r\n    \"pwm_Hz\": 20000\r\n  },\r\n  \"netlist_sha256\": \"dd50489074229b2c2bdb3f7c98eeb73598e927420c913d29ca0d2396fd7191fd\",\r\n  \"ngspice_library_sha256\": \"d664459f12e2d643cb883f70cc0cb9d15185ef1dbb4b2ceb4a04cc9ca910443a\",\r\n  \"ngspice_version_log\": [\r\n    \"stderr Warning: can't find the initialization file spinit.\",\r\n    \"stdout ******\",\r\n    \"stdout ** ngspice-46 shared library\",\r\n    \"stdout ** Creation Date: Apr 14 2026   05:15:29\",\r\n    \"stdout ******\",\r\n    \"stdout ******\",\r\n    \"stdout ** ngspice-46 : Circuit level simulation program\",\r\n    \"stdout ** Compiled with KLU Direct Linear Solver\",\r\n    \"stdout ** The U. C. Berkeley CAD Group\",\r\n    \"stdout ** Copyright 1985-1994, Regents of the University of California.\",\r\n    \"stdout ** Copyright 2001-2025, The ngspice team.\",\r\n    \"stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\",\r\n    \"stdout ** Please file your bug-reports at https://ngspice.sourceforge.io/bugrep.html\",\r\n    \"stdout ** Creation Date: Apr 14 2026   05:15:29\",\r\n    \"stdout ******\"\r\n  ],\r\n  \"netlist_values\": {\r\n    \"R1\": \"280k\",\r\n    \"R2\": \"280k\",\r\n    \"R3\": \"39k\",\r\n    \"C5\": \"10nF\",\r\n    \"R50\": \"10k\",\r\n    \"R51\": \"160k\",\r\n    \"R52\": \"160k\",\r\n    \"R53\": \"10k\",\r\n    \"R40\": \"47R\",\r\n    \"C40\": \"1nF\",\r\n    \"R87\": \"10k\",\r\n    \"R88\": \"1k\",\r\n    \"C92\": \"1nF\",\r\n    \"C1\": \"100uF\",\r\n    \"C2\": \"100uF\",\r\n    \"RSH1\": \"5mR\"\r\n  },\r\n  \"bus_divider_V_at_24_48\": [\r\n    1.5626043405676127,\r\n    3.1252086811352253\r\n  ],\r\n  \"bus_filter\": {\r\n    \"tau_s\": 0.0003646076794657763,\r\n    \"fc_Hz\": 436.5101232236507,\r\n    \"step_max_error_V\": 2.0140944221314072e-06\r\n  },\r\n  \"ocp\": {\r\n    \"reference_low_V\": 0.29411764705882354,\r\n    \"reference_high_V\": 4.705882352941177,\r\n    \"nominal_trip_magnitude_A\": 22.058823529411764,\r\n    \"illustrative_positive_trip_A_rail_5pct_divider_0p1pct_shunt_1pct\": [\r\n      20.743186329230507,\r\n      23.401588616105222\r\n    ],\r\n    \"corner_exclusions\": \"INA gain/offset/reference, comparator, temperature, delay excluded\"\r\n  },\r\n  \"current_filter\": {\r\n    \"tau_s\": 4.7000000000000004e-08,\r\n    \"fc_Hz\": 3386275.384933943,\r\n    \"gain_at_20kHz_dB\": -0.00015149286555824512,\r\n    \"step_max_error_V\": 1.0606033400733378e-05\r\n  },\r\n  \"clear_filter\": {\r\n    \"tau_s\": 1.0000000000000002e-06,\r\n    \"step_max_error_V\": 9.256497983667344e-06\r\n  },\r\n  \"regen\": {\r\n    \"nominal_capacitance_F\": 0.00019999999999999998,\r\n    \"energy_48_to_55V_J\": 0.0721,\r\n    \"ideal_1A_time_48_to_55V_s\": 0.0014,\r\n    \"simulated_final_V\": 55.00000000002017,\r\n    \"warning\": \"55 V is illustrative overvoltage, not approved operating voltage; no sink/clamp/ESR/ESL modeled\"\r\n  },\r\n  \"shunt_at_10A_RMS_W_each\": 0.5,\r\n  \"analytical_cross_checks\": \"PASS\"\r\n}\r\n"
+  },
+  {
+    "command": [
+      "D:/Software/KiCad/10.0/bin/kicad-cli.exe",
+      "sym",
+      "upgrade",
+      "--force",
+      "--output",
+      "artifacts\\layout_entry_repair_2026-10-09\\validated.kicad_sym",
+      "hardware/ax7010_servo_reva.kicad_sym"
+    ],
+    "returncode": 0,
+    "output": "\u7528\u66f4\u65b0\u7684\u683c\u5f0f\u4fdd\u5b58\u7b26\u53f7\u5e93\r\n"
+  }
+]

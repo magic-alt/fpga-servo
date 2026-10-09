@@ -1,0 +1,5 @@
+regen_ideal_unsunk: ideal passive layout-entry audit
+Iregen 0 bus DC 1
+Cbus bus 0 0.00019999999999999998 IC=48
+.options reltol=1e-6 abstol=1e-12 vntol=1e-9 method=trap
+.end

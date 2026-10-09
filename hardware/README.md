@@ -30,7 +30,7 @@ The auxiliary buck supply is kept along the top edge, away from the current-sens
 The Rev.A1 schematic is now validated through the same path used for release review:
 
 - source of truth is the checked-in KiCad 10-native `.kicad_sch` hierarchy; legacy `.sch` and `.lib` files are no longer tracked
-- CI exports the netlist directly from `ax7010_servo_reva.kicad_sch` and requires **158 functional components / 180 nets**
+- CI exports the netlist directly from `ax7010_servo_reva.kicad_sch`: **157 board components / 166 nets**; XML system export includes external F1/J6 and has **159 objects / 167 nets**
 - KiCad 10 ERC runs directly on the tracked native hierarchy with `--severity-all --exit-code-violations` and requires **0 errors / 0 warnings**
 - repository checks reject Global Labels, objects outside the A4 drawing-safe region, duplicate hierarchy ports, floating labels and zero-length wires
 - exported-netlist safety checks verify PWM/default-off, gate resistors, current paths and decoupling
@@ -48,7 +48,7 @@ Current footprint decisions made while closing ERC:
 
 ## Important limitation
 
-The **schematic is ERC-clean**, but the PCB is still a **development layout, not a released manufacturing file**. The 2026-10-09 synchronization now contains 158 electrical footprints plus four mounting holes, complete physical-pad/net/DNP parity and preliminary placement. Latest saved/refilled DRC: **271 violations / 466 unconnected / 0 schematic parity issues**. The 20 legacy tracks and original copper zone remain for endpoint-qualified replacement; known shorts remain. Do not fabricate or energize this board. See `docs/pcb_repair_progress_2026-10-09.md`.
+The **schematic is ERC-clean**. D1..D4 now match K1/A2 footprint polarity; 13 U6 serial-mode pins are visibly grounded using ADS8588S_SERIAL. PCB contains 157 electrical footprints plus four mounting holes; physical parity and native schematic parity pass. Fresh refilled KiCad10.0.3 DRC: **271 violations (220 errors / 51 warnings), 478 unconnected items, 0 schematic parity issues**. Five inherited ignored DRC check types remain. There are 20 legacy tracks, zero vias and five zones. See [latest repair record](../docs/layout_entry_repair_2026-10-09.md); do not fabricate or energize this baseline.
 
 Before fabrication, complete fine digital routing, fanout, copper-pour refill, PCB DRC, creepage/clearance review, thermal/current-density review and final land-pattern verification. In particular, terminal-block/shunt fit, current and thermal qualification, actual AX7010 physical continuity and external F1 coordination remain fabrication gates (user confirms 2022/J10; F1 selected as KLKD025.T + LPSM0001Z); an ERC-valid footprint assignment does not by itself qualify connector current capability.
 
@@ -56,4 +56,4 @@ OCP latch implementation and timing gates: `docs/ocp_latch_review_2026-10-09.md`
 
 INA241 correction during package review: U2/U3/U4 reserved pin 4 connects to GND per TI SBOSA30D Table 5-1, despite its NC name. Symbol electrical type, schematic wiring and PCB pad nets match; net count changed from 183 to 180. `check_netlist_safety.py` rejects regression to the former floating pins.
 
-2026-10-09 schematic-only update: F1 is external, J6 represents the external PSU connection, and J3.1 is VIN_FUSED. System BOM: 159 rows; PCB netlist: 157 components / 179 nets. PCB intentionally unchanged and requires later F1 removal/J3 net synchronization. See `docs/schematic_optimization_2022_j10_2026-10-09.md`.
+The earlier schematic-only update externalized F1/J6 and made J3.1 VIN_FUSED. The subsequent layout-entry repair has now removed PCB F1 and synchronized J3.1 plus ADC/diode pads. System BOM remains159 rows; current board netlist157/166. The prior schematic-only record remains historical.

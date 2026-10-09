@@ -1,0 +1,86 @@
+{
+  "scope": "passive/ideal sources only; no vendor active-device or switching models",
+  "target": {
+    "bus_V": [
+      24,
+      48
+    ],
+    "continuous_phase_A": 10,
+    "pwm_Hz": 20000
+  },
+  "netlist_sha256": "dd50489074229b2c2bdb3f7c98eeb73598e927420c913d29ca0d2396fd7191fd",
+  "ngspice_library_sha256": "d664459f12e2d643cb883f70cc0cb9d15185ef1dbb4b2ceb4a04cc9ca910443a",
+  "ngspice_version_log": [
+    "stderr Warning: can't find the initialization file spinit.",
+    "stdout ******",
+    "stdout ** ngspice-46 shared library",
+    "stdout ** Creation Date: Apr 14 2026   05:15:29",
+    "stdout ******",
+    "stdout ******",
+    "stdout ** ngspice-46 : Circuit level simulation program",
+    "stdout ** Compiled with KLU Direct Linear Solver",
+    "stdout ** The U. C. Berkeley CAD Group",
+    "stdout ** Copyright 1985-1994, Regents of the University of California.",
+    "stdout ** Copyright 2001-2025, The ngspice team.",
+    "stdout ** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html",
+    "stdout ** Please file your bug-reports at https://ngspice.sourceforge.io/bugrep.html",
+    "stdout ** Creation Date: Apr 14 2026   05:15:29",
+    "stdout ******"
+  ],
+  "netlist_values": {
+    "R1": "280k",
+    "R2": "280k",
+    "R3": "39k",
+    "C5": "10nF",
+    "R50": "10k",
+    "R51": "160k",
+    "R52": "160k",
+    "R53": "10k",
+    "R40": "47R",
+    "C40": "1nF",
+    "R87": "10k",
+    "R88": "1k",
+    "C92": "1nF",
+    "C1": "100uF",
+    "C2": "100uF",
+    "RSH1": "5mR"
+  },
+  "bus_divider_V_at_24_48": [
+    1.5626043405676127,
+    3.1252086811352253
+  ],
+  "bus_filter": {
+    "tau_s": 0.0003646076794657763,
+    "fc_Hz": 436.5101232236507,
+    "step_max_error_V": 2.0140944221314072e-06
+  },
+  "ocp": {
+    "reference_low_V": 0.29411764705882354,
+    "reference_high_V": 4.705882352941177,
+    "nominal_trip_magnitude_A": 22.058823529411764,
+    "illustrative_positive_trip_A_rail_5pct_divider_0p1pct_shunt_1pct": [
+      20.743186329230507,
+      23.401588616105222
+    ],
+    "corner_exclusions": "INA gain/offset/reference, comparator, temperature, delay excluded"
+  },
+  "current_filter": {
+    "tau_s": 4.7000000000000004e-08,
+    "fc_Hz": 3386275.384933943,
+    "gain_at_20kHz_dB": -0.00015149286555824512,
+    "step_max_error_V": 1.0606033400733378e-05
+  },
+  "clear_filter": {
+    "tau_s": 1.0000000000000002e-06,
+    "step_max_error_V": 9.256497983667344e-06
+  },
+  "regen": {
+    "nominal_capacitance_F": 0.00019999999999999998,
+    "energy_48_to_55V_J": 0.0721,
+    "ideal_1A_time_48_to_55V_s": 0.0014,
+    "simulated_final_V": 55.00000000002017,
+    "warning": "55 V is illustrative overvoltage, not approved operating voltage; no sink/clamp/ESR/ESL modeled"
+  },
+  "shunt_at_10A_RMS_W_each": 0.5,
+  "analytical_cross_checks": "PASS"
+}

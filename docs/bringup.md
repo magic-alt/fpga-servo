@@ -1,5 +1,7 @@
 # Rev.A bring-up sequence
 
+Current operating target: **24-48V, 10A continuous phase current, 20kHz PWM** (2026-10-09). Lower voltages below are diagnostic conditions only. The [layout-entry repair](layout_entry_repair_2026-10-09.md) closes diode polarity and ADC serial straps, but PCB routing/DRC and other release gates remain open before assembly/energization. No stage below is recorded as completed bench evidence.
+
 ## Stage 0 - unpowered inspection
 
 1. Verify polarity/orientation of all MOSFETs, FD6288, regulators, ADC and current-sense amplifiers.
@@ -23,7 +25,7 @@ Do not fit motor or high-current DC-link wiring yet.
 
 ## Stage 2 - FPGA I/O without bridge switching
 
-Connect AX7010 through the two 2x20 cables.
+Connect the active J1 2x20 interface to the confirmed AX7010 2022 J10; J2 is DNP. Verify physical continuity and orientation first.
 
 1. Confirm all six PWM pins idle low after configuration/reset.
 2. Confirm `GATE_EN` remains low by default.
@@ -67,7 +69,7 @@ Only after Stage 0-5 pass:
 
 - increase to 48 V with current-limited source / suitable battery protection
 - verify switching overshoot remains below device design margin
-- perform thermal soak at 5 A, 10 A, then 15 A phase RMS targets
+- perform thermal soak at 5 A then 10 A phase RMS under confirmed ambient/cooling; 15 A is no longer the continuous target
 - perform regeneration tests with a safe bus-energy sink
 
 ## Configuration / OCP acceptance additions
