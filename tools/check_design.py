@@ -1,5 +1,6 @@
 from pathlib import Path
 import csv
+import re
 import sys
 
 from kicad_native import extract_forms, property_value, strip_form
@@ -15,6 +16,7 @@ schematic_paths = [
     HW / "gate_inverter.kicad_sch",
     HW / "current_adc.kicad_sch",
     HW / "encoder.kicad_sch",
+    HW / "ocp_latch.kicad_sch",
     HW / "ax7010_interface.kicad_sch",
 ]
 
@@ -32,8 +34,9 @@ for path in required:
 
 for path in [*HW.glob("*.sch"), *HW.glob("*.lib")]:
     errors.append(f"legacy KiCad source must not be tracked: {path.relative_to(ROOT)}")
-if (HW / "sym-lib-table").exists():
-    errors.append("hardware/sym-lib-table is local generated state and must not be tracked")
+table = HW / "sym-lib-table"
+if not table.exists() or '${KIPRJMOD}/ax7010_servo_reva.kicad_sym' not in table.read_text(encoding="utf-8"):
+    errors.append("portable project symbol table missing or invalid")
 
 schematic_text = ""
 for path in schematic_paths:
@@ -62,6 +65,7 @@ if schematic_paths[0].exists():
         "gate_inverter.kicad_sch",
         "current_adc.kicad_sch",
         "encoder.kicad_sch",
+        "ocp_latch.kicad_sch",
         "ax7010_interface.kicad_sch",
     ]:
         if child not in children:
@@ -88,11 +92,51 @@ for token in ["U_SH_P", "U_SH_N", "V_SH_P", "V_SH_N", "W_SH_P", "W_SH_N"]:
     if token in schematic_text:
         errors.append(f"obsolete schematic construct remains: {token}")
 
+# The selected source fuse is system wiring, not a placeholder PCB land pattern.
+power_authored = strip_form((HW / "power_input.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
+fuses = [x.text for x in extract_forms(power_authored, "symbol")
+         if property_value(x.text, "Reference") == "F1"]
+if len(fuses) != 1:
+    errors.append("exactly one external F1 system symbol required")
+else:
+    fuse = fuses[0]
+    if "(on_board no)" not in fuse or "(in_pos_files no)" not in fuse:
+        errors.append("F1 must be external and excluded from PCB/placement")
+    if property_value(fuse, "Footprint"):
+        errors.append("external F1 must not retain a PCB placeholder footprint")
+    for prop, expected in [("MPN", "KLKD025.T"), ("Holder_MPN", "LPSM0001Z")]:
+        if property_value(fuse, prop) != expected:
+            errors.append(f"F1: selected external {prop} missing")
+
+interface_authored = strip_form((HW / "ax7010_interface.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
+j1 = next(x.text for x in extract_forms(interface_authored, "symbol")
+          if property_value(x.text, "Reference") == "J1")
+if property_value(j1, "Board_Revision") != "ALINX AX7010 2022" or property_value(j1, "Board_Connector") != "J10":
+    errors.append("J1 must identify the confirmed AX7010 2022 / J10 interface")
+j6 = next((x.text for x in extract_forms(power_authored, "symbol")
+           if property_value(x.text, "Reference") == "J6"), "")
+if "(on_board no)" not in j6 or property_value(j6, "Footprint"):
+    errors.append("J6 must remain an external source wiring terminal without a PCB footprint")
+
 pcb_path = HW / "ax7010_servo_reva.kicad_pcb"
 if pcb_path.exists():
     pcb = pcb_path.read_text(errors="ignore")
     if pcb.count("(") != pcb.count(")"):
         errors.append("PCB s-expression parentheses are unbalanced")
+    # M3-labelled mechanical holes must admit the screw; the old placeholder
+    # used a 1 mm drill despite its 5 mm copper pad and M3_HOLE value.
+    # 3.2 mm is the clearance drill used by KiCad's M3 mounting-hole library.
+    for footprint in extract_forms(pcb, "footprint"):
+        if property_value(footprint.text, "Value") != "M3_HOLE":
+            continue
+        ref = property_value(footprint.text, "Reference")
+        pads = extract_forms(footprint.text, "pad")
+        if not pads:
+            errors.append(f"PCB {ref}: M3 mounting hole has no drilled pad")
+        for pad in pads:
+            drill = re.search(r"\(drill\s+(\d+(?:\.\d+)?)\s*\)", pad.text)
+            if not drill or float(drill.group(1)) < 3.2:
+                errors.append(f"PCB {ref}: M3 clearance hole requires drill >= 3.2 mm")
     for token in [
         "FD6288T",
         "ADS8588S",
@@ -126,6 +170,35 @@ bom_path = HW / "bom.csv"
 if bom_path.exists():
     with bom_path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
+    expected_refs = set()
+    for path in schematic_paths:
+        if not path.exists():
+            continue
+        authored = strip_form(path.read_text(encoding="utf-8"), "lib_symbols")
+        for symbol in extract_forms(authored, "symbol"):
+            ref = property_value(symbol.text, "Reference")
+            if ref and not ref.startswith("#"):
+                expected_refs.add(ref)
+    row_by_ref = {row["Ref"]: row for row in rows}
+    for path in schematic_paths:
+        if not path.exists():
+            continue
+        authored = strip_form(path.read_text(encoding="utf-8"), "lib_symbols")
+        for symbol in extract_forms(authored, "symbol"):
+            ref = property_value(symbol.text, "Reference")
+            row = row_by_ref.get(ref)
+            if row is None:
+                continue
+            for column, prop in [("Value / Part", "Value"), ("Package", "Footprint")]:
+                if row[column] != property_value(symbol.text, prop):
+                    errors.append(f"BOM {ref}: {column} differs from schematic")
+            if row["MPN"] != (property_value(symbol.text, "MPN") or "TBD"):
+                errors.append(f"BOM {ref}: MPN differs from schematic")
+            if row["Status / note"].startswith("DNP") != ("(dnp yes)" in symbol.text):
+                errors.append(f"BOM {ref}: assembly option differs from schematic")
+    bom_refs = [row["Ref"] for row in rows]
+    if set(bom_refs) != expected_refs or len(bom_refs) != len(set(bom_refs)):
+        errors.append("BOM references must match the schematic exactly (one row per component)")
     joined = "\n".join(str(row) for row in rows)
     for part in ["FD6288T", "BSC040N10NS5", "INA241A2", "ADS8588S", "AM26LV32E"]:
         if part not in joined:

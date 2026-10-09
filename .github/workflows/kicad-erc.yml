@@ -30,12 +30,7 @@ jobs:
           cfg="$HOME/.config/kicad/10.0"
           mkdir -p "$cfg"
 
-          cat > "$cfg/sym-lib-table" <<TABLE
-          (sym_lib_table
-            (version 7)
-            (lib (name "ax7010_servo_reva")(type "KiCad")(uri "$GITHUB_WORKSPACE/hardware/ax7010_servo_reva.kicad_sym")(options "")(descr "Tracked native project symbols"))
-          )
-          TABLE
+          printf '(sym_lib_table\n  (version 7)\n)\n' > "$cfg/sym-lib-table"
 
           if [ -f /usr/share/kicad/template/fp-lib-table ]; then
             cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
@@ -59,11 +54,11 @@ jobs:
           python tools/check_schematic_connectivity.py
           python tools/check_schematic_layout.py
 
-          test "$(find hardware -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 7
+          test "$(find hardware -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 8
           test -s hardware/ax7010_servo_reva.kicad_sym
           test -z "$(find hardware -maxdepth 1 -name '*.sch' -type f -print -quit)"
           test -z "$(find hardware -maxdepth 1 -name '*.lib' -type f -print -quit)"
-          test ! -e hardware/sym-lib-table
+          test -s hardware/sym-lib-table
 
       - name: Export native KiCad netlist
         run: |
@@ -73,19 +68,10 @@ jobs:
             --output ../artifacts/ax7010_servo_reva.net \
             ax7010_servo_reva.kicad_sch
 
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          text = Path("../artifacts/ax7010_servo_reva.net").read_text()
-          components = len(re.findall(r"\(comp\s+\(ref\s+", text))
-          nets = len(re.findall(r"\(net\s+\(code\s+", text))
-          print(f"native netlist components={components} nets={nets}")
-          if components != 124:
-              raise SystemExit(f"expected 124 components, got {components}")
-          if nets != 163:
-              raise SystemExit(f"expected 163 nets, got {nets}")
-          PY
+          python3 ../tools/check_netlist_safety.py ../artifacts/ax7010_servo_reva.net
+          python3 ../tools/check_ocp_behavior.py ../artifacts/ax7010_servo_reva.net
+          python3 ../tools/check_pcb_parity.py ../artifacts/ax7010_servo_reva.net --output ../artifacts/pcb_parity.json
+          python3 ../tools/check_pcb_constraints.py ../artifacts/ax7010_servo_reva.net
 
       - name: Run KiCad 10 ERC on tracked native hierarchy
         run: |
@@ -109,5 +95,6 @@ jobs:
           name: kicad-erc-report
           path: |
             artifacts/ax7010_servo_reva.net
+            artifacts/pcb_parity.json
             artifacts/ax7010_servo_reva_erc.rpt
           if-no-files-found: warn

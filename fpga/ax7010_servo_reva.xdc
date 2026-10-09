@@ -1,5 +1,6 @@
 # AX7010 Servo Drive Rev.A
-# Official recent AX7010 docs: PL_A=J10, PL_B=J11.
+# Confirmed user hardware: AX7010 2022, active PL_A=J10. PL_B=J11 optional.
+# Pin mapping checked against manufacturer schematic sheets 5/15; no pin changes.
 # All user PL I/O here is 3.3 V LVCMOS.
 
 # PL_A / J10

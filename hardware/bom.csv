@@ -1,35 +1,160 @@
 Ref,Qty,Value / Part,Manufacturer,MPN,Package,Function,Status / note
-U1,1,3-phase gate driver,Fortior,FD6288T,TSSOP-20,High/low-side gate drive,Primary
-Q1-Q6,6,100V N-MOSFET,Infineon,BSC040N10NS5ATMA1,PG-TDSON-8,3-phase power bridge,Primary
-RSH1-RSH3,3,5mR >=5W 4-terminal,TBD,TBD,3920/Kelvin,Phase shunt,Exact vendor footprint gate
-U2-U4,3,20V/V current sense,Texas Instruments,INA241A2ID,SOIC-8,Phase current sense,Preferred over INA240 for 110V CM / 1.1MHz BW
-U6,1,8ch simultaneous ADC,Texas Instruments,ADS8588SIPM,LQFP-64,Current/voltage/temp acquisition,Primary
-U7,1,Quad RS422 receiver,Texas Instruments,AM26LV32EIPWR,TSSOP-16,ABZ differential receiver,Primary
-U5/U8/U9,3,Octal buffer,Texas Instruments,SN74LVC244APWR,TSSOP-20,FPGA power-domain buffering,Check exact channel allocation
-U10-U11,2,Quad AND gate,Texas Instruments,SN74LVC08APWR,TSSOP-14,PWM RUN_OK gating,Primary
-U12,1,100V 1A buck,Texas Instruments,LM5164DDAR,SO-PowerPAD-8,VBUS to 12V,Primary
-U13,1,1A buck,Texas Instruments,TPS62160DSGR,WSON-8,12V to 5V,Primary
-U14,1,3.3V LDO,Texas Instruments,TLV75533PDBVR,SOT-23-5,5V to local 3V3,Primary
-U15,1,Quad comparator,Texas Instruments,LMV339IPWR,TSSOP-14,OCP window compare,Primary
-U16,1,Dual comparator,Texas Instruments,LMV393IPWR,TSSOP-8,OCP window compare,Primary
-U17,1,Dual NOR / latch logic,Texas Instruments,SN74LVC2G02DCUR,VSSOP-8,Fault latch,Primary
-J1-J2,2,2x20 2.54mm header,TBD,TBD,TH 2x20,AX7010 PL expansion cable,Use keyed IDC mate externally
-J3,1,2-pin 7.62mm terminal,TBD,TBD,TH terminal,DC bus input,>=30A system rating required
-J4,1,3-pin 7.62mm terminal,TBD,TBD,TH terminal,Motor U/V/W,>=25A system rating required
-J5,1,2x5 encoder header,TBD,TBD,TH 2x5,ABZ differential + 5V,Primary
-D1,1,TVS 54V standoff,Littelfuse/alternate,SMCJ54A,SMC,DC bus transient clamp,Validate with actual 48V source transients
-D2-D4,3,Ultrafast bootstrap diode,TBD,ES1J,SMA,FD6288 bootstrap,Primary
-CBOOT1-CBOOT3,3,1uF 25V X7R,TBD,TBD,1206,FD6288 bootstrap,Primary
-CBUS1-CBUS2,2,100uF 100V low ESR,TBD,TBD,Radial/SMD,DC link bulk,Select by ripple current
-CFILM1-CFILM2,2,1uF 100V,TBD,TBD,film/1210,DC-link HF decoupling,Primary
-RG1-RG6,6,4.7R,TBD,TBD,0603,Gate series resistor,Bench tune 2.2-10R
-RGS1-RGS6,6,10k,TBD,TBD,0603,Gate-source pulldown,Primary
-RVH1-RVH2,2,280k 0.1%,TBD,TBD,0805,VBUS divider high side,Series for voltage stress
-RVL,1,39k 0.1%,TBD,TBD,0603,VBUS divider low side,Primary
-RT1-RT3,3,120R,TBD,TBD,0603,ABZ termination,Populate only at line end
-FENC,1,0.5A resettable fuse,TBD,TBD,1812,Encoder 5V protection,Primary
-NTC1-NTC2,2,10k B3950,TBD,TBD,0603/0805,Thermal sensing,Primary
-L12,1,68uH >=1.5A,TBD,TBD,Power inductor,LM5164 12V rail,Select low-loss 100V-compatible layout
-C12OUT,1,47uF >=25V,TBD,TBD,1210/electrolytic,12V rail,Primary
-L5,1,2.2uH >=1.5A,TBD,TBD,Power inductor,5V buck,Primary
-C5OUT,2,22uF 10V X7R,TBD,TBD,1206,5V rail,Primary
+C1,1,100uF,TBD,TBD,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,100uF_100V,Fitted; exact MPN / rating qualification open
+C2,1,100uF,TBD,TBD,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,100uF_100V,Fitted; exact MPN / rating qualification open
+C3,1,1uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,1uF_100V_FILM,Fitted; exact MPN / rating qualification open
+C4,1,100nF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,100nF_100V_C0G,Fitted; exact MPN / rating qualification open
+C5,1,10nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,10nF_VBUS_SENSE,Fitted; exact MPN / rating qualification open
+C18,1,220nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,220nF_25V_VCAP,Fitted; exact MPN / rating qualification open
+C19,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_VS_BYPASS,Fitted; exact MPN / rating qualification open
+C20,1,2.2uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,2.2uF_100V_X7R,Fitted; exact MPN / rating qualification open
+C21,1,2.2uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,2.2uF_100V_X7R,Fitted; exact MPN / rating qualification open
+C22,1,22uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,22uF_25V_X7R,Fitted; exact MPN / rating qualification open
+C23,1,22uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,22uF_25V_X7R,Fitted; exact MPN / rating qualification open
+C24,1,2.2nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,2.2nF_BST_50V,Fitted; exact MPN / rating qualification open
+C25,1,3.3nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,3.3nF_CA_X7R,Fitted; exact MPN / rating qualification open
+C26,1,56pF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,56pF_CB_C0G,Fitted; exact MPN / rating qualification open
+C30,1,10uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,10uF_25V_X7R,Fitted; exact MPN / rating qualification open
+C31,1,22uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,22uF_10V_X7R,Fitted; exact MPN / rating qualification open
+C40,1,1nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1nF_C0G_ADC,Fitted; exact MPN / rating qualification open
+C41,1,1nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1nF_C0G_ADC,Fitted; exact MPN / rating qualification open
+C42,1,1nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1nF_C0G_ADC,Fitted; exact MPN / rating qualification open
+C43,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_INA_DECOUPLE,Fitted; exact MPN / rating qualification open
+C44,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_INA_DECOUPLE,Fitted; exact MPN / rating qualification open
+C45,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_INA_DECOUPLE,Fitted; exact MPN / rating qualification open
+C46,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_DRV,Fitted; exact MPN / rating qualification open
+C60,1,10uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,10uF_REFIO_X7R,Fitted; exact MPN / rating qualification open
+C61,1,10uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,10uF_REFCAP_X7R,Fitted; exact MPN / rating qualification open
+C62,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_REGCAP1,Fitted; exact MPN / rating qualification open
+C63,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_REGCAP2,Fitted; exact MPN / rating qualification open
+C64,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_AVDD1,Fitted; exact MPN / rating qualification open
+C65,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_AVDD2,Fitted; exact MPN / rating qualification open
+C66,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_AVDD3,Fitted; exact MPN / rating qualification open
+C67,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_AVDD4,Fitted; exact MPN / rating qualification open
+C68,1,1uF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,1uF_DVDD,Fitted; exact MPN / rating qualification open
+C69,1,10uF,TBD,TBD,Capacitor_SMD:C_1206_3216Metric,10uF_25V_DRV,Fitted; exact MPN / rating qualification open
+C70,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_VIO,Fitted; exact MPN / rating qualification open
+C71,1,4.7uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,4.7uF_VIO,Fitted; exact MPN / rating qualification open
+C80,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C81,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C82,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C83,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C84,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C85,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C86,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C87,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C88,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C89,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C90,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C91,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C92,1,1nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C93,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+CBOOT1,1,1uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,1uF_25V_X7R,Fitted; exact MPN / rating qualification open
+CBOOT2,1,1uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,1uF_25V_X7R,Fitted; exact MPN / rating qualification open
+CBOOT3,1,1uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,1uF_25V_X7R,Fitted; exact MPN / rating qualification open
+D1,1,SMCJ54A,TBD,TBD,Diode_SMD:D_SMC,SMCJ54A_DNP_VERIFY_CLAMP,DNP; populate only after option review; exact MPN / rating qualification open
+D2,1,ES1J,TBD,TBD,Diode_SMD:D_SMA,ES1J_BOOTSTRAP,Fitted; exact MPN / rating qualification open
+D3,1,ES1J,TBD,TBD,Diode_SMD:D_SMA,ES1J_BOOTSTRAP,Fitted; exact MPN / rating qualification open
+D4,1,ES1J,TBD,TBD,Diode_SMD:D_SMA,ES1J_BOOTSTRAP,Fitted; exact MPN / rating qualification open
+F1,1,25A_EXT_KLKD025,Littelfuse,KLKD025.T,,EXTERNAL source-positive fuse before J3.1; 25A 600VDC 10x38mm; holder LPSM0001Z; never fit on servo PCB,External; NOT fitted to PCB; required holder LPSM0001Z
+F2,1,0.5A_PTC_ENCODER_5V,TBD,TBD,Fuse:Fuse_1812_4532Metric,See schematic,Fitted; exact MPN / rating qualification open
+J1,1,AX7010_PL_A,TBD,TBD,Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
+J2,1,AX7010_PL_B,TBD,TBD,Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
+J3,1,DC_IN_48V,Phoenix Contact,1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,MKDS_5_2_9.5_32A_external_protection_required,Fitted
+J4,1,MOTOR_UVW,Phoenix Contact,1714984,fpga-servo:PhoenixContact_MKDS_5_3_9.52mm,MKDS_5_3_9.5_32A_motor_terminal,Fitted
+J5,1,ABZ_DIFF_ENCODER,TBD,TBD,Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
+J6,1,PSU_EXT,System interface,TBD,,External PSU output terminal; system wiring only; F1 must be near source positive,External; NOT fitted to PCB; exact MPN / rating qualification open
+L1,1,68uH,Coilcraft,MSS1246T-683MLC,Inductor_SMD:L_Coilcraft_MSS1246T-XXX,68uH_MSS1246T-683MLC,Fitted
+L2,1,2.2uH,Wurth Elektronik,74438356022,Inductor_SMD:L_Wuerth_MAPI-4020,2.2uH_74438356022_WE-MAPI-4020,Fitted
+NTC1,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_B3950_BOARD,Fitted; exact MPN / rating qualification open
+NTC2,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_B3950_MOTOR,Fitted; exact MPN / rating qualification open
+Q1,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_HS,Fitted
+Q2,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_LS,Fitted
+Q3,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_HS,Fitted
+Q4,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_LS,Fitted
+Q5,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_HS,Fitted
+Q6,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_LS,Fitted
+Q7,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_RPP_Q7,Fitted
+Q8,1,BSC040N10NS5,Infineon,BSC040N10NS5ATMA1,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,BSC040N10NS5_RPP_Q8,Fitted
+R1,1,280k,TBD,TBD,Resistor_SMD:R_0805_2012Metric,280k_0.1%,Fitted; exact MPN / rating qualification open
+R2,1,280k,TBD,TBD,Resistor_SMD:R_0805_2012Metric,280k_0.1%,Fitted; exact MPN / rating qualification open
+R3,1,39k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,39k_0.1%,Fitted; exact MPN / rating qualification open
+R20,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_RON_1%,Fitted; exact MPN / rating qualification open
+R21,1,453k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,453k_RFB1_1%,Fitted; exact MPN / rating qualification open
+R22,1,49.9k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,49.9k_RFB2_1%,Fitted; exact MPN / rating qualification open
+R23,1,453k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,453k_RA_1%,Fitted; exact MPN / rating qualification open
+R32,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PG_PULLUP_DNP,DNP; populate only after option review; exact MPN / rating qualification open
+R40,1,47R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,47R_ADC_ISOLATION,Fitted; exact MPN / rating qualification open
+R41,1,47R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,47R_ADC_ISOLATION,Fitted; exact MPN / rating qualification open
+R42,1,47R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,47R_ADC_ISOLATION,Fitted; exact MPN / rating qualification open
+R50,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_0.1%_OCP_HI_TOP,Fitted; exact MPN / rating qualification open
+R51,1,160k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,160k_0.1%_OCP_HI_BOT,Fitted; exact MPN / rating qualification open
+R52,1,160k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,160k_0.1%_OCP_LO_TOP,Fitted; exact MPN / rating qualification open
+R53,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_0.1%_OCP_LO_BOT,Fitted; exact MPN / rating qualification open
+R54,1,4.7k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,4.7k_OCP_PULLUP_TO_VIO,Fitted; exact MPN / rating qualification open
+R55,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_PWR_GOOD_PULLUP,Fitted; exact MPN / rating qualification open
+R56,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PWM_INPUT_PULLDOWN,Fitted; exact MPN / rating qualification open
+R57,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PWM_INPUT_PULLDOWN,Fitted; exact MPN / rating qualification open
+R58,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PWM_INPUT_PULLDOWN,Fitted; exact MPN / rating qualification open
+R59,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PWM_INPUT_PULLDOWN,Fitted; exact MPN / rating qualification open
+R60,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PWM_INPUT_PULLDOWN,Fitted; exact MPN / rating qualification open
+R61,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,100k_PWM_INPUT_PULLDOWN,Fitted; exact MPN / rating qualification open
+R70,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_0.1%_NTC_PULLUP,Fitted; exact MPN / rating qualification open
+R71,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10k_0.1%_NTC_PULLUP,Fitted; exact MPN / rating qualification open
+R80,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R81,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R82,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R83,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R84,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R85,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R86,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R87,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R88,1,1k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R89,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R90,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R91,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RG1,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_HS_START,Fitted; exact MPN / rating qualification open
+RG2,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_LS_START,Fitted; exact MPN / rating qualification open
+RG3,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_HS_START,Fitted; exact MPN / rating qualification open
+RG4,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_LS_START,Fitted; exact MPN / rating qualification open
+RG5,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_HS_START,Fitted; exact MPN / rating qualification open
+RG6,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_LS_START,Fitted; exact MPN / rating qualification open
+RGS1,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RGS2,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RGS3,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RGS4,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RGS5,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RGS6,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+RSH1,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
+RSH2,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
+RSH3,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
+RT1,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
+RT2,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
+RT3,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
+TP1,1,TP_VBUS_PROT,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact MPN / rating qualification open
+TP2,1,TP_GND,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact MPN / rating qualification open
+TP3,1,TP_12V,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact MPN / rating qualification open
+TP4,1,TP_5V,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact MPN / rating qualification open
+TP5,1,ARMED,TBD,TBD,TestPoint:TestPoint_Pad_D1.5mm,See schematic,Fitted; exact MPN / rating qualification open
+U1,1,FD6288T,Fortior,FD6288T,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,See schematic,Fitted
+U2,1,INA241A2ID,Texas Instruments,INA241A2ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA241A2ID_U,Fitted
+U3,1,INA241A2ID,Texas Instruments,INA241A2ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA241A2ID_V,Fitted
+U4,1,INA241A2ID,Texas Instruments,INA241A2ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA241A2ID_W,Fitted
+U6,1,ADS8588SIPM,Texas Instruments,ADS8588SIPM,Package_QFP:LQFP-64_10x10mm_P0.5mm,See schematic,Fitted
+U7,1,AM26LV32EIPWR,Texas Instruments,AM26LV32EIPWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,See schematic,Fitted
+U8,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_U,Fitted
+U9,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_V,Fitted
+U10,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_W,Fitted
+U11,1,SN74LVC1G11DCKR,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,SN74LVC1G11DCKR_RUN_OK,Fitted
+U12,1,LM5164DDAR,Texas Instruments,LM5164DDAR,Package_SO:TI_SO-PowerPAD-8,See schematic,Fitted
+U13,1,TPS62163DSGR,Texas Instruments,TPS62163DSGR,Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm,TPS62163DSGR_FIXED_5V,Fitted
+U15,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_HIGH,Fitted
+U16,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_LOW,Fitted
+U18,1,LM74502DDFR,Texas Instruments,LM74502DDFR,Package_TO_SOT_SMD:SOT-23-8,See schematic,Fitted
+U19,1,TPD6E05U06RVZR,Texas Instruments,TPD6E05U06RVZR,Package_SON:Texas_R-PUSON-N14,See schematic,Fitted
+U20,1,SN74LVC1G74,Texas Instruments,SN74LVC1G74DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,See schematic,Fitted
+U21,1,SN74LVC1G17,Texas Instruments,SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,See schematic,Fitted
+U22,1,SN74LVC1G14,Texas Instruments,SN74LVC1G14DBVR,Package_TO_SOT_SMD:SOT-23-5,See schematic,Fitted
+U23,1,SN74LVC1G11,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,See schematic,Fitted
+U24,1,TPS3808G33,Texas Instruments,TPS3808G33DBVR,Package_TO_SOT_SMD:SOT-23-6,CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3,Fitted
+U25,1,TPS3808G50,Texas Instruments,TPS3808G50DBVR,Package_TO_SOT_SMD:SOT-23-6,CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3,Fitted
+U26,1,SN74LVC3G17,Texas Instruments,SN74LVC3G17DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,See schematic,Fitted

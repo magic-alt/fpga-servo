@@ -4,7 +4,7 @@
 
 1. Verify polarity/orientation of all MOSFETs, FD6288, regulators, ADC and current-sense amplifiers.
 2. Verify no short between VBUS and GND, 12 V and GND, 5 V and GND, 3.3 V and GND.
-3. Verify all three gate-source resistances match the intended pulldowns.
+3. Verify all six gate-source resistances match the intended pulldowns.
 4. Verify shunt Kelvin pads are not shorted into the load-current copper except at the shunt terminals.
 
 ## Stage 1 - low-voltage auxiliary power only
@@ -15,8 +15,8 @@ Expected rails:
 
 - 12 V rail in regulation
 - 5 V rail in regulation
-- local 3.3 V in regulation
-- `RUN_OK=0`
+- VIO_3V3 is absent until AX7010 is connected; it is supplied by AX7010, not a local LDO
+- once AX7010 VIO is present, `RUN_OK=0` while GATE_EN is high impedance or low
 - all six gate-driver inputs low
 
 Do not fit motor or high-current DC-link wiring yet.
@@ -33,7 +33,7 @@ Connect AX7010 through the two 2x20 cables.
 
 ## Stage 3 - gate-drive verification
 
-Power the DC bus at 12-24 V, current limited.
+Power the DC bus at 15-24 V, current limited.
 
 1. Fit bridge MOSFETs but no motor.
 2. Enable one leg at a time with low duty.
@@ -54,7 +54,7 @@ Acceptance:
 
 ## Stage 5 - low-energy motor spin
 
-Use 12-24 V bus and a small PMSM/BLDC motor.
+Use 15-24 V bus and a small PMSM/BLDC motor.
 
 - open-loop six-step or voltage-vector test first
 - then current-loop FOC at low current
@@ -69,3 +69,11 @@ Only after Stage 0-5 pass:
 - verify switching overshoot remains below device design margin
 - perform thermal soak at 5 A, 10 A, then 15 A phase RMS targets
 - perform regeneration tests with a safe bus-energy sink
+
+## Configuration / OCP acceptance additions
+
+- With AX7010 VIO present and the PL unconfigured, measure all six raw PWM inputs and GATE_EN low (10k pull-downs), then confirm all six FD6288 inputs remain low.
+- Repeat with independent rail power-up, rail loss and AX7010 disconnect; capture gate-to-source voltages rather than relying on logic readings alone.
+- Verify C43/C44/C45 connect VA_5V to GND, and C80..C85 are mounted at their associated IC supply pins.
+- Test both polarities of all three OCP channels around the nominal +/-22.06A equivalent thresholds. Record tolerance and fault-to-gate-off delay.
+- Confirm ARMED (TP5) and all six commands remain low after a fault recovers without a new FAULT_CLEAR edge. Test clear held high, clear during fault and clear with GATE_EN high. Re-arm only with EN low and healthy conditions; follow `ocp_latch_review_2026-10-09.md`, including recovery/removal phase scans and minimum-pulse tests.

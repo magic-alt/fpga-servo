@@ -14,6 +14,7 @@ CHILD_NAMES = [
     "ax7010_interface.kicad_sch",
     "current_adc.kicad_sch",
     "encoder.kicad_sch",
+    "ocp_latch.kicad_sch",
 ]
 SCHEMATICS = [TOP, *(HW / name for name in CHILD_NAMES)]
 SYMBOL_LIB = HW / "ax7010_servo_reva.kicad_sym"
@@ -54,6 +55,11 @@ for path in SCHEMATICS:
         errors.append(f"{path.name}: paper must be A4")
     if not extract_forms(text, "lib_symbols"):
         errors.append(f"{path.name}: embedded lib_symbols section is missing")
+
+    root_uuid = re.search(r'\(uuid "([^"]+)"\)', TOP.read_text(encoding="utf-8")).group(1)
+    for instance_path in sorted(set(re.findall(r'\(path "(/[^" ]+)"', text))):
+        if instance_path != "/" and instance_path.split("/")[1] != root_uuid:
+            errors.append(f"{path.name}: instance path root differs from top UUID: {instance_path}")
 
     authored = strip_form(text, "lib_symbols")
     if extract_forms(authored, "global_label"):

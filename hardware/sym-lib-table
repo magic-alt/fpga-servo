@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "ax7010_servo_reva")(type "KiCad")(uri "${KIPRJMOD}/ax7010_servo_reva.kicad_sym")(options "")(descr "Project symbols"))
+)

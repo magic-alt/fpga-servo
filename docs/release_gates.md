@@ -4,21 +4,37 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## Connector / FPGA
 
-- [ ] Confirm the physical AX7010 board revision in hand and whether its silk references are J10/J11 or another revision.
+- [x] User confirms ALINX AX7010 2022 hardware, active connector J10 (2026-10-09). Manufacturer drawing sheets 5/15 cross-checked; physical continuity remains open below.
 - [ ] Pin-by-pin continuity check against the actual AX7010 schematic.
 - [ ] Vivado IOSTANDARD=LVCMOS33 review for every used PL pin.
 - [ ] Verify no used pin conflicts with another on-board AX7010 function in the selected project.
 
 ## Schematic
 
-- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **124 components / 163 nets**.
-- [x] Native schematic layout/A4-boundary checks pass for the top sheet and all six child sheets.
+- [x] KiCad 10-native hierarchy is now the checked-in source of truth; current PCB netlist export produces **157 board components / 179 nets**; system schematic/BOM has 159 objects including external F1 and PSU wiring terminal J6.
+- [x] Native schematic layout/A4-boundary checks pass for the top sheet and all seven child sheets.
 - [x] KiCad 10 ERC is clean: **0 errors / 0 warnings** on the tracked native hierarchy.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
 - [ ] Verify FD6288 bootstrap network against current datasheet typical application.
 - [ ] Verify regulator component values with vendor calculation/reference design.
 - [ ] Verify comparator thresholds and latch behavior across tolerance/temperature.
 - [ ] Define production-safe default for all control pins during FPGA reset/configuration.
+
+## Layout entry decision (2026-10-09)
+
+ERC is clean and initial placement studies can proceed. Final component placement / routing freeze remains blocked by these schematic-level decisions:
+
+- [x] OCP hardware ARM latch implemented; FAULT_CLEAR on J1.10 re-arms only with GATE_EN low and healthy conditions.
+- [ ] Qualify latch fault pulses, clear/fault phase races, power ramps and actual gate-off timing on the bench; digital regression is insufficient.
+- [ ] Confirm required ambient/junction range; U26 Rev.F timing bounds are specified only through 85C, so no 125C shutdown-delay claim.
+- [ ] Confirm AX7010 VIO minimum supports the G33 worst-case reset release (~3.194V).
+- [ ] Validate power sequencing and partial-power behavior with AX7010 VIO, VA_5V and VDRV_12V independently present/absent. Pull-downs establish a configuration-time default but do not constitute a safety-rated shutdown system.
+- [ ] Close input surge / regeneration energy handling: D1 is actually DNP, LM74502 OV is disabled, and upstream protection / receptive source requirements remain mandatory.
+- [ ] Freeze actual AX7010 connector revision and exact shunt / power connector / fuse footprints before routing power copper.
+- [x] R80..R86 provide 10k pull-downs on all six PWM inputs and GATE_EN; R56..R61 remain on the gated FD6288 input nets.
+- [x] U8..U11 and U15/U16 have dedicated 100nF bypass capacitors; C43..C45 correctly bridge VA_5V to GND.
+- [x] Project-relative symbol library table and hierarchy instance UUID regression checks are in place.
+- [x] BOM contains one row per schematic component; obsolete buffers/LDO entries have been eliminated and new U20..U25 latch circuitry is included and DNP flags are explicit.
 
 ## Footprints
 
@@ -31,8 +47,9 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## PCB
 
-- [ ] Reconcile all schematic references, footprints and nets with the partial board. The current PCB baseline has 32 footprints; the schematic has 124 symbols.
-- [ ] Close the current PCB DRC baseline (358 violations and 129 unconnected items in KiCad 10.0.3) after schematic-to-board parity is restored.
+- [ ] Reconcile the new external-fuse schematic with the PCB later: prior stage had 158 electrical + 4 mechanical footprints and native parity 0. The schematic-only optimization now exports 157 board components; unchanged PCB has obsolete F1 and J3.1 on its old net. Do not reuse the prior parity PASS. See `docs/schematic_optimization_2022_j10_2026-10-09.md`.
+- [ ] Close the synchronized PCB DRC: last saved/refilled KiCad 10.0.3 run BEFORE the external-fuse schematic change had **271 violations (220 errors / 51 warnings), 466 unconnected items, 0 schematic parity issues**. Original partial-board 357/129 is historical; counts are not directly comparable after adding missing components. No new exclusions or severity reductions. Five inherited/default ignored DRC check types remain and must be reviewed before release.
+- [x] Correct H1..H4 M3-labelled mounting-hole drills from 1.0 mm to 3.2 mm, preserving centers and the board outline; `check_design.py` rejects undersized M3-labelled holes.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
 - [ ] 2 oz copper stack-up confirmed with fabricator.
@@ -52,3 +69,29 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 - [ ] OCP trip test with gates demonstrably forced low.
 - [ ] ABZ receiver test to maximum planned encoder frequency.
 - [ ] 15 A thermal soak evidence or revised continuous-current rating.
+
+## Follow-up findings (2026-10-09)
+
+- [x] U19 RVZ 14-pin mapping and Texas_R-PUSON-N14 footprint corrected; U19 repair stage was 158 components / 183 nets; latch stage before the INA241 reserved-pin correction was 158 / 183; current stage is 158 / 180.
+- [x] Replace GMSTBA 12A selection with Phoenix Contact 1714971 / 1714984, nominal 32A; local 9.52mm footprints implemented from manufacturer drawings. Actual wire, temperature derating and mechanical fit remain open.
+- [x] Replace BVB-I-R005 with Ohmite 650FPR005E, four-terminal 5mOhm / 5W at 25C free air; local footprint and force/sense mapping implemented. Assembly fit, low-temperature accuracy, transient and board thermal qualification remain open.
+- [x] OCP latch design approved and implemented; see `docs/ocp_latch_review_2026-10-09.md` for timing conditions and remaining qualification.
+
+Detailed evidence and board differences: `docs/schematic_followup_2026-10-09.md`.
+
+Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.
+
+Latest physical-pin PCB audit and mechanical-hole repair: `docs/pcb_pre_sync_review_2026-10-09.md`.
+
+Latest implementation evidence and unfinished routing: `docs/pcb_repair_progress_2026-10-09.md`. Package drawings and qualifications: `docs/pcb_package_qualification_2026-10-09.md`. The selected shunt/terminal part numbers do not close the unchecked footprint, thermal or mechanical gates above.
+
+- [x] INA241 U2/U3/U4 pin 4 grounded according to TI SBOSA30D Table 5-1; the reserved NC name must not be interpreted as permission to float it. Fresh ERC remains zero and physical PCB parity passes.
+
+## Schematic-only optimization: confirmed AX7010 2022 / J10
+
+- [x] Select external F1 KLKD025.T (25A / 600VDC), required LPSM0001Z holder near source positive; remove the unqualified board-mounted 2920 fuse placeholder from the schematic. F1/J6 are off-board, not DNP and not PCB placement parts.
+- [x] J3.1 is the fused source input; native safety regression requires it to connect to Q7.5 and U18.1/.5. J10 ground, VIO and active signal pins have focused regression coverage.
+- [ ] Validate fuse/holder ambient derating, actual DC source fault current/time constant, cable ampacity, short-circuit clearing energy and startup-inrush coordination. Fuse selection alone does not establish MOSFET protection, surge protection or regenerative-energy handling.
+- [ ] Deferred PCB synchronization: obsolete F1 and J3.1 net mismatch remain visible. No PCB layout/sync/routing performed by user instruction.
+
+Fresh schematic ERC is 0 errors / 0 warnings / 0 exclusions; no ignored checks or severities changed. Full details and source evidence: `docs/schematic_optimization_2022_j10_2026-10-09.md`.

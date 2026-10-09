@@ -21,6 +21,7 @@ CHILDREN = [
     HW / "gate_inverter.kicad_sch",
     HW / "current_adc.kicad_sch",
     HW / "encoder.kicad_sch",
+    HW / "ocp_latch.kicad_sch",
     HW / "ax7010_interface.kicad_sch",
 ]
 errors: list[str] = []
