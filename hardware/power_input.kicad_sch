@@ -919,9 +919,7 @@
 			(pin_numbers
 				(hide yes)
 			)
-			(pin_names
-				(offset 0)
-			)
+			(pin_names (offset 0) (hide yes))
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1383,7 +1381,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "VISIBLE WIRING: main power path, DC-link rails, gate drive, divider/filter and GND return are drawn as continuous wires; local labels are retained only to name or bridge nets where a direct route would reduce readability."
+	(text "Local wiring: power, gate, divider/filter and ground. See docs/schematic_full_review_2026-10-09.md."
 		(exclude_from_sim no)
 		(at 16.51 169.164 0)
 		(effects
@@ -2317,7 +2315,7 @@
 		(uuid "7b000000-0000-0000-0000-000000000007")
 	)
 	(label "VBUS_DIV_MID"
-		(at 166.37 115.57 0)
+		(at 166.37 110.49 0)
 		(effects
 			(font
 				(size 1.016 1.016)
@@ -4111,4 +4109,6 @@
 	(wire (pts (xy 45.72 76.2) (xy 50.8 76.2)) (stroke (width 0) (type default)) (uuid "53b4f31b-e3e5-4b48-ac4f-a0ad5b08b3a5"))
 	(junction (at 43.18 39.37) (diameter 0) (color 0 0 0 0) (uuid "df802ae8-c774-4e60-bd02-b59a79f84654"))
 	(label "GND" (at 50.8 76.2 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5ac53e08-19eb-4a2d-b0f2-73718db5b90e"))
+
+(wire (pts (xy 166.37 115.57) (xy 166.37 110.49)) (stroke (width 0) (type default)) (uuid "7f70cad5-a49f-4611-b1d4-10472a7ada76"))
 )
