@@ -233,7 +233,8 @@ def gate_report(netlist: Path) -> dict:
     g50_max = G50_THRESHOLD_V * (1 + G50_THRESHOLD_TOL)
     g33_release_max = G33_THRESHOLD_V * (1+G33_THRESHOLD_TOL) * (1+SUPERVISOR_HYSTERESIS_MAX)
     return {
-        "schema_version": 1,
+        "schema_version": 2,
+        "erc": {"status": "NOT_RUN", "reason": "Netlist checks do not execute ERC; use run_gate_ab.py"},
         "scope": "Electrical source checks + nominal/illustrative passive models only",
         "source_netlist_sha256": hashlib.sha256(netlist.read_bytes()).hexdigest(),
         "observed_system_components": len(components),
@@ -271,7 +272,7 @@ def gate_report(netlist: Path) -> dict:
         },
         "gate_a": {
             "status": "BLOCKED",
-            "passed_checks": ["existing native ERC (must be rerun in same commit)", "physical netlist contract"],
+            "passed_checks": ["physical netlist contract"],
             "blocking_ids": ["A-ADC-UNDERVOLTAGE", "A-PEAK-THERMAL-SPEC",
                              "A-VENDOR-FOOTPRINT-MPN", "A-POWER-SEQUENCING"],
         },
@@ -330,26 +331,41 @@ quit
 
 def _rows(path: Path) -> list[tuple[float, float]]:
     result = []
-    for line in path.read_text(encoding="utf-8").splitlines():
+    for index, line in enumerate(path.read_text(encoding="utf-8").splitlines()):
         cols = line.split()
-        if len(cols) >= 2:
-            try:
-                result.append((float(cols[0]), float(cols[1])))
-            except ValueError:
-                continue
-    if not result:
-        raise RuntimeError(f"No ngspice waveform rows: {path}")
+        if not cols:
+            continue
+        if not result and index == 0 and cols[0].lower() == "time":
+            continue
+        if len(cols) != 2:
+            raise RuntimeError(f"Malformed waveform row: {path}:{index+1}")
+        try:
+            t, value = map(float, cols)
+        except ValueError as exc:
+            raise RuntimeError(f"Malformed waveform row: {path}:{index+1}") from exc
+        if not (math.isfinite(t) and math.isfinite(value)) or t < 0:
+            raise RuntimeError(f"Nonfinite/negative waveform data: {path}:{index+1}")
+        if result and t <= result[-1][0]:
+            raise RuntimeError(f"Nonmonotonic waveform time: {path}:{index+1}")
+        result.append((t, value))
+    if len(result) < 2:
+        raise RuntimeError(f"Incomplete ngspice waveform: {path}")
     return result
 
 
 def run_spice(values: dict[str, float], output_dir: Path, executable: str) -> dict:
+    output_dir = output_dir.resolve()
     decks = generate_spice(values, output_dir)
+    # Remove only this runner's expected outputs, never unrelated evidence.
+    for name in decks:
+        (output_dir / f"{name}.dat").unlink(missing_ok=True)
+        (output_dir / f"{name}.log").unlink(missing_ok=True)
     if not shutil.which(executable):
         raise RuntimeError(f"ngspice executable unavailable: {executable}")
     logs = []
     for name, deck in decks.items():
         completed = subprocess.run([executable, "-b", deck.name], cwd=output_dir,
-                                   text=True, capture_output=True, check=False)
+                                   text=True, capture_output=True, check=False, timeout=60)
         (output_dir / f"{name}.log").write_text(
             completed.stdout + "\n" + completed.stderr, encoding="utf-8")
         if completed.returncode:
@@ -357,10 +373,16 @@ def run_spice(values: dict[str, float], output_dir: Path, executable: str) -> di
         logs.append(name)
     regen = _rows(output_dir / "regeneration.dat")
     last_t, last_v = regen[-1]
+    if regen[0][0] > 2e-6 or abs(regen[0][1] - 48) > 0.025:
+        raise RuntimeError("Invalid regeneration initial conditions")
     expected = 48 + last_t / (values["C1"] + values["C2"])
-    if abs(last_v-expected) > 0.025 or last_t < 0.00139:
+    if abs(last_v-expected) > 0.025 or not 0.00139 <= last_t <= 0.00141:
         raise AssertionError(f"Regeneration SPICE != analytical capacitor law: {last_v} vs {expected}")
     trace = _rows(output_dir / "ocp_filter.dat")
+    if trace[0][0] > 1e-9 or trace[-1][0] < 1.34e-6:
+        raise RuntimeError("Incomplete OCP waveform time range")
+    if abs(trace[0][1] - 2.5) > 0.01:
+        raise RuntimeError("Invalid OCP initial voltage")
     vth = 5 * values["R51"]/(values["R50"]+values["R51"])
     crosses = [t for t, v in trace if t >= 1e-6 and v >= vth]
     if not crosses:
@@ -405,7 +427,13 @@ def main() -> int:
         print(f"Gate A={report['gate_a']['status']}, Gate B={report['gate_b']['status']}")
         print(f"Evidence: {a.output}")
         return 2 if a.strict_gates else 0
-    except (ValueError, RuntimeError, AssertionError, ET.ParseError) as exc:
+    except (OSError, KeyError, ValueError, RuntimeError, AssertionError, ET.ParseError,
+            subprocess.TimeoutExpired) as exc:
+        a.output.parent.mkdir(parents=True, exist_ok=True)
+        failure = {"schema_version": 2, "status": "FAILED", "error": str(exc),
+                   "gate_a": {"status": "BLOCKED"}, "gate_b": {"status": "BLOCKED"}}
+        a.output.write_text(json.dumps(failure, ensure_ascii=False, indent=2) + "\n",
+                            encoding="utf-8")
         print(f"GATE AB CHECK FAILED: {exc}", file=sys.stderr)
         return 1
 

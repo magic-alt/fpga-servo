@@ -6,10 +6,15 @@ import math
 import os
 from pathlib import Path
 import shutil
+import subprocess
+import sys
+import json
 import tempfile
 import unittest
 
 import gate_ab_verify as qa
+
+NGSPICE = os.environ.get("GATE_AB_NGSPICE", "ngspice")
 
 
 class PassiveTests(unittest.TestCase):
@@ -46,6 +51,38 @@ class PassiveTests(unittest.TestCase):
         self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.FD6288_SINK_PEAK_A, 40e-9)
 
 
+class EvidenceIntegrityTests(unittest.TestCase):
+    def test_waveform_nonfinite_and_nonmonotonic_rejected(self):
+        for rows in ("0 48\n0.0014 nan\n", "0.0014 55\n0 48\n",
+                     "0 48\ncorrupted data\n0.0014 55\n"):
+            with self.subTest(rows=rows), tempfile.TemporaryDirectory() as folder:
+                path = Path(folder) / "wave.dat"
+                path.write_text(rows)
+                with self.assertRaises((RuntimeError, ValueError)):
+                    qa._rows(path)
+
+    def test_malformed_xml_replaces_previous_success_with_failure(self):
+        with tempfile.TemporaryDirectory() as folder:
+            net = Path(folder) / "bad.xml"
+            net.write_text("<export><components><comp/></components></export>")
+            out = Path(folder) / "qualification.json"
+            out.write_text('{"status": "PASS"}')
+            result = subprocess.run([sys.executable, qa.__file__, "--netlist", str(net),
+                                     "--output", str(out)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 1)
+            self.assertEqual(json.loads(out.read_text())["status"], "FAILED")
+
+    def test_missing_input_replaces_previous_success_with_failure(self):
+        with tempfile.TemporaryDirectory() as folder:
+            out = Path(folder) / "qualification.json"
+            out.write_text('{"status": "PASS"}')
+            result = subprocess.run([sys.executable, qa.__file__, "--netlist",
+                                     str(Path(folder) / "missing.xml"),
+                                     "--output", str(out)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 1)
+            self.assertEqual(json.loads(out.read_text())["status"], "FAILED")
+
+
 @unittest.skipUnless(os.environ.get("GATE_AB_NETLIST"), "Set GATE_AB_NETLIST to fresh KiCad XML")
 class RealNetlistMutationTests(unittest.TestCase):
     @classmethod
@@ -66,6 +103,21 @@ class RealNetlistMutationTests(unittest.TestCase):
         self.assertEqual(out["gate_b"]["status"], "BLOCKED")
         self.assertGreater(out["numerics"]["adc_supply_vs_supervisor"]["blind_window_at_least_V"], 0)
         self.assertEqual(len(out["source_netlist_sha256"]), 64)
+
+    def test_netlist_only_report_does_not_claim_erc_pass(self):
+        out = qa.gate_report(self.netlist)
+        self.assertFalse(any("ERC" in item for item in out["gate_a"]["passed_checks"]))
+        self.assertEqual(out["erc"]["status"], "NOT_RUN")
+
+    @unittest.skipUnless(shutil.which(NGSPICE) and Path("/usr/bin/true").exists(),
+                         "Needs ngspice and POSIX true")
+    def test_stale_waveforms_cannot_pass_noop_simulator(self):
+        values = {ref: qa.passive(self.components[ref]) for ref in (
+            "C1", "C2", "R50", "R51", "R40", "C40")}
+        with tempfile.TemporaryDirectory() as folder:
+            qa.run_spice(values, Path(folder), NGSPICE)
+            with self.assertRaises((RuntimeError, OSError)):
+                qa.run_spice(values, Path(folder), "/usr/bin/true")
 
     def test_adc_strap_mutation_detected(self):
         self.pins[("U6", "33")] = "/FLOATING"
@@ -98,12 +150,12 @@ class RealNetlistMutationTests(unittest.TestCase):
         self.assertAlmostEqual(qa.gate_report(self.netlist)["numerics"]
                                ["shunt_loss_each_W_at_10A_RMS"][0], .5)
 
-    @unittest.skipUnless(shutil.which("ngspice"), "ngspice CLI not available")
+    @unittest.skipUnless(shutil.which(NGSPICE), "ngspice CLI not available")
     def test_ngspice_regen_and_ideal_rc_crossing(self):
         vals = {ref: qa.passive(self.components[ref]) for ref in (
             "C1", "C2", "R50", "R51", "R40", "C40")}
         with tempfile.TemporaryDirectory() as folder:
-            result = qa.run_spice(vals, Path(folder), "ngspice")
+            result = qa.run_spice(vals, Path(folder), NGSPICE)
             self.assertEqual(result["status"], "PASS_ONLY_IDEAL_PASSIVE")
             self.assertAlmostEqual(result["regeneration_final_V"], 55, delta=.05)
 

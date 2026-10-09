@@ -54,23 +54,31 @@
 
 ## 4. 可重复执行
 
-请在 Linux/macOS/Windows 的 KiCad 10 环境中先导出新网表，使用一个安装好的 `ngspice` CLI：
+工具已安装时，在仓库根目录执行统一入口（macOS/Linux/Windows，Python 3.12）：
 
 ```bash
-mkdir -p artifacts/gate-ab
-kicad-cli sch erc --severity-all --exit-code-violations \
-  -o artifacts/gate-ab/erc.rpt hardware/ax7010_servo_reva.kicad_sch
-kicad-cli sch export netlist --format kicadxml \
-  -o artifacts/gate-ab/netlist.xml hardware/ax7010_servo_reva.kicad_sch
-python tools/gate_ab_verify.py \
-  --netlist artifacts/gate-ab/netlist.xml \
-  --output artifacts/gate-ab/qualification.json \
-  --spice-output artifacts/gate-ab/spice
-GATE_AB_NETLIST=artifacts/gate-ab/netlist.xml \
-  python -m unittest discover -s tools -p test_gate_ab_verify.py -v
+python3.12 tools/run_gate_ab.py
+# 同时收集 PCB DRC（当前未完成，应返回非零；不保存铺铜后的 PCB）
+python3.12 tools/run_gate_ab.py --with-drc
+# 工程门禁未关闭时，即使自动检查通过，也返回 2
+python3.12 tools/run_gate_ab.py --strict-gates
 ```
 
-产出：原生 ERC 报告、新导出 XML、`qualification.json`（输入 SHA256、拓扑、阈值容差、条件范围和 **两个 BLOCKED 字段**）、独立 ngspice 网表/波形/日志。CI 在 PR 中自动运行并上传不可伪造为物理试验的自动证据。运行 `--strict-gates` 时，即使图和理想电路测试通过，Gate A/B 未闭合也返回状态码 2。不能通过覆盖这个状态、忽略检查、直接上传历史 XML 或删除 PCB 铜来发布。
+可用 `--kicad-cli /完整路径/kicad-cli`、`--ngspice /完整路径/ngspice` 指定可执行文件。macOS 找不到 PATH 下的 KiCad 时，回退到官方应用内 CLI；不安装工具、不修改全局配置。默认使用启动入口的 Python 执行全部检查。
+
+每次在 `artifacts/gate-ab/<UTC时间>-<随机标识>/` 创建独立目录。入口执行六项仓库检查、PCB/教程回归、原生 ERC、新 XML/原生网表导出、安全/OCP/PCB parity/约束、Gate A/B 计算、真实 ngspice 和网表 mutation 回归。`--with-drc` 增加全部严重级别、schematic parity 和内存铺铜 DRC；不使用 `--save-board`。
+
+`manifest.json` 记录 Git SHA/工作区状态、源码与工具脚本前后 SHA256、工具版本、各步命令/退出码/日志、原生 ERC/DRC 计数、继承忽略规则以及产物哈希。源码变化使本次记录失败。原生报告结构缺失、导出失败、模拟器失败或超时都不能算 PASS；缺少新网表时不执行其依赖检查。每次目录独立，失败运行不会借用旧报告；保留日志供复核。
+
+退出码：`0` 仅表示所请求自动检查通过；`1` 表示执行或检查失败（包括启用 DRC 后的违规/崩溃）；`2` 表示自动检查通过但 `--strict-gates` 要求的工程放行未满足。Gate A/B 仍为 BLOCKED。默认未执行 DRC 时明确记录 `NOT_RUN`，不能据此声称 PCB 合格。
+
+低层 `gate_ab_verify.py` 仍可独立接收新 XML，但其 ERC 字段固定 `NOT_RUN`，已通过项只包含物理网表合同。**本次原生 ERC 结果以统一入口 manifest 为准**。低层仿真会删除本次预期波形文件后重新执行，检查波形有限值、单调时间和时间覆盖；失败会将输出 JSON 改写为 `FAILED`，防止旧 PASS 留存。
+
+CI 使用同一入口，上传每次运行目录；当前 Gate A/B CI 不启用未完成的 PCB DRC。测试入口失败隔离：
+
+```bash
+python3.12 -m unittest discover -s tools -p test_run_gate_ab.py -v
+```
 
 ## 5. 数据来源与模型边界
 
