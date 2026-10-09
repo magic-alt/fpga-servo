@@ -902,7 +902,125 @@
 			)
 			(embedded_fonts no)
 		)
-	)
+	(symbol "ax7010_servo_reva:R"
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "R"
+					(at 0 2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(property "Value" "R"
+					(at 0 -2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "R_0_1"
+					(rectangle
+						(start -3.81 1.524)
+						(end 3.81 -1.524)
+						(stroke
+							(width 0.254)
+							(type solid)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(symbol "R_1_1"
+					(pin passive line
+						(at -7.62 0 0)
+						(length 3.81)
+						(name "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 7.62 0 180)
+						(length 3.81)
+						(name "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)
+)
 	(text "AX7010 PL INTERFACE: J1 = SERVO REAL-TIME / SAFETY; J2 = OPTIONAL PARALLEL ADC / AUXILIARY I/O"
 		(exclude_from_sim no)
 		(at 16.51 16.51 0)
@@ -1881,7 +1999,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "4ddd2bde-049f-4737-bece-26ddc31c4697")
 		)
@@ -2004,7 +2122,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000004"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004"
 					(reference "J1")
 					(unit 1)
 				)
@@ -2072,7 +2190,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "7349d48a-ff22-4369-9db4-f0c339bdbaa9")
 		)
@@ -2195,7 +2313,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000004"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004"
 					(reference "J2")
 					(unit 1)
 				)
@@ -2263,17 +2381,82 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "74c19163-78d6-4f7b-a895-8ec238ed7dfc")
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000004"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004"
 					(reference "#FLG0106")
 					(unit 1)
 				)
 			)
 		)
 	)
+(text "RESET DEFAULTS: PWM + GATE_EN pulled LOW; populate all seven 10k resistors." (at 24.13 146.05 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "41c7da5d-c8e4-4bb4-b10b-427bf2ab9405"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 30.48 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cc5a9d97-4d15-4051-9890-25b287f08684")
+(property "Reference" "R80" (at 33.02 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 33.02 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 30.48 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "d9d46e77-37cd-4cc7-9e19-a8923f039625")) (pin "2" (uuid "2451b4c4-7985-45a1-8ea7-da0f2b068402")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R80") (unit 1)))))
+(wire (pts (xy 30.48 156.21) (xy 30.48 153.67000000000002)) (stroke (width 0) (type default)) (uuid "224457a8-54cc-4008-8302-25b08d377249"))
+(label "PWM_UH" (at 30.48 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "dffe90c1-3d3c-43c5-aadf-1735e74a6faa"))
+(wire (pts (xy 30.48 171.45000000000002) (xy 30.48 173.99)) (stroke (width 0) (type default)) (uuid "7328eb64-bb92-4302-8d0b-7c0e0f4680f2"))
+(label "GND" (at 30.48 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "9575f7bf-81db-4f1d-a4e9-35cb52fc6a26"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 66.04 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8bd230ab-cb0d-4d9f-9340-95d2b41d7e1b")
+(property "Reference" "R81" (at 68.58000000000001 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 68.58000000000001 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 66.04 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "f4fc8603-7cb3-47e7-acdb-c88c66cbdbae")) (pin "2" (uuid "564989ec-8f37-4e0b-a01c-ead6ce03838c")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R81") (unit 1)))))
+(wire (pts (xy 66.04 156.21) (xy 66.04 153.67000000000002)) (stroke (width 0) (type default)) (uuid "e3794c4a-7f73-404b-8559-77721b838892"))
+(label "PWM_UL" (at 66.04 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "82061b1f-2307-4b3b-807e-acfff96c4c39"))
+(wire (pts (xy 66.04 171.45000000000002) (xy 66.04 173.99)) (stroke (width 0) (type default)) (uuid "188485b3-097d-41df-a73f-e57879ea8944"))
+(label "GND" (at 66.04 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "d4a56f4a-e2ba-4c72-85c9-a3b50fb6ff03"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 101.60000000000001 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1b028352-5d4e-4954-a495-0503fe7d2a11")
+(property "Reference" "R82" (at 104.14000000000001 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 104.14000000000001 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 101.60000000000001 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "8c2e4ff8-607a-4fe9-b1f2-d52584e82969")) (pin "2" (uuid "e9293f00-6997-4bd2-94f3-f55ba67ab274")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R82") (unit 1)))))
+(wire (pts (xy 101.60000000000001 156.21) (xy 101.60000000000001 153.67000000000002)) (stroke (width 0) (type default)) (uuid "3174d9ad-5633-4112-94f7-0ba108337452"))
+(label "PWM_VH" (at 101.60000000000001 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "e3a591e0-ebfc-4112-84d5-7cee86db83df"))
+(wire (pts (xy 101.60000000000001 171.45000000000002) (xy 101.60000000000001 173.99)) (stroke (width 0) (type default)) (uuid "d6a2a39b-d062-410e-9c69-c4bde69d6870"))
+(label "GND" (at 101.60000000000001 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "b583b29b-f23e-4535-b299-559d44c2d0be"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 137.16 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "07eaab2c-4e1e-4c21-a4d4-473d355383d2")
+(property "Reference" "R83" (at 139.7 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 139.7 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 137.16 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "579b406b-4154-4ebd-87d7-ed0e3340306e")) (pin "2" (uuid "a71e6521-ad30-414c-b05e-68e4782f2f70")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R83") (unit 1)))))
+(wire (pts (xy 137.16 156.21) (xy 137.16 153.67000000000002)) (stroke (width 0) (type default)) (uuid "88b9eed3-1362-4ae8-9382-c31b7a803c13"))
+(label "PWM_VL" (at 137.16 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "91f18f85-3844-4746-beb6-3240c7403ad1"))
+(wire (pts (xy 137.16 171.45000000000002) (xy 137.16 173.99)) (stroke (width 0) (type default)) (uuid "87a1ee06-85cf-40d6-9b12-199b458b705c"))
+(label "GND" (at 137.16 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "74edcbce-cf46-4c85-a4bd-76f95da4411d"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 172.72 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ddc36424-1aa9-4559-ae41-b0abf2ce8e89")
+(property "Reference" "R84" (at 175.26 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 175.26 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 172.72 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "7d0d271b-3041-4add-9717-d614e7e17a58")) (pin "2" (uuid "55764e27-ceb9-4772-ade2-e732a014ba7b")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R84") (unit 1)))))
+(wire (pts (xy 172.72 156.21) (xy 172.72 153.67000000000002)) (stroke (width 0) (type default)) (uuid "ffe9d4b8-c81f-4ddc-a6d4-42c69a23b6e2"))
+(label "PWM_WH" (at 172.72 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a48c7a59-5be6-40f3-955c-684af49c2dd1"))
+(wire (pts (xy 172.72 171.45000000000002) (xy 172.72 173.99)) (stroke (width 0) (type default)) (uuid "2b2292dc-d60d-4da6-850c-cb5287fff472"))
+(label "GND" (at 172.72 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5c1841de-771d-4ba9-bcdf-07f0be0dfde3"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 208.28 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "a47192f9-e347-4963-87b8-915b703b1c18")
+(property "Reference" "R85" (at 210.82 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 210.82 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 208.28 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "5525d798-7a9e-4d60-8d70-aea46b2c9358")) (pin "2" (uuid "53ab1d7f-e855-44a1-b0d7-27cad403338e")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R85") (unit 1)))))
+(wire (pts (xy 208.28 156.21) (xy 208.28 153.67000000000002)) (stroke (width 0) (type default)) (uuid "2d077d57-f79b-4016-8d45-e576397c3b34"))
+(label "PWM_WL" (at 208.28 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "6f2a4c5d-08a7-4191-8fce-b0e210875409"))
+(wire (pts (xy 208.28 171.45000000000002) (xy 208.28 173.99)) (stroke (width 0) (type default)) (uuid "29a7e790-a692-4ac2-8103-c79f6be56f57"))
+(label "GND" (at 208.28 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "b420f3e6-3762-4ca0-a003-ea7bfdd3cfa3"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 243.84 163.83 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6d947cad-15e5-46d3-90e8-3e25b9f42585")
+(property "Reference" "R86" (at 246.38 162.56 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10k" (at 246.38 165.10000000000002 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 243.84 163.83 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left)))
+(pin "1" (uuid "3950078f-2a72-4cb8-957a-296768a714b4")) (pin "2" (uuid "8bad0017-cf4d-4ee9-8744-4b7489f749b0")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004" (reference "R86") (unit 1)))))
+(wire (pts (xy 243.84 156.21) (xy 243.84 153.67000000000002)) (stroke (width 0) (type default)) (uuid "f2843582-441f-4802-a072-4231e166f960"))
+(label "GATE_EN" (at 243.84 153.67000000000002 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "fcdccd7a-6942-47c2-9bb1-8089524e9b0b"))
+(wire (pts (xy 243.84 171.45000000000002) (xy 243.84 173.99)) (stroke (width 0) (type default)) (uuid "cc258ea2-cbb7-49df-b8b2-f86fd0874365"))
+(label "GND" (at 243.84 173.99 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a4cd4d3f-25bd-4446-90ef-87f6c1cec098"))
+
 )

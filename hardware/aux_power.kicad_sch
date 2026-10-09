@@ -2173,7 +2173,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "0674ce9a-e6a5-457a-aefc-8a3b58f8207a")
 		)
@@ -2203,13 +2203,15 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "U12")
 					(unit 1)
 				)
 			)
 		)
-	)
+	(property "Manufacturer" "Texas Instruments" (at 86.36 55.88 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LM5164DDAR" (at 86.36 55.88 0) (hide yes) (effects (font (size 1.016 1.016))))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 34.29 66.04 0)
@@ -2231,7 +2233,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2uF_100V_X7R"
+		(property "Value" "2.2uF"
 			(at 36.83 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2262,7 +2264,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.2uF_100V_X7R"
 			(at 34.29 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2271,7 +2273,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "72b9806a-b053-48e4-8b0b-bcff16a4581f")
 		)
@@ -2280,7 +2282,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C20")
 					(unit 1)
 				)
@@ -2308,7 +2310,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2uF_100V_X7R"
+		(property "Value" "2.2uF"
 			(at 50.8 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2339,7 +2341,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.2uF_100V_X7R"
 			(at 48.26 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2348,7 +2350,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "e37370ef-f510-42e7-b747-06f42c3af8e2")
 		)
@@ -2357,7 +2359,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C21")
 					(unit 1)
 				)
@@ -2385,7 +2387,7 @@
 				)
 			)
 		)
-		(property "Value" "100k_RON_1%"
+		(property "Value" "100k"
 			(at 63.5 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2416,7 +2418,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100k_RON_1%"
 			(at 60.96 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2425,7 +2427,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "11f4a1e4-0543-4378-ac39-cfd0101b0ec2")
 		)
@@ -2434,7 +2436,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "R20")
 					(unit 1)
 				)
@@ -2462,7 +2464,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2nF_BST_50V"
+		(property "Value" "2.2nF"
 			(at 121.92 78.74 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2493,7 +2495,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.2nF_BST_50V"
 			(at 119.38 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2502,7 +2504,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "136ed4cd-e9fb-4d99-9726-de47c8749329")
 		)
@@ -2511,7 +2513,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C24")
 					(unit 1)
 				)
@@ -2539,7 +2541,7 @@
 				)
 			)
 		)
-		(property "Value" "68uH_MSS1246T-683MLC"
+		(property "Value" "68uH"
 			(at 143.51 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2570,7 +2572,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "68uH_MSS1246T-683MLC"
 			(at 140.97 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2579,7 +2581,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "77837071-ba1f-48a7-a7dc-89da4806b81a")
 		)
@@ -2588,13 +2590,15 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "L1")
 					(unit 1)
 				)
 			)
 		)
-	)
+	(property "Manufacturer" "Coilcraft" (at 140.97 49.53 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "MSS1246T-683MLC" (at 140.97 49.53 0) (hide yes) (effects (font (size 1.016 1.016))))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 165.1 66.04 0)
@@ -2616,7 +2620,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF_25V_X7R"
+		(property "Value" "22uF"
 			(at 167.64 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2647,7 +2651,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "22uF_25V_X7R"
 			(at 165.1 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2656,7 +2660,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "6899e291-b0a2-47da-9b25-fb7b171e39f2")
 		)
@@ -2665,7 +2669,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C22")
 					(unit 1)
 				)
@@ -2693,7 +2697,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF_25V_X7R"
+		(property "Value" "22uF"
 			(at 181.61 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2724,7 +2728,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "22uF_25V_X7R"
 			(at 179.07 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2733,7 +2737,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "591184cc-723c-48b8-b1d3-8770d8c2d71b")
 		)
@@ -2742,7 +2746,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C23")
 					(unit 1)
 				)
@@ -2770,7 +2774,7 @@
 				)
 			)
 		)
-		(property "Value" "453k_RFB1_1%"
+		(property "Value" "453k"
 			(at 200.66 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2801,7 +2805,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "453k_RFB1_1%"
 			(at 198.12 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2810,7 +2814,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "42f925a1-0758-449d-ba6d-a7184cd8f33b")
 		)
@@ -2819,7 +2823,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "R21")
 					(unit 1)
 				)
@@ -2847,7 +2851,7 @@
 				)
 			)
 		)
-		(property "Value" "49.9k_RFB2_1%"
+		(property "Value" "49.9k"
 			(at 220.98 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2878,7 +2882,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "49.9k_RFB2_1%"
 			(at 218.44 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2887,7 +2891,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "842a97a5-4cb3-435c-b08d-a666e4af2b4b")
 		)
@@ -2896,7 +2900,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "R22")
 					(unit 1)
 				)
@@ -2924,7 +2928,7 @@
 				)
 			)
 		)
-		(property "Value" "453k_RA_1%"
+		(property "Value" "453k"
 			(at 157.48 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2955,7 +2959,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "453k_RA_1%"
 			(at 154.94 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2964,7 +2968,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "c9299ec3-b967-4c88-94b8-9240d8b5a9cf")
 		)
@@ -2973,7 +2977,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "R23")
 					(unit 1)
 				)
@@ -3001,7 +3005,7 @@
 				)
 			)
 		)
-		(property "Value" "3.3nF_CA_X7R"
+		(property "Value" "3.3nF"
 			(at 177.8 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3032,7 +3036,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "3.3nF_CA_X7R"
 			(at 175.26 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3041,7 +3045,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "af957343-2745-4e71-9aac-374b2774e5ec")
 		)
@@ -3050,7 +3054,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C25")
 					(unit 1)
 				)
@@ -3078,7 +3082,7 @@
 				)
 			)
 		)
-		(property "Value" "56pF_CB_C0G"
+		(property "Value" "56pF"
 			(at 198.12 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3109,7 +3113,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "56pF_CB_C0G"
 			(at 195.58 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3118,7 +3122,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "7cd13a96-7a3b-49df-b4a4-0814a2d728b7")
 		)
@@ -3127,7 +3131,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C26")
 					(unit 1)
 				)
@@ -3195,13 +3199,13 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "02bc31db-8c7d-4734-8cc6-294e5652e9c2")
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "TP3")
 					(unit 1)
 				)
@@ -3229,7 +3233,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS62163DSGR_FIXED_5V"
+		(property "Value" "TPS62163DSGR"
 			(at 129.54 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3260,7 +3264,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "TPS62163DSGR_FIXED_5V"
 			(at 127 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3269,7 +3273,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "1474a4d3-b0e4-4d7d-8c0c-794d9072d514")
 		)
@@ -3299,13 +3303,15 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "U13")
 					(unit 1)
 				)
 			)
 		)
-	)
+	(property "Manufacturer" "Texas Instruments" (at 127.0 128.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "TPS62163DSGR" (at 127.0 128.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 90.17 140.97 0)
@@ -3327,7 +3333,7 @@
 				)
 			)
 		)
-		(property "Value" "10uF_25V_X7R"
+		(property "Value" "10uF"
 			(at 92.71 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3358,7 +3364,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "10uF_25V_X7R"
 			(at 90.17 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3367,7 +3373,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "a0b047a8-2f43-421d-aa60-5924758d3344")
 		)
@@ -3376,7 +3382,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C30")
 					(unit 1)
 				)
@@ -3404,7 +3410,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2uH_74438356022_WE-MAPI-4020"
+		(property "Value" "2.2uH"
 			(at 163.83 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3435,7 +3441,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "2.2uH_74438356022_WE-MAPI-4020"
 			(at 161.29 125.73 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3444,7 +3450,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "4591af58-ac8e-4222-88d3-8c0450fb64bc")
 		)
@@ -3453,13 +3459,15 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "L2")
 					(unit 1)
 				)
 			)
 		)
-	)
+	(property "Manufacturer" "Wurth Elektronik" (at 161.29 125.73 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "74438356022" (at 161.29 125.73 0) (hide yes) (effects (font (size 1.016 1.016))))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 187.96 140.97 0)
@@ -3481,7 +3489,7 @@
 				)
 			)
 		)
-		(property "Value" "22uF_10V_X7R"
+		(property "Value" "22uF"
 			(at 190.5 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3512,7 +3520,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "22uF_10V_X7R"
 			(at 187.96 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3521,7 +3529,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "2ebb224c-781e-4bd6-a589-c4127c0624b8")
 		)
@@ -3530,7 +3538,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "C31")
 					(unit 1)
 				)
@@ -3546,7 +3554,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00006a000013")
 		(property "Reference" "R32"
 			(at 218.44 152.4 0)
@@ -3558,7 +3566,7 @@
 				)
 			)
 		)
-		(property "Value" "100k_PG_PULLUP_DNP"
+		(property "Value" "100k"
 			(at 218.44 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3589,7 +3597,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "100k_PG_PULLUP_DNP"
 			(at 215.9 154.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3598,7 +3606,7 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "868bef7d-197d-44ba-8645-4ae9ee4b6fff")
 		)
@@ -3607,7 +3615,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "R32")
 					(unit 1)
 				)
@@ -3675,13 +3683,13 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "2301deef-f73b-4dd5-953d-3e120e1c1db5")
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "TP4")
 					(unit 1)
 				)
@@ -3749,13 +3757,13 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "f67e7f1e-ab4a-4ce7-a64c-1f440aaefeaf")
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "#FLG0104")
 					(unit 1)
 				)
@@ -3823,13 +3831,13 @@
 					(size 1.27 1.27)
 				)
 			)
-		)
+		 (hide yes))
 		(pin "1"
 			(uuid "e9277a80-abfc-4e00-8066-b12796c52978")
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e/00000000-0000-0000-0000-000069000002"
+				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
 					(reference "#FLG0105")
 					(unit 1)
 				)

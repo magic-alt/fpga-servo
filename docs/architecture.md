@@ -59,19 +59,28 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 6. **Auxiliary power**
    - LM5164: DC bus -> 12 V gate/aux rail
    - TPS62160-class 12 V -> 5 V rail
-   - TLV75533-class 5 V -> local 3.3 V
-   - FPGA-facing buffers separate `VIO_FPGA` from local rails to reduce back-power risk
+   - 3.3 V logic is supplied by AX7010 VIO; there is no local 3.3 V LDO in the current schematic
+   - safety AND gates and encoder receiver run from AX7010 `VIO_3V3`; ADC DVDD also uses this rail
+   - dedicated digital isolation/buffer arrays are not fitted; partial-power behavior remains a qualification gate
 
 ## Safety state
 
-FD6288 has no single global hardware enable pin, so all six PWM inputs are hardware-gated before the driver. `RUN_OK` is defined as the logical AND of FPGA enable, auxiliary-power-good and no over-current fault. Any missing condition forces all six FD6288 input commands low.
+FD6288 has no single global hardware enable pin, so all six PWM inputs are hardware-gated before the driver. `RUN_OK` is defined as the logical AND of FPGA enable, auxiliary-power-good and the hardware ARMED latch. Any missing condition forces all six FD6288 input commands low.
 
 Hardware over-current detection is based on the conditioned current-sense outputs and a window-comparator network. The FPGA fault path remains a second, independent diagnostic path.
 
 The INA241A2 references use `REF1=VA_5V` and `REF2=GND`, placing zero current near 2.5 V. The 5 mOhm shunt and 20 V/V gain give 0.1 V/A. ADS8588S straps are `OS=000`, `PAR/SER=1`, `STBY=1`, `RANGE=0` (bipolar 5 V), and `REFSEL=1`; `DB15/BYTE_SEL` is low for serial mode. Dedicated TLV9024 comparators and an open-drain fault OR implement OCP without relying on FPGA firmware or ADC conversion. Comparator threshold and latch behavior still require tolerance and bench validation.
 
-`RUN_OK = GATE_EN & PWR_GOOD & OCP_N`. FPGA deadtime is at least 500 ns; FD6288 internal deadtime is not the primary mechanism. Each high-side bootstrap path runs from `VDRV_12V` through a diode to `BST_x`, with `CBOOT` between `BST_x` and `SW_x`. Gate series resistors start at 10 ohm and gate-source pull-downs at 10 kohm; tune from measured switching waveforms. Shunt Kelvin paths share the force nets electrically but must reach the shunt pads independently in PCB copper.
+`RUN_OK = GATE_EN & PWR_READY & ARMED`. FPGA deadtime is at least 500 ns; FD6288 internal deadtime is not the primary mechanism. Each high-side bootstrap path runs from `VDRV_12V` through a diode to `BST_x`, with `CBOOT` between `BST_x` and `SW_x`. Gate series resistors start at 10 ohm and gate-source pull-downs at 10 kohm; tune from measured switching waveforms. Shunt Kelvin paths share the force nets electrically but must reach the shunt pads independently in PCB copper.
 
 ## Grounding strategy
 
 The PCB uses one continuous ground reference on the bottom layer. High-current bridge return paths stay local to the DC-link negative node and do not share narrow traces with ADC/encoder return currents. The analog section is physically isolated from switch nodes rather than separated with a slit plane.
+
+## Configuration-time default and restart policy
+
+R80..R85 pull the six raw PWM inputs to GND through 10k. R86 pulls GATE_EN to GND through 10k. With VIO valid and FPGA outputs high impedance, the AND gates have defined low commands and RUN_OK remains low. R56..R61 are separate pull-downs on the already gated driver inputs. C80..C83 bypass the four safety logic supplies; C84/C85 bypass the two OCP comparators. C43..C45 bypass INA241 supply pins to GND.
+
+U20 implements hardware ARM latching, with supervised VIO/VA5 reset and raw OCP/PWR_GOOD asynchronous clear. Fault recovery alone cannot resume PWM. J1.10 FAULT_CLEAR re-arms on a rising edge with GATE_EN low. See `ocp_latch_review_2026-10-09.md` for the required clear protocol, timing conditions and bench gates. Nominal thresholds are 0.2941V and 4.7059V (approximately +/-22.06A); tolerance, filtering, response time and test evidence remain open.
+
+U26 SN74LVC3G17 applies Schmitt conditioning to the open-drain supervisor reset, raw OCP_N and raw PWR_GOOD before ordinary CMOS logic. The conditioned PWR_READY feeds U11/U23; raw diagnostic nets and their original pull-ups remain intact.

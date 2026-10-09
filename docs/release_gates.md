@@ -11,14 +11,30 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## Schematic
 
-- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **124 components / 163 nets**.
-- [x] Native schematic layout/A4-boundary checks pass for the top sheet and all six child sheets.
+- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **158 components / 183 nets**.
+- [x] Native schematic layout/A4-boundary checks pass for the top sheet and all seven child sheets.
 - [x] KiCad 10 ERC is clean: **0 errors / 0 warnings** on the tracked native hierarchy.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
 - [ ] Verify FD6288 bootstrap network against current datasheet typical application.
 - [ ] Verify regulator component values with vendor calculation/reference design.
 - [ ] Verify comparator thresholds and latch behavior across tolerance/temperature.
 - [ ] Define production-safe default for all control pins during FPGA reset/configuration.
+
+## Layout entry decision (2026-10-09)
+
+ERC is clean and initial placement studies can proceed. Final component placement / routing freeze remains blocked by these schematic-level decisions:
+
+- [x] OCP hardware ARM latch implemented; FAULT_CLEAR on J1.10 re-arms only with GATE_EN low and healthy conditions.
+- [ ] Qualify latch fault pulses, clear/fault phase races, power ramps and actual gate-off timing on the bench; digital regression is insufficient.
+- [ ] Confirm required ambient/junction range; U26 Rev.F timing bounds are specified only through 85C, so no 125C shutdown-delay claim.
+- [ ] Confirm AX7010 VIO minimum supports the G33 worst-case reset release (~3.194V).
+- [ ] Validate power sequencing and partial-power behavior with AX7010 VIO, VA_5V and VDRV_12V independently present/absent. Pull-downs establish a configuration-time default but do not constitute a safety-rated shutdown system.
+- [ ] Close input surge / regeneration energy handling: D1 is actually DNP, LM74502 OV is disabled, and upstream protection / receptive source requirements remain mandatory.
+- [ ] Freeze actual AX7010 connector revision and exact shunt / power connector / fuse footprints before routing power copper.
+- [x] R80..R86 provide 10k pull-downs on all six PWM inputs and GATE_EN; R56..R61 remain on the gated FD6288 input nets.
+- [x] U8..U11 and U15/U16 have dedicated 100nF bypass capacitors; C43..C45 correctly bridge VA_5V to GND.
+- [x] Project-relative symbol library table and hierarchy instance UUID regression checks are in place.
+- [x] BOM contains one row per schematic component; obsolete buffers/LDO entries have been eliminated and new U20..U25 latch circuitry is included and DNP flags are explicit.
 
 ## Footprints
 
@@ -31,7 +47,7 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## PCB
 
-- [ ] Reconcile all schematic references, footprints and nets with the partial board. The current PCB baseline has 32 footprints; the schematic has 124 symbols.
+- [ ] Reconcile all schematic references, footprints and nets with the partial board. The current PCB baseline has 32 footprints; the schematic has 158 symbols.
 - [ ] Close the current PCB DRC baseline (358 violations and 129 unconnected items in KiCad 10.0.3) after schematic-to-board parity is restored.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
@@ -52,3 +68,16 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 - [ ] OCP trip test with gates demonstrably forced low.
 - [ ] ABZ receiver test to maximum planned encoder frequency.
 - [ ] 15 A thermal soak evidence or revised continuous-current rating.
+
+## Follow-up findings (2026-10-09)
+
+- [x] U19 RVZ 14-pin mapping and Texas_R-PUSON-N14 footprint corrected; U19 repair stage was 158 components / 183 nets; current latch stage is 158 / 183.
+- [ ] Replace GMSTBA 12A power terminal selection for the stated continuous/peak current target.
+- [ ] Replace/qualify BVB-I-R005 selection: its 5mOhm variant is rated 3W at 70C, not >=5W.
+- [x] OCP latch design approved and implemented; see `docs/ocp_latch_review_2026-10-09.md` for timing conditions and remaining qualification.
+
+Detailed evidence and board differences: `docs/schematic_followup_2026-10-09.md`.
+
+Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.
+
+Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.

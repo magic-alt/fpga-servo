@@ -53,7 +53,7 @@ The servo PCB is designed for **cabled 2x20 2.54 mm connections** in Rev.A. This
 
 ## PL_B / official J11 mapping
 
-The second connector exposes the optional ADC parallel bus and development/debug signals.
+The table below reserves an optional parallel/development allocation. In the current serial-only schematic, J2 signal pins are NoConn; this allocation does not imply those signals are physically routed.
 
 | Header pin | Servo signal | Zynq package pin |
 |---:|---|---|
@@ -87,6 +87,7 @@ The second connector exposes the optional ADC parallel bus and development/debug
 
 - All PL signals are 3.3 V LVCMOS.
 - AX7010 +5 V pins are **not** tied to the servo board 5 V rail by default.
-- `VIO_FPGA_3V3` only powers FPGA-facing buffers and is not the board's main 3.3 V supply.
-- PWM/control outputs pass through local-input buffering and hardware run gating before FD6288.
-- ADC/encoder/fault inputs to the FPGA pass through `VIO_FPGA`-powered buffers to reduce partial-power backfeeding.
+- `VIO_FPGA_3V3` (schematic name `VIO_3V3`) powers U8..U11 safety logic, U7 receiver and U6 DVDD. There is no local 3.3 V LDO.
+- PWM outputs pass through U8..U10 hardware AND gating before FD6288; U11 generates RUN_OK. R80..R86 pull raw PWM/GATE_EN low while FPGA pins are high impedance.
+- ADC/encoder outputs connect directly to the FPGA; no standalone buffer array is fitted. Power sequencing and partial-power injection must be verified.
+- J1 pin 10 FAULT_CLEAR drives the U20 hardware ARM latch through R87/R88/C92 and U21. Re-arm with GATE_EN low and healthy conditions, CLEAR high/low >=10us, then wait >=10us before enabling; see `ocp_latch_review_2026-10-09.md`. J1 pin 22 and spare/auxiliary pins in the allocation table are NoConn in this revision.

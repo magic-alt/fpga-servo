@@ -15,6 +15,7 @@ schematic_paths = [
     HW / "gate_inverter.kicad_sch",
     HW / "current_adc.kicad_sch",
     HW / "encoder.kicad_sch",
+    HW / "ocp_latch.kicad_sch",
     HW / "ax7010_interface.kicad_sch",
 ]
 
@@ -32,8 +33,9 @@ for path in required:
 
 for path in [*HW.glob("*.sch"), *HW.glob("*.lib")]:
     errors.append(f"legacy KiCad source must not be tracked: {path.relative_to(ROOT)}")
-if (HW / "sym-lib-table").exists():
-    errors.append("hardware/sym-lib-table is local generated state and must not be tracked")
+table = HW / "sym-lib-table"
+if not table.exists() or '${KIPRJMOD}/ax7010_servo_reva.kicad_sym' not in table.read_text(encoding="utf-8"):
+    errors.append("portable project symbol table missing or invalid")
 
 schematic_text = ""
 for path in schematic_paths:
@@ -62,6 +64,7 @@ if schematic_paths[0].exists():
         "gate_inverter.kicad_sch",
         "current_adc.kicad_sch",
         "encoder.kicad_sch",
+        "ocp_latch.kicad_sch",
         "ax7010_interface.kicad_sch",
     ]:
         if child not in children:
@@ -126,6 +129,35 @@ bom_path = HW / "bom.csv"
 if bom_path.exists():
     with bom_path.open(newline="", encoding="utf-8") as handle:
         rows = list(csv.DictReader(handle))
+    expected_refs = set()
+    for path in schematic_paths:
+        if not path.exists():
+            continue
+        authored = strip_form(path.read_text(encoding="utf-8"), "lib_symbols")
+        for symbol in extract_forms(authored, "symbol"):
+            ref = property_value(symbol.text, "Reference")
+            if ref and not ref.startswith("#"):
+                expected_refs.add(ref)
+    row_by_ref = {row["Ref"]: row for row in rows}
+    for path in schematic_paths:
+        if not path.exists():
+            continue
+        authored = strip_form(path.read_text(encoding="utf-8"), "lib_symbols")
+        for symbol in extract_forms(authored, "symbol"):
+            ref = property_value(symbol.text, "Reference")
+            row = row_by_ref.get(ref)
+            if row is None:
+                continue
+            for column, prop in [("Value / Part", "Value"), ("Package", "Footprint")]:
+                if row[column] != property_value(symbol.text, prop):
+                    errors.append(f"BOM {ref}: {column} differs from schematic")
+            if row["MPN"] != (property_value(symbol.text, "MPN") or "TBD"):
+                errors.append(f"BOM {ref}: MPN differs from schematic")
+            if row["Status / note"].startswith("DNP") != ("(dnp yes)" in symbol.text):
+                errors.append(f"BOM {ref}: assembly option differs from schematic")
+    bom_refs = [row["Ref"] for row in rows]
+    if set(bom_refs) != expected_refs or len(bom_refs) != len(set(bom_refs)):
+        errors.append("BOM references must match the schematic exactly (one row per component)")
     joined = "\n".join(str(row) for row in rows)
     for part in ["FD6288T", "BSC040N10NS5", "INA241A2", "ADS8588S", "AM26LV32E"]:
         if part not in joined:

@@ -25,10 +25,7 @@
 		)
 		(uuid "eeb324c0-b3e3-45ed-a5c6-fae72380db66")
 	)
-	(no_connect
-		(at 73.66 133.35)
-		(uuid "5f81a342-cf3c-4006-97b2-a85933efef9a")
-	)
+
 	(wire
 		(pts
 			(xy 111.76 158.75) (xy 101.6 158.75)
@@ -1339,7 +1336,7 @@
 		)
 		(uuid "c1dd957d-215a-4897-878c-fff7be73d801")
 	)
-	(label "OCP_N"
+	(label "ARMED"
 		(at 162.56 48.26 0)
 		(effects
 			(font
@@ -1559,7 +1556,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e"
+				(path "/05403145-af59-4aba-b68b-68be6600865e"
 					(page "2")
 				)
 			)
@@ -1655,7 +1652,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e"
+				(path "/05403145-af59-4aba-b68b-68be6600865e"
 					(page "4")
 				)
 			)
@@ -1739,7 +1736,7 @@
 				(justify left)
 			)
 		)
-		(pin "OCP_N" input
+		(pin "ARMED" input
 			(at 167.64 48.26 180)
 			(uuid "e7f1e2a7-2899-477f-a6e7-feb87ef7eaa3")
 			(effects
@@ -1889,9 +1886,9 @@
 				(justify right)
 			)
 		)
-		(instances
+		(pin "PWR_READY" input (at 182.88 90.17 270) (uuid "696e938f-fa67-4723-8b59-a1fc2b7d9616") (effects (font (size 1.016 1.016)) (justify left)))(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e"
+				(path "/05403145-af59-4aba-b68b-68be6600865e"
 					(page "6")
 				)
 			)
@@ -2167,7 +2164,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e"
+				(path "/05403145-af59-4aba-b68b-68be6600865e"
 					(page "3")
 				)
 			)
@@ -2403,7 +2400,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e"
+				(path "/05403145-af59-4aba-b68b-68be6600865e"
 					(page "5")
 				)
 			)
@@ -2509,7 +2506,7 @@
 		)
 		(instances
 			(project "ax7010_servo_reva"
-				(path "/642e2bda-71a0-5b96-b593-56dd8de6839e"
+				(path "/05403145-af59-4aba-b68b-68be6600865e"
 					(page "7")
 				)
 			)
@@ -2521,4 +2518,29 @@
 		)
 	)
 	(embedded_fonts no)
+
+(sheet (at 38.1 69.85) (size 83.82 22.86) (stroke (width 0) (type solid)) (fill (color 0 0 0 0)) (uuid "00000000-0000-0000-0000-000069000007")(property "Sheetname" "OCP hardware latch" (at 38.1 68.58 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Sheetfile" "ocp_latch.kicad_sch" (at 38.1 93.98 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "VIO_3V3" input (at 38.1 74.93 180) (uuid "fcd87eef-c630-45f4-bfe4-ee9734d9ee79") (effects (font (size 1.016 1.016)) (justify left)))(pin "VA_5V" input (at 38.1 80.01 180) (uuid "ca2982e1-4af6-4225-a65c-f61ebc833c33") (effects (font (size 1.016 1.016)) (justify left)))(pin "GND" bidirectional (at 38.1 85.09 180) (uuid "64ceee4e-6a74-46f6-bb40-3075ebacc320") (effects (font (size 1.016 1.016)) (justify left)))(pin "OCP_N" input (at 38.1 90.17 180) (uuid "451b32f5-fcd2-455e-a523-f131e8e32308") (effects (font (size 1.016 1.016)) (justify left)))(pin "PWR_GOOD" input (at 121.92 74.93 0) (uuid "a4ec8809-dee1-4a94-9b12-9014cc2eb9a3") (effects (font (size 1.016 1.016)) (justify right)))(pin "GATE_EN" input (at 121.92 80.01 0) (uuid "d2527644-8959-4d91-b88f-9c6cece2cd9f") (effects (font (size 1.016 1.016)) (justify right)))(pin "FAULT_CLEAR" input (at 121.92 85.09 0) (uuid "fa466767-1998-4dec-8087-3e8a7fae9d2d") (effects (font (size 1.016 1.016)) (justify right)))(pin "ARMED" output (at 121.92 90.17 0) (uuid "8121f102-9d2f-4804-b2d8-36ae022391f6") (effects (font (size 1.016 1.016)) (justify right)))(pin "PWR_READY" output (at 101.6 92.71 270) (uuid "ccf42fba-e0da-49e2-bbe0-945d04fb3dd0") (effects (font (size 1.016 1.016)) (justify left)))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e" (page "8")))))
+(wire (pts (xy 73.66 133.35) (xy 78.74 133.35)) (stroke (width 0) (type default)) (uuid "fba535f1-4580-40e9-af2f-9fed7d9dfaeb"))
+(label "FAULT_CLEAR" (at 78.74 133.35 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "665f69bf-e544-4e68-8853-8a6faba4e1fb"))
+(wire (pts (xy 38.1 74.93) (xy 35.56 74.93)) (stroke (width 0) (type default)) (uuid "a5885a36-5b08-40ee-a140-55096298dbf5"))
+(label "VIO_3V3" (at 35.56 74.93 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "45f94a22-7f96-4e6f-96cd-3bef6d6cb092"))
+(wire (pts (xy 38.1 80.01) (xy 35.56 80.01)) (stroke (width 0) (type default)) (uuid "612df9af-8722-4376-87e1-35ac37d0b8f7"))
+(label "VA_5V" (at 35.56 80.01 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "06ab8187-0092-4b0a-a7f6-0170f3df5d64"))
+(wire (pts (xy 38.1 85.09) (xy 35.56 85.09)) (stroke (width 0) (type default)) (uuid "f255360a-2558-4d2d-af71-f024ceaab3ea"))
+(label "GND" (at 35.56 85.09 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "e7aea32d-ad58-40e9-8dc2-1affd39b3fc9"))
+(wire (pts (xy 38.1 90.17) (xy 35.56 90.17)) (stroke (width 0) (type default)) (uuid "523db248-b3a7-4d39-ab32-83c1cdac12be"))
+(label "OCP_N" (at 35.56 90.17 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "9c506d92-b1f5-4ce5-afa4-24e681759323"))
+(wire (pts (xy 121.92 74.93) (xy 124.46000000000001 74.93)) (stroke (width 0) (type default)) (uuid "7aa62a6d-4caf-45f3-8408-217781c62c71"))
+(label "PWR_GOOD" (at 124.46000000000001 74.93 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "044f6423-d70a-4a17-933e-08f913370ac7"))
+(wire (pts (xy 121.92 80.01) (xy 124.46000000000001 80.01)) (stroke (width 0) (type default)) (uuid "77a42baa-3669-490c-afa5-9ce234e2304c"))
+(label "GATE_EN" (at 124.46000000000001 80.01 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8ae9d232-c33a-431c-bc53-ffb9f0086215"))
+(wire (pts (xy 121.92 85.09) (xy 124.46000000000001 85.09)) (stroke (width 0) (type default)) (uuid "1669bcc2-2ae3-453d-a213-c77d60dc6750"))
+(label "FAULT_CLEAR" (at 124.46000000000001 85.09 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "9a52fcea-de62-484e-8ac4-ee9de31a6283"))
+(wire (pts (xy 121.92 90.17) (xy 124.46000000000001 90.17)) (stroke (width 0) (type default)) (uuid "78a7d711-48b9-4ea0-ac99-8878ae2a984f"))
+(label "ARMED" (at 124.46000000000001 90.17 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f3982f3b-e7b6-4188-97cc-0cbfc3d6cc5a"))
+
+(wire (pts (xy 182.88 90.17) (xy 182.88 93.98)) (stroke (width 0) (type default)) (uuid "8971a3fb-90e1-4067-92e1-09b331f82b70"))
+(label "PWR_READY" (at 182.88 93.98 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ca15fc40-0002-4788-93a7-1fb86232cdd8"))
+(wire (pts (xy 101.6 92.71) (xy 101.6 96.52)) (stroke (width 0) (type default)) (uuid "f8d3d3ac-e3aa-42c7-921b-4c213fea69b7"))
+(label "PWR_READY" (at 101.6 96.52 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8c32a5d0-944c-4782-b553-e050975187bf"))
 )

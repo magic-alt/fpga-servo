@@ -1,0 +1,734 @@
+(kicad_sch (version 20260306) (generator "eeschema") (uuid "79324044-aba0-49a3-9a8b-26e95e4db9a3") (paper "A4") (title_block (title "Hardware OCP latch / supervised re-arm") (date "2026-10-09") (rev "A1") (company "magic-alt/fpga-servo")) (lib_symbols (symbol "ax7010_servo_reva:R"
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "R"
+					(at 0 2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(property "Value" "R"
+					(at 0 -2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "R_0_1"
+					(rectangle
+						(start -3.81 1.524)
+						(end 3.81 -1.524)
+						(stroke
+							(width 0.254)
+							(type solid)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(symbol "R_1_1"
+					(pin passive line
+						(at -7.62 0 0)
+						(length 3.81)
+						(name "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 7.62 0 180)
+						(length 3.81)
+						(name "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)(symbol "ax7010_servo_reva:C"
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "C"
+					(at 2.54 2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+						(justify left)
+					)
+				)
+				(property "Value" "C"
+					(at 2.54 -2.54 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+						(justify left)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "C_0_1"
+					(polyline
+						(pts
+							(xy -3.048 1.016) (xy 3.048 1.016)
+						)
+						(stroke
+							(width 0.3048)
+							(type solid)
+						)
+						(fill
+							(type none)
+						)
+					)
+					(polyline
+						(pts
+							(xy -3.048 -1.016) (xy 3.048 -1.016)
+						)
+						(stroke
+							(width 0.3048)
+							(type solid)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(symbol "C_1_1"
+					(pin passive line
+						(at 0 6.35 270)
+						(length 5.08)
+						(name "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin passive line
+						(at 0 -6.35 90)
+						(length 5.08)
+						(name "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)(symbol "ax7010_servo_reva:TP"
+				(pin_numbers
+					(hide yes)
+				)
+				(pin_names
+					(offset 0)
+					(hide yes)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "TP"
+					(at 0 4.572 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(property "Value" "TP"
+					(at 0 -4.572 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.016 1.016)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "TP_0_1"
+					(circle
+						(center 0 0)
+						(radius 1.778)
+						(stroke
+							(width 0.254)
+							(type solid)
+						)
+						(fill
+							(type none)
+						)
+					)
+				)
+				(symbol "TP_1_1"
+					(pin passive line
+						(at 0 -6.35 90)
+						(length 5.08)
+						(name "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)(symbol "ax7010_servo_reva:SN74LVC1G11"
+				(pin_names
+					(offset 1.016)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "U"
+					(at 0 15.748 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "SN74LVC1G11"
+					(at 0 -15.748 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "SN74LVC1G11_0_1"
+					(rectangle
+						(start -12.7 11.176)
+						(end 12.7 -11.176)
+						(stroke
+							(width 0.254)
+							(type solid)
+						)
+						(fill
+							(type background)
+						)
+					)
+				)
+				(symbol "SN74LVC1G11_1_1"
+					(pin input line
+						(at -17.78 6.35 0)
+						(length 5.08)
+						(name "A"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "1"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin power_in line
+						(at 0 -16.51 90)
+						(length 5.08)
+						(name "GND"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "2"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin input line
+						(at -17.78 0 0)
+						(length 5.08)
+						(name "B"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "3"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin output line
+						(at 17.78 0 180)
+						(length 5.08)
+						(name "Y"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "4"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin power_in line
+						(at 0 16.51 270)
+						(length 5.08)
+						(name "VCC"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "5"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+					(pin input line
+						(at -17.78 -6.35 0)
+						(length 5.08)
+						(name "C"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+						(number "6"
+							(effects
+								(font
+									(size 1.016 1.016)
+								)
+							)
+						)
+					)
+				)
+				(embedded_fonts no)
+			)(symbol "ax7010_servo_reva:SN74LVC1G74" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 15.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G74" (at 0 -15.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(symbol "SN74LVC1G74_0_1" (rectangle (start -12.7 12.7) (end 12.7 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "SN74LVC1G74_1_1"(pin input clock (at -17.78 0 0) (length 5.08) (name "CLK" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))(pin input line (at -17.78 7.62 0) (length 5.08) (name "D" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))(pin output line (at 17.78 -5.08 180) (length 5.08) (name "~{Q}" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))(pin output line (at 17.78 5.08 180) (length 5.08) (name "Q" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))(pin input line (at -17.78 -7.62 0) (length 5.08) (name "~{CLR}" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))(pin input line (at -5.08 17.78 270) (length 5.08) (name "~{PRE}" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))(pin power_in line (at 5.08 17.78 270) (length 5.08) (name "VCC" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))))(symbol "ax7010_servo_reva:SN74LVC1G17" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 10.62 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G17" (at 0 -10.62 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(symbol "SN74LVC1G17_0_1" (rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "SN74LVC1G17_1_1"(pin no_connect line (at 12.7 -5.08 180) (length 5.08) (name "NC" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))(pin input line (at -12.7 0 0) (length 5.08) (name "A" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))(pin output line (at 12.7 0 180) (length 5.08) (name "Y" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 12.7 270) (length 5.08) (name "VCC" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))))(symbol "ax7010_servo_reva:SN74LVC1G14" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 10.62 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G14" (at 0 -10.62 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(symbol "SN74LVC1G14_0_1" (rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "SN74LVC1G14_1_1"(pin no_connect line (at 12.7 -5.08 180) (length 5.08) (name "NC" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))(pin input line (at -12.7 0 0) (length 5.08) (name "A" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))(pin output line (at 12.7 0 180) (length 5.08) (name "~{Y}" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 12.7 270) (length 5.08) (name "VCC" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))))(symbol "ax7010_servo_reva:TPS3808" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 15.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS3808" (at 0 -15.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(symbol "TPS3808_0_1" (rectangle (start -12.7 12.7) (end 12.7 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TPS3808_1_1"(pin open_collector line (at 17.78 5.08 180) (length 5.08) (name "~{RESET}" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))(pin input line (at -17.78 -5.08 0) (length 5.08) (name "~{MR}" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))(pin passive line (at 17.78 -5.08 180) (length 5.08) (name "CT" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))(pin input line (at -17.78 5.08 0) (length 5.08) (name "SENSE" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 17.78 270) (length 5.08) (name "VDD" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))))(symbol "ax7010_servo_reva:SN74LVC3G17" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 15.24 0) (effects (font (size 1.016 1.016)) (justify left bottom))) (property "Value" "SN74LVC3G17" (at 0 -15.24 0) (effects (font (size 1.016 1.016)) (justify left bottom))) (symbol "SN74LVC3G17_0_1" (rectangle (start -7.62 7.62) (end 7.62 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))) (symbol "SN74LVC3G17_1_1"(pin input line (at -12.7 5.08 0) (length 5.08) (name "1A" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))(pin output line (at 12.7 5.08 180) (length 5.08) (name "1Y" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))(pin input line (at -12.7 0 0) (length 5.08) (name "2A" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))(pin output line (at 12.7 0 180) (length 5.08) (name "2Y" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))(pin input line (at -12.7 -5.08 0) (length 5.08) (name "3A" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))(pin output line (at 12.7 -5.08 180) (length 5.08) (name "3Y" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 12.7 270) (length 5.08) (name "VCC" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 -12.7 90) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016))))))))
+(symbol (lib_id "ax7010_servo_reva:SN74LVC1G74") (at 223.52 44.45 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "206835a1-56c8-41b6-8670-c8ee0b703065")(property "Reference" "U20" (at 198.1200 21.5900 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G74" (at 198.1200 24.1300 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm" (at 223.52 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "SN74LVC1G74DCUR" (at 223.52 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 223.52 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf" (at 223.52 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "777dc358-afca-4c0d-a9ab-1f1837b484e9"))(pin "2" (uuid "5a795006-8947-4d28-8f57-6c1e46af4157"))(pin "3" (uuid "fdf43c6d-83b2-47c7-9e99-59b970dffbcf"))(pin "4" (uuid "34e94f32-643a-49b0-99bb-5a8ee0f6143f"))(pin "5" (uuid "b535e59c-1d26-460b-b2db-3d710d5e5490"))(pin "6" (uuid "faef0463-b8f2-4f89-abd1-50f503730ee8"))(pin "7" (uuid "f1d6e2f9-ca16-41fc-ad52-94fa14b9ca1f"))(pin "8" (uuid "6b992533-75f6-4b5b-9b59-ba855cb8667f"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U20") (unit 1)))))
+(wire (pts (xy 205.74 44.45) (xy 203.2 44.45)) (stroke (width 0) (type default)) (uuid "f71ca6ed-67b1-4b6c-88f6-5a611d219e8e"))
+(label "CLEAR_CLK" (at 203.2 44.45 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "cf241ab3-f30d-400e-a930-c0e263566220"))
+(wire (pts (xy 205.74 36.83) (xy 203.2 36.83)) (stroke (width 0) (type default)) (uuid "6cb34a2f-3e1e-43b1-97cb-7d39db7fa274"))
+(label "DISABLED" (at 203.2 36.83 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "ee1d7f6a-e6f4-48b8-9656-06618e3afe89"))
+(no_connect (at 241.3 49.53) (uuid "537b022c-177c-4516-b4fa-8fb38f32e3f8"))
+(wire (pts (xy 223.52 62.23) (xy 223.52 64.77)) (stroke (width 0) (type default)) (uuid "700103c3-e1d5-4a23-91fc-c0f848697c30"))
+(label "GND" (at 223.52 64.77 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f061884c-77b9-4d76-b82d-3bfbcdf364c0"))
+(wire (pts (xy 241.3 39.37) (xy 243.84 39.37)) (stroke (width 0) (type default)) (uuid "75e34fa2-0480-448b-8a89-78e934082980"))
+(label "ARMED" (at 243.84 39.37 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ce1d085d-e94c-4182-8762-bee88388c7ae"))
+(wire (pts (xy 205.74 52.07) (xy 203.2 52.07)) (stroke (width 0) (type default)) (uuid "a876941a-b3fb-4aa1-8ab0-7d3cac13a555"))
+(label "HEALTHY_N" (at 203.2 52.07 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "86bfea98-1b69-4a8e-8484-9fe7cc36100f"))
+(wire (pts (xy 218.44 26.67) (xy 218.44 24.13)) (stroke (width 0) (type default)) (uuid "25f74fe0-1e6f-4f05-9331-6255a5a77247"))
+(label "VIO_3V3" (at 218.44 24.13 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a9957425-9991-4bdf-9f07-8c44b5c8aa22"))
+(wire (pts (xy 228.6 26.67) (xy 228.6 24.13)) (stroke (width 0) (type default)) (uuid "635d2bce-5ed6-4c89-b588-23a95f05dc9c"))
+(label "VIO_3V3" (at 228.6 24.13 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5773dea0-a4aa-4808-aa7b-68ffe60d551e"))
+(symbol (lib_id "ax7010_servo_reva:SN74LVC1G17") (at 71.12 44.45 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "2f3f0609-4460-48b4-9af8-a6eea3c6a569")(property "Reference" "U21" (at 45.7200 21.5900 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G17" (at 45.7200 24.1300 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 71.12 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "SN74LVC1G17DBVR" (at 71.12 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 71.12 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf" (at 71.12 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "006b534b-85db-4e7e-9753-98a72b90f8d3"))(pin "2" (uuid "014b024e-1d10-4630-951d-12ea95b1101a"))(pin "3" (uuid "44bdda1b-f2ff-4d41-90db-e16361671677"))(pin "4" (uuid "dfa53235-ea49-4bed-9cf4-bbf2f794ce96"))(pin "5" (uuid "21035272-029e-4bd7-ac59-7d80d93b1a67"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U21") (unit 1)))))
+(no_connect (at 83.82 49.53) (uuid "07c3f429-d60a-470e-b228-7a979e900ff2"))
+(wire (pts (xy 58.42 44.45) (xy 55.88 44.45)) (stroke (width 0) (type default)) (uuid "73134227-d4e1-4399-8636-2373f9d51ec4"))
+(label "CLEAR_FILT" (at 55.88 44.45 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "402aa1c2-c710-4b5c-b9e8-77bbd3076396"))
+(wire (pts (xy 71.12 57.15) (xy 71.12 59.69)) (stroke (width 0) (type default)) (uuid "65d124a9-7502-4e29-8421-619e89a9bea4"))
+(label "GND" (at 71.12 59.69 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "d0267fd3-9d5c-44ca-b6cf-1255e232a48a"))
+(wire (pts (xy 83.82 44.45) (xy 86.36 44.45)) (stroke (width 0) (type default)) (uuid "ad618849-c656-4e23-95cc-ec7f81cff121"))
+(label "CLEAR_CLK" (at 86.36 44.45 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "1aa34a9b-3155-4b6d-ba64-a96c47b40ac5"))
+(wire (pts (xy 71.12 31.75) (xy 71.12 29.21)) (stroke (width 0) (type default)) (uuid "3bd752f5-0e1e-4a0d-ab30-c3bb629934ae"))
+(label "VIO_3V3" (at 71.12 29.21 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "3994eb13-7806-44f6-913f-7220b8806798"))
+(symbol (lib_id "ax7010_servo_reva:SN74LVC1G14") (at 142.24 44.45 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "09c76cf9-45dd-4cbf-a8e7-feb76b7a3283")(property "Reference" "U22" (at 116.8400 21.5900 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G14" (at 116.8400 24.1300 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5" (at 142.24 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "SN74LVC1G14DBVR" (at 142.24 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 142.24 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf" (at 142.24 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "98f43bf4-7a5d-49b1-823e-255ddc23a556"))(pin "2" (uuid "efddc974-1859-402a-93dc-7a1598dda779"))(pin "3" (uuid "afc9238f-8a7a-424a-a278-f66e483d29c6"))(pin "4" (uuid "2cbf238e-a59d-4ddd-9199-f6ee2f476b2f"))(pin "5" (uuid "9901ba92-c1c2-43c6-bff0-4a392d71c7db"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U22") (unit 1)))))
+(no_connect (at 154.94 49.53) (uuid "099198d3-bcee-4a31-bffa-a57ded071481"))
+(wire (pts (xy 129.54 44.45) (xy 127 44.45)) (stroke (width 0) (type default)) (uuid "ba881567-b724-43b7-b70e-8b73217ed45f"))
+(label "GATE_EN" (at 127 44.45 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "85570a09-f1be-43fa-a206-1b002e99e235"))
+(wire (pts (xy 142.24 57.15) (xy 142.24 59.69)) (stroke (width 0) (type default)) (uuid "e2b2b368-ab63-45e3-afc2-db7e0942153f"))
+(label "GND" (at 142.24 59.69 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "c24c3cfd-4194-4b73-9698-290b0328d3e5"))
+(wire (pts (xy 154.94 44.45) (xy 157.48 44.45)) (stroke (width 0) (type default)) (uuid "5e196f2d-7a23-4384-8972-b15510b487c7"))
+(label "DISABLED" (at 157.48 44.45 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "9b66b9b2-3b2d-4388-ac27-57b23446ee2b"))
+(wire (pts (xy 142.24 31.75) (xy 142.24 29.21)) (stroke (width 0) (type default)) (uuid "ea004e3b-ffab-41d8-8a16-7727507655a7"))
+(label "VIO_3V3" (at 142.24 29.21 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f13380af-b910-4484-a998-66c53cca3309"))
+(symbol (lib_id "ax7010_servo_reva:SN74LVC1G11") (at 223.52 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "67b9e371-67ed-4c52-9250-42b8001d0639")(property "Reference" "U23" (at 198.1200 78.7400 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC1G11" (at 198.1200 81.2800 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6" (at 223.52 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "SN74LVC1G11DCKR" (at 223.52 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 223.52 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g11.pdf" (at 223.52 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "86a9bd3c-64a5-45d5-898a-be7f6412e4fd"))(pin "2" (uuid "0c78dbce-dfb9-47b0-af38-2f31cc31ece7"))(pin "3" (uuid "c50e6e57-6056-4786-9ef1-6b002fe656ac"))(pin "4" (uuid "f6d6591f-1f2c-4c38-834c-e4c7b710ac98"))(pin "5" (uuid "829aad71-fd69-41a4-93fc-047c89c5ea21"))(pin "6" (uuid "2599461d-b73a-49db-8d6e-d646a2b226db"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U23") (unit 1)))))
+(wire (pts (xy 205.74 95.25) (xy 203.2 95.25)) (stroke (width 0) (type default)) (uuid "2c15c4fd-7fd9-49e6-9afc-1addf8a19d53"))
+(label "OCP_OK" (at 203.2 95.25 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "bc80d4b7-c155-4870-9865-d1d826462a14"))
+(wire (pts (xy 223.52 118.11) (xy 223.52 120.65)) (stroke (width 0) (type default)) (uuid "34d2964c-5eec-4a56-9e07-575ec056f429"))
+(label "GND" (at 223.52 120.65 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a42ef64e-111b-4e30-b406-039110214ba6"))
+(wire (pts (xy 205.74 101.6) (xy 203.2 101.6)) (stroke (width 0) (type default)) (uuid "65680254-4eed-4a96-ad8b-4ce2471c787e"))
+(label "PWR_READY" (at 203.2 101.6 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "033499ab-4d72-40a2-9bad-086cfb833356"))
+(wire (pts (xy 241.3 101.6) (xy 243.84 101.6)) (stroke (width 0) (type default)) (uuid "99064dec-bc37-4f92-9236-6c9e8ad98cd8"))
+(label "HEALTHY_N" (at 243.84 101.6 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "d047ddc9-7748-43e9-83a5-10b8191d8a69"))
+(wire (pts (xy 223.52 85.09) (xy 223.52 82.55)) (stroke (width 0) (type default)) (uuid "2dc920b6-09ed-42db-bb8e-1d30c1af820f"))
+(label "VIO_3V3" (at 223.52 82.55 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8fa76e81-2251-4ed1-a0a1-333123680261"))
+(wire (pts (xy 205.74 107.95) (xy 203.2 107.95)) (stroke (width 0) (type default)) (uuid "f472351b-af15-46be-8e84-7a2139ecc55f"))
+(label "POR_OK" (at 203.2 107.95 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "6cf9cdbb-127b-4c11-9927-a78b4875d423"))
+(symbol (lib_id "ax7010_servo_reva:TPS3808") (at 71.12 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "3fe36c8c-edd1-4eac-94d9-709df28c3122")(property "Reference" "U24" (at 45.7200 78.7400 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS3808G33" (at 45.7200 81.2800 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 71.12 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "TPS3808G33DBVR" (at 71.12 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 71.12 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3808.pdf" (at 71.12 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3" (at 71.12 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "9efc5801-bfa4-4a4e-93a4-253978eaf065"))(pin "2" (uuid "1d64f2cb-b3e7-43e5-a2ef-f58955587251"))(pin "3" (uuid "8df22cfc-ea44-4aa6-aba7-5702d43e4745"))(pin "4" (uuid "7db612a7-51ab-4526-8f1b-559c9726873d"))(pin "5" (uuid "de90ca81-9b8c-46ce-ac78-6f6a3db71534"))(pin "6" (uuid "74873815-390d-4a1d-8bb8-1a0cdb98935c"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U24") (unit 1)))))
+(wire (pts (xy 88.9 96.52) (xy 91.44 96.52)) (stroke (width 0) (type default)) (uuid "9be5c1a7-0add-4e44-9145-62fd39bcdb2e"))
+(label "POR_N" (at 91.44 96.52 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a8792cfa-d630-49c1-9c0a-9d02cba32072"))
+(wire (pts (xy 71.12 119.38) (xy 71.12 121.92)) (stroke (width 0) (type default)) (uuid "b9622a82-6bc4-4bea-abc5-21ab181dbc69"))
+(label "GND" (at 71.12 121.92 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "2e89d29c-2804-4403-b690-548e755d4b8d"))
+(wire (pts (xy 53.34 106.68) (xy 50.8 106.68)) (stroke (width 0) (type default)) (uuid "3a8754be-cd5e-4dd5-bbeb-605ae76413ce"))
+(label "VIO_3V3" (at 50.8 106.68 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "7b2d453a-179d-4090-b8bb-2be3d45cda40"))
+(no_connect (at 88.9 106.68) (uuid "4533f9aa-0073-459c-8c1d-31f0346c56f4"))
+(wire (pts (xy 53.34 96.52) (xy 50.8 96.52)) (stroke (width 0) (type default)) (uuid "923aa941-1098-4faa-b7de-d30ab5939a40"))
+(label "VIO_3V3" (at 50.8 96.52 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "0eb779e9-7c64-487f-8ccd-8951088eb194"))
+(wire (pts (xy 71.12 83.82) (xy 71.12 81.28)) (stroke (width 0) (type default)) (uuid "349a5cd9-02a5-4c84-932b-a980bf404e47"))
+(label "VIO_3V3" (at 71.12 81.28 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "041b0518-4cb3-4337-ba13-7eab2527db4a"))
+(symbol (lib_id "ax7010_servo_reva:TPS3808") (at 142.24 101.6 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "5f1de505-5726-4e2d-978d-20fe31590ee8")(property "Reference" "U25" (at 116.8400 78.7400 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS3808G50" (at 116.8400 81.2800 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6" (at 142.24 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "TPS3808G50DBVR" (at 142.24 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 142.24 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3808.pdf" (at 142.24 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3" (at 142.24 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "4da5a564-f7fd-42c3-9133-7347ad41dca2"))(pin "2" (uuid "0ba8c38c-1cb7-4275-a74f-593cee40ad8c"))(pin "3" (uuid "286d5c3d-df31-4c52-b25b-68c78dadbf31"))(pin "4" (uuid "f9cab626-4236-47c3-a62c-2ec3ee283577"))(pin "5" (uuid "45ff5880-c920-4bff-9872-021e44bac96a"))(pin "6" (uuid "2d21d21f-17d1-4e70-bda1-5856cfd95afc"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U25") (unit 1)))))
+(wire (pts (xy 160.02 96.52) (xy 162.56 96.52)) (stroke (width 0) (type default)) (uuid "db481817-c94d-493b-9b05-945869b58419"))
+(label "POR_N" (at 162.56 96.52 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "28e12176-b375-43d3-9096-189e22596155"))
+(wire (pts (xy 142.24 119.38) (xy 142.24 121.92)) (stroke (width 0) (type default)) (uuid "1208921e-0939-455f-bba0-d2f0799fe56e"))
+(label "GND" (at 142.24 121.92 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "1d3e4904-8d15-4291-902f-7a6222dedda1"))
+(wire (pts (xy 124.46 106.68) (xy 121.92 106.68)) (stroke (width 0) (type default)) (uuid "3775d68c-be67-4143-97ce-66f3807334c4"))
+(label "VIO_3V3" (at 121.92 106.68 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "a8036416-9598-421e-8088-1103a65342f5"))
+(no_connect (at 160.02 106.68) (uuid "b69b5895-37a5-497f-a4af-50f0726c67f3"))
+(wire (pts (xy 124.46 96.52) (xy 121.92 96.52)) (stroke (width 0) (type default)) (uuid "ef84e504-582f-423a-8814-220cb91940e6"))
+(label "VA_5V" (at 121.92 96.52 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "52ea170c-a6b2-449b-b9da-cc70007a8449"))
+(wire (pts (xy 142.24 83.82) (xy 142.24 81.28)) (stroke (width 0) (type default)) (uuid "c87f4ec0-d90d-41e8-b1b5-6a932a0d97d6"))
+(label "VIO_3V3" (at 142.24 81.28 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ddc85b8e-f76a-435f-8ac6-e22bd06b8106"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 27.94 44.45 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "7e4754dc-7c84-4898-b135-0d9f72fcc06c")(property "Reference" "R87" (at 31.75 41.91 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "10k" (at 31.75 44.45 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 27.94 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "10ad777d-1cd8-406a-93fd-60c3f07a54ae"))(pin "2" (uuid "cd8971d1-2424-438c-a09f-ab23e47b31f2"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "R87") (unit 1)))))
+(wire (pts (xy 27.94 36.83) (xy 27.94 34.29)) (stroke (width 0) (type default)) (uuid "4c6af495-83d4-492c-8f00-03c767a2bcbf"))
+(label "FAULT_CLEAR" (at 27.94 34.29 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "af262097-8cb2-4dd6-90bc-d69ad4390c6d"))
+(wire (pts (xy 27.94 52.07) (xy 27.94 54.61)) (stroke (width 0) (type default)) (uuid "7a345f53-a61c-4c34-980c-e094904347ad"))
+(label "GND" (at 27.94 54.61 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f93785a6-e409-44bb-9fc2-6bf86e657cee"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 27.94 69.85 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "ff5e1014-8204-46fe-a63e-5c11d8e114e1")(property "Reference" "R88" (at 31.75 67.31 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "1k" (at 31.75 69.85 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 27.94 69.85 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "f4818186-7143-4021-9745-4b2ecedf1263"))(pin "2" (uuid "7877cc1d-b901-413a-b4b9-5deb93c1bd2b"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "R88") (unit 1)))))
+(wire (pts (xy 20.32 69.85) (xy 17.78 69.85)) (stroke (width 0) (type default)) (uuid "ddbd8e20-fabe-47f3-a01f-d52da84e5f54"))
+(label "FAULT_CLEAR" (at 17.78 69.85 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "9c719f3e-83ae-4805-a0b7-613b6a4423a3"))
+(wire (pts (xy 35.56 69.85) (xy 38.1 69.85)) (stroke (width 0) (type default)) (uuid "26a33111-302a-43df-88db-d0ff17f31813"))
+(label "CLEAR_FILT" (at 38.1 69.85 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "1179463f-ce8c-484a-a0a9-d2bfb4a63b61"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 71.12 69.85 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6aa97615-045a-4ea5-aa60-cbb5a78f5b82")(property "Reference" "C92" (at 74.93 67.31 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "1nF" (at 74.93 69.85 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 71.12 69.85 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "e416b28c-7753-4305-9b18-fb347b264f4d"))(pin "2" (uuid "fe575305-a051-408a-95f7-bacf2efc3511"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C92") (unit 1)))))
+(wire (pts (xy 71.12 63.5) (xy 71.12 60.96)) (stroke (width 0) (type default)) (uuid "50766544-385a-41e8-90af-db267d255bcd"))
+(label "CLEAR_FILT" (at 71.12 60.96 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5b64f6f3-e0c4-4c72-a4bb-9746593a9864"))
+(wire (pts (xy 71.12 76.2) (xy 71.12 78.74)) (stroke (width 0) (type default)) (uuid "95c05872-8999-4e10-94e1-aeabab0cf282"))
+(label "GND" (at 71.12 78.74 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "27f834fb-4e8e-4584-a9bb-49ecd3f3e7eb"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 27.94 101.6 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6e471afd-8b95-4e70-9980-f824b4a83887")(property "Reference" "R89" (at 31.75 99.06 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100k" (at 31.75 101.6 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 27.94 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "4ab764e3-c3bd-481f-8c7a-bc853d4341bc"))(pin "2" (uuid "4b2339a3-54a3-439c-8701-0aa6eb480621"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "R89") (unit 1)))))
+(wire (pts (xy 27.94 93.98) (xy 27.94 91.44)) (stroke (width 0) (type default)) (uuid "10a807b4-4a04-455e-9bd3-42070fd5178b"))
+(label "VIO_3V3" (at 27.94 91.44 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "dd5dd784-c64a-444e-ad38-1b08401af762"))
+(wire (pts (xy 27.94 109.22) (xy 27.94 111.76)) (stroke (width 0) (type default)) (uuid "a11d3fe9-5a55-4fff-a013-c07c16c1e451"))
+(label "POR_N" (at 27.94 111.76 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "0924940d-99e4-453e-9c6e-fba0873a4b86"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 271.78 44.45 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "b39d09b3-02d9-4081-bd6a-c33056154c9f")(property "Reference" "R90" (at 275.59 41.91 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "10k" (at 275.59 44.45 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 271.78 44.45 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "0b4ee598-1d9a-43dc-ad66-972b43b3aea1"))(pin "2" (uuid "443bf0a1-980e-44dd-a8fd-2f58fe2f4736"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "R90") (unit 1)))))
+(wire (pts (xy 271.78 36.83) (xy 271.78 34.29)) (stroke (width 0) (type default)) (uuid "3aa1dc42-f0d6-4144-b637-c2e27fcdfd76"))
+(label "ARMED" (at 271.78 34.29 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "af260f5c-de97-4cc5-b90f-e2830ea3db4d"))
+(wire (pts (xy 271.78 52.07) (xy 271.78 54.61)) (stroke (width 0) (type default)) (uuid "390710f2-602e-4bb2-8ab1-3b53514e9b96"))
+(label "GND" (at 271.78 54.61 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "30f361d5-f350-4c68-aeed-7e627f87f662"))
+(symbol (lib_id "ax7010_servo_reva:R") (at 271.78 101.6 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cb24b094-1e49-4568-966e-067e0ef4af89")(property "Reference" "R91" (at 275.59 99.06 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "10k" (at 275.59 101.6 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 271.78 101.6 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "53fe4a76-c114-4794-9a0d-8bf337c034c7"))(pin "2" (uuid "127715e8-7cb2-4161-9779-fae71fc01b60"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "R91") (unit 1)))))
+(wire (pts (xy 271.78 93.98) (xy 271.78 91.44)) (stroke (width 0) (type default)) (uuid "9269f959-a5d0-4978-ab16-d80d3abf892e"))
+(label "HEALTHY_N" (at 271.78 91.44 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "31d67056-04e5-49d5-a786-f986964ab8a0"))
+(wire (pts (xy 271.78 109.22) (xy 271.78 111.76)) (stroke (width 0) (type default)) (uuid "8164ced5-b02a-4b67-8b13-a75ef00470ab"))
+(label "GND" (at 271.78 111.76 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "c0febfdb-4fba-43fb-ace8-7279eac5ea1f"))
+(symbol (lib_id "ax7010_servo_reva:TP") (at 271.78 69.85 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "cae2754d-a765-4157-81b7-4ec3d4204a63")(property "Reference" "TP5" (at 275.59 67.31 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "ARMED" (at 275.59 69.85 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm" (at 271.78 69.85 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "1db1c01e-b97b-4270-92cb-4464eeaf27b8"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "TP5") (unit 1)))))
+(wire (pts (xy 271.78 76.2) (xy 271.78 78.74)) (stroke (width 0) (type default)) (uuid "e2363124-e81b-417d-80db-14c936686fc8"))
+(label "ARMED" (at 271.78 78.74 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "fb843e53-ab73-4e3a-8aa3-b3e6829485cc"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 71.12 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "9226e738-6378-4eae-92c5-8096cdc5678d")(property "Reference" "C86" (at 74.93 142.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 74.93 144.78 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 71.12 144.78 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "8d92e745-60d8-4978-b800-f7d40459d46c"))(pin "2" (uuid "6efb9ce1-5096-4521-907c-7bce74bbc6e6"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C86") (unit 1)))))
+(wire (pts (xy 71.12 138.43) (xy 71.12 135.89)) (stroke (width 0) (type default)) (uuid "257cec34-eaf7-4446-b766-5644ed4bdd14"))
+(label "VIO_3V3" (at 71.12 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5f48ace7-57cc-41b0-851b-06f2b0a125c6"))
+(wire (pts (xy 71.12 151.13) (xy 71.12 153.67)) (stroke (width 0) (type default)) (uuid "fc15cd4e-f6a8-41c1-a9c6-a5c9572dce0a"))
+(label "GND" (at 71.12 153.67 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f2993f7b-2f58-482f-a1e2-e0443636790d"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 49.5300 144.7800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "69d2b617-bd14-44b8-84ee-467ed59f7375")(property "Reference" "C87" (at 53.3400 142.2400 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 53.3400 144.7800 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 49.5300 144.7800 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "4b0c7252-d104-47dd-80d4-4ea0aa3e3575"))(pin "2" (uuid "240c13c0-ce13-474f-af1d-7dfb55ec4418"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C87") (unit 1)))))
+(wire (pts (xy 49.5300 138.43) (xy 49.5300 135.89)) (stroke (width 0) (type default)) (uuid "29b777e7-ab3e-480a-9ff5-77d9dc04b1ba"))
+(label "VIO_3V3" (at 49.5300 135.8900 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a054b69c-1467-439a-8bc7-a3241a479290"))
+(wire (pts (xy 49.5300 151.13) (xy 49.5300 153.67)) (stroke (width 0) (type default)) (uuid "21072453-d01d-4c07-8cb1-9c4168cd9240"))
+(label "GND" (at 49.5300 153.6700 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "6a97bbc1-f2a0-4f6f-9071-fbbd019c35d2"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 142.24 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6896bf7d-5d65-4de3-b1c4-d94e6569a95a")(property "Reference" "C88" (at 146.05 142.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 146.05 144.78 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 142.24 144.78 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "a4fe4d62-7dca-44b0-823e-2f9fb1b3c8b8"))(pin "2" (uuid "0f319499-fd3e-4bb5-8626-a19b9cc5286d"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C88") (unit 1)))))
+(wire (pts (xy 142.24 138.43) (xy 142.24 135.89)) (stroke (width 0) (type default)) (uuid "699df735-50d5-432a-9623-d555b3d48172"))
+(label "VIO_3V3" (at 142.24 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "55b72633-e45f-4b95-8ec2-3e95490aab07"))
+(wire (pts (xy 142.24 151.13) (xy 142.24 153.67)) (stroke (width 0) (type default)) (uuid "f92dc46d-b022-43f3-ab29-c48d84c22d7c"))
+(label "GND" (at 142.24 153.67 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "fddc0a10-7bf0-4c0d-b15f-f7ed2b6ad4b9"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 177.8 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "fb15f6fc-8f6e-4e5b-9aac-436f4228a2ec")(property "Reference" "C89" (at 181.61 142.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 181.61 144.78 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 177.8 144.78 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "fab9d4f7-ddc2-49d4-816c-61354521cd91"))(pin "2" (uuid "d76c44b9-1a8a-4780-9013-039d694e1b12"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C89") (unit 1)))))
+(wire (pts (xy 177.8 138.43) (xy 177.8 135.89)) (stroke (width 0) (type default)) (uuid "7d9649e5-f4f9-4192-98f2-b7d26e963caa"))
+(label "VIO_3V3" (at 177.8 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "0de81117-1d28-4a21-aad8-7362ff7aec93"))
+(wire (pts (xy 177.8 151.13) (xy 177.8 153.67)) (stroke (width 0) (type default)) (uuid "ee154d64-7f47-41bc-acbb-cb3c8e55480e"))
+(label "GND" (at 177.8 153.67 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5c987d21-75b5-4889-80f2-5ec739ba1d92"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 213.36 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "67f5f9ef-888a-458e-a4ec-30e57ef8f99f")(property "Reference" "C90" (at 217.17 142.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 217.17 144.78 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 213.36 144.78 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "f43787d4-16b6-4105-be54-8be827edebc3"))(pin "2" (uuid "59e7671a-ab44-4617-8bce-88732f67d017"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C90") (unit 1)))))
+(wire (pts (xy 213.36 138.43) (xy 213.36 135.89)) (stroke (width 0) (type default)) (uuid "918c2f58-4fc5-42a1-a7f2-5e708f2a17d2"))
+(label "VIO_3V3" (at 213.36 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "2afd5429-86a4-4dfb-a1ec-037ad84fef8f"))
+(wire (pts (xy 213.36 151.13) (xy 213.36 153.67)) (stroke (width 0) (type default)) (uuid "b6c99235-e8a6-4724-b1a8-dd9bbe4a7f0f"))
+(label "GND" (at 213.36 153.67 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "6371e1ce-b528-4b36-9657-25c8f8392d66"))
+(symbol (lib_id "ax7010_servo_reva:C") (at 248.92 144.78 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "8ee4764e-f043-452b-801a-4e40c59a7872")(property "Reference" "C91" (at 252.73 142.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 252.73 144.78 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 248.92 144.78 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "bd2f916e-9d7a-41e8-90d8-f555805e333f"))(pin "2" (uuid "edc7ac04-735d-4d0c-a105-e4a5805eaf60"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C91") (unit 1)))))
+(wire (pts (xy 248.92 138.43) (xy 248.92 135.89)) (stroke (width 0) (type default)) (uuid "c184d89e-0844-4dc3-8ac9-235dbf1ec892"))
+(label "VIO_3V3" (at 248.92 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "f3175d4e-72b5-434b-99e2-a7a584de92ee"))
+(wire (pts (xy 248.92 151.13) (xy 248.92 153.67)) (stroke (width 0) (type default)) (uuid "965e3982-a1f7-43b4-8e77-c1d78070b5d2"))
+(label "GND" (at 248.92 153.67 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ba6ba6b2-2ee2-4419-84dc-504908f5402f"))
+(hierarchical_label "VIO_3V3" (shape input) (at 17.78 163.83 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "d3b27159-e180-4f3e-ba63-9fe272560b56"))
+(wire (pts (xy 17.78 163.83) (xy 22.86 163.83)) (stroke (width 0) (type default)) (uuid "7273ab57-abc9-49d7-871f-3cb01895f3b5"))
+(label "VIO_3V3" (at 22.86 163.83 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "be93470e-0b7e-4eec-a63f-7b20bab9a3d6"))
+(hierarchical_label "VA_5V" (shape input) (at 17.78 171.45 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "efe2e9fb-f8f2-4888-9637-f1ddefbc24b7"))
+(wire (pts (xy 17.78 171.45) (xy 22.86 171.45)) (stroke (width 0) (type default)) (uuid "01c93b98-8d35-48b7-be89-d62e65a8edad"))
+(label "VA_5V" (at 22.86 171.45 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "d8d05b03-f101-4239-9090-6a295e1deec5"))
+(hierarchical_label "GND" (shape bidirectional) (at 17.78 179.07 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "9b55a41d-32e6-454b-b6ed-9118f08c8c68"))
+(wire (pts (xy 17.78 179.07) (xy 22.86 179.07)) (stroke (width 0) (type default)) (uuid "6628b307-183b-4846-90e3-197e4531f160"))
+(label "GND" (at 22.86 179.07 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ad133ab5-a3a6-4927-a0b4-40a227a61318"))
+(hierarchical_label "OCP_N" (shape input) (at 17.78 186.69 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "9ef42d48-3bb5-42d5-a7d3-ff44e9b7b558"))
+(wire (pts (xy 17.78 186.69) (xy 22.86 186.69)) (stroke (width 0) (type default)) (uuid "4b7d713d-06a3-49bf-85da-9b8d544c4c92"))
+(label "OCP_N" (at 22.86 186.69 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "43cec275-b2b7-4729-9c26-b36411753c3e"))
+(hierarchical_label "PWR_GOOD" (shape input) (at 93.98 163.83 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "9ef3c171-b4e3-478e-bf2c-8b950254e971"))
+(wire (pts (xy 93.98 163.83) (xy 99.06 163.83)) (stroke (width 0) (type default)) (uuid "6fd18e96-759a-48ed-a138-8a2d001adf71"))
+(label "PWR_GOOD" (at 99.06 163.83 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "b7a9a002-f899-4bbc-85dc-4926167851e4"))
+(hierarchical_label "GATE_EN" (shape input) (at 93.98 171.45 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "18d9694c-5bb5-478f-832d-e72101b0bd07"))
+(wire (pts (xy 93.98 171.45) (xy 99.06 171.45)) (stroke (width 0) (type default)) (uuid "688bdc90-93ac-477c-a40c-8982707c0e5e"))
+(label "GATE_EN" (at 99.06 171.45 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "b37c1719-b8b1-4f02-9d9a-68ab24fdd493"))
+(hierarchical_label "FAULT_CLEAR" (shape input) (at 93.98 179.07 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "3e773e0e-a4e5-4643-a629-16a350379798"))
+(wire (pts (xy 93.98 179.07) (xy 99.06 179.07)) (stroke (width 0) (type default)) (uuid "db79fad9-3209-4cfa-8a66-f10052e1ca3f"))
+(label "FAULT_CLEAR" (at 99.06 179.07 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ccbba987-e0d5-48f3-838c-8c21e13ce9eb"))
+(hierarchical_label "ARMED" (shape output) (at 93.98 186.69 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "80167b00-2f9e-4083-8e30-c43b59bcfbee"))
+(wire (pts (xy 93.98 186.69) (xy 99.06 186.69)) (stroke (width 0) (type default)) (uuid "ecbe7bcd-300b-4726-865b-0bd0182eeaec"))
+(label "ARMED" (at 99.06 186.69 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "1aa986cf-57e2-4b12-8239-b3267da93775"))
+(text "HARDWARE ARM: any OCP / power fault clears Q. Recovery alone never re-arms." (at 17.78 15.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "56f16c16-d87f-4fe5-9e53-f15128d9869b"))
+(text "CLEAR: EN=0, healthy >=1ms, CLEAR high >=10us; wait >=10us before EN=1." (at 106.68 69.85 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "e3c4f481-1915-47cc-bf10-eced4c1fa298"))
+(text "CT open: reset release 12..28ms. Both supervisors use VIO; U25 senses VA5." (at 17.78 20.32 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "22eb220f-33c1-4a6c-a6b0-b35395cb04a7"))
+(text "CLEAR held high through a fault cannot re-arm. Raw fault pulse timing needs validation." (at 106.68 74.93 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "b30b49cb-18d0-42f3-9178-5bda124e1910"))
+(text "C86..C91/C93: one 100nF per U20..U26. U26 conditions RESET, OCP_N and PWR_GOOD edges." (at 17.78 157.48 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8829da70-93b5-476f-a287-d2ba728f5557"))
+(embedded_fonts no)
+(symbol (lib_id "ax7010_servo_reva:SN74LVC3G17") (at 106.6800 127.0000 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "275e6841-a738-4b0a-a70e-5c72a997e443")(property "Reference" "U26" (at 116.84 114.3 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "SN74LVC3G17" (at 116.84 116.84 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm" (at 106.6800 127.0000 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "SN74LVC3G17DCUR" (at 106.6800 127.0000 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 106.6800 127.0000 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc3g17.pdf" (at 106.6800 127.0000 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "d53cc908-d29d-4766-a669-a30861c70a53"))(pin "7" (uuid "b4913a73-2b65-402f-8edd-9b868b2f8cc9"))(pin "3" (uuid "c93039b0-eef7-49b9-82e3-73d86e01f810"))(pin "5" (uuid "770eeb60-3b94-4f67-8d0e-c2f7291fd12f"))(pin "6" (uuid "9acd8f19-69a0-4afe-934a-0834c9ec3de3"))(pin "2" (uuid "8d1d9f0f-63f8-4333-b762-77ccf4533771"))(pin "8" (uuid "9e662c5a-b04d-4b2f-b736-bbd76378d646"))(pin "4" (uuid "bbf9ee4d-32c6-4bc7-9a60-52a561508886"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "U26") (unit 1)))))
+(symbol (lib_id "ax7010_servo_reva:C") (at 27.9400 144.7800 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "1fd4873c-2c6b-4e70-a8a0-edfcbe50acb8")(property "Reference" "C93" (at 31.7500 142.2400 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "100nF" (at 31.7500 144.7800 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 27.9400 144.7800 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "1e9765fb-2b6c-4f98-b0e8-92de26f7c28f"))(pin "2" (uuid "2e3f8bf7-adaa-4502-9225-1457f1948a67"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007" (reference "C93") (unit 1)))))
+
+
+
+
+(wire (pts (xy 106.68 114.3) (xy 106.68 111.76)) (stroke (width 0) (type default)) (uuid "8f34680c-4286-42b1-8698-cf77a2c0a4f0"))
+(label "VIO_3V3" (at 106.68 111.76 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "1bd03376-eeff-4a68-a89d-f9ecfc1ef8dc"))
+(wire (pts (xy 106.68 139.7) (xy 106.68 142.24)) (stroke (width 0) (type default)) (uuid "beb308e7-0eb2-4468-b381-b0b33adfdf92"))
+(label "GND" (at 106.68 142.24 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "4282d949-1371-4a28-a418-d5c9eafabeac"))
+(wire (pts (xy 27.94 138.43) (xy 27.94 135.89)) (stroke (width 0) (type default)) (uuid "27c19a62-cb57-4672-958a-2715212c3776"))
+(label "VIO_3V3" (at 27.94 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "7d9fca25-24ee-4ee3-b6e4-8adc05c2efe4"))
+(wire (pts (xy 27.94 151.13) (xy 27.94 153.67)) (stroke (width 0) (type default)) (uuid "0aa0c678-4842-46b9-a3bb-1cc81cd0da7a"))
+(label "GND" (at 27.94 153.67 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "98d5873b-429a-41f8-836f-5215f604f646"))
+
+
+(wire (pts (xy 93.98 121.92) (xy 91.44 121.92)) (stroke (width 0) (type default)) (uuid "b6daa765-fc3d-4a14-ad8a-d869e153f674"))
+(label "POR_N" (at 91.44 121.92 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "d46ef218-b3bb-4dee-b9ae-cc1ac122560a"))
+(wire (pts (xy 119.38 121.92) (xy 121.92 121.92)) (stroke (width 0) (type default)) (uuid "1fd2f260-6060-47e7-97fc-c8c5e2f9eba9"))
+(label "POR_OK" (at 121.92 121.92 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "07cb13b2-e8a3-4dfb-a77b-be2f79412058"))
+(wire (pts (xy 93.98 127) (xy 91.44 127)) (stroke (width 0) (type default)) (uuid "4a1dc61f-83a6-46c5-84d5-2da5947daf34"))
+(label "OCP_N" (at 91.44 127 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "3f268be1-e477-4276-9eb0-4b7e4fdc3ffd"))
+(wire (pts (xy 119.38 127) (xy 121.92 127)) (stroke (width 0) (type default)) (uuid "ff34a02a-023d-49e2-9e50-a441ec6ab001"))
+(label "OCP_OK" (at 121.92 127 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "2ac32893-d8a2-4bfb-8361-f94dec451b41"))
+(wire (pts (xy 93.98 132.08) (xy 91.44 132.08)) (stroke (width 0) (type default)) (uuid "aa5ecfb3-9688-4454-b18a-f7c201176bb5"))
+(label "PWR_GOOD" (at 91.44 132.08 0) (effects (font (size 1.016 1.016)) (justify right bottom)) (uuid "3ac482d1-719e-4f82-9e6b-183de492c2b5"))
+(wire (pts (xy 119.38 132.08) (xy 121.92 132.08)) (stroke (width 0) (type default)) (uuid "fa64a704-b438-42ee-926b-108452c22e74"))
+(label "PWR_READY" (at 121.92 132.08 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "9ad471e1-0ee3-4c96-9bb3-ecffb75a6183"))
+(hierarchical_label "PWR_READY" (shape output) (at 124.46 190.5 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "97189c5d-51f6-4dd3-87f0-dd8f45dd9f54"))
+(wire (pts (xy 124.46 190.5) (xy 129.54 190.5)) (stroke (width 0) (type default)) (uuid "ad82ce1d-93c5-4043-8d9a-851a92e78611"))
+(label "PWR_READY" (at 129.54 190.5 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "4f58a6c0-f860-43d9-b30e-838e42ab7b51"))
+)
