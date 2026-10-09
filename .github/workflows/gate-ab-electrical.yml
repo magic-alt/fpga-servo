@@ -1,0 +1,56 @@
+name: gate-ab-electrical
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "hardware/**"
+      - "tools/**"
+      - ".github/workflows/gate-ab-electrical.yml"
+      - "docs/gate_ab_verification_2026-10-09.md"
+      - "docs/release_gates.md"
+  push:
+    branches: [main]
+    paths:
+      - "hardware/**"
+      - "tools/**"
+
+jobs:
+  gate-ab-automated-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native KiCad 10 and headless ngspice
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common ngspice
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
+          kicad-cli --version
+          ngspice --version
+      - name: Preseed user library tables
+        run: |
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg"
+          printf '(sym_lib_table\n  (version 7)\n)\n' > "$cfg/sym-lib-table"
+          if [ -f /usr/share/kicad/template/fp-lib-table ]; then
+            cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+          else
+            printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
+          fi
+      - name: Run evidence isolation regressions
+        run: python -m unittest discover -s tools -p test_run_gate_ab.py -v
+      - name: Collect fresh Gate A/B evidence through shared local entry point
+        run: python tools/run_gate_ab.py
+      - name: Upload reviewable evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-ab-electrical-evidence
+          path: artifacts/gate-ab/
+          if-no-files-found: warn

@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "erc": {
+    "status": "NOT_RUN",
+    "reason": "Netlist checks do not execute ERC; use run_gate_ab.py"
+  },
+  "scope": "Electrical source checks + nominal/illustrative passive models only",
+  "source_netlist_sha256": "4fae61ecd80f8e6f11b7d82d928796bb8adb8002855ed95ff61d259b8130934d",
+  "observed_system_components": 159,
+  "graph_checks": "PASS: pin-mapped current, ADC, bootstrap, OCP comparator/supervisor",
+  "target": {
+    "vbus_min_V": 24,
+    "vbus_max_V": 48,
+    "phase_continuous_rms_provisional_A": 10.0,
+    "pwm_Hz": 20000
+  },
+  "numerics": {
+    "current_gain_V_per_A": 0.1,
+    "shunt_loss_each_W_at_10A_RMS": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "bus_divider_48V_output_V": 3.1252086811352253,
+    "bus_monitor_tau_s": 0.0003646076794657763,
+    "current_rc_tau_s": 4.7000000000000004e-08,
+    "current_rc_fc_Hz": 3386275.384933943,
+    "gate_charge_six_mosfets_nominal_upper_test_condition_W": 0.10368,
+    "ideal_lower_bound_turnon_s_at_advertised_peak_current": 4.8e-08,
+    "ideal_lower_bound_turnoff_s_at_advertised_peak_current": 3.9999999999999994e-08,
+    "regeneration": {
+      "bulk_nominal_F": 0.00019999999999999998,
+      "energy_48_to_55_J": 0.0721,
+      "ideal_no_sink_1A_time_48_to_55_s": 0.0013999999999999998,
+      "illustrative_1A_no_sink_after_1ms_V": 53.0,
+      "warning": "55V is NOT an approved voltage; ignores source/load and parasitics"
+    },
+    "adc_supply_vs_supervisor": {
+      "ADS8588S_AVDD_min_V": 4.75,
+      "TPS3808G50_falling_max_V": 4.743,
+      "blind_window_at_least_V": 0.006999999999999673,
+      "G33_worst_recovery_threshold_V": 3.193951249999999,
+      "G50_worst_recovery_threshold_V": 4.861575,
+      "conclusion": "G50 falling threshold cannot guarantee ADC AVDD remains valid"
+    },
+    "ocp": {
+      "reference_high_nominal_V": 4.705882352941177,
+      "reference_low_nominal_V": 0.29411764705882354,
+      "positive_trip_nominal_A": 22.058823529411764,
+      "positive_passive_corner_A": [
+        20.74318632923051,
+        23.401588616105222
+      ],
+      "negative_abs_passive_corner_A": [
+        20.74318632923051,
+        23.40158861610522
+      ],
+      "corner_basis": "VA5 4.75..5.25V; four resistors +/-0.1%; shunt +/-1%; REF2=VA5; REF1=GND",
+      "excluded": [
+        "INA241 gain/offset/output swing and PWM common-mode recovery",
+        "TLV9024 input offset, propagation delay, output pull-up and overdrive",
+        "resistor and shunt temperature drift/assembly thermal",
+        "ADC aperture/settling/noise and PCB parasitics",
+        "fault current slope and MOSFET actual turn-off time"
+      ]
+    }
+  },
+  "gate_a": {
+    "status": "BLOCKED",
+    "passed_checks": [
+      "physical netlist contract"
+    ],
+    "blocking_ids": [
+      "A-ADC-UNDERVOLTAGE",
+      "A-PEAK-THERMAL-SPEC",
+      "A-VENDOR-FOOTPRINT-MPN",
+      "A-POWER-SEQUENCING"
+    ]
+  },
+  "gate_b": {
+    "status": "BLOCKED",
+    "blocking_ids": [
+      "B-IC-TRANSIENT-MODELS",
+      "B-TOTAL-OCP-DELAY",
+      "B-REGENERATION-SINK",
+      "B-SWITCHING-SOA",
+      "B-BENCH-EVIDENCE"
+    ]
+  },
+  "interpretation": "PASS of graph and SPICE checks is not Gate A/B closure, STO, PCB fabrication release or qualification of any active device",
+  "spice": {
+    "status": "PASS_ONLY_IDEAL_PASSIVE",
+    "ngspice_decks": [
+      "regeneration",
+      "ocp_filter"
+    ],
+    "regeneration_final_s": 0.0014,
+    "regeneration_final_V": 55.0,
+    "ocp_filter_ideal_threshold_crossing_s": 1.11905e-06,
+    "ocp_filter_analytical_crossing_s": 1.119193701808071e-06,
+    "excluded": "INA, TLV9024, digital latch, FD6288, MOSFET, layout parasitics and tolerances"
+  }
+}
