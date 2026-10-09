@@ -57,3 +57,7 @@ OCP latch implementation and timing gates: `docs/ocp_latch_review_2026-10-09.md`
 INA241 correction during package review: U2/U3/U4 reserved pin 4 connects to GND per TI SBOSA30D Table 5-1, despite its NC name. Symbol electrical type, schematic wiring and PCB pad nets match; net count changed from 183 to 180. `check_netlist_safety.py` rejects regression to the former floating pins.
 
 The earlier schematic-only update externalized F1/J6 and made J3.1 VIN_FUSED. The subsequent layout-entry repair has now removed PCB F1 and synchronized J3.1 plus ADC/diode pads. System BOM remains159 rows; current board netlist157/166. The prior schematic-only record remains historical.
+
+## Gate A/B electronic qualification status (2026-10-09)
+
+The repository now carries a [netlist-backed electrical verification tool](../tools/gate_ab_verify.py), a [native-KiCad + ngspice CI evidence workflow](../.github/workflows/gate-ab-electrical.yml) and a [documented release decision](../docs/gate_ab_verification_2026-10-09.md). Automated wiring checks and ideal passive simulation are not equivalent to vendor switching/protection models or hardware measurements. Both **Gate A and Gate B remain BLOCKED**; the PCB also remains unfinished.
