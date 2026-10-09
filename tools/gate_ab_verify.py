@@ -249,10 +249,10 @@ def gate_report(netlist: Path) -> dict:
                                    (v["R1"]+v["R2"]+v["R3"]))*v["C5"],
             "current_rc_tau_s": tau,
             "current_rc_fc_Hz": 1/(2*math.pi*tau),
-            "gate_charge_six_mosfets_nominal_upper_test_condition_W": (
+            "six_mosfet_gate_charge_ideal_energy_rate_W_not_device_power": (
                 6*MOSFET_QG_MAX_C*12*PWM_HZ),
-            "ideal_lower_bound_turnon_s_at_advertised_peak_current": MOSFET_QG_MAX_C/FD6288_SOURCE_PEAK_A,
-            "ideal_lower_bound_turnoff_s_at_advertised_peak_current": MOSFET_QG_MAX_C/FD6288_SINK_PEAK_A,
+            "illustrative_qg_div_peak_source_s_NOT_a_bound": MOSFET_QG_MAX_C/FD6288_SOURCE_PEAK_A,
+            "illustrative_qg_div_peak_sink_s_NOT_a_bound": MOSFET_QG_MAX_C/FD6288_SINK_PEAK_A,
             "regeneration": {
                 "bulk_nominal_F": cap,
                 "energy_48_to_55_J": 0.5*cap*(55**2-48**2),

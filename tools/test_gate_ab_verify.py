@@ -46,7 +46,7 @@ class PassiveTests(unittest.TestCase):
         self.assertLess(maximum_trip, qa.ADC_AVDD_MIN_V)
         self.assertAlmostEqual(qa.ADC_AVDD_MIN_V-maximum_trip, .007, places=7)
 
-    def test_charge_time_is_only_a_theoretical_lower_bound(self):
+    def test_charge_time_is_only_an_illustrative_ratio(self):
         self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.FD6288_SOURCE_PEAK_A, 48e-9)
         self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.FD6288_SINK_PEAK_A, 40e-9)
 
