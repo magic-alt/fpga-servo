@@ -1,0 +1,25 @@
+POWER WIRING CHECK FAILED
+ - ax7010_interface.kicad_sch: #FLG0106 at (213.36, 137.16) has no visible wire path to a component pin
+ - current_adc.kicad_sch: #PWR1201 at (33.02, 15.24) has no visible wire path to a component pin
+ - current_adc.kicad_sch: #PWR1202 at (69.85, 15.24) has no visible wire path to a component pin
+ - current_adc.kicad_sch: #PWR1203 at (110.49, 15.24) has no visible wire path to a component pin
+ - current_adc.kicad_sch: GND at (25.4, 15.24) has no visible wire path to a component pin
+ - current_adc.kicad_sch: VA_5V at (62.23, 15.24) has no visible wire path to a component pin
+ - current_adc.kicad_sch: VIO_3V3 at (102.87, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: #PWR901 at (33.02, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: #PWR902 at (69.85, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: #PWR903 at (110.49, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: #PWR904 at (149.86, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: GND at (25.4, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: VBUS_PROT at (62.23, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: VDRV_12V at (102.87, 15.24) has no visible wire path to a component pin
+ - gate_inverter.kicad_sch: VIO_3V3 at (142.24, 15.24) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: VIO_3V3 at (17.78, 163.83) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: VA_5V at (17.78, 171.45) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: GND at (17.78, 179.07) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: OCP_N at (17.78, 186.69) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: PWR_GOOD at (93.98, 163.83) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: GATE_EN at (93.98, 171.45) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: FAULT_CLEAR at (93.98, 179.07) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: ARMED at (93.98, 186.69) has no visible wire path to a component pin
+ - ocp_latch.kicad_sch: PWR_READY at (124.46, 190.5) has no visible wire path to a component pin

@@ -36,6 +36,14 @@ controlled interfaces, RF, or manufacturer rules are obvious, also read
 
 ## Repeated power stages and KiCad presentation
 
+For this repository, apply root `AGENTS.md`'s mandatory power/GND visible-wiring
+rules and the [project repair skill](../fpga-servo-kicad-repair/SKILL.md#visible-power-and-ground-wiring).
+Power, ground and PWR_FLAG graphics and child hierarchy ports must have a
+visible native-wire path to real component pins. A separate power legend or
+port-to-symbol stub is not an acceptable substitute. Run
+`python tools/check_power_wiring.py` alongside exact native-netlist comparison
+and ERC; inspect supply/return paths and every moved endpoint in the renders.
+
 For motor-driver sheets, repeated channels, crowded hierarchy labels, title-block
 collisions, or missing page-number reports, read
 [practical wiring and page review](references/practical-wiring-and-pages.md).

@@ -53,6 +53,7 @@ jobs:
           python tools/check_kicad_grid.py
           python tools/check_schematic_connectivity.py
           python tools/check_schematic_layout.py
+          python tools/check_power_wiring.py
 
           test "$(find hardware -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 8
           test -s hardware/ax7010_servo_reva.kicad_sym

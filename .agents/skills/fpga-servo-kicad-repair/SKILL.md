@@ -15,6 +15,26 @@ On this Windows installation KiCad CLI and its pcbnew-capable Python are under `
 
 ## Repair and verify the electrical graph
 
+### Visible power and ground wiring
+
+Apply the mandatory power/GND rules in root `AGENTS.md`. Put every supply,
+ground and PWR_FLAG graphic at the circuit it serves, with a native visible
+wire path to a real component pin. Child hierarchy ports must also reach real
+pins by visible wires. An isolated port-to-power-symbol stub or label-only
+legend is a failure even when ERC is zero and the named net is electrically
+correct. Keep local decoupling, pulls and return paths readable; use labels
+between distant functional blocks rather than long ground loops.
+
+The project's `PWR_*` graphics are passive presentation symbols. Retain the
+labels required to name their nets. When moving an endpoint, inspect every
+intersected wire and pin; split new T branches and add explicit junctions.
+Export baseline/final KiCad XML netlists and compare exact component identity,
+net names and physical pin memberships with
+`.agents/skills/schematic-humanizer/scripts/compare_connectivity.py`.
+Run `python tools/check_power_wiring.py` and review every rendered page plus
+power/ground crops. That check intentionally ignores label links; native ERC
+and netlist equivalence remain separate acceptance gates.
+
 Trace critical paths through exported physical pin numbers. Use manufacturer data sheets for package pin maps, power limits and timing. Compare library symbols, embedded definitions and footprint pad numbers; ERC alone cannot detect a plausible but wrong package mapping. Preserve all unaffected UUIDs, wires and sheet geometry during localized electrical repairs.
 
 For hardware OCP, verify raw OCP diagnostic routing, asynchronous trip, supervised startup, default enable bias and deliberate re-arm. Fault recovery without a new clear edge must remain inhibited. Describe pulse-width and recovery/removal limits; boolean behavior checks are not analog transient or bench proof. Keep supply/regeneration energy and current/thermal assumptions visible when unknown.
@@ -27,6 +47,7 @@ python tools/check_native_schematic.py
 python tools/check_kicad_grid.py
 python tools/check_schematic_layout.py
 python tools/check_schematic_connectivity.py
+python tools/check_power_wiring.py
 python tools/check_design.py
 python tools/check_netlist_safety.py artifacts/ax7010_servo_reva.net
 python tools/check_ocp_behavior.py artifacts/ax7010_servo_reva.net

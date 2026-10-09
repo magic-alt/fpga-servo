@@ -4958,7 +4958,7 @@
 (text "ADC / SERIAL INTERFACE" (at 198.12 15.24 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "81f36595-4746-456c-9f24-5c864f6d8ecd"))
 (hierarchical_label "GND"
 		(shape input)
-		(at 25.4 15.24 0)
+		(at 27.94 71.12 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4967,14 +4967,11 @@
 		)
 		(uuid "210fe820-06d5-4bae-b77c-7498c56a5d81")
 	)
-(wire (pts (xy 25.4 15.24) (xy 33.02 15.24)) (stroke (width 0) (type default)) (uuid "c6b13775-4135-48c6-b61d-6419612a8ce3"))
-(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 33.02 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "65e951c1-b07f-4b59-aaf4-04beb82cfdce")
-(property "Reference" "#PWR1201" (at 33.02 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/GND" (at 33.02 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "b14a26de-fb91-42e8-8636-fdbfe07a4a8a")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/ea2b8780-1600-4910-9fa4-78ef2c01c307" (reference "#PWR1201") (unit 1)))))
+
+
 (hierarchical_label "VA_5V"
 		(shape input)
-		(at 62.23 15.24 0)
+		(at 50.8 25.4 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4983,14 +4980,11 @@
 		)
 		(uuid "bcbc677e-e0f5-4dfa-bc94-0d73670f2670")
 	)
-(wire (pts (xy 62.23 15.24) (xy 69.85 15.24)) (stroke (width 0) (type default)) (uuid "9d5adbec-331b-48ad-a783-fe30cdecb076"))
-(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 69.85 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "9d0d9052-a115-40c8-8d1c-bd18a13108de")
-(property "Reference" "#PWR1202" (at 69.85 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/VA_5V" (at 69.85 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "17aa2a9c-2f8b-4440-bc35-dd8c9519a253")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/ea2b8780-1600-4910-9fa4-78ef2c01c307" (reference "#PWR1202") (unit 1)))))
+
+
 (hierarchical_label "VIO_3V3"
 		(shape input)
-		(at 102.87 15.24 0)
+		(at 255.27 16.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4999,11 +4993,8 @@
 		)
 		(uuid "be849f0c-2a79-44c0-92ae-3ab257dfc72e")
 	)
-(wire (pts (xy 102.87 15.24) (xy 110.49 15.24)) (stroke (width 0) (type default)) (uuid "361cbba0-e10f-401b-b4d7-1a16c8208733"))
-(symbol (lib_id "ax7010_servo_reva:PWR_VIO_3V3") (at 110.49 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "c34500c6-bd44-4381-b4c2-d10af702a4b8")
-(property "Reference" "#PWR1203" (at 110.49 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/VIO_3V3" (at 110.49 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "6b12824f-4860-47e1-a172-219df08762e1")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/ea2b8780-1600-4910-9fa4-78ef2c01c307" (reference "#PWR1203") (unit 1)))))
+
+
 (wire (pts (xy 20.32 48.26) (xy 22.86 48.26)) (stroke (width 0) (type default)) (uuid "67459863-bf63-4b3b-970e-013ecc7d5038"))
 (hierarchical_label "PH_U"
 		(shape input)
@@ -5603,4 +5594,14 @@
 (junction (at 227.33 160.02) (diameter 0) (color 0 0 0 0) (uuid "442f8c0a-2788-4943-bac7-b80610b2cc5d"))
 (junction (at 125.73 119.38) (diameter 0) (color 0 0 0 0) (uuid "8fa4bd4c-af22-465e-8e77-025bc8bd9b2d"))
 (junction (at 73.66 69.85) (diameter 0) (color 0 0 0 0) (uuid "3dfffbee-d706-4fd8-aaed-81943cd99ad0"))
+
+(wire (pts (xy 27.94 71.12) (xy 39.37 71.12)) (stroke (width 0) (type default)) (uuid "75d45a27-8854-4019-9ef0-1385b8e5ce73"))
+
+
+(wire (pts (xy 255.27 16.51) (xy 269.24 16.51)) (stroke (width 0) (type default)) (uuid "6c2ace7c-4c98-40fa-9974-a68233c1fa91"))
+(wire (pts (xy 269.24 16.51) (xy 269.24 21.59)) (stroke (width 0) (type default)) (uuid "673353b1-23de-4bd6-bfaf-72015ff20d3e"))
+
+
+
+(wire (pts (xy 50.8 25.4) (xy 73.66 25.4)) (stroke (width 0) (type default)) (uuid "5226a031-7def-4adc-964f-926be90e3a40"))
 )

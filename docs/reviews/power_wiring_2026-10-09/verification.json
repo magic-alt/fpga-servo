@@ -1,0 +1,107 @@
+[
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/export_bom.py"
+    ],
+    "returncode": 0,
+    "output": "BOM exported: 159 components\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_native_schematic.py"
+    ],
+    "returncode": 0,
+    "output": "NATIVE SCHEMATIC CHECK PASSED\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_kicad_grid.py"
+    ],
+    "returncode": 0,
+    "output": "KICAD GRID CHECK PASSED\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_schematic_layout.py"
+    ],
+    "returncode": 0,
+    "output": "SCHEMATIC LAYOUT CHECK PASSED\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_schematic_connectivity.py"
+    ],
+    "returncode": 0,
+    "output": "SCHEMATIC CONNECTIVITY CHECK PASSED\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_design.py"
+    ],
+    "returncode": 0,
+    "output": "DESIGN CHECK PASSED\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_power_wiring.py"
+    ],
+    "returncode": 0,
+    "output": "POWER WIRING CHECK PASSED: every power graphic and child port reaches a real pin by visible wires\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/test_pcb_checks.py"
+    ],
+    "returncode": 0,
+    "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.010s\n\nOK\n"
+  },
+  {
+    "command": [
+      "D:/Software/KiCad/10.0/bin/kicad-cli.exe",
+      "sch",
+      "export",
+      "netlist",
+      "--output",
+      "artifacts\\power_wiring_review\\final.net",
+      "hardware/ax7010_servo_reva.kicad_sch"
+    ],
+    "returncode": 0,
+    "output": ""
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_netlist_safety.py",
+      "artifacts\\power_wiring_review\\final.net"
+    ],
+    "returncode": 0,
+    "output": "NETLIST SAFETY CHECK PASSED: 157 components / 179 nets\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      "tools/check_ocp_behavior.py",
+      "artifacts\\power_wiring_review\\final.net"
+    ],
+    "returncode": 0,
+    "output": "NETLIST SAFETY CHECK PASSED: 157 components / 179 nets\nOCP DIGITAL BEHAVIOR CHECK PASSED: 531 scenarios; stable levels only\n"
+  },
+  {
+    "command": [
+      "D:\\Software\\anaconda3\\python.exe",
+      ".agents/skills/schematic-humanizer/scripts/compare_connectivity.py",
+      "artifacts\\power_wiring_review\\before.xml",
+      "artifacts\\power_wiring_review\\final.xml"
+    ],
+    "returncode": 0,
+    "output": "Baseline: 159 components, 180 nets; Final: 159 components, 180 nets\nPASS: connectivity matches exactly (648 net pin memberships).\n"
+  }
+]

@@ -2163,7 +2163,7 @@
 	)
 	(sheet
 		(at 111.76 99.06)
-		(size 66.04 72.39)
+		(size 66.04 66.04)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -2189,7 +2189,7 @@
 			)
 		)
 		(property "Sheetfile" "current_adc.kicad_sch"
-			(at 111.76 172.0346 0)
+			(at 111.76 165.685 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
