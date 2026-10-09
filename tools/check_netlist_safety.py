@@ -34,8 +34,8 @@ def rail(ref, pin, name):
     if pin_nets.get((ref, pin)) != "/" + name:
         errors.append(f"{ref}.{pin} must connect to {name}")
 
-if len(values) != 158 or len(net_nodes) != 183:
-    errors.append(f"expected 158 components / 183 nets, got {len(values)} / {len(net_nodes)}")
+if len(values) != 158 or len(net_nodes) != 180:
+    errors.append(f"expected 158 components / 180 nets, got {len(values)} / {len(net_nodes)}")
 for i, pin in enumerate(["3", "4", "5", "6", "7", "8", "9"]):
     ref = f"R{80 + i}"
     same(("J1", pin), (ref, "1"))
@@ -67,6 +67,8 @@ for ref in values:
 for i in range(1, 7):
     same((f"RG{i}", "2"), (f"Q{i}", "4"), (f"RGS{i}", "1"))
 for amp, resistor, adc_pin in [("U2", "R40", "49"), ("U3", "R41", "51"), ("U4", "R42", "53")]:
+    # TI SBOSA30D Table 5-1: reserved pin 4 must connect to ground.
+    rail(amp, "4", "GND")
     same((amp, "5"), (resistor, "1"))
     same((resistor, "2"), ("U6", adc_pin))
 rail("U11", "1", "GATE_EN")

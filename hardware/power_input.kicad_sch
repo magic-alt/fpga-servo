@@ -2399,7 +2399,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_GMSTB:PhoenixContact_GMSTBA_2,5_2-G-7,62_1x02_P7.62mm_Horizontal"
+		(property "Footprint" "fpga-servo:PhoenixContact_MKDS_5_2_9.52mm"
 			(at 24.13 43.18 0)
 			(hide yes)
 			(show_name no)
@@ -2410,7 +2410,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.phoenixcontact.com/us/products/1714971/pdf"
 			(at 24.13 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2420,7 +2420,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "MKDS_5_2_9.5_32A_external_protection_required"
 			(at 24.13 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2444,7 +2444,11 @@
 				)
 			)
 		)
-	)
+
+(property "MPN" "1714971" (at 0 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+(property "Manufacturer" "Phoenix Contact" (at 0 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:FUSE")
 		(at 53.34 39.37 0)

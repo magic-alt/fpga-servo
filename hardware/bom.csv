@@ -59,8 +59,8 @@ F1,1,EXT_FUSE_OR_25A_FUSE,TBD,TBD,Fuse:Fuse_2920_7451Metric,See schematic,Fitted
 F2,1,0.5A_PTC_ENCODER_5V,TBD,TBD,Fuse:Fuse_1812_4532Metric,See schematic,Fitted; exact MPN / rating qualification open
 J1,1,AX7010_PL_A,TBD,TBD,Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
 J2,1,AX7010_PL_B,TBD,TBD,Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
-J3,1,DC_IN_48V,TBD,TBD,"Connector_Phoenix_GMSTB:PhoenixContact_GMSTBA_2,5_2-G-7,62_1x02_P7.62mm_Horizontal",See schematic,Fitted; exact MPN / rating qualification open
-J4,1,MOTOR_UVW,TBD,TBD,"Connector_Phoenix_GMSTB:PhoenixContact_GMSTBA_2,5_3-G-7,62_1x03_P7.62mm_Horizontal",See schematic,Fitted; exact MPN / rating qualification open
+J3,1,DC_IN_48V,Phoenix Contact,1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,MKDS_5_2_9.5_32A_external_protection_required,Fitted
+J4,1,MOTOR_UVW,Phoenix Contact,1714984,fpga-servo:PhoenixContact_MKDS_5_3_9.52mm,MKDS_5_3_9.5_32A_motor_terminal,Fitted
 J5,1,ABZ_DIFF_ENCODER,TBD,TBD,Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical,See schematic,Fitted; exact MPN / rating qualification open
 L1,1,68uH,Coilcraft,MSS1246T-683MLC,Inductor_SMD:L_Coilcraft_MSS1246T-XXX,68uH_MSS1246T-683MLC,Fitted
 L2,1,2.2uH,Wurth Elektronik,74438356022,Inductor_SMD:L_Wuerth_MAPI-4020,2.2uH_74438356022_WE-MAPI-4020,Fitted
@@ -123,9 +123,9 @@ RGS3,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MP
 RGS4,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 RGS5,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 RGS6,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
-RSH1,1,5mR,TBD,TBD,,5mR_4T_BVB-I-R005,Fitted; exact MPN / rating qualification open
-RSH2,1,5mR,TBD,TBD,,5mR_4T_BVB-I-R005,Fitted; exact MPN / rating qualification open
-RSH3,1,5mR,TBD,TBD,,5mR_4T_BVB-I-R005,Fitted; exact MPN / rating qualification open
+RSH1,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
+RSH2,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
+RSH3,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
 RT1,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
 RT2,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
 RT3,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open

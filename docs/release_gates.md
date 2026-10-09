@@ -11,7 +11,7 @@ Rev.A is not fabrication-approved until every blocking item below is closed.
 
 ## Schematic
 
-- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **158 components / 183 nets**.
+- [x] KiCad 10-native hierarchy is now the checked-in source of truth; direct CLI export produces **158 components / 180 nets**.
 - [x] Native schematic layout/A4-boundary checks pass for the top sheet and all seven child sheets.
 - [x] KiCad 10 ERC is clean: **0 errors / 0 warnings** on the tracked native hierarchy.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
@@ -47,8 +47,8 @@ ERC is clean and initial placement studies can proceed. Final component placemen
 
 ## PCB
 
-- [ ] Reconcile all schematic references, footprints and nets with the partial board. The current PCB baseline has 32 footprints; the schematic has 158 symbols.
-- [ ] Close the current PCB DRC baseline (latest run: 357 violations and 129 unconnected items in KiCad 10.0.3; historical run: 358) after schematic-to-board parity is restored. See `docs/pcb_pre_sync_review_2026-10-09.md` for report-count variation.
+- [x] Reconcile schematic references, physical pad numbers, DNP states, footprint IDs and nets: 158 electrical + 4 mechanical footprints; fresh native DRC schematic parity 0. See `docs/pcb_repair_progress_2026-10-09.md`.
+- [ ] Close the synchronized PCB DRC: latest saved/refilled KiCad 10.0.3 run has **271 violations (220 errors / 51 warnings), 466 unconnected items, 0 schematic parity issues**. Original partial-board 357/129 is historical; counts are not directly comparable after adding missing components. No new exclusions or severity reductions. Five inherited/default ignored DRC check types remain and must be reviewed before release.
 - [x] Correct H1..H4 M3-labelled mounting-hole drills from 1.0 mm to 3.2 mm, preserving centers and the board outline; `check_design.py` rejects undersized M3-labelled holes.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
@@ -72,9 +72,9 @@ ERC is clean and initial placement studies can proceed. Final component placemen
 
 ## Follow-up findings (2026-10-09)
 
-- [x] U19 RVZ 14-pin mapping and Texas_R-PUSON-N14 footprint corrected; U19 repair stage was 158 components / 183 nets; current latch stage is 158 / 183.
-- [ ] Replace GMSTBA 12A power terminal selection for the stated continuous/peak current target.
-- [ ] Replace/qualify BVB-I-R005 selection: its 5mOhm variant is rated 3W at 70C, not >=5W.
+- [x] U19 RVZ 14-pin mapping and Texas_R-PUSON-N14 footprint corrected; U19 repair stage was 158 components / 183 nets; latch stage before the INA241 reserved-pin correction was 158 / 183; current stage is 158 / 180.
+- [x] Replace GMSTBA 12A selection with Phoenix Contact 1714971 / 1714984, nominal 32A; local 9.52mm footprints implemented from manufacturer drawings. Actual wire, temperature derating and mechanical fit remain open.
+- [x] Replace BVB-I-R005 with Ohmite 650FPR005E, four-terminal 5mOhm / 5W at 25C free air; local footprint and force/sense mapping implemented. Assembly fit, low-temperature accuracy, transient and board thermal qualification remain open.
 - [x] OCP latch design approved and implemented; see `docs/ocp_latch_review_2026-10-09.md` for timing conditions and remaining qualification.
 
 Detailed evidence and board differences: `docs/schematic_followup_2026-10-09.md`.
@@ -82,3 +82,7 @@ Detailed evidence and board differences: `docs/schematic_followup_2026-10-09.md`
 Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.
 
 Latest physical-pin PCB audit and mechanical-hole repair: `docs/pcb_pre_sync_review_2026-10-09.md`.
+
+Latest implementation evidence and unfinished routing: `docs/pcb_repair_progress_2026-10-09.md`. Package drawings and qualifications: `docs/pcb_package_qualification_2026-10-09.md`. The selected shunt/terminal part numbers do not close the unchecked footprint, thermal or mechanical gates above.
+
+- [x] INA241 U2/U3/U4 pin 4 grounded according to TI SBOSA30D Table 5-1; the reserved NC name must not be interpreted as permission to float it. Fresh ERC remains zero and physical PCB parity passes.

@@ -70,6 +70,8 @@ jobs:
 
           python3 ../tools/check_netlist_safety.py ../artifacts/ax7010_servo_reva.net
           python3 ../tools/check_ocp_behavior.py ../artifacts/ax7010_servo_reva.net
+          python3 ../tools/check_pcb_parity.py ../artifacts/ax7010_servo_reva.net --output ../artifacts/pcb_parity.json
+          python3 ../tools/check_pcb_constraints.py ../artifacts/ax7010_servo_reva.net
 
       - name: Run KiCad 10 ERC on tracked native hierarchy
         run: |
@@ -93,5 +95,6 @@ jobs:
           name: kicad-erc-report
           path: |
             artifacts/ax7010_servo_reva.net
+            artifacts/pcb_parity.json
             artifacts/ax7010_servo_reva_erc.rpt
           if-no-files-found: warn

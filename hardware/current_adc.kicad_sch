@@ -1506,7 +1506,7 @@
 						)
 					)
 				)
-				(pin no_connect line
+				(pin passive line
 					(at 3.81 -17.78 90)
 					(length 5.08)
 					(name "NC"
@@ -2214,10 +2214,7 @@
 		(at 246.38 76.2)
 		(uuid "100b1fee-f95d-4219-b64d-842242997443")
 	)
-	(no_connect
-		(at 59.69 133.35)
-		(uuid "15dbb0a1-39fd-4d4c-b20c-4c7ca05c6d07")
-	)
+
 	(no_connect
 		(at 246.38 52.07)
 		(uuid "2efb1005-121d-4fc9-809d-f724451e8741")
@@ -2226,10 +2223,7 @@
 		(at 246.38 78.74)
 		(uuid "30b10de7-4863-461a-8a95-22403e0d55d0")
 	)
-	(no_connect
-		(at 59.69 95.25)
-		(uuid "3b1df326-5ab2-40f7-b8a5-32cabf977f7a")
-	)
+
 	(no_connect
 		(at 246.38 43.18)
 		(uuid "3fa80fde-a9fe-4015-8b3b-e60a61e81e6b")
@@ -2262,10 +2256,7 @@
 		(at 246.38 73.66)
 		(uuid "b184daf4-f24c-46a6-bc74-9f4e0cd0af86")
 	)
-	(no_connect
-		(at 59.69 57.15)
-		(uuid "b2fe79d9-18fa-4c97-8502-10dbbf0ba8e5")
-	)
+
 	(no_connect
 		(at 246.38 54.61)
 		(uuid "d74f0d8f-3d6f-4bca-9abc-164ababb7523")
@@ -8295,4 +8286,11 @@
 (wire (pts (xy 130.81 121.92) (xy 130.81 125.73)) (stroke (width 0) (type default)) (uuid "499dd3af-dac8-4354-8e6c-34bdf41fa399"))
 (label "GND" (at 130.81 125.73 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8dbdfa7f-4c03-4e91-9e4b-8d0f80b7fcce"))
 
+
+	(wire (pts (xy 59.69 57.15) (xy 59.69 59.69)) (stroke (width 0) (type default)) (uuid "57dcbd92-3286-4efc-ac33-9f781f336a58"))
+	(label "GND" (at 59.69 59.69 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "21d5b914-4922-4a20-ac5d-0e388e48487f"))
+	(wire (pts (xy 59.69 95.25) (xy 59.69 97.79)) (stroke (width 0) (type default)) (uuid "8f9ae250-c443-4d3b-9007-e4be38a6bc99"))
+	(label "GND" (at 59.69 97.79 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "31e743e1-e548-4bf9-8665-5aeb9e38821f"))
+	(wire (pts (xy 59.69 133.35) (xy 59.69 135.89)) (stroke (width 0) (type default)) (uuid "3a095900-0619-46fe-97f5-ce5b28bec854"))
+	(label "GND" (at 59.69 135.89 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "7129c7ff-5dfe-4700-b37b-e4034370f234"))
 )

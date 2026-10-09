@@ -3609,7 +3609,7 @@
 							)
 						)
 					)
-					(pin no_connect line
+					(pin passive line
 						(at 3.81 -17.78 90)
 						(length 5.08)
 						(name "NC"
@@ -5054,7 +5054,7 @@
 						)
 					)
 				)
-				(property "Footprint" ""
+				(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
 					(at 0 0 0)
 					(show_name no)
 					(do_not_autoplace no)
