@@ -1,0 +1,86 @@
+name: gate-ab-electrical
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "hardware/**"
+      - "tools/gate_ab_verify.py"
+      - "tools/test_gate_ab_verify.py"
+      - ".github/workflows/gate-ab-electrical.yml"
+      - "docs/gate_ab_verification_2026-10-09.md"
+  push:
+    branches: [main]
+    paths:
+      - "hardware/**"
+      - "tools/gate_ab_verify.py"
+      - "tools/test_gate_ab_verify.py"
+
+jobs:
+  gate-ab-automated-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native KiCad 10 and headless ngspice
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common ngspice
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
+          kicad-cli --version
+          ngspice --version
+      - name: Preseed user library tables
+        run: |
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg"
+          printf '(sym_lib_table\n  (version 7)\n)\n' > "$cfg/sym-lib-table"
+          if [ -f /usr/share/kicad/template/fp-lib-table ]; then
+            cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+          else
+            printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
+          fi
+      - name: Export fresh netlist; no historical fallbacks
+        run: |
+          mkdir -p artifacts/gate-ab
+          kicad-cli sch erc --severity-all --exit-code-violations \
+            --output artifacts/gate-ab/erc.rpt hardware/ax7010_servo_reva.kicad_sch
+          kicad-cli sch export netlist --format kicadxml \
+            --output artifacts/gate-ab/netlist.xml hardware/ax7010_servo_reva.kicad_sch
+          test -s artifacts/gate-ab/netlist.xml
+      - name: Gate A/B netlist, physical-pin, corners and real ngspice
+        run: |
+          python tools/gate_ab_verify.py \
+            --netlist artifacts/gate-ab/netlist.xml \
+            --output artifacts/gate-ab/qualification.json \
+            --spice-output artifacts/gate-ab/spice
+          cat artifacts/gate-ab/qualification.json
+      - name: Run mutation regressions on same fresh netlist
+        env:
+          GATE_AB_NETLIST: artifacts/gate-ab/netlist.xml
+        run: |
+          python -m unittest discover -s tools -p 'test_gate_ab_verify.py' -v
+      - name: Assert unresolved engineering gates stay blocked
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          record = json.loads(Path("artifacts/gate-ab/qualification.json").read_text())
+          assert record["graph_checks"].startswith("PASS")
+          assert record["spice"]["status"] == "PASS_ONLY_IDEAL_PASSIVE"
+          assert record["gate_a"]["status"] == "BLOCKED"
+          assert record["gate_b"]["status"] == "BLOCKED"
+          assert "A-ADC-UNDERVOLTAGE" in record["gate_a"]["blocking_ids"]
+          print("PASS: Automated evidence collected, engineering gates remain BLOCKED")
+          PY
+      - name: Upload reviewable evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gate-ab-electrical-evidence
+          path: artifacts/gate-ab/
+          if-no-files-found: warn
