@@ -2,7 +2,7 @@
   "schema": "schematic-visual-audit-v1",
   "status": "PASS",
   "source_type": "KiCad 10 native hierarchy",
-  "adapter": "KiCad 10.0.3 XML exact identity/named net/physical pin comparison; native ERC/PDF; PyMuPDF rendering",
+  "adapter": "KiCad 10.0.3 XML export and exact compare_connectivity.py comparison",
   "authoritative_sources": [
     "hardware/aux_power.kicad_sch",
     "hardware/ax7010_interface.kicad_sch",
@@ -11,136 +11,129 @@
     "hardware/encoder.kicad_sch",
     "hardware/gate_inverter.kicad_sch",
     "hardware/ocp_latch.kicad_sch",
-    "hardware/power_input.kicad_sch",
-    "hardware/ax7010_servo_reva.kicad_sym"
+    "hardware/power_input.kicad_sch"
   ],
-  "baseline_connectivity": "artifacts\\schematic_full_review\\before.xml",
-  "final_connectivity": "artifacts\\schematic_full_review\\final.xml",
+  "baseline_connectivity": "docs/reviews/power_wiring_2026-10-09/before.xml",
+  "final_connectivity": "docs/reviews/power_wiring_2026-10-09/final.xml",
   "connectivity_result": "PASS",
   "counts": {
-    "xml_components": 159,
-    "xml_nets": 180,
-    "pin_memberships": 648,
-    "board_export_components": 157,
-    "board_export_nets": 179
+    "before": {
+      "components": 159,
+      "nets": 180,
+      "pin_memberships": 648
+    },
+    "after": {
+      "components": 159,
+      "nets": 180,
+      "pin_memberships": 648
+    },
+    "pcb_export": {
+      "components": 157,
+      "nets": 179
+    }
   },
   "erc_or_lint": {
-    "errors": 0,
-    "warnings": 0,
-    "exclusions": 0,
-    "ignored_checks_unchanged": true,
-    "inherited_ignored_checks": [
-      "single_global_label",
-      "four_way_junction",
-      "simulation_model_issue",
-      "footprint_filter"
-    ]
+    "before": "0 errors / 0 warnings / 0 exclusions",
+    "after": "0 errors / 0 warnings / 0 exclusions; ignored checks unchanged"
   },
   "protected_artifacts_unchanged": true,
-  "protected_pcb_sha256": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec",
   "sheets": [
     {
       "name": "System",
-      "full_page_render": "artifacts\\schematic_full_review\\page1.png",
-      "status": "PASS",
-      "page_id": "1/8"
+      "full_page_render": "artifacts/power_wiring_review/final_1.png",
+      "status": "PASS"
     },
     {
       "name": "DC Input & Protection",
-      "full_page_render": "artifacts\\schematic_full_review\\page2.png",
-      "status": "PASS",
-      "page_id": "2/8"
+      "full_page_render": "artifacts/power_wiring_review/final_2.png",
+      "status": "PASS"
     },
     {
       "name": "AX7010 PL Interface",
-      "full_page_render": "artifacts\\schematic_full_review\\page3.png",
-      "status": "PASS",
-      "page_id": "3/8"
+      "full_page_render": "artifacts/power_wiring_review/final_3.png",
+      "status": "PASS"
     },
     {
       "name": "Auxiliary Power",
-      "full_page_render": "artifacts\\schematic_full_review\\page4.png",
-      "status": "PASS",
-      "page_id": "4/8"
+      "full_page_render": "artifacts/power_wiring_review/final_4.png",
+      "status": "PASS"
     },
     {
       "name": "Current Sense / OCP / ADC",
-      "full_page_render": "artifacts\\schematic_full_review\\page5.png",
-      "status": "PASS",
-      "page_id": "5/8"
+      "full_page_render": "artifacts/power_wiring_review/final_5.png",
+      "status": "PASS"
     },
     {
       "name": "Gate Driver / Inverter",
-      "full_page_render": "artifacts\\schematic_full_review\\page6.png",
-      "status": "PASS",
-      "page_id": "6/8"
+      "full_page_render": "artifacts/power_wiring_review/final_6.png",
+      "status": "PASS"
     },
     {
       "name": "Differential ABZ Encoder",
-      "full_page_render": "artifacts\\schematic_full_review\\page7.png",
-      "status": "PASS",
-      "page_id": "7/8"
+      "full_page_render": "artifacts/power_wiring_review/final_7.png",
+      "status": "PASS"
     },
     {
       "name": "OCP hardware latch",
-      "full_page_render": "artifacts\\schematic_full_review\\page8.png",
-      "status": "PASS",
-      "page_id": "8/8"
+      "full_page_render": "artifacts/power_wiring_review/final_8.png",
+      "status": "PASS"
     }
   ],
   "dense_crops": [
     {
-      "region": "system_ports",
-      "render": "artifacts\\schematic_full_review\\system_ports.png",
+      "region": "interface_power",
+      "render": "artifacts/power_wiring_review/crop_interface_power.png",
       "status": "PASS"
     },
     {
-      "region": "power_divider",
-      "render": "artifacts\\schematic_full_review\\power_divider.png",
+      "region": "buck_12v",
+      "render": "artifacts/power_wiring_review/crop_buck_12v.png",
       "status": "PASS"
     },
     {
-      "region": "interface_ports",
-      "render": "artifacts\\schematic_full_review\\interface_ports.png",
+      "region": "current_ground",
+      "render": "artifacts/power_wiring_review/crop_current_ground.png",
       "status": "PASS"
     },
     {
-      "region": "aux_power_good",
-      "render": "artifacts\\schematic_full_review\\aux_power_good.png",
+      "region": "adc_power",
+      "render": "artifacts/power_wiring_review/crop_adc_power.png",
       "status": "PASS"
     },
     {
-      "region": "encoder_esd",
-      "render": "artifacts\\schematic_full_review\\encoder_esd.png",
+      "region": "gate_power",
+      "render": "artifacts/power_wiring_review/crop_gate_power.png",
       "status": "PASS"
     },
     {
-      "region": "ocp_reset",
-      "render": "artifacts\\schematic_full_review\\ocp_reset.png",
+      "region": "phase_u",
+      "render": "artifacts/power_wiring_review/crop_phase_u.png",
       "status": "PASS"
     },
     {
-      "region": "adc_pins",
-      "render": "artifacts\\schematic_full_review\\adc_pins.png",
+      "region": "encoder_power",
+      "render": "artifacts/power_wiring_review/crop_encoder_power.png",
       "status": "PASS"
     },
     {
-      "region": "gate_loops",
-      "render": "artifacts\\schematic_full_review\\gate_loops.png",
+      "region": "clear_ground",
+      "render": "artifacts/power_wiring_review/crop_clear_ground.png",
       "status": "PASS"
     },
     {
-      "region": "ocp_footer",
-      "render": "artifacts\\schematic_full_review\\ocp_footer.png",
+      "region": "supervisor_power",
+      "render": "artifacts/power_wiring_review/crop_supervisor_power.png",
+      "status": "PASS"
+    },
+    {
+      "region": "buffer_ports",
+      "render": "artifacts/power_wiring_review/crop_buffer_ports.png",
       "status": "PASS"
     }
   ],
   "remaining_limitations": [
-    "Presentation and graph-preservation review; aesthetic acceptance remains with the user.",
-    "Editor UI and its local visibility settings were not inspected; PDF/source page IDs verified.",
-    "Schematic-only task: PCB unchanged and no fresh DRC or manufacturing release. See docs/release_gates.md.",
-    "Stacked equivalent MOSFET package pads retain original symbol presentation and physical mapping."
+    "Schematic presentation acceptance only; existing PCB sync/routing and bench release gates remain open.",
+    "Visible-wire checker ignores label equivalence and complements, rather than replaces, native netlist/ERC and visual review."
   ],
-  "final_snapshot": "docs/reviews/schematic_full_review_2026-10-09.pdf",
-  "proof": ".pcba-workflow/schematic-presentation-proof.json"
+  "final_snapshot": "docs/reviews/power_wiring_2026-10-09/final.pdf"
 }

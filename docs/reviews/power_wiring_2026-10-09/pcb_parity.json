@@ -1,0 +1,36 @@
+{
+  "schematic_components": 157,
+  "schematic_nets": 179,
+  "pcb_footprints": 162,
+  "duplicate_references": [],
+  "missing_on_pcb": [],
+  "extra_on_pcb": [
+    "F1"
+  ],
+  "mechanical_preserved": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "unassigned_footprints": [],
+  "footprint_mismatches": [],
+  "pin_mismatches": [],
+  "net_mismatches": [
+    {
+      "ref": "J3",
+      "pin": "1",
+      "schematic_net": "/DC Input & Protection/VIN_FUSED",
+      "pcb_nets": [
+        "/DC Input & Protection/VIN_RAW"
+      ]
+    }
+  ],
+  "value_mismatches": [],
+  "dnp_mismatches": [],
+  "passed": false,
+  "source_sha256": {
+    "artifacts\\power_wiring_review\\precommit.net": "be43ce28b39040168103a2fe52ed4665580fd4fd3eea67fca0a6b39a4871b940",
+    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec"
+  }
+}

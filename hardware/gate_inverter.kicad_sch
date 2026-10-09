@@ -5220,7 +5220,7 @@
 (text "PHASE W" (at 251.46 19.05 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "243f0dd5-e342-4053-a30f-f7276bb94a22"))
 (hierarchical_label "GND"
 		(shape input)
-		(at 25.4 15.24 0)
+		(at 30.48 63.5 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5229,30 +5229,24 @@
 		)
 		(uuid "a7820725-339b-4855-b610-cb7c045937d6")
 	)
-(wire (pts (xy 25.4 15.24) (xy 33.02 15.24)) (stroke (width 0) (type default)) (uuid "63cc8ecf-1be0-46b2-b774-a3e721151d2e"))
-(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 33.02 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "4c6b9dfe-972f-4469-85a6-74538718e58a")
-(property "Reference" "#PWR901" (at 33.02 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/GND" (at 33.02 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "32f5bd76-e94c-41fb-a7c2-0a638cd0d037")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR901") (unit 1)))))
+
+
 (hierarchical_label "VBUS_PROT"
 		(shape input)
-		(at 62.23 15.24 0)
+		(at 199.39 46.99 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
 		(uuid "823a622e-f2f4-41b7-bb60-c9e8e40a563a")
 	)
-(wire (pts (xy 62.23 15.24) (xy 69.85 15.24)) (stroke (width 0) (type default)) (uuid "f5a3e323-c021-49d0-8b26-cd789dac86dd"))
-(symbol (lib_id "ax7010_servo_reva:PWR_VBUS_PROT") (at 69.85 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "4428d472-b09f-4940-bb6d-cf0dfcc086e7")
-(property "Reference" "#PWR902" (at 69.85 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/VBUS_PROT" (at 69.85 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "60e79d66-a25f-48e4-8c3f-4c42b2d20f26")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR902") (unit 1)))))
+
+
 (hierarchical_label "VDRV_12V"
 		(shape input)
-		(at 102.87 15.24 0)
+		(at 91.44 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5261,14 +5255,11 @@
 		)
 		(uuid "fd71b269-1388-43d5-aa8a-773819f73b12")
 	)
-(wire (pts (xy 102.87 15.24) (xy 110.49 15.24)) (stroke (width 0) (type default)) (uuid "e4f77117-87b9-4b54-9b0f-6f56d902d3cb"))
-(symbol (lib_id "ax7010_servo_reva:PWR_VDRV_12V") (at 110.49 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "9fb03d28-663b-4c76-a5b5-c335b8b3ee04")
-(property "Reference" "#PWR903" (at 110.49 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/VDRV_12V" (at 110.49 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "97285b9e-1f5b-442b-a243-231ed175c772")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR903") (unit 1)))))
+
+
 (hierarchical_label "VIO_3V3"
 		(shape input)
-		(at 142.24 15.24 0)
+		(at 33.02 21.59 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5277,11 +5268,8 @@
 		)
 		(uuid "4e9ec6ab-8b97-433c-8631-eb8acb5a1356")
 	)
-(wire (pts (xy 142.24 15.24) (xy 149.86 15.24)) (stroke (width 0) (type default)) (uuid "14839516-18e1-4bbb-9107-5337d4a08bd6"))
-(symbol (lib_id "ax7010_servo_reva:PWR_VIO_3V3") (at 149.86 15.24 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "d2890c10-460d-4a77-8631-9a99469171d4")
-(property "Reference" "#PWR904" (at 149.86 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(property "Value" "/VIO_3V3" (at 149.86 15.24 0) (effects (font (size 1 1)) (hide yes)))
-(pin "1" (uuid "19d19906-41cc-4db1-b55c-8302d22aab5c")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR904") (unit 1)))))
+
+
 (wire (pts (xy 21.59 38.1) (xy 24.13 38.1)) (stroke (width 0) (type default)) (uuid "3fdd828a-6d5c-4bf4-8411-13c1c6f9a3af"))
 (hierarchical_label "PWM_UH"
 		(shape input)
@@ -5565,7 +5553,7 @@
 (property "Reference" "#PWR916" (at 191.77 46.99 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/VBUS_PROT" (at 191.77 46.99 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "64c3c44b-e643-4d2a-8f80-a3687b6dccd3")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR916") (unit 1)))))
-(label "VBUS_PROT" (at 191.77 46.99 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "3060c410-55d4-42c3-b235-165b48a88496"))
+
 (wire (pts (xy 172.72 110.49) (xy 172.72 113.03)) (stroke (width 0) (type default)) (uuid "c504fe5a-14cf-43e3-8185-a425d8aa64c5"))
 (wire (pts (xy 158.75 110.49) (xy 172.72 110.49)) (stroke (width 0) (type default)) (uuid "5d2456bd-cc02-4752-bee0-0975d2a9c625"))
 (wire (pts (xy 158.75 95.25) (xy 158.75 110.49)) (stroke (width 0) (type default)) (uuid "2d736dd7-ed9f-4342-aaf0-ebb07490e90e"))
@@ -5811,4 +5799,14 @@
 (junction (at 167.64 152.4) (diameter 0) (color 0 0 0 0) (uuid "c8feb2ac-1b13-4f65-b8c6-851f9f47f343"))
 (junction (at 261.62 110.49) (diameter 0) (color 0 0 0 0) (uuid "0e421fe3-98e7-45e4-b057-7a312f475045"))
 (junction (at 77.47 161.29) (diameter 0) (color 0 0 0 0) (uuid "a647ec7d-b4ce-4836-8de4-961ffd801ebc"))
+
+(wire (pts (xy 30.48 63.5) (xy 43.18 63.5)) (stroke (width 0) (type default)) (uuid "3e021672-c42b-49d2-95a2-952254726317"))
+
+(wire (pts (xy 91.44 36.83) (xy 106.68 36.83)) (stroke (width 0) (type default)) (uuid "1858d8fe-28e0-421e-80a0-005c8f32a3ef"))
+(wire (pts (xy 33.02 21.59) (xy 43.18 21.59)) (stroke (width 0) (type default)) (uuid "eb0997c5-00b8-4735-befe-33afd5687342"))
+(wire (pts (xy 43.18 21.59) (xy 43.18 25.4)) (stroke (width 0) (type default)) (uuid "0bbe46f1-dfa0-46ca-8964-f2722a464212"))
+
+
+
+(wire (pts (xy 191.77 46.99) (xy 199.39 46.99)) (stroke (width 0) (type default)) (uuid "22f06a59-a1bf-4ccb-b218-200430cf1f94"))
 )

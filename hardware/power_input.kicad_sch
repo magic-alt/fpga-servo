@@ -1380,7 +1380,21 @@
 			)
 			(embedded_fonts no)
 		)
-	)
+
+(symbol "ax7010_servo_reva:PWR_GND" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 0 -4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_GND_0_1" (polyline (pts (xy 0 0) (xy 0 -1.27) (xy -1.27 -1.27) (xy 0 -2.54) (xy 1.27 -1.27) (xy 0 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_GND_1_1" (pin passive line (at 0 0 90) (length 0) (name "GND" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+
+(symbol "ax7010_servo_reva:PWR_VBUS_PROT" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VBUS_PROT" (at 0 4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_VBUS_PROT_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_VBUS_PROT_1_1" (pin passive line (at 0 0 90) (length 0) (name "VBUS_PROT" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+)
 	(text "Local wiring: power, gate, divider/filter and ground. See docs/schematic_full_review_2026-10-09.md."
 		(exclude_from_sim no)
 		(at 16.51 169.164 0)
@@ -1433,7 +1447,7 @@
 		)
 		(uuid "8fdb0441-97b6-444b-b1f3-dc1f0ca910c4")
 	)
-	(text "Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. The controller has no reverse-current blocking when enabled, so regeneration can return to a receptive source."
+	(text "Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. Reverse current is not blocked when enabled; regeneration needs a receptive source."
 		(exclude_from_sim no)
 		(at 15.24 142.24 0)
 		(effects
@@ -4111,4 +4125,23 @@
 	(label "GND" (at 50.8 76.2 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5ac53e08-19eb-4a2d-b0f2-73718db5b90e"))
 
 (wire (pts (xy 166.37 115.57) (xy 166.37 110.49)) (stroke (width 0) (type default)) (uuid "7f70cad5-a49f-4611-b1d4-10472a7ada76"))
+
+
+
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 50.8 76.2 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "2be73019-cbc4-40bc-a4ae-a2681d9c0f0b")
+(property "Reference" "#PWR2001" (at 50.8 76.2 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 50.8 76.2 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "c6d595b7-0fb2-47b9-a704-ffc6f127fbb0")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001" (reference "#PWR2001") (unit 1)))))
+
+(wire (pts (xy 200.66 83.82) (xy 200.66 86.36)) (stroke (width 0) (type default)) (uuid "057d7f84-8055-498f-95ad-07d27313953c"))
+(label "GND" (at 200.66 86.36 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "16632736-270b-4976-a312-787b18c4a0d3"))
+(wire (pts (xy 142.24 36.83) (xy 142.24 39.37)) (stroke (width 0) (type default)) (uuid "45e76ac6-889e-4693-9382-5150a2556c06"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 200.66 86.36 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "5d555edc-cf16-4790-a769-7edd2817d234")
+(property "Reference" "#PWR28001" (at 200.66 86.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 200.66 86.36 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "3421045a-48b0-4c97-a4f9-9a4addf62cd9")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001" (reference "#PWR28001") (unit 1)))))
+(symbol (lib_id "ax7010_servo_reva:PWR_VBUS_PROT") (at 142.24 36.83 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "eb30d1c2-9039-4280-bb6e-c02160950ae0")
+(property "Reference" "#PWR28002" (at 142.24 36.83 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VBUS_PROT" (at 142.24 36.83 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "d1d0dae8-3da4-48a7-86e8-03bb7420f59f")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001" (reference "#PWR28002") (unit 1)))))
 )

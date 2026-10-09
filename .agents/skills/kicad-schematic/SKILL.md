@@ -19,6 +19,13 @@ Confirm the user-authorized repair scope, actual source SHA, KiCad 10 installati
 
 ## Exit criteria
 
+Apply root `AGENTS.md`'s mandatory power/GND visible-wiring rules and the
+[project repair skill](../fpga-servo-kicad-repair/SKILL.md#visible-power-and-ground-wiring).
+Power, ground, PWR_FLAG and child hierarchy ports must connect by visible
+native wiring to real component pins; label-only isolated stubs fail acceptance.
+Require `python tools/check_power_wiring.py`, baseline/final XML netlist
+equivalence, native ERC and visual review of all power/ground regions.
+
 Real footprint mapping is assigned, approved and versioned; native ERC zero error/warning on checked SHA; expected functional component/net changes intentional; BOM matches schematic. Do not claim footprint is production-qualified without datasheet/dimensional signoff.
 
 ## fpga-servo local integration

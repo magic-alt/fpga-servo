@@ -15,5 +15,6 @@ jobs:
       - run: python tools/check_kicad_grid.py
       - run: python tools/check_schematic_layout.py
       - run: python tools/check_schematic_connectivity.py
+      - run: python tools/check_power_wiring.py
       - run: python tools/check_design.py
       - run: python tools/test_pcb_checks.py

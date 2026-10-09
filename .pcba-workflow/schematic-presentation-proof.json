@@ -1,19 +1,14 @@
 {
   "schema": "schematic-presentation-proof-v1",
   "date": "2026-10-09",
+  "base_commit": "391dd90",
   "component_identity_and_named_net_membership": "PASS: 159 / 180 / 648",
   "physical_library_pin_number_name_type_shape": "unchanged",
   "erc": {
     "errors": 0,
     "warnings": 0,
     "exclusions": 0,
-    "ignored_checks_unchanged": true,
-    "inherited_ignored_checks": [
-      "single_global_label",
-      "four_way_junction",
-      "simulation_model_issue",
-      "footprint_filter"
-    ]
+    "ignored_checks_unchanged": true
   },
   "source_child_pages": [
     2,
@@ -24,33 +19,30 @@
     7,
     8
   ],
-  "pdf_page_ids": [
-    "1/8",
-    "2/8",
-    "3/8",
-    "4/8",
-    "5/8",
-    "6/8",
-    "7/8",
-    "8/8"
-  ],
   "pcb_sha256": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec",
   "source_sha256": {
-    "hardware/aux_power.kicad_sch": "2dc13253d0ee57fe468d7a29fae1dbd9a669693279a648ee7c162018c716cf9d",
-    "hardware/ax7010_interface.kicad_sch": "5dc94f753c4e4d47c09c59ee31b1c24e58ceca76dfd6e382fb206b803c266e33",
-    "hardware/ax7010_servo_reva.kicad_sch": "687ce9c1bce5115f2336df1015952a723728d44da4e71c1453256d2f9bc62b8b",
-    "hardware/current_adc.kicad_sch": "7e48f5638a8b019ab3b45a489c48908e4685b4ed2ea4e7d0edbfccb920805b7e",
-    "hardware/encoder.kicad_sch": "0dc4ff22fb793544d3b11002ff1c4e4b52d3d19f276a131b05ed7e4288e92ffa",
-    "hardware/gate_inverter.kicad_sch": "0ad4b1993b3ad6a05c85133da78bb3c21d81cb0f214e2121820e3373500d937d",
-    "hardware/ocp_latch.kicad_sch": "43655b497c9e355fceaa048464f5208146d7c452d0d9c99fd0d1f8d27b936afc",
-    "hardware/power_input.kicad_sch": "1dfcbf5cc194d87e28e01fa6396e53234d63a9ad9ee7692698eb31300f0c4cb5"
+    "hardware/aux_power.kicad_sch": "ff46451ba50db70f3d040e81a5e1cb0b8544aa80121ca65109c60df57666762d",
+    "hardware/ax7010_interface.kicad_sch": "4f0dbd2f6c761ac21dc0cc412e1d2d76c4677afb81c923cec7b62f7a2de875db",
+    "hardware/ax7010_servo_reva.kicad_sch": "5a80b1eb6e4b1d03a0e5b34efbeb496e79923582f4008581d234e9ac5cbd8895",
+    "hardware/current_adc.kicad_sch": "1fcfeced986c8101e6fd58daf02e9eccb837522755a64b1915c030b27d55c74d",
+    "hardware/encoder.kicad_sch": "bdf7d0ce95eb800751205be712f6f0e9c07fb8a9edaa7e4bfa9f3cfca089e4de",
+    "hardware/gate_inverter.kicad_sch": "9d1df9d60ebc8b91383547cad5225c6efb011b5ab0304150467b51c5a6f94084",
+    "hardware/ocp_latch.kicad_sch": "dbcbc175c68f6e2303a40b58e183d34755892f4537930deed669b99144d42d9b",
+    "hardware/power_input.kicad_sch": "53df09d4b0c6dc9758941b8e0d93d0b4d265487c1b2c805863362dee16fe6eae"
   },
   "evidence_sha256": {
-    "artifacts/schematic_full_review/before.xml": "afd7574de907dcbd7f1f2b5a3f11580803cce4603241a20e05ba603080f8d32a",
-    "artifacts/schematic_full_review/final.xml": "160f77142f72f66b7ed42c433e113f2320a3cf5ca47f4ba220f596775480de99",
-    "artifacts/schematic_full_review/before_erc.json": "95bbd0cfe8ea91c60c34e4504a227ad9edf375b59cb04040f08ed11a8b1ee187",
-    "artifacts/schematic_full_review/final_erc.json": "bc1649d8116f0c995d5294b291ca02ae656419ae8d1779aebad8975f29c5708d",
-    "artifacts/schematic_full_review/before.pdf": "cef3d982d063773a047d13fe67f1ee7e96ac469e9756e775d1d0dad8e3f628f6",
-    "artifacts/schematic_full_review/final.pdf": "3c4ef3f8fb1d553cca8a45b430ce1157502c963bcea10cbb3d219237355ef49d"
-  }
+    "docs/reviews/power_wiring_2026-10-09/before.xml": "517a18ad2beb0a6d3fce0a2751ff5560ca8daaa62b008d1e391edc6d22ea34db",
+    "docs/reviews/power_wiring_2026-10-09/final.xml": "18c014317feb0e3e692bcff40f9e1be021cc36ac26e2043ea88beb44d5e417b9",
+    "docs/reviews/power_wiring_2026-10-09/before_erc.json": "9d775584459d043b8c4935b3274d11e12b63b09b108796e31073ce03d1a796b6",
+    "docs/reviews/power_wiring_2026-10-09/final_erc.json": "342a642f41b482fd797c83f4fca6b6ae02070ebe42b7b8be0f345d85d4d52560",
+    "docs/reviews/power_wiring_2026-10-09/final.pdf": "9aa8d9513b045f754e1166583a95c9040eb54ded2c6b0c218dd6cbc8cf840a4f",
+    "docs/reviews/power_wiring_2026-10-09/verification.json": "163fadb924ecad8f7de76f3ff915ed225e2220d0150a589451043d305c316825"
+  },
+  "visible_power_check": "PASS; original baseline fails; CI enabled",
+  "rules": [
+    "AGENTS.md",
+    ".agents/skills/fpga-servo-kicad-repair/SKILL.md",
+    ".agents/skills/schematic-humanizer/SKILL.md",
+    ".agents/skills/kicad-schematic/SKILL.md"
+  ]
 }
