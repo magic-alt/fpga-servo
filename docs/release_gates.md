@@ -48,7 +48,8 @@ ERC is clean and initial placement studies can proceed. Final component placemen
 ## PCB
 
 - [ ] Reconcile all schematic references, footprints and nets with the partial board. The current PCB baseline has 32 footprints; the schematic has 158 symbols.
-- [ ] Close the current PCB DRC baseline (358 violations and 129 unconnected items in KiCad 10.0.3) after schematic-to-board parity is restored.
+- [ ] Close the current PCB DRC baseline (latest run: 357 violations and 129 unconnected items in KiCad 10.0.3; historical run: 358) after schematic-to-board parity is restored. See `docs/pcb_pre_sync_review_2026-10-09.md` for report-count variation.
+- [x] Correct H1..H4 M3-labelled mounting-hole drills from 1.0 mm to 3.2 mm, preserving centers and the board outline; `check_design.py` rejects undersized M3-labelled holes.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
 - [ ] 2 oz copper stack-up confirmed with fabricator.
@@ -80,4 +81,4 @@ Detailed evidence and board differences: `docs/schematic_followup_2026-10-09.md`
 
 Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.
 
-Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.
+Latest physical-pin PCB audit and mechanical-hole repair: `docs/pcb_pre_sync_review_2026-10-09.md`.

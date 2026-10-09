@@ -1,5 +1,6 @@
 from pathlib import Path
 import csv
+import re
 import sys
 
 from kicad_native import extract_forms, property_value, strip_form
@@ -96,6 +97,20 @@ if pcb_path.exists():
     pcb = pcb_path.read_text(errors="ignore")
     if pcb.count("(") != pcb.count(")"):
         errors.append("PCB s-expression parentheses are unbalanced")
+    # M3-labelled mechanical holes must admit the screw; the old placeholder
+    # used a 1 mm drill despite its 5 mm copper pad and M3_HOLE value.
+    # 3.2 mm is the clearance drill used by KiCad's M3 mounting-hole library.
+    for footprint in extract_forms(pcb, "footprint"):
+        if property_value(footprint.text, "Value") != "M3_HOLE":
+            continue
+        ref = property_value(footprint.text, "Reference")
+        pads = extract_forms(footprint.text, "pad")
+        if not pads:
+            errors.append(f"PCB {ref}: M3 mounting hole has no drilled pad")
+        for pad in pads:
+            drill = re.search(r"\(drill\s+(\d+(?:\.\d+)?)\s*\)", pad.text)
+            if not drill or float(drill.group(1)) < 3.2:
+                errors.append(f"PCB {ref}: M3 clearance hole requires drill >= 3.2 mm")
     for token in [
         "FD6288T",
         "ADS8588S",
