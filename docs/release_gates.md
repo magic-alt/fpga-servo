@@ -101,3 +101,16 @@ Latest implementation evidence and unfinished routing: `docs/pcb_repair_progress
 - [x] Earlier deferred synchronization completed after user's explicit repair request: obsoleteF1 removed, J3.1 corrected; routing remains unfinished and is not waived by parityPASS.
 
 Fresh schematic ERC is 0 errors / 0 warnings / 0 exclusions; no ignored checks or severities changed. Full details and source evidence: `docs/schematic_optimization_2022_j10_2026-10-09.md`.
+
+## Gate A/B electrical qualification automation (2026-10-09)
+
+New [Gate A/B verification report](gate_ab_verification_2026-10-09.md) and [automated evidence workflow](../.github/workflows/gate-ab-electrical.yml) check a **fresh KiCad XML netlist** against physical-pin contracts, passive corner calculations and reproducible ideal-source ngspice benches. All numeric results explicitly exclude vendor active-device, PWM, physical layout and thermal behavior. `--strict-gates` returns 2 while either gate is open. Current status **Gate A BLOCKED / Gate B BLOCKED**, independently of ERC passing or CI green.
+
+- [ ] **A-ADC-UNDERVOLTAGE:** TPS3808G50 upper falling threshold about 4.743V is below the ADS8588S AVDD 4.75V operating minimum. Implement and qualify a threshold/independent inhibit that prevents PWM when ADC data is invalid; test all supply sequences and corner tolerances.
+- [ ] **A-PEAK-THERMAL-SPEC / A-VENDOR-FOOTPRINT-MPN:** freeze true 10Arms, peak/ambient/cooling, vendor ordering codes, pad drawings and initial electrical/thermal margin.
+- [ ] **B-IC-TRANSIENT-MODELS:** validate available vendor model pin mapping and license, simulate actual FD6288/INA241/TLV9024/LM5164/MOSFET dynamics including switching overshoot, bootstrap and protection delays.
+- [ ] **B-TOTAL-OCP-DELAY / B-SWITCHING-SOA:** bound worst-case full analog-to-VGS-off chain and correlate with low-energy measured fault response and safe MOSFET SOA.
+- [ ] **B-REGENERATION-SINK:** qualify upstream absorption and OV protection for maximum mechanical energy; the current 200uF, 1A ideal model reaches illustrative 55V from 48V in 1.4ms without a sink.
+- [ ] **B-BENCH-EVIDENCE:** power-domain partial-supply, ADC validity, six gate waveforms, dead time, OCP, thermal and ABZ signal-path evidence with serial/board revision and oscilloscope traces.
+
+Do not change these checkboxes until traceable model and bench evidence exists. This GitHub qualification PR does not change the electrical sources, PCB layout or the earlier outstanding DRC/unconnected counts.
