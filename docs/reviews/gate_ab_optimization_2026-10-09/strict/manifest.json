@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-10-09T15:31:47.545701+00:00",
+  "status": "PASS_AUTOMATED_ONLY",
+  "source_hashes_before": {
+    ".github/workflows/gate-ab-electrical.yml": "8432e167c908572eddab9020adf2e30bb0b6eb4725a6fbc0fa13067d13755d69",
+    ".github/workflows/hardware-sanity.yml": "670ea17103d444ead29bcb994e617d112db4368c01b71fe239973c20138ef874",
+    ".github/workflows/kicad-erc.yml": "4a27fa302f735d3dfe3e08f3539d2e7fd8400eb7bf78a5b07fd3d0666cded212",
+    "fpga/ax7010_servo_reva.xdc": "d011f274f71c531e031f54537575b2f26a8aebc98aa4061c4149d9aa2b6bf89b",
+    "hardware/README.md": "6efa060387cbcb557b33c8cf04503a6934ea85dae37070d7635ab08b1b590056",
+    "hardware/aux_power.kicad_sch": "d59f330e68184a78fb5feaa4b322c429ae36c12030b810f26124420698c50450",
+    "hardware/ax7010_interface.kicad_sch": "b4697a2f02cb4157f9deb3b7dc94481a9d5fea9d879297481e28f335f4a08c56",
+    "hardware/ax7010_servo_reva.kicad_pcb": "38eb76390a7302407467ec7e232729c8df8fff7260d14a71cfa2db3ca5c038c4",
+    "hardware/ax7010_servo_reva.kicad_pro": "f976a422c352ada277072445663b8f851feff17503650d272fdcd6a1f9cc185d",
+    "hardware/ax7010_servo_reva.kicad_sch": "d59b61b7c553daeffc87749a4940917b1ebeec1e1c1da4fa65a804c2ac47fa1e",
+    "hardware/ax7010_servo_reva.kicad_sym": "3794545b4b2c0c1515bed34eaacb5accfccdbc68efa32f9bfc661cf35cd169ce",
+    "hardware/bom.csv": "c8718a32af4c2bb91f122edc952452756bce8b5e5c5412dc8ffbc73400b512e2",
+    "hardware/current_adc.kicad_sch": "7570a75e7069672d7cb89444726e030636e6920d65d47d6e001edc3b1c550419",
+    "hardware/encoder.kicad_sch": "29486bc56ebfedac60cafdca1ed7196da65767229699caf43e2e8f35f5a594e6",
+    "hardware/fp-lib-table": "9adf1e09e2691c07ac791c2c6a49e02a6a07f04e4ff2f1aa7a04299a93884cf7",
+    "hardware/fpga-servo.pretty/MountingHole_M3_3.2mm_PTH_Pad5mm.kicad_mod": "ae0c3652855f2d650433359f2475b5472d9ea0070661e3aae8fb032a9357cad7",
+    "hardware/fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod": "1b389f2620a9c531d893b7835175c4e2848e86cf2ec2656d7160a770f117b0e9",
+    "hardware/fpga-servo.pretty/PhoenixContact_MKDS_5_2_9.52mm.kicad_mod": "63ed11dac2bdd13cc504773e2ec3fcaa237db6ef05d2bf1d5c8bd2c7d692a425",
+    "hardware/fpga-servo.pretty/PhoenixContact_MKDS_5_3_9.52mm.kicad_mod": "78564e998a4119df85b7ba8fbb28732ad8bdb63b423244e267b359b4680317ff",
+    "hardware/gate_inverter.kicad_sch": "717dd07b67e8464bf642e963e04e7aabd807fc2ad69c58380197c095cb82771d",
+    "hardware/ocp_latch.kicad_sch": "b19c654fb970c4e9895d7e0361e305b6deee306f5e50e1589f1633ed3ff0d299",
+    "hardware/power_input.kicad_sch": "d7490c86745af31f9d468b6fdd5980f7030232d19c50c66a96c8ea247f3e64e7",
+    "hardware/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e",
+    "tools/ai_pcb_guide/.gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "tools/ai_pcb_guide/scripts/board_parity_audit.py": "c1a71c1288be3a6ad3868a25b0138b6986fda17137c7e5588148a920c31d796a",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.ps1": "a3b31e84fa2e35077a10bcf561c39be46b3149016a6f022338f46da97d6ad3b5",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.sh": "9788d9ee0ed9bca22a1eb9f824455118b362e541f95d9111eb1f7e06fc4d978e",
+    "tools/ai_pcb_guide/source_manifest.json": "b8f0abc170d6102768fe18d6459e04d864633d4b4c4f18751c3f8199aed3735b",
+    "tools/ai_pcb_guide/templates/review_matrix.md": "da5a1b611df4318852795a27d2f0c6a8ff8daa839ee33ac5925cc81c02520ee7",
+    "tools/ai_pcb_guide/tests/test_board_parity_audit.py": "43a6ec5237fe6bd95b2b4cee4432f61d160b2d7110a719249b18f51479af5f79",
+    "tools/check_design.py": "6bacee14e02f0b0d73354442458255a7955bb6cb0cc7651aa46f9e3fc40fee66",
+    "tools/check_kicad_grid.py": "42f75c5851d1c731b9e58bd5430446edcecd06c1e0fa7edbd98bcde9b0e73fbe",
+    "tools/check_native_schematic.py": "b7414f15d40ea711cee6514e6c4f5eb85cadad1157ff0f82c58f22cf5b2271bd",
+    "tools/check_netlist_safety.py": "c019d5e2356a1cea4b3546d92040f07890d2c517a37bf9e19f6346c1b7f8b87e",
+    "tools/check_ocp_behavior.py": "c9e5aff01f1c64674ac6d88d9b43eb19a6630293d355e26e8e98493bed08aacf",
+    "tools/check_pcb_constraints.py": "b1f3694e78e30eebacf7b3bc6f619fc3e25d8c08cfd55932d1ad6989e28ff33f",
+    "tools/check_pcb_parity.py": "d5f3c3967f5dacdfd7d7b933ac65ea6d559e8345fd163f56c856d410f9d37a78",
+    "tools/check_power_wiring.py": "f5957170eec7a37e95e5025d834195e0b0fc78768b6f70f7dbdb93efcc0a591b",
+    "tools/check_schematic_connectivity.py": "53cceedf7043cf7d36ca1e8edbc237958f8efa19fca590c6e4579bdfa1f28959",
+    "tools/check_schematic_layout.py": "62ef1a6b9600e3710d27c912e9a819a3cdbe66df304c4a7ecc8e2f787c2f4497",
+    "tools/export_bom.py": "18a19d4cf7adfbd5f445531b5a8b26293ff335637d9a5055c52a73b9f29b227f",
+    "tools/gate_ab_verify.py": "7f0ab0344d0774896d8c259f9610aba1365e3f9b603cda60eed99e327d613752",
+    "tools/kicad_native.py": "c3e601f0fdd3574f961a7bfe9178ccb387b93070d8993aefa11571b87f008eae",
+    "tools/repair_layout_entry_pcb.py": "6b3ada12292b2e2477d88475975372b14ebfb26d3ef296ccc24c66f90903c2e9",
+    "tools/run_gate_ab.py": "efba584bd7db697db9890b2b60221bbe7e1f9330447aedbd47ad2e6432bd279b",
+    "tools/simulate_layout_entry.py": "8ce3ed577d593055e8aad7b96ad96a4c2c9597515b14028671a3877231427c00",
+    "tools/test_gate_ab_verify.py": "8581bd342ce1edc7a5a1d5bb242c21f59715e40d3817cc0a7ec7fbbeb912ce60",
+    "tools/test_pcb_checks.py": "998f05303f21c0e8259ba1d3e4d2e558f6fdde4fa106c9e83a1f1bfce1b9b02d",
+    "tools/test_run_gate_ab.py": "e85c46afbf1c073ae263eda95f1660e68e9628dd49881ae7b4907fc9dccc929d"
+  },
+  "steps": [
+    {
+      "name": "git_sha",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "log": "git_sha.log",
+      "exit_code": 0
+    },
+    {
+      "name": "git_status",
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "log": "git_status.log",
+      "exit_code": 0
+    },
+    {
+      "name": "kicad_version",
+      "command": [
+        "/Users/kaermax/.local/bin/kicad-cli",
+        "--version"
+      ],
+      "log": "kicad_version.log",
+      "exit_code": 0
+    },
+    {
+      "name": "ngspice_version",
+      "command": [
+        "ngspice",
+        "--version"
+      ],
+      "log": "ngspice_version.log",
+      "exit_code": 0
+    },
+    {
+      "name": "erc",
+      "command": [
+        "/Users/kaermax/.local/bin/kicad-cli",
+        "sch",
+        "erc",
+        "--severity-all",
+        "--exit-code-violations",
+        "--format",
+        "json",
+        "-o",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/erc.json",
+        "/private/tmp/fpga-servo-gate-ab-opt/hardware/ax7010_servo_reva.kicad_sch"
+      ],
+      "log": "erc.log",
+      "exit_code": 0
+    },
+    {
+      "name": "export_xml",
+      "command": [
+        "/Users/kaermax/.local/bin/kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "--format",
+        "kicadxml",
+        "-o",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/netlist.xml",
+        "/private/tmp/fpga-servo-gate-ab-opt/hardware/ax7010_servo_reva.kicad_sch"
+      ],
+      "log": "export_xml.log",
+      "exit_code": 0
+    },
+    {
+      "name": "export_native",
+      "command": [
+        "/Users/kaermax/.local/bin/kicad-cli",
+        "sch",
+        "export",
+        "netlist",
+        "-o",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/board.net",
+        "/private/tmp/fpga-servo-gate-ab-opt/hardware/ax7010_servo_reva.kicad_sch"
+      ],
+      "log": "export_native.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_native_schematic",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_native_schematic.py"
+      ],
+      "log": "check_native_schematic.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_kicad_grid",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_kicad_grid.py"
+      ],
+      "log": "check_kicad_grid.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_schematic_layout",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_schematic_layout.py"
+      ],
+      "log": "check_schematic_layout.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_schematic_connectivity",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_schematic_connectivity.py"
+      ],
+      "log": "check_schematic_connectivity.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_power_wiring",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_power_wiring.py"
+      ],
+      "log": "check_power_wiring.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_design",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_design.py"
+      ],
+      "log": "check_design.log",
+      "exit_code": 0
+    },
+    {
+      "name": "pcb_regressions",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/test_pcb_checks.py"
+      ],
+      "log": "pcb_regressions.log",
+      "exit_code": 0
+    },
+    {
+      "name": "tutorial_regressions",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/ai_pcb_guide/tests/test_board_parity_audit.py"
+      ],
+      "log": "tutorial_regressions.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_netlist_safety",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_netlist_safety.py",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/board.net"
+      ],
+      "log": "check_netlist_safety.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_ocp_behavior",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_ocp_behavior.py",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/board.net"
+      ],
+      "log": "check_ocp_behavior.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_pcb_parity",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_pcb_parity.py",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/board.net"
+      ],
+      "log": "check_pcb_parity.log",
+      "exit_code": 0
+    },
+    {
+      "name": "check_pcb_constraints",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/check_pcb_constraints.py",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/board.net"
+      ],
+      "log": "check_pcb_constraints.log",
+      "exit_code": 0
+    },
+    {
+      "name": "qualification",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "/private/tmp/fpga-servo-gate-ab-opt/tools/gate_ab_verify.py",
+        "--netlist",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/netlist.xml",
+        "--output",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/qualification.json",
+        "--spice-output",
+        "/private/tmp/fpga-servo-gate-ab-opt/artifacts/gate-ab/20261009T153147Z-ys3wvk8b/spice",
+        "--ngspice",
+        "ngspice"
+      ],
+      "log": "qualification.log",
+      "exit_code": 0
+    },
+    {
+      "name": "gate_ab_regressions",
+      "command": [
+        "/opt/homebrew/opt/python@3.12/bin/python3.12",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools",
+        "-p",
+        "test_gate_ab_verify.py",
+        "-v"
+      ],
+      "log": "gate_ab_regressions.log",
+      "exit_code": 0
+    }
+  ],
+  "tools": {
+    "python": "3.12.15 (main, Sep 30 2026, 22:04:19) [Clang 21.0.0 (clang-2100.3.34.2)]",
+    "kicad": "10.0.3",
+    "ngspice": "******\n** ngspice-47 : Circuit level simulation program\n** Compiled with KLU Direct Linear Solver\n** The U. C. Berkeley CAD Group\n** Copyright 1985-1994, Regents of the University of California.\n** Copyright 2001-2026, The ngspice team.\n** Please get your ngspice manual from https://ngspice.sourceforge.io/docs.html\n** Please file your bug-reports at http://ngspice.sourceforge.net/bugrep.html\n******"
+  },
+  "erc": {
+    "status": "PASS",
+    "exit_code": 0,
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0,
+    "violations": 0,
+    "ignored_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ],
+    "included_severities": [
+      "error",
+      "warning",
+      "exclusion"
+    ]
+  },
+  "drc": {
+    "status": "NOT_RUN"
+  },
+  "gate_a": {
+    "status": "BLOCKED"
+  },
+  "gate_b": {
+    "status": "BLOCKED"
+  },
+  "scope": "Automated evidence only; no engineering or fabrication sign-off",
+  "git_sha": "80512b55feab7bd439d1df932c072ef6634fc728",
+  "source_hashes_after": {
+    ".github/workflows/gate-ab-electrical.yml": "8432e167c908572eddab9020adf2e30bb0b6eb4725a6fbc0fa13067d13755d69",
+    ".github/workflows/hardware-sanity.yml": "670ea17103d444ead29bcb994e617d112db4368c01b71fe239973c20138ef874",
+    ".github/workflows/kicad-erc.yml": "4a27fa302f735d3dfe3e08f3539d2e7fd8400eb7bf78a5b07fd3d0666cded212",
+    "fpga/ax7010_servo_reva.xdc": "d011f274f71c531e031f54537575b2f26a8aebc98aa4061c4149d9aa2b6bf89b",
+    "hardware/README.md": "6efa060387cbcb557b33c8cf04503a6934ea85dae37070d7635ab08b1b590056",
+    "hardware/aux_power.kicad_sch": "d59f330e68184a78fb5feaa4b322c429ae36c12030b810f26124420698c50450",
+    "hardware/ax7010_interface.kicad_sch": "b4697a2f02cb4157f9deb3b7dc94481a9d5fea9d879297481e28f335f4a08c56",
+    "hardware/ax7010_servo_reva.kicad_pcb": "38eb76390a7302407467ec7e232729c8df8fff7260d14a71cfa2db3ca5c038c4",
+    "hardware/ax7010_servo_reva.kicad_pro": "f976a422c352ada277072445663b8f851feff17503650d272fdcd6a1f9cc185d",
+    "hardware/ax7010_servo_reva.kicad_sch": "d59b61b7c553daeffc87749a4940917b1ebeec1e1c1da4fa65a804c2ac47fa1e",
+    "hardware/ax7010_servo_reva.kicad_sym": "3794545b4b2c0c1515bed34eaacb5accfccdbc68efa32f9bfc661cf35cd169ce",
+    "hardware/bom.csv": "c8718a32af4c2bb91f122edc952452756bce8b5e5c5412dc8ffbc73400b512e2",
+    "hardware/current_adc.kicad_sch": "7570a75e7069672d7cb89444726e030636e6920d65d47d6e001edc3b1c550419",
+    "hardware/encoder.kicad_sch": "29486bc56ebfedac60cafdca1ed7196da65767229699caf43e2e8f35f5a594e6",
+    "hardware/fp-lib-table": "9adf1e09e2691c07ac791c2c6a49e02a6a07f04e4ff2f1aa7a04299a93884cf7",
+    "hardware/fpga-servo.pretty/MountingHole_M3_3.2mm_PTH_Pad5mm.kicad_mod": "ae0c3652855f2d650433359f2475b5472d9ea0070661e3aae8fb032a9357cad7",
+    "hardware/fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod": "1b389f2620a9c531d893b7835175c4e2848e86cf2ec2656d7160a770f117b0e9",
+    "hardware/fpga-servo.pretty/PhoenixContact_MKDS_5_2_9.52mm.kicad_mod": "63ed11dac2bdd13cc504773e2ec3fcaa237db6ef05d2bf1d5c8bd2c7d692a425",
+    "hardware/fpga-servo.pretty/PhoenixContact_MKDS_5_3_9.52mm.kicad_mod": "78564e998a4119df85b7ba8fbb28732ad8bdb63b423244e267b359b4680317ff",
+    "hardware/gate_inverter.kicad_sch": "717dd07b67e8464bf642e963e04e7aabd807fc2ad69c58380197c095cb82771d",
+    "hardware/ocp_latch.kicad_sch": "b19c654fb970c4e9895d7e0361e305b6deee306f5e50e1589f1633ed3ff0d299",
+    "hardware/power_input.kicad_sch": "d7490c86745af31f9d468b6fdd5980f7030232d19c50c66a96c8ea247f3e64e7",
+    "hardware/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e",
+    "tools/ai_pcb_guide/.gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "tools/ai_pcb_guide/scripts/board_parity_audit.py": "c1a71c1288be3a6ad3868a25b0138b6986fda17137c7e5588148a920c31d796a",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.ps1": "a3b31e84fa2e35077a10bcf561c39be46b3149016a6f022338f46da97d6ad3b5",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.sh": "9788d9ee0ed9bca22a1eb9f824455118b362e541f95d9111eb1f7e06fc4d978e",
+    "tools/ai_pcb_guide/source_manifest.json": "b8f0abc170d6102768fe18d6459e04d864633d4b4c4f18751c3f8199aed3735b",
+    "tools/ai_pcb_guide/templates/review_matrix.md": "da5a1b611df4318852795a27d2f0c6a8ff8daa839ee33ac5925cc81c02520ee7",
+    "tools/ai_pcb_guide/tests/test_board_parity_audit.py": "43a6ec5237fe6bd95b2b4cee4432f61d160b2d7110a719249b18f51479af5f79",
+    "tools/check_design.py": "6bacee14e02f0b0d73354442458255a7955bb6cb0cc7651aa46f9e3fc40fee66",
+    "tools/check_kicad_grid.py": "42f75c5851d1c731b9e58bd5430446edcecd06c1e0fa7edbd98bcde9b0e73fbe",
+    "tools/check_native_schematic.py": "b7414f15d40ea711cee6514e6c4f5eb85cadad1157ff0f82c58f22cf5b2271bd",
+    "tools/check_netlist_safety.py": "c019d5e2356a1cea4b3546d92040f07890d2c517a37bf9e19f6346c1b7f8b87e",
+    "tools/check_ocp_behavior.py": "c9e5aff01f1c64674ac6d88d9b43eb19a6630293d355e26e8e98493bed08aacf",
+    "tools/check_pcb_constraints.py": "b1f3694e78e30eebacf7b3bc6f619fc3e25d8c08cfd55932d1ad6989e28ff33f",
+    "tools/check_pcb_parity.py": "d5f3c3967f5dacdfd7d7b933ac65ea6d559e8345fd163f56c856d410f9d37a78",
+    "tools/check_power_wiring.py": "f5957170eec7a37e95e5025d834195e0b0fc78768b6f70f7dbdb93efcc0a591b",
+    "tools/check_schematic_connectivity.py": "53cceedf7043cf7d36ca1e8edbc237958f8efa19fca590c6e4579bdfa1f28959",
+    "tools/check_schematic_layout.py": "62ef1a6b9600e3710d27c912e9a819a3cdbe66df304c4a7ecc8e2f787c2f4497",
+    "tools/export_bom.py": "18a19d4cf7adfbd5f445531b5a8b26293ff335637d9a5055c52a73b9f29b227f",
+    "tools/gate_ab_verify.py": "7f0ab0344d0774896d8c259f9610aba1365e3f9b603cda60eed99e327d613752",
+    "tools/kicad_native.py": "c3e601f0fdd3574f961a7bfe9178ccb387b93070d8993aefa11571b87f008eae",
+    "tools/repair_layout_entry_pcb.py": "6b3ada12292b2e2477d88475975372b14ebfb26d3ef296ccc24c66f90903c2e9",
+    "tools/run_gate_ab.py": "efba584bd7db697db9890b2b60221bbe7e1f9330447aedbd47ad2e6432bd279b",
+    "tools/simulate_layout_entry.py": "8ce3ed577d593055e8aad7b96ad96a4c2c9597515b14028671a3877231427c00",
+    "tools/test_gate_ab_verify.py": "8581bd342ce1edc7a5a1d5bb242c21f59715e40d3817cc0a7ec7fbbeb912ce60",
+    "tools/test_pcb_checks.py": "998f05303f21c0e8259ba1d3e4d2e558f6fdde4fa106c9e83a1f1bfce1b9b02d",
+    "tools/test_run_gate_ab.py": "e85c46afbf1c073ae263eda95f1660e68e9628dd49881ae7b4907fc9dccc929d"
+  },
+  "artifacts_sha256": {
+    "board.net": "a4641ba0ba06550ae680b6f509b4ff210e8eeffd90032fa6fa536c7e78a3a217",
+    "check_design.log": "1de1c2e9af4f37efc0227b13d988afb587942122b0c67c11e27f8b0fe578291a",
+    "check_kicad_grid.log": "b21f270f8604d360809a0614cce18ef7c8825509d70a6e87884354fd3965e313",
+    "check_native_schematic.log": "6744a95600102102370c7cc62cb4fe6eff8cc42a2e145a8494e464b3569daa8c",
+    "check_netlist_safety.log": "80bccddc1cfad1e29df9b2ae47df59b51b682cd3381a858b9e1348810d492385",
+    "check_ocp_behavior.log": "5be8636a747d47b14ca30b4691150f4ca3ae19d3bdafee60e3676c11fb35c44c",
+    "check_pcb_constraints.log": "89126c850b76e270b5645da27af2dd0128af11557fd4645c74d07817780efb01",
+    "check_pcb_parity.log": "734bff97037775d995a1e35638892fa44ce79818c0ae37da477bb0df8d877f10",
+    "check_power_wiring.log": "b8c5467ed0f310f6eb30b6c2c1355621532e6b48ecdfde11c452033b76faba69",
+    "check_schematic_connectivity.log": "1c34aec3db4af068462972980549866f3318c97352aaeea24568022751ccac8f",
+    "check_schematic_layout.log": "738557c32ed4320900eb67616a1651896a46c54ab11ae35d610cadd8cebef692",
+    "erc.json": "3eec9480533001a208b5dbeaf5ea6ee2b02c2700fc0095d70c7e737ab8543019",
+    "erc.log": "35b1ec78d5af52b4d1e981356276e4fd65a7052b170b6b006d95a1c04affbd54",
+    "export_native.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "export_xml.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "gate_ab_regressions.log": "749c6c144c9ec223fbb090be725b5c96a571f760355ccce64bb07335836bb77f",
+    "git_sha.log": "4a63c5e4a031927ec02c0088cb0828181fcc05e2ed8e04b9e1a0a724098e99b1",
+    "git_status.log": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "kicad_version.log": "8afa901e574506883ff895a7dc8492363e83322467fb858414433f802f058765",
+    "netlist.xml": "4fae61ecd80f8e6f11b7d82d928796bb8adb8002855ed95ff61d259b8130934d",
+    "ngspice_version.log": "8ae293db8587da66879bb99143dc355eaf14df1e3ec1c40df3f448074a0117ba",
+    "pcb_regressions.log": "5ca5bd9b0e7047b84b2220f40cb4359995f34608e8f6215d2252687806b6a9e2",
+    "qualification.json": "d7db03b3f88d64944e2f950eb481f17c09c542f474c7b2755175390a3f1a7f2f",
+    "qualification.log": "ab5268165976467406f58f7dced4d10bc60ce40221ad7f14b441188e8d22b54a",
+    "spice/ocp_filter.cir": "027de8a50a91930a1c79d647e7676f55e42db32a5e9b3b10df2e5b97db9e0cd9",
+    "spice/ocp_filter.dat": "b089376f3122b9f661b4188cb8c73bf04006d6f28a3611e6bcd529ecfd387f8b",
+    "spice/ocp_filter.log": "449b87a171054d4b8976e1675fb7d0e1b9f7acb5d248af8b80a9de2fdd090dcd",
+    "spice/regeneration.cir": "9846088de1ae1a805a56b7127f2442239de9bc932a9fd55080153b3217f4f6ad",
+    "spice/regeneration.dat": "cb8443044e002c0014e90631d88cf3c622cbb3ddb1c331545c8c87764b976c20",
+    "spice/regeneration.log": "4c792203652e6703831d2b07018c22b039d0128052adc358169efb90464bdd52",
+    "tutorial_regressions.log": "ce27b2e279496fa8d356d081236a0f22ca421c93521459ea754ea0211a5dc82d"
+  },
+  "finished_utc": "2026-10-09T15:31:51.658005+00:00"
+}

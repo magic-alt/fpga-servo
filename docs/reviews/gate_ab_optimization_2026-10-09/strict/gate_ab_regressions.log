@@ -1,0 +1,24 @@
+
+test_malformed_xml_replaces_previous_success_with_failure (test_gate_ab_verify.EvidenceIntegrityTests.test_malformed_xml_replaces_previous_success_with_failure) ... ok
+test_missing_input_replaces_previous_success_with_failure (test_gate_ab_verify.EvidenceIntegrityTests.test_missing_input_replaces_previous_success_with_failure) ... ok
+test_waveform_nonfinite_and_nonmonotonic_rejected (test_gate_ab_verify.EvidenceIntegrityTests.test_waveform_nonfinite_and_nonmonotonic_rejected) ... ok
+test_bad_value_is_rejected (test_gate_ab_verify.PassiveTests.test_bad_value_is_rejected) ... ok
+test_charge_time_is_only_a_theoretical_lower_bound (test_gate_ab_verify.PassiveTests.test_charge_time_is_only_a_theoretical_lower_bound) ... ok
+test_corner_sweep_is_symmetric_for_real_dividers (test_gate_ab_verify.PassiveTests.test_corner_sweep_is_symmetric_for_real_dividers) ... ok
+test_exact_unit_parser (test_gate_ab_verify.PassiveTests.test_exact_unit_parser) ... ok
+test_supervisor_falling_threshold_cannot_guarantee_adc_min (test_gate_ab_verify.PassiveTests.test_supervisor_falling_threshold_cannot_guarantee_adc_min) ... ok
+test_adc_strap_mutation_detected (test_gate_ab_verify.RealNetlistMutationTests.test_adc_strap_mutation_detected) ... ok
+test_bootstrap_diode_reversal_detected (test_gate_ab_verify.RealNetlistMutationTests.test_bootstrap_diode_reversal_detected) ... ok
+test_comparator_reference_fault_detected (test_gate_ab_verify.RealNetlistMutationTests.test_comparator_reference_fault_detected) ... ok
+test_netlist_only_report_does_not_claim_erc_pass (test_gate_ab_verify.RealNetlistMutationTests.test_netlist_only_report_does_not_claim_erc_pass) ... ok
+test_ngspice_regen_and_ideal_rc_crossing (test_gate_ab_verify.RealNetlistMutationTests.test_ngspice_regen_and_ideal_rc_crossing) ... ok
+test_real_graph_and_evidence (test_gate_ab_verify.RealNetlistMutationTests.test_real_graph_and_evidence) ... ok
+test_regeneration_model_matches_capacitor_law (test_gate_ab_verify.RealNetlistMutationTests.test_regeneration_model_matches_capacitor_law) ... ok
+test_shunt_value_mutation_detected (test_gate_ab_verify.RealNetlistMutationTests.test_shunt_value_mutation_detected) ... ok
+test_stale_waveforms_cannot_pass_noop_simulator (test_gate_ab_verify.RealNetlistMutationTests.test_stale_waveforms_cannot_pass_noop_simulator) ... ok
+test_supervisor_input_fault_detected (test_gate_ab_verify.RealNetlistMutationTests.test_supervisor_input_fault_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.262s
+
+OK
