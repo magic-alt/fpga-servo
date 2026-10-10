@@ -43,7 +43,7 @@ Current footprint decisions made while closing ERC:
 
 - J3: Phoenix Contact **1714971**, MKDS 5/2-9,5, project-local 9.52 mm footprint
 - J4: Phoenix Contact **1714984**, MKDS 5/3-9,5, project-local 9.52 mm footprint
-- RSH1..RSH3: legacy Ohmite **650FPR005E** is deprecated / NOT FOR BUILD. Proposed replacement RALEC **LR2512-23R005F4** (C154688), 5mOhm/3W, TWO physical terminals. Schematic and PCB Kelvin topology plus high-current layout must be redesigned before fabrication.
+- RSH1..RSH3: RALEC **LR2512-23R005F4** (C154688), 5mOhm/3W SMT 2512, 2 physical terminals selected **in schematic and BOM only**. PCB copper/land still obsolete Ohmite 4T THT; NO FAB before physical revision and qualification.
 - L2: W鐪塺th Elektronik **74438356022**, WE-MAPI 4020, 2.2 uH
 
 ## Important limitation

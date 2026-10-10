@@ -2843,7 +2843,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000066000032")
 		(property "Reference" "RSH1"
-			(at 172.72 92.71 90)
+			(at 172.72 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2853,7 +2853,7 @@
 			)
 		)
 		(property "Value" "5mR"
-			(at 172.72 97.79 90)
+			(at 172.72 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2863,7 +2863,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 172.72 95.25 0)
+			(at 185.42 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2874,7 +2874,7 @@
 			)
 		)
 		(property "Datasheet" "https://item.szlcsc.com/166030.html"
-			(at 172.72 95.25 0)
+			(at 185.42 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2884,7 +2884,7 @@
 			 (hide yes))
 		)
 		(property "Description" "LOW_SIDE_3SHUNT_5mR_2512_3W; NO_FAB_PENDING_PCB_AND_THERMAL"
-			(at 172.72 95.25 0)
+			(at 185.42 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2908,9 +2908,9 @@
 			)
 		)
 
-(property "MPN" "LR2512-23R005F4" (at -68.58 48.26 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LR2512-23R005F4" (at 185.42 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "RALEC" (at -68.58 48.26 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "RALEC" (at 185.42 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:DIODE")
@@ -3562,7 +3562,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006600003b")
 		(property "Reference" "RSH2"
-			(at 217.17 92.71 90)
+			(at 217.17 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3572,7 +3572,7 @@
 			)
 		)
 		(property "Value" "5mR"
-			(at 217.17 97.79 90)
+			(at 217.17 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3582,7 +3582,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 217.17 95.25 0)
+			(at 229.87 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3593,7 +3593,7 @@
 			)
 		)
 		(property "Datasheet" "https://item.szlcsc.com/166030.html"
-			(at 217.17 95.25 0)
+			(at 229.87 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3603,7 +3603,7 @@
 			 (hide yes))
 		)
 		(property "Description" "LOW_SIDE_3SHUNT_5mR_2512_3W; NO_FAB_PENDING_PCB_AND_THERMAL"
-			(at 217.17 95.25 0)
+			(at 229.87 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3627,9 +3627,9 @@
 			)
 		)
 
-(property "MPN" "LR2512-23R005F4" (at -24.13 -1.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LR2512-23R005F4" (at 229.87 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "RALEC" (at -24.13 -1.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "RALEC" (at 229.87 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:DIODE")
@@ -4281,7 +4281,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000066000044")
 		(property "Reference" "RSH3"
-			(at 261.62 92.71 90)
+			(at 261.62 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4291,7 +4291,7 @@
 			)
 		)
 		(property "Value" "5mR"
-			(at 261.62 97.79 90)
+			(at 261.62 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4301,7 +4301,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
-			(at 261.62 95.25 0)
+			(at 274.32 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4312,7 +4312,7 @@
 			)
 		)
 		(property "Datasheet" "https://item.szlcsc.com/166030.html"
-			(at 261.62 95.25 0)
+			(at 274.32 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4322,7 +4322,7 @@
 			 (hide yes))
 		)
 		(property "Description" "LOW_SIDE_3SHUNT_5mR_2512_3W; NO_FAB_PENDING_PCB_AND_THERMAL"
-			(at 261.62 95.25 0)
+			(at 274.32 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4346,9 +4346,9 @@
 			)
 		)
 
-(property "MPN" "LR2512-23R005F4" (at 20.32 -50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LR2512-23R005F4" (at 274.32 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "RALEC" (at 20.32 -50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "RALEC" (at 274.32 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:TERM3")

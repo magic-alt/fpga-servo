@@ -187,9 +187,36 @@ for esd_pin in ["5", "10"]:
 for esd_pin in ["1", "2", "3", "4", "6", "7"]:
     if not (pin_nets.get(("U19", esd_pin)) or "").startswith("unconnected-"):
         errors.append(f"U19.{esd_pin}: RVZ NC pin must remain unconnected")
-for phase, amp in [("U", "U2"), ("V", "U3"), ("W", "U4")]:
-    rail(amp, "8", f"SW_{phase}")
-    rail(amp, "1", f"PH_{phase}")
+# Three low-side 2-terminal shunts. Force/Sense have SAME logical nodes,
+# but Kelvin pickup must be physically verified at the resistor pads on PCB.
+for phase, high, low, amp, shunt, gs, jpin in [
+    ("U", "Q1", "Q2", "U2", "RSH1", "RGS2", "1"),
+    ("V", "Q3", "Q4", "U3", "RSH2", "RGS4", "2"),
+    ("W", "Q5", "Q6", "U4", "RSH3", "RGS6", "3"),
+]:
+    positive = f"LS_{phase}_SRC"
+    phase_net = f"SW_{phase}"
+    for pin in ("1", "2", "3"):
+        rail(low, pin, positive)
+        rail(high, pin, phase_net)
+    rail(low, "5", phase_net)
+    rail(gs, "2", positive)
+    rail(shunt, "1", positive)
+    rail(shunt, "2", "GND")
+    rail(amp, "8", positive)
+    rail(amp, "1", "GND")
+    rail("J4", jpin, phase_net)
+    same((high, "1"), (low, "5"), ("J4", jpin))
+    same((low, "1"), (shunt, "1"), (amp, "8"), (gs, "2"))
+    same((shunt, "2"), (amp, "1"))
+    for illegal_pin in ("3", "4"):
+        if (shunt, illegal_pin) in pin_nets:
+            errors.append(f"{shunt} legacy four-terminal sense pad {illegal_pin} is not a 2512 pad")
+    if values.get(shunt) != "5mR":
+        errors.append(f"{shunt} must be 5mR")
+for name in net_nodes:
+    if name in {"/PH_U", "/PH_V", "/PH_W"}:
+        errors.append(f"obsolete inline motor output net remains: {name}")
 if errors:
     print("NETLIST SAFETY CHECK FAILED")
     for error in errors:

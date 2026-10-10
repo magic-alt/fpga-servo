@@ -1,5 +1,8 @@
 # fpga-servo
 
+> **Development branch notice (2026-10-10):** The proposed design switches to **3-shunt low-side 5 mΩ SMT sensing** with INA240A1 and LM339LV. The current PCB still has legacy **in-line 4-terminal through-hole shunt lands and copper**, despite its older DRC 0/0/0. Do NOT manufacture the board or rely on earlier PCB evidence. See [migration and open gates](docs/low_side_3shunt_migration_2026-10-10.md).
+
+
 FPGA-based servo drive development platform for the ALINX AX7010 / Zynq-7000 board.
 
 ## Rev.A hardware target

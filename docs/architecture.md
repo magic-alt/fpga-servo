@@ -1,5 +1,7 @@
 # Rev.A architecture
 
+> **Proposed schematic revision, 2026-10-10:** Three independent low-side shunts replace the former in-line shunts: Q2/Q4/Q6 source → 5 mΩ 2512 resistor → GND; motor outputs connect directly to inverter switch nodes. PCB re-layout and manufacturing gates are OPEN. Prior descriptions below are historical; see [3-shunt migration](low_side_3shunt_migration_2026-10-10.md).
+
 ## Design intent
 
 This board is a lab/engineering servo-drive daughter board for the ALINX AX7010. It deliberately keeps the hard real-time PWM, ADC timing and encoder counting in the Zynq PL while leaving high-power switching, signal conditioning and encoder line reception on the daughter board.
@@ -43,10 +45,10 @@ The latest user instruction removes the brake circuit from scope (2026-10-10). N
    - bootstrap diode/capacitor for each high-side channel
 
 3. **Phase-current measurement**
-   - one 5 mOhm four-terminal shunt in each motor phase
+   - one 5 mOhm two-terminal SMT shunt under each low-side MOSFET (Q2/Q4/Q6), not in each motor phase
    - INA241A2 high-side/bidirectional amplifier per phase
    - REF1=VA_5V, REF2=GND -> nominal 2.55 V zero-current output
-   - Kelvin sense traces, no load current in sense copper
+   - Kelvin-like two-pad pickup at resistor inside edges, no load current in sense copper; re-layout/DFM validation OPEN
 
 4. **Data acquisition**
    - ADS8588S, 8 simultaneous channels
