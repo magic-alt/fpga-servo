@@ -1,0 +1,470 @@
+[
+  {
+    "layer": "F.Cu",
+    "x": 66.5,
+    "y": 42.675,
+    "net": "/GND",
+    "cut_mm": 0.022698,
+    "uuids": [
+      "3611f871-c224-4f73-9226-1084a7709407",
+      "d0b917c5-4bc4-4807-8a7a-b9704ed884a3",
+      "3c9bfe94-f0ef-47e1-82b8-c0cbe54afb5c"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 61.0952,
+    "y": 29.3399,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.02349,
+    "uuids": [
+      "1122b085-2dab-46d8-a52d-0c0d76fe18bb",
+      "73683bf7-ea1d-40d0-8520-6d799ad10b9b",
+      "73d27150-e285-4741-b990-fa50c0c57979"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 61.0952,
+    "y": 29.4414,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.03045,
+    "uuids": [
+      "1122b085-2dab-46d8-a52d-0c0d76fe18bb",
+      "e17639e8-0622-488f-b0cf-a3f2086a7fa2",
+      "71447785-7867-4ebf-8c75-6c3baf7f223c"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 59.8088,
+    "y": 30.299,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.12864,
+    "uuids": [
+      "152d37c6-a976-4bd6-bbfb-2d1c6271a5d0",
+      "84b29ae2-9578-429e-9a4a-ab0fa63c29be",
+      "9974382a-dbeb-427d-8e70-ce801abdcde5"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 60.2376,
+    "y": 30.299,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.12864,
+    "uuids": [
+      "84b29ae2-9578-429e-9a4a-ab0fa63c29be",
+      "a6da22f2-2bd0-4c9e-b007-0f2468588097",
+      "64ee9bc4-032d-43c8-803d-4f0af6ffce79"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 60.6664,
+    "y": 29.4414,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.12864,
+    "uuids": [
+      "8b60467b-04f9-4437-98bb-16f938e37f4f",
+      "e17639e8-0622-488f-b0cf-a3f2086a7fa2",
+      "0b510eee-6652-471c-8d47-fe82e0cb6bd5"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 60.6664,
+    "y": 29.8702,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.12864,
+    "uuids": [
+      "8b60467b-04f9-4437-98bb-16f938e37f4f",
+      "f938afd0-fb29-4813-bbf8-8c7b6a8fbc37",
+      "f509095e-9b47-45bf-b394-5e36b6fb55c4"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 60.2376,
+    "y": 29.8702,
+    "net": "/VIO_3V3",
+    "cut_mm": 0.12864,
+    "uuids": [
+      "a6da22f2-2bd0-4c9e-b007-0f2468588097",
+      "f938afd0-fb29-4813-bbf8-8c7b6a8fbc37",
+      "c84455c8-a7fb-4058-a47f-90ee265a6b2b"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 64.0617,
+    "y": 12.635,
+    "net": "/PWR_GOOD",
+    "cut_mm": 0.15,
+    "uuids": [
+      "0034bc4b-56f6-4bde-8aa8-31a9f3d66327",
+      "0aacede3-229c-4195-9515-0f11bba33995",
+      "8aa861e2-27f6-4bbf-b6a5-ed96e444e837"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 56.2002,
+    "y": 43.75,
+    "net": "/Gate Driver {slash} Inverter/RUN_OK",
+    "cut_mm": 0.02508,
+    "uuids": [
+      "15d28bd7-35d3-46bb-95d1-6b1942892107",
+      "70cbaec0-6e15-480e-9ef2-5c7eca6dcfa6",
+      "f54b62f4-6ac7-48e6-a96a-a76c3970a725"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 56.2002,
+    "y": 43.6664,
+    "net": "/Gate Driver {slash} Inverter/RUN_OK",
+    "cut_mm": 0.02508,
+    "uuids": [
+      "70cbaec0-6e15-480e-9ef2-5c7eca6dcfa6",
+      "be1f94b9-c241-45e9-809a-7debb314996c",
+      "5db4fc0b-ed4c-4840-a5bc-ce0a123c2d73"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 61.8,
+    "y": 48.625,
+    "net": "/Gate Driver {slash} Inverter/HIN_V_SAFE",
+    "cut_mm": 0.042426,
+    "uuids": [
+      "2a6ae764-2062-4d03-bc67-ea19263820eb",
+      "31674f7d-3035-4184-b93f-a4b14c030696",
+      "33b77a5b-eac2-45bf-932b-f50d286b11ef"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 90.3,
+    "y": 19.325,
+    "net": "/DC Input & Protection/RPP_GATE",
+    "cut_mm": 0.12,
+    "uuids": [
+      "020272cd-7bdf-41ce-ac75-68492ffdfeb7",
+      "625571f1-19a4-499a-8e1c-c18820b86c0c",
+      "f9fc7fa3-4c9f-4ce1-9606-b116b4ce0b44"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 102.525,
+    "y": 18.495,
+    "net": "/DC Input & Protection/RPP_GATE",
+    "cut_mm": 0.0645,
+    "uuids": [
+      "6367cf3a-9ac3-4da2-af50-cdd5147fd1e2",
+      "72baf6c1-e408-4710-a5ce-3a022c104384",
+      "b7bc29ad-1da0-439b-99dc-4245f14960d0"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 86.7,
+    "y": 16.5,
+    "net": "/DC Input & Protection/VIN_FUSED",
+    "cut_mm": 0.12,
+    "uuids": [
+      "039c5aec-6f17-46d0-9665-76dcf5a6555e",
+      "c1771a18-5186-4187-960c-99db9dc80798",
+      "960ab222-c3e7-489e-a4d4-89ffe0541550"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 18.025,
+    "net": "/DC Input & Protection/VIN_FUSED",
+    "cut_mm": 0.12,
+    "uuids": [
+      "4fc98210-8a19-4ec5-9df4-8a685727c433",
+      "e78f4f63-11c3-4a1d-bb4c-65bcee030f02",
+      "ad1d6411-b899-475a-ba1b-ba5dbc7fa3ed"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 19.975,
+    "net": "/DC Input & Protection/VIN_FUSED",
+    "cut_mm": 0.12,
+    "uuids": [
+      "80a871cb-30f4-4396-a5b4-6c0d37bc3219",
+      "88b2b345-0cf9-4bef-9f45-5b1ee5d7a551",
+      "8329b9ff-b65c-4eda-8565-8676f8f6555a"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 64.0375,
+    "y": 61.975,
+    "net": "/VDRV_12V",
+    "cut_mm": 0.06,
+    "uuids": [
+      "ad295fa1-52f9-45a2-9457-b43c8f58cb1f",
+      "c35ac9f0-d756-4f6d-87ec-8c13e40b071f",
+      "c280c137-5cb3-4412-9a9e-d4448fa8275c"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 66.575,
+    "y": 57.505,
+    "net": "Net-(Q4-G)",
+    "cut_mm": 0.12,
+    "uuids": [
+      "1fd5670f-63ab-48a3-81d2-f3f6010492d6",
+      "aeb078b2-0daa-43f8-a1c2-ab8ebe093e77",
+      "20e3fbc9-76f2-4123-bcee-6211019495cd"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 108.7,
+    "y": 83.905,
+    "net": "/PH_W",
+    "cut_mm": 0.15,
+    "uuids": [
+      "49f09c98-4912-40fa-b249-4429dbd9bf1b",
+      "5bca1693-0cfa-496c-8d8d-e5629f48000e",
+      "c8440764-6eaf-4eb1-8369-3992b62a9324"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 77.5,
+    "y": 78.0,
+    "net": "/SW_W",
+    "cut_mm": 0.48,
+    "uuids": [
+      "00b3d67d-7024-4726-8cbe-8eed0cdffb05",
+      "448ba45f-611c-4db9-a389-3f9b9549ff62",
+      "433171ae-536c-44c4-a2d4-cc911cb8c929"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 76.175,
+    "net": "/SW_W",
+    "cut_mm": 0.15,
+    "uuids": [
+      "ab2442fc-b85b-4b8e-ab85-e343e647ab75",
+      "c9f4e2f5-3536-409c-b906-7d279ceef05f",
+      "b9b0b4cf-3184-46d4-952a-fb38d556a9cc"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 83.905,
+    "net": "/SW_W",
+    "cut_mm": 0.15,
+    "uuids": [
+      "af264aaa-fc61-4dc7-a559-73494376e577",
+      "c9f4e2f5-3536-409c-b906-7d279ceef05f",
+      "9b17aa77-8843-4959-b371-b533d7376388"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 76.0784,
+    "y": 29.3377,
+    "net": "Net-(Q3-G)",
+    "cut_mm": 0.021934,
+    "uuids": [
+      "658d5a29-7504-4944-a374-f23df4faa00d",
+      "7b365b37-884e-4756-ba8a-0ac5cddc4378",
+      "f3756742-7f7d-4775-9d59-53813fb282b6"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 54.175,
+    "net": "/SW_V",
+    "cut_mm": 0.15,
+    "uuids": [
+      "08130658-e112-4043-92e8-b92adb8675b8",
+      "a9a8777c-0009-4395-9a8b-b91f5c8b0496",
+      "261fb639-b5e2-4e9a-afff-0bc95b1ec354"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 61.905,
+    "net": "/SW_V",
+    "cut_mm": 0.15,
+    "uuids": [
+      "284c0f7d-e59e-44c5-bbaa-33495e8a657b",
+      "af77573e-398b-4b28-8697-784918ba6456",
+      "e9316c3b-d83d-43c7-8186-bc6eaff53ed8"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 77.5,
+    "y": 56.0,
+    "net": "/SW_V",
+    "cut_mm": 0.48,
+    "uuids": [
+      "560c98a6-755c-4d81-86e9-ac6846ee5237",
+      "5c1b7ca1-6b65-4308-9fc4-459f2e3fe158",
+      "bb638a8d-f2e7-4aa1-85cf-7cf89249de74"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 60.8625,
+    "y": 55.175,
+    "net": "/Gate Driver {slash} Inverter/BST_W",
+    "cut_mm": 0.0525,
+    "uuids": [
+      "0a140b26-99d4-4757-a4cf-1d35cfc09eef",
+      "93d72c2c-f7c9-4a85-ac04-47b02029c37f",
+      "1bc00b6e-aa97-44f3-9e20-26435a0fc6f0"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 60.8625,
+    "y": 54.375,
+    "net": "/Gate Driver {slash} Inverter/BST_W",
+    "cut_mm": 0.07125,
+    "uuids": [
+      "7b792a9d-73cc-4d34-a09e-2cb50d027033",
+      "8e1e9c0e-86de-4c11-ba1a-abd15c91540a",
+      "2a41e60b-34b5-4192-89fa-fd76deb8e817"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 64.2,
+    "y": 47.075,
+    "net": "/SW_U",
+    "cut_mm": 0.03182,
+    "uuids": [
+      "27c2c4fb-3f96-46d4-81a6-f441f660ab83",
+      "cb693e96-29ec-4aa4-b446-29547b96aa77",
+      "7d6b3171-0b5a-4ab3-b975-e098fd697cfc"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 32.175,
+    "net": "/SW_U",
+    "cut_mm": 0.15,
+    "uuids": [
+      "4fd2ab6a-6b87-4b6a-b235-9cc44fa0e822",
+      "8de307b2-564b-443d-84c0-2c0af47f9252",
+      "a6cab7b6-4c6c-4672-9de7-338d1c68d2c8"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 88.0,
+    "y": 39.905,
+    "net": "/SW_U",
+    "cut_mm": 0.15,
+    "uuids": [
+      "599e2e10-ffa0-49b3-b823-85676607ec2e",
+      "8de307b2-564b-443d-84c0-2c0af47f9252",
+      "7da3fbcf-706a-4523-afc5-a90d551832a1"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 77.5,
+    "y": 34.0,
+    "net": "/SW_U",
+    "cut_mm": 0.48,
+    "uuids": [
+      "8413271c-be6f-4c84-8917-1e96a8f9301b",
+      "ad5bd941-fe6d-4f7c-8717-6da48ca25c82",
+      "9ec91700-6ac7-42dc-acf6-6ecdf6e5a05e"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 108.7,
+    "y": 39.905,
+    "net": "/PH_U",
+    "cut_mm": 0.15,
+    "uuids": [
+      "5eea3bf9-9c9e-4085-8288-2dd04fee4e4d",
+      "9480368c-6061-4916-bdc5-a493b797069d",
+      "63ffb6cc-fcde-4973-9fbe-c9aba2250007"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 61.4983,
+    "y": 13.905,
+    "net": "/Auxiliary Power/FB_12V",
+    "cut_mm": 0.14145,
+    "uuids": [
+      "ef795053-d777-4c2f-a420-6b094e3dc698",
+      "fcb00150-fab7-4037-9a59-1bd563e3cdcb",
+      "dd726df9-63aa-41c0-a1d2-0deb28f324c3"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 64.0617,
+    "y": 11.365,
+    "net": "/Auxiliary Power/BST_12V",
+    "cut_mm": 0.15,
+    "uuids": [
+      "ac53d0af-f4c0-4b59-8809-a93c70931fef",
+      "b8388dd3-671c-41f4-a196-ab24d8024c82",
+      "2783b47f-852d-4799-ab3f-ccb6a553f2d2"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 108.7,
+    "y": 61.905,
+    "net": "/PH_V",
+    "cut_mm": 0.15,
+    "uuids": [
+      "55619104-3711-4f38-b997-7f2324b7c3ce",
+      "e9ed486f-aba8-4ec0-9603-24f0ad7c0166",
+      "ab9154f0-c147-4cf0-93bb-325c77676f45"
+    ]
+  },
+  {
+    "layer": "B.Cu",
+    "x": 59.4823,
+    "y": 47.0,
+    "net": "/Gate Driver {slash} Inverter/HIN_W_SAFE",
+    "cut_mm": 0.01821,
+    "uuids": [
+      "2ec04473-8438-49e4-bb6d-7d9fbe13e97e",
+      "c7b15796-1c48-4cfb-a55e-4b10022a1db5",
+      "25c92a17-75e1-4478-967a-6f5c963f4763"
+    ]
+  },
+  {
+    "layer": "F.Cu",
+    "x": 55.9,
+    "y": 7.099998,
+    "net": "/VBUS_ADC",
+    "cut_mm": 0.084853,
+    "uuids": [
+      "90166536-9853-4052-8792-3a74fe27b21b",
+      "eb3b97ad-3acf-4c71-b444-05a3e4938d09",
+      "79d3d1c1-f81f-414c-bdbf-2fe188193f46"
+    ]
+  }
+]

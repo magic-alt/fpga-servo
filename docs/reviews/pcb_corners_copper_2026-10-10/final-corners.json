@@ -1,0 +1,373 @@
+{
+  "passed": true,
+  "counts": {
+    "pad_or_via_anchor": 42,
+    "sub_micron_stub": 10
+  },
+  "corners": [
+    {
+      "layer": "F.Cu",
+      "x_mm": 60.6025,
+      "y_mm": 12.775,
+      "net": "/GND",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 60.6274,
+      "y_mm": 10.8989,
+      "net": "/GND",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 55.3,
+      "y_mm": 45.2,
+      "net": "/GND",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 37.1375,
+      "y_mm": 47.05,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 37.1375,
+      "y_mm": 48.0,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 48.5,
+      "y_mm": 47.325,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 46.55,
+      "y_mm": 40.25,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 40.325,
+      "y_mm": 73.25,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 41.0396,
+      "y_mm": 40.8145,
+      "net": "/VIO_3V3",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 44.325,
+      "y_mm": 59.0,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 59.4967,
+      "y_mm": 32.9399,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 45.6,
+      "y_mm": 47.5,
+      "net": "/OCP hardware latch/POR_N",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 71.175,
+      "y_mm": 89.0,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 93.3,
+      "y_mm": 60.635,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 93.3,
+      "y_mm": 38.635,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 51.675,
+      "y_mm": 75.75,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 93.3,
+      "y_mm": 59.365,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 69.175,
+      "y_mm": 35.905,
+      "net": "Net-(Q2-G)",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 56.1981,
+      "y_mm": 61.5097,
+      "net": "/Current Sense {slash} OCP {slash} ADC/OCP_HI_REF",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 53.1375,
+      "y_mm": 62.95,
+      "net": "/Current Sense {slash} OCP {slash} ADC/OCP_HI_REF",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 100.825,
+      "y_mm": 18.095,
+      "net": "/DC Input & Protection/RPP_GATE",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 71.325,
+      "y_mm": 25.0,
+      "net": "/VBUS_PROT",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 71.325,
+      "y_mm": 69.0,
+      "net": "/VBUS_PROT",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 71.325,
+      "y_mm": 47.0,
+      "net": "/VBUS_PROT",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 23.5,
+      "y_mm": 87.825,
+      "net": "/Differential ABZ Encoder/ENC_A_P",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 16.0,
+      "y_mm": 79.0,
+      "net": "/Differential ABZ Encoder/ENC_A_P",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 16.0,
+      "y_mm": 81.54,
+      "net": "/Differential ABZ Encoder/ENC_B_P",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 30.4467,
+      "y_mm": 84.549,
+      "net": "/Differential ABZ Encoder/ENC_Z_P",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 97.325,
+      "y_mm": 20.0,
+      "net": "/DC Input & Protection/VIN_FUSED",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 95.075,
+      "y_mm": 21.995,
+      "net": "/DC Input & Protection/VIN_FUSED",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 96.1282,
+      "y_mm": 17.99,
+      "net": "/DC Input & Protection/VIN_FUSED",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 86.9688,
+      "y_mm": 20.6739,
+      "net": "/DC Input & Protection/VCAP_RPP",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 36.7544,
+      "y_mm": 50.2585,
+      "net": "/OCP_N",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 53.1375,
+      "y_mm": 59.7,
+      "net": "/OCP_N",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 53.1375,
+      "y_mm": 59.05,
+      "net": "/OCP_N",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 52.525,
+      "y_mm": 22.0,
+      "net": "/VDRV_12V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 34.5752,
+      "y_mm": 8.6454,
+      "net": "/VDRV_12V",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 60.2375,
+      "y_mm": 69.875,
+      "net": "/VDRV_12V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 74.825,
+      "y_mm": 70.905,
+      "net": "/SW_W",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 83.9152,
+      "y_mm": 12.74,
+      "net": "Net-(Q3-G)",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 74.825,
+      "y_mm": 48.905,
+      "net": "/SW_V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 54.1326,
+      "y_mm": 33.1944,
+      "net": "/PWM_UH",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 30.1521,
+      "y_mm": 29.7971,
+      "net": "/PWM_UH",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 40.325,
+      "y_mm": 74.25,
+      "net": "/ADC_CONVST",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 45.4764,
+      "y_mm": 80.9488,
+      "net": "/ADC_DOUTA",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 51.5878,
+      "y_mm": 34.1216,
+      "net": "/OCP hardware latch/POR_OK",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 50.3766,
+      "y_mm": 76.6516,
+      "net": "/Current Sense {slash} OCP {slash} ADC/REGCAP1",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 91.2372,
+      "y_mm": 22.9505,
+      "net": "/DC Input & Protection/VBUS_DIV_MID",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 69.175,
+      "y_mm": 79.905,
+      "net": "Net-(Q6-G)",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 61.9384,
+      "y_mm": 73.6303,
+      "net": "Net-(U3-OUT)",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 48.65,
+      "y_mm": 51.325,
+      "net": "/Gate Driver {slash} Inverter/HIN_W_SAFE",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 48.65,
+      "y_mm": 51.325,
+      "net": "/Gate Driver {slash} Inverter/HIN_W_SAFE",
+      "category": "pad_or_via_anchor"
+    }
+  ]
+}
