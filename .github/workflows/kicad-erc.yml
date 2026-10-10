@@ -71,6 +71,11 @@ jobs:
 
           python3 ../tools/check_netlist_safety.py ../artifacts/ax7010_servo_reva.net
           python3 ../tools/check_ocp_behavior.py ../artifacts/ax7010_servo_reva.net
+          kicad-cli sch export netlist --format kicadxml \
+            --output ../artifacts/adc_validity.xml ax7010_servo_reva.kicad_sch
+          python3 ../tools/check_adc_validity.py ../artifacts/adc_validity.xml \
+            --output ../artifacts/adc_validity.json
+          python3 ../tools/test_adc_validity.py --netlist ../artifacts/adc_validity.xml -v
           python3 ../tools/check_pcb_parity.py ../artifacts/ax7010_servo_reva.net --output ../artifacts/pcb_parity.json
           python3 ../tools/check_pcb_constraints.py ../artifacts/ax7010_servo_reva.net
 

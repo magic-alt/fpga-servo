@@ -1,0 +1,11 @@
+{
+  "violations": 268,
+  "severity": {
+    "error": 217,
+    "warning": 51
+  },
+  "unconnected": 485,
+  "schematic_parity": 0,
+  "result": "BLOCKED",
+  "full_report_local": "artifacts/adc-uv-repair/20261010/drc.json"
+}

@@ -178,6 +178,10 @@ def main() -> int:
             for check in ('netlist_safety', 'ocp_behavior', 'pcb_parity', 'pcb_constraints'):
                 run('check_' + check, [sys.executable, str(ROOT / f'tools/check_{check}.py'), str(net)])
         if xml_ok:
+            run('adc_regressions', [sys.executable, str(ROOT / 'tools/test_adc_validity.py'),
+                                    '--netlist', str(xml), '-v'])
+            run('adc_validity', [sys.executable, str(ROOT / 'tools/check_adc_validity.py'),
+                                 str(xml), '--output', str(out / 'adc_validity.json')])
             run('qualification', [sys.executable, str(ROOT / 'tools/gate_ab_verify.py'),
                                   '--netlist', str(xml), '--output', str(out / 'qualification.json'),
                                   '--spice-output', str(out / 'spice'), '--ngspice', args.ngspice])

@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "LM5164 48V->12V + TPS62163 fixed 5V")
+		(comment 1 "LM5164 48V->12V + TPS62901 precision 5.1V")
 	)
 (lib_symbols
 		(symbol "ax7010_servo_reva:C"
@@ -1106,8 +1106,148 @@
 (symbol "PWR_VA_5V_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
 )
 (symbol "PWR_VA_5V_1_1" (pin passive line (at 0 0 90) (length 0) (name "VA_5V" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+
+(symbol "ax7010_servo_reva:TPS62901"
+				(pin_names
+					(offset 1.016)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "U"
+					(at 0 17.78 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "TPS62901"
+					(at 0 -17.78 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "TPS62901_0_1"
+					(rectangle
+						(start -13.97 13.208)
+						(end 13.97 -13.208)
+						(stroke
+							(width 0.254)
+							(type solid)
+						)
+						(fill
+							(type background)
+						)
+					)
+				)
+				(symbol "TPS62901_1_1"
+					(pin input line
+						(at -3.81 -17.78 90)
+						(length 5.08)
+						(name "SS/TR" (effects (font (size 1.016 1.016))))
+						(number "8" (effects (font (size 1.016 1.016))))
+					)
+					(pin power_in line
+						(at -19.05 6.35 0)
+						(length 5.08)
+						(name "VIN" (effects (font (size 1.016 1.016))))
+						(number "6" (effects (font (size 1.016 1.016))))
+					)
+					(pin input line
+						(at -19.05 1.27 0)
+						(length 5.08)
+						(name "EN" (effects (font (size 1.016 1.016))))
+						(number "5" (effects (font (size 1.016 1.016))))
+					)
+					(pin power_in line
+						(at 3.81 -17.78 90)
+						(length 5.08)
+						(name "GND" (effects (font (size 1.016 1.016))))
+						(number "4" (effects (font (size 1.016 1.016))))
+					)
+					(pin input line
+						(at 19.05 -6.35 180)
+						(length 5.08)
+						(name "FB" (effects (font (size 1.016 1.016))))
+						(number "9" (effects (font (size 1.016 1.016))))
+					)
+					(pin input line
+						(at 19.05 -2.54 180)
+						(length 5.08)
+						(name "VOS" (effects (font (size 1.016 1.016))))
+						(number "3" (effects (font (size 1.016 1.016))))
+					)
+					(pin output line
+						(at 19.05 2.54 180)
+						(length 5.08)
+						(name "SW" (effects (font (size 1.016 1.016))))
+						(number "2" (effects (font (size 1.016 1.016))))
+					)
+					(pin open_collector line
+						(at 19.05 7.62 180)
+						(length 5.08)
+						(name "PG" (effects (font (size 1.016 1.016))))
+						(number "1" (effects (font (size 1.016 1.016))))
+					)
+
+
+(pin input line (at -19.05 -6.35 0) (length 5.08) (name "MODE" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
 )
-(text "VBUS_PROT -> LM5164 12V / 1A -> TPS62163 5V / 1A. PGOOD outputs are wired-AND."
+
+				(embedded_fonts no)
+			)
+(symbol "ax7010_servo_reva:R_PRECISION" (pin_names (offset 0) (hide yes)) (in_bom yes) (on_board yes)
+ (property "Reference" "R" (at 3.81 2.54 0) (effects (font (size 1.016 1.016))))
+ (property "Value" "R_PRECISION" (at 3.81 0 0) (effects (font (size 1.016 1.016))))
+ (symbol "R_PRECISION_0_1" (rectangle (start -2.54 1.016) (end 2.54 -1.016) (stroke (width 0.254) (type default)) (fill (type none))))
+ (symbol "R_PRECISION_1_1"
+  (pin passive line (at -3.81 0 0) (length 1.27) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+  (pin passive line (at 3.81 0 180) (length 1.27) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))))
+)
+
+(text "VBUS_PROT -> LM5164 12V / 1A -> TPS62901 5V / 1A. PGOOD outputs are wired-AND."
 		(exclude_from_sim no)
 		(at 16.51 16.51 0)
 		(effects
@@ -1120,7 +1260,7 @@
 		)
 		(uuid "13a144bc-bacf-4097-95f9-16f6eb8abeb9")
 	)
-(text "TPS62163 is the fixed 5V member of TPS6216x. Use 2.2uH + 22uF; connect FB to AGND and VOS to the 5V output."
+(text "TPS62901: 5.1V nominal; FB=75k/10k; MODE=VIN: forced PWM 2.5MHz. VOS to output."
 		(exclude_from_sim no)
 		(at 16.51 169.164 0)
 		(effects
@@ -1159,7 +1299,7 @@
 		)
 		(uuid "5f25711c-d243-4061-8a73-fbfdf68c3ffa")
 	)
-(text "LM5164 PGOOD and TPS62163 PG share PWR_GOOD; pull up at 3.3V safety logic."
+(text "LM5164 PGOOD and TPS62901 PG share PWR_GOOD; pull up at 3.3V safety logic."
 		(exclude_from_sim no)
 		(at 16.51 173.228 0)
 		(effects
@@ -2285,106 +2425,7 @@
 			)
 		)
 	)
-(symbol
-		(lib_id "ax7010_servo_reva:TPS62160")
-		(at 100.33 130.81 0.0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00006a00000f")
-		(property "Reference" "U13"
-			(at 102.87 128.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS62163DSGR"
-			(at 102.87 133.35 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm"
-			(at 100.33 130.81 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 100.33 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			 (hide yes))
-		)
-		(property "Description" "TPS62163DSGR_FIXED_5V"
-			(at 100.33 130.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		 (hide yes))
-		(pin "1"
-			(uuid "1474a4d3-b0e4-4d7d-8c0c-794d9072d514")
-		)
-		(pin "2"
-			(uuid "5a9ed0e0-eb94-44a1-8132-8f166cf40f2f")
-		)
-		(pin "3"
-			(uuid "04577650-6834-41f6-9119-1348302473cc")
-		)
-		(pin "4"
-			(uuid "c70ea45e-6eea-4408-989f-e7ce2ec64f25")
-		)
-		(pin "5"
-			(uuid "118227fd-7259-4f6e-a3f2-7c24cda16607")
-		)
-		(pin "6"
-			(uuid "e77dd5a9-dcfa-4e74-95e5-f2c5a68fd6a0")
-		)
-		(pin "7"
-			(uuid "18943391-1cba-46f4-a837-6556e345c0af")
-		)
-		(pin "8"
-			(uuid "9de77265-c4d6-4f1c-9983-e5ace08eaf32")
-		)
-		(pin "9"
-			(uuid "e7345942-3d28-4a46-b611-a81bc40a21f4")
-		)
-		(instances
-			(project "ax7010_servo_reva"
-				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002"
-					(reference "U13")
-					(unit 1)
-				)
-			)
-		)
-	(property "Manufacturer" "Texas Instruments" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "TPS62163DSGR" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016))))
-)
+(symbol (lib_id "ax7010_servo_reva:TPS62901") (at 100.33 130.81 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "00000000-0000-0000-0000-00006a00000f")(property "Reference" "U13" (at 104.14 128.27 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS62901RPJR" (at 104.14 130.81 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "TPS62901RPJR" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62901.pdf" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "5.1V nominal; external FB; forced PWM 2.5MHz; MODE=VIN" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "c27905c6-a70c-4fb2-b9e1-880d522b0396"))(pin "2" (uuid "febc9639-cf21-4c90-b4fb-c800d76a994b"))(pin "3" (uuid "fe479069-2f07-4652-8ea0-651166cc38d5"))(pin "4" (uuid "c3a8b6ef-7fa5-4f13-a594-cfddd777ff72"))(pin "5" (uuid "9fc9af63-7300-4d65-b300-69e86da616f7"))(pin "6" (uuid "46d38654-fa09-444a-92a3-c7182c9b564a"))(pin "7" (uuid "0a861e85-5569-42e7-93d1-371b186d6075"))(pin "8" (uuid "75a9b295-d5d3-44ab-bcb5-2248a15f1f9a"))(pin "9" (uuid "06b2dffb-d596-4705-b7ce-552a70d975e4"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "U13") (unit 1)))))
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 64.77 134.62 0.0)
@@ -2976,13 +3017,13 @@
 (wire (pts (xy 64.77 140.97) (xy 64.77 157.48)) (stroke (width 0) (type default)) (uuid "0b3ee077-d12e-4c71-940c-24935b0a3199"))
 (wire (pts (xy 64.77 157.48) (xy 165.1 157.48)) (stroke (width 0) (type default)) (uuid "b2fdca57-0fd0-4810-b318-646073e98763"))
 (wire (pts (xy 165.1 157.48) (xy 165.1 147.32)) (stroke (width 0) (type default)) (uuid "7536e0d6-20d0-4832-ac84-14bb7bdf018e"))
-(wire (pts (xy 96.52 148.59) (xy 96.52 157.48)) (stroke (width 0) (type default)) (uuid "b7122744-6a81-4734-aad3-1dc5a0bb5b18"))
+
 (wire (pts (xy 104.14 148.59) (xy 104.14 157.48)) (stroke (width 0) (type default)) (uuid "e6050bf7-6b24-4147-8706-b66a87656403"))
-(wire (pts (xy 119.38 137.16) (xy 127 137.16)) (stroke (width 0) (type default)) (uuid "afc634b4-1267-432f-aca7-a3be7ca9a670"))
-(wire (pts (xy 127 137.16) (xy 127 157.48)) (stroke (width 0) (type default)) (uuid "49a0e0ba-55a8-4e6e-aa6d-875ac756d2f0"))
+
+
 (label "GND" (at 64.77 157.48 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "9e611311-635d-4192-ba71-c24ae25d28bc"))
 (text "12 V BUCK: input / bootstrap / output LC / feedback + ripple injection" (at 30.48 27.94 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "24d16242-c9ab-404a-8b8d-7d4a89a0a9da"))
-(text "5 V BUCK: fixed output with direct VOS feedback" (at 30.48 109.22 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "7c98a741-e511-42be-a1f7-bf59c1003d46"))
+(text "5 V BUCK: precision external FB; forced PWM 2.5MHz" (at 30.48 109.22 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "7c98a741-e511-42be-a1f7-bf59c1003d46"))
 (wire (pts (xy 106.68 62.23) (xy 109.22 62.23)) (stroke (width 0) (type default)) (uuid "937f5923-f7d6-4cab-976f-11edeb8af85f"))
 (wire (pts (xy 109.22 62.23) (xy 109.22 116.84)) (stroke (width 0) (type default)) (uuid "834ac23f-2746-4d5b-bbf2-a058af326e29"))
 (wire (pts (xy 109.22 116.84) (xy 119.38 116.84)) (stroke (width 0) (type default)) (uuid "29f83218-0082-4dd2-9a88-131c1c47630f"))
@@ -3063,11 +3104,11 @@
 (junction (at 104.14 157.48) (diameter 0) (color 0 0 0 0) (uuid "349fe004-f9e2-4c49-a02c-ce9715a51d13"))
 (junction (at 201.93 128.27) (diameter 0) (color 0 0 0 0) (uuid "fecdd618-a333-4133-8d0b-1ada38469a7c"))
 (junction (at 187.96 128.27) (diameter 0) (color 0 0 0 0) (uuid "3f62650f-9756-4b5e-87fb-f8acf0184bdd"))
-(junction (at 96.52 157.48) (diameter 0) (color 0 0 0 0) (uuid "f7868990-f051-4cbe-b6cd-b5b19cebdb3f"))
+
 (junction (at 109.22 116.84) (diameter 0) (color 0 0 0 0) (uuid "e8e34965-0e32-4e9f-9b7f-20ae50a60908"))
 (junction (at 175.26 88.9) (diameter 0) (color 0 0 0 0) (uuid "84be86c3-ff8e-4954-9487-4b99cbf314d7"))
 (junction (at 60.96 83.82) (diameter 0) (color 0 0 0 0) (uuid "6d04434e-41b8-47e3-8f96-9828f022b7cb"))
-(junction (at 127 157.48) (diameter 0) (color 0 0 0 0) (uuid "6fe6cc3d-3c24-4d51-b0a1-8e098d8ab819"))
+
 (junction (at 165.1 49.53) (diameter 0) (color 0 0 0 0) (uuid "bfb55530-99ce-42f5-9d03-9fd2ca579470"))
 (junction (at 48.26 83.82) (diameter 0) (color 0 0 0 0) (uuid "4eb57225-95bb-42f5-9acc-2eeb2e16ee02"))
 (junction (at 34.29 83.82) (diameter 0) (color 0 0 0 0) (uuid "4f551382-4e98-4e24-b2a6-4ee5b948ad25"))
@@ -3135,4 +3176,21 @@
 (property "Reference" "#PWR29003" (at 165.1 125.73 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/VA_5V" (at 165.1 125.73 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "cbe3408b-838a-49a4-804a-6c0d210a8515")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "#PWR29003") (unit 1)))))
+
+(no_connect (at 96.52 148.59) (uuid "e75ecb33-5265-4e12-803a-87b23c8baef6"))
+(wire (pts (xy 81.28 137.16) (xy 71.12 137.16)) (stroke (width 0) (type default)) (uuid "1e2f6293-80fe-4096-b53d-17c15194ab42"))
+(wire (pts (xy 71.12 137.16) (xy 71.12 129.54)) (stroke (width 0) (type default)) (uuid "93282920-4e0a-45ea-b72a-3a74ca9069f4"))
+(wire (pts (xy 119.38 137.16) (xy 124.46 137.16)) (stroke (width 0) (type default)) (uuid "61a9e298-d940-45eb-96d4-d3f9bd86e399"))
+(label "FB_5V" (at 124.46 137.16 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "573c2836-209c-46ca-adf3-602fde0e698c"))
+(symbol (lib_id "ax7010_servo_reva:R_PRECISION") (at 226.06 139.7 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6f4e0c99-e5e4-4131-bece-e2265b295b65")(property "Reference" "R94" (at 229.87 137.16 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "75k" (at 229.87 139.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Tolerance" "0.05%" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "TCR" "10ppm/C" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "RG1608N-753-W-T5" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Susumu" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "85fab0a8-7a3a-4d05-a922-1a220b747694"))(pin "2" (uuid "63b2c57c-a46b-4f6d-a483-246cd39800df"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "R94") (unit 1)))))
+(symbol (lib_id "ax7010_servo_reva:R_PRECISION") (at 226.06 152.4 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "75f371ba-7fb5-4f92-b018-7045c4f85027")(property "Reference" "R95" (at 229.87 149.86 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "10k" (at 229.87 152.4 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Tolerance" "0.05%" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "TCR" "10ppm/C" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "RG1608N-103-W-T5" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Susumu" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "eb33c9bb-b746-402e-a9af-9e8357233ff3"))(pin "2" (uuid "30af630a-9fba-49c9-9fad-caf95075ddba"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "R95") (unit 1)))))
+(wire (pts (xy 226.06 133.35) (xy 226.06 135.89)) (stroke (width 0) (type default)) (uuid "7aee9094-6cc0-46cf-b7cf-acc216c84df4"))
+(label "VA_5V" (at 226.06 133.35 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "42a40685-a980-4a3b-8fd5-3aa3ffa73ec2"))
+(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 226.06 133.35 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "68bbb180-629c-4b05-b49c-c20f14849a75")(property "Reference" "#PWR29101" (at 229.87 130.81 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Value" "/VA_5V" (at 229.87 133.35 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Footprint" "" (at 226.06 133.35 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "ff7a4659-b1fc-4a60-92ea-16328347f16c"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "#PWR29101") (unit 1)))))
+(wire (pts (xy 226.06 143.51) (xy 226.06 146.05)) (stroke (width 0) (type default)) (uuid "f613d8d3-4008-43e5-8930-e8ca6d3b150b"))
+(wire (pts (xy 226.06 146.05) (xy 226.06 148.59)) (stroke (width 0) (type default)) (uuid "d853b77d-3395-4454-a1f4-c1f5d938b7ec"))
+(label "FB_5V" (at 226.06 146.05 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "56762938-2c5f-4a6e-94c2-e121f7851f8c"))
+(wire (pts (xy 226.06 156.21) (xy 226.06 158.75)) (stroke (width 0) (type default)) (uuid "d1da63b6-c3bd-4c20-b509-5d7bbb79094a"))
+(label "GND" (at 226.06 158.75 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "287dc79b-f9c6-48ea-9bda-c2f8ba8f98bc"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 226.06 158.75 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "70aeea03-cdf3-43a2-a0c8-4f0dfc62803e")(property "Reference" "#PWR29102" (at 229.87 156.21 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Value" "/GND" (at 229.87 158.75 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Footprint" "" (at 226.06 158.75 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "75320eea-6985-42e0-955a-d293b6567256"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "#PWR29102") (unit 1)))))
 )

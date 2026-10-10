@@ -34,8 +34,8 @@ def rail(ref, pin, name):
     if pin_nets.get((ref, pin)) != "/" + name:
         errors.append(f"{ref}.{pin} must connect to {name}")
 
-if len(values) != 157 or len(net_nodes) != 166:
-    errors.append(f"expected 157 board components / 166 nets (external F1 excluded; ADC serial pins grounded), got {len(values)} / {len(net_nodes)}")
+if len(values) != 162 or len(net_nodes) != 169:
+    errors.append(f"expected 162 board components / 169 nets (external F1/J6 excluded; ADC inhibit repair), got {len(values)} / {len(net_nodes)}")
 # Official D_SMA/D_SMC pad 1 is cathode; never infer polarity from drawing alone.
 rail("D1", "1", "VBUS_PROT")
 rail("D1", "2", "GND")
@@ -107,7 +107,7 @@ rail("U11", "6", "ARMED")
 # Physical pins checked against the TI DCU/DBV/DCK package tables.
 for ref, part in [("U20", "SN74LVC1G74"), ("U21", "SN74LVC1G17"),
                   ("U22", "SN74LVC1G14"), ("U23", "SN74LVC1G11"),
-                  ("U24", "TPS3808G33"), ("U25", "TPS3808G50")]:
+                  ("U24", "TPS3808G33"), ("U25", "TPS389001DSER")]:
     if values.get(ref) != part:
         errors.append(f"{ref}: latch function requires {part}")
 
@@ -127,7 +127,7 @@ rail("R55", "1", "PWR_GOOD")
 rail("R55", "2", "VIO_3V3")
 rail("R54", "1", "OCP_N")
 rail("R54", "2", "VIO_3V3")
-same(("U26", "1"), ("U24", "1"), ("U25", "1"), ("R89", "2"))
+same(("U26", "1"), ("U24", "1"), ("U25", "6"), ("R89", "2"))
 same(("U26", "7"), ("U23", "6"))
 rail("U26", "8", "VIO_3V3")
 rail("U26", "4", "GND")
@@ -147,18 +147,24 @@ for ic, cap, power, ground in [("U20", "C86", "8", "4"),
                                ("U22", "C88", "5", "3"),
                                ("U23", "C89", "5", "2"),
                                ("U24", "C90", "6", "2"),
-                               ("U25", "C91", "6", "2")]:
+                               ("U25", "C91", "4", "2")]:
     rail(ic, power, "VIO_3V3")
     rail(ic, ground, "GND")
     same((ic, power), (cap, "1"))
     same((ic, ground), (cap, "2"))
     if values.get(cap) != "100nF":
         errors.append(f"{ic}: required 100nF latch decoupling missing")
-for ic, sense in [("U24", "VIO_3V3"), ("U25", "VA_5V")]:
+for ic, sense in [("U24", "VIO_3V3")]:
     rail(ic, "5", sense)
     rail(ic, "3", "VIO_3V3")
     if not (pin_nets.get((ic, "4")) or "").startswith("unconnected-"):
         errors.append(f"{ic}.CT must be open for fixed reset timeout")
+rail("U25", "3", "VIO_3V3")
+same(("U25", "1"), ("R92", "2"), ("R93", "1"))
+rail("R92", "1", "VA_5V")
+rail("R93", "2", "GND")
+same(("U25", "5"), ("C94", "1"))
+rail("C94", "2", "GND")
 if not (pin_nets.get(("U20", "3")) or "").startswith("unconnected-"):
     errors.append("U20 inverted Q must remain unconnected")
 

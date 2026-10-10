@@ -21,8 +21,6 @@ import xml.etree.ElementTree as ET
 
 
 ADC_AVDD_MIN_V = 4.75                 # TI ADS8588S operating minimum
-G50_THRESHOLD_V = 4.65               # TPS3808G50 nominal falling threshold
-G50_THRESHOLD_TOL = 0.02             # Datasheet threshold accuracy, conservative
 G33_THRESHOLD_V = 3.07               # TPS3808G33 nominal falling threshold
 G33_THRESHOLD_TOL = 0.015
 SUPERVISOR_HYSTERESIS_MAX = 0.025    # Conservative margin from project review
@@ -111,7 +109,11 @@ def require_graph(components: dict[str, str],
     value("U15", "TLV9024PWR")
     value("U16", "TLV9024PWR")
     value("U24", "TPS3808G33")
-    value("U25", "TPS3808G50")
+    value("U25", "TPS389001DSER")
+    value("U13", "TPS62901RPJR")
+    for ref, expected in (("R92", 3240.), ("R93", 1000.),
+                          ("R94", 75000.), ("R95", 10000.), ("C94", 100e-9)):
+        value(ref, expected)
 
     for ref, expected in (("R50", 10e3), ("R51", 160e3),
                           ("R52", 160e3), ("R53", 10e3),
@@ -131,11 +133,11 @@ def require_graph(components: dict[str, str],
         same((shunt, 2), (shunt, 4), (amp, 1))
         rail(shunt, 1, f"SW_{phase}")
         rail(shunt, 2, f"PH_{phase}")
-        rail(amp, 2, "GND")           # REF1
-        rail(amp, 3, "GND")           # GND
+        rail(amp, 2, "GND")           # GND
+        rail(amp, 3, "GND")           # REF2
         rail(amp, 4, "GND")           # reserved NC, vendor requires GND
         rail(amp, 6, "VA_5V")        # VS
-        rail(amp, 7, "VA_5V")        # REF2; 0.5 * supply centering
+        rail(amp, 7, "VA_5V")        # REF1; 0.5 * supply centering
         same((amp, 5), (filter_r, 1))
         same((filter_r, 2), (filter_c, 1), ("U6", adc_pin),
              ("U15", hi_pin), ("U16", lo_pin))
@@ -169,10 +171,16 @@ def require_graph(components: dict[str, str],
         rail("U1", vs_pin, f"SW_{phase}")
 
     rail("U24", 5, "VIO_3V3")
-    rail("U25", 5, "VA_5V")
+    same(("U25", 1), ("R92", 2), ("R93", 1))
+    rail("R92", 1, "VA_5V")
+    rail("R93", 2, "GND")
+    rail("U25", 2, "GND")
+    rail("U25", 3, "VIO_3V3")
+    same(("U25", 5), ("C94", 1))
+    rail("C94", 2, "GND")
     rail("U24", 6, "VIO_3V3")
-    rail("U25", 6, "VIO_3V3")
-    same(("U24", 1), ("U25", 1), ("U26", 1))
+    rail("U25", 4, "VIO_3V3")
+    same(("U24", 1), ("U25", 6), ("U26", 1))
     same(("U26", 3), ("U15", 1), ("U16", 1))
     same(("U26", 2), ("U11", 3))
     same(("U20", 5), ("U11", 6))
@@ -189,7 +197,8 @@ def require_graph(components: dict[str, str],
 def corner_current_limits(values: dict[str, float],
                           rail_range: tuple[float, float] = (4.75, 5.25),
                           resistor_fraction: float = 0.001,
-                          shunt_fraction: float = 0.01) -> dict:
+                          shunt_fraction: float = 0.01,
+                          nominal_rail: float = 5.0) -> dict:
     """Exploratory passive-only corner sweep; no IC error or temperature model."""
     high, low = [], []
     for rail, r50, r51, r52, r53, shunt in itertools.product(
@@ -203,7 +212,6 @@ def corner_current_limits(values: dict[str, float],
         center = 0.5 * rail
         high.append(((rail * r51 / (r50+r51)) - center) / (INA_GAIN_V_PER_V * shunt))
         low.append((center - (rail * r53 / (r52+r53))) / (INA_GAIN_V_PER_V * shunt))
-    nominal_rail = 5.0
     nominal_high_v = nominal_rail * values["R51"] / (values["R50"] + values["R51"])
     nominal_low_v = nominal_rail * values["R53"] / (values["R52"] + values["R53"])
     nominal_trip = (nominal_high_v - nominal_rail/2) / (INA_GAIN_V_PER_V * values["RSH1"])
@@ -213,7 +221,7 @@ def corner_current_limits(values: dict[str, float],
         "positive_trip_nominal_A": nominal_trip,
         "positive_passive_corner_A": [min(high), max(high)],
         "negative_abs_passive_corner_A": [min(low), max(low)],
-        "corner_basis": "VA5 4.75..5.25V; four resistors +/-0.1%; shunt +/-1%; REF2=VA5; REF1=GND",
+        "corner_basis": "VA5 4.75..5.25V; four resistors +/-0.1%; shunt +/-1%; REF1=VA5; REF2=GND",
         "excluded": [
             "INA241 gain/offset/output swing and PWM common-mode recovery",
             "TLV9024 input offset, propagation delay, output pull-up and overdrive",
@@ -230,7 +238,10 @@ def gate_report(netlist: Path) -> dict:
     cap = v["C1"] + v["C2"]
     shunt_powers = [PHASE_RMS_A**2 * v[ref] for ref in ("RSH1", "RSH2", "RSH3")]
     tau = v["R40"] * v["C40"]
-    g50_max = G50_THRESHOLD_V * (1 + G50_THRESHOLD_TOL)
+    from check_adc_validity import verify as verify_adc
+    adc_errors, adc_numerics = verify_adc(netlist)
+    if adc_errors:
+        raise TopologyError("; ".join(adc_errors))
     g33_release_max = G33_THRESHOLD_V * (1+G33_THRESHOLD_TOL) * (1+SUPERVISOR_HYSTERESIS_MAX)
     return {
         "schema_version": 2,
@@ -262,17 +273,15 @@ def gate_report(netlist: Path) -> dict:
             },
             "adc_supply_vs_supervisor": {
                 "ADS8588S_AVDD_min_V": ADC_AVDD_MIN_V,
-                "TPS3808G50_falling_max_V": g50_max,
-                "blind_window_at_least_V": ADC_AVDD_MIN_V-g50_max,
                 "G33_worst_recovery_threshold_V": g33_release_max,
-                "G50_worst_recovery_threshold_V": g50_max*(1+SUPERVISOR_HYSTERESIS_MAX),
-                "conclusion": "G50 falling threshold cannot guarantee ADC AVDD remains valid",
+                **adc_numerics,
+                "conclusion": "Static threshold gap repaired; rapid droop/full-chain shutdown timing remains unqualified",
             },
-            "ocp": corner_current_limits(v),
+            "ocp": corner_current_limits(v, nominal_rail=.6*(1+passive(components['R94'])/passive(components['R95']))),
         },
         "gate_a": {
             "status": "BLOCKED",
-            "passed_checks": ["physical netlist contract"],
+            "passed_checks": ["physical netlist contract", "ADC static threshold/recovery corners"],
             "blocking_ids": ["A-ADC-UNDERVOLTAGE", "A-PEAK-THERMAL-SPEC",
                              "A-VENDOR-FOOTPRINT-MPN", "A-POWER-SEQUENCING"],
         },
