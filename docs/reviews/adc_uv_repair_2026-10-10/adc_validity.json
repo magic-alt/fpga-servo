@@ -1,0 +1,21 @@
+{
+  "status": "PASS_STATIC_ONLY",
+  "errors": [],
+  "calculations": {
+    "falling_threshold_V": [
+      4.80851910426434,
+      4.943948268646616
+    ],
+    "rising_threshold_max_V": 4.984735841862951,
+    "regulated_static_V": [
+      5.026621229738155,
+      5.17392252349624
+    ],
+    "normal_negative_ripple_budget_V": 0.01,
+    "adc_min_V": 4.75,
+    "adc_max_V": 5.25,
+    "static_shutdown_headroom_V": 0.058519104264339816,
+    "transient_gate_off_qualified": false,
+    "delay_note": "18us TPS3890 typical at 5% overdrive is NOT a guaranteed maximum; rapid droop and full-chain delay remain open."
+  }
+}

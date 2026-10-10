@@ -1,0 +1,284 @@
+{
+  "steps": [
+    {
+      "name": "native_schematic",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "kicad_grid",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "schematic_layout",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "schematic_connectivity",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "power_wiring",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "design",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "netlist_safety",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "ocp_behavior",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "pcb_parity",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "pcb_constraints",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "adc_validity",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "adc_regressions",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "pcb_regressions",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "gate_runner_regressions",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "tutorial_regressions",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "gate_ab_regressions",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "erc",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "drc",
+      "exit_code": 5,
+      "accepted": true
+    },
+    {
+      "name": "pdf",
+      "exit_code": 0,
+      "accepted": true
+    },
+    {
+      "name": "diff_check",
+      "exit_code": 0,
+      "accepted": true
+    }
+  ],
+  "physical_pin_delta": [
+    [
+      [
+        "C94",
+        "1"
+      ],
+      null,
+      "Net-(U25-CT)"
+    ],
+    [
+      [
+        "C94",
+        "2"
+      ],
+      null,
+      "/GND"
+    ],
+    [
+      [
+        "R92",
+        "1"
+      ],
+      null,
+      "/VA_5V"
+    ],
+    [
+      [
+        "R92",
+        "2"
+      ],
+      null,
+      "Net-(U25-SENSE)"
+    ],
+    [
+      [
+        "R93",
+        "1"
+      ],
+      null,
+      "Net-(U25-SENSE)"
+    ],
+    [
+      [
+        "R93",
+        "2"
+      ],
+      null,
+      "/GND"
+    ],
+    [
+      [
+        "R94",
+        "1"
+      ],
+      null,
+      "/VA_5V"
+    ],
+    [
+      [
+        "R94",
+        "2"
+      ],
+      null,
+      "/Auxiliary Power/FB_5V"
+    ],
+    [
+      [
+        "R95",
+        "1"
+      ],
+      null,
+      "/Auxiliary Power/FB_5V"
+    ],
+    [
+      [
+        "R95",
+        "2"
+      ],
+      null,
+      "/GND"
+    ],
+    [
+      [
+        "U13",
+        "1"
+      ],
+      "/GND",
+      "/PWR_GOOD"
+    ],
+    [
+      [
+        "U13",
+        "2"
+      ],
+      "/VDRV_12V",
+      "/Auxiliary Power/SW_5V"
+    ],
+    [
+      [
+        "U13",
+        "3"
+      ],
+      "/VDRV_12V",
+      "/VA_5V"
+    ],
+    [
+      [
+        "U13",
+        "5"
+      ],
+      "/GND",
+      "/VDRV_12V"
+    ],
+    [
+      [
+        "U13",
+        "6"
+      ],
+      "/VA_5V",
+      "/VDRV_12V"
+    ],
+    [
+      [
+        "U13",
+        "7"
+      ],
+      "/Auxiliary Power/SW_5V",
+      "/VDRV_12V"
+    ],
+    [
+      [
+        "U13",
+        "8"
+      ],
+      "/PWR_GOOD",
+      "unconnected-(U13-SS/TR-Pad8)"
+    ],
+    [
+      [
+        "U13",
+        "9"
+      ],
+      "/GND",
+      "/Auxiliary Power/FB_5V"
+    ],
+    [
+      [
+        "U25",
+        "1"
+      ],
+      "/OCP hardware latch/POR_N",
+      "Net-(U25-SENSE)"
+    ],
+    [
+      [
+        "U25",
+        "4"
+      ],
+      "unconnected-(U25-CT-Pad4)",
+      "/VIO_3V3"
+    ],
+    [
+      [
+        "U25",
+        "5"
+      ],
+      "/VA_5V",
+      "Net-(U25-CT)"
+    ],
+    [
+      [
+        "U25",
+        "6"
+      ],
+      "/VIO_3V3",
+      "/OCP hardware latch/POR_N"
+    ]
+  ],
+  "unexpected_physical_pin_delta": [],
+  "user_project_settings_preserved": true
+}

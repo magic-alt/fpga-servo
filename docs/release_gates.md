@@ -2,6 +2,8 @@
 
 Rev.A is not fabrication-approved until every blocking item below is closed.
 
+Latest ADC repair: [2026-10-10 record](adc_undervoltage_repair_2026-10-10.md). Fresh native evidence: 162 board components /169 nets,164 system objects,166 footprints; ERC0 errors/0 warnings/0 exclusions (4 existing ignored check categories unchanged). DRC268 violations,485 unconnected,0 schematic parity issues. ADC static threshold gap repaired; rapid-droop shutdown and all other audit blockers remain open. Formal layout freeze is **not approved**.
+
 Current target confirmed 2026-10-09: **24-48V bus, 10A continuous phase current, 20kHz PWM**. RMS interpretation, ambient, peak current and regeneration envelope still need closure. Latest [electrical repair](layout_entry_repair_2026-10-09.md) supersedes historical counts; earlier [schematic explanation and simulation](schematic_layout_entry_review_2026-10-09.md) retains the audit context.
 
 ## Connector / FPGA
@@ -13,7 +15,7 @@ Current target confirmed 2026-10-09: **24-48V bus, 10A continuous phase current,
 
 ## Schematic
 
-- [x] KiCad 10-native hierarchy is the source of truth; current PCB netlist exports **157 board components / 166 nets**; system XML has159 objects /167nets including external F1/J6.
+- [x] KiCad 10-native hierarchy is the source of truth; current PCB netlist exports **162 board components /169 nets**; system XML has164 objects /170nets including external F1/J6.
 - [x] Native schematic layout/A4-boundary checks pass for the top sheet and all seven child sheets.
 - [x] KiCad 10 ERC is clean: **0 errors / 0 warnings** on the tracked native hierarchy.
 - [ ] Exact manufacturer ordering code on every IC/MOSFET/shunt.
@@ -28,7 +30,7 @@ ERC is clean and mechanical/functional placement studies can proceed. Final comp
 
 - [x] D1..D4 symbol/footprint polarity corrected to K1/A2 in local/embedded library and PCB; native source and physical-pin regressions pass. D1 remainsDNP.
 - [x] U6 serial-mode DB0..6, DB9..13, DB14/HBEN (physical pins16..22,27..32) visibly grounded with dedicated serial-mode symbol; physical-pin/type regression passes.
-- [ ] Qualify VA5 undervoltage: G50 may not assert until below ADC's 4.75V operating minimum; gate enable does not prove valid ADC data.
+- [ ] Qualify VA5 undervoltage dynamics: TPS389001 static trip is now above 4.75V across specified corners; fast droop, total gate-off delay, ripple and sequencing remain OPEN. The former G50 static gap is superseded by the 2026-10-10 repair.
 
 - [x] OCP hardware ARM latch implemented; FAULT_CLEAR on J1.10 re-arms only with GATE_EN low and healthy conditions.
 - [ ] Qualify latch fault pulses, clear/fault phase races, power ramps and actual gate-off timing on the bench; digital regression is insufficient.

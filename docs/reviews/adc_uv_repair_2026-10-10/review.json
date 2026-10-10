@@ -1,0 +1,19 @@
+{
+  "independent_reviewer": "adc_repair_review",
+  "status": "Static repair accepted; dynamic and fabrication qualification open",
+  "resolved": [
+    "DSE SMD/NSMD mask definition",
+    "fresh XML required by tests; CI and gate runner invoke tests",
+    "ADC upper supply bound checked",
+    "fresh qualification summary regenerated"
+  ],
+  "remaining": [
+    "rapid-droop/full-chain delay",
+    "supply sequencing",
+    "ripple and load transients",
+    "lifetime and procurement",
+    "assembly qualification",
+    "all other audit blockers"
+  ],
+  "visual_review": "all eight exported sheets reviewed; power and GND local wiring visible; auxiliary and latch detail inspected"
+}

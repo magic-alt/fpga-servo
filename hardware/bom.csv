@@ -48,6 +48,7 @@ C90,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact 
 C91,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 C92,1,1nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 C93,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+C94,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,TPS3890 reset recovery; CT 100nF; C0G or qualified stable effective capacitance,Fitted; exact MPN / rating qualification open
 CBOOT1,1,1uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,1uF_25V_X7R,Fitted; exact MPN / rating qualification open
 CBOOT2,1,1uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,1uF_25V_X7R,Fitted; exact MPN / rating qualification open
 CBOOT3,1,1uF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,1uF_25V_X7R,Fitted; exact MPN / rating qualification open
@@ -112,6 +113,10 @@ R88,1,1k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN 
 R89,1,100k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 R90,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 R91,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
+R92,1,3.24k,Susumu,RG1608N-3241-W-T5,Resistor_SMD:R_0603_1608Metric,Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement,Fitted
+R93,1,1k,Susumu,RG1608N-102-W-T5,Resistor_SMD:R_0603_1608Metric,Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement,Fitted
+R94,1,75k,Susumu,RG1608N-753-W-T5,Resistor_SMD:R_0603_1608Metric,Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement,Fitted
+R95,1,10k,Susumu,RG1608N-103-W-T5,Resistor_SMD:R_0603_1608Metric,Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement,Fitted
 RG1,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_HS_START,Fitted; exact MPN / rating qualification open
 RG2,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_LS_START,Fitted; exact MPN / rating qualification open
 RG3,1,10R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,10R_HS_START,Fitted; exact MPN / rating qualification open
@@ -146,7 +151,7 @@ U9,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2m
 U10,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_W,Fitted
 U11,1,SN74LVC1G11DCKR,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,SN74LVC1G11DCKR_RUN_OK,Fitted
 U12,1,LM5164DDAR,Texas Instruments,LM5164DDAR,Package_SO:TI_SO-PowerPAD-8,See schematic,Fitted
-U13,1,TPS62163DSGR,Texas Instruments,TPS62163DSGR,Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm,TPS62163DSGR_FIXED_5V,Fitted
+U13,1,TPS62901RPJR,Texas Instruments,TPS62901RPJR,fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm,5.1V nominal; external FB; forced PWM 2.5MHz; MODE=VIN,Fitted
 U15,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_HIGH,Fitted
 U16,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_LOW,Fitted
 U18,1,LM74502DDFR,Texas Instruments,LM74502DDFR,Package_TO_SOT_SMD:SOT-23-8,See schematic,Fitted
@@ -156,5 +161,5 @@ U21,1,SN74LVC1G17,Texas Instruments,SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,
 U22,1,SN74LVC1G14,Texas Instruments,SN74LVC1G14DBVR,Package_TO_SOT_SMD:SOT-23-5,See schematic,Fitted
 U23,1,SN74LVC1G11,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,See schematic,Fitted
 U24,1,TPS3808G33,Texas Instruments,TPS3808G33DBVR,Package_TO_SOT_SMD:SOT-23-6,CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3,Fitted
-U25,1,TPS3808G50,Texas Instruments,TPS3808G50DBVR,Package_TO_SOT_SMD:SOT-23-6,CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3,Fitted
+U25,1,TPS389001DSER,Texas Instruments,TPS389001DSER,fpga-servo:Texas_DSE0006A_WSON-6_1.5x1.5mm,ADC UV inhibit; 4.876V nominal falling; CT=100nF (~107ms); VDD=VIO,Fitted
 U26,1,SN74LVC3G17,Texas Instruments,SN74LVC3G17DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,See schematic,Fitted

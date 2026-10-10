@@ -8118,4 +8118,144 @@
 				)
 				(embedded_fonts no)
 			)
+
+(symbol "TPS62901"
+				(pin_names
+					(offset 1.016)
+				)
+				(exclude_from_sim no)
+				(in_bom yes)
+				(on_board yes)
+				(in_pos_files yes)
+				(duplicate_pin_numbers_are_jumpers no)
+				(property "Reference" "U"
+					(at 0 17.78 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Value" "TPS62901"
+					(at 0 -17.78 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Footprint" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Datasheet" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(property "Description" ""
+					(at 0 0 0)
+					(show_name no)
+					(do_not_autoplace no)
+					(hide yes)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(symbol "TPS62901_0_1"
+					(rectangle
+						(start -13.97 13.208)
+						(end 13.97 -13.208)
+						(stroke
+							(width 0.254)
+							(type solid)
+						)
+						(fill
+							(type background)
+						)
+					)
+				)
+				(symbol "TPS62901_1_1"
+					(pin input line
+						(at -3.81 -17.78 90)
+						(length 5.08)
+						(name "SS/TR" (effects (font (size 1.016 1.016))))
+						(number "8" (effects (font (size 1.016 1.016))))
+					)
+					(pin power_in line
+						(at -19.05 6.35 0)
+						(length 5.08)
+						(name "VIN" (effects (font (size 1.016 1.016))))
+						(number "6" (effects (font (size 1.016 1.016))))
+					)
+					(pin input line
+						(at -19.05 1.27 0)
+						(length 5.08)
+						(name "EN" (effects (font (size 1.016 1.016))))
+						(number "5" (effects (font (size 1.016 1.016))))
+					)
+					(pin power_in line
+						(at 3.81 -17.78 90)
+						(length 5.08)
+						(name "GND" (effects (font (size 1.016 1.016))))
+						(number "4" (effects (font (size 1.016 1.016))))
+					)
+					(pin input line
+						(at 19.05 -6.35 180)
+						(length 5.08)
+						(name "FB" (effects (font (size 1.016 1.016))))
+						(number "9" (effects (font (size 1.016 1.016))))
+					)
+					(pin input line
+						(at 19.05 -2.54 180)
+						(length 5.08)
+						(name "VOS" (effects (font (size 1.016 1.016))))
+						(number "3" (effects (font (size 1.016 1.016))))
+					)
+					(pin output line
+						(at 19.05 2.54 180)
+						(length 5.08)
+						(name "SW" (effects (font (size 1.016 1.016))))
+						(number "2" (effects (font (size 1.016 1.016))))
+					)
+					(pin open_collector line
+						(at 19.05 7.62 180)
+						(length 5.08)
+						(name "PG" (effects (font (size 1.016 1.016))))
+						(number "1" (effects (font (size 1.016 1.016))))
+					)
+
+
+(pin input line (at -19.05 -6.35 0) (length 5.08) (name "MODE" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
+)
+
+				(embedded_fonts no)
+			)
+(symbol "TPS389001" (pin_names (offset 1.016)) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 15.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS389001" (at 0 -15.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(symbol "TPS389001_0_1" (rectangle (start -12.7 12.7) (end 12.7 -12.7) (stroke (width 0.254) (type default)) (fill (type background))))(symbol "TPS389001_1_1"(pin open_collector line (at 17.78 5.08 180) (length 5.08) (name "~{RESET}" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 -17.78 90) (length 5.08) (name "GND" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))(pin input line (at -17.78 -5.08 0) (length 5.08) (name "~{MR}" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))(pin passive line (at 17.78 -5.08 180) (length 5.08) (name "CT" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))(pin input line (at -17.78 5.08 0) (length 5.08) (name "SENSE" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))(pin power_in line (at 0 17.78 270) (length 5.08) (name "VDD" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))))
+(symbol "R_PRECISION" (pin_names (offset 0) (hide yes)) (in_bom yes) (on_board yes)
+ (property "Reference" "R" (at 3.81 2.54 0) (effects (font (size 1.016 1.016))))
+ (property "Value" "R_PRECISION" (at 3.81 0 0) (effects (font (size 1.016 1.016))))
+ (symbol "R_PRECISION_0_1" (rectangle (start -2.54 1.016) (end 2.54 -1.016) (stroke (width 0.254) (type default)) (fill (type none))))
+ (symbol "R_PRECISION_1_1"
+  (pin passive line (at -3.81 0 0) (length 1.27) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+  (pin passive line (at 3.81 0 180) (length 1.27) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))))
 )

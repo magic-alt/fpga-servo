@@ -99,3 +99,7 @@ The table below reserves an optional parallel/development allocation. In the cur
 - PWM outputs pass through U8..U10 hardware AND gating before FD6288; U11 generates RUN_OK. R80..R86 pull raw PWM/GATE_EN low while FPGA pins are high impedance.
 - ADC/encoder outputs connect directly to the FPGA; no standalone buffer array is fitted. Power sequencing and partial-power injection must be verified.
 - J1 pin 10 FAULT_CLEAR drives the U20 hardware ARM latch through R87/R88/C92 and U21. Re-arm with GATE_EN low and healthy conditions, CLEAR high/low >=10us, then wait >=10us before enabling; see `ocp_latch_review_2026-10-09.md`. J1 pin 22 and spare/auxiliary pins in the allocation table are NoConn in this revision.
+
+## VA5 supervision update (2026-10-10)
+
+VA_5V is nominally 5.1V after the ADC-validity repair. J1 pin assignments and XDC are unchanged. U25 independently senses VA5 and clears ARMED on undervoltage; FAULT_CLEAR still requires GATE_EN low and healthy supplies. Recovery cannot restart PWM automatically. Encoder supply via F2 shares VA5: qualify the actual encoder voltage range, cable drop and faults. See [repair evidence and acceptance limits](adc_undervoltage_repair_2026-10-10.md).

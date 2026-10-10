@@ -1,0 +1,174 @@
+{
+  "candidate": "D:\\Project\\fpga-servo\\artifacts\\adc-uv-repair\\20261010\\pcb_candidate.kicad_pcb",
+  "copper_mechanics_preserved": true,
+  "provisional_new_positions_mm": {
+    "R92": [
+      72,
+      89
+    ],
+    "R93": [
+      78,
+      89
+    ],
+    "C94": [
+      84,
+      89
+    ],
+    "R94": [
+      90,
+      89
+    ],
+    "R95": [
+      96,
+      89
+    ]
+  },
+  "physical_pads": [
+    {
+      "ref": "U13",
+      "pad": "1",
+      "net": "/PWR_GOOD"
+    },
+    {
+      "ref": "U13",
+      "pad": "2",
+      "net": "/Auxiliary Power/SW_5V"
+    },
+    {
+      "ref": "U13",
+      "pad": "3",
+      "net": "/VA_5V"
+    },
+    {
+      "ref": "U13",
+      "pad": "4",
+      "net": "/GND"
+    },
+    {
+      "ref": "U13",
+      "pad": "5",
+      "net": "/VDRV_12V"
+    },
+    {
+      "ref": "U13",
+      "pad": "6",
+      "net": "/VDRV_12V"
+    },
+    {
+      "ref": "U13",
+      "pad": "7",
+      "net": "/VDRV_12V"
+    },
+    {
+      "ref": "U13",
+      "pad": "8",
+      "net": "unconnected-(U13-SS{slash}TR-Pad8)"
+    },
+    {
+      "ref": "U13",
+      "pad": "9",
+      "net": "/Auxiliary Power/FB_5V"
+    },
+    {
+      "ref": "U25",
+      "pad": "1",
+      "net": "Net-(U25-SENSE)"
+    },
+    {
+      "ref": "U25",
+      "pad": "2",
+      "net": "/GND"
+    },
+    {
+      "ref": "U25",
+      "pad": "3",
+      "net": "/VIO_3V3"
+    },
+    {
+      "ref": "U25",
+      "pad": "4",
+      "net": "/VIO_3V3"
+    },
+    {
+      "ref": "U25",
+      "pad": "5",
+      "net": "Net-(U25-CT)"
+    },
+    {
+      "ref": "U25",
+      "pad": "6",
+      "net": "/OCP hardware latch/POR_N"
+    },
+    {
+      "ref": "R92",
+      "pad": "1",
+      "net": "/VA_5V"
+    },
+    {
+      "ref": "R92",
+      "pad": "2",
+      "net": "Net-(U25-SENSE)"
+    },
+    {
+      "ref": "R93",
+      "pad": "1",
+      "net": "Net-(U25-SENSE)"
+    },
+    {
+      "ref": "R93",
+      "pad": "2",
+      "net": "/GND"
+    },
+    {
+      "ref": "R94",
+      "pad": "1",
+      "net": "/VA_5V"
+    },
+    {
+      "ref": "R94",
+      "pad": "2",
+      "net": "/Auxiliary Power/FB_5V"
+    },
+    {
+      "ref": "R95",
+      "pad": "1",
+      "net": "/Auxiliary Power/FB_5V"
+    },
+    {
+      "ref": "R95",
+      "pad": "2",
+      "net": "/GND"
+    },
+    {
+      "ref": "C94",
+      "pad": "1",
+      "net": "Net-(U25-CT)"
+    },
+    {
+      "ref": "C94",
+      "pad": "2",
+      "net": "/GND"
+    }
+  ],
+  "parity": {
+    "schematic_components": 162,
+    "schematic_nets": 169,
+    "pcb_footprints": 166,
+    "duplicate_references": [],
+    "missing_on_pcb": [],
+    "extra_on_pcb": [],
+    "mechanical_preserved": [
+      "H1",
+      "H2",
+      "H3",
+      "H4"
+    ],
+    "unassigned_footprints": [],
+    "footprint_mismatches": [],
+    "pin_mismatches": [],
+    "net_mismatches": [],
+    "value_mismatches": [],
+    "dnp_mismatches": [],
+    "passed": true
+  }
+}

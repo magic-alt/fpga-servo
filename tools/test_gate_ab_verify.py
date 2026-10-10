@@ -41,8 +41,8 @@ class PassiveTests(unittest.TestCase):
         self.assertAlmostEqual(out["positive_passive_corner_A"][1],
                                out["negative_abs_passive_corner_A"][1], places=10)
 
-    def test_supervisor_falling_threshold_cannot_guarantee_adc_min(self):
-        maximum_trip = qa.G50_THRESHOLD_V * (1+qa.G50_THRESHOLD_TOL)
+    def test_historical_g50_threshold_cannot_guarantee_adc_min(self):
+        maximum_trip = 4.65 * 1.02  # Historical defective supervisor, not current U25.
         self.assertLess(maximum_trip, qa.ADC_AVDD_MIN_V)
         self.assertAlmostEqual(qa.ADC_AVDD_MIN_V-maximum_trip, .007, places=7)
 
@@ -101,7 +101,8 @@ class RealNetlistMutationTests(unittest.TestCase):
         out = qa.gate_report(self.netlist)
         self.assertEqual(out["gate_a"]["status"], "BLOCKED")
         self.assertEqual(out["gate_b"]["status"], "BLOCKED")
-        self.assertGreater(out["numerics"]["adc_supply_vs_supervisor"]["blind_window_at_least_V"], 0)
+        self.assertGreater(out["numerics"]["adc_supply_vs_supervisor"]["static_shutdown_headroom_V"], 0)
+        self.assertFalse(out["numerics"]["adc_supply_vs_supervisor"]["transient_gate_off_qualified"])
         self.assertEqual(len(out["source_netlist_sha256"]), 64)
 
     def test_netlist_only_report_does_not_claim_erc_pass(self):
@@ -135,8 +136,8 @@ class RealNetlistMutationTests(unittest.TestCase):
             qa.require_graph(self.components, self.pins)
 
     def test_supervisor_input_fault_detected(self):
-        self.pins[("U25", "5")] = "/VIO_3V3"
-        with self.assertRaisesRegex(qa.TopologyError, "U25.5"):
+        self.pins[("U25", "1")] = "/VIO_3V3"
+        with self.assertRaises(qa.TopologyError):
             qa.require_graph(self.components, self.pins)
 
     def test_shunt_value_mutation_detected(self):

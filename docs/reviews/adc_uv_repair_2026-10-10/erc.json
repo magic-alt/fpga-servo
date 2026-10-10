@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-10T09:32:13",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.3",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e",
+            "violations": []
+        },
+        {
+            "path": "/DC Input & Protection/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001",
+            "violations": []
+        },
+        {
+            "path": "/AX7010 PL Interface/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004",
+            "violations": []
+        },
+        {
+            "path": "/Auxiliary Power/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002",
+            "violations": []
+        },
+        {
+            "path": "/Current Sense / OCP / ADC/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005",
+            "violations": []
+        },
+        {
+            "path": "/Gate Driver / Inverter/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003",
+            "violations": []
+        },
+        {
+            "path": "/Differential ABZ Encoder/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000006",
+            "violations": []
+        },
+        {
+            "path": "/OCP hardware latch/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007",
+            "violations": []
+        }
+    ],
+    "source": "ax7010_servo_reva.kicad_sch"
+}
