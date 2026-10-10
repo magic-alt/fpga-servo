@@ -5629,7 +5629,7 @@
 
 (hierarchical_label "LS_W_SRC"
 		(shape output)
-		(at 283.21 152.4 180)
+		(at 279.4 152.4 180)
 		(effects (font (size 1 1)) (justify right))
 		(uuid "18534666-46bd-4e74-a2bd-11160873d4e4")
 	)
@@ -5767,6 +5767,9 @@
 (label "GND" (at 229.87 191.77 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ab001111-2222-4333-a444-000000031002"))
 (wire (pts (xy 274.32 152.4) (xy 274.32 157.48)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000001003"))
 (wire (pts (xy 274.32 187.96) (xy 274.32 191.77)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000011003"))
-(wire (pts (xy 274.32 152.4) (xy 283.21 152.4)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000021003"))
+(wire (pts (xy 274.32 152.4) (xy 279.4 152.4)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000021003"))
 (label "GND" (at 274.32 191.77 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ab001111-2222-4333-a444-000000031003"))
+(junction (at 185.42 152.4) (diameter 0) (color 0 0 0 0) (uuid "aabb0000-1234-4fab-bced-000000001001"))
+(junction (at 229.87 152.4) (diameter 0) (color 0 0 0 0) (uuid "aabb0000-1234-4fab-bced-000000001002"))
+(junction (at 274.32 152.4) (diameter 0) (color 0 0 0 0) (uuid "aabb0000-1234-4fab-bced-000000001003"))
 )
