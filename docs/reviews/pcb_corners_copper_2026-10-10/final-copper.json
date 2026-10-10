@@ -1,0 +1,1335 @@
+{
+  "polygons": [
+    {
+      "net": "/DC Input & Protection/RPP_SRC",
+      "layer": "F.Cu",
+      "index": 0,
+      "area_mm2": 22.4084571728435,
+      "bbox_mm": [
+        100.359746,
+        17.4,
+        106.635199,
+        22.65
+      ],
+      "native_island": false,
+      "contacts": 8,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 0,
+      "area_mm2": 1807.9398968256476,
+      "bbox_mm": [
+        2.5005,
+        25.0,
+        67.0,
+        96.4995
+      ],
+      "native_island": false,
+      "contacts": 35,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 1,
+      "area_mm2": 15.221970151014,
+      "bbox_mm": [
+        19.497841,
+        84.07098,
+        26.6222,
+        92.6046
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 2,
+      "area_mm2": 39.1745307924845,
+      "bbox_mm": [
+        55.759427,
+        87.9893,
+        67.0,
+        92.5291
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 3,
+      "area_mm2": 9.56131080725,
+      "bbox_mm": [
+        20.376754,
+        83.6505,
+        26.9096,
+        87.742903
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 4,
+      "area_mm2": 69.7967296961915,
+      "bbox_mm": [
+        46.3842,
+        77.5755,
+        60.216,
+        87.6245
+      ],
+      "native_island": false,
+      "contacts": 28,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 5,
+      "area_mm2": 50.611956861199,
+      "bbox_mm": [
+        26.145475,
+        73.2834,
+        44.2751,
+        83.6745
+      ],
+      "native_island": false,
+      "contacts": 14,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 6,
+      "area_mm2": 32.3629571060675,
+      "bbox_mm": [
+        34.2106,
+        74.975079,
+        45.312476,
+        82.4773
+      ],
+      "native_island": false,
+      "contacts": 13,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 7,
+      "area_mm2": 28.0236870764035,
+      "bbox_mm": [
+        58.6005,
+        67.602406,
+        67.0,
+        79.89405
+      ],
+      "native_island": false,
+      "contacts": 12,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 8,
+      "area_mm2": 7.5274930314395,
+      "bbox_mm": [
+        39.419452,
+        73.5755,
+        46.959596,
+        78.2452
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 9,
+      "area_mm2": 5.3540011986485,
+      "bbox_mm": [
+        49.272519,
+        75.7005,
+        55.282012,
+        78.23
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 10,
+      "area_mm2": 17.398761784337,
+      "bbox_mm": [
+        55.304403,
+        63.8082,
+        58.624516,
+        77.846336
+      ],
+      "native_island": false,
+      "contacts": 8,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 11,
+      "area_mm2": 29.0759847457165,
+      "bbox_mm": [
+        44.665504,
+        66.839991,
+        55.226242,
+        74.8995
+      ],
+      "native_island": false,
+      "contacts": 33,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 12,
+      "area_mm2": 2.4447966188875,
+      "bbox_mm": [
+        54.775763,
+        71.1505,
+        56.5245,
+        73.596452
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 13,
+      "area_mm2": 6.062325510713,
+      "bbox_mm": [
+        38.864805,
+        70.625781,
+        43.262591,
+        73.531079
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 14,
+      "area_mm2": 6.567214543625,
+      "bbox_mm": [
+        41.912409,
+        70.3005,
+        46.5865,
+        73.0597
+      ],
+      "native_island": false,
+      "contacts": 8,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 15,
+      "area_mm2": 13.5700666206445,
+      "bbox_mm": [
+        50.149079,
+        67.3755,
+        56.5282,
+        70.3995
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 16,
+      "area_mm2": 54.0443432900565,
+      "bbox_mm": [
+        54.037041,
+        57.9255,
+        67.0,
+        69.379816
+      ],
+      "native_island": false,
+      "contacts": 57,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 17,
+      "area_mm2": 15.4229838497095,
+      "bbox_mm": [
+        41.759428,
+        62.796049,
+        49.494319,
+        67.138377
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 18,
+      "area_mm2": 6.2674652143935,
+      "bbox_mm": [
+        50.353878,
+        61.630113,
+        54.5745,
+        67.108965
+      ],
+      "native_island": false,
+      "contacts": 6,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 19,
+      "area_mm2": 2.535589072729,
+      "bbox_mm": [
+        50.37296,
+        65.450499,
+        52.915274,
+        66.6745
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 20,
+      "area_mm2": 5.14965400224,
+      "bbox_mm": [
+        47.150297,
+        60.0255,
+        51.76181,
+        62.333994
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 21,
+      "area_mm2": 4.98297174259,
+      "bbox_mm": [
+        42.960424,
+        60.1909,
+        47.610902,
+        61.6185
+      ],
+      "native_island": false,
+      "contacts": 10,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 22,
+      "area_mm2": 7.809317564043,
+      "bbox_mm": [
+        63.191357,
+        58.2555,
+        67.0,
+        61.1495
+      ],
+      "native_island": false,
+      "contacts": 9,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 23,
+      "area_mm2": 15.7473617017935,
+      "bbox_mm": [
+        40.808648,
+        50.051103,
+        46.552246,
+        59.5899
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 24,
+      "area_mm2": 81.5626744508425,
+      "bbox_mm": [
+        44.726341,
+        51.845353,
+        65.676313,
+        59.3745
+      ],
+      "native_island": false,
+      "contacts": 10,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 25,
+      "area_mm2": 6.418720813159,
+      "bbox_mm": [
+        59.280697,
+        50.2755,
+        64.360378,
+        53.7745
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 26,
+      "area_mm2": 23.8825535776465,
+      "bbox_mm": [
+        37.728712,
+        45.8872,
+        45.0495,
+        52.091351
+      ],
+      "native_island": false,
+      "contacts": 18,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 27,
+      "area_mm2": 24.9255878664935,
+      "bbox_mm": [
+        52.736754,
+        43.88938,
+        61.375629,
+        50.2245
+      ],
+      "native_island": false,
+      "contacts": 19,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 28,
+      "area_mm2": 13.921402453182,
+      "bbox_mm": [
+        48.045303,
+        42.80828,
+        54.4358,
+        49.1745
+      ],
+      "native_island": false,
+      "contacts": 13,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 29,
+      "area_mm2": 36.340791645548,
+      "bbox_mm": [
+        29.8901,
+        40.255981,
+        42.3995,
+        48.566769
+      ],
+      "native_island": false,
+      "contacts": 25,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 30,
+      "area_mm2": 4.185041322279,
+      "bbox_mm": [
+        61.9005,
+        44.6755,
+        64.14428,
+        47.833537
+      ],
+      "native_island": false,
+      "contacts": 10,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 31,
+      "area_mm2": 17.6925357005205,
+      "bbox_mm": [
+        41.577497,
+        42.0755,
+        48.2271,
+        47.009256
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 32,
+      "area_mm2": 29.7000552010945,
+      "bbox_mm": [
+        58.210861,
+        35.944956,
+        67.0,
+        45.173021
+      ],
+      "native_island": false,
+      "contacts": 54,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 33,
+      "area_mm2": 9.501505775212,
+      "bbox_mm": [
+        47.53873,
+        40.095183,
+        54.8245,
+        44.33892
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 34,
+      "area_mm2": 1.989941435545,
+      "bbox_mm": [
+        33.970403,
+        42.404888,
+        36.376867,
+        43.349498
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 35,
+      "area_mm2": 6.658802183504,
+      "bbox_mm": [
+        52.045057,
+        39.547671,
+        56.611448,
+        42.902545
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 36,
+      "area_mm2": 19.38019316923,
+      "bbox_mm": [
+        35.236574,
+        36.670779,
+        45.484088,
+        42.2105
+      ],
+      "native_island": false,
+      "contacts": 12,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 37,
+      "area_mm2": 6.9131254489395,
+      "bbox_mm": [
+        49.661422,
+        37.125,
+        54.853811,
+        40.1476
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 38,
+      "area_mm2": 5.367284875381,
+      "bbox_mm": [
+        44.249711,
+        36.784879,
+        47.0369,
+        39.900044
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 39,
+      "area_mm2": 6.1822679905645,
+      "bbox_mm": [
+        47.485235,
+        34.915552,
+        49.8993,
+        38.5761
+      ],
+      "native_island": false,
+      "contacts": 7,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 40,
+      "area_mm2": 33.137869799629,
+      "bbox_mm": [
+        27.222358,
+        30.609623,
+        38.146746,
+        37.7161
+      ],
+      "native_island": false,
+      "contacts": 6,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 41,
+      "area_mm2": 3.7791134869345,
+      "bbox_mm": [
+        57.3212,
+        35.6255,
+        61.3495,
+        37.674146
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 42,
+      "area_mm2": 23.945124700846,
+      "bbox_mm": [
+        39.073857,
+        31.1375,
+        46.906476,
+        37.3662
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 43,
+      "area_mm2": 1.34662081437,
+      "bbox_mm": [
+        54.457454,
+        34.382784,
+        56.6702,
+        35.2821
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 44,
+      "area_mm2": 11.150884975881,
+      "bbox_mm": [
+        46.34311,
+        30.4836,
+        56.9995,
+        34.408156
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 45,
+      "area_mm2": 5.0953997509265,
+      "bbox_mm": [
+        62.5722,
+        29.943852,
+        66.009773,
+        34.216689
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 46,
+      "area_mm2": 3.0435607329435,
+      "bbox_mm": [
+        37.8766,
+        29.4634,
+        39.714063,
+        31.608656
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 47,
+      "area_mm2": 10.64977782257,
+      "bbox_mm": [
+        27.225984,
+        28.9412,
+        36.0745,
+        30.761
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 48,
+      "area_mm2": 27.2346907612295,
+      "bbox_mm": [
+        37.044754,
+        25.0,
+        57.429087,
+        30.4865
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "F.Cu",
+      "index": 49,
+      "area_mm2": 18.175326218141,
+      "bbox_mm": [
+        27.257356,
+        25.941348,
+        40.166146,
+        29.3245
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 0,
+      "area_mm2": 82.457677403296,
+      "bbox_mm": [
+        17.5895,
+        72.593672,
+        30.7715,
+        87.4326
+      ],
+      "native_island": false,
+      "contacts": 26,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 1,
+      "area_mm2": 1.243101678385,
+      "bbox_mm": [
+        45.196317,
+        82.646813,
+        47.393483,
+        84.5693
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 2,
+      "area_mm2": 11.0226364899025,
+      "bbox_mm": [
+        50.2048,
+        75.668389,
+        52.6012,
+        83.7512
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 3,
+      "area_mm2": 3.4709002295485,
+      "bbox_mm": [
+        43.5547,
+        73.537172,
+        44.3684,
+        81.820826
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 4,
+      "area_mm2": 57.839437166317,
+      "bbox_mm": [
+        44.2741,
+        57.456042,
+        50.1499,
+        81.645504
+      ],
+      "native_island": false,
+      "contacts": 35,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 5,
+      "area_mm2": 328.593700767369,
+      "bbox_mm": [
+        18.0449,
+        47.032472,
+        41.472156,
+        77.920918
+      ],
+      "native_island": false,
+      "contacts": 6,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 6,
+      "area_mm2": 27.353974978921,
+      "bbox_mm": [
+        62.3389,
+        72.135598,
+        74.731467,
+        77.0171
+      ],
+      "native_island": false,
+      "contacts": 18,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 7,
+      "area_mm2": 113.591310185184,
+      "bbox_mm": [
+        39.1902,
+        44.025768,
+        56.3984,
+        76.188166
+      ],
+      "native_island": false,
+      "contacts": 34,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 8,
+      "area_mm2": 6.6544177303745,
+      "bbox_mm": [
+        39.4755,
+        69.268389,
+        41.7202,
+        74.051629
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 9,
+      "area_mm2": 31.970733811477,
+      "bbox_mm": [
+        66.363,
+        57.930051,
+        71.1995,
+        69.173062
+      ],
+      "native_island": false,
+      "contacts": 15,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 10,
+      "area_mm2": 7.989619066526,
+      "bbox_mm": [
+        48.9077,
+        63.065417,
+        51.2033,
+        68.568698
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 11,
+      "area_mm2": 37.8773616442355,
+      "bbox_mm": [
+        9.0368,
+        32.633502,
+        11.7837,
+        68.405283
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 12,
+      "area_mm2": 6.8983956200545,
+      "bbox_mm": [
+        12.6347,
+        60.634702,
+        14.7996,
+        64.804149
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 13,
+      "area_mm2": 80.2105122980845,
+      "bbox_mm": [
+        34.6197,
+        39.597796,
+        48.9155,
+        62.306429
+      ],
+      "native_island": false,
+      "contacts": 21,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 14,
+      "area_mm2": 14.937142637014,
+      "bbox_mm": [
+        68.063,
+        52.717661,
+        71.1995,
+        60.081483
+      ],
+      "native_island": false,
+      "contacts": 15,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 15,
+      "area_mm2": 36.217736916927,
+      "bbox_mm": [
+        49.43658,
+        46.152593,
+        60.364251,
+        57.04241
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 16,
+      "area_mm2": 35.2143297460385,
+      "bbox_mm": [
+        58.108644,
+        43.5092,
+        70.362,
+        54.1745
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 17,
+      "area_mm2": 23.224427412851,
+      "bbox_mm": [
+        52.3875,
+        40.604272,
+        58.435256,
+        49.7402
+      ],
+      "native_island": false,
+      "contacts": 17,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 18,
+      "area_mm2": 15.7919471766085,
+      "bbox_mm": [
+        61.737887,
+        37.257589,
+        65.012,
+        48.379595
+      ],
+      "native_island": false,
+      "contacts": 11,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 19,
+      "area_mm2": 35.0698192013685,
+      "bbox_mm": [
+        26.549255,
+        34.826405,
+        33.770496,
+        47.114133
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 20,
+      "area_mm2": 34.7366022762255,
+      "bbox_mm": [
+        40.919731,
+        35.094,
+        50.9598,
+        45.893871
+      ],
+      "native_island": false,
+      "contacts": 32,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 21,
+      "area_mm2": 5.2126522402995,
+      "bbox_mm": [
+        57.992886,
+        36.384768,
+        60.0387,
+        42.6582
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 22,
+      "area_mm2": 17.4572771739025,
+      "bbox_mm": [
+        53.689726,
+        29.555687,
+        57.6457,
+        42.131428
+      ],
+      "native_island": false,
+      "contacts": 8,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 23,
+      "area_mm2": 13.3620106116575,
+      "bbox_mm": [
+        36.321118,
+        38.360231,
+        47.128629,
+        41.695956
+      ],
+      "native_island": false,
+      "contacts": 2,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 24,
+      "area_mm2": 79.0042565619435,
+      "bbox_mm": [
+        27.34092,
+        31.3955,
+        50.066156,
+        39.804757
+      ],
+      "native_island": false,
+      "contacts": 4,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 25,
+      "area_mm2": 2.4684404766985,
+      "bbox_mm": [
+        46.766014,
+        36.388643,
+        48.9415,
+        39.226273
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 26,
+      "area_mm2": 5.081258031416,
+      "bbox_mm": [
+        61.9755,
+        32.014216,
+        64.50143,
+        36.154618
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 27,
+      "area_mm2": 18.6327384053605,
+      "bbox_mm": [
+        30.298602,
+        30.2226,
+        49.487056,
+        32.550056
+      ],
+      "native_island": false,
+      "contacts": 3,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 28,
+      "area_mm2": 0.322121718948,
+      "bbox_mm": [
+        10.1903,
+        30.654441,
+        10.990744,
+        31.286618
+      ],
+      "native_island": false,
+      "contacts": 1,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 29,
+      "area_mm2": 32.192292461635,
+      "bbox_mm": [
+        69.383607,
+        9.0354,
+        83.799995,
+        15.395107
+      ],
+      "native_island": false,
+      "contacts": 9,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 30,
+      "area_mm2": 2.3308701346915,
+      "bbox_mm": [
+        54.592588,
+        7.33211,
+        55.864701,
+        9.998983
+      ],
+      "native_island": false,
+      "contacts": 5,
+      "removal_always": true,
+      "pad_connected": true
+    },
+    {
+      "net": "/GND",
+      "layer": "B.Cu",
+      "index": 31,
+      "area_mm2": 6918.182900078038,
+      "bbox_mm": [
+        2.5005,
+        2.5005,
+        131.4995,
+        96.4995
+      ],
+      "native_island": false,
+      "contacts": 279,
+      "removal_always": true,
+      "pad_connected": true
+    }
+  ],
+  "count": 83,
+  "disconnected": 0,
+  "native_islands": 0
+}
