@@ -1,0 +1,27 @@
+{
+  "productModel": "SWPA4020S2R2MT",
+  "productCode": "C83423",
+  "encapsulationModel": "SMD,4x4mm",
+  "productName": "2.2uH ±20%",
+  "stockNumber": 32392,
+  "theRatio": 10,
+  "minBuyNumber": 1,
+  "minWholeNumber": 3000,
+  "encaptionPrice": 644.7,
+  "manufacturer": "Sunlord(顺络)",
+  "url": "https://item.szlcsc.com/84587.html",
+  "stock_total": 32390,
+  "stock_gd": 32390,
+  "stock_js": 0,
+  "parameters": {
+    "电感值": "2.2uH",
+    "精度": "±20%",
+    "额定电流": "-",
+    "直流电阻(DCR)": "-",
+    "类型": "绕线电感"
+  },
+  "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250613/C109B0365842EAE552EDCE87CD96529A.pdf",
+  "price_display_CNY": 0.2149,
+  "pageGeneratedAt": "2026-10-10T15:29:48.341Z",
+  "checked_at": "2026-10-10T15:29:48.484581+00:00"
+}

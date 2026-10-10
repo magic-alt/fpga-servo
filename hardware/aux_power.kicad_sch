@@ -1367,7 +1367,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm5164.pdf"
 			(at 86.36 55.88 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1422,8 +1422,12 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Texas Instruments" (at 86.36 55.88 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "TI(德州仪器)" (at 86.36 55.88 0) (hide yes) (effects (font (size 1.016 1.016))))
 (property "MPN" "LM5164DDAR" (at 86.36 55.88 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C477928" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:C")
@@ -1467,7 +1471,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 34.29 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1501,7 +1505,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "1210B225K101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C42400139" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "GCJ32DR72A225KA01L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C388903" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 48.26 66.04 0.0)
@@ -1544,7 +1562,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 48.26 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1578,7 +1596,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "1210B225K101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C42400139" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "GCJ32DR72A225KA01L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C388903" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 60.96 76.2 90)
@@ -1621,7 +1653,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf"
 			(at 60.96 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1655,7 +1687,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "UNI-ROYAL(厚声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603WAF1003T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C25803" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RS-03K1003FT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C115320" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 118.11 43.18 0.0)
@@ -1698,7 +1744,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 118.11 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1732,7 +1778,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B222J500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C60328" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B222KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C16033" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:L")
 		(at 140.97 49.53 0.0)
@@ -1764,7 +1824,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Coilcraft_MSS1246T-XXX"
+		(property "Footprint" "fpga-servo:SOREDE_SDRH1209_68uH"
 			(at 140.97 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -1775,7 +1835,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20220302/4A650F7FE54659FA437276B7237D1CB9.pdf"
 			(at 140.97 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1809,8 +1869,28 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Coilcraft" (at 140.97 49.53 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "MSS1246T-683MLC" (at 140.97 49.53 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "SOREDE" (at 140.97 49.53 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "SDRH.1209.LF680MT00" (at 140.97 49.53 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "LCSC" "C2942326"
+	(id 0)
+	(at 140.97 49.53 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+(property "Sourcing_Status" "Stock55; prototype only; Irms/guaranteed1A/thermal OPEN; critical power single-source exception"
+	(id 1)
+	(at 140.97 49.53 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 )
 (symbol
 		(lib_id "ax7010_servo_reva:C")
@@ -1854,7 +1934,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 165.1 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1888,7 +1968,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "1210B226K250NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C5204920" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CS3225X7R226K250NRL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C2918511" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "BLOCKED_EXACT_OEM_SHEET_MISMATCH" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 179.07 66.04 0.0)
@@ -1931,7 +2025,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 179.07 66.04 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1965,7 +2059,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "1210B226K250NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C5204920" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CS3225X7R226K250NRL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C2918511" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "BLOCKED_EXACT_OEM_SHEET_MISMATCH" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 226.06 64.77 270)
@@ -2008,7 +2116,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf"
 			(at 226.06 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2042,7 +2150,48 @@
 				)
 			)
 		)
+	
+	(property "Manufacturer" "YAGEO(国巨)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "RC0603FR-07453KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C273765" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RTT034533FTP"
+	(id 0)
+	(at 226.06 64.77 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
 	)
+)
+
+	(property "Alternative_LCSC" "C103651"
+	(id 1)
+	(at 226.06 64.77 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_Status" "BLOCKED_NOT_SOURCED_OR_NO_STOCK"
+	(id 2)
+	(at 226.06 64.77 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+)
 (symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 226.06 90.17 270)
@@ -2085,7 +2234,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf"
 			(at 226.06 90.17 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2119,7 +2268,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "UNI-ROYAL(厚声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603WAF4992T5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C23184" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0603BRD0749K9L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C705780" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 144.78 88.9 0.0)
@@ -2162,7 +2325,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf"
 			(at 144.78 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2196,7 +2359,48 @@
 				)
 			)
 		)
+	
+	(property "Manufacturer" "YAGEO(国巨)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "RC0603FR-07453KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C273765" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RTT034533FTP"
+	(id 0)
+	(at 144.78 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
 	)
+)
+
+	(property "Alternative_LCSC" "C103651"
+	(id 1)
+	(at 144.78 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_Status" "BLOCKED_NOT_SOURCED_OR_NO_STOCK"
+	(id 2)
+	(at 144.78 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 175.26 95.25 0.0)
@@ -2239,7 +2443,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 175.26 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2273,7 +2477,48 @@
 				)
 			)
 		)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B332J500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C20616243" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CC0603JRX7R9BB332"
+	(id 0)
+	(at 175.26 95.25 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
 	)
+)
+
+	(property "Alternative_LCSC" "C519530"
+	(id 1)
+	(at 175.26 95.25 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE; OEM same nominal/tolerance/voltage/X7R/package reviewed; application and first-article checks OPEN"
+	(id 2)
+	(at 175.26 95.25 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 195.58 95.25 0.0)
@@ -2316,7 +2561,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 195.58 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2350,7 +2595,48 @@
 				)
 			)
 		)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603CG560J500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C1676" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10C560JB81PNC"
+	(id 0)
+	(at 195.58 95.25 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
 	)
+)
+
+	(property "Alternative_LCSC" "C472797"
+	(id 1)
+	(at 195.58 95.25 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_Status" "BLOCKED_ZERO_STOCK"
+	(id 2)
+	(at 195.58 95.25 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+)
 (symbol
 		(lib_id "ax7010_servo_reva:TP")
 		(at 210.82 43.18 0.0)
@@ -2425,7 +2711,11 @@
 			)
 		)
 	)
-(symbol (lib_id "ax7010_servo_reva:TPS62901") (at 100.33 130.81 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "00000000-0000-0000-0000-00006a00000f")(property "Reference" "U13" (at 104.14 128.27 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS62901RPJR" (at 104.14 130.81 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Texas Instruments" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "TPS62901RPJR" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62901.pdf" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "5.1V nominal; external FB; forced PWM 2.5MHz; MODE=VIN" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "c27905c6-a70c-4fb2-b9e1-880d522b0396"))(pin "2" (uuid "febc9639-cf21-4c90-b4fb-c800d76a994b"))(pin "3" (uuid "fe479069-2f07-4652-8ea0-651166cc38d5"))(pin "4" (uuid "c3a8b6ef-7fa5-4f13-a594-cfddd777ff72"))(pin "5" (uuid "9fc9af63-7300-4d65-b300-69e86da616f7"))(pin "6" (uuid "46d38654-fa09-444a-92a3-c7182c9b564a"))(pin "7" (uuid "0a861e85-5569-42e7-93d1-371b186d6075"))(pin "8" (uuid "75a9b295-d5d3-44ab-bcb5-2248a15f1f9a"))(pin "9" (uuid "06b2dffb-d596-4705-b7ce-552a70d975e4"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "U13") (unit 1)))))
+(symbol (lib_id "ax7010_servo_reva:TPS62901") (at 100.33 130.81 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "00000000-0000-0000-0000-00006a00000f")(property "Reference" "U13" (at 104.14 128.27 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "TPS62901RPJR" (at 104.14 130.81 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "TI(德州仪器)" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "TPS62901RPJR" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62901.pdf" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "5.1V nominal; external FB; forced PWM 2.5MHz; MODE=VIN" (at 100.33 130.81 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "c27905c6-a70c-4fb2-b9e1-880d522b0396"))(pin "2" (uuid "febc9639-cf21-4c90-b4fb-c800d76a994b"))(pin "3" (uuid "fe479069-2f07-4652-8ea0-651166cc38d5"))(pin "4" (uuid "c3a8b6ef-7fa5-4f13-a594-cfddd777ff72"))(pin "5" (uuid "9fc9af63-7300-4d65-b300-69e86da616f7"))(pin "6" (uuid "46d38654-fa09-444a-92a3-c7182c9b564a"))(pin "7" (uuid "0a861e85-5569-42e7-93d1-371b186d6075"))(pin "8" (uuid "75a9b295-d5d3-44ab-bcb5-2248a15f1f9a"))(pin "9" (uuid "06b2dffb-d596-4705-b7ce-552a70d975e4"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "U13") (unit 1))))
+	(property "LCSC" "C2864847" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 64.77 134.62 0.0)
@@ -2468,7 +2758,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf"
 			(at 64.77 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2502,7 +2792,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "Chinocera(华瓷)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "HGC0805R7106K250NSLJ" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C33546010" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "FCC0805B106K250FT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C54619707" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:L")
 		(at 148.59 128.27 0.0)
@@ -2534,7 +2838,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Wuerth_MAPI-4020"
+		(property "Footprint" "fpga-servo:Sunlord_SWPA4020S"
 			(at 148.59 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -2545,7 +2849,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20210916/AC798BA7E846B7D0B6818F45CD84DB0B.pdf"
 			(at 148.59 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2579,8 +2883,48 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Wurth Elektronik" (at 148.59 128.27 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "74438356022" (at 148.59 128.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "Sunlord" (at 148.59 128.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "SWPA4020S2R2MT" (at 148.59 128.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "LCSC" "C83423"
+	(id 0)
+	(at 148.59 128.27 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+(property "Alternative_MPN" "FHD4020S-2R2MT"
+	(id 1)
+	(at 148.59 128.27 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+(property "Alternative_LCSC" "C602029"
+	(id 2)
+	(at 148.59 128.27 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+(property "Alternative_Status" "cjiang; same OEM land;2.2uH20%;DCRmax56mOhm Isat6A Irms4A; thermal qualification OPEN"
+	(id 3)
+	(at 148.59 128.27 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 )
 (symbol
 		(lib_id "ax7010_servo_reva:C")
@@ -2624,7 +2968,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20240628/CF49925013D2B6594E99B01DE9E3F720.pdf"
 			(at 165.1 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2658,7 +3002,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "HRE(芯声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "CGA0805X7R226M100MT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C23692981" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "GRM21BZ71A226ME15L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C907991" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 248.92 130.81 0.0)
@@ -3182,8 +3540,20 @@
 (wire (pts (xy 71.12 137.16) (xy 71.12 129.54)) (stroke (width 0) (type default)) (uuid "93282920-4e0a-45ea-b72a-3a74ca9069f4"))
 (wire (pts (xy 119.38 137.16) (xy 124.46 137.16)) (stroke (width 0) (type default)) (uuid "61a9e298-d940-45eb-96d4-d3f9bd86e399"))
 (label "FB_5V" (at 124.46 137.16 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "573c2836-209c-46ca-adf3-602fde0e698c"))
-(symbol (lib_id "ax7010_servo_reva:R_PRECISION") (at 226.06 139.7 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6f4e0c99-e5e4-4131-bece-e2265b295b65")(property "Reference" "R94" (at 229.87 137.16 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "75k" (at 229.87 139.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Tolerance" "0.05%" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "TCR" "10ppm/C" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "RG1608N-753-W-T5" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Susumu" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "85fab0a8-7a3a-4d05-a922-1a220b747694"))(pin "2" (uuid "63b2c57c-a46b-4f6d-a483-246cd39800df"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "R94") (unit 1)))))
-(symbol (lib_id "ax7010_servo_reva:R_PRECISION") (at 226.06 152.4 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "75f371ba-7fb5-4f92-b018-7045c4f85027")(property "Reference" "R95" (at 229.87 149.86 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "10k" (at 229.87 152.4 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Tolerance" "0.05%" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "TCR" "10ppm/C" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "RG1608N-103-W-T5" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "Susumu" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "eb33c9bb-b746-402e-a9af-9e8357233ff3"))(pin "2" (uuid "30af630a-9fba-49c9-9fad-caf95075ddba"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "R95") (unit 1)))))
+(symbol (lib_id "ax7010_servo_reva:R_PRECISION") (at 226.06 139.7 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "6f4e0c99-e5e4-4131-bece-e2265b295b65")(property "Reference" "R94" (at 229.87 137.16 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "75k" (at 229.87 139.7 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Tolerance" "0.05%" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "TCR" "10ppm/C" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "PTFR0603Q75K0N9" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "RESI(开步睿思)" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement" (at 226.06 139.7 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "85fab0a8-7a3a-4d05-a922-1a220b747694"))(pin "2" (uuid "63b2c57c-a46b-4f6d-a483-246cd39800df"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "R94") (unit 1))))
+	(property "LCSC" "C53280140" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol (lib_id "ax7010_servo_reva:R_PRECISION") (at 226.06 152.4 270) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "75f371ba-7fb5-4f92-b018-7045c4f85027")(property "Reference" "R95" (at 229.87 149.86 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Value" "10k" (at 229.87 152.4 0) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Footprint" "Resistor_SMD:R_0603_1608Metric" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Tolerance" "0.05%" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "TCR" "10ppm/C" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "MPN" "PTFR0603Q10K0N9" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Manufacturer" "RESI(开步睿思)" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(property "Description" "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement" (at 226.06 152.4 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "eb33c9bb-b746-402e-a9af-9e8357233ff3"))(pin "2" (uuid "30af630a-9fba-49c9-9fad-caf95075ddba"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "R95") (unit 1))))
+	(property "LCSC" "C51822132" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (wire (pts (xy 226.06 133.35) (xy 226.06 135.89)) (stroke (width 0) (type default)) (uuid "7aee9094-6cc0-46cf-b7cf-acc216c84df4"))
 (label "VA_5V" (at 226.06 133.35 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "42a40685-a980-4a3b-8fd5-3aa3ffa73ec2"))
 (symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 226.06 133.35 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "68bbb180-629c-4b05-b49c-c20f14849a75")(property "Reference" "#PWR29101" (at 229.87 130.81 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Value" "/VA_5V" (at 229.87 133.35 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Footprint" "" (at 226.06 133.35 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "ff7a4659-b1fc-4a60-92ea-16328347f16c"))(instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002" (reference "#PWR29101") (unit 1)))))

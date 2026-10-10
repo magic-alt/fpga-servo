@@ -44,7 +44,8 @@ def check(path):
         name = re.search(r'\(lib_id "([^"]+)"', f.text)[1]
         angle = float(re.search(r'\(at [-\d.]+ [-\d.]+ ([-\d.]+)\)', f.text)[1])
         c, s = math.cos(math.radians(angle)), math.sin(math.radians(angle))
-        for pin in extract_forms(definitions[name], "pin"):
+        embedded_name = head_string(extract_forms(f.text, "lib_name")[0].text, "lib_name") if extract_forms(f.text, "lib_name") else name
+        for pin in extract_forms(definitions[embedded_name], "pin"):
             xy = parse_at(pin.text)
             if xy is None:
                 continue

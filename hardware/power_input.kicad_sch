@@ -1434,7 +1434,7 @@
 		)
 		(uuid "775b2f57-e667-42bd-9687-b8270645d792")
 	)
-	(text "F1: EXTERNAL KLKD025.T + LPSM0001Z, source + to J3.1. No PCB fuse. Verify fault-current, inrush and thermal coordination. D1 stays DNP pending surge qualification."
+	(text "F1: ONBOARD 0456025.ER 25A SMD. Verify fault current, inrush and thermal coordination. D1 stays DNP pending surge qualification."
 		(exclude_from_sim no)
 		(at 15.24 150.876 0)
 		(effects
@@ -1460,7 +1460,7 @@
 		)
 		(uuid "93655499-e890-4053-97c5-b74ab0b4324a")
 	)
-	(text "SOURCE + -> EXTERNAL F1 -> J3.1 -> LM74502 RPP -> DC-LINK"
+	(text "SOURCE + -> J3.1 -> ONBOARD F1 -> LM74502 RPP -> DC-LINK"
 		(exclude_from_sim no)
 		(at 16.51 16.51 0)
 		(effects
@@ -2413,7 +2413,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.phoenixcontact.com/us/products/1714971/pdf"
+		(property "Datasheet" "https://www.phoenixcontact.com/en-us/products/1714971"
 			(at 31.75 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2423,7 +2423,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "MKDS_5_2_9.5_32A_external_protection_required"
+		(property "Description" "DC input; J3.1 VIN_RAW then onboard F1 then VIN_FUSED to Q7"
 			(at 31.75 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2450,7 +2450,11 @@
 
 (property "MPN" "1714971" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "Phoenix Contact" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "Phoenix Contact(菲尼克斯)" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C92145" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 	(symbol
 		(lib_id "ax7010_servo_reva:FUSE")
@@ -2459,8 +2463,8 @@
 		(body_style 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board no)
-		(in_pos_files no)
+		(on_board yes)
+		(in_pos_files yes)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000066000002")
 		(property "Reference" "F1"
@@ -2473,7 +2477,7 @@
 				)
 			)
 		)
-		(property "Value" "25A_EXT_KLKD025"
+		(property "Value" "25A_0456025.ER"
 			(at 55.88 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2483,7 +2487,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "fpga-servo:Littelfuse_456_25A_SMD"
 			(at 53.34 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -2494,7 +2498,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.littelfuse.com/assetdocs/klkd-datasheet?assetguid=7b52eebb-c7cc-43df-a8da-9682a338e0f6"
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse_fuse_456_datasheet.pdf?assetguid=d86b18f9-14fa-4764-87ff-8aec12e9a89d"
 			(at 53.34 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2504,7 +2508,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "EXTERNAL source-positive fuse before J3.1; 25A 600VDC 10x38mm; holder LPSM0001Z; never fit on servo PCB"
+		(property "Description" "ONBOARD SMD25A very-fast;500A@72VDC;bus<=72V and prospectivefault<=500A qualificationOPEN"
 			(at 53.34 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2514,9 +2518,29 @@
 				)
 			)
 		 (hide yes))
-		(property "MPN" "KLKD025.T" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "MPN" "0456025.ER" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
 		(property "Manufacturer" "Littelfuse" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
-		(property "Holder_MPN" "LPSM0001Z" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Holder_MPN" "Not applicable - SMD soldered on PCB" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "LCSC" "C315877"
+	(id 0)
+	(at 53.34 39.37 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Sourcing_Status" "China stock2574 checked2026-10-10;critical protection single-source exception;coordinationOPEN"
+	(id 1)
+	(at 53.34 39.37 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 		(pin "1"
 			(uuid "b8fe9941-9de9-43f0-ab6e-96b63a9ff5ae")
 		)
@@ -2617,8 +2641,12 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Infineon" (at 91.44 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "BSC040N10NS5ATMA1" (at 91.44 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "Infineon(英飞凌)" (at 91.44 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "BSC040N10NS5" (at 91.44 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C534334" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 	(symbol
 		(lib_id "ax7010_servo_reva:LM74502")
@@ -2662,7 +2690,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm74502.pdf"
 			(at 88.9 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2714,8 +2742,12 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Texas Instruments" (at 88.9 81.28 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "TI(德州仪器)" (at 88.9 81.28 0) (hide yes) (effects (font (size 1.016 1.016))))
 (property "MPN" "LM74502DDFR" (at 88.9 81.28 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C3236215" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
@@ -2759,7 +2791,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 115.57 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2793,7 +2825,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0805B224K500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C163697" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL21B224KBFNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C5378" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:TVS")
 		(at 146.05 72.39 0)
@@ -2913,7 +2959,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf"
 			(at 167.64 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2947,7 +2993,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "NCC(日本贵弥功)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "EKZN101ELL101MJ20S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C337258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "100ZLH100MEFC10X20" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C330940" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 184.15 72.39 0)
@@ -2990,7 +3050,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf"
 			(at 184.15 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3024,7 +3084,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "NCC(日本贵弥功)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "EKZN101ELL101MJ20S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C337258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "100ZLH100MEFC10X20" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C330940" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 200.66 72.39 0)
@@ -3056,7 +3130,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" "Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3"
 			(at 200.66 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -3087,6 +3161,36 @@
 				)
 			)
 		 (hide yes))
+		(property "MPN" "C212E105J6BC000"
+	(id 0)
+	(at 200.66 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "Faratronic"
+	(id 1)
+	(at 200.66 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C604836"
+	(id 2)
+	(at 200.66 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 		(pin "1"
 			(uuid "6a4cd843-38be-463c-88c1-34ffeb0706ad")
 		)
@@ -3133,7 +3237,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
 			(at 217.17 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -3164,6 +3268,66 @@
 				)
 			)
 		 (hide yes))
+		(property "MPN" "C4532C0G2A104JT000N"
+	(id 0)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "TDK"
+	(id 1)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C342611"
+	(id 2)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_MPN" "FM43N104J101EGG"
+	(id 3)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_LCSC" "C42391415"
+	(id 4)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_Status" "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE"
+	(id 5)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 		(pin "1"
 			(uuid "f4781922-7b3a-4363-a1b4-5bda71a972e0")
 		)
@@ -3221,7 +3385,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf"
 			(at 154.94 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3255,7 +3419,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "RESI(开步睿思)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "PTFR0805B280KP9" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C2849140" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0805BRD07280KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C865351" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 177.8 115.57 0)
@@ -3298,7 +3476,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf"
 			(at 177.8 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3332,7 +3510,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "RESI(开步睿思)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "PTFR0805B280KP9" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C2849140" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0805BRD07280KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C865351" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:R")
 		(at 200.66 115.57 0)
@@ -3375,7 +3567,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250704/E55D4B940A787305EBFEE524BD083243.pdf"
 			(at 200.66 115.57 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3409,7 +3601,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "UNI-ROYAL(厚声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "TC0325B3902T5F" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C2988897" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0603BRD0739KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C309652" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 218.44 128.27 0)
@@ -3452,7 +3658,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 218.44 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3486,7 +3692,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B103K101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C43253" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B103KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C1589" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:TP")
 		(at 243.84 39.37 0)
@@ -3720,8 +3940,12 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Infineon" (at 123.19 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "BSC040N10NS5ATMA1" (at 123.19 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "Infineon(英飞凌)" (at 123.19 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "BSC040N10NS5" (at 123.19 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C534334" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
@@ -3765,7 +3989,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 132.08 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3799,7 +4023,48 @@
 				)
 			)
 		)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0805B104K101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C89258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "0805B104K101CT"
+	(id 0)
+	(at 132.08 97.79 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
 	)
+)
+
+	(property "Alternative_LCSC" "C77456"
+	(id 1)
+	(at 132.08 97.79 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE; OEM same nominal/tolerance/voltage/X7R/package reviewed; application and first-article checks OPEN"
+	(id 2)
+	(at 132.08 97.79 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+)
 	(symbol
 		(lib_id "ax7010_servo_reva:PWR_FLAG")
 		(at 64.77 39.37 0)
@@ -4023,17 +4288,6 @@
 		)
 	)
 
-	(label "VIN_FUSED"
-		(at 41.91 33.02 0)
-		(effects
-			(font
-				(size 1.016 1.016)
-			)
-			(justify left bottom)
-		)
-		(uuid "27660c8f-84aa-426e-b82a-5e395738ce9b")
-	)
-
 	(symbol
 		(lib_id "ax7010_servo_reva:TERM2")
 		(at 31.75 76.2 0)
@@ -4086,7 +4340,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "External PSU output terminal; system wiring only; F1 must be near source positive"
+		(property "Description" "External PSU output reference only; no external fuse holder; onboard F1 protects downstream board"
 			(at 31.75 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4122,6 +4376,12 @@
 	(wire (pts (xy 43.18 39.37) (xy 45.72 39.37)) (stroke (width 0) (type default)) (uuid "61355155-f0be-4984-96d8-3964d329fdae"))
 	(wire (pts (xy 45.72 76.2) (xy 50.8 76.2)) (stroke (width 0) (type default)) (uuid "53b4f31b-e3e5-4b48-ac4f-a0ad5b08b3a5"))
 	(junction (at 43.18 39.37) (diameter 0) (color 0 0 0 0) (uuid "df802ae8-c774-4e60-bd02-b59a79f84654"))
+	(junction
+	(at 43.18 33.02)
+	(diameter 0)
+	(color 0 0 0 0)
+	(uuid "a3fb0b1f-4da8-4b73-bd06-61d2a99ebe08")
+)
 	(label "GND" (at 50.8 76.2 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5ac53e08-19eb-4a2d-b0f2-73718db5b90e"))
 
 (wire (pts (xy 166.37 115.57) (xy 166.37 110.49)) (stroke (width 0) (type default)) (uuid "7f70cad5-a49f-4611-b1d4-10472a7ada76"))
@@ -4136,6 +4396,16 @@
 (wire (pts (xy 200.66 83.82) (xy 200.66 86.36)) (stroke (width 0) (type default)) (uuid "057d7f84-8055-498f-95ad-07d27313953c"))
 (label "GND" (at 200.66 86.36 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "16632736-270b-4976-a312-787b18c4a0d3"))
 (wire (pts (xy 142.24 36.83) (xy 142.24 39.37)) (stroke (width 0) (type default)) (uuid "45e76ac6-889e-4693-9382-5150a2556c06"))
+(wire
+	(pts
+		(xy 41.91 33.02) (xy 43.18 33.02)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "7547c2e9-e7cc-4c88-be99-77035830a631")
+)
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 200.66 86.36 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "5d555edc-cf16-4790-a769-7edd2817d234")
 (property "Reference" "#PWR28001" (at 200.66 86.36 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/GND" (at 200.66 86.36 0) (effects (font (size 1 1)) (hide yes)))

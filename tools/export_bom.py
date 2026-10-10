@@ -28,6 +28,11 @@ for path in sorted((root / "hardware").glob("*.kicad_sch")):
             "Manufacturer": property_value(symbol.text, "Manufacturer") or "TBD",
             "MPN": mpn,
             "Package": property_value(symbol.text, "Footprint"),
+            "LCSC": property_value(symbol.text, "LCSC") or "UNVERIFIED",
+            "Alternative MPN": property_value(symbol.text, "Alternative_MPN") or "UNQUALIFIED",
+            "Alternative LCSC": property_value(symbol.text, "Alternative_LCSC") or "UNVERIFIED",
+            "Alternative status": property_value(symbol.text, "Alternative_Status") or "OPEN",
+            "Sourcing status": property_value(symbol.text, "Sourcing_Status") or "OPEN",
             "Function": property_value(symbol.text, "Description") or "See schematic",
             "Status / note": note,
         })

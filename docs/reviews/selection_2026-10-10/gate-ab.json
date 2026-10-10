@@ -1,0 +1,173 @@
+{
+  "schema_version": 2,
+  "erc": {
+    "status": "NOT_RUN",
+    "reason": "Netlist checks do not execute ERC; use run_gate_ab.py"
+  },
+  "scope": "Electrical source checks + nominal/illustrative passive models only",
+  "source_netlist_sha256": "11067d0f8419620263f78164649422944136feca05f04107bd7cf7e0d479e950",
+  "observed_system_components": 159,
+  "graph_checks": "PASS: pin-mapped current, ADC, bootstrap, OCP comparator/supervisor",
+  "target": {
+    "vbus_min_V": 24,
+    "vbus_max_V": 48,
+    "phase_continuous_rms_provisional_A": 10.0,
+    "pwm_Hz": 20000
+  },
+  "numerics": {
+    "current_gain_V_per_A": 0.1,
+    "shunt_loss_each_W_at_10A_RMS": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "bus_divider_48V_output_V": 3.1252086811352253,
+    "bus_monitor_tau_s": 0.0003646076794657763,
+    "current_rc_tau_s": 4.7000000000000004e-08,
+    "current_rc_fc_Hz": 3386275.384933943,
+    "six_mosfet_gate_charge_ideal_energy_rate_W_not_device_power": 0.10368,
+    "illustrative_qg_div_peak_source_s_NOT_a_bound": 9.6e-08,
+    "illustrative_qg_div_peak_sink_s_NOT_a_bound": 4.8e-08,
+    "regeneration": {
+      "bulk_nominal_F": 0.00019999999999999998,
+      "energy_48_to_55_J": 0.0721,
+      "ideal_no_sink_1A_time_48_to_55_s": 0.0013999999999999998,
+      "illustrative_1A_no_sink_after_1ms_V": 53.0,
+      "warning": "55V is NOT an approved voltage; ignores source/load and parasitics"
+    },
+    "adc_supply_vs_supervisor": {
+      "ADS8588S_AVDD_min_V": 4.75,
+      "G33_worst_recovery_threshold_V": 3.193951249999999,
+      "resistor_fractional_bounds": {
+        "R92": 0.00702,
+        "R93_R94_R95": 0.0025
+      },
+      "drift_scope": "Prototype budget based on separate qualification tests/allocations; combined aging/environment and dynamic shutdown remain unqualified.",
+      "falling_threshold_V": [
+        4.791889042759301,
+        4.961002299743158
+      ],
+      "rising_threshold_max_V": 5.001930568716039,
+      "regulated_static_V": [
+        5.026621229738155,
+        5.17392252349624
+      ],
+      "normal_negative_ripple_budget_V": 0.01,
+      "adc_min_V": 4.75,
+      "adc_max_V": 5.25,
+      "static_shutdown_headroom_V": 0.041889042759301276,
+      "transient_gate_off_qualified": false,
+      "delay_note": "18us TPS3890 typical at 5% overdrive is NOT a guaranteed maximum; rapid droop and full-chain delay remain open.",
+      "conclusion": "Static threshold gap repaired; rapid droop/full-chain shutdown timing remains unqualified"
+    },
+    "bus_ocp_static_budget": {
+      "nominal_trip_A": 25,
+      "positive_static_engineering_corner_A": [
+        23.935463727179908,
+        26.107636026615605
+      ],
+      "guaranteed_trip_interval": false,
+      "component_temperature_scope_C": [
+        25,
+        125
+      ],
+      "temperature_scope_note": "Calculation envelope only; board target and each component's lower temperature limit still apply. Cold shunt TCR not qualified.",
+      "bus_common_mode_scope_V": [
+        24,
+        48
+      ],
+      "fractions": {
+        "R50_R53_initial_plus_TCR": 0.003625,
+        "RSH4_initial_plus_TCR": 0.015,
+        "INA_gain_initial_plus_drift": 0.0022500000000000003
+      },
+      "INA_input_offset_total_V": 8.77392252349624e-05,
+      "LM393_input_offset_total_V": 0.004154999131065228,
+      "oem_sources": [
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/ina240.pdf",
+          "document": "SBOS662C",
+          "section": "7.5, page5: gain/offset/drift, CMRR, PSRR and reference rejection"
+        },
+        {
+          "url": "https://www.ti.com/lit/ds/symlink/lm393lv.pdf",
+          "document": "SNOSDA4D",
+          "section": "5.9, page10: LM393LV offset, CMRR, PSRR and table conditions"
+        },
+        {
+          "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+          "document": "RESI PTFR C16003 V8",
+          "section": "printedpage2 orderingcode P=25ppm/C; printedpage3 TCR reference20C"
+        },
+        {
+          "url": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf",
+          "document": "FH TD thin-film specification",
+          "section": "orderingcode G=25ppm/C"
+        },
+        {
+          "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260807/2744A3B9486B05923CE3C700940B3DAC.pdf",
+          "document": "HoS20260514-73 A0, HoYLR2512-3W-2mR-1%",
+          "section": "page3 TCR50ppm/C; page5 test temperature25..125C and separate reliability allowances"
+        }
+      ],
+      "selected_parts": {
+        "R50": "PTFR0603B8K20P9",
+        "R53": "TD03G2001BT",
+        "RSH4": "HoYLR2512-3W-2mR-1%"
+      },
+      "limits": [
+        "Not a guaranteed interval: LM393 offset/CMRR/PSRR table conditions are at/up to 5V; applying at actual 5.026..5.174V needs validation.",
+        "INA reference rejection and bias-current mismatch lack guaranteed maxima; grounded-reference application needs validation.",
+        "No assembly/reflow, long-term/load-life/humidity drift, thermoelectric or Kelvin copper error allocation.",
+        "No PWM common-mode transient, ripple, propagation delay, fault slope or MOSFET turn-off model."
+      ]
+    },
+    "ocp": {
+      "reference_nominal_V": 1.0,
+      "positive_trip_nominal_A": 25.0,
+      "positive_passive_corner_A": [
+        24.357135123789135,
+        25.65976648323043
+      ],
+      "reverse_current_protection": false,
+      "rail_range_V": [
+        5.026621229738155,
+        5.17392252349624
+      ],
+      "corner_basis": "Supplied VA5 bounds; R50/R53 +/-0.1%; RSH4 +/-1%; both INA references grounded",
+      "excluded": [
+        "INA240 gain/offset/output swing and PWM common-mode recovery",
+        "LM393LV offset, propagation, overdrive and open-drain pull-up",
+        "Temperature drift/assembly thermal, layout parasitics",
+        "Fault current slope and complete MOSFET turn-off timing"
+      ]
+    }
+  },
+  "gate_a": {
+    "status": "BLOCKED",
+    "passed_checks": [
+      "physical netlist contract",
+      "ADC static threshold/recovery corners"
+    ],
+    "blocking_ids": [
+      "A-ADC-UNDERVOLTAGE",
+      "A-PEAK-THERMAL-SPEC",
+      "A-VENDOR-FOOTPRINT-MPN",
+      "A-POWER-SEQUENCING"
+    ]
+  },
+  "gate_b": {
+    "status": "BLOCKED",
+    "blocking_ids": [
+      "B-IC-TRANSIENT-MODELS",
+      "B-TOTAL-OCP-DELAY",
+      "B-REGENERATION-SINK",
+      "B-SWITCHING-SOA",
+      "B-BENCH-EVIDENCE"
+    ]
+  },
+  "interpretation": "PASS of graph and SPICE checks is not Gate A/B closure, STO, PCB fabrication release or qualification of any active device",
+  "spice": {
+    "status": "NOT_RUN"
+  }
+}

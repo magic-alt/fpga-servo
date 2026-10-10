@@ -1,0 +1,85 @@
+{
+  "code": "C315877",
+  "url": "https://item.szlcsc.com/297512.html",
+  "mpn": "0456025.ER",
+  "manufacturer": "Littelfuse(\u7f8e\u56fd\u529b\u7279)",
+  "package": "SMD,10.1x3.1mm",
+  "stock": 2574,
+  "gd_stock": 2574,
+  "js_stock": 0,
+  "record_stock": 2574,
+  "min_buy": 1,
+  "multiple": 1,
+  "price": 3.26,
+  "price_tiers": "",
+  "timestamp": "2026-10-10T15:07:26.778Z",
+  "params": [
+    {
+      "parameterName": "\u7c7b\u578b",
+      "parameterCode": "param_14912",
+      "parameterDetailValue": "\u8d34\u7247\u5f0f\u4fdd\u9669\u4e1d",
+      "parameterValue": "\u8d34\u7247\u5f0f\u4fdd\u9669\u4e1d"
+    },
+    {
+      "parameterName": "\u989d\u5b9a\u7535\u6d41",
+      "parameterCode": "param_14913_n",
+      "parameterDetailValue": "25A",
+      "parameterValue": "25A"
+    },
+    {
+      "parameterName": "\u989d\u5b9a\u7535\u538b",
+      "parameterCode": "param_14915_n",
+      "parameterDetailValue": "125V",
+      "parameterValue": "125V"
+    },
+    {
+      "parameterName": "\u5de5\u4f5c\u6e29\u5ea6",
+      "parameterCode": "param_14917_s",
+      "parameterDetailValue": "-55\u2103~+125\u2103",
+      "parameterValue": "-55\u2103~+125\u2103"
+    },
+    {
+      "parameterName": "\u7194\u65adI2t",
+      "parameterCode": "param_14918_n",
+      "parameterDetailValue": "45",
+      "parameterValue": "45"
+    },
+    {
+      "parameterName": "\u5206\u65ad\u80fd\u529b",
+      "parameterCode": "param_14916_nt",
+      "parameterDetailValue": "500A",
+      "parameterValue": "500A"
+    },
+    {
+      "parameterName": "\u76f4\u5f84(\u03c6D)",
+      "parameterCode": "param_31795_n",
+      "parameterDetailValue": "-",
+      "parameterValue": "-"
+    },
+    {
+      "parameterName": "\u957f\u5ea6",
+      "parameterCode": "param_31796_n",
+      "parameterDetailValue": "10.08mm",
+      "parameterValue": "10.08mm"
+    },
+    {
+      "parameterName": "\u5bbd\u5ea6",
+      "parameterCode": "param_31797_n",
+      "parameterDetailValue": "3.05mm",
+      "parameterValue": "3.05mm"
+    },
+    {
+      "parameterName": "\u9ad8\u5ea6",
+      "parameterCode": "param_31798_n",
+      "parameterDetailValue": "3.05mm",
+      "parameterValue": "3.05mm"
+    },
+    {
+      "parameterName": "\u811a\u95f4\u8ddd",
+      "parameterCode": "param_31799_n",
+      "parameterDetailValue": "-",
+      "parameterValue": "-"
+    }
+  ],
+  "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20181031/C315877_B00BEAC41B2AEEDED233B3AC6A8C14D4.pdf"
+}

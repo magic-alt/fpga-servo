@@ -1,5 +1,8 @@
 # AX7010 Servo Drive Rev.A - KiCad baseline
 
+**Current delivery scope (user revision, 2026-10-10): BOM and schematic only. PCB/layout repair is deferred. The working PCB retains earlier development edits and is not synchronized to the final bus-OCP schematic; the isolated unfinished routing candidate is not adopted. Do not use this board for fabrication or reuse historical zero-DRC/parity claims for the current schematic.**
+
+
 ## Files
 
 - `ax7010_servo_reva.kicad_sch` - KiCad 10-native top-level schematic
@@ -25,43 +28,23 @@ From left to right in the PCB file:
 
 The auxiliary buck supply is kept along the top edge, away from the current-sense/ADC area.
 
-## Schematic acceptance
+## Current selection implementation (2026-10-10)
 
-The Rev.A1 schematic is now validated through the same path used for release review:
+The eight-page native hierarchy retains three phase-inline INA240A1DR channels and 5 mΩ / 3 W two-terminal SMD shunts. Unused J2 is removed. Bus-only positive OCP uses a fourth INA240A1DR, a 2 mΩ / 3 W shunt and one LM393LV comparator at nominal +25 A. U16 and phase-window divider parts are removed. The hardware ARM latch and supervised clear remain.
 
-- source of truth is the checked-in KiCad 10-native `.kicad_sch` hierarchy; legacy `.sch` and `.lib` files are no longer tracked
-- CI exports the netlist directly from `ax7010_servo_reva.kicad_sch`: **157 board components / 166 nets**; XML system export includes external F1/J6 and has **159 objects / 167 nets**
-- KiCad 10 ERC runs directly on the tracked native hierarchy with `--severity-all --exit-code-violations` and requires **0 errors / 0 warnings**
-- repository checks reject Global Labels, objects outside the A4 drawing-safe region, duplicate hierarchy ports, floating labels and zero-length wires
-- exported-netlist safety checks verify PWM/default-off, gate resistors, current paths and decoupling
-- cross-sheet signals use hierarchical labels/sheet pins; Global Labels are intentionally **0**
-- same-sheet local labels are retained only where they avoid long or crossing wires; they are required to terminate on real wire geometry
+The gate driver is non-inverting DRV8300DPWR with internal bootstrap diodes, 470 nF bootstrap capacitors and initial 33 Ω gate resistors. F1 is onboard Littelfuse 0456025.ER; no external fuse holder is required. J3.1 is VIN_RAW and F1 feeds VIN_FUSED. J6 remains an off-board PSU reference.
 
-There is no CI conversion step anymore: the file opened by KiCad, reviewed in Git, exported to the netlist and checked by ERC is the same tracked native source.
+Important land decisions:
 
-Current footprint decisions made while closing ERC:
+- RSH1..RSH4: local HoYLR2512_Kelvin two-terminal land; independent inner-side sense routing is required on all eight inputs.
+- J4: KEFA KF950-9.5-3P; J1/J5: JILN 3210 family, finished holes 1.02 ±0.03 mm.
+- L1: SOREDE 68 µH prototype selection; full 1 A regulator operation and inductor thermal rating remain unqualified. L2: Sunlord SWPA4020S2R2MT.
+- NTC1/2: Shiheng CMFA103F3950 on a shared reviewed 0603 land. The onboard NTC2 does not establish actual remote motor temperature.
 
-- J3: Phoenix Contact **1714971**, MKDS 5/2-9,5, project-local 9.52 mm footprint
-- J4: Phoenix Contact **1714984**, MKDS 5/3-9,5, project-local 9.52 mm footprint
-- RSH1..RSH3: legacy Ohmite **650FPR005E** is deprecated / NOT FOR BUILD. Proposed replacement RALEC **LR2512-23R005F4** (C154688), 5mOhm/3W, TWO physical terminals. Schematic and PCB Kelvin topology plus high-current layout must be redesigned before fabrication.
-- L2: W鐪塺th Elektronik **74438356022**, WE-MAPI 4020, 2.2 uH
+The [selection record](../docs/lcsc_sourcing_review_2026-10-10.md) and current native verification evidence supersede previous component counts and selection snapshots. BOM and procurement candidates are generated from the current hierarchy and sourcing evidence; stock observations are not reservations.
 
-## Important limitation
+## Acceptance and limits
 
-The **schematic is ERC-clean**. D1..D4 now match K1/A2 footprint polarity; 13 U6 serial-mode pins are visibly grounded using ADS8588S_SERIAL. PCB contains 157 electrical footprints plus four mounting holes; physical parity and native schematic parity pass. Fresh refilled KiCad10.0.3 DRC: **271 violations (220 errors / 51 warnings), 478 unconnected items, 0 schematic parity issues**. Five inherited ignored DRC check types remain. There are 20 legacy tracks, zero vias and five zones. See [latest repair record](../docs/layout_entry_repair_2026-10-09.md); do not fabricate or energize this baseline.
+Run all repository checks, native ERC, fresh physical-pin netlist checks, all-severity PCB DRC with schematic parity, and the eight-branch Kelvin audit. Review every exported schematic page. A zero count does not establish electrical or thermal qualification.
 
-Before fabrication, complete fine digital routing, fanout, copper-pour refill, PCB DRC, creepage/clearance review, thermal/current-density review and final land-pattern verification. In particular, terminal-block/shunt fit, current and thermal qualification, actual AX7010 physical continuity and external F1 coordination remain fabrication gates (user confirms 2022/J10; F1 selected as KLKD025.T + LPSM0001Z); an ERC-valid footprint assignment does not by itself qualify connector current capability.
-
-OCP latch implementation and timing gates: `docs/ocp_latch_review_2026-10-09.md`. Latest PDF has eight pages.
-
-Historical INA241 correction during package review: U2/U3/U4 reserved pin 4 connects to GND per TI SBOSA30D Table 5-1, despite its NC name. Symbol electrical type, schematic wiring and PCB pad nets match; net count changed from 183 to 180. `check_netlist_safety.py` rejects regression to the former floating pins.
-
-The earlier schematic-only update externalized F1/J6 and made J3.1 VIN_FUSED. The subsequent layout-entry repair has now removed PCB F1 and synchronized J3.1 plus ADC/diode pads. System BOM remains159 rows; current board netlist157/166. The prior schematic-only record remains historical.
-
-## Gate A/B electronic qualification status (2026-10-09)
-
-The repository now carries a [netlist-backed electrical verification tool](../tools/gate_ab_verify.py), a [native-KiCad + ngspice CI evidence workflow](../.github/workflows/gate-ab-electrical.yml) and a [documented release decision](../docs/gate_ab_verification_2026-10-09.md). Automated wiring checks and ideal passive simulation are not equivalent to vendor switching/protection models or hardware measurements. Both **Gate A and Gate B remain BLOCKED**; the PCB also remains unfinished.
-
-## Availability-first schematic selection (2026-10-10)
-
-U2/U3/U4: TI INA240A1DR, 20 V/V, LCSC C2060769; U15/U16: TI LM339LVPWR, open drain, LCSC C3658338. Both retain existing SOIC8/TSSOP14 pin maps and PCB lands. INA240 has only 80 V maximum common-mode; high-side switching excursions must be qualified. LM339LV has longer propagation delay than TLV9024; dynamic OCP qualification is OPEN. Shunt migration to 2512 is BLOCKED pending board-level redesign. See docs/lcsc_sourcing_review_2026-10-10.md.
+See [release gates](../docs/release_gates.md). Gate A/B remain blocked pending measured switching, OCP delay/SOA, supply sequencing, current/thermal, connector and regeneration qualification. No fabrication approval is implied. Older implementation reports remain historical evidence; their external fuse, INA241, FD6288 and phase-window OCP descriptions do not describe this revision.

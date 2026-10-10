@@ -24,11 +24,11 @@ ADC_AVDD_MIN_V = 4.75                 # TI ADS8588S operating minimum
 G33_THRESHOLD_V = 3.07               # TPS3808G33 nominal falling threshold
 G33_THRESHOLD_TOL = 0.015
 SUPERVISOR_HYSTERESIS_MAX = 0.025    # Conservative margin from project review
-INA_GAIN_V_PER_V = 20.0              # INA241A2 nominal gain
+INA_GAIN_V_PER_V = 20.0              # INA240A1 nominal gain
 MOSFET_VDS_MAX_V = 100.0             # BSC040N10NS5 absolute maximum
 MOSFET_QG_MAX_C = 72e-9              # At published test conditions, not worst application
-FD6288_SOURCE_PEAK_A = 1.5           # Nominal/advertised peak, NOT guaranteed lower bound
-FD6288_SINK_PEAK_A = 1.8
+DRV8300_SOURCE_PEAK_A = .75           # Nominal/advertised peak, NOT guaranteed lower bound
+DRV8300_SINK_PEAK_A = 1.5
 PWM_HZ = 20_000
 PHASE_RMS_A = 10.0
 
@@ -103,11 +103,15 @@ def require_graph(components: dict[str, str],
             raise TopologyError(f"Disconnected physical topology {terminals}: {names}")
 
     for ref in ("U2", "U3", "U4"):
-        value(ref, "INA241A2ID")
-    value("U1", "FD6288T")
+        value(ref, "INA240A1DR")
+    value("U1", "DRV8300DPWR")  # D non-inverted; DI is unsafe with the all-low inhibit.
     value("U6", "ADS8588SIPM")
-    value("U15", "TLV9024PWR")
-    value("U16", "TLV9024PWR")
+    value("U15", "LM393LVDDFR")
+    value("U5", "INA240A1DR")
+    value("F1", "25A_0456025.ER")
+    for obsolete in ("U16", "R51", "R52", "D2", "D3", "D4", "J2"):
+        if obsolete in components:
+            raise TopologyError(f"Obsolete phase OCP/bootstrap component present: {obsolete}")
     value("U24", "TPS3808G33")
     value("U25", "TPS389001DSER")
     value("U13", "TPS62901RPJR")
@@ -115,43 +119,67 @@ def require_graph(components: dict[str, str],
                           ("R94", 75000.), ("R95", 10000.), ("C94", 100e-9)):
         value(ref, expected)
 
-    for ref, expected in (("R50", 10e3), ("R51", 160e3),
-                          ("R52", 160e3), ("R53", 10e3),
+    for ref, expected in (("R50", 8200.), ("R53", 2000.),
                           ("R1", 280e3), ("R2", 280e3), ("R3", 39e3),
                           ("C5", 10e-9), ("C1", 100e-6), ("C2", 100e-6)):
         value(ref, expected)
 
-    for phase, shunt, amp, filter_r, filter_c, adc_pin, hi_pin, lo_pin in (
-        ("U", "RSH1", "U2", "R40", "C40", 49, 4, 5),
-        ("V", "RSH2", "U3", "R41", "C41", 51, 6, 7),
-        ("W", "RSH3", "U4", "R42", "C42", 53, 8, 9),
+    for phase, shunt, amp, filter_r, filter_c, adc_pin in (
+        ("U", "RSH1", "U2", "R40", "C40", 49),
+        ("V", "RSH2", "U3", "R41", "C41", 51),
+        ("W", "RSH3", "U4", "R42", "C42", 53),
     ):
         value(shunt, 0.005)
         value(filter_r, 47)
         value(filter_c, 1e-9)
-        same((shunt, 1), (shunt, 3), (amp, 8))
-        same((shunt, 2), (shunt, 4), (amp, 1))
+        same((shunt, 1), (amp, 8))
+        same((shunt, 2), (amp, 1))
         rail(shunt, 1, f"SW_{phase}")
         rail(shunt, 2, f"PH_{phase}")
         rail(amp, 2, "GND")           # GND
         rail(amp, 3, "GND")           # REF2
-        rail(amp, 4, "GND")           # reserved NC, vendor requires GND
+        rail(amp, 4, "GND")           # NC: INA240 D permits GND or floating; design grounds it
         rail(amp, 6, "VA_5V")        # VS
         rail(amp, 7, "VA_5V")        # REF1; 0.5 * supply centering
         same((amp, 5), (filter_r, 1))
-        same((filter_r, 2), (filter_c, 1), ("U6", adc_pin),
-             ("U15", hi_pin), ("U16", lo_pin))
+        same((filter_r, 2), (filter_c, 1), ("U6", adc_pin))
+        phase_nets = {net(amp, 5), net(filter_r, 2)}
+        if any(name in phase_nets for (ref, _), name in pins.items() if ref in ("U15", "U16")):
+            raise TopologyError(f"Phase {phase} OCP tap resurrected")
         rail(filter_c, 2, "GND")
 
+    value("RSH4", .002)
+    rail("RSH4", 1, "VBUS_PROT")
+    rail("RSH4", 2, "VBUS_BRIDGE")
+    same(("U5", 8), ("RSH4", 1))
+    same(("U5", 1), ("RSH4", 2))
+    for pin in (2, 3, 4, 7):
+        rail("U5", pin, "GND")
+    rail("U5", 6, "VA_5V")
+    same(("U5", 5), ("U15", 2))  # Positive bus current pulls OCP_N low.
+    # Native Infineon PG-TDSON footprint numbers all drain lands 5;
+    # there are no separate schematic pins 6..8. PCB parity checks every land.
+    for ref in ("Q1", "Q3", "Q5"):
+        rail(ref, 5, "VBUS_BRIDGE")
     rail("R50", 1, "VA_5V")
-    rail("R51", 2, "GND")
-    rail("R52", 1, "VA_5V")
     rail("R53", 2, "GND")
-    same(("R50", 2), ("R51", 1), ("U15", 5), ("U15", 7), ("U15", 9))
-    same(("R52", 2), ("R53", 1), ("U16", 4), ("U16", 6), ("U16", 8))
-    for comp in ("U15", "U16"):
-        for pin in (1, 2, 14):
-            rail(comp, pin, "OCP_N")
+    same(("R50", 2), ("R53", 1), ("U15", 3), ("U15", 6))
+    for pin in (4, 5):
+        rail("U15", pin, "GND")
+    rail("U15", 8, "VA_5V")
+    rail("U15", 1, "OCP_N")
+    if not pins.get(("U15", "7"), "").startswith("unconnected-"):
+        raise TopologyError("Unused U15.7 output must remain NC")
+    for cap, ic, power, ground in (("C84", "U5", 6, 2), ("C85", "U15", 8, 4)):
+        value(cap, 100e-9)
+        same((cap, 1), (ic, power))
+        same((cap, 2), (ic, ground))
+    same(("J3", 1), ("F1", 1))
+    same(("F1", 2), ("Q7", 5), ("U18", 1), ("U18", 5))
+    if net("F1", 1).rsplit("/", 1)[-1] != "VIN_RAW" or net("F1", 2).rsplit("/", 1)[-1] != "VIN_FUSED":
+        raise TopologyError("Onboard F1 must separate VIN_RAW from VIN_FUSED")
+    if "J6" in components:  # System XML retains the off-board source interface.
+        same(("J6", 1), ("J3", 1))
 
     for pin in list(range(16, 23)) + list(range(27, 34)):
         rail("U6", pin, "GND")  # TI serial-mode straps
@@ -159,16 +187,23 @@ def require_graph(components: dict[str, str],
         rail("U6", pin, "VA_5V")
     rail("U6", 6, "VIO_3V3")
 
-    for phase, diode, cap, bst_pin, vs_pin in (
-        ("U", "D2", "CBOOT1", 20, 18),
-        ("V", "D3", "CBOOT2", 17, 15),
-        ("W", "D4", "CBOOT3", 14, 12),
+    rail("U1", 7, "VDRV_12V")
+    rail("U1", 8, "GND")
+    for phase, cap, bst_pin, vs_pin in (
+        ("U", "CBOOT1", 20, 18), ("V", "CBOOT2", 17, 15),
+        ("W", "CBOOT3", 14, 12),
     ):
-        value(cap, 1e-6)
-        rail(diode, 2, "VDRV_12V")  # SMA pad 2 is ANODE
-        same((diode, 1), (cap, 1), ("U1", bst_pin))  # pad1 CATHODE
+        value(cap, 470e-9)
+        same((cap, 1), ("U1", bst_pin))
         rail(cap, 2, f"SW_{phase}")
         rail("U1", vs_pin, f"SW_{phase}")
+    for index, output in enumerate((19, 11, 16, 10, 13, 9), 1):
+        value(f"RG{index}", 33.)
+        same(("U1", output), (f"RG{index}", 1))
+        same((f"RG{index}", 2), (f"Q{index}", 4))
+    for gate, output, driver in (("U8", 7, 1), ("U9", 7, 2), ("U10", 7, 3),
+                                  ("U8", 3, 4), ("U9", 3, 5), ("U10", 3, 6)):
+        same((gate, output), ("U1", driver))
 
     rail("U24", 5, "VIO_3V3")
     same(("U25", 1), ("R92", 2), ("R93", 1))
@@ -181,15 +216,14 @@ def require_graph(components: dict[str, str],
     rail("U24", 6, "VIO_3V3")
     rail("U25", 4, "VIO_3V3")
     same(("U24", 1), ("U25", 6), ("U26", 1))
-    same(("U26", 3), ("U15", 1), ("U16", 1))
+    same(("U26", 3), ("U15", 1))
     same(("U26", 2), ("U11", 3))
     same(("U20", 5), ("U11", 6))
     rail("U11", 1, "GATE_EN")
 
     # All values below originate from the current XML, not historical reports.
     result = {ref: passive(components[ref]) for ref in (
-        "R1", "R2", "R3", "C5", "C1", "C2", "R50", "R51",
-        "R52", "R53", "R40", "C40", "RSH1", "RSH2", "RSH3"
+        "R1", "R2", "R3", "C5", "C1", "C2", "R50", "R53", "R40", "C40", "RSH1", "RSH2", "RSH3", "RSH4"
     )}
     return result
 
@@ -198,43 +232,99 @@ def corner_current_limits(values: dict[str, float],
                           rail_range: tuple[float, float] = (4.75, 5.25),
                           resistor_fraction: float = 0.001,
                           shunt_fraction: float = 0.01,
-                          nominal_rail: float = 5.0) -> dict:
-    """Exploratory passive-only corner sweep; no IC error or temperature model."""
-    high, low = [], []
-    for rail, r50, r51, r52, r53, shunt in itertools.product(
+                          nominal_rail: float = 5.1) -> dict:
+    """Positive bus-only passive corners; caller supplies actual regulated rail bounds."""
+    trips = []
+    for rail, top, bottom, shunt in itertools.product(
         rail_range,
         (values["R50"] * (1-resistor_fraction), values["R50"] * (1+resistor_fraction)),
-        (values["R51"] * (1-resistor_fraction), values["R51"] * (1+resistor_fraction)),
-        (values["R52"] * (1-resistor_fraction), values["R52"] * (1+resistor_fraction)),
         (values["R53"] * (1-resistor_fraction), values["R53"] * (1+resistor_fraction)),
-        (values["RSH1"] * (1-shunt_fraction), values["RSH1"] * (1+shunt_fraction)),
+        (values["RSH4"] * (1-shunt_fraction), values["RSH4"] * (1+shunt_fraction)),
     ):
-        center = 0.5 * rail
-        high.append(((rail * r51 / (r50+r51)) - center) / (INA_GAIN_V_PER_V * shunt))
-        low.append((center - (rail * r53 / (r52+r53))) / (INA_GAIN_V_PER_V * shunt))
-    nominal_high_v = nominal_rail * values["R51"] / (values["R50"] + values["R51"])
-    nominal_low_v = nominal_rail * values["R53"] / (values["R52"] + values["R53"])
-    nominal_trip = (nominal_high_v - nominal_rail/2) / (INA_GAIN_V_PER_V * values["RSH1"])
+        trips.append(rail * bottom / (top + bottom) / (INA_GAIN_V_PER_V * shunt))
+    threshold = nominal_rail * values["R53"] / (values["R50"] + values["R53"])
     return {
-        "reference_high_nominal_V": nominal_high_v,
-        "reference_low_nominal_V": nominal_low_v,
-        "positive_trip_nominal_A": nominal_trip,
-        "positive_passive_corner_A": [min(high), max(high)],
-        "negative_abs_passive_corner_A": [min(low), max(low)],
-        "corner_basis": "VA5 4.75..5.25V; four resistors +/-0.1%; shunt +/-1%; REF1=VA5; REF2=GND",
-        "excluded": [
-            "INA241 gain/offset/output swing and PWM common-mode recovery",
-            "TLV9024 input offset, propagation delay, output pull-up and overdrive",
-            "resistor and shunt temperature drift/assembly thermal",
-            "ADC aperture/settling/noise and PCB parasitics",
-            "fault current slope and MOSFET actual turn-off time",
-        ],
+        "reference_nominal_V": threshold,
+        "positive_trip_nominal_A": threshold / (INA_GAIN_V_PER_V * values["RSH4"]),
+        "positive_passive_corner_A": [min(trips), max(trips)],
+        "reverse_current_protection": False,
+        "rail_range_V": list(rail_range),
+        "corner_basis": "Supplied VA5 bounds; R50/R53 +/-0.1%; RSH4 +/-1%; both INA references grounded",
+        "excluded": ["INA240 gain/offset/output swing and PWM common-mode recovery",
+                     "LM393LV offset, propagation, overdrive and open-drain pull-up",
+                     "Temperature drift/assembly thermal, layout parasitics",
+                     "Fault current slope and complete MOSFET turn-off timing"],
     }
+
+
+
+def bus_static_error_budget(values: dict[str, float], rail_range: tuple[float, float]) -> dict:
+    """Conditional engineering budget for selected BOM, not guaranteed protection.
+
+    INA240 SBOS662C p5; LM393LV SNOSDA4D p10; RESI PTFR C16003 V8
+    ordering code P; FH TD code G; HoYLR HoS20260514-73 pp3/5.
+    Shunt TCR is specified only +25..+125C, hence no cold-range claim.
+    """
+    resistor_fraction = .001 + 25e-6 * 105  # worst difference from +20C reference
+    shunt_fraction = .01 + 50e-6 * 100
+    gain_fraction = .002 + 2.5e-6 * 100
+    rail_deviation = max(abs(rail - 5.) for rail in rail_range)
+    # INA: VOS + temperature + DC common-mode change 12V -> 48V + PSRR.
+    ina_offset = 25e-6 + 250e-9 * 100 + 36 * 10**(-120/20) + 10e-6 * rail_deviation
+    # Comparator full-temperature VOS already includes drift; add CMRR and PSRR.
+    # 1.1V bounds both comparator input voltages around the 1V crossing.
+    comparator_offset = .003 + 1.1 * 10**(-60/20) + rail_deviation * 10**(-70/20)
+    trips = []
+    for rail, top, bottom, shunt, gain, ina_vos, comp_vos in itertools.product(
+        rail_range,
+        (values["R50"]*(1-resistor_fraction), values["R50"]*(1+resistor_fraction)),
+        (values["R53"]*(1-resistor_fraction), values["R53"]*(1+resistor_fraction)),
+        (values["RSH4"]*(1-shunt_fraction), values["RSH4"]*(1+shunt_fraction)),
+        (20*(1-gain_fraction), 20*(1+gain_fraction)),
+        (-ina_offset, ina_offset), (-comparator_offset, comparator_offset),
+    ):
+        trips.append(((rail*bottom/(top+bottom)+comp_vos)/gain-ina_vos)/shunt)
+    return {
+        "nominal_trip_A": 25,
+        "positive_static_engineering_corner_A": [min(trips), max(trips)],
+        "guaranteed_trip_interval": False,
+        "component_temperature_scope_C": [25, 125],
+        "temperature_scope_note": "Calculation envelope only; board target and each component's lower temperature limit still apply. Cold shunt TCR not qualified.",
+        "bus_common_mode_scope_V": [24, 48],
+        "fractions": {"R50_R53_initial_plus_TCR": resistor_fraction,
+                      "RSH4_initial_plus_TCR": shunt_fraction,
+                      "INA_gain_initial_plus_drift": gain_fraction},
+        "INA_input_offset_total_V": ina_offset,
+        "LM393_input_offset_total_V": comparator_offset,
+        "oem_sources": [
+            {"url": "https://www.ti.com/lit/ds/symlink/ina240.pdf", "document": "SBOS662C", "section": "7.5, page5: gain/offset/drift, CMRR, PSRR and reference rejection"},
+            {"url": "https://www.ti.com/lit/ds/symlink/lm393lv.pdf", "document": "SNOSDA4D", "section": "5.9, page10: LM393LV offset, CMRR, PSRR and table conditions"},
+            {"url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf", "document": "RESI PTFR C16003 V8", "section": "printedpage2 orderingcode P=25ppm/C; printedpage3 TCR reference20C"},
+            {"url": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf", "document": "FH TD thin-film specification", "section": "orderingcode G=25ppm/C"},
+            {"url": "https://atta.szlcsc.com/upload/public/pdf/source/20260807/2744A3B9486B05923CE3C700940B3DAC.pdf", "document": "HoS20260514-73 A0, HoYLR2512-3W-2mR-1%", "section": "page3 TCR50ppm/C; page5 test temperature25..125C and separate reliability allowances"}],
+        "selected_parts": {"R50": "PTFR0603B8K20P9", "R53": "TD03G2001BT",
+                           "RSH4": "HoYLR2512-3W-2mR-1%"},
+        "limits": ["Not a guaranteed interval: LM393 offset/CMRR/PSRR table conditions are at/up to 5V; applying at actual 5.026..5.174V needs validation.",
+                   "INA reference rejection and bias-current mismatch lack guaranteed maxima; grounded-reference application needs validation.",
+                   "No assembly/reflow, long-term/load-life/humidity drift, thermoelectric or Kelvin copper error allocation.",
+                   "No PWM common-mode transient, ripple, propagation delay, fault slope or MOSFET turn-off model."]}
+
+
+def require_bus_budget_parts(netlist: Path) -> None:
+    root = ET.parse(netlist).getroot()
+    expected = {"R50": "PTFR0603B8K20P9", "R53": "TD03G2001BT",
+                "RSH4": "HoYLR2512-3W-2mR-1%"}
+    for ref, mpn in expected.items():
+        comp = root.find(f'./components/comp[@ref="{ref}"]')
+        actual = comp.findtext('./fields/field[@name="MPN"]') if comp is not None else None
+        if actual != mpn:
+            raise TopologyError(f"{ref}: static thermal budget requires reviewed MPN {mpn}; got {actual}")
 
 
 def gate_report(netlist: Path) -> dict:
     components, pins = read_netlist(netlist)
     v = require_graph(components, pins)
+    require_bus_budget_parts(netlist)
     cap = v["C1"] + v["C2"]
     shunt_powers = [PHASE_RMS_A**2 * v[ref] for ref in ("RSH1", "RSH2", "RSH3")]
     tau = v["R40"] * v["C40"]
@@ -262,8 +352,8 @@ def gate_report(netlist: Path) -> dict:
             "current_rc_fc_Hz": 1/(2*math.pi*tau),
             "six_mosfet_gate_charge_ideal_energy_rate_W_not_device_power": (
                 6*MOSFET_QG_MAX_C*12*PWM_HZ),
-            "illustrative_qg_div_peak_source_s_NOT_a_bound": MOSFET_QG_MAX_C/FD6288_SOURCE_PEAK_A,
-            "illustrative_qg_div_peak_sink_s_NOT_a_bound": MOSFET_QG_MAX_C/FD6288_SINK_PEAK_A,
+            "illustrative_qg_div_peak_source_s_NOT_a_bound": MOSFET_QG_MAX_C/DRV8300_SOURCE_PEAK_A,
+            "illustrative_qg_div_peak_sink_s_NOT_a_bound": MOSFET_QG_MAX_C/DRV8300_SINK_PEAK_A,
             "regeneration": {
                 "bulk_nominal_F": cap,
                 "energy_48_to_55_J": 0.5*cap*(55**2-48**2),
@@ -277,7 +367,8 @@ def gate_report(netlist: Path) -> dict:
                 **adc_numerics,
                 "conclusion": "Static threshold gap repaired; rapid droop/full-chain shutdown timing remains unqualified",
             },
-            "ocp": corner_current_limits(v, nominal_rail=.6*(1+passive(components['R94'])/passive(components['R95']))),
+            "bus_ocp_static_budget": bus_static_error_budget(v, tuple(adc_numerics["regulated_static_V"])),
+            "ocp": corner_current_limits(v, rail_range=tuple(adc_numerics["regulated_static_V"]), nominal_rail=.6*(1+passive(components['R94'])/passive(components['R95']))),
         },
         "gate_a": {
             "status": "BLOCKED",
@@ -316,12 +407,9 @@ quit
 .endc
 .end
 """, encoding="utf-8")
-    filter_deck = output_dir / "ocp_filter.cir"
+    filter_deck = output_dir / "phase_current_filter.cir"
     filter_deck.write_text(f"""* Ideal voltage step representing a current-amplifier output.
 * No INA, comparator, latch, driver or MOSFET models present.
-Vrail rail 0 5
-R50 rail hi {values['R50']:.12g}
-R51 hi 0 {values['R51']:.12g}
 Vmeas source 0 PWL(0 2.5 1u 2.5 1.001u 4.9 1.4u 4.9)
 R40 source filtered {values['R40']:.12g}
 C40 filtered 0 {values['C40']:.12g} IC=2.5
@@ -330,12 +418,12 @@ C40 filtered 0 {values['C40']:.12g} IC=2.5
 set wr_singlescale
 set wr_vecnames
 run
-wrdata ocp_filter.dat v(filtered)
+wrdata phase_current_filter.dat v(filtered)
 quit
 .endc
 .end
 """, encoding="utf-8")
-    return {"regeneration": regen, "ocp_filter": filter_deck}
+    return {"regeneration": regen, "phase_current_filter": filter_deck}
 
 
 def _rows(path: Path) -> list[tuple[float, float]]:
@@ -387,15 +475,15 @@ def run_spice(values: dict[str, float], output_dir: Path, executable: str) -> di
     expected = 48 + last_t / (values["C1"] + values["C2"])
     if abs(last_v-expected) > 0.025 or not 0.00139 <= last_t <= 0.00141:
         raise AssertionError(f"Regeneration SPICE != analytical capacitor law: {last_v} vs {expected}")
-    trace = _rows(output_dir / "ocp_filter.dat")
+    trace = _rows(output_dir / "phase_current_filter.dat")
     if trace[0][0] > 1e-9 or trace[-1][0] < 1.34e-6:
-        raise RuntimeError("Incomplete OCP waveform time range")
+        raise RuntimeError("Incomplete phase-current-filter waveform time range")
     if abs(trace[0][1] - 2.5) > 0.01:
-        raise RuntimeError("Invalid OCP initial voltage")
-    vth = 5 * values["R51"]/(values["R50"]+values["R51"])
+        raise RuntimeError("Invalid phase-current-filter initial voltage")
+    vth = 3.7  # Mid-step voltage of the phase ADC filter; NOT a bus OCP threshold.
     crosses = [t for t, v in trace if t >= 1e-6 and v >= vth]
     if not crosses:
-        raise AssertionError("Ideal OCP analog voltage never crossed the computed upper threshold")
+        raise AssertionError("Ideal phase ADC filter never reached its mid-step voltage")
     crossing = crosses[0]
     tau = values["R40"] * values["C40"]
     analytical = 1.001e-6 - tau * math.log((4.9-vth)/(4.9-2.5))
@@ -406,9 +494,9 @@ def run_spice(values: dict[str, float], output_dir: Path, executable: str) -> di
         "ngspice_decks": logs,
         "regeneration_final_s": last_t,
         "regeneration_final_V": last_v,
-        "ocp_filter_ideal_threshold_crossing_s": crossing,
-        "ocp_filter_analytical_crossing_s": analytical,
-        "excluded": "INA, TLV9024, digital latch, FD6288, MOSFET, layout parasitics and tolerances",
+        "phase_current_filter_midstep_3p7V_s": crossing,
+        "phase_current_filter_analytical_midstep_s": analytical,
+        "excluded": "INA, LM393LV, digital latch, DRV8300, MOSFET, layout parasitics and tolerances",
     }
 
 
@@ -426,7 +514,7 @@ def main() -> int:
         if a.spice_output:
             components, _ = read_netlist(a.netlist)
             values = {ref: passive(components[ref]) for ref in (
-                "C1", "C2", "R50", "R51", "R40", "C40")}
+                "C1", "C2", "R40", "C40")}
             report["spice"] = run_spice(values, a.spice_output, a.ngspice)
         else:
             report["spice"] = {"status": "NOT_RUN"}

@@ -1,0 +1,92 @@
+{
+  "C19": {
+    "raw_china_snapshot": {
+      "productModel": "0805B104K101CT",
+      "productCode": "C77456",
+      "encapsulationModel": "0805",
+      "productName": "100nF ±10% 100V",
+      "stockNumber": 26027,
+      "theRatio": 50,
+      "minBuyNumber": 1,
+      "minWholeNumber": 3000,
+      "encaptionPrice": 164.4,
+      "manufacturer": "Walsin(华新科)",
+      "url": "https://item.szlcsc.com/78585.html",
+      "stock_total": 26000,
+      "stock_gd": 26000,
+      "stock_js": 0,
+      "parameters": {
+        "容值": "100nF",
+        "精度": "±10%",
+        "额定电压": "100V",
+        "温度系数": "X7R"
+      },
+      "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190509/C384834_C04286DA86A56A9914642D37A195BF18.pdf",
+      "price_display_CNY": 0.0548,
+      "pageGeneratedAt": "2026-10-10T15:34:54.505Z",
+      "checked_at": "2026-10-10T15:34:54.646404+00:00"
+    },
+    "qualification": "READY_FOR_PROTOTYPE: Walsin different manufacturer;100nF10%100V X7R0805 matches nominal,tolerance,rating,dielectric and land. OEM general-purpose approval ASC_GeneralPurpose_001AA_AS Aug2015 pp2-3 ordering/0805 dimensions; Cu/Ni/Sn terminals. Typical0805 2.00x1.25mm, family max2.20x1.45mm; existing0805 land retained. Bus transient/bias and first-article assembly remain application gates.",
+    "oem_source": "https://atta.szlcsc.com/upload/public/pdf/source/20190509/C384834_C04286DA86A56A9914642D37A195BF18.pdf",
+    "order_5boards_plus20percent": 50,
+    "minimum_required": 6
+  },
+  "C25": {
+    "raw_china_snapshot": {
+      "productModel": "CC0603JRX7R9BB332",
+      "productCode": "C519530",
+      "encapsulationModel": "0603",
+      "productName": "3.3nF ±5% 50V",
+      "stockNumber": 34967,
+      "theRatio": 100,
+      "minBuyNumber": 1,
+      "minWholeNumber": 4000,
+      "encaptionPrice": 103.6,
+      "manufacturer": "YAGEO(国巨)",
+      "url": "https://item.szlcsc.com/536201.html",
+      "stock_total": 34900,
+      "stock_gd": 34900,
+      "stock_js": 0,
+      "parameters": {
+        "容值": "3.3nF",
+        "精度": "±5%",
+        "额定电压": "50V",
+        "温度系数": "X7R"
+      },
+      "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250214/096C4C206003071F5D32E5F0D8E7F8DF.pdf",
+      "price_display_CNY": 0.0303,
+      "pageGeneratedAt": "2026-10-10T15:35:03.725Z",
+      "checked_at": "2026-10-10T15:35:03.907209+00:00"
+    },
+    "qualification": "READY_FOR_PROTOTYPE: Yageo different manufacturer; exact OEM specification CC0603JRX7R9BB332 confirms3300pF5%50V X7R0603,1.6±.1x.8±.1x.8±.1mm,-55..125C. Same nominal,tolerance,voltage,dielectric and footprint. Loop tuning and first-article assembly remain application gates.",
+    "oem_source": "https://yageogroup.com/download/specsheet/CC0603JRX7R9BB332",
+    "order_5boards_plus20percent": 100,
+    "minimum_required": 6
+  },
+  "rejected_C19_5percent_zero_stock": {
+    "productModel": "0805B104J101CT",
+    "productCode": "C116837",
+    "encapsulationModel": "0805",
+    "productName": "100nF ±5% 100V",
+    "stockNumber": 0,
+    "theRatio": 50,
+    "minBuyNumber": 1,
+    "minWholeNumber": 3000,
+    "encaptionPrice": 214.2,
+    "manufacturer": "Walsin(华新科)",
+    "url": "https://item.szlcsc.com/118092.html",
+    "stock_total": 0,
+    "stock_gd": 0,
+    "stock_js": 0,
+    "parameters": {
+      "容值": "100nF",
+      "精度": "±5%",
+      "额定电压": "100V",
+      "温度系数": "X7R"
+    },
+    "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20170707/1499421480769.pdf",
+    "price_display_CNY": 0.0714,
+    "pageGeneratedAt": "2026-10-10T15:34:13.024Z",
+    "checked_at": "2026-10-10T15:34:13.190468+00:00"
+  }
+}

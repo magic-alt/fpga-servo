@@ -1,0 +1,141 @@
+{
+  "scope": "Schematic and BOM only; layout repair deferred by user",
+  "checks": [
+    {
+      "name": "export-xml",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "export-native-net",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "erc",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "export-pdf",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_native_schematic",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_kicad_grid",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_schematic_layout",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_schematic_connectivity",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_power_wiring",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_design",
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "as_expected": true
+    },
+    {
+      "name": "check_netlist_safety",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_ocp_behavior",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_adc_validity",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "check_selection_contract",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "test_adc_validity",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true
+    },
+    {
+      "name": "test_gate_ab_verify",
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "as_expected": true,
+      "invocation": "GATE_AB_NETLIST=fresh XML python tools/test_gate_ab_verify.py"
+    },
+    {
+      "name": "gate-ab",
+      "exit_code": 2,
+      "expected_exit_code": 2,
+      "as_expected": true
+    }
+  ],
+  "known_incomplete": "check_design fails because working PCB lacks final U5/RSH4/U15 land/rules. No exclusions or severities changed. Gate A/B remain blocked.",
+  "source_sha256": {
+    "hardware/aux_power.kicad_sch": "e1c10989ff3f2aea5768ff2d32179f7405974824dcfc3ddf5ef1d6cc02ab8350",
+    "hardware/ax7010_interface.kicad_sch": "e72b85ac598d5458c2e1aa9202cdec21a4ae4061175f6490a26d9c148e910fbc",
+    "hardware/ax7010_servo_reva.kicad_sch": "4e88dc5bbf9a23111f9c81184de31a5c6e7912eb468ed71376bac8c75c43847a",
+    "hardware/current_adc.kicad_sch": "1d50e47ab1d4ba7a3379ac3892285118d5d038f02ab4fcc82df5f7d1257913d8",
+    "hardware/encoder.kicad_sch": "3f6d6bed782d1ae342547d57145b4a5877e8cd00205827b29322ad27ecccac97",
+    "hardware/gate_inverter.kicad_sch": "28d4b3d581fb79e2028793641a83072b57fc35e8a4c2c590d46b33ec2ebe9048",
+    "hardware/ocp_latch.kicad_sch": "36db27448f285938c1a4fc594538d3536ce5765b2cce4a100425a7f025b4ca57",
+    "hardware/power_input.kicad_sch": "80feeaded4e043e2cc6d9d54c65c76c571f63c77c40943c209f5d0c4d6d803f1",
+    "hardware/ax7010_servo_reva.kicad_sym": "77ff76eb44d8918ecbc93b296f5b1c1fbcb5251f8247d29e197034b8d08aad8b",
+    "artifacts/selection-20261010/current/ax7010_servo_reva.xml": "11067d0f8419620263f78164649422944136feca05f04107bd7cf7e0d479e950",
+    "artifacts/selection-20261010/current/ax7010_servo_reva.net": "4d661c3073a3545441cb3a3f8df8479e517089453c34051d2abb382f4e0b0e96",
+    "hardware/bom.csv": "4e3ef808f6727afc311fc69c4ff8b6f03373ca17641732cf33ba0176401427ad",
+    "hardware/procurement_candidates.csv": "fc64ae387d3036af68d379c41396d683b1686195582019137b7d3fc08faff7bc"
+  },
+  "counts": {
+    "system_components": 159,
+    "system_nets": 135,
+    "board_netlist_components": 158,
+    "bom_rows": 159,
+    "procurement_groups": 68,
+    "purchased_refs": 148,
+    "erc_errors": 0,
+    "erc_warnings": 0,
+    "erc_exclusions": 0,
+    "preexisting_ignored_categories_unchanged": 4
+  },
+  "test_counts": {
+    "ADC": 6,
+    "GateAB": 27,
+    "digital_latch_scenarios": 531
+  }
+}

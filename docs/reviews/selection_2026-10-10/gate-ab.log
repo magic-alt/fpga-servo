@@ -1,0 +1,3 @@
+Graph: PASS: pin-mapped current, ADC, bootstrap, OCP comparator/supervisor; SPICE: NOT_RUN
+Gate A=BLOCKED, Gate B=BLOCKED
+Evidence: /Users/kaermax/.codex/worktrees/daa2/fpga-servo/docs/reviews/selection_2026-10-10/gate-ab.json

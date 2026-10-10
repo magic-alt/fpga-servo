@@ -1,0 +1,671 @@
+{
+  "removed": [
+    "D2",
+    "D3",
+    "D4",
+    "J2",
+    "R51",
+    "R52",
+    "U16"
+  ],
+  "added": [
+    "RSH4",
+    "U5"
+  ],
+  "values": {
+    "CBOOT2": [
+      "1uF",
+      "470nF"
+    ],
+    "U15": [
+      "LM339LVPWR",
+      "LM393LVDDFR"
+    ],
+    "RG4": [
+      "10R",
+      "33R"
+    ],
+    "RG3": [
+      "10R",
+      "33R"
+    ],
+    "RG5": [
+      "10R",
+      "33R"
+    ],
+    "CBOOT3": [
+      "1uF",
+      "470nF"
+    ],
+    "RG6": [
+      "10R",
+      "33R"
+    ],
+    "CBOOT1": [
+      "1uF",
+      "470nF"
+    ],
+    "U1": [
+      "FD6288T",
+      "DRV8300DPWR"
+    ],
+    "R53": [
+      "10k",
+      "2k"
+    ],
+    "RG1": [
+      "10R",
+      "33R"
+    ],
+    "RG2": [
+      "10R",
+      "33R"
+    ],
+    "R50": [
+      "10k",
+      "8.2k"
+    ],
+    "F1": [
+      "25A_EXT_KLKD025",
+      "25A_0456025.ER"
+    ]
+  },
+  "pins": [
+    {
+      "ref": "D2",
+      "pin": "1",
+      "before": "/Gate Driver / Inverter/BST_U",
+      "after": null
+    },
+    {
+      "ref": "D2",
+      "pin": "2",
+      "before": "/VDRV_12V",
+      "after": null
+    },
+    {
+      "ref": "D3",
+      "pin": "1",
+      "before": "/Gate Driver / Inverter/BST_V",
+      "after": null
+    },
+    {
+      "ref": "D3",
+      "pin": "2",
+      "before": "/VDRV_12V",
+      "after": null
+    },
+    {
+      "ref": "D4",
+      "pin": "1",
+      "before": "/Gate Driver / Inverter/BST_W",
+      "after": null
+    },
+    {
+      "ref": "D4",
+      "pin": "2",
+      "before": "/VDRV_12V",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "1",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "10",
+      "before": "unconnected-(J2-P10-Pad10)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "11",
+      "before": "unconnected-(J2-P11-Pad11)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "12",
+      "before": "unconnected-(J2-P12-Pad12)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "13",
+      "before": "unconnected-(J2-P13-Pad13)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "14",
+      "before": "unconnected-(J2-P14-Pad14)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "15",
+      "before": "unconnected-(J2-P15-Pad15)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "16",
+      "before": "unconnected-(J2-P16-Pad16)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "17",
+      "before": "unconnected-(J2-P17-Pad17)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "18",
+      "before": "unconnected-(J2-P18-Pad18)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "19",
+      "before": "unconnected-(J2-P19-Pad19)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "2",
+      "before": "unconnected-(J2-P2-Pad2)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "20",
+      "before": "unconnected-(J2-P20-Pad20)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "21",
+      "before": "unconnected-(J2-P21-Pad21)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "22",
+      "before": "unconnected-(J2-P22-Pad22)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "23",
+      "before": "unconnected-(J2-P23-Pad23)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "24",
+      "before": "unconnected-(J2-P24-Pad24)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "25",
+      "before": "unconnected-(J2-P25-Pad25)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "26",
+      "before": "unconnected-(J2-P26-Pad26)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "27",
+      "before": "unconnected-(J2-P27-Pad27)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "28",
+      "before": "unconnected-(J2-P28-Pad28)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "29",
+      "before": "unconnected-(J2-P29-Pad29)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "before": "unconnected-(J2-P3-Pad3)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "30",
+      "before": "unconnected-(J2-P30-Pad30)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "31",
+      "before": "unconnected-(J2-P31-Pad31)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "32",
+      "before": "unconnected-(J2-P32-Pad32)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "33",
+      "before": "unconnected-(J2-P33-Pad33)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "34",
+      "before": "unconnected-(J2-P34-Pad34)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "35",
+      "before": "unconnected-(J2-P35-Pad35)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "36",
+      "before": "unconnected-(J2-P36-Pad36)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "37",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "38",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "39",
+      "before": "/VIO_3V3",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "4",
+      "before": "unconnected-(J2-P4-Pad4)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "40",
+      "before": "/VIO_3V3",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "5",
+      "before": "unconnected-(J2-P5-Pad5)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "6",
+      "before": "unconnected-(J2-P6-Pad6)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "7",
+      "before": "unconnected-(J2-P7-Pad7)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "8",
+      "before": "unconnected-(J2-P8-Pad8)",
+      "after": null
+    },
+    {
+      "ref": "J2",
+      "pin": "9",
+      "before": "unconnected-(J2-P9-Pad9)",
+      "after": null
+    },
+    {
+      "ref": "J3",
+      "pin": "1",
+      "before": "/DC Input & Protection/VIN_FUSED",
+      "after": "/DC Input & Protection/VIN_RAW"
+    },
+    {
+      "ref": "Q1",
+      "pin": "5",
+      "before": "/VBUS_PROT",
+      "after": "/VBUS_BRIDGE"
+    },
+    {
+      "ref": "Q3",
+      "pin": "5",
+      "before": "/VBUS_PROT",
+      "after": "/VBUS_BRIDGE"
+    },
+    {
+      "ref": "Q5",
+      "pin": "5",
+      "before": "/VBUS_PROT",
+      "after": "/VBUS_BRIDGE"
+    },
+    {
+      "ref": "R50",
+      "pin": "2",
+      "before": "/Current Sense / OCP / ADC/OCP_HI_REF",
+      "after": "/Current Sense / OCP / ADC/BUS_OCP_REF"
+    },
+    {
+      "ref": "R51",
+      "pin": "1",
+      "before": "/Current Sense / OCP / ADC/OCP_HI_REF",
+      "after": null
+    },
+    {
+      "ref": "R51",
+      "pin": "2",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "R52",
+      "pin": "1",
+      "before": "/VA_5V",
+      "after": null
+    },
+    {
+      "ref": "R52",
+      "pin": "2",
+      "before": "/Current Sense / OCP / ADC/OCP_LO_REF",
+      "after": null
+    },
+    {
+      "ref": "R53",
+      "pin": "1",
+      "before": "/Current Sense / OCP / ADC/OCP_LO_REF",
+      "after": "/Current Sense / OCP / ADC/BUS_OCP_REF"
+    },
+    {
+      "ref": "RSH1",
+      "pin": "3",
+      "before": "/SW_U",
+      "after": null
+    },
+    {
+      "ref": "RSH1",
+      "pin": "4",
+      "before": "/PH_U",
+      "after": null
+    },
+    {
+      "ref": "RSH2",
+      "pin": "3",
+      "before": "/SW_V",
+      "after": null
+    },
+    {
+      "ref": "RSH2",
+      "pin": "4",
+      "before": "/PH_V",
+      "after": null
+    },
+    {
+      "ref": "RSH3",
+      "pin": "3",
+      "before": "/SW_W",
+      "after": null
+    },
+    {
+      "ref": "RSH3",
+      "pin": "4",
+      "before": "/PH_W",
+      "after": null
+    },
+    {
+      "ref": "RSH4",
+      "pin": "1",
+      "before": null,
+      "after": "/VBUS_PROT"
+    },
+    {
+      "ref": "RSH4",
+      "pin": "2",
+      "before": null,
+      "after": "/VBUS_BRIDGE"
+    },
+    {
+      "ref": "U15",
+      "pin": "10",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "U15",
+      "pin": "11",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "U15",
+      "pin": "12",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "U15",
+      "pin": "13",
+      "before": "unconnected-(U15-OUT4-Pad13)",
+      "after": null
+    },
+    {
+      "ref": "U15",
+      "pin": "14",
+      "before": "/OCP_N",
+      "after": null
+    },
+    {
+      "ref": "U15",
+      "pin": "2",
+      "before": "/OCP_N",
+      "after": "/Current Sense / OCP / ADC/BUS_CURRENT"
+    },
+    {
+      "ref": "U15",
+      "pin": "3",
+      "before": "/VA_5V",
+      "after": "/Current Sense / OCP / ADC/BUS_OCP_REF"
+    },
+    {
+      "ref": "U15",
+      "pin": "4",
+      "before": "/Current Sense / OCP / ADC/IU_ADC",
+      "after": "/GND"
+    },
+    {
+      "ref": "U15",
+      "pin": "5",
+      "before": "/Current Sense / OCP / ADC/OCP_HI_REF",
+      "after": "/GND"
+    },
+    {
+      "ref": "U15",
+      "pin": "6",
+      "before": "/Current Sense / OCP / ADC/IV_ADC",
+      "after": "/Current Sense / OCP / ADC/BUS_OCP_REF"
+    },
+    {
+      "ref": "U15",
+      "pin": "7",
+      "before": "/Current Sense / OCP / ADC/OCP_HI_REF",
+      "after": "unconnected-(U15-OUT2-Pad7)"
+    },
+    {
+      "ref": "U15",
+      "pin": "8",
+      "before": "/Current Sense / OCP / ADC/IW_ADC",
+      "after": "/VA_5V"
+    },
+    {
+      "ref": "U15",
+      "pin": "9",
+      "before": "/Current Sense / OCP / ADC/OCP_HI_REF",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "1",
+      "before": "/OCP_N",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "10",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "11",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "12",
+      "before": "/GND",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "13",
+      "before": "unconnected-(U16-OUT4-Pad13)",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "14",
+      "before": "/OCP_N",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "2",
+      "before": "/OCP_N",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "3",
+      "before": "/VA_5V",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "4",
+      "before": "/Current Sense / OCP / ADC/OCP_LO_REF",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "5",
+      "before": "/Current Sense / OCP / ADC/IU_ADC",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "6",
+      "before": "/Current Sense / OCP / ADC/OCP_LO_REF",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "7",
+      "before": "/Current Sense / OCP / ADC/IV_ADC",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "8",
+      "before": "/Current Sense / OCP / ADC/OCP_LO_REF",
+      "after": null
+    },
+    {
+      "ref": "U16",
+      "pin": "9",
+      "before": "/Current Sense / OCP / ADC/IW_ADC",
+      "after": null
+    },
+    {
+      "ref": "U5",
+      "pin": "1",
+      "before": null,
+      "after": "/VBUS_BRIDGE"
+    },
+    {
+      "ref": "U5",
+      "pin": "2",
+      "before": null,
+      "after": "/GND"
+    },
+    {
+      "ref": "U5",
+      "pin": "3",
+      "before": null,
+      "after": "/GND"
+    },
+    {
+      "ref": "U5",
+      "pin": "4",
+      "before": null,
+      "after": "/GND"
+    },
+    {
+      "ref": "U5",
+      "pin": "5",
+      "before": null,
+      "after": "/Current Sense / OCP / ADC/BUS_CURRENT"
+    },
+    {
+      "ref": "U5",
+      "pin": "6",
+      "before": null,
+      "after": "/VA_5V"
+    },
+    {
+      "ref": "U5",
+      "pin": "7",
+      "before": null,
+      "after": "/GND"
+    },
+    {
+      "ref": "U5",
+      "pin": "8",
+      "before": null,
+      "after": "/VBUS_PROT"
+    }
+  ],
+  "unaffected_physical_pins_exact_match": true,
+  "visual_review": "All eight current PDF pages reviewed; visible local power/GND, bus-only comparator, phase ADC paths and fuse input inspected."
+}

@@ -6,11 +6,11 @@ User confirms ALINX AX7010 **2022** hardware and **J10** for the active serial i
 
 Source: [ALINX official hardware schematic folder](https://github.com/alinxalinx/AX7010_2023.1/tree/master/Hardware/01_SCH). Local source PDF/hash and reviewed pages: `artifacts/schematic_opt_2022/`.
 
-J2/J11 remains optional and is not required for the current serial implementation. No pin assignments changed this round.
+Unused servo connector J2 has been removed from the schematic and PCB. J1/J10 physical pin assignments and XDC are unchanged.
 
 ## Connector naming
 
-Recent ALINX AX7010 documentation calls the two 40-pin PL expansion connectors **J10** and **J11**. The servo board intentionally calls them `AX7010_PL_A` and `AX7010_PL_B` so that older AX7010 board revisions with different silk-reference designators are not confused with the electrical pinout.
+Recent ALINX AX7010 documentation calls the two 40-pin PL expansion connectors **J10** and **J11**. The servo board uses `AX7010_PL_A` (J1) for J10. There is no J2/PL_B connector in this revision.
 
 The servo PCB is designed for **cabled 2x20 2.54 mm connections** in Rev.A. This avoids assuming the exact board-to-board connector spacing of every AX7010 revision. A later mezzanine mechanical variant can reuse the same electrical mapping.
 
@@ -59,9 +59,9 @@ The servo PCB is designed for **cabled 2x20 2.54 mm connections** in Rev.A. This
 | 39 | VIO_FPGA_3V3 | - |
 | 40 | VIO_FPGA_3V3 | - |
 
-## PL_B / official J11 mapping
+## Historical PL_B / official J11 allocation (not fitted)
 
-The table below reserves an optional parallel/development allocation. In the current serial-only schematic, J2 signal pins are NoConn; this allocation does not imply those signals are physically routed.
+The table below is historical reference only. J2 and its NoConn markers were deleted; none of this allocation is implemented.
 
 | Header pin | Servo signal | Zynq package pin |
 |---:|---|---|
@@ -96,10 +96,16 @@ The table below reserves an optional parallel/development allocation. In the cur
 - All PL signals are 3.3 V LVCMOS.
 - AX7010 +5 V pins are **not** tied to the servo board 5 V rail by default.
 - `VIO_FPGA_3V3` (schematic name `VIO_3V3`) powers U8..U11 safety logic, U7 receiver and U6 DVDD. There is no local 3.3 V LDO.
-- PWM outputs pass through U8..U10 hardware AND gating before FD6288; U11 generates RUN_OK. R80..R86 pull raw PWM/GATE_EN low while FPGA pins are high impedance.
+- PWM outputs pass through U8..U10 hardware AND gating before non-inverting DRV8300DPWR; U11 generates RUN_OK. R80..R86 pull raw PWM/GATE_EN low while FPGA pins are high impedance.
 - ADC/encoder outputs connect directly to the FPGA; no standalone buffer array is fitted. Power sequencing and partial-power injection must be verified.
 - J1 pin 10 FAULT_CLEAR drives the U20 hardware ARM latch through R87/R88/C92 and U21. Re-arm with GATE_EN low and healthy conditions, CLEAR high/low >=10us, then wait >=10us before enabling; see `ocp_latch_review_2026-10-09.md`. J1 pin 22 and spare/auxiliary pins in the allocation table are NoConn in this revision.
 
 ## VA5 supervision update (2026-10-10)
 
 VA_5V is nominally 5.1V after the ADC-validity repair. J1 pin assignments and XDC are unchanged. U25 independently senses VA5 and clears ARMED on undervoltage; FAULT_CLEAR still requires GATE_EN low and healthy supplies. Recovery cannot restart PWM automatically. Encoder supply via F2 shares VA5: qualify the actual encoder voltage range, cable drop and faults. See [repair evidence and acceptance limits](adc_undervoltage_repair_2026-10-10.md).
+
+## Selection update (2026-10-10)
+
+J1 uses JILN 321040SG0ABK00A01 (C601944); J5 uses JILN 321010SG0ABK00A01 (C429962). Local lands retain the original pin map and key orientation; finished plated holes require 1.02 ±0.03 mm. BOOMELE alternatives are conditional on manufacturer confirmation and <=1 A per pin; they are not 3 A substitutes.
+
+J1.23 OCP_N now reports only positive bus overcurrent, nominal +25 A. Phase INA240 measurements remain available through the ADC. The hardware latch/FAULT_CLEAR protocol is unchanged. No reverse-current trip is implemented. F2 uses JDT ASMD1812-050; 0.5 A hold rating is at 25°C, 0.45 A at 40°C, and local ambient must remain <=85°C. Verify encoder running/startup current against the derated limit.

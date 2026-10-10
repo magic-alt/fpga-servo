@@ -34,22 +34,33 @@ def rail(ref, pin, name):
     if pin_nets.get((ref, pin)) != "/" + name:
         errors.append(f"{ref}.{pin} must connect to {name}")
 
-if len(values) != 162 or len(net_nodes) != 169:
-    errors.append(f"expected 162 board components / 169 nets (external F1/J6 excluded; ADC inhibit repair), got {len(values)} / {len(net_nodes)}")
+# Exact fresh-export counts are recorded in the evidence; physical contracts fail closed.
+if len(values) < 150 or len(net_nodes) < 100:
+    errors.append(f"incomplete native board export: {len(values)} components / {len(net_nodes)} nets")
+if "J2" in values:
+    errors.append("Unused J2 must be removed")
+for i, phase in enumerate("UVW", 1):
+    ref = f"RSH{i}"
+    if {pin for component, pin in pin_nets if component == ref} != {"1", "2"}:
+        errors.append(f"{ref}: exactly two physical SMD terminals required")
+    rail(ref, "1", f"SW_{phase}")
+    rail(ref, "2", f"PH_{phase}")
 # Official D_SMA/D_SMC pad 1 is cathode; never infer polarity from drawing alone.
 rail("D1", "1", "VBUS_PROT")
 rail("D1", "2", "GND")
-for diode, cap, driver_pin in [("D2", "CBOOT1", "20"), ("D3", "CBOOT2", "17"), ("D4", "CBOOT3", "14")]:
-    same((diode, "1"), (cap, "1"), ("U1", driver_pin))
-    rail(diode, "2", "VDRV_12V")
+for obsolete in ("D2", "D3", "D4", "U16", "R51", "R52"):
+    if obsolete in values:
+        errors.append(f"obsolete phase OCP/bootstrap component remains: {obsolete}")
 # TI ADS8588S SBAS642A section8.4.1.13/.14/.17, serial mode.
 rail("U6", "6", "VIO_3V3")
 for pin in [*range(16, 23), *range(27, 34)]:
     rail("U6", str(pin), "GND")
-# External source fuse is represented in the system schematic, not the PCB netlist.
-if any(ref in values for ref in ("F1", "J6")):
-    errors.append("F1/J6 must be external and excluded from the PCB netlist")
-same(("J3", "1"), ("Q7", "5"), ("U18", "1"), ("U18", "5"))
+if "J6" in values:
+    errors.append("J6 alone remains an off-board system interface")
+if values.get("F1") != "25A_0456025.ER":
+    errors.append("onboard F1 must be 25A_0456025.ER")
+same(("J3", "1"), ("F1", "1"))
+same(("F1", "2"), ("Q7", "5"), ("U18", "1"), ("U18", "5"))
 # ALINX J10 manufacturer schematic: ground 1/37/38, 3.3V 39/40, 5V 2 NC.
 for pin in ("1", "37", "38"):
     rail("J1", pin, "GND")
@@ -77,8 +88,8 @@ for cap, ic, power, ground, supply in [
     ("C81", "U9", "8", "4", "VIO_3V3"),
     ("C82", "U10", "8", "4", "VIO_3V3"),
     ("C83", "U11", "5", "2", "VIO_3V3"),
-    ("C84", "U15", "3", "12", "VA_5V"),
-    ("C85", "U16", "3", "12", "VA_5V"),
+    ("C84", "U5", "6", "2", "VA_5V"),
+    ("C85", "U15", "8", "4", "VA_5V"),
 ]:
     same((cap, "1"), (ic, power))
     same((cap, "2"), (ic, ground))
@@ -103,9 +114,6 @@ for amp, resistor, adc_pin in [("U2", "R40", "49"), ("U3", "R41", "51"), ("U4", 
     rail(amp, "4", "GND")
     same((amp, "5"), (resistor, "1"))
     same((resistor, "2"), ("U6", adc_pin))
-for cmp in ("U15", "U16"):
-    if values.get(cmp) != "LM339LVPWR":
-        errors.append(f"{cmp}: LM339LVPWR open-drain OCP comparator required")
 rail("U11", "1", "GATE_EN")
 rail("U11", "3", "PWR_READY")
 rail("U11", "6", "ARMED")
@@ -190,6 +198,12 @@ for esd_pin in ["1", "2", "3", "4", "6", "7"]:
 for phase, amp in [("U", "U2"), ("V", "U3"), ("W", "U4")]:
     rail(amp, "8", f"SW_{phase}")
     rail(amp, "1", f"PH_{phase}")
+# Share the XML auditor's physical-pin contract; this parser supplies the board-only view.
+from gate_ab_verify import require_graph, TopologyError
+try:
+    require_graph(values, pin_nets)
+except TopologyError as exc:
+    errors.append(str(exc))
 if errors:
     print("NETLIST SAFETY CHECK FAILED")
     for error in errors:

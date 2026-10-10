@@ -1,0 +1,85 @@
+{
+  "scope": "Exact staged PR tree; unchanged tracked PCB; schematic/BOM only",
+  "tree": "beaaf8d114134e312cd02f4936e7aeb999815513",
+  "checks": [
+    {
+      "name": "check_native_schematic",
+      "exit": 0,
+      "expected": 0,
+      "output": "NATIVE SCHEMATIC CHECK PASSED\n"
+    },
+    {
+      "name": "check_kicad_grid",
+      "exit": 0,
+      "expected": 0,
+      "output": "KICAD GRID CHECK PASSED\n"
+    },
+    {
+      "name": "check_schematic_layout",
+      "exit": 0,
+      "expected": 0,
+      "output": "SCHEMATIC LAYOUT CHECK PASSED\n"
+    },
+    {
+      "name": "check_schematic_connectivity",
+      "exit": 0,
+      "expected": 0,
+      "output": "SCHEMATIC CONNECTIVITY CHECK PASSED\n"
+    },
+    {
+      "name": "check_power_wiring",
+      "exit": 0,
+      "expected": 0,
+      "output": "POWER WIRING CHECK PASSED: every power graphic and child port reaches a real pin by visible wires\n"
+    },
+    {
+      "name": "check_design",
+      "exit": 1,
+      "expected": 1,
+      "output": "DESIGN CHECK FAILED\n - Unused J2 must not be fitted on PCB\n - PCB baseline missing token: DRV8300DPWR\n - U15: expected manufacturer land-pattern identifier\n - U15: expected physical pads 1..8 exactly once\n - U5: missing footprint\n - RSH1: manufacturer SMD land required\n - RSH3: manufacturer SMD land required\n - RSH2: manufacturer SMD land required\n - All four two-terminal SMD shunts required\n - RSH1: exactly physical terminals 1/2, no internal jumper groups\n - RSH3: exactly physical terminals 1/2, no internal jumper groups\n - RSH2: exactly physical terminals 1/2, no internal jumper groups\n - internal pad rules: expected exactly the reviewed sixteen rules\n"
+    },
+    {
+      "name": "export-xml",
+      "exit": 0,
+      "expected": 0,
+      "output": ""
+    },
+    {
+      "name": "export-net",
+      "exit": 0,
+      "expected": 0,
+      "output": ""
+    },
+    {
+      "name": "erc",
+      "exit": 0,
+      "expected": 0,
+      "output": "Found 0 violations\nSaved ERC Report to /var/folders/sr/1sw5y6cs5_v_r5qtm7_yzw0r0000gn/T/fpga-servo-pr-ljdw4rzf/erc.json\n"
+    },
+    {
+      "name": "check_netlist_safety",
+      "exit": 0,
+      "expected": 0,
+      "output": "NETLIST SAFETY CHECK PASSED: 158 components / 135 nets\n"
+    },
+    {
+      "name": "check_ocp_behavior",
+      "exit": 0,
+      "expected": 0,
+      "output": "NETLIST SAFETY CHECK PASSED: 158 components / 135 nets\nOCP DIGITAL BEHAVIOR CHECK PASSED: 531 scenarios; stable levels only\n"
+    },
+    {
+      "name": "ADC-tests",
+      "exit": 0,
+      "expected": 0,
+      "output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.069s\n\nOK\n"
+    },
+    {
+      "name": "GateAB-tests",
+      "exit": 0,
+      "expected": 0,
+      "output": "...........................\n----------------------------------------------------------------------\nRan 27 tests in 0.216s\n\nOK\n"
+    }
+  ],
+  "layout": "Deferred by user; check_design expected failure; unchanged PCB is not manufacturing ready"
+}

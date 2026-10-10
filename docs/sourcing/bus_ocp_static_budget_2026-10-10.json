@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-10",
+  "status": "CONDITIONAL_STATIC_ENGINEERING_ESTIMATE_ONLY",
+  "native_xml_sha256": "b4d5667510c327d8a851ac91f8f1cd2ac869769b4cf22fc54df22085c23de9d5",
+  "source_component_count_including_external_J6": 159,
+  "source_net_count": 135,
+  "nominal_positive_bus_trip_A": 25,
+  "reverse_current_protection": false,
+  "passive_only": {
+    "reference_nominal_V": 1.0,
+    "positive_trip_nominal_A": 25.0,
+    "positive_passive_corner_A": [
+      24.357135123789135,
+      25.65976648323043
+    ],
+    "reverse_current_protection": false,
+    "rail_range_V": [
+      5.026621229738155,
+      5.17392252349624
+    ],
+    "corner_basis": "Supplied VA5 bounds; R50/R53 +/-0.1%; RSH4 +/-1%; both INA references grounded",
+    "excluded": [
+      "INA240 gain/offset/output swing and PWM common-mode recovery",
+      "LM393LV offset, propagation, overdrive and open-drain pull-up",
+      "Temperature drift/assembly thermal, layout parasitics",
+      "Fault current slope and complete MOSFET turn-off timing"
+    ]
+  },
+  "extended_static_budget": {
+    "nominal_trip_A": 25,
+    "positive_static_engineering_corner_A": [
+      23.935463727179908,
+      26.107636026615605
+    ],
+    "guaranteed_trip_interval": false,
+    "component_temperature_scope_C": [
+      25,
+      125
+    ],
+    "temperature_scope_note": "Calculation envelope only; board target and each component's lower temperature limit still apply. Cold shunt TCR not qualified.",
+    "bus_common_mode_scope_V": [
+      24,
+      48
+    ],
+    "fractions": {
+      "R50_R53_initial_plus_TCR": 0.003625,
+      "RSH4_initial_plus_TCR": 0.015,
+      "INA_gain_initial_plus_drift": 0.0022500000000000003
+    },
+    "INA_input_offset_total_V": 8.77392252349624e-05,
+    "LM393_input_offset_total_V": 0.004154999131065228,
+    "oem_sources": [
+      {
+        "url": "https://www.ti.com/lit/ds/symlink/ina240.pdf",
+        "document": "SBOS662C",
+        "section": "7.5, page5: gain/offset/drift, CMRR, PSRR and reference rejection"
+      },
+      {
+        "url": "https://www.ti.com/lit/ds/symlink/lm393lv.pdf",
+        "document": "SNOSDA4D",
+        "section": "5.9, page10: LM393LV offset, CMRR, PSRR and table conditions"
+      },
+      {
+        "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+        "document": "RESI PTFR C16003 V8",
+        "section": "printedpage2 orderingcode P=25ppm/C; printedpage3 TCR reference20C"
+      },
+      {
+        "url": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf",
+        "document": "FH TD thin-film specification",
+        "section": "orderingcode G=25ppm/C"
+      },
+      {
+        "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260807/2744A3B9486B05923CE3C700940B3DAC.pdf",
+        "document": "HoS20260514-73 A0, HoYLR2512-3W-2mR-1%",
+        "section": "page3 TCR50ppm/C; page5 test temperature25..125C and separate reliability allowances"
+      }
+    ],
+    "selected_parts": {
+      "R50": "PTFR0603B8K20P9",
+      "R53": "TD03G2001BT",
+      "RSH4": "HoYLR2512-3W-2mR-1%"
+    },
+    "limits": [
+      "Not a guaranteed interval: LM393 offset/CMRR/PSRR table conditions are at/up to 5V; applying at actual 5.026..5.174V needs validation.",
+      "INA reference rejection and bias-current mismatch lack guaranteed maxima; grounded-reference application needs validation.",
+      "No assembly/reflow, long-term/load-life/humidity drift, thermoelectric or Kelvin copper error allocation.",
+      "No PWM common-mode transient, ripple, propagation delay, fault slope or MOSFET turn-off model."
+    ]
+  },
+  "adc_supply_and_inhibit": {
+    "ADS8588S_AVDD_min_V": 4.75,
+    "G33_worst_recovery_threshold_V": 3.193951249999999,
+    "resistor_fractional_bounds": {
+      "R92": 0.00702,
+      "R93_R94_R95": 0.0025
+    },
+    "drift_scope": "Prototype budget based on separate qualification tests/allocations; combined aging/environment and dynamic shutdown remain unqualified.",
+    "falling_threshold_V": [
+      4.791889042759301,
+      4.961002299743158
+    ],
+    "rising_threshold_max_V": 5.001930568716039,
+    "regulated_static_V": [
+      5.026621229738155,
+      5.17392252349624
+    ],
+    "normal_negative_ripple_budget_V": 0.01,
+    "adc_min_V": 4.75,
+    "adc_max_V": 5.25,
+    "static_shutdown_headroom_V": 0.041889042759301276,
+    "transient_gate_off_qualified": false,
+    "delay_note": "18us TPS3890 typical at 5% overdrive is NOT a guaranteed maximum; rapid droop and full-chain delay remain open.",
+    "conclusion": "Static threshold gap repaired; rapid droop/full-chain shutdown timing remains unqualified"
+  },
+  "validation": {
+    "gate_ab_tests": 27,
+    "gate_ab_test_failures": 0,
+    "native_netlist_safety": "158 board components / 135 nets PASS",
+    "digital_latch_scenarios": 531,
+    "digital_latch_scope": "stable levels only",
+    "passive_ngspice": "analytical cross-checks PASS; phase ADC settling is not OCP delay"
+  },
+  "gate_a": "BLOCKED",
+  "gate_b": "BLOCKED",
+  "hardware_release": "NOT_QUALIFIED",
+  "note": "Fresh source may change after this snapshot; rerun tools for the adopted PCB and source. No routing/fabrication acceptance is asserted by this evidence."
+}

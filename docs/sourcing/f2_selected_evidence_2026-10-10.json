@@ -1,0 +1,128 @@
+{
+  "reference": "F2",
+  "primary": {
+    "productModel": "ASMD1812-050",
+    "productCode": "C135358",
+    "encapsulationModel": "1812",
+    "productName": "15V 500mA 1812贴片自恢复保险丝",
+    "stockNumber": 2796,
+    "theRatio": 10,
+    "minBuyNumber": 1,
+    "minWholeNumber": 1500,
+    "encaptionPrice": 268.95,
+    "manufacturer": "JDTfuse(集电通)",
+    "url": "https://item.szlcsc.com/146669.html",
+    "stock_total": 2790,
+    "stock_gd": 2790,
+    "stock_js": 0,
+    "parameters": {
+      "耐压(Vmax)": "15V",
+      "最大电流(Imax)": "100A",
+      "保持电流(Ihold)": "500mA",
+      "跳闸电流(Itrip)": "1A",
+      "消耗功率(Pd)": "800mW",
+      "初始态阻值(Rmin)": "150mΩ",
+      "跳断后阻值(R1max)": "1Ω",
+      "动作时间": "150ms",
+      "工作温度": "-40℃~+85℃",
+      "长度": "4.73mm",
+      "宽度": "3.41mm",
+      "高度": "0.9mm",
+      "脚间距": "-"
+    },
+    "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20230515/141EC6E8F2A6D78FC40635A196E31E08.pdf",
+    "price_display_CNY": 0.1793,
+    "pageGeneratedAt": "2026-10-10T15:22:48.047Z",
+    "checked_at": "2026-10-10T15:22:48.156295+00:00"
+  },
+  "alternate": {
+    "productModel": "MF-MSMF050-2",
+    "productCode": "C17313",
+    "encapsulationModel": "1812",
+    "productName": "15V 500mA 1812自恢复",
+    "stockNumber": 131404,
+    "theRatio": 10,
+    "minBuyNumber": 1,
+    "minWholeNumber": 2000,
+    "encaptionPrice": 572.6,
+    "manufacturer": "BOURNS",
+    "url": "https://item.szlcsc.com/17998.html",
+    "stock_total": 131400,
+    "stock_gd": 131400,
+    "stock_js": 0,
+    "parameters": {
+      "耐压(Vmax)": "15V",
+      "最大电流(Imax)": "100A",
+      "保持电流(Ihold)": "500mA",
+      "跳闸电流(Itrip)": "1A",
+      "消耗功率(Pd)": "800mW",
+      "初始态阻值(Rmin)": "150mΩ",
+      "跳断后阻值(R1max)": "1Ω",
+      "动作时间": "150ms",
+      "工作温度": "-40℃~+85℃",
+      "长度": "5.4mm",
+      "宽度": "3.2mm",
+      "高度": "0.85mm",
+      "脚间距": "-"
+    },
+    "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20161125/1480068354310.pdf",
+    "price_display_CNY": 0.2863,
+    "pageGeneratedAt": "2026-10-10T15:22:48.202Z",
+    "checked_at": "2026-10-10T15:22:48.452251+00:00"
+  },
+  "order_primary": 10,
+  "order_alternate": 10,
+  "primary_origin": "Mainland China",
+  "alternate_origin": "United States",
+  "primary_oem": "/private/tmp/passive-oem/146669.pdf",
+  "alternate_oem": "/private/tmp/passive-oem/17998.pdf",
+  "status": "PRIMARY_SOURCE_READY_FOR_PROTOTYPE_WITH_AMBIENT_LIMIT_ALT_LAND_REVIEW",
+  "electrical": "Both15V, hold0.5A at25C/23C, trip1A,100Amaxfault,Rmin.15ohm,R1max1ohm,-40..85C. Holdcurrent derateswithambient;0.5A notguaranteedalltemperatures.",
+  "primary_body_mm": {
+    "length": [
+      4.37,
+      4.73
+    ],
+    "width": [
+      3.07,
+      3.41
+    ],
+    "height": [
+      0.4,
+      1.0
+    ],
+    "terminal_min": [
+      0.3,
+      0.25
+    ]
+  },
+  "existing_footprint": {
+    "name": "Fuse:Fuse_1812_4532Metric",
+    "pad_mm": [
+      1.125,
+      3.4
+    ],
+    "pad_center_x_mm": [
+      -2.1375,
+      2.1375
+    ],
+    "qualification": "Geometric terminal overlap established with JDT dimensions. OEM JDT drawing supplies body/terminal dimensions without explicit land; solder inspection required for prototype."
+  },
+  "alternate_recommended_land_mm": {
+    "pad": [
+      1.5,
+      3.2
+    ],
+    "inner_gap": 2.7,
+    "centers_x": [
+      -2.1,
+      2.1
+    ]
+  },
+  "remaining_gates": [
+    "Local ambient <=85C; cannot claim90C compatibility.",
+    "Encoder actual draw below derated holdcurrent.",
+    "Faulttrip time and connector protection application validation.",
+    "Bourns alternate different OEM land; review before drop-in."
+  ]
+}

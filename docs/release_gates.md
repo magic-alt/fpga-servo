@@ -1,6 +1,28 @@
 # Fabrication / release gates
 
+**Current delivery scope (user revision, 2026-10-10): BOM and schematic only. PCB/layout repair is deferred. The working PCB retains earlier development edits and is not synchronized to the final bus-OCP schematic; the isolated unfinished routing candidate is not adopted. Do not use this board for fabrication or reuse historical zero-DRC/parity claims for the current schematic.**
+
+
 Rev.A is not fabrication-approved until every blocking item below is closed.
+
+## Current selection revision (2026-10-10)
+
+This section supersedes the component choices and routing counts in the archived chronology below. See [selection record](lcsc_sourcing_review_2026-10-10.md) for current verification and procurement evidence. The design uses phase-inline INA240A1DR with three 5 mΩ SMD shunts, plus bus-only **positive nominal +25 A** OCP (2 mΩ shunt, INA240A1DR, LM393LV). Phase-window OCP is removed; no reverse-current trip is claimed. DRV8300DPWR replaces FD6288, and unused J2 is removed. F1 is **onboard** 0456025.ER; there is no external fuse holder.
+
+Outstanding selection-specific gates:
+
+- Bound the complete bus-shunt-to-VGS-off delay, PWM rejection, switching SOA and fault response. The DC source description does not establish fault current or regenerative absorption.
+- Confirm prospective source fault current <=500 A and voltage envelope <=72 V for the selected 25 A fuse; qualify inrush, copper/ambient derating and I²t coordination. A 25 A fuse rating is not a 25 A continuous board qualification.
+- Qualify all shunt solder joints and thermal paths: phase shunts dissipate 0.5 W at 10 Arms and 2 W for a held 20 A pulse; bus shunt dissipates 1.25 W at 25 A.
+- Qualify INA240 common-mode excursions (recommended -4..80 V), driver switch-node slew (DP recommended <=2 V/ns) and 470 nF bootstrap effective capacitance.
+- L1 lacks a substantiated continuous RMS rating; initial <=0.5 A total 12 V load is a test restriction, not a qualified rating. Full 1 A operation remains open.
+- U26 and F2 local ambient must remain <=85°C; the overall 40°C ambient +50 K rise target does not extend their ratings. Verify encoder current below F2's temperature-derated hold limit.
+- Confirm JILN finished plated holes 1.02 ±0.03 mm. BOOMELE header alternatives need <=1 A per-pin operation and manufacturer drawing confirmation. Conditional alternatives in procurement are not automatically approved drop-ins.
+- Verify actual motor temperature sensing; onboard NTC2 alone does not measure remote motor winding temperature.
+
+Gate A/B, layout freeze and fabrication release remain OPEN/BLOCKED until their evidence exists. Current DRC/ERC results must come from the current selected design; historical zero counts below cannot be reused.
+
+## Archived review chronology
 
 Latest follow-up: [2026-10-10 qualification and repair record](layout_followup_qualification_2026-10-10.md). J2 assembly annotations/current operating inputs and external-part audit repaired; CLEAR instructions no longer rely on the obsolete 28ms total recovery assumption. After explicit user approval, the repaired PCB candidate is now the working development baseline. Fresh ERC0/0; current DRC0 violations /0 unconnected /0 parity issues after the [completed routing repair](routing_closure_2026-10-10.md). The268/485 counts are the archived pre-adoption baseline. **S01 dynamic qualification and S09 sequencing remain OPEN; no layout freeze or fabrication approval.**
 

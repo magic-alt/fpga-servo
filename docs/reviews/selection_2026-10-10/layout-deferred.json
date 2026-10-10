@@ -1,0 +1,12 @@
+{
+  "user_scope": "BOM and schematic complete; layout repair deferred",
+  "candidate_adopted": false,
+  "candidate_archive": "artifacts/selection-20261010/deferred-layout",
+  "candidate_drc": {
+    "violations": 63,
+    "unconnected": 27,
+    "parity": 0
+  },
+  "working_board": "Earlier development edits retained; not synchronized to final schematic",
+  "fabrication_approved": false
+}

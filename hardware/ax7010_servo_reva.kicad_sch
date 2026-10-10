@@ -916,7 +916,7 @@
 		)
 		(uuid "31849548-68dc-4449-8384-cb5bd86e88ed")
 	)
-	(label "VBUS_PROT"
+	(label "VBUS_BRIDGE"
 		(at 162.56 27.94 0)
 		(effects
 			(font
@@ -1687,7 +1687,7 @@
 				(justify left top)
 			)
 		)
-		(pin "VBUS_PROT" input
+		(pin "VBUS_BRIDGE" input
 			(at 167.64 27.94 180)
 			(uuid "52a038b2-fd54-4858-952e-2f88cc116bc0")
 			(effects
@@ -2389,6 +2389,24 @@
 				(justify right)
 			)
 		)
+		(pin "BUS_SENSE_P" input
+	(at 132.08 165.1 270)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "354b379f-cb29-4fcb-8e50-3726c75da2be")
+)
+		(pin "BUS_SENSE_N" output
+	(at 160.02 165.1 270)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "4b9fd286-0991-42c3-8cd5-351406c7f79b")
+)
 		(instances
 			(project "ax7010_servo_reva"
 				(path "/05403145-af59-4aba-b68b-68be6600865e"
@@ -2503,6 +2521,188 @@
 			)
 		)
 	)
+	(symbol_instances
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003/3bd12426-b9e5-41d8-9124-46554d6e3142"
+			(reference "RSH1")
+			(unit 1)
+			(value "5mR")
+			(footprint "fpga-servo:HoYLR2512_Kelvin")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003/3ee0b657-d909-449d-81fe-ee7e4c326bd3"
+			(reference "RSH2")
+			(unit 1)
+			(value "5mR")
+			(footprint "fpga-servo:HoYLR2512_Kelvin")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003/dcba5898-f807-44bc-b2b9-3cd0471c9fcc"
+			(reference "RSH3")
+			(unit 1)
+			(value "5mR")
+			(footprint "fpga-servo:HoYLR2512_Kelvin")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003/00000000-0000-0000-0000-000066000045"
+			(reference "J4")
+			(unit 1)
+			(value "MOTOR_UVW")
+			(footprint "fpga-servo:KEFA_KF950_3_9.50mm")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/00000000-0000-0000-0000-00006abaf010"
+			(reference "NTC1")
+			(unit 1)
+			(value "10k")
+			(footprint "fpga-servo:NTC_0603_Shiheng_KUU")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/00000000-0000-0000-0000-00006abaf012"
+			(reference "NTC2")
+			(unit 1)
+			(value "10k")
+			(footprint "fpga-servo:NTC_0603_Shiheng_KUU")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002/00000000-0000-0000-0000-00006a000006"
+			(reference "L1")
+			(unit 1)
+			(value "68uH")
+			(footprint "fpga-servo:SOREDE_SDRH1209_68uH")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002/00000000-0000-0000-0000-00006a000011"
+			(reference "L2")
+			(unit 1)
+			(value "2.2uH")
+			(footprint "fpga-servo:Sunlord_SWPA4020S")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001/00000000-0000-0000-0000-000066000009"
+			(reference "C3")
+			(unit 1)
+			(value "1uF")
+			(footprint "Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001/00000000-0000-0000-0000-00006600000a"
+			(reference "C4")
+			(unit 1)
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_1812_4532Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007/d103231d-05b8-432b-9e77-2087d34e6941"
+			(reference "C94")
+			(unit 1)
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/7bd92da5-bb2d-411b-ace3-cabe66385ac7"
+			(reference "RSH4")
+			(unit 1)
+			(value "2mR")
+			(footprint "fpga-servo:HoYLR2512_Kelvin")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/3b7b8023-15a1-41af-9905-dd94b1c460e1"
+			(reference "U5")
+			(unit 1)
+			(value "INA240A1DR")
+			(footprint "fpga-servo:TI_D0008A_SOIC8_P1.27mm")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/2fc92833-992b-42be-965a-be77e00f5ffb"
+			(reference "U15")
+			(unit 1)
+			(value "LM393LVDDFR")
+			(footprint "fpga-servo:TI_DDF0008A")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/1874ef16-93b9-43d5-8d67-e2663596d153"
+			(reference "R50")
+			(unit 1)
+			(value "8.2k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/7f5da5c1-f789-4f4d-882b-5ce5ce9470d1"
+			(reference "R53")
+			(unit 1)
+			(value "2k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/3a43314c-483c-439d-a9bb-28bed3167f45"
+			(reference "R54")
+			(unit 1)
+			(value "4.7k")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/fecfa02c-f69e-4061-b321-306091936762"
+			(reference "C84")
+			(unit 1)
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/3494182d-06f1-4be3-bf8d-17464820aae2"
+			(reference "C85")
+			(unit 1)
+			(value "100nF")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/a5ad7e5b-c77f-461e-8271-682a041ce3c1"
+			(reference "#PWR1300")
+			(unit 1)
+			(value "/VA_5V")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/6ac2012c-9936-426f-b8a9-a9514bee67b0"
+			(reference "#PWR1301")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/071531e9-3454-4ea3-b31d-b1403faede5d"
+			(reference "#PWR1302")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/acbbf92f-02c3-4902-a93b-13f369a25920"
+			(reference "#PWR1303")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/b94af2a5-71bf-4dd3-b6a9-6c8afb45c565"
+			(reference "#PWR1304")
+			(unit 1)
+			(value "/VA_5V")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/d63b03a3-54e0-4751-8ce9-a326b42fb00a"
+			(reference "#PWR1305")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/fe39635b-5c99-487f-a477-aaee2ec76197"
+			(reference "#PWR1306")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/a3f31199-0188-4e97-aa79-7ab60d8ce928"
+			(reference "#PWR1307")
+			(unit 1)
+			(value "/VA_5V")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/bc4fb33b-93fa-47b7-aa12-9668d2144ff1"
+			(reference "#PWR1308")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/379e14fd-2f00-41a9-b068-d94d6b2cfd4c"
+			(reference "#PWR1309")
+			(unit 1)
+			(value "/GND")
+			(footprint "")
+		)
+		(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005/66c9e3bc-9a43-41ed-a7f8-4846b8aab258"
+			(reference "#PWR1310")
+			(unit 1)
+			(value "/VIO_3V3")
+			(footprint "")
+		)
+)
 	(sheet_instances
 		(path "/"
 			(page "1")
@@ -2534,9 +2734,51 @@
 (label "PWR_READY" (at 182.88 93.98 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "ca15fc40-0002-4788-93a7-1fb86232cdd8"))
 (wire (pts (xy 101.6 92.71) (xy 101.6 96.52)) (stroke (width 0) (type default)) (uuid "f8d3d3ac-e3aa-42c7-921b-4c213fea69b7"))
 (label "PWR_READY" (at 101.6 96.52 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "8c32a5d0-944c-4782-b553-e050975187bf"))
+(label "VBUS_PROT"
+	(at 132.08 171.45 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "87548999-e7c5-486f-a6e2-b52e405c0928")
+)
+(label "VBUS_BRIDGE"
+	(at 160.02 171.45 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+	)
+	(uuid "88b3e892-e051-4b69-a368-c78567f8949a")
+)
 
 
 (wire (pts (xy 76.2 55.88) (xy 81.28 55.88)) (stroke (width 0) (type default)) (uuid "54f8147c-620c-4421-b7fd-27b9735b05b5"))
+
+
+(wire
+	(pts
+		(xy 132.08 165.1) (xy 132.08 171.45)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "ced0a038-2233-4cb9-8658-cead7043d6f7")
+)
+
+
+(wire
+	(pts
+		(xy 160.02 165.1) (xy 160.02 171.45)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "d8e778dc-d589-4619-aa98-0c16eb564a33")
+)
 
 (text "02 / 08" (at 44.45 34.29 0) (effects (font (size 1.27 1.27) (bold yes))) (uuid "6f094110-5e1f-4dd0-b2db-09245e059afa"))
 (text "04 / 08" (at 114.3 34.29 0) (effects (font (size 1.27 1.27) (bold yes))) (uuid "4bbb3103-ed31-41c9-a0cc-619c0c304535"))
