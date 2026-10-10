@@ -2,9 +2,13 @@
 
 Rev.A is not fabrication-approved until every blocking item below is closed.
 
-Latest ADC repair: [2026-10-10 record](adc_undervoltage_repair_2026-10-10.md). Fresh native evidence: 162 board components /169 nets,164 system objects,166 footprints; ERC0 errors/0 warnings/0 exclusions (4 existing ignored check categories unchanged). DRC268 violations,485 unconnected,0 schematic parity issues. ADC static threshold gap repaired; rapid-droop shutdown and all other audit blockers remain open. Formal layout freeze is **not approved**.
+Latest follow-up: [2026-10-10 qualification and repair record](layout_followup_qualification_2026-10-10.md). J2 assembly annotations/current operating inputs and external-part audit repaired; CLEAR instructions no longer rely on the obsolete 28ms total recovery assumption. After explicit user approval, the repaired PCB candidate is now the working development baseline. Fresh ERC0/0; DRC97 clearance errors /447 unconnected /0 parity issues. The268/485 counts are the archived pre-adoption baseline. **S01 dynamic qualification and S09 sequencing remain OPEN; no layout freeze or fabrication approval.**
 
-Current target confirmed 2026-10-09: **24-48V bus, 10A continuous phase current, 20kHz PWM**. RMS interpretation, ambient, peak current and regeneration envelope still need closure. Latest [electrical repair](layout_entry_repair_2026-10-09.md) supersedes historical counts; earlier [schematic explanation and simulation](schematic_layout_entry_review_2026-10-09.md) retains the audit context.
+Latest ADC repair: [2026-10-10 record](adc_undervoltage_repair_2026-10-10.md). Fresh native evidence: 162 board components /169 nets,164 system objects,166 footprints; ERC0 errors/0 warnings/0 exclusions (4 existing ignored check categories unchanged). At the ADC-repair stage DRC was268 violations,485 unconnected,0 schematic parity issues (historical, superseded by adopted PCB baseline below). ADC static threshold gap repaired; rapid-droop shutdown and all other audit blockers remain open. Formal layout freeze is **not approved**.
+
+Current confirmed target: **24-48V bus, 10Arms continuous phase current, 20kHz PWM, 20A peak for30s, 40degC maximum ambient, <=50K temperature rise, forced air, 5V ABZ encoder; brake circuit cancelled by latest user instruction; no assumed PSU absorption** (2026-10-10). Peak repetition interval, minimum airflow/fan-loss behavior, encoder maximum/startup current remain OPEN. S03 is not closed; assume no upstream energy absorption. See [thermal/encoder design basis](brake_thermal_design_basis_2026-10-10.md). Latest [electrical repair](layout_entry_repair_2026-10-09.md) supersedes historical counts; earlier [schematic explanation and simulation](schematic_layout_entry_review_2026-10-09.md) retains the audit context.
+
+Latest adopted PCB development baseline: [2026-10-10 copper repair](pcb_legacy_route_repair_2026-10-10.md), **97 clearance errors /447 unconnected /0 parity**, with no shorts or crossing tracks. All97 errors involve pads of the same package. The user explicitly approved adoption as a development baseline that has not passed release acceptance; the reviewed candidate was written to the working board, with byte equality verified. Original working board and project rules are archived. See [adoption and fresh checks](reviews/pcb_legacy_routes_2026-10-10/adopted_adoption.json). No release blockers are waived.
 
 ## Connector / FPGA
 
@@ -34,10 +38,10 @@ ERC is clean and mechanical/functional placement studies can proceed. Final comp
 
 - [x] OCP hardware ARM latch implemented; FAULT_CLEAR on J1.10 re-arms only with GATE_EN low and healthy conditions.
 - [ ] Qualify latch fault pulses, clear/fault phase races, power ramps and actual gate-off timing on the bench; digital regression is insufficient.
-- [ ] Confirm required ambient/junction range; U26 Rev.F timing bounds are specified only through 85C, so no 125C shutdown-delay claim.
+- [ ] Ambient is confirmed40C with50K general rise. Prove U26 local free-air temperature<=85C (<=45K local rise at40C) for Rev.F maximum timing, or redesign and requalify the chain. General90C hotspot acceptance does not extend its timing table or establish junction temperature.
 - [ ] Confirm AX7010 VIO minimum supports the G33 worst-case reset release (~3.194V).
 - [ ] Validate power sequencing and partial-power behavior with AX7010 VIO, VA_5V and VDRV_12V independently present/absent. Pull-downs establish a configuration-time default but do not constitute a safety-rated shutdown system.
-- [ ] Close input surge / regeneration energy handling: D1 is actually DNP, LM74502 OV is disabled, and upstream protection / receptive source requirements remain mandatory.
+- [ ] Close input surge / regeneration energy handling: D1 is actually DNP, LM74502 OV is disabled. The user cancelled the brake circuit; it is removed from implementation scope. Qualify the remaining system surge/regeneration envelope without assuming source absorption; no brake sizing prerequisite is imposed on other repairs.
 - [ ] Freeze actual AX7010 connector revision and exact shunt / power connector / fuse footprints before routing power copper.
 - [x] R80..R86 provide 10k pull-downs on all six PWM inputs and GATE_EN; R56..R61 remain on the gated FD6288 input nets.
 - [x] U8..U11 and U15/U16 have dedicated 100nF bypass capacitors; C43..C45 correctly bridge VA_5V to GND.
@@ -56,7 +60,7 @@ ERC is clean and mechanical/functional placement studies can proceed. Final comp
 ## PCB
 
 - [x] Reconcile external fuse and electrical repairs: remove obsolete PCB F1, synchronize J3.1/diode/ADC pads and J1 metadata; current native parity0, physical-pad checkPASS,161footprints includingH1..4. See `docs/layout_entry_repair_2026-10-09.md`.
-- [ ] Close PCB DRC: fresh refilled KiCad10.0.3 on repaired sources has **271 violations (220 errors / 51 warnings), 478 unconnected items, 0 schematic parity issues**. No new exclusions/severity reductions. Five inherited ignored types remain for review. See `docs/reviews/layout_entry_repair_2026-10-09/drc_final.json`.
+- [ ] Close PCB DRC: the current adopted development baseline has **97 clearance errors, 447 unconnected items, 0 schematic parity issues**. The ADC-repair stage had268/485 before this copper repair. The older 271/478 counts describe the 2026-10-09 stage only. No exclusions/severity reductions are authorized; inherited ignored types remain for review. See `docs/adc_undervoltage_repair_2026-10-10.md` and the latest follow-up evidence before using counts.
 - [x] Correct H1..H4 M3-labelled mounting-hole drills from 1.0 mm to 3.2 mm, preserving centers and the board outline; `check_design.py` rejects undersized M3-labelled holes.
 - [ ] KiCad DRC clean.
 - [ ] Board outline/mechanical keepout reviewed.
@@ -108,7 +112,7 @@ Fresh schematic ERC is 0 errors / 0 warnings / 0 exclusions; no ignored checks o
 
 New [Gate A/B verification report](gate_ab_verification_2026-10-09.md) and [automated evidence workflow](../.github/workflows/gate-ab-electrical.yml) check a **fresh KiCad XML netlist** against physical-pin contracts, passive corner calculations and reproducible ideal-source ngspice benches. All numeric results explicitly exclude vendor active-device, PWM, physical layout and thermal behavior. `--strict-gates` returns 2 while either gate is open. Current status **Gate A BLOCKED / Gate B BLOCKED**, independently of ERC passing or CI green.
 
-- [ ] **A-ADC-UNDERVOLTAGE:** TPS3808G50 upper falling threshold about 4.743V is below the ADS8588S AVDD 4.75V operating minimum. Implement and qualify a threshold/independent inhibit that prevents PWM when ADC data is invalid; test all supply sequences and corner tolerances.
+- [ ] **A-ADC-UNDERVOLTAGE / S01:** static design repaired by TPS389001DSER and 5.1V regulation; **dynamic qualification OPEN**. The minimum static headroom is 58.519mV, not a gate-off timing guarantee. Qualify effective C31, rail ripple/transients, fastest droop and worst total delay to all six actual VGS turning off before ADC AVDD falls below 4.75V. S09 sequencing and C94 recovery remain OPEN; follow the [qualification procedure](layout_followup_qualification_2026-10-10.md).
 - [ ] **A-PEAK-THERMAL-SPEC / A-VENDOR-FOOTPRINT-MPN:** freeze true 10Arms, peak/ambient/cooling, vendor ordering codes, pad drawings and initial electrical/thermal margin.
 - [ ] **B-IC-TRANSIENT-MODELS:** validate available vendor model pin mapping and license, simulate actual FD6288/INA241/TLV9024/LM5164/MOSFET dynamics including switching overshoot, bootstrap and protection delays.
 - [ ] **B-TOTAL-OCP-DELAY / B-SWITCHING-SOA:** bound worst-case full analog-to-VGS-off chain and correlate with low-energy measured fault response and safe MOSFET SOA.

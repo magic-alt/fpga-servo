@@ -128,23 +128,37 @@ def parse_netlist(path: Path) -> dict:
         comps[ref] = {
             'value': x.findtext('value', default=''),
             'footprint': x.findtext('footprint', default='').strip(),
+            'on_board': not any(p.get('name') == 'exclude_from_board' for p in x.findall('property')),
         }
-    names = [x.get('name', '') for x in root.findall('./nets/net')]
-    return {'components': comps, 'net_names': names, 'net_count': len(names)}
+    names = []
+    external_names = []
+    for net in root.findall('./nets/net'):
+        nodes = net.findall('node')
+        # Only explicit external-only nets are absent from the physical board.
+        # Unknown references and empty nets remain diagnostic candidates.
+        external_only = nodes and all(
+            node.get('ref') in comps and not comps[node.get('ref')]['on_board']
+            for node in nodes)
+        (external_names if external_only else names).append(net.get('name', ''))
+    return {'components': comps, 'net_names': names, 'net_count': len(names),
+            'external_net_names': external_names}
 
 
 def audit(netlist: dict, board: dict) -> dict:
-    sch_refs = set(netlist['components'])
+    external_refs = {ref for ref, info in netlist['components'].items() if not info.get('on_board', True)}
+    sch_refs = set(netlist['components']) - external_refs
     pcb_refs = set(board['footprints'])
     unmatched_pcb = sorted(pcb_refs - sch_refs)
     board_only_mechanical = [x for x in unmatched_pcb if re.fullmatch(r'H\d+', x)]
     board_orphans = [x for x in unmatched_pcb if x not in board_only_mechanical]
     missing = sorted(sch_refs - pcb_refs)
-    empty_fp = sorted(ref for ref, info in netlist['components'].items() if not info['footprint'])
+    empty_fp = sorted(ref for ref, info in netlist['components'].items() if ref in sch_refs and not info['footprint'])
     net_gap = sorted(set(netlist['net_names']) - set(board['net_names'].values()) - {''})
     summary = {
         'source': 'static S-expression + KiCad XML netlist; NOT KiCad native parity or DRC',
         'schematic_components': len(sch_refs),
+        'external_schematic_references': sorted(external_refs),
+        'external_net_names': netlist.get('external_net_names', []),
         'schematic_nets': netlist['net_count'],
         'pcb_footprints': len(pcb_refs),
         'pcb_matched_references': len(sch_refs & pcb_refs),

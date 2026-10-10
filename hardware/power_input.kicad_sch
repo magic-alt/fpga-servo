@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "48V-class bus; 15..55V design window; source transient qualification required")
+		(comment 1 "24..48V operating bus; source transient / regeneration qualification OPEN")
 	)
 	(lib_symbols
 		(symbol "ax7010_servo_reva:C"

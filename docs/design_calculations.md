@@ -1,6 +1,6 @@
 # Rev.A design calculations
 
-Current baseline (user confirmed 2026-10-09): **24-48 V, 10 A continuous phase current, 20 kHz PWM**. Thermal examples use 10 A RMS provisionally. Ambient, peak current and regeneration energy are not frozen. See [layout-entry review](schematic_layout_entry_review_2026-10-09.md) for fresh netlist-backed simulation and open electrical defects.
+Current confirmed baseline: **24-48 V, 10 A RMS continuous phase current, 20 kHz PWM; 20 A peak for 30 s; 40 degC maximum ambient; <=50 K temperature rise; forced-air cooling; 5 V ABZ encoder; brake circuit cancelled by latest user instruction; PSU absorption not assumed** (2026-10-10). Peak repetition interval, airflow/fan failure, encoder maximum/startup current remain pending. See [thermal and encoder design basis](brake_thermal_design_basis_2026-10-10.md) and [current qualification record](layout_followup_qualification_2026-10-10.md); these inputs do not close release gates.
 
 ## Current sensing
 
@@ -14,21 +14,19 @@ Therefore:
 
 `Vout_delta = Iphase * 0.005 * 20 = 0.1 * Iphase [V]`
 
-With a 2.5 V reference:
+With VA5=5.1 V nominal and reference=VA5/2=2.55 V:
 
 | Phase current | Amplifier output |
 |---:|---:|
-| -25 A | ~0.0 V |
-| -20 A | ~0.5 V |
-| -15 A | ~1.0 V |
-| -10 A | ~1.5 V |
-| 0 A | ~2.5 V |
-| +10 A | ~3.5 V |
-| +15 A | ~4.0 V |
-| +20 A | ~4.5 V |
-| +25 A | ~5.0 V |
+| -20 A | ~0.55 V |
+| -15 A | ~1.05 V |
+| -10 A | ~1.55 V |
+| 0 A | ~2.55 V |
+| +10 A | ~3.55 V |
+| +15 A | ~4.05 V |
+| +20 A | ~4.55 V |
 
-Software limits require calibration and dynamic validation. ±25 A touches the ideal output rails and is not an approved measurement or operating envelope. Hardware OCP nominally trips at ±22.0588 A from the 10k/160k dividers. VA5 ±5%, divider ±0.1% and shunt ±1% alone give an illustrative 20.743-23.402 A magnitude range, before IC/temperature/dynamic errors; this does not approve that current.
+Software limits require calibration and dynamic validation. The approved peak input is now 20 A; historical 25 A is not an operating requirement. Hardware OCP nominally trips at ±22.5 A from the 10k/160k dividers at 5.1 V. Fresh XML export (2026-10-10) and `check_adc_validity.py` yield static VA5=5.026621..5.173923 V. Using this rail range, divider ±0.1% and shunt ±1% gives a passive-only trip magnitude of 21.951188..23.062477 A, leaving 1.951188 A from the 20 A peak to the earliest calculated trip. This excludes resistor/shunt temperature and lifetime drift, INA/comparator errors, ripple and total gate-off delay. The generic divider/shunt MPNs and complete error budget remain unqualified; this is not a guaranteed no-nuisance-trip margin or a maximum fault current. Do not set the OCP nominal threshold to 20 A merely to match the operating peak.
 
 Shunt dissipation is `P = I_RMS^2 * R`:
 
@@ -40,6 +38,10 @@ Shunt dissipation is `P = I_RMS^2 * R`:
 | 25 A | 3.125 W |
 
 Use a >=5 W Kelvin shunt and verify its derating curve on the assembled PCB.
+
+At the confirmed 10 A RMS, each nominal shunt dissipates 0.5 W. A phase held at the 20 A magnitude bound dissipates 2 W; for 30 s this is 60 J per shunt, before resistance tolerance and temperature drift. A sinusoidal phase with 20 A instantaneous amplitude has a different RMS loss; use the 2 W value as a conservative per-shunt upper envelope until the actual peak waveform is specified. With baseline 10 A RMS and a conservative 20 A flat-current interval occupying fraction d, the illustrative average is `Pshunt=0.5+1.5d W`; for a start-to-start repetition period Trep, `d=30/Trep` with Trep>=30 s. No repetition period is assumed.
+
+At 40 degC ambient, the general 50 K rise target corresponds to a 90 degC measured hotspot limit, subject to every component's lower qualified limit. A 50 K rise implies an effective shunt-to-ambient thermal resistance <=100 K/W at steady 0.5 W, or <=25 K/W at steady 2 W; these are assembly targets, not package ratings. For a first 30 s pulse from an established 10 A RMS thermal state, an illustrative linear thermal model requires `0.5*Rtheta_steady + 1.5*Ztheta(30s) <=50 K`; repeated pulses require accumulation, hot resistance and airflow validation. The shunt's nominal 5 W rating does not prove this condition. U26's current maximum-delay qualification is limited to 85 degC local free-air temperature, hence <=45 K local rise at the confirmed ambient. Forced air requires minimum airflow, blockage/fan-loss handling and assembled-board soak evidence.
 
 ## ADC resolution
 

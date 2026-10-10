@@ -1,0 +1,14 @@
+[
+  {
+    "check": "erc",
+    "exit_code": 0
+  },
+  {
+    "check": "working_drc",
+    "exit_code": 5
+  },
+  {
+    "check": "candidate_drc",
+    "exit_code": 5
+  }
+]

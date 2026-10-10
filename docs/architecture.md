@@ -12,16 +12,21 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 | Operating bus maximum | 48 V; transient clamp/energy limit pending |
 | MOSFET VDS | 100 V |
 | PWM | 20 kHz |
-| Continuous phase current | 10 A; thermal calculations provisionally use RMS |
-| Short peak phase current | Pending; historical 25 A / <=5 s conflicts with nominal 22.06 A OCP |
+| Continuous phase current | 10 A RMS (confirmed 2026-10-10) |
+| Peak phase current | 20 A for 30 s (confirmed 2026-10-10); repetition interval pending |
+| Maximum ambient | 40 degC (confirmed 2026-10-10) |
+| Temperature-rise target | <=50 K; measurement locations pending; does not override lower component qualification limits |
+| Cooling | Forced air (confirmed 2026-10-10); airflow and fan-fault behavior pending |
 | Current shunt | 5 mOhm, >=5 W, Kelvin |
 | Current gain | 20 V/V |
 | Current transfer | 0.1 V/A |
-| Current output zero | 2.5 V |
+| Current output zero | VA_5V / 2; nominal 2.55 V, requires per-channel calibration |
 | ADC | 8 ch, simultaneous, 16 bit, 200 kSPS/ch |
-| Encoder | differential A+/A-, B+/B-, Z+/Z- |
+| Encoder | 5 V ABZ (confirmed 2026-10-10); existing differential A+/A-, B+/B-, Z+/Z- interface; current/startup/common-mode envelope pending |
 | Logic | 3.3 V |
 | PCB | 2 layer, 1.6 mm, 2 oz recommended |
+
+The latest user instruction removes the brake circuit from scope (2026-10-10). No board brake is added and PSU regeneration absorption is not assumed. S03 system surge/regeneration qualification remains OPEN; brake sizing is not a prerequisite for the other repair work. See the [thermal and encoder design brief](brake_thermal_design_basis_2026-10-10.md). The 20 A operating peak is distinct from the hardware OCP threshold and its fault overshoot; it is not yet demonstrated as an absolute current ceiling. U26 local free-air temperature must remain <=85 degC to use the current maximum-delay budget; 40 degC ambient permits only 45 K local rise there, pending thermal proof or a qualified redesign.
 
 ## Functional blocks
 
@@ -40,7 +45,7 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 3. **Phase-current measurement**
    - one 5 mOhm four-terminal shunt in each motor phase
    - INA241A2 high-side/bidirectional amplifier per phase
-   - REF1=5 V, REF2=GND -> 2.5 V zero-current output
+   - REF1=VA_5V, REF2=GND -> nominal 2.55 V zero-current output
    - Kelvin sense traces, no load current in sense copper
 
 4. **Data acquisition**
@@ -48,9 +53,9 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
    - CH1/2/3: IU/IV/IW
    - CH4: VBUS
    - CH5: MOSFET-board NTC
-   - CH6: motor/connector NTC
+   - CH6: board-mounted NTC2 (legacy net name NTC_MOTOR); no external motor sensor interface exists. S12 remains OPEN until the required sensing location/interface is confirmed.
    - CH7/8: unused, currently tied to GND
-   - serial interface uses two DOUT lines; J2 is DNP, not an implemented parallel-data path
+   - serial interface uses two DOUT lines; J2 is fitted with VIO/GND connected and unused signal pins NC; it does not implement a parallel-data path
    - serial-mode DB0..6, DB9..13 and DB14/HBEN now visibly grounded; U6 uses the dedicated ADS8588S_SERIAL symbol
 
 5. **Encoder**

@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "48V nominal; 15..55V full-function; A4 hierarchical engineering schematic")
+		(comment 1 "24..48V bus; 10A continuous phase; 20kHz PWM; peak/thermal qualification OPEN")
 	)
 	(lib_symbols)
 	(text "SYSTEM ARCHITECTURE - POWER FLOW / SAFETY FLOW / REAL-TIME I/O"

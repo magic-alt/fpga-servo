@@ -1,0 +1,108 @@
+{
+  "erc": {
+    "violations": 0,
+    "severity": {},
+    "types": {},
+    "unconnected": 0,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Global label only appears once in the schematic",
+        "key": "single_global_label"
+      },
+      {
+        "description": "Four connection points are joined together",
+        "key": "four_way_junction"
+      },
+      {
+        "description": "SPICE model issue",
+        "key": "simulation_model_issue"
+      },
+      {
+        "description": "Assigned footprint doesn't match footprint filters",
+        "key": "footprint_filter"
+      }
+    ]
+  },
+  "working_drc": {
+    "violations": 268,
+    "severity": {
+      "error": 217,
+      "warning": 51
+    },
+    "types": {
+      "tracks_crossing": 2,
+      "shorting_items": 14,
+      "clearance": 113,
+      "solder_mask_bridge": 88,
+      "track_dangling": 8,
+      "isolated_copper": 43
+    },
+    "unconnected": 485,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ]
+  },
+  "candidate_drc": {
+    "violations": 97,
+    "severity": {
+      "error": 97
+    },
+    "types": {
+      "clearance": 97
+    },
+    "unconnected": 447,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Footprint component type doesn't match footprint pads",
+        "key": "footprint_type_mismatch"
+      }
+    ]
+  },
+  "live_board_and_project_unchanged": true,
+  "automatic_approval": "Rejected working-board replacement because candidate still has DRC errors and unrouted connections; candidate retained separately.",
+  "hashes": {
+    "hardware\\ax7010_servo_reva.kicad_pcb": "0c4fe389aed2ccaf6f8a7f87c50d9e10d0a141c86eed9b2b31955d185c7b8ae6",
+    "hardware\\ax7010_servo_reva.kicad_pro": "6f0df511b8badec38806a88a09ac2f12782fee905358862e991195e018c75139",
+    "artifacts\\remaining-repair\\20261010\\candidate\\ax7010_servo_reva.kicad_pcb": "99edf086370a93c0a4bda5b896e857abdd282a1ba9471337c61a5517087f173c",
+    "artifacts\\remaining-repair\\20261010\\current.net": "0ae575dfa43ccc2d442cebe57e1d22d19568284f8c95c25c32517c0b6d35e72f",
+    "artifacts\\remaining-repair\\20261010\\current.xml": "03114ad6453976cb22a63dcb6c6ed632a05b1cf45f27e14d89c35b3003487d18"
+  }
+}

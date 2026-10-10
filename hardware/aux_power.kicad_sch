@@ -1247,7 +1247,7 @@
   (pin passive line (at 3.81 0 180) (length 1.27) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))))
 )
 
-(text "VBUS_PROT -> LM5164 12V / 1A -> TPS62901 5V / 1A. PGOOD outputs are wired-AND."
+(text "VBUS_PROT -> LM5164 12V -> TPS62901 5.1V. Rail load / transient qualification OPEN."
 		(exclude_from_sim no)
 		(at 16.51 16.51 0)
 		(effects
@@ -1273,7 +1273,7 @@
 		)
 		(uuid "37a6d448-27ef-4f61-81fa-f287f03386a2")
 	)
-(text "12V input is for limited bring-up; full-function minimum is 15V."
+(text "System operating input: 24..48V. Low-voltage bring-up is separately qualified."
 		(exclude_from_sim no)
 		(at 16.51 177.292 0)
 		(effects
@@ -1286,7 +1286,7 @@
 		)
 		(uuid "42f3d493-a7fb-453e-9d51-6a54616f10ef")
 	)
-(text "Hierarchy ports attach to converter nets; DNP parts remain NoConn."
+(text "PGOOD alone does not prove VA5 valid; U25 separately monitors VA5."
 		(exclude_from_sim no)
 		(at 16.51 181.356 0)
 		(effects
