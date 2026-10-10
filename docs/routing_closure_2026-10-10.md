@@ -1,6 +1,6 @@
 # PCB DRC and connection repair - 2026-10-10
 
-Work in progress. User requested continued repair until DRC and connections are closed. The working board is an unreleased development baseline. Latest adopted stage: **0 DRC violations /64 unconnected /0 schematic parity issues**. Dynamic and manufacturing acceptance remain OPEN.
+Routing completion verified and adopted to `hardware/ax7010_servo_reva.kicad_pcb`: **0 DRC violations /0 unconnected /0 schematic parity issues**, with native ERC0. The 64-item checkpoint below is historical. Dynamic and manufacturing acceptance remain OPEN.
 
 ## Actual repair
 
@@ -27,13 +27,13 @@ Work in progress. User requested continued repair until DRC and connections are 
 | Control-area ground plane and constrained re-route | 0 | 70 | 0 |
 | Java25 router candidate, width correction and unused-stub cleanup | 0 | 65 | 0 |
 
-[Raw latest DRC](reviews/routing_closure_2026-10-10/working-drc.json). ERC remains0/0; six footprint identity changes preserve all164 components /170 nets /658 physical-pin memberships. Native parity and physical-pad regression pass for162 board components /169 board nets /166 footprints. Intermediate failed candidates remain under artifacts and were not adopted merely to improve counts.
+[Historical intermediate DRC](reviews/routing_closure_2026-10-10/working-drc.json). ERC remains0/0; six footprint identity changes preserve all164 components /170 nets /658 physical-pin memberships. Native parity and physical-pad regression pass for162 board components /169 board nets /166 footprints. Intermediate failed candidates remain under artifacts and were not adopted merely to improve counts.
 
-## Open work
+## Historical routing work and remaining qualification
 
-Continue residual connections and critical current paths; require fresh native DRC0 and unconnected0 before claiming routing closure. Copper sliver and drilling-clearance failures in intermediate completion candidates were rejected and corrected, not excluded. Package escape candidates with open ends were not promoted. Thermal/current capacity, switching-loop/return review, supplier footprint approval and assembly process approval remain OPEN. S01 dynamic qualification and S09 sequencing remain OPEN; no bench waveforms have been invented. The brake circuit remains cancelled.
+Residual connections are now closed by the final verification below. Critical current paths still require thermal and physical qualification. Copper sliver and drilling-clearance failures in intermediate completion candidates were rejected and corrected, not excluded. Package escape candidates with open ends were not promoted. Thermal/current capacity, switching-loop/return review, supplier footprint approval and assembly process approval remain OPEN. S01 dynamic qualification and S09 sequencing remain OPEN; no bench waveforms have been invented. The brake circuit remains cancelled.
 
-The control/ADC front ground-return zone is restricted to x2.5..61mm and y25..96.5mm, outside the switching power stage. Filled copper is saved to the working PCB. A standalone candidate DSN export without its matching project file lost net-class constraints; that failed candidate was rejected (142 clearance errors), restored from the verified stage, and subsequent exports assert POWER3000um/800um and GATE400um before routing. The original project settings remain unchanged.
+The control/ADC front ground-return zone is restricted to x2.5..67mm and y25..96.5mm, outside the switching power stage. Filled copper is saved to the working PCB. A standalone candidate DSN export without its matching project file lost net-class constraints; that failed candidate was rejected (142 clearance errors), restored from the verified stage, and subsequent exports assert POWER3000um/800um and GATE400um before routing. The original project settings remain unchanged.
 
 ## Continued repair checkpoint
 
@@ -66,3 +66,16 @@ The central-driver isolated router candidate completed12 local passes, but fresh
 Fresh verification before the checkpoint commit: six repository checks PASS; vendor-land, physical PCB constraints and six Kelvin branches PASS; 21 related regression tests PASS (6 vendor lands, 4 Kelvin, 11 PCB checks). Fresh native netlist: 162 board components /169 nets; physical parity: 166 footprints including H1..H4, PASS. OCP stable-level regression: 531 scenarios PASS. Native all-severity ERC: 0 violations. Native all-severity PCB DRC with zone refill and schematic parity: 0 violations /64 unconnected /0 parity issues. These 64 remaining connections are not closed; this commit is a development checkpoint, not a routing-complete or manufacturing-approved release. Existing ignored DRC categories remain unchanged.
 
 The checkpoint includes manufacturer land-pattern migrations, bounded internal-pad rules, current routing and ground-return copper, four-terminal shunt internal-group metadata and independent Kelvin topology regressions, matching BOM/schematic footprint assignments, routing tools and review evidence. Dynamic protection, sequencing, thermal/current capacity and manufacturing release gates remain OPEN.
+
+
+## Final routing completion and adoption
+
+All 64 remaining unconnected items are repaired in the root hardware file on `fix/adc-undervoltage-inhibit-20261010`; no worktree is used. Reopen/reload that PCB in KiCad to view the adopted result. Final native all-severity DRC with zone refill/save and schematic parity: **0 violations /0 unconnected /0 parity**; native ERC: **0 violations**. No exclusions or severity changes were added. Project settings remain byte-identical to the checkpoint.
+
+The remaining power, driver/bootstrap, ADC and ground connections use actual tracks, vias and filled copper. Local driver/support placement was adjusted (including U18, gate resistors, C18/C19, C80–C83 and R60), with visible reference labels repositioned. The control ground zone ends at x67mm; a local RPP_SRC front copper zone connects the reverse-protection sources. Eight wide `/VBUS_PROT` right-angle corners were replaced by 45-degree bevels; the geometry audit finds zero remaining degree-two 90-degree bends on its >=1mm tracks. Board outline, H1–H4 positions/drills and two copper layers are unchanged.
+
+The original fourteen same-package Pad–Pad rules are retained. Two explicit bounded package-escape rules apply only to U1/U18 group members and their own pads, with minima 0.25/0.20mm. U1 permits constrained front/back tracks and 0.50–0.60mm vias with 0.30mm drills; U18 permits front tracks only. `check_pcb_escape.py` verifies group membership, physical bounds, widths, layers, net identity and a real copper path to an own package pad. Detached/out-of-bounds copper cannot inherit these rules. External net-class clearances and the project minimum width remain unchanged. See [layout constraints](pcb_layout_rules_2026-10-10.md).
+
+Validation: all six repository checks; fresh native netlist safety and 531 stable-level OCP scenarios; physical parity (162 components /169 nets /166 footprints including four mounting holes); vendor lands and PCB constraints; six independent Kelvin copper clusters; bounded escapes; and 36 regression tests (6 vendor, 11 PCB, 4 Kelvin, 15 escape) PASS. Front/back exports were visually reviewed. These checks do not qualify switching behavior, current capacity, return paths, 3W/2H, assembly or fabrication. S01, S09, thermal/current, supplier and regeneration gates remain OPEN; the brake remains cancelled.
+
+Evidence: [validation summary](reviews/routing_completion_2026-10-10/validation-summary.json), [native DRC](reviews/routing_completion_2026-10-10/final-drc.json), [native ERC](reviews/routing_completion_2026-10-10/final-erc.json), [physical parity](reviews/routing_completion_2026-10-10/final-parity.json), [Kelvin](reviews/routing_completion_2026-10-10/final-kelvin.json), [bounded escapes](reviews/routing_completion_2026-10-10/final-escape.json), [front](reviews/routing_completion_2026-10-10/final-front.png), [back](reviews/routing_completion_2026-10-10/final-back.png).

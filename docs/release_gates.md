@@ -2,7 +2,7 @@
 
 Rev.A is not fabrication-approved until every blocking item below is closed.
 
-Latest follow-up: [2026-10-10 qualification and repair record](layout_followup_qualification_2026-10-10.md). J2 assembly annotations/current operating inputs and external-part audit repaired; CLEAR instructions no longer rely on the obsolete 28ms total recovery assumption. After explicit user approval, the repaired PCB candidate is now the working development baseline. Fresh ERC0/0; current DRC0 violations /64 unconnected /0 parity issues after the [ongoing routing repair](routing_closure_2026-10-10.md). The268/485 counts are the archived pre-adoption baseline. **S01 dynamic qualification and S09 sequencing remain OPEN; no layout freeze or fabrication approval.**
+Latest follow-up: [2026-10-10 qualification and repair record](layout_followup_qualification_2026-10-10.md). J2 assembly annotations/current operating inputs and external-part audit repaired; CLEAR instructions no longer rely on the obsolete 28ms total recovery assumption. After explicit user approval, the repaired PCB candidate is now the working development baseline. Fresh ERC0/0; current DRC0 violations /0 unconnected /0 parity issues after the [completed routing repair](routing_closure_2026-10-10.md). The268/485 counts are the archived pre-adoption baseline. **S01 dynamic qualification and S09 sequencing remain OPEN; no layout freeze or fabrication approval.**
 
 Latest ADC repair: [2026-10-10 record](adc_undervoltage_repair_2026-10-10.md). Fresh native evidence: 162 board components /169 nets,164 system objects,166 footprints; ERC0 errors/0 warnings/0 exclusions (4 existing ignored check categories unchanged). At the ADC-repair stage DRC was268 violations,485 unconnected,0 schematic parity issues (historical, superseded by adopted PCB baseline below). ADC static threshold gap repaired; rapid-droop shutdown and all other audit blockers remain open. Formal layout freeze is **not approved**.
 
@@ -60,14 +60,14 @@ ERC is clean and mechanical/functional placement studies can proceed. Final comp
 ## PCB
 
 - [x] Reconcile external fuse and electrical repairs: remove obsolete PCB F1, synchronize J3.1/diode/ADC pads and J1 metadata; current native parity0, physical-pad checkPASS,161footprints includingH1..4. See `docs/layout_entry_repair_2026-10-09.md`.
-- [ ] Close PCB DRC: the current development baseline has **0 DRC violations, 64 unconnected items, 0 schematic parity issues** after the [ongoing routing repair](routing_closure_2026-10-10.md); initial adoption was97/447/0. The ADC-repair stage had268/485 before this copper repair. The older 271/478 counts describe the 2026-10-09 stage only. No exclusions/severity reductions are authorized; inherited ignored types remain for review. See `docs/adc_undervoltage_repair_2026-10-10.md` and the latest follow-up evidence before using counts.
+- [x] Close PCB DRC: current adopted root board has **0 violations /0 unconnected /0 schematic parity issues** with native all-severity refill/save checks; [final evidence](reviews/routing_completion_2026-10-10/final-drc.json). Earlier 64-item, 97/447 and 268/485 stages are historical. No added exclusions or severity reductions. Electrical/thermal/manufacturing qualification remains open.
 - [x] Correct H1..H4 M3-labelled mounting-hole drills from 1.0 mm to 3.2 mm, preserving centers and the board outline; `check_design.py` rejects undersized M3-labelled holes.
-- [ ] KiCad DRC clean.
+- [x] KiCad native all-severity DRC clean, including zero unconnected and parity items; manufacturing readiness remains subject to the other gates.
 - [ ] Board outline/mechanical keepout reviewed.
 - [ ] 2 oz copper stack-up confirmed with fabricator.
 - [ ] DC-link loop, three half-bridge loops and gate loops reviewed in layout.
 - [ ] No sensitive analog trace routed under/adjacent to switch-node copper.
-- [ ] Kelvin sense routing reaches shunt pads independently.
+- [x] Kelvin sense routing reaches shunt pads independently: six native copper-cluster checks PASS; [evidence](reviews/routing_completion_2026-10-10/final-kelvin.json).
 - [ ] ADC reference/decoupling and analog-ground returns reviewed.
 - [ ] Encoder RS-422 connector has ESD and selectable termination near receiver.
 - [ ] Thermal copper and via arrays reviewed for MOSFETs/regulators.
@@ -95,7 +95,7 @@ Latest OCP implementation evidence: `docs/ocp_latch_review_2026-10-09.md`.
 
 Latest physical-pin PCB audit and mechanical-hole repair: `docs/pcb_pre_sync_review_2026-10-09.md`.
 
-Latest implementation evidence and unfinished routing: `docs/pcb_repair_progress_2026-10-09.md`. Package drawings and qualifications: `docs/pcb_package_qualification_2026-10-09.md`. The selected shunt/terminal part numbers do not close the unchecked footprint, thermal or mechanical gates above.
+Historical implementation and incomplete-routing evidence: `docs/pcb_repair_progress_2026-10-09.md`. Package drawings and qualifications: `docs/pcb_package_qualification_2026-10-09.md`. The selected shunt/terminal part numbers do not close the unchecked footprint, thermal or mechanical gates above.
 
 - [x] INA241 U2/U3/U4 pin4 grounded perTI SBOSA30D Table5-1; reserved NC name does not permit floating. Latest ERC and physical/native PCB parity pass after layout-entry repair.
 
@@ -104,7 +104,7 @@ Latest implementation evidence and unfinished routing: `docs/pcb_repair_progress
 - [x] Select external F1 KLKD025.T (25A / 600VDC), required LPSM0001Z holder near source positive; remove the unqualified board-mounted 2920 fuse placeholder from the schematic. F1/J6 are off-board, not DNP and not PCB placement parts.
 - [x] J3.1 is the fused source input; native safety regression requires it to connect to Q7.5 and U18.1/.5. J10 ground, VIO and active signal pins have focused regression coverage.
 - [ ] Validate fuse/holder ambient derating, actual DC source fault current/time constant, cable ampacity, short-circuit clearing energy and startup-inrush coordination. Fuse selection alone does not establish MOSFET protection, surge protection or regenerative-energy handling.
-- [x] Earlier deferred synchronization completed after user's explicit repair request: obsoleteF1 removed, J3.1 corrected; routing remains unfinished and is not waived by parityPASS.
+- [x] Earlier deferred synchronization completed after user's explicit repair request: obsoleteF1 removed, J3.1 corrected; routing was unfinished at that synchronization stage; final zero-unconnected evidence is linked above.
 
 Fresh schematic ERC is 0 errors / 0 warnings / 0 exclusions; no ignored checks or severities changed. Full details and source evidence: `docs/schematic_optimization_2022_j10_2026-10-09.md`.
 
@@ -119,4 +119,4 @@ New [Gate A/B verification report](gate_ab_verification_2026-10-09.md) and [auto
 - [ ] **B-REGENERATION-SINK:** qualify upstream absorption and OV protection for maximum mechanical energy; the current 200uF, 1A ideal model reaches illustrative 55V from 48V in 1.4ms without a sink.
 - [ ] **B-BENCH-EVIDENCE:** power-domain partial-supply, ADC validity, six gate waveforms, dead time, OCP, thermal and ABZ signal-path evidence with serial/board revision and oscilloscope traces.
 
-Do not change these checkboxes until traceable model and bench evidence exists. This GitHub qualification PR does not change the electrical sources, PCB layout or the earlier outstanding DRC/unconnected counts.
+Do not change these checkboxes until traceable model and bench evidence exists. That earlier qualification PR did not close routing. The subsequent routing-completion evidence above supersedes its DRC/unconnected counts without closing these dynamic gates.

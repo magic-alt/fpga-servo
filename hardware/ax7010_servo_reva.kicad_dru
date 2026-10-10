@@ -42,3 +42,11 @@
 (rule "U18 internal lands"
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U18' && B.Reference == 'U18'")
   (constraint clearance (min 0.2mm)))
+
+(rule "U1 bounded pad escape"
+  (condition "A.memberOf('U1_pad_escape') && ((B.Type == 'Pad' && B.Reference == 'U1') || B.memberOf('U1_pad_escape'))")
+  (constraint clearance (min 0.25mm)))
+
+(rule "U18 bounded pad escape"
+  (condition "A.memberOf('U18_pad_escape') && ((B.Type == 'Pad' && B.Reference == 'U18') || B.memberOf('U18_pad_escape'))")
+  (constraint clearance (min 0.2mm)))

@@ -4,6 +4,7 @@ from pathlib import Path
 import argparse
 import re
 from kicad_native import extract_forms, property_value, head_string
+from check_pcb_escape import check_rules as check_escape_rules
 
 ROOT = Path(__file__).resolve().parents[1]
 LANDS = {}
@@ -66,6 +67,12 @@ def check_internal_pad_rules(text):
     """Reject scope expansion to tracks/vias/other instances or reduced minima."""
     errors = []
     rules = extract_forms(text, "rule")
+    escape_rules = [
+        r for r in rules if head_string(r.text, "rule").endswith(" bounded pad escape")
+    ]
+    if escape_rules:
+        errors.extend(check_escape_rules(text, required=False))
+    rules = [r for r in rules if r not in escape_rules]
     expected = {ref + " internal lands": ref for ref in INTERNAL_GAPS}
     names = [head_string(rule.text, "rule") for rule in rules]
     if set(names) != set(expected) or len(names) != len(expected):
