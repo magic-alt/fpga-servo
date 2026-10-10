@@ -1,0 +1,44 @@
+(version 1)
+# Package copper spacing only; external routes retain net-class clearance.
+(rule "Q1 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q1' && B.Reference == 'Q1'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q2 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q2' && B.Reference == 'Q2'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q3 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q3' && B.Reference == 'Q3'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q4 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q4' && B.Reference == 'Q4'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q5 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q5' && B.Reference == 'Q5'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q6 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q6' && B.Reference == 'Q6'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q7 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q7' && B.Reference == 'Q7'")
+  (constraint clearance (min 0.6mm)))
+(rule "Q8 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q8' && B.Reference == 'Q8'")
+  (constraint clearance (min 0.6mm)))
+(rule "U2 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U2' && B.Reference == 'U2'")
+  (constraint clearance (min 0.65mm)))
+(rule "U3 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U3' && B.Reference == 'U3'")
+  (constraint clearance (min 0.65mm)))
+(rule "U4 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U4' && B.Reference == 'U4'")
+  (constraint clearance (min 0.65mm)))
+(rule "U1 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U1' && B.Reference == 'U1'")
+  (constraint clearance (min 0.25mm)))
+(rule "U6 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U6' && B.Reference == 'U6'")
+  (constraint clearance (min 0.2mm)))
+(rule "U18 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U18' && B.Reference == 'U18'")
+  (constraint clearance (min 0.2mm)))

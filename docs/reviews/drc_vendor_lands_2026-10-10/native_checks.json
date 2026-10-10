@@ -1,0 +1,18 @@
+[
+  {
+    "check": "erc",
+    "exit_code": 0
+  },
+  {
+    "check": "drc",
+    "exit_code": 5
+  },
+  {
+    "check": "schematic_pdf",
+    "exit_code": 0
+  },
+  {
+    "check": "board_pdf",
+    "exit_code": 0
+  }
+]

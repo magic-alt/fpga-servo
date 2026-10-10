@@ -2109,7 +2109,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
 			(at 43.18 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -2437,7 +2437,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
 			(at 43.18 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -2765,7 +2765,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
 			(at 43.18 134.62 0)
 			(hide yes)
 			(show_name no)
