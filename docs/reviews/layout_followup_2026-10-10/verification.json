@@ -1,0 +1,90 @@
+{
+  "steps": [
+    {
+      "name": "bom",
+      "exit_code": 0
+    },
+    {
+      "name": "native_schematic",
+      "exit_code": 0
+    },
+    {
+      "name": "kicad_grid",
+      "exit_code": 0
+    },
+    {
+      "name": "schematic_layout",
+      "exit_code": 0
+    },
+    {
+      "name": "schematic_connectivity",
+      "exit_code": 0
+    },
+    {
+      "name": "power_wiring",
+      "exit_code": 0
+    },
+    {
+      "name": "design",
+      "exit_code": 0
+    },
+    {
+      "name": "netlist_safety",
+      "exit_code": 0
+    },
+    {
+      "name": "ocp_behavior",
+      "exit_code": 0
+    },
+    {
+      "name": "pcb_parity",
+      "exit_code": 0
+    },
+    {
+      "name": "pcb_constraints",
+      "exit_code": 0
+    },
+    {
+      "name": "adc_validity",
+      "exit_code": 0
+    },
+    {
+      "name": "adc_tests",
+      "exit_code": 0
+    },
+    {
+      "name": "tutorial_tests",
+      "exit_code": 0
+    },
+    {
+      "name": "pcb_tests",
+      "exit_code": 0
+    },
+    {
+      "name": "erc",
+      "exit_code": 0
+    },
+    {
+      "name": "drc",
+      "exit_code": 5
+    },
+    {
+      "name": "pdf",
+      "exit_code": 0
+    },
+    {
+      "name": "diff_check",
+      "exit_code": 0
+    },
+    {
+      "name": "gate_ab_tests",
+      "exit_code": 0
+    },
+    {
+      "name": "gate_runner_tests",
+      "exit_code": 0
+    }
+  ],
+  "user_project_settings_preserved": true,
+  "pcb_preserved": true
+}

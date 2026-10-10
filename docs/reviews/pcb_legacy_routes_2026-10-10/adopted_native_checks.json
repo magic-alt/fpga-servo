@@ -1,0 +1,10 @@
+[
+  {
+    "check": "erc",
+    "exit_code": 0
+  },
+  {
+    "check": "drc",
+    "exit_code": 5
+  }
+]

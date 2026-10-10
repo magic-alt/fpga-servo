@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "48V-class bus; 15..55V design window; source transient qualification required")
+		(comment 1 "24..48V operating bus; source transient / regeneration qualification OPEN")
 	)
 	(lib_symbols
 		(symbol "ax7010_servo_reva:C"
@@ -2651,7 +2651,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-8"
+		(property "Footprint" "fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm"
 			(at 88.9 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -2748,7 +2748,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 115.57 97.79 0)
 			(hide yes)
 			(show_name no)
@@ -3754,7 +3754,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 132.08 97.79 0)
 			(hide yes)
 			(show_name no)

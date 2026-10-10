@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-10",
+  "branch": "fix/adc-undervoltage-inhibit-20261010",
+  "adopted_board": "hardware/ax7010_servo_reva.kicad_pcb",
+  "native_drc": {
+    "violations": 0,
+    "unconnected": 0,
+    "schematic_parity": 0
+  },
+  "native_erc": {
+    "violations": 0
+  },
+  "physical_parity": {
+    "components": 162,
+    "nets": 169,
+    "footprints": 166
+  },
+  "kelvin_branches_passed": 6,
+  "project_checks_passed": 6,
+  "regression_tests": {
+    "vendor_lands": 6,
+    "pcb": 11,
+    "kelvin": 4,
+    "escape": 15,
+    "total": 36
+  },
+  "ocp_stable_level_scenarios_passed": 531,
+  "mechanical_outline_and_mounting_holes_preserved": true,
+  "copper_layers": 2,
+  "project_settings_unchanged": true,
+  "wide_vbus_right_angle_corners": {
+    "before": 8,
+    "after": 0
+  },
+  "new_drc_exclusions": 0,
+  "sha256": {
+    "hardware/ax7010_servo_reva.kicad_pcb": "5a83d0cbe352fc35a273143347556f10eed2327f1856d91eb6a9205ab1c23d5c",
+    "hardware/ax7010_servo_reva.kicad_dru": "39de38165404f24c2500addddc42e823a9db786102bad2efd7f9931e925370d6",
+    "hardware/ax7010_servo_reva.kicad_pro": "6f0df511b8badec38806a88a09ac2f12782fee905358862e991195e018c75139"
+  },
+  "open_gates": [
+    "S01 dynamic qualification",
+    "S09 sequencing",
+    "thermal/current capacity",
+    "return paths and switching loops",
+    "supplier and manufacturing approval",
+    "regeneration energy"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "reference": "U1",
+      "tracks": 176,
+      "pad_connected": 176,
+      "clearance": 0.25,
+      "bounds_mm": [
+        59.0,
+        67.7,
+        47.0,
+        55.0
+      ],
+      "detached_uuids": []
+    },
+    {
+      "reference": "U18",
+      "tracks": 31,
+      "pad_connected": 31,
+      "clearance": 0.2,
+      "bounds_mm": [
+        85.3,
+        90.7,
+        17.0,
+        21.0
+      ],
+      "detached_uuids": []
+    }
+  ],
+  "errors": []
+}

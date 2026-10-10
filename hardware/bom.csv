@@ -4,8 +4,8 @@ C2,1,100uF,TBD,TBD,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,100uF_100V,Fitted; ex
 C3,1,1uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,1uF_100V_FILM,Fitted; exact MPN / rating qualification open
 C4,1,100nF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,100nF_100V_C0G,Fitted; exact MPN / rating qualification open
 C5,1,10nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,10nF_VBUS_SENSE,Fitted; exact MPN / rating qualification open
-C18,1,220nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,220nF_25V_VCAP,Fitted; exact MPN / rating qualification open
-C19,1,100nF,TBD,TBD,Capacitor_SMD:C_0603_1608Metric,100nF_VS_BYPASS,Fitted; exact MPN / rating qualification open
+C18,1,220nF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,220nF_25V_VCAP,Fitted; exact MPN / rating qualification open
+C19,1,100nF,TBD,TBD,Capacitor_SMD:C_0805_2012Metric,100nF_VS_BYPASS,Fitted; exact MPN / rating qualification open
 C20,1,2.2uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,2.2uF_100V_X7R,Fitted; exact MPN / rating qualification open
 C21,1,2.2uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,2.2uF_100V_X7R,Fitted; exact MPN / rating qualification open
 C22,1,22uF,TBD,TBD,Capacitor_SMD:C_1210_3225Metric,22uF_25V_X7R,Fitted; exact MPN / rating qualification open
@@ -141,25 +141,25 @@ TP3,1,TP_12V,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact 
 TP4,1,TP_5V,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact MPN / rating qualification open
 TP5,1,ARMED,TBD,TBD,TestPoint:TestPoint_Pad_D1.5mm,See schematic,Fitted; exact MPN / rating qualification open
 U1,1,FD6288T,Fortior,FD6288T,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,See schematic,Fitted
-U2,1,INA241A2ID,Texas Instruments,INA241A2ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA241A2ID_U,Fitted
-U3,1,INA241A2ID,Texas Instruments,INA241A2ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA241A2ID_V,Fitted
-U4,1,INA241A2ID,Texas Instruments,INA241A2ID,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,INA241A2ID_W,Fitted
+U2,1,INA241A2ID,Texas Instruments,INA241A2ID,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA241A2ID_U,Fitted
+U3,1,INA241A2ID,Texas Instruments,INA241A2ID,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA241A2ID_V,Fitted
+U4,1,INA241A2ID,Texas Instruments,INA241A2ID,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA241A2ID_W,Fitted
 U6,1,ADS8588SIPM,Texas Instruments,ADS8588SIPM,Package_QFP:LQFP-64_10x10mm_P0.5mm,See schematic,Fitted
 U7,1,AM26LV32EIPWR,Texas Instruments,AM26LV32EIPWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,See schematic,Fitted
-U8,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_U,Fitted
-U9,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_V,Fitted
-U10,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,SN74LVC2G08DCUR_W,Fitted
+U8,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,SN74LVC2G08DCUR_U,Fitted
+U9,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,SN74LVC2G08DCUR_V,Fitted
+U10,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,SN74LVC2G08DCUR_W,Fitted
 U11,1,SN74LVC1G11DCKR,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,SN74LVC1G11DCKR_RUN_OK,Fitted
 U12,1,LM5164DDAR,Texas Instruments,LM5164DDAR,Package_SO:TI_SO-PowerPAD-8,See schematic,Fitted
 U13,1,TPS62901RPJR,Texas Instruments,TPS62901RPJR,fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm,5.1V nominal; external FB; forced PWM 2.5MHz; MODE=VIN,Fitted
 U15,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_HIGH,Fitted
 U16,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_LOW,Fitted
-U18,1,LM74502DDFR,Texas Instruments,LM74502DDFR,Package_TO_SOT_SMD:SOT-23-8,See schematic,Fitted
+U18,1,LM74502DDFR,Texas Instruments,LM74502DDFR,fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm,See schematic,Fitted
 U19,1,TPD6E05U06RVZR,Texas Instruments,TPD6E05U06RVZR,Package_SON:Texas_R-PUSON-N14,See schematic,Fitted
-U20,1,SN74LVC1G74,Texas Instruments,SN74LVC1G74DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,See schematic,Fitted
+U20,1,SN74LVC1G74,Texas Instruments,SN74LVC1G74DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,See schematic,Fitted
 U21,1,SN74LVC1G17,Texas Instruments,SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,See schematic,Fitted
 U22,1,SN74LVC1G14,Texas Instruments,SN74LVC1G14DBVR,Package_TO_SOT_SMD:SOT-23-5,See schematic,Fitted
 U23,1,SN74LVC1G11,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,See schematic,Fitted
 U24,1,TPS3808G33,Texas Instruments,TPS3808G33DBVR,Package_TO_SOT_SMD:SOT-23-6,CT open: 12..28ms reset recovery; VDD supplied by VIO_3V3,Fitted
 U25,1,TPS389001DSER,Texas Instruments,TPS389001DSER,fpga-servo:Texas_DSE0006A_WSON-6_1.5x1.5mm,ADC UV inhibit; 4.876V nominal falling; CT=100nF (~107ms); VDD=VIO,Fitted
-U26,1,SN74LVC3G17,Texas Instruments,SN74LVC3G17DCUR,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,See schematic,Fitted
+U26,1,SN74LVC3G17,Texas Instruments,SN74LVC3G17DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,See schematic,Fitted

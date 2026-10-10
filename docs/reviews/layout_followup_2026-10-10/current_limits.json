@@ -1,0 +1,51 @@
+{
+  "confirmed_peak_A": 20,
+  "confirmed_temperature_rise_K": 50,
+  "cooling": "forced air; airflow unspecified",
+  "encoder": "5V ABZ differential interface; 300mA proposed design allocation, not qualified output capability",
+  "continuous_rms_confirmed": true,
+  "ambient_C": 40,
+  "peak_duration_s": 30,
+  "regen_statement": "Latest user instruction cancels the brake circuit. No board brake implementation; upstream absorption not assumed. System surge/regeneration qualification remains open.",
+  "passive_only_assumptions": {
+    "rail_range_V": [
+      5.026621229738155,
+      5.17392252349624
+    ],
+    "divider_tolerance": 0.001,
+    "shunt_tolerance": 0.01,
+    "full_temperature_lifetime_ic_error_included": false
+  },
+  "ocp_passive_only": {
+    "reference_high_nominal_V": 4.8,
+    "reference_low_nominal_V": 0.3,
+    "positive_trip_nominal_A": 22.5,
+    "positive_passive_corner_A": [
+      21.951187531563026,
+      23.062477414563805
+    ],
+    "negative_abs_passive_corner_A": [
+      21.951187531563026,
+      23.06247741456381
+    ],
+    "excluded": [
+      "INA241 gain/offset/output swing and PWM common-mode recovery",
+      "TLV9024 input offset, propagation delay, output pull-up and overdrive",
+      "resistor and shunt temperature drift/assembly thermal",
+      "ADC aperture/settling/noise and PCB parasitics",
+      "fault current slope and MOSFET actual turn-off time"
+    ]
+  },
+  "positive_margin_to_20A": 1.9511875315630256,
+  "negative_margin_to_20A": 1.9511875315630256,
+  "shunt_W_at_10Arms_each": 0.5,
+  "shunt_W_at_20A_instantaneous_each": 2.0,
+  "three_phase_bridge_cold_conduction_W_if_10Arms": 1.2,
+  "two_device_path_cold_W_at_20A": 3.2,
+  "continuous_phase_rms_A": 10,
+  "peak_repeat_start_to_start_s": null,
+  "nominal_shunt_energy_J_at_20A_for_30s_each": 60,
+  "general_measured_hotspot_target_C": 90,
+  "U26_local_free_air_timing_limit_C": 85,
+  "U26_max_local_rise_at_40C_K": 45
+}

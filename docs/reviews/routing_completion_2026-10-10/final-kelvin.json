@@ -1,0 +1,113 @@
+{
+  "board": "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb",
+  "passed": true,
+  "branches": [
+    {
+      "net": "/SW_U",
+      "expected_pads": [
+        "RSH1.3",
+        "U2.8"
+      ],
+      "actual_pads": [
+        "RSH1.3",
+        "U2.8"
+      ],
+      "passed": true,
+      "copper_uuids": [
+        "4fd2ab6a-6b87-4b6a-b235-9cc44fa0e822",
+        "599e2e10-ffa0-49b3-b823-85676607ec2e",
+        "8de307b2-564b-443d-84c0-2c0af47f9252",
+        "9b0cbf73-c800-495e-8e70-f7906b6cbd01"
+      ]
+    },
+    {
+      "net": "/PH_U",
+      "expected_pads": [
+        "RSH1.4",
+        "U2.1"
+      ],
+      "actual_pads": [
+        "RSH1.4",
+        "U2.1"
+      ],
+      "passed": true,
+      "copper_uuids": [
+        "5a802b54-cc19-4b14-a18c-9fcea70b7c3b",
+        "5eea3bf9-9c9e-4085-8288-2dd04fee4e4d",
+        "9480368c-6061-4916-bdc5-a493b797069d"
+      ]
+    },
+    {
+      "net": "/SW_V",
+      "expected_pads": [
+        "RSH2.3",
+        "U3.8"
+      ],
+      "actual_pads": [
+        "RSH2.3",
+        "U3.8"
+      ],
+      "passed": true,
+      "copper_uuids": [
+        "08130658-e112-4043-92e8-b92adb8675b8",
+        "284c0f7d-e59e-44c5-bbaa-33495e8a657b",
+        "a9a8777c-0009-4395-9a8b-b91f5c8b0496",
+        "af77573e-398b-4b28-8697-784918ba6456",
+        "d643f811-9d57-4784-a028-a8cb8f34ff55"
+      ]
+    },
+    {
+      "net": "/PH_V",
+      "expected_pads": [
+        "RSH2.4",
+        "U3.1"
+      ],
+      "actual_pads": [
+        "RSH2.4",
+        "U3.1"
+      ],
+      "passed": true,
+      "copper_uuids": [
+        "0b84214d-ec19-43b4-8d6f-3bd5502ac135",
+        "55619104-3711-4f38-b997-7f2324b7c3ce",
+        "e9ed486f-aba8-4ec0-9603-24f0ad7c0166"
+      ]
+    },
+    {
+      "net": "/SW_W",
+      "expected_pads": [
+        "RSH3.3",
+        "U4.8"
+      ],
+      "actual_pads": [
+        "RSH3.3",
+        "U4.8"
+      ],
+      "passed": true,
+      "copper_uuids": [
+        "3f1c877f-9889-46ff-9acc-23a648947b44",
+        "ab2442fc-b85b-4b8e-ab85-e343e647ab75",
+        "af264aaa-fc61-4dc7-a559-73494376e577",
+        "c9f4e2f5-3536-409c-b906-7d279ceef05f"
+      ]
+    },
+    {
+      "net": "/PH_W",
+      "expected_pads": [
+        "RSH3.4",
+        "U4.1"
+      ],
+      "actual_pads": [
+        "RSH3.4",
+        "U4.1"
+      ],
+      "passed": true,
+      "copper_uuids": [
+        "49f09c98-4912-40fa-b249-4429dbd9bf1b",
+        "5bca1693-0cfa-496c-8d8d-e5629f48000e",
+        "e3a1ab2e-837e-480b-8902-7acca7bd26dd"
+      ]
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,232 @@
+[
+  {
+    "reference": "U9",
+    "pads": [
+      {
+        "pin": "1",
+        "net": "/PWM_VH",
+        "uuid": "6ee020ed-7b43-459d-ae7d-f42073ca727c"
+      },
+      {
+        "pin": "2",
+        "net": "/Gate Driver {slash} Inverter/RUN_OK",
+        "uuid": "2f47fbab-ce05-42de-8907-75cfdc417082"
+      },
+      {
+        "pin": "3",
+        "net": "/Gate Driver {slash} Inverter/LIN_V_SAFE",
+        "uuid": "5318378f-c553-42b3-af89-67dc2fce82c7"
+      },
+      {
+        "pin": "4",
+        "net": "/GND",
+        "uuid": "d94f13a5-8e4d-460c-b496-42e69258f950"
+      },
+      {
+        "pin": "5",
+        "net": "/PWM_VL",
+        "uuid": "51f0ae27-6758-4794-a264-376c34a8db5c"
+      },
+      {
+        "pin": "6",
+        "net": "/Gate Driver {slash} Inverter/RUN_OK",
+        "uuid": "b4976861-a7c3-4730-b573-4d7b247ce0e6"
+      },
+      {
+        "pin": "7",
+        "net": "/Gate Driver {slash} Inverter/HIN_V_SAFE",
+        "uuid": "0d0a716f-ed97-4ae3-a212-5bb1ba07d9d7"
+      },
+      {
+        "pin": "8",
+        "net": "/VIO_3V3",
+        "uuid": "2b400c7a-46a8-48e2-bf7e-01954d387d08"
+      }
+    ],
+    "new_footprint": "fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm"
+  },
+  {
+    "reference": "U20",
+    "pads": [
+      {
+        "pin": "1",
+        "net": "/OCP hardware latch/CLEAR_CLK",
+        "uuid": "91d519d7-4d9d-4484-895e-22bf27560232"
+      },
+      {
+        "pin": "2",
+        "net": "/OCP hardware latch/DISABLED",
+        "uuid": "5b624fe2-9b61-43ef-8382-7d7cb550e702"
+      },
+      {
+        "pin": "3",
+        "net": "unconnected-(U20-~{Q}-Pad3)",
+        "uuid": "718cbb1c-4689-49f4-b8ff-e4b7c7aeb63c"
+      },
+      {
+        "pin": "4",
+        "net": "/GND",
+        "uuid": "0af3dca9-425c-488d-895d-796f7a52c92a"
+      },
+      {
+        "pin": "5",
+        "net": "/ARMED",
+        "uuid": "7e371025-29d3-4fb1-8446-42770f66f86c"
+      },
+      {
+        "pin": "6",
+        "net": "/OCP hardware latch/HEALTHY_N",
+        "uuid": "0867e623-bf24-430a-a962-03002b650a07"
+      },
+      {
+        "pin": "7",
+        "net": "/VIO_3V3",
+        "uuid": "d3174c32-c61c-4dbe-9a1e-47080ff49714"
+      },
+      {
+        "pin": "8",
+        "net": "/VIO_3V3",
+        "uuid": "baaed966-d0eb-4f8f-b209-7432459bbebc"
+      }
+    ],
+    "new_footprint": "fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm"
+  },
+  {
+    "reference": "U8",
+    "pads": [
+      {
+        "pin": "1",
+        "net": "/PWM_UH",
+        "uuid": "d37de79b-f9a0-4d82-a6ae-960f0779caa4"
+      },
+      {
+        "pin": "2",
+        "net": "/Gate Driver {slash} Inverter/RUN_OK",
+        "uuid": "4e261d37-f9b7-4a6d-ae79-8d70b6fbc941"
+      },
+      {
+        "pin": "3",
+        "net": "/Gate Driver {slash} Inverter/LIN_U_SAFE",
+        "uuid": "41f30005-2a76-4a5c-a5d2-725c3c3a93ad"
+      },
+      {
+        "pin": "4",
+        "net": "/GND",
+        "uuid": "c785c753-d32b-4630-80de-6c8e2280b464"
+      },
+      {
+        "pin": "5",
+        "net": "/PWM_UL",
+        "uuid": "44a95d55-d51e-4ab4-82ae-0dd28894732c"
+      },
+      {
+        "pin": "6",
+        "net": "/Gate Driver {slash} Inverter/RUN_OK",
+        "uuid": "26a01b64-decc-4d4f-85da-a6f105f0963b"
+      },
+      {
+        "pin": "7",
+        "net": "/Gate Driver {slash} Inverter/HIN_U_SAFE",
+        "uuid": "3aac7680-4e76-4083-8162-bec94a7a4c11"
+      },
+      {
+        "pin": "8",
+        "net": "/VIO_3V3",
+        "uuid": "2cfc737b-530b-4063-9466-674c9d1876ec"
+      }
+    ],
+    "new_footprint": "fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm"
+  },
+  {
+    "reference": "U26",
+    "pads": [
+      {
+        "pin": "1",
+        "net": "/OCP hardware latch/POR_N",
+        "uuid": "358a3cb9-93a2-4f1d-b90c-5a96a736cba4"
+      },
+      {
+        "pin": "2",
+        "net": "/PWR_READY",
+        "uuid": "5042d350-6059-4858-b0f2-0ef92e525bf0"
+      },
+      {
+        "pin": "3",
+        "net": "/OCP_N",
+        "uuid": "07529657-b774-40d5-9a03-316ab4f04381"
+      },
+      {
+        "pin": "4",
+        "net": "/GND",
+        "uuid": "d59c002d-3e9c-4deb-b76c-bbbd905a37d9"
+      },
+      {
+        "pin": "5",
+        "net": "/OCP hardware latch/OCP_OK",
+        "uuid": "eecd558d-cd41-4432-9deb-5870714e5285"
+      },
+      {
+        "pin": "6",
+        "net": "/PWR_GOOD",
+        "uuid": "a6f140e9-0c18-4519-ac2d-c96d9bb8c24a"
+      },
+      {
+        "pin": "7",
+        "net": "/OCP hardware latch/POR_OK",
+        "uuid": "91a20c03-9ba8-40c3-9af0-bcd62c462ce3"
+      },
+      {
+        "pin": "8",
+        "net": "/VIO_3V3",
+        "uuid": "23ebd1e3-1c9a-4859-a3da-d1ca997924ab"
+      }
+    ],
+    "new_footprint": "fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm"
+  },
+  {
+    "reference": "U10",
+    "pads": [
+      {
+        "pin": "1",
+        "net": "/PWM_WH",
+        "uuid": "b7799307-952b-4dd7-9233-86405f37fc61"
+      },
+      {
+        "pin": "2",
+        "net": "/Gate Driver {slash} Inverter/RUN_OK",
+        "uuid": "18522d1e-2df4-4404-b31c-58f4d9bb4e34"
+      },
+      {
+        "pin": "3",
+        "net": "/Gate Driver {slash} Inverter/LIN_W_SAFE",
+        "uuid": "72dca741-e028-4f09-83f7-95257a38b6d7"
+      },
+      {
+        "pin": "4",
+        "net": "/GND",
+        "uuid": "e06ea765-c4aa-48f7-9c86-f634c531ad6a"
+      },
+      {
+        "pin": "5",
+        "net": "/PWM_WL",
+        "uuid": "14505c7b-cc89-4108-8b97-00ce17346dae"
+      },
+      {
+        "pin": "6",
+        "net": "/Gate Driver {slash} Inverter/RUN_OK",
+        "uuid": "3071da95-893a-4b1a-90b8-fb14b29d396d"
+      },
+      {
+        "pin": "7",
+        "net": "/Gate Driver {slash} Inverter/HIN_W_SAFE",
+        "uuid": "2719fad4-37b4-42cd-8246-caab8eeace3b"
+      },
+      {
+        "pin": "8",
+        "net": "/VIO_3V3",
+        "uuid": "490824a0-bfa3-4fc1-8aa9-7e073ecbc8e4"
+      }
+    ],
+    "new_footprint": "fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm"
+  }
+]

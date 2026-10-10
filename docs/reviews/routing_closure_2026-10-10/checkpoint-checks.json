@@ -1,0 +1,92 @@
+[
+  {
+    "check": "check_native_schematic.py",
+    "code": 0,
+    "stdout": "NATIVE SCHEMATIC CHECK PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_kicad_grid.py",
+    "code": 0,
+    "stdout": "KICAD GRID CHECK PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_schematic_layout.py",
+    "code": 0,
+    "stdout": "SCHEMATIC LAYOUT CHECK PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_schematic_connectivity.py",
+    "code": 0,
+    "stdout": "SCHEMATIC CONNECTIVITY CHECK PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_power_wiring.py",
+    "code": 0,
+    "stdout": "POWER WIRING CHECK PASSED: every power graphic and child port reaches a real pin by visible wires\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_design.py",
+    "code": 0,
+    "stdout": "DESIGN CHECK PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_vendor_lands.py",
+    "code": 0,
+    "stdout": "TI LANDS / INTERNAL PAD RULES PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_pcb_kelvin.py",
+    "code": 0,
+    "stdout": "KELVIN TOPOLOGY PASSED: 6/6 isolated sense branches\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "test_vendor_lands.py",
+    "code": 0,
+    "stdout": "",
+    "stderr": "......\r\n----------------------------------------------------------------------\r\nRan 6 tests in 0.103s\r\n\r\nOK\r\n"
+  },
+  {
+    "check": "test_pcb_kelvin.py",
+    "code": 0,
+    "stdout": "",
+    "stderr": "....\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.699s\r\n\r\nOK\r\n"
+  },
+  {
+    "check": "test_pcb_checks.py",
+    "code": 0,
+    "stdout": "",
+    "stderr": "...........\r\n----------------------------------------------------------------------\r\nRan 11 tests in 0.012s\r\n\r\nOK\r\n"
+  },
+  {
+    "check": "check_netlist_safety.py",
+    "code": 0,
+    "stdout": "NETLIST SAFETY CHECK PASSED: 162 components / 169 nets\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_ocp_behavior.py",
+    "code": 0,
+    "stdout": "NETLIST SAFETY CHECK PASSED: 162 components / 169 nets\r\nOCP DIGITAL BEHAVIOR CHECK PASSED: 531 scenarios; stable levels only\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_pcb_constraints.py",
+    "code": 0,
+    "stdout": "PCB CONSTRAINTS PASSED\r\n",
+    "stderr": ""
+  },
+  {
+    "check": "check_pcb_parity.py",
+    "code": 0,
+    "stdout": "PCB PARITY PASSED: 162 components / 169 nets / 166 footprints\r\n",
+    "stderr": ""
+  }
+]

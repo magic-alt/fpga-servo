@@ -1,0 +1,2524 @@
+[
+  {
+    "reference": "U26",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U26 的焊盘 1 [/OCP hardware latch/POR_N]",
+          "pos": {
+            "x": 49.6,
+            "y": 34.25
+          },
+          "uuid": "358a3cb9-93a2-4f1d-b90c-5a96a736cba4"
+        },
+        {
+          "description": "F.Cu 上 U26 的焊盘 2 [/PWR_READY]",
+          "pos": {
+            "x": 49.6,
+            "y": 34.75
+          },
+          "uuid": "5042d350-6059-4858-b0f2-0ef92e525bf0"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U26",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U26 的焊盘 2 [/PWR_READY]",
+          "pos": {
+            "x": 49.6,
+            "y": 34.75
+          },
+          "uuid": "5042d350-6059-4858-b0f2-0ef92e525bf0"
+        },
+        {
+          "description": "F.Cu 上 U26 的焊盘 3 [/OCP_N]",
+          "pos": {
+            "x": 49.6,
+            "y": 35.25
+          },
+          "uuid": "07529657-b774-40d5-9a03-316ab4f04381"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U26",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U26 的焊盘 3 [/OCP_N]",
+          "pos": {
+            "x": 49.6,
+            "y": 35.25
+          },
+          "uuid": "07529657-b774-40d5-9a03-316ab4f04381"
+        },
+        {
+          "description": "F.Cu 上 U26 的焊盘 4 [/GND]",
+          "pos": {
+            "x": 49.6,
+            "y": 35.75
+          },
+          "uuid": "d59c002d-3e9c-4deb-b76c-bbbd905a37d9"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U26",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U26 的焊盘 5 [/OCP hardware latch/OCP_OK]",
+          "pos": {
+            "x": 52.4,
+            "y": 35.75
+          },
+          "uuid": "eecd558d-cd41-4432-9deb-5870714e5285"
+        },
+        {
+          "description": "F.Cu 上 U26 的焊盘 6 [/PWR_GOOD]",
+          "pos": {
+            "x": 52.4,
+            "y": 35.25
+          },
+          "uuid": "a6f140e9-0c18-4519-ac2d-c96d9bb8c24a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U26",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U26 的焊盘 6 [/PWR_GOOD]",
+          "pos": {
+            "x": 52.4,
+            "y": 35.25
+          },
+          "uuid": "a6f140e9-0c18-4519-ac2d-c96d9bb8c24a"
+        },
+        {
+          "description": "F.Cu 上 U26 的焊盘 7 [/OCP hardware latch/POR_OK]",
+          "pos": {
+            "x": 52.4,
+            "y": 34.75
+          },
+          "uuid": "91a20c03-9ba8-40c3-9af0-bcd62c462ce3"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U26",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U26 的焊盘 7 [/OCP hardware latch/POR_OK]",
+          "pos": {
+            "x": 52.4,
+            "y": 34.75
+          },
+          "uuid": "91a20c03-9ba8-40c3-9af0-bcd62c462ce3"
+        },
+        {
+          "description": "F.Cu 上 U26 的焊盘 8 [/VIO_3V3]",
+          "pos": {
+            "x": 52.4,
+            "y": 34.25
+          },
+          "uuid": "23ebd1e3-1c9a-4859-a3da-d1ca997924ab"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q1 的焊盘 1 [/SW_U]",
+          "pos": {
+            "x": 74.825,
+            "y": 26.905
+          },
+          "uuid": "2db4d89e-3f45-410b-931d-dae76b839d57"
+        },
+        {
+          "description": "F.Cu 上 Q1 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 25.0
+          },
+          "uuid": "54c945bb-2a51-4fdf-bc61-618104022a2a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q1 的焊盘 2 [/SW_U]",
+          "pos": {
+            "x": 74.825,
+            "y": 25.635
+          },
+          "uuid": "45005bd7-031f-490e-871c-b7389839abc4"
+        },
+        {
+          "description": "F.Cu 上 Q1 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 25.0
+          },
+          "uuid": "54c945bb-2a51-4fdf-bc61-618104022a2a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6200 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q1 的焊盘 3 [/SW_U]",
+          "pos": {
+            "x": 74.825,
+            "y": 24.365
+          },
+          "uuid": "30c1a923-7c60-4eaf-9b83-3f2cdb509236"
+        },
+        {
+          "description": "F.Cu 上 Q1 的焊盘 4 [Net-(Q1-G)]",
+          "pos": {
+            "x": 74.825,
+            "y": 23.095
+          },
+          "uuid": "3be7c848-ea26-43c9-92d9-08f61c4e733b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q1 的焊盘 3 [/SW_U]",
+          "pos": {
+            "x": 74.825,
+            "y": 24.365
+          },
+          "uuid": "30c1a923-7c60-4eaf-9b83-3f2cdb509236"
+        },
+        {
+          "description": "F.Cu 上 Q1 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 25.0
+          },
+          "uuid": "54c945bb-2a51-4fdf-bc61-618104022a2a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q1 的焊盘 4 [Net-(Q1-G)]",
+          "pos": {
+            "x": 74.825,
+            "y": 23.095
+          },
+          "uuid": "3be7c848-ea26-43c9-92d9-08f61c4e733b"
+        },
+        {
+          "description": "F.Cu 上 Q1 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 25.0
+          },
+          "uuid": "54c945bb-2a51-4fdf-bc61-618104022a2a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U9",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U9 的焊盘 1 [/PWM_VH]",
+          "pos": {
+            "x": 55.6,
+            "y": 38.25
+          },
+          "uuid": "6ee020ed-7b43-459d-ae7d-f42073ca727c"
+        },
+        {
+          "description": "F.Cu 上 U9 的焊盘 2 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 55.6,
+            "y": 38.75
+          },
+          "uuid": "2f47fbab-ce05-42de-8907-75cfdc417082"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U9",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U9 的焊盘 2 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 55.6,
+            "y": 38.75
+          },
+          "uuid": "2f47fbab-ce05-42de-8907-75cfdc417082"
+        },
+        {
+          "description": "F.Cu 上 U9 的焊盘 3 [/Gate Driver / Inverter/LIN_V_SAFE]",
+          "pos": {
+            "x": 55.6,
+            "y": 39.25
+          },
+          "uuid": "5318378f-c553-42b3-af89-67dc2fce82c7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q3 的焊盘 1 [/SW_V]",
+          "pos": {
+            "x": 74.825,
+            "y": 48.905
+          },
+          "uuid": "f0b658b2-4b2a-4d27-adb8-c668c0508a24"
+        },
+        {
+          "description": "F.Cu 上 Q3 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 47.0
+          },
+          "uuid": "ad06cb3d-1b6f-449a-9c86-31803718d5ae"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U4",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6700 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U4 的焊盘 1 [/PH_W]",
+          "pos": {
+            "x": 98.475,
+            "y": 83.905
+          },
+          "uuid": "0dedc4f0-68a7-4bb1-9577-30e855564bf7"
+        },
+        {
+          "description": "F.Cu 上 U4 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 98.475,
+            "y": 82.635
+          },
+          "uuid": "d48a17ff-537a-4929-a597-a3c86d979340"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q3 的焊盘 2 [/SW_V]",
+          "pos": {
+            "x": 74.825,
+            "y": 47.635
+          },
+          "uuid": "69ad9bf6-c611-4d07-96ec-0ad1d77aeeaf"
+        },
+        {
+          "description": "F.Cu 上 Q3 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 47.0
+          },
+          "uuid": "ad06cb3d-1b6f-449a-9c86-31803718d5ae"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U9",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U9 的焊盘 3 [/Gate Driver / Inverter/LIN_V_SAFE]",
+          "pos": {
+            "x": 55.6,
+            "y": 39.25
+          },
+          "uuid": "5318378f-c553-42b3-af89-67dc2fce82c7"
+        },
+        {
+          "description": "F.Cu 上 U9 的焊盘 4 [/GND]",
+          "pos": {
+            "x": 55.6,
+            "y": 39.75
+          },
+          "uuid": "d94f13a5-8e4d-460c-b496-42e69258f950"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U18",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U18 的焊盘 1 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 86.8625,
+            "y": 18.025
+          },
+          "uuid": "61c08ac2-c4f3-4996-a811-e8b46854dfac"
+        },
+        {
+          "description": "F.Cu 上 U18 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 86.8625,
+            "y": 18.675
+          },
+          "uuid": "13c2d0c3-881f-41fc-90b6-17b4f249b68d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6200 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q3 的焊盘 3 [/SW_V]",
+          "pos": {
+            "x": 74.825,
+            "y": 46.365
+          },
+          "uuid": "9aba259c-f6bd-482a-8053-be54d7ded4f6"
+        },
+        {
+          "description": "F.Cu 上 Q3 的焊盘 4 [Net-(Q3-G)]",
+          "pos": {
+            "x": 74.825,
+            "y": 45.095
+          },
+          "uuid": "59ad15d9-78d6-486e-943c-982fe1525e1e"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q3 的焊盘 3 [/SW_V]",
+          "pos": {
+            "x": 74.825,
+            "y": 46.365
+          },
+          "uuid": "9aba259c-f6bd-482a-8053-be54d7ded4f6"
+        },
+        {
+          "description": "F.Cu 上 Q3 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 47.0
+          },
+          "uuid": "ad06cb3d-1b6f-449a-9c86-31803718d5ae"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U9",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U9 的焊盘 5 [/PWM_VL]",
+          "pos": {
+            "x": 58.4,
+            "y": 39.75
+          },
+          "uuid": "51f0ae27-6758-4794-a264-376c34a8db5c"
+        },
+        {
+          "description": "F.Cu 上 U9 的焊盘 6 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 58.4,
+            "y": 39.25
+          },
+          "uuid": "b4976861-a7c3-4730-b573-4d7b247ce0e6"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U4",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6700 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U4 的焊盘 7 [/VA_5V]",
+          "pos": {
+            "x": 93.525,
+            "y": 82.635
+          },
+          "uuid": "6eff71dc-3ebf-4562-9035-a20ca2d57457"
+        },
+        {
+          "description": "F.Cu 上 U4 的焊盘 8 [/SW_W]",
+          "pos": {
+            "x": 93.525,
+            "y": 83.905
+          },
+          "uuid": "a33fcf91-4968-4d22-b3d0-bf2db6a7d1d2"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q3 的焊盘 4 [Net-(Q3-G)]",
+          "pos": {
+            "x": 74.825,
+            "y": 45.095
+          },
+          "uuid": "59ad15d9-78d6-486e-943c-982fe1525e1e"
+        },
+        {
+          "description": "F.Cu 上 Q3 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 47.0
+          },
+          "uuid": "ad06cb3d-1b6f-449a-9c86-31803718d5ae"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U9",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U9 的焊盘 6 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 58.4,
+            "y": 39.25
+          },
+          "uuid": "b4976861-a7c3-4730-b573-4d7b247ce0e6"
+        },
+        {
+          "description": "F.Cu 上 U9 的焊盘 7 [/Gate Driver / Inverter/HIN_V_SAFE]",
+          "pos": {
+            "x": 58.4,
+            "y": 38.75
+          },
+          "uuid": "0d0a716f-ed97-4ae3-a212-5bb1ba07d9d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U18",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U18 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 86.8625,
+            "y": 18.675
+          },
+          "uuid": "13c2d0c3-881f-41fc-90b6-17b4f249b68d"
+        },
+        {
+          "description": "F.Cu 上 U18 的焊盘 3 [unconnected-(U18-NC-Pad3)]",
+          "pos": {
+            "x": 86.8625,
+            "y": 19.325
+          },
+          "uuid": "2d2818bc-287a-4b4b-9e6f-8082009fe91b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U9",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U9 的焊盘 7 [/Gate Driver / Inverter/HIN_V_SAFE]",
+          "pos": {
+            "x": 58.4,
+            "y": 38.75
+          },
+          "uuid": "0d0a716f-ed97-4ae3-a212-5bb1ba07d9d7"
+        },
+        {
+          "description": "F.Cu 上 U9 的焊盘 8 [/VIO_3V3]",
+          "pos": {
+            "x": 58.4,
+            "y": 38.25
+          },
+          "uuid": "2b400c7a-46a8-48e2-bf7e-01954d387d08"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q2",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q2 的焊盘 1 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 32.095
+          },
+          "uuid": "a141a85c-e2a6-4764-9124-2932364247a3"
+        },
+        {
+          "description": "F.Cu 上 Q2 的焊盘 5 [/SW_U]",
+          "pos": {
+            "x": 72.675,
+            "y": 34.0
+          },
+          "uuid": "69756c20-69b7-40ea-a45f-bf1c6a59f2b3"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U18",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U18 的焊盘 3 [unconnected-(U18-NC-Pad3)]",
+          "pos": {
+            "x": 86.8625,
+            "y": 19.325
+          },
+          "uuid": "2d2818bc-287a-4b4b-9e6f-8082009fe91b"
+        },
+        {
+          "description": "F.Cu 上 U18 的焊盘 4 [/DC Input & Protection/VCAP_RPP]",
+          "pos": {
+            "x": 86.8625,
+            "y": 19.975
+          },
+          "uuid": "e0e91ac8-ca40-46f9-a7d1-b29c3d27b517"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q2",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q2 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 33.365
+          },
+          "uuid": "5d75c70d-232f-466f-9157-8c3fbbe957da"
+        },
+        {
+          "description": "F.Cu 上 Q2 的焊盘 5 [/SW_U]",
+          "pos": {
+            "x": 72.675,
+            "y": 34.0
+          },
+          "uuid": "69756c20-69b7-40ea-a45f-bf1c6a59f2b3"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q5",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q5 的焊盘 1 [/SW_W]",
+          "pos": {
+            "x": 74.825,
+            "y": 70.905
+          },
+          "uuid": "df84c7c6-6179-40f5-a58d-60145346a59f"
+        },
+        {
+          "description": "F.Cu 上 Q5 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 69.0
+          },
+          "uuid": "db203725-ea95-470c-a5bd-49d042874a6b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U20",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U20 的焊盘 1 [/OCP hardware latch/CLEAR_CLK]",
+          "pos": {
+            "x": 43.6,
+            "y": 40.25
+          },
+          "uuid": "91d519d7-4d9d-4484-895e-22bf27560232"
+        },
+        {
+          "description": "F.Cu 上 U20 的焊盘 2 [/OCP hardware latch/DISABLED]",
+          "pos": {
+            "x": 43.6,
+            "y": 40.75
+          },
+          "uuid": "5b624fe2-9b61-43ef-8382-7d7cb550e702"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q2",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q2 的焊盘 3 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 34.635
+          },
+          "uuid": "c66c6ebf-0e51-42cf-8b4f-4466ed623104"
+        },
+        {
+          "description": "F.Cu 上 Q2 的焊盘 5 [/SW_U]",
+          "pos": {
+            "x": 72.675,
+            "y": 34.0
+          },
+          "uuid": "69756c20-69b7-40ea-a45f-bf1c6a59f2b3"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q5",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q5 的焊盘 2 [/SW_W]",
+          "pos": {
+            "x": 74.825,
+            "y": 69.635
+          },
+          "uuid": "f5679735-fe38-462d-8614-d3c1a77facb6"
+        },
+        {
+          "description": "F.Cu 上 Q5 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 69.0
+          },
+          "uuid": "db203725-ea95-470c-a5bd-49d042874a6b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q2",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q2 的焊盘 4 [Net-(Q2-G)]",
+          "pos": {
+            "x": 69.175,
+            "y": 35.905
+          },
+          "uuid": "4afc9177-f5df-4297-931b-188608a6ab5d"
+        },
+        {
+          "description": "F.Cu 上 Q2 的焊盘 5 [/SW_U]",
+          "pos": {
+            "x": 72.675,
+            "y": 34.0
+          },
+          "uuid": "69756c20-69b7-40ea-a45f-bf1c6a59f2b3"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U18",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U18 的焊盘 5 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 89.1375,
+            "y": 19.975
+          },
+          "uuid": "9a1a70b4-c2c5-4ec7-8996-6d03314131ad"
+        },
+        {
+          "description": "F.Cu 上 U18 的焊盘 6 [/DC Input & Protection/RPP_GATE]",
+          "pos": {
+            "x": 89.1375,
+            "y": 19.325
+          },
+          "uuid": "5041c340-f519-465c-a856-eb3f4b86932f"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q5",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q5 的焊盘 3 [/SW_W]",
+          "pos": {
+            "x": 74.825,
+            "y": 68.365
+          },
+          "uuid": "efcf6df1-bee7-4f70-8429-4fc413549c73"
+        },
+        {
+          "description": "F.Cu 上 Q5 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 69.0
+          },
+          "uuid": "db203725-ea95-470c-a5bd-49d042874a6b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U20",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U20 的焊盘 2 [/OCP hardware latch/DISABLED]",
+          "pos": {
+            "x": 43.6,
+            "y": 40.75
+          },
+          "uuid": "5b624fe2-9b61-43ef-8382-7d7cb550e702"
+        },
+        {
+          "description": "F.Cu 上 U20 的焊盘 3 [unconnected-(U20-~{Q}-Pad3)]",
+          "pos": {
+            "x": 43.6,
+            "y": 41.25
+          },
+          "uuid": "718cbb1c-4689-49f4-b8ff-e4b7c7aeb63c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q5",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6200 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q5 的焊盘 3 [/SW_W]",
+          "pos": {
+            "x": 74.825,
+            "y": 68.365
+          },
+          "uuid": "efcf6df1-bee7-4f70-8429-4fc413549c73"
+        },
+        {
+          "description": "F.Cu 上 Q5 的焊盘 4 [Net-(Q5-G)]",
+          "pos": {
+            "x": 74.825,
+            "y": 67.095
+          },
+          "uuid": "15a4b367-8806-46e1-8231-5544b6c71989"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U18",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U18 的焊盘 6 [/DC Input & Protection/RPP_GATE]",
+          "pos": {
+            "x": 89.1375,
+            "y": 19.325
+          },
+          "uuid": "5041c340-f519-465c-a856-eb3f4b86932f"
+        },
+        {
+          "description": "F.Cu 上 U18 的焊盘 7 [/GND]",
+          "pos": {
+            "x": 89.1375,
+            "y": 18.675
+          },
+          "uuid": "45c2b2b3-a04b-4d21-8d52-88d6812f1cf9"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q5",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q5 的焊盘 4 [Net-(Q5-G)]",
+          "pos": {
+            "x": 74.825,
+            "y": 67.095
+          },
+          "uuid": "15a4b367-8806-46e1-8231-5544b6c71989"
+        },
+        {
+          "description": "F.Cu 上 Q5 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 71.325,
+            "y": 69.0
+          },
+          "uuid": "db203725-ea95-470c-a5bd-49d042874a6b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U20",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U20 的焊盘 3 [unconnected-(U20-~{Q}-Pad3)]",
+          "pos": {
+            "x": 43.6,
+            "y": 41.25
+          },
+          "uuid": "718cbb1c-4689-49f4-b8ff-e4b7c7aeb63c"
+        },
+        {
+          "description": "F.Cu 上 U20 的焊盘 4 [/GND]",
+          "pos": {
+            "x": 43.6,
+            "y": 41.75
+          },
+          "uuid": "0af3dca9-425c-488d-895d-796f7a52c92a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U18",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U18 的焊盘 7 [/GND]",
+          "pos": {
+            "x": 89.1375,
+            "y": 18.675
+          },
+          "uuid": "45c2b2b3-a04b-4d21-8d52-88d6812f1cf9"
+        },
+        {
+          "description": "F.Cu 上 U18 的焊盘 8 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 89.1375,
+            "y": 18.025
+          },
+          "uuid": "03ba9c90-e36c-4b91-81ca-1234f7f6a241"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U20",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U20 的焊盘 5 [/ARMED]",
+          "pos": {
+            "x": 46.4,
+            "y": 41.75
+          },
+          "uuid": "7e371025-29d3-4fb1-8446-42770f66f86c"
+        },
+        {
+          "description": "F.Cu 上 U20 的焊盘 6 [/OCP hardware latch/HEALTHY_N]",
+          "pos": {
+            "x": 46.4,
+            "y": 41.25
+          },
+          "uuid": "0867e623-bf24-430a-a962-03002b650a07"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U20",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U20 的焊盘 6 [/OCP hardware latch/HEALTHY_N]",
+          "pos": {
+            "x": 46.4,
+            "y": 41.25
+          },
+          "uuid": "0867e623-bf24-430a-a962-03002b650a07"
+        },
+        {
+          "description": "F.Cu 上 U20 的焊盘 7 [/VIO_3V3]",
+          "pos": {
+            "x": 46.4,
+            "y": 40.75
+          },
+          "uuid": "d3174c32-c61c-4dbe-9a1e-47080ff49714"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q8",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q8 的焊盘 1 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 106.175,
+            "y": 18.095
+          },
+          "uuid": "3269846e-a290-4826-ba6b-8960ef24baee"
+        },
+        {
+          "description": "F.Cu 上 Q8 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 109.675,
+            "y": 20.0
+          },
+          "uuid": "9c8ee7ac-5f20-4e59-8233-a3891bc1db79"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.2500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U1 的焊盘 11 [/Gate Driver / Inverter/GL_U]",
+          "pos": {
+            "x": 65.8625,
+            "y": 53.925
+          },
+          "uuid": "5af9f0a0-ca4b-4db0-a93e-a16545d9d961"
+        },
+        {
+          "description": "F.Cu 上 U1 的焊盘 12 [/SW_W]",
+          "pos": {
+            "x": 65.8625,
+            "y": 53.275
+          },
+          "uuid": "33134901-376d-4930-8fd1-41897642d911"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.2500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U1 的焊盘 12 [/SW_W]",
+          "pos": {
+            "x": 65.8625,
+            "y": 53.275
+          },
+          "uuid": "33134901-376d-4930-8fd1-41897642d911"
+        },
+        {
+          "description": "F.Cu 上 U1 的焊盘 13 [/Gate Driver / Inverter/GH_W]",
+          "pos": {
+            "x": 65.8625,
+            "y": 52.625
+          },
+          "uuid": "f1566c7f-fca5-4edf-a093-03fd29175871"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.2500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U1 的焊盘 14 [/Gate Driver / Inverter/BST_W]",
+          "pos": {
+            "x": 65.8625,
+            "y": 51.975
+          },
+          "uuid": "28eac2ca-4bef-4fbf-805f-723b169dbd13"
+        },
+        {
+          "description": "F.Cu 上 U1 的焊盘 15 [/SW_V]",
+          "pos": {
+            "x": 65.8625,
+            "y": 51.325
+          },
+          "uuid": "0da9fedf-1f0d-4e44-bb40-daa2121d7f76"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.2500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U1 的焊盘 15 [/SW_V]",
+          "pos": {
+            "x": 65.8625,
+            "y": 51.325
+          },
+          "uuid": "0da9fedf-1f0d-4e44-bb40-daa2121d7f76"
+        },
+        {
+          "description": "F.Cu 上 U1 的焊盘 16 [/Gate Driver / Inverter/GH_V]",
+          "pos": {
+            "x": 65.8625,
+            "y": 50.675
+          },
+          "uuid": "48918947-8b6b-48a2-825a-189954e61a18"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 1 [/VA_5V]",
+          "pos": {
+            "x": 40.325,
+            "y": 70.25
+          },
+          "uuid": "9fa7b977-8ca7-4e04-b614-6c34ced0be62"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 40.325,
+            "y": 70.75
+          },
+          "uuid": "6ac00e22-d77a-4055-8ff9-d42599874a75"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.2500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U1 的焊盘 17 [/Gate Driver / Inverter/BST_V]",
+          "pos": {
+            "x": 65.8625,
+            "y": 50.025
+          },
+          "uuid": "ee9c2fee-efa4-442a-9414-293f1eaafa2a"
+        },
+        {
+          "description": "F.Cu 上 U1 的焊盘 18 [/SW_U]",
+          "pos": {
+            "x": 65.8625,
+            "y": 49.375
+          },
+          "uuid": "67ddb773-b18f-4ddf-a388-012e6d1c510e"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U1",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.2500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U1 的焊盘 18 [/SW_U]",
+          "pos": {
+            "x": 65.8625,
+            "y": 49.375
+          },
+          "uuid": "67ddb773-b18f-4ddf-a388-012e6d1c510e"
+        },
+        {
+          "description": "F.Cu 上 U1 的焊盘 19 [/Gate Driver / Inverter/GH_U]",
+          "pos": {
+            "x": 65.8625,
+            "y": 48.725
+          },
+          "uuid": "aeb95024-f0e2-487c-bd02-2dee295063b7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q8",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q8 的焊盘 2 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 106.175,
+            "y": 19.365
+          },
+          "uuid": "5a018e77-d354-4821-af69-4bc1c6e1ef24"
+        },
+        {
+          "description": "F.Cu 上 Q8 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 109.675,
+            "y": 20.0
+          },
+          "uuid": "9c8ee7ac-5f20-4e59-8233-a3891bc1db79"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q8",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6200 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q8 的焊盘 3 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 106.175,
+            "y": 20.635
+          },
+          "uuid": "66c08a7a-4056-474c-9f14-7ee13ac1047e"
+        },
+        {
+          "description": "F.Cu 上 Q8 的焊盘 4 [/DC Input & Protection/RPP_GATE]",
+          "pos": {
+            "x": 106.175,
+            "y": 21.905
+          },
+          "uuid": "002c7c61-fd3e-4d35-bac6-6c76343b5370"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q8",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q8 的焊盘 3 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 106.175,
+            "y": 20.635
+          },
+          "uuid": "66c08a7a-4056-474c-9f14-7ee13ac1047e"
+        },
+        {
+          "description": "F.Cu 上 Q8 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 109.675,
+            "y": 20.0
+          },
+          "uuid": "9c8ee7ac-5f20-4e59-8233-a3891bc1db79"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6700 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U3 的焊盘 1 [/PH_V]",
+          "pos": {
+            "x": 98.475,
+            "y": 61.905
+          },
+          "uuid": "0e3e3ee2-9566-4c39-b0a3-4b1e0b7e35e2"
+        },
+        {
+          "description": "F.Cu 上 U3 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 98.475,
+            "y": 60.635
+          },
+          "uuid": "2ae5eac1-1fdb-4e09-8f4c-5b7f72aa5120"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q8",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q8 的焊盘 4 [/DC Input & Protection/RPP_GATE]",
+          "pos": {
+            "x": 106.175,
+            "y": 21.905
+          },
+          "uuid": "002c7c61-fd3e-4d35-bac6-6c76343b5370"
+        },
+        {
+          "description": "F.Cu 上 Q8 的焊盘 5 [/VBUS_PROT]",
+          "pos": {
+            "x": 109.675,
+            "y": 20.0
+          },
+          "uuid": "9c8ee7ac-5f20-4e59-8233-a3891bc1db79"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U10",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U10 的焊盘 1 [/PWM_WH]",
+          "pos": {
+            "x": 55.6,
+            "y": 43.25
+          },
+          "uuid": "b7799307-952b-4dd7-9233-86405f37fc61"
+        },
+        {
+          "description": "F.Cu 上 U10 的焊盘 2 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 55.6,
+            "y": 43.75
+          },
+          "uuid": "18522d1e-2df4-4404-b31c-58f4d9bb4e34"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U3",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6700 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U3 的焊盘 7 [/VA_5V]",
+          "pos": {
+            "x": 93.525,
+            "y": 60.635
+          },
+          "uuid": "84113d64-b490-4e95-b716-20b5dfff89ae"
+        },
+        {
+          "description": "F.Cu 上 U3 的焊盘 8 [/SW_V]",
+          "pos": {
+            "x": 93.525,
+            "y": 61.905
+          },
+          "uuid": "14a353d1-c21a-4596-9bb8-2768dd1a6bfa"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U10",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U10 的焊盘 2 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 55.6,
+            "y": 43.75
+          },
+          "uuid": "18522d1e-2df4-4404-b31c-58f4d9bb4e34"
+        },
+        {
+          "description": "F.Cu 上 U10 的焊盘 3 [/Gate Driver / Inverter/LIN_W_SAFE]",
+          "pos": {
+            "x": 55.6,
+            "y": 44.25
+          },
+          "uuid": "72dca741-e028-4f09-83f7-95257a38b6d7"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U10",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U10 的焊盘 3 [/Gate Driver / Inverter/LIN_W_SAFE]",
+          "pos": {
+            "x": 55.6,
+            "y": 44.25
+          },
+          "uuid": "72dca741-e028-4f09-83f7-95257a38b6d7"
+        },
+        {
+          "description": "F.Cu 上 U10 的焊盘 4 [/GND]",
+          "pos": {
+            "x": 55.6,
+            "y": 44.75
+          },
+          "uuid": "e06ea765-c4aa-48f7-9c86-f634c531ad6a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U10",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U10 的焊盘 5 [/PWM_WL]",
+          "pos": {
+            "x": 58.4,
+            "y": 44.75
+          },
+          "uuid": "14505c7b-cc89-4108-8b97-00ce17346dae"
+        },
+        {
+          "description": "F.Cu 上 U10 的焊盘 6 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 58.4,
+            "y": 44.25
+          },
+          "uuid": "3071da95-893a-4b1a-90b8-fb14b29d396d"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U10",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U10 的焊盘 6 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 58.4,
+            "y": 44.25
+          },
+          "uuid": "3071da95-893a-4b1a-90b8-fb14b29d396d"
+        },
+        {
+          "description": "F.Cu 上 U10 的焊盘 7 [/Gate Driver / Inverter/HIN_W_SAFE]",
+          "pos": {
+            "x": 58.4,
+            "y": 43.75
+          },
+          "uuid": "2719fad4-37b4-42cd-8246-caab8eeace3b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q4",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q4 的焊盘 1 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 54.095
+          },
+          "uuid": "25f66ac2-0b96-4f1a-9354-195b8e5a423b"
+        },
+        {
+          "description": "F.Cu 上 Q4 的焊盘 5 [/SW_V]",
+          "pos": {
+            "x": 72.675,
+            "y": 56.0
+          },
+          "uuid": "e6f8c3f0-b5cd-4f54-bc02-6815e476d509"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U10",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U10 的焊盘 7 [/Gate Driver / Inverter/HIN_W_SAFE]",
+          "pos": {
+            "x": 58.4,
+            "y": 43.75
+          },
+          "uuid": "2719fad4-37b4-42cd-8246-caab8eeace3b"
+        },
+        {
+          "description": "F.Cu 上 U10 的焊盘 8 [/VIO_3V3]",
+          "pos": {
+            "x": 58.4,
+            "y": 43.25
+          },
+          "uuid": "490824a0-bfa3-4fc1-8aa9-7e073ecbc8e4"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q4",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q4 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 55.365
+          },
+          "uuid": "ad9262ad-0cd7-407b-a9bb-96694e34af5f"
+        },
+        {
+          "description": "F.Cu 上 Q4 的焊盘 5 [/SW_V]",
+          "pos": {
+            "x": 72.675,
+            "y": 56.0
+          },
+          "uuid": "e6f8c3f0-b5cd-4f54-bc02-6815e476d509"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "C19",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 C19 的焊盘 1 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 103.5,
+            "y": 21.775
+          },
+          "uuid": "738dfee6-e09c-459e-bcb8-ecf50b0e24de"
+        },
+        {
+          "description": "F.Cu 上 C19 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 103.5,
+            "y": 20.225
+          },
+          "uuid": "67927a7e-7cde-4ebd-9ae5-c858101dd0ac"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q4",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q4 的焊盘 3 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 56.635
+          },
+          "uuid": "bc2f6a87-b19e-45e9-998f-56dba1572f16"
+        },
+        {
+          "description": "F.Cu 上 Q4 的焊盘 5 [/SW_V]",
+          "pos": {
+            "x": 72.675,
+            "y": 56.0
+          },
+          "uuid": "e6f8c3f0-b5cd-4f54-bc02-6815e476d509"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q4",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q4 的焊盘 4 [Net-(Q4-G)]",
+          "pos": {
+            "x": 69.175,
+            "y": 57.905
+          },
+          "uuid": "9607c2b3-3333-4b22-be6e-e37f8757c3af"
+        },
+        {
+          "description": "F.Cu 上 Q4 的焊盘 5 [/SW_V]",
+          "pos": {
+            "x": 72.675,
+            "y": 56.0
+          },
+          "uuid": "e6f8c3f0-b5cd-4f54-bc02-6815e476d509"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "C18",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 C18 的焊盘 1 [/DC Input & Protection/VCAP_RPP]",
+          "pos": {
+            "x": 90.0,
+            "y": 15.775
+          },
+          "uuid": "94283ed2-ce17-4764-8712-60c4f93ed703"
+        },
+        {
+          "description": "F.Cu 上 C18 的焊盘 2 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 90.0,
+            "y": 14.225
+          },
+          "uuid": "92ad4fff-3345-4732-b62f-2e0845de2e2f"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q7",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q7 的焊盘 1 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 100.825,
+            "y": 21.905
+          },
+          "uuid": "d33207ca-7f7a-4630-b22b-068693bef98f"
+        },
+        {
+          "description": "F.Cu 上 Q7 的焊盘 5 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 97.325,
+            "y": 20.0
+          },
+          "uuid": "599722b5-5cf2-4490-ad6d-801eca67c76c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q7",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q7 的焊盘 2 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 100.825,
+            "y": 20.635
+          },
+          "uuid": "4544f2ab-a7da-41ad-b0d4-a025ed55f53b"
+        },
+        {
+          "description": "F.Cu 上 Q7 的焊盘 5 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 97.325,
+            "y": 20.0
+          },
+          "uuid": "599722b5-5cf2-4490-ad6d-801eca67c76c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q7",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6200 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q7 的焊盘 3 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 100.825,
+            "y": 19.365
+          },
+          "uuid": "df683190-2796-41aa-892f-0df044510ed1"
+        },
+        {
+          "description": "F.Cu 上 Q7 的焊盘 4 [/DC Input & Protection/RPP_GATE]",
+          "pos": {
+            "x": 100.825,
+            "y": 18.095
+          },
+          "uuid": "2bce1b70-3781-41a7-b06f-29ecb79cff0b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q7",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q7 的焊盘 3 [/DC Input & Protection/RPP_SRC]",
+          "pos": {
+            "x": 100.825,
+            "y": 19.365
+          },
+          "uuid": "df683190-2796-41aa-892f-0df044510ed1"
+        },
+        {
+          "description": "F.Cu 上 Q7 的焊盘 5 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 97.325,
+            "y": 20.0
+          },
+          "uuid": "599722b5-5cf2-4490-ad6d-801eca67c76c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q7",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q7 的焊盘 4 [/DC Input & Protection/RPP_GATE]",
+          "pos": {
+            "x": 100.825,
+            "y": 18.095
+          },
+          "uuid": "2bce1b70-3781-41a7-b06f-29ecb79cff0b"
+        },
+        {
+          "description": "F.Cu 上 Q7 的焊盘 5 [/DC Input & Protection/VIN_FUSED]",
+          "pos": {
+            "x": 97.325,
+            "y": 20.0
+          },
+          "uuid": "599722b5-5cf2-4490-ad6d-801eca67c76c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U8",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U8 的焊盘 1 [/PWM_UH]",
+          "pos": {
+            "x": 55.6,
+            "y": 33.25
+          },
+          "uuid": "d37de79b-f9a0-4d82-a6ae-960f0779caa4"
+        },
+        {
+          "description": "F.Cu 上 U8 的焊盘 2 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 55.6,
+            "y": 33.75
+          },
+          "uuid": "4e261d37-f9b7-4a6d-ae79-8d70b6fbc941"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U8",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U8 的焊盘 2 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 55.6,
+            "y": 33.75
+          },
+          "uuid": "4e261d37-f9b7-4a6d-ae79-8d70b6fbc941"
+        },
+        {
+          "description": "F.Cu 上 U8 的焊盘 3 [/Gate Driver / Inverter/LIN_U_SAFE]",
+          "pos": {
+            "x": 55.6,
+            "y": 34.25
+          },
+          "uuid": "41f30005-2a76-4a5c-a5d2-725c3c3a93ad"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q6",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q6 的焊盘 1 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 76.095
+          },
+          "uuid": "719d9985-e832-4cfd-ae1c-71200e2b9ef9"
+        },
+        {
+          "description": "F.Cu 上 Q6 的焊盘 5 [/SW_W]",
+          "pos": {
+            "x": 72.675,
+            "y": 78.0
+          },
+          "uuid": "8eeec3f8-41b4-46a0-aaf6-533434413bbd"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U8",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U8 的焊盘 3 [/Gate Driver / Inverter/LIN_U_SAFE]",
+          "pos": {
+            "x": 55.6,
+            "y": 34.25
+          },
+          "uuid": "41f30005-2a76-4a5c-a5d2-725c3c3a93ad"
+        },
+        {
+          "description": "F.Cu 上 U8 的焊盘 4 [/GND]",
+          "pos": {
+            "x": 55.6,
+            "y": 34.75
+          },
+          "uuid": "c785c753-d32b-4630-80de-6c8e2280b464"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q6",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q6 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 77.365
+          },
+          "uuid": "251c574f-1d20-4138-963c-7407c8df0043"
+        },
+        {
+          "description": "F.Cu 上 Q6 的焊盘 5 [/SW_W]",
+          "pos": {
+            "x": 72.675,
+            "y": 78.0
+          },
+          "uuid": "8eeec3f8-41b4-46a0-aaf6-533434413bbd"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U8",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U8 的焊盘 5 [/PWM_UL]",
+          "pos": {
+            "x": 58.4,
+            "y": 34.75
+          },
+          "uuid": "44a95d55-d51e-4ab4-82ae-0dd28894732c"
+        },
+        {
+          "description": "F.Cu 上 U8 的焊盘 6 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 58.4,
+            "y": 34.25
+          },
+          "uuid": "26a01b64-decc-4d4f-85da-a6f105f0963b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q6",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q6 的焊盘 3 [/GND]",
+          "pos": {
+            "x": 69.175,
+            "y": 78.635
+          },
+          "uuid": "622455b6-ff23-4d09-8722-f6acc3314291"
+        },
+        {
+          "description": "F.Cu 上 Q6 的焊盘 5 [/SW_W]",
+          "pos": {
+            "x": 72.675,
+            "y": 78.0
+          },
+          "uuid": "8eeec3f8-41b4-46a0-aaf6-533434413bbd"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U8",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U8 的焊盘 6 [/Gate Driver / Inverter/RUN_OK]",
+          "pos": {
+            "x": 58.4,
+            "y": 34.25
+          },
+          "uuid": "26a01b64-decc-4d4f-85da-a6f105f0963b"
+        },
+        {
+          "description": "F.Cu 上 U8 的焊盘 7 [/Gate Driver / Inverter/HIN_U_SAFE]",
+          "pos": {
+            "x": 58.4,
+            "y": 33.75
+          },
+          "uuid": "3aac7680-4e76-4083-8162-bec94a7a4c11"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U8",
+    "violation": {
+      "description": "间距违规 (网络类 'Default' 间距 0.2000 mm; 实际 0.1500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U8 的焊盘 7 [/Gate Driver / Inverter/HIN_U_SAFE]",
+          "pos": {
+            "x": 58.4,
+            "y": 33.75
+          },
+          "uuid": "3aac7680-4e76-4083-8162-bec94a7a4c11"
+        },
+        {
+          "description": "F.Cu 上 U8 的焊盘 8 [/VIO_3V3]",
+          "pos": {
+            "x": 58.4,
+            "y": 33.25
+          },
+          "uuid": "2cfc737b-530b-4063-9466-674c9d1876ec"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "Q6",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6500 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 Q6 的焊盘 4 [Net-(Q6-G)]",
+          "pos": {
+            "x": 69.175,
+            "y": 79.905
+          },
+          "uuid": "41917215-e81e-464f-97d4-b7c14a0b8757"
+        },
+        {
+          "description": "F.Cu 上 Q6 的焊盘 5 [/SW_W]",
+          "pos": {
+            "x": 72.675,
+            "y": 78.0
+          },
+          "uuid": "8eeec3f8-41b4-46a0-aaf6-533434413bbd"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U2",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6700 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U2 的焊盘 1 [/PH_U]",
+          "pos": {
+            "x": 98.475,
+            "y": 39.905
+          },
+          "uuid": "4f7547d7-1d2b-4c02-9b45-fb730f92e2d8"
+        },
+        {
+          "description": "F.Cu 上 U2 的焊盘 2 [/GND]",
+          "pos": {
+            "x": 98.475,
+            "y": 38.635
+          },
+          "uuid": "defd710e-32f4-4a77-935d-6c41f5613f59"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U2",
+    "violation": {
+      "description": "间距违规 (网络类 'POWER' 间距 0.8000 mm; 实际 0.6700 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U2 的焊盘 7 [/VA_5V]",
+          "pos": {
+            "x": 93.525,
+            "y": 38.635
+          },
+          "uuid": "f48ea00d-ab54-4732-88de-01f991e80293"
+        },
+        {
+          "description": "F.Cu 上 U2 的焊盘 8 [/SW_U]",
+          "pos": {
+            "x": 93.525,
+            "y": 39.905
+          },
+          "uuid": "42f00861-5426-4732-91f7-4f4832bc488b"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 36 [/Current Sense / OCP / ADC/REGCAP1]",
+          "pos": {
+            "x": 51.675,
+            "y": 76.25
+          },
+          "uuid": "955439b7-d34b-4253-a629-597d0766e6e3"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 37 [/VA_5V]",
+          "pos": {
+            "x": 51.675,
+            "y": 75.75
+          },
+          "uuid": "796634c6-aa82-4925-86f3-70764d328109"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 38 [/VA_5V]",
+          "pos": {
+            "x": 51.675,
+            "y": 75.25
+          },
+          "uuid": "d8a76942-41f7-4aae-86e6-756039bd070e"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 39 [/Current Sense / OCP / ADC/REGCAP2]",
+          "pos": {
+            "x": 51.675,
+            "y": 74.75
+          },
+          "uuid": "e8826463-e4e0-4899-878c-6159d4603347"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 47 [/GND]",
+          "pos": {
+            "x": 51.675,
+            "y": 70.75
+          },
+          "uuid": "c8155140-ebb2-43e4-98ec-db4073552402"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 48 [/VA_5V]",
+          "pos": {
+            "x": 51.675,
+            "y": 70.25
+          },
+          "uuid": "2a3d9880-75ca-496a-84bc-44bd66e2057e"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 49 [/Current Sense / OCP / ADC/IU_ADC]",
+          "pos": {
+            "x": 49.75,
+            "y": 68.325
+          },
+          "uuid": "eb198ee9-8997-4d26-b3bf-5d789498c753"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 50 [/GND]",
+          "pos": {
+            "x": 49.25,
+            "y": 68.325
+          },
+          "uuid": "9836275e-f41d-4d65-a828-9d64a50ac1f6"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 50 [/GND]",
+          "pos": {
+            "x": 49.25,
+            "y": 68.325
+          },
+          "uuid": "9836275e-f41d-4d65-a828-9d64a50ac1f6"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 51 [/Current Sense / OCP / ADC/IV_ADC]",
+          "pos": {
+            "x": 48.75,
+            "y": 68.325
+          },
+          "uuid": "51d8c871-8449-4403-91ab-4a6ebc154d3a"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 51 [/Current Sense / OCP / ADC/IV_ADC]",
+          "pos": {
+            "x": 48.75,
+            "y": 68.325
+          },
+          "uuid": "51d8c871-8449-4403-91ab-4a6ebc154d3a"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 52 [/GND]",
+          "pos": {
+            "x": 48.25,
+            "y": 68.325
+          },
+          "uuid": "caabd942-84c6-4469-b04e-4be4891058c3"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 52 [/GND]",
+          "pos": {
+            "x": 48.25,
+            "y": 68.325
+          },
+          "uuid": "caabd942-84c6-4469-b04e-4be4891058c3"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 53 [/Current Sense / OCP / ADC/IW_ADC]",
+          "pos": {
+            "x": 47.75,
+            "y": 68.325
+          },
+          "uuid": "a6f46829-c7e3-4be9-aea3-9bf441e87459"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 53 [/Current Sense / OCP / ADC/IW_ADC]",
+          "pos": {
+            "x": 47.75,
+            "y": 68.325
+          },
+          "uuid": "a6f46829-c7e3-4be9-aea3-9bf441e87459"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 54 [/GND]",
+          "pos": {
+            "x": 47.25,
+            "y": 68.325
+          },
+          "uuid": "77de3d1f-3912-4442-8aa3-195d3a0dbc6c"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 54 [/GND]",
+          "pos": {
+            "x": 47.25,
+            "y": 68.325
+          },
+          "uuid": "77de3d1f-3912-4442-8aa3-195d3a0dbc6c"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 55 [/VBUS_ADC]",
+          "pos": {
+            "x": 46.75,
+            "y": 68.325
+          },
+          "uuid": "2f48d174-14e7-4b2f-8ec7-49a5a2d01264"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  },
+  {
+    "reference": "U6",
+    "violation": {
+      "description": "间距违规 (网络类 'ANALOG' 间距 0.2500 mm; 实际 0.2000 mm)",
+      "items": [
+        {
+          "description": "F.Cu 上 U6 的焊盘 55 [/VBUS_ADC]",
+          "pos": {
+            "x": 46.75,
+            "y": 68.325
+          },
+          "uuid": "2f48d174-14e7-4b2f-8ec7-49a5a2d01264"
+        },
+        {
+          "description": "F.Cu 上 U6 的焊盘 56 [/GND]",
+          "pos": {
+            "x": 46.25,
+            "y": 68.325
+          },
+          "uuid": "42afc912-17c5-4611-a8c2-228d9563852e"
+        }
+      ],
+      "severity": "error",
+      "type": "clearance"
+    }
+  }
+]

@@ -4,6 +4,8 @@ import re
 import sys
 
 from kicad_native import extract_forms, property_value, strip_form
+from check_vendor_lands import check as check_vendor_lands, check_internal_pad_rules
+from check_pcb_kelvin import check_internal_groups
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / "hardware"
@@ -204,6 +206,19 @@ if bom_path.exists():
     for part in ["FD6288T", "BSC040N10NS5", "INA241A2", "ADS8588S", "AM26LV32E"]:
         if part not in joined:
             errors.append(f"BOM missing part: {part}")
+
+if (HW / "ax7010_servo_reva.kicad_pcb").exists():
+    errors.extend(check_vendor_lands((HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8")))
+
+errors.extend(check_internal_groups(
+    (HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8"),
+    (HW / "ax7010_servo_reva.kicad_sym").read_text(encoding="utf-8"),
+    (HW / "gate_inverter.kicad_sch").read_text(encoding="utf-8"),
+    (HW / "fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod").read_text(encoding="utf-8"),
+))
+
+rules_path = HW / "ax7010_servo_reva.kicad_dru"
+errors.extend(check_internal_pad_rules(rules_path.read_text(encoding="utf-8") if rules_path.exists() else ""))
 
 if errors:
     print("DESIGN CHECK FAILED")

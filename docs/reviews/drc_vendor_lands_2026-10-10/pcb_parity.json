@@ -1,0 +1,25 @@
+{
+  "schematic_components": 162,
+  "schematic_nets": 169,
+  "pcb_footprints": 166,
+  "duplicate_references": [],
+  "missing_on_pcb": [],
+  "extra_on_pcb": [],
+  "mechanical_preserved": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "unassigned_footprints": [],
+  "footprint_mismatches": [],
+  "pin_mismatches": [],
+  "net_mismatches": [],
+  "value_mismatches": [],
+  "dnp_mismatches": [],
+  "passed": true,
+  "source_sha256": {
+    "artifacts\\drc-repair\\20261010\\after.net": "76c91892de4d54814b9c42350eafc6c1c257aa0bd4993e0e3c6d02ca82b64d08",
+    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "e252907153ce9df08f2678b9065e6da804172baa950f821047d48d42b874e88e"
+  }
+}

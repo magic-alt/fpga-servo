@@ -18,3 +18,5 @@ jobs:
       - run: python tools/check_power_wiring.py
       - run: python tools/check_design.py
       - run: python tools/test_pcb_checks.py
+      - run: python tools/test_vendor_lands.py
+      - run: python tools/test_pcb_escape.py

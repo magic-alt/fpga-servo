@@ -1,0 +1,50 @@
+[
+  {
+    "check": "native_schematic",
+    "exit_code": 0
+  },
+  {
+    "check": "kicad_grid",
+    "exit_code": 0
+  },
+  {
+    "check": "schematic_layout",
+    "exit_code": 0
+  },
+  {
+    "check": "schematic_connectivity",
+    "exit_code": 0
+  },
+  {
+    "check": "power_wiring",
+    "exit_code": 0
+  },
+  {
+    "check": "design",
+    "exit_code": 0
+  },
+  {
+    "check": "vendor_lands",
+    "exit_code": 0
+  },
+  {
+    "check": "netlist_safety",
+    "exit_code": 0
+  },
+  {
+    "check": "ocp_behavior",
+    "exit_code": 0
+  },
+  {
+    "check": "pcb_constraints",
+    "exit_code": 0
+  },
+  {
+    "check": "pcb_parity",
+    "exit_code": 0
+  },
+  {
+    "check": "pcb_tests",
+    "exit_code": 0
+  }
+]

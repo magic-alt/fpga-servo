@@ -24,6 +24,32 @@ PCB = '''(kicad_pcb (version 20221018) (generator pcbnew)
 
 
 class StaticBoardAuditTest(unittest.TestCase):
+    def test_only_external_nets_are_excluded_from_board_comparison(self):
+        external = '<comp ref="J6"><property name="exclude_from_board"/></comp>'
+        nets = '''<net name="SOURCE_ONLY" code="3"><node ref="J6" pin="1"/></net>
+          <net name="MIXED_MISSING" code="4"><node ref="J6" pin="2"/><node ref="U1" pin="2"/></net>'''
+        with TemporaryDirectory() as temp:
+            t = Path(temp)
+            xml = XML.replace('</components>', external + '</components>').replace('</nets>', nets + '</nets>')
+            (t / 'a.xml').write_text(xml, encoding='utf-8')
+            (t / 'a.kicad_pcb').write_text(PCB, encoding='utf-8')
+            result = audit(parse_netlist(t / 'a.xml'), parse_board(t / 'a.kicad_pcb'))
+            self.assertNotIn('SOURCE_ONLY', result['schematic_net_names_absent_from_board'])
+            self.assertIn('MIXED_MISSING', result['schematic_net_names_absent_from_board'])
+
+    def test_external_parts_do_not_require_board_footprints(self):
+        external = '''<comp ref="F1"><value>EXTERNAL_FUSE</value>
+          <property name="exclude_from_board"/></comp>'''
+        with TemporaryDirectory() as temp:
+            t = Path(temp)
+            (t / 'a.xml').write_text(XML.replace('</components>', external + '</components>'), encoding='utf-8')
+            (t / 'a.kicad_pcb').write_text(PCB, encoding='utf-8')
+            result = audit(parse_netlist(t / 'a.xml'), parse_board(t / 'a.kicad_pcb'))
+            self.assertEqual(result['missing_pcb_references'], ['R1'])
+            self.assertEqual(result['schematic_symbols_missing_footprint'], ['R1'])
+            self.assertEqual(result['external_schematic_references'], ['F1'])
+            self.assertTrue(result['blocking'])  # The truly missing on-board R1 still blocks.
+
     def test_difference_counts(self):
         with TemporaryDirectory() as temp:
             t = Path(temp)

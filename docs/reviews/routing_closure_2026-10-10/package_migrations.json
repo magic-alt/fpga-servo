@@ -1,0 +1,32 @@
+[
+  {
+    "ref": "U18",
+    "before": "SOT-23-8",
+    "after": "fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm"
+  },
+  {
+    "ref": "U2",
+    "before": "SOIC-8_3.9x4.9mm_P1.27mm",
+    "after": "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+  },
+  {
+    "ref": "U3",
+    "before": "SOIC-8_3.9x4.9mm_P1.27mm",
+    "after": "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+  },
+  {
+    "ref": "U4",
+    "before": "SOIC-8_3.9x4.9mm_P1.27mm",
+    "after": "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+  },
+  {
+    "ref": "C18",
+    "before": "C_0603_1608Metric",
+    "after": "Capacitor_SMD:C_0805_2012Metric"
+  },
+  {
+    "ref": "C19",
+    "before": "C_0603_1608Metric",
+    "after": "Capacitor_SMD:C_0805_2012Metric"
+  }
+]

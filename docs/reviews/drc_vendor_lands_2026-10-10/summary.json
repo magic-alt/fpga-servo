@@ -1,0 +1,14 @@
+{
+  "violations": 68,
+  "types": {
+    "clearance": 68
+  },
+  "unconnected": 447,
+  "parity": 0,
+  "project_settings_unchanged": true,
+  "sha256": {
+    "hardware\\ax7010_servo_reva.kicad_pcb": "e252907153ce9df08f2678b9065e6da804172baa950f821047d48d42b874e88e",
+    "hardware\\ax7010_servo_reva.kicad_pro": "6f0df511b8badec38806a88a09ac2f12782fee905358862e991195e018c75139",
+    "hardware\\fpga-servo.pretty\\TI_DCU0008A_VSSOP8_P0.5mm.kicad_mod": "3166969a6e29fcfb237f932f339afb9b37c4c293fb20e445d6e8b0202d269a58"
+  }
+}
