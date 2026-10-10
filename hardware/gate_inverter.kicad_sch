@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "FD6288 + 100V MOSFET bridge + inline 5mR Kelvin shunts")
+		(comment 1 "FD6288 + 100V MOSFET bridge + 3 low-side 5mR SMT shunts")
 	)
 (lib_symbols
 		(symbol "ax7010_servo_reva:C"
@@ -1000,7 +1000,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ax7010_servo_reva:SHUNT_5mR"
+		(symbol "ax7010_servo_reva:SHUNT_5mR_2T"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1019,7 +1019,7 @@
 					)
 				)
 			)
-			(property "Value" "SHUNT_5mR"
+			(property "Value" "SHUNT_5mR_2T"
 				(at 0 -10.922 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1029,7 +1029,7 @@
 					)
 				)
 			)
-			(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
+			(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1062,7 +1062,7 @@
 					)
 				)
 			)
-			(symbol "SHUNT_5mR_0_1"
+			(symbol "SHUNT_5mR_2T_0_1"
 				(rectangle
 					(start -10.16 6.35)
 					(end 10.16 -6.35)
@@ -1075,7 +1075,7 @@
 					)
 				)
 			)
-			(symbol "SHUNT_5mR_1_1"
+			(symbol "SHUNT_5mR_2T_1_1"
 				(pin passive line
 					(at -15.24 0 0)
 					(length 5.08)
@@ -1112,46 +1112,10 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 11.43 270)
-					(length 5.08)
-					(name "KP"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -11.43 90)
-					(length 5.08)
-					(name "KN"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.016 1.016)
-							)
-						)
-					)
-				)
+				
+				
 			)
 			(embedded_fonts no)
-
-(jumper_pin_groups ("1" "3") ("2" "4"))
 )
 		(symbol "ax7010_servo_reva:SN74LVC1G11"
 			(pin_names
@@ -2868,8 +2832,8 @@
 (property "MPN" "BSC040N10NS5ATMA1" (at 185.42 124.46 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
-		(lib_id "ax7010_servo_reva:SHUNT_5mR")
-		(at 172.72 95.25 270)
+		(lib_id "ax7010_servo_reva:SHUNT_5mR_2T")
+		(at 185.42 172.72 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2879,7 +2843,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000066000032")
 		(property "Reference" "RSH1"
-			(at 172.72 92.71 90)
+			(at 172.72 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2889,7 +2853,7 @@
 			)
 		)
 		(property "Value" "5mR"
-			(at 172.72 97.79 90)
+			(at 172.72 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2898,8 +2862,8 @@
 				)
 			)
 		)
-		(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
-			(at 172.72 95.25 0)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 185.42 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2909,8 +2873,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ohmite.com/catalog/60-series/650FPR005E/"
-			(at 172.72 95.25 0)
+		(property "Datasheet" "https://item.szlcsc.com/166030.html"
+			(at 185.42 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2919,8 +2883,8 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open"
-			(at 172.72 95.25 0)
+		(property "Description" "LOW_SIDE_3SHUNT_5mR_2512_3W; NO_FAB_PENDING_PCB_AND_THERMAL"
+			(at 185.42 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2935,12 +2899,6 @@
 		(pin "2"
 			(uuid "2fb9fa7a-4253-418e-942d-ff24b29d7e9b")
 		)
-		(pin "3"
-			(uuid "bb169e85-65ca-4731-b9aa-85e3c4220dc1")
-		)
-		(pin "4"
-			(uuid "f80319d0-35d7-43f8-9011-274032036d68")
-		)
 		(instances
 			(project "ax7010_servo_reva"
 				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003"
@@ -2950,9 +2908,9 @@
 			)
 		)
 
-(property "MPN" "650FPR005E" (at -68.58 48.26 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LR2512-23R005F4" (at 185.42 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "Ohmite" (at -68.58 48.26 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "RALEC" (at 185.42 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:DIODE")
@@ -3593,8 +3551,8 @@
 (property "MPN" "BSC040N10NS5ATMA1" (at 229.87 124.46 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
-		(lib_id "ax7010_servo_reva:SHUNT_5mR")
-		(at 217.17 95.25 270)
+		(lib_id "ax7010_servo_reva:SHUNT_5mR_2T")
+		(at 229.87 172.72 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3604,7 +3562,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006600003b")
 		(property "Reference" "RSH2"
-			(at 217.17 92.71 90)
+			(at 217.17 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3614,7 +3572,7 @@
 			)
 		)
 		(property "Value" "5mR"
-			(at 217.17 97.79 90)
+			(at 217.17 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3623,8 +3581,8 @@
 				)
 			)
 		)
-		(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
-			(at 217.17 95.25 0)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 229.87 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3634,8 +3592,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ohmite.com/catalog/60-series/650FPR005E/"
-			(at 217.17 95.25 0)
+		(property "Datasheet" "https://item.szlcsc.com/166030.html"
+			(at 229.87 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3644,8 +3602,8 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open"
-			(at 217.17 95.25 0)
+		(property "Description" "LOW_SIDE_3SHUNT_5mR_2512_3W; NO_FAB_PENDING_PCB_AND_THERMAL"
+			(at 229.87 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3660,12 +3618,6 @@
 		(pin "2"
 			(uuid "3fd09ddd-f990-4d31-8607-4f313c5c9a78")
 		)
-		(pin "3"
-			(uuid "37ffcf60-8b07-4ec9-9bfc-10a18aefc1c7")
-		)
-		(pin "4"
-			(uuid "7d3fc630-d131-4fe6-b465-c5392fa51f20")
-		)
 		(instances
 			(project "ax7010_servo_reva"
 				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003"
@@ -3675,9 +3627,9 @@
 			)
 		)
 
-(property "MPN" "650FPR005E" (at -24.13 -1.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LR2512-23R005F4" (at 229.87 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "Ohmite" (at -24.13 -1.27 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "RALEC" (at 229.87 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:DIODE")
@@ -4318,8 +4270,8 @@
 (property "MPN" "BSC040N10NS5ATMA1" (at 274.32 124.46 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
-		(lib_id "ax7010_servo_reva:SHUNT_5mR")
-		(at 261.62 95.25 270)
+		(lib_id "ax7010_servo_reva:SHUNT_5mR_2T")
+		(at 274.32 172.72 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4329,7 +4281,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-000066000044")
 		(property "Reference" "RSH3"
-			(at 261.62 92.71 90)
+			(at 261.62 168.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4339,7 +4291,7 @@
 			)
 		)
 		(property "Value" "5mR"
-			(at 261.62 97.79 90)
+			(at 261.62 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4348,8 +4300,8 @@
 				)
 			)
 		)
-		(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
-			(at 261.62 95.25 0)
+		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+			(at 274.32 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4359,8 +4311,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ohmite.com/catalog/60-series/650FPR005E/"
-			(at 261.62 95.25 0)
+		(property "Datasheet" "https://item.szlcsc.com/166030.html"
+			(at 274.32 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4369,8 +4321,8 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open"
-			(at 261.62 95.25 0)
+		(property "Description" "LOW_SIDE_3SHUNT_5mR_2512_3W; NO_FAB_PENDING_PCB_AND_THERMAL"
+			(at 274.32 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4385,12 +4337,6 @@
 		(pin "2"
 			(uuid "967af375-c7d6-4959-80f0-f61c8e5fe47d")
 		)
-		(pin "3"
-			(uuid "d3010fa4-c1d7-46b8-b102-d9eba1eeda33")
-		)
-		(pin "4"
-			(uuid "66f8548d-ba15-47cf-9b0e-512c1e9c13cf")
-		)
 		(instances
 			(project "ax7010_servo_reva"
 				(path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003"
@@ -4400,9 +4346,9 @@
 			)
 		)
 
-(property "MPN" "650FPR005E" (at 20.32 -50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LR2512-23R005F4" (at 274.32 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 
-(property "Manufacturer" "Ohmite" (at 20.32 -50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "Manufacturer" "RALEC" (at 274.32 172.72 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:TERM3")
@@ -5527,7 +5473,7 @@
 (wire (pts (xy 185.42 78.74) (xy 185.42 82.55)) (stroke (width 0) (type default)) (uuid "9e84796d-af1d-4833-af08-3ae2435327df"))
 (wire (pts (xy 173.99 78.74) (xy 185.42 78.74)) (stroke (width 0) (type default)) (uuid "3ad42ed4-79d6-43aa-b1b5-54876e749276"))
 (wire (pts (xy 172.72 77.47) (xy 172.72 80.01)) (stroke (width 0) (type default)) (uuid "427b020a-3871-4dc0-a3a5-5a20e6a24778"))
-(wire (pts (xy 184.15 95.25) (xy 185.42 95.25)) (stroke (width 0) (type default)) (uuid "9fc4b99c-b7b1-47b1-9ecb-fe697019def2"))
+
 (wire (pts (xy 185.42 95.25) (xy 186.69 95.25)) (stroke (width 0) (type default)) (uuid "70004dc8-086e-4444-8a14-2b3c96df7a0b"))
 (wire (pts (xy 186.69 85.09) (xy 186.69 95.25)) (stroke (width 0) (type default)) (uuid "a1f08f4b-6b3e-4235-a263-19818e25634a"))
 (wire (pts (xy 185.42 82.55) (xy 189.23 82.55)) (stroke (width 0) (type default)) (uuid "6bed2fb3-74ba-4078-a641-28439890a56f"))
@@ -5542,13 +5488,13 @@
 (wire (pts (xy 167.64 124.46) (xy 170.18 124.46)) (stroke (width 0) (type default)) (uuid "8a5fce06-a1ff-4034-baab-d98be307ce19"))
 (wire (pts (xy 185.42 140.97) (xy 185.42 152.4)) (stroke (width 0) (type default)) (uuid "f586762b-a3a5-4bd3-b1c0-07900dae0611"))
 (wire (pts (xy 167.64 152.4) (xy 185.42 152.4)) (stroke (width 0) (type default)) (uuid "c3cf2155-4245-41e1-8ed9-b585dac49132"))
-(wire (pts (xy 167.64 152.4) (xy 167.64 154.94)) (stroke (width 0) (type default)) (uuid "c25e6866-4a81-4798-81dc-e34298574258"))
-(wire (pts (xy 167.64 152.4) (xy 167.64 154.94)) (stroke (width 0) (type default)) (uuid "9ff7ec4e-c08f-4227-968b-d820ccd861bc"))
+
+
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 167.64 154.94 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "439680a6-0cbf-4af2-ba42-23cdd5387711")
 (property "Reference" "#PWR915" (at 167.64 154.94 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/GND" (at 167.64 154.94 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "636d97f0-77ac-4f4e-a1c8-e71dbcdadd87")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR915") (unit 1)))))
-(label "GND" (at 167.64 154.94 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "66115dda-f242-47eb-837f-e425d2ba3a1c"))
+
 (wire (pts (xy 185.42 49.53) (xy 191.77 49.53)) (stroke (width 0) (type default)) (uuid "66b6533d-6481-4fd7-86af-bd61cc8f4fbb"))
 (wire (pts (xy 191.77 46.99) (xy 191.77 49.53)) (stroke (width 0) (type default)) (uuid "3c7616b8-34b2-4fec-af08-d6e18182afbe"))
 (symbol (lib_id "ax7010_servo_reva:PWR_VBUS_PROT") (at 191.77 46.99 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "085c76c7-5b39-47ce-a889-8caa56feebb2")
@@ -5556,13 +5502,13 @@
 (property "Value" "/VBUS_PROT" (at 191.77 46.99 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "64c3c44b-e643-4d2a-8f80-a3687b6dccd3")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR916") (unit 1)))))
 
-(wire (pts (xy 172.72 110.49) (xy 172.72 113.03)) (stroke (width 0) (type default)) (uuid "c504fe5a-14cf-43e3-8185-a425d8aa64c5"))
-(wire (pts (xy 158.75 110.49) (xy 172.72 110.49)) (stroke (width 0) (type default)) (uuid "5d2456bd-cc02-4752-bee0-0975d2a9c625"))
-(wire (pts (xy 158.75 95.25) (xy 158.75 110.49)) (stroke (width 0) (type default)) (uuid "2d736dd7-ed9f-4342-aaf0-ebb07490e90e"))
-(wire (pts (xy 158.75 95.25) (xy 161.29 95.25)) (stroke (width 0) (type default)) (uuid "10fa8a22-0329-4890-8bcf-587d2d883425"))
-(hierarchical_label "PH_U"
+
+
+
+
+(hierarchical_label "LS_U_SRC"
 		(shape output)
-		(at 172.72 113.03 90)
+		(at 194.31 152.4 180)
 		(effects (font (size 1 1)) (justify right))
 		(uuid "e3aa21ee-a0d7-4974-824c-3a2f5c8094e2")
 	)
@@ -5590,7 +5536,7 @@
 (wire (pts (xy 218.44 44.45) (xy 218.44 77.47)) (stroke (width 0) (type default)) (uuid "f26d5e97-e936-454d-9294-c58a9ba7e9a4"))
 (wire (pts (xy 229.87 82.55) (xy 229.87 85.09)) (stroke (width 0) (type default)) (uuid "95d344e1-c623-4f4b-a261-7a13e8afb42a"))
 (wire (pts (xy 212.09 80.01) (xy 217.17 80.01)) (stroke (width 0) (type default)) (uuid "fc4ea0be-f39e-4583-a666-f1c1e0a46615"))
-(wire (pts (xy 228.6 95.25) (xy 229.87 95.25)) (stroke (width 0) (type default)) (uuid "af78ae22-d285-4df2-bd81-a282a6988fe2"))
+
 (wire (pts (xy 229.87 82.55) (xy 233.68 82.55)) (stroke (width 0) (type default)) (uuid "a00d8b99-5e14-4d5c-b348-2c67d81cd13e"))
 (label "SW_V" (at 233.68 82.55 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "4b46d4e9-d489-4866-b135-8f0ade882bb2"))
 (wire (pts (xy 199.39 63.5) (xy 199.39 66.04)) (stroke (width 0) (type default)) (uuid "ed9eb985-9244-444d-953c-0075fa22c0aa"))
@@ -5601,15 +5547,15 @@
 (label "GL_V" (at 199.39 121.92 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "5c0b22eb-bd60-4118-9d25-3bec85871f86"))
 (wire (pts (xy 212.09 124.46) (xy 214.63 124.46)) (stroke (width 0) (type default)) (uuid "f065d2ee-9c82-40de-89c9-364b4b1abd16"))
 (wire (pts (xy 212.09 124.46) (xy 212.09 137.16)) (stroke (width 0) (type default)) (uuid "f714819f-c9b7-4a15-88ed-2903726404d2"))
-(wire (pts (xy 212.09 152.4) (xy 212.09 154.94)) (stroke (width 0) (type default)) (uuid "1e270a54-1824-422f-b407-ffbf4357da41"))
+
 (wire (pts (xy 229.87 140.97) (xy 229.87 152.4)) (stroke (width 0) (type default)) (uuid "541a3aa7-a31d-4c85-9269-38598e07ee8b"))
 (wire (pts (xy 212.09 152.4) (xy 229.87 152.4)) (stroke (width 0) (type default)) (uuid "2836cddf-9617-4ae4-975a-da2a53e9a8ae"))
-(wire (pts (xy 212.09 152.4) (xy 212.09 154.94)) (stroke (width 0) (type default)) (uuid "1cb375fe-2c99-4051-9aa3-1f17d325fd66"))
+
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 212.09 154.94 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "efb2669a-d2d3-4748-9191-1955d6103845")
 (property "Reference" "#PWR918" (at 212.09 154.94 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/GND" (at 212.09 154.94 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "1b560369-308f-44fc-862f-1ee683db7494")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR918") (unit 1)))))
-(label "GND" (at 212.09 154.94 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "a8402093-491e-445e-8097-8d6af3e72d5a"))
+
 (wire (pts (xy 229.87 49.53) (xy 236.22 49.53)) (stroke (width 0) (type default)) (uuid "b20b347f-b0d8-46e5-af51-7e0bbbe797ec"))
 (wire (pts (xy 236.22 46.99) (xy 236.22 49.53)) (stroke (width 0) (type default)) (uuid "617ebfa2-b806-41a3-995d-838b5d82a6c2"))
 (symbol (lib_id "ax7010_servo_reva:PWR_VBUS_PROT") (at 236.22 46.99 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "1a9fa6d9-e650-4ef7-9072-c664d3760516")
@@ -5617,13 +5563,13 @@
 (property "Value" "/VBUS_PROT" (at 236.22 46.99 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "b361f56b-edb4-4310-93e5-11f7b23e3257")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR919") (unit 1)))))
 (label "VBUS_PROT" (at 236.22 46.99 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "2f5ddabc-2f05-4a99-b8b7-dae218631ed2"))
-(wire (pts (xy 203.2 95.25) (xy 203.2 110.49)) (stroke (width 0) (type default)) (uuid "b9635378-8aaf-4ba5-b0fa-cc5a956431a5"))
-(wire (pts (xy 203.2 95.25) (xy 205.74 95.25)) (stroke (width 0) (type default)) (uuid "76d7ff26-0024-42d8-9614-f908c838f5d0"))
-(wire (pts (xy 217.17 110.49) (xy 217.17 113.03)) (stroke (width 0) (type default)) (uuid "a7182db7-4949-4c14-85bf-9a9f0496d5e2"))
-(wire (pts (xy 203.2 110.49) (xy 217.17 110.49)) (stroke (width 0) (type default)) (uuid "a624b607-0705-4457-bf4c-edd529e3f8c7"))
-(hierarchical_label "PH_V"
+
+
+
+
+(hierarchical_label "LS_V_SRC"
 		(shape output)
-		(at 217.17 113.03 90)
+		(at 238.76 152.4 180)
 		(effects (font (size 1 1)) (justify right))
 		(uuid "0fbe2a04-14dc-4623-8ac1-a238dad34a24")
 	)
@@ -5636,7 +5582,7 @@
 (wire (pts (xy 259.08 29.21) (xy 261.62 29.21)) (stroke (width 0) (type default)) (uuid "c9d7eb20-6ddd-43af-b3e1-10566b5bdd17"))
 (wire (pts (xy 261.62 29.21) (xy 271.78 29.21)) (stroke (width 0) (type default)) (uuid "0ec9bfe4-8297-4baf-b9ed-d38fdd426ab8"))
 (label "BST_W" (at 261.62 29.21 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "9da73402-ed12-4512-a66b-f79f97273a61"))
-(wire (pts (xy 273.05 95.25) (xy 274.32 95.25)) (stroke (width 0) (type default)) (uuid "0a0fad07-d7d3-4f61-97dd-034d0e0be996"))
+
 (wire (pts (xy 274.32 95.25) (xy 275.59 95.25)) (stroke (width 0) (type default)) (uuid "61f2083f-a9e6-4e43-8547-55812a516fa9"))
 (wire (pts (xy 274.32 95.25) (xy 274.32 107.95)) (stroke (width 0) (type default)) (uuid "58995a3a-2ed8-4c00-89e4-f88c48c80f89"))
 (wire (pts (xy 256.54 78.74) (xy 256.54 81.28)) (stroke (width 0) (type default)) (uuid "24b787cb-aa02-4694-935f-4679a3a77bde"))
@@ -5663,13 +5609,13 @@
 (wire (pts (xy 256.54 124.46) (xy 259.08 124.46)) (stroke (width 0) (type default)) (uuid "05752f0b-9604-470f-8016-c8b748839e28"))
 (wire (pts (xy 256.54 152.4) (xy 274.32 152.4)) (stroke (width 0) (type default)) (uuid "adc9cfbc-e59e-479e-bb6b-ce74509543b7"))
 (wire (pts (xy 274.32 140.97) (xy 274.32 152.4)) (stroke (width 0) (type default)) (uuid "1f8a7262-4d25-49ac-aedb-0eb01bb96b2b"))
-(wire (pts (xy 256.54 152.4) (xy 256.54 154.94)) (stroke (width 0) (type default)) (uuid "7b079492-a8e6-4261-8150-b72a5ae34c28"))
-(wire (pts (xy 256.54 152.4) (xy 256.54 154.94)) (stroke (width 0) (type default)) (uuid "adff053a-86c9-40eb-b070-8c35083d6b4c"))
+
+
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 256.54 154.94 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "d0a12686-9b5c-4b44-a9b8-ea97c23649e4")
 (property "Reference" "#PWR921" (at 256.54 154.94 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/GND" (at 256.54 154.94 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "fd0a5df3-6db6-4796-b024-e74b3c48957e")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR921") (unit 1)))))
-(label "GND" (at 256.54 154.94 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "4e97d9f8-2aa8-4e3c-9634-01c3ef88a2fa"))
+
 (wire (pts (xy 274.32 49.53) (xy 280.67 49.53)) (stroke (width 0) (type default)) (uuid "77a850e7-0066-4001-8617-283af7434eb2"))
 (wire (pts (xy 280.67 46.99) (xy 280.67 49.53)) (stroke (width 0) (type default)) (uuid "bc8a3a0c-ff7c-4b75-a283-2ba273d7dd71"))
 (symbol (lib_id "ax7010_servo_reva:PWR_VBUS_PROT") (at 280.67 46.99 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "54e38ceb-028a-4af4-8aeb-11595fe06c86")
@@ -5677,22 +5623,22 @@
 (property "Value" "/VBUS_PROT" (at 280.67 46.99 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "8fac3e7f-cf18-418f-91ef-6e682f4484f6")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/5704c22b-d053-4500-8ff2-9b61785205d5" (reference "#PWR922") (unit 1)))))
 (label "VBUS_PROT" (at 280.67 46.99 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "ccc13618-861f-45a6-a825-625762fc1d80"))
-(wire (pts (xy 247.65 110.49) (xy 261.62 110.49)) (stroke (width 0) (type default)) (uuid "c79edf5f-4632-47a3-b6a6-78c7d600bb80"))
-(wire (pts (xy 247.65 95.25) (xy 247.65 110.49)) (stroke (width 0) (type default)) (uuid "a796f387-0999-45b2-8171-d9944b38bf9c"))
-(wire (pts (xy 261.62 110.49) (xy 261.62 113.03)) (stroke (width 0) (type default)) (uuid "dba9bec9-8698-4c58-bdba-a70e5855cf74"))
-(wire (pts (xy 247.65 95.25) (xy 250.19 95.25)) (stroke (width 0) (type default)) (uuid "fd602d6f-9014-4df0-b13b-84f56524dc45"))
-(hierarchical_label "PH_W"
+
+
+
+
+(hierarchical_label "LS_W_SRC"
 		(shape output)
-		(at 261.62 113.03 90)
+		(at 279.4 152.4 180)
 		(effects (font (size 1 1)) (justify right))
 		(uuid "18534666-46bd-4e74-a2bd-11160873d4e4")
 	)
 (wire (pts (xy 123.19 173.99) (xy 125.73 173.99)) (stroke (width 0) (type default)) (uuid "58b666a7-97e8-4783-9bef-bbb205dde0ff"))
-(label "PH_U" (at 123.19 173.99 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "4a4a8ac9-3d2d-4c74-8b20-ba57fc020035"))
+(label "SW_U" (at 123.19 173.99 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "4a4a8ac9-3d2d-4c74-8b20-ba57fc020035"))
 (wire (pts (xy 123.19 177.8) (xy 125.73 177.8)) (stroke (width 0) (type default)) (uuid "f1b74baa-7296-44b4-9344-7668fb6c4ac2"))
-(label "PH_V" (at 123.19 177.8 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "fbe8d262-1b72-493b-b3ff-c0272fb6acc6"))
+(label "SW_V" (at 123.19 177.8 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "fbe8d262-1b72-493b-b3ff-c0272fb6acc6"))
 (wire (pts (xy 123.19 181.61) (xy 125.73 181.61)) (stroke (width 0) (type default)) (uuid "2b378ff9-aba9-49cb-a57c-d8ea13c1e570"))
-(label "PH_W" (at 123.19 181.61 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "4019049f-e8a8-4ebb-8309-99fabf8acfb0"))
+(label "SW_W" (at 123.19 181.61 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "4019049f-e8a8-4ebb-8309-99fabf8acfb0"))
 (wire (pts (xy 22.86 171.45) (xy 25.4 171.45)) (stroke (width 0) (type default)) (uuid "7d6afdf3-8565-49b1-a4d4-32f42341a173"))
 (hierarchical_label "GATE_EN"
 		(shape input)
@@ -5811,4 +5757,19 @@
 
 
 (wire (pts (xy 191.77 46.99) (xy 199.39 46.99)) (stroke (width 0) (type default)) (uuid "22f06a59-a1bf-4ccb-b218-200430cf1f94"))
+(wire (pts (xy 185.42 152.4) (xy 185.42 157.48)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000001001"))
+(wire (pts (xy 185.42 187.96) (xy 185.42 191.77)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000011001"))
+(wire (pts (xy 185.42 152.4) (xy 194.31 152.4)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000021001"))
+(label "GND" (at 185.42 191.77 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ab001111-2222-4333-a444-000000031001"))
+(wire (pts (xy 229.87 152.4) (xy 229.87 157.48)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000001002"))
+(wire (pts (xy 229.87 187.96) (xy 229.87 191.77)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000011002"))
+(wire (pts (xy 229.87 152.4) (xy 238.76 152.4)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000021002"))
+(label "GND" (at 229.87 191.77 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ab001111-2222-4333-a444-000000031002"))
+(wire (pts (xy 274.32 152.4) (xy 274.32 157.48)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000001003"))
+(wire (pts (xy 274.32 187.96) (xy 274.32 191.77)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000011003"))
+(wire (pts (xy 274.32 152.4) (xy 279.4 152.4)) (stroke (width 0) (type default)) (uuid "ab001111-2222-4333-a444-000000021003"))
+(label "GND" (at 274.32 191.77 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "ab001111-2222-4333-a444-000000031003"))
+(junction (at 185.42 152.4) (diameter 0) (color 0 0 0 0) (uuid "aabb0000-1234-4fab-bced-000000001001"))
+(junction (at 229.87 152.4) (diameter 0) (color 0 0 0 0) (uuid "aabb0000-1234-4fab-bced-000000001002"))
+(junction (at 274.32 152.4) (diameter 0) (color 0 0 0 0) (uuid "aabb0000-1234-4fab-bced-000000001003"))
 )

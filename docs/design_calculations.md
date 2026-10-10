@@ -1,3 +1,5 @@
+> **CURRENT TOPOLOGY OVERRIDE (2026-10-10):** Three 5mR shunts in Q2/Q4/Q6 low-side source returns, NOT phase outputs. Existing gain 20 V/V produces nominal 0.1 V/A only when lower-device conduction window is valid. The PCB is not synchronized. Refer to [low-side migration](low_side_3shunt_migration_2026-10-10.md) before using historical calculations.
+
 # Rev.A design calculations
 
 Current confirmed baseline: **24-48 V, 10 A RMS continuous phase current, 20 kHz PWM; 20 A peak for 30 s; 40 degC maximum ambient; <=50 K temperature rise; forced-air cooling; 5 V ABZ encoder; brake circuit cancelled by latest user instruction; PSU absorption not assumed** (2026-10-10). Peak repetition interval, airflow/fan failure, encoder maximum/startup current remain pending. See [thermal and encoder design basis](brake_thermal_design_basis_2026-10-10.md) and [current qualification record](layout_followup_qualification_2026-10-10.md); these inputs do not close release gates.

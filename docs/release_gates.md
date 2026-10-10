@@ -1,5 +1,7 @@
 # Fabrication / release gates
 
+> **Critical 2026-10-10 topology change:** Schematic selection moved to three low-side two-terminal SMT shunts; physical PCB remains the old in-line through-hole 4-terminal design. **NO FABRICATION** until full PCB/shunt redesign, native DRC/ERC/parity, 6-pad sense path tests, current/thermal/OCP and valid ADC PWM-window qualification. Earlier 0/0/0 PCB result is obsolete for the new schematic. See [low-side migration](low_side_3shunt_migration_2026-10-10.md).
+
 Rev.A is not fabrication-approved until every blocking item below is closed.
 
 Latest follow-up: [2026-10-10 qualification and repair record](layout_followup_qualification_2026-10-10.md). J2 assembly annotations/current operating inputs and external-part audit repaired; CLEAR instructions no longer rely on the obsolete 28ms total recovery assumption. After explicit user approval, the repaired PCB candidate is now the working development baseline. Fresh ERC0/0; current DRC0 violations /0 unconnected /0 parity issues after the [completed routing repair](routing_closure_2026-10-10.md). The268/485 counts are the archived pre-adoption baseline. **S01 dynamic qualification and S09 sequencing remain OPEN; no layout freeze or fabrication approval.**

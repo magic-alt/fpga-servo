@@ -3430,7 +3430,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV9024PWR"
+		(property "Value" "LM339LVPWR"
 			(at 0 3.45 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3453,7 +3453,7 @@
 				)
 			)
 		)
-		(property "Description" "TLV9024PWR_HIGH"
+		(property "Description" "LM339LVPWR_HIGH"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3488,7 +3488,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV9024PWR"
+		(property "MPN" "LM339LVPWR"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -5382,7 +5382,7 @@
 				)
 			)
 		)
-		(property "Value" "INA241A2ID"
+		(property "Value" "INA240A1DR"
 			(at 0 3.4 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5405,7 +5405,7 @@
 				)
 			)
 		)
-		(property "Description" "INA241A2ID_W"
+		(property "Description" "INA240A1DR_W"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5440,7 +5440,7 @@
 				)
 			)
 		)
-		(property "MPN" "INA241A2ID"
+		(property "MPN" "INA240A1DR"
 			(at 0 0 180)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9372,7 +9372,7 @@
 				)
 			)
 		)
-		(property "Value" "INA241A2ID"
+		(property "Value" "INA240A1DR"
 			(at 0 3.4 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9395,7 +9395,7 @@
 				)
 			)
 		)
-		(property "Description" "INA241A2ID_U"
+		(property "Description" "INA240A1DR_U"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -9430,7 +9430,7 @@
 				)
 			)
 		)
-		(property "MPN" "INA241A2ID"
+		(property "MPN" "INA240A1DR"
 			(at 0 0 180)
 			(layer "F.SilkS")
 			(hide yes)
@@ -11938,7 +11938,7 @@
 				)
 			)
 		)
-		(property "Value" "INA241A2ID"
+		(property "Value" "INA240A1DR"
 			(at 0 3.4 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11961,7 +11961,7 @@
 				)
 			)
 		)
-		(property "Description" "INA241A2ID_V"
+		(property "Description" "INA240A1DR_V"
 			(at 0 0 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -11996,7 +11996,7 @@
 				)
 			)
 		)
-		(property "MPN" "INA241A2ID"
+		(property "MPN" "INA240A1DR"
 			(at 0 0 180)
 			(layer "F.SilkS")
 			(hide yes)
@@ -34745,7 +34745,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV9024PWR"
+		(property "Value" "LM339LVPWR"
 			(at 0 3.45 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34768,7 +34768,7 @@
 				)
 			)
 		)
-		(property "Description" "TLV9024PWR_LOW"
+		(property "Description" "LM339LVPWR_LOW"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34803,7 +34803,7 @@
 				)
 			)
 		)
-		(property "MPN" "TLV9024PWR"
+		(property "MPN" "LM339LVPWR"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)

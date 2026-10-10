@@ -3479,7 +3479,7 @@
 				)
 				(embedded_fonts no)
 			)
-	(symbol "INA241A2"
+	(symbol "INA240A1"
 				(pin_names
 					(offset 1.016)
 				)
@@ -3498,7 +3498,7 @@
 						)
 					)
 				)
-				(property "Value" "INA241A2"
+				(property "Value" "INA240A1"
 					(at 0 -22.352 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -3541,7 +3541,7 @@
 						)
 					)
 				)
-				(symbol "INA241A2_0_1"
+				(symbol "INA240A1_0_1"
 					(rectangle
 						(start -15.24 12.7)
 						(end 15.24 -12.7)
@@ -3554,7 +3554,7 @@
 						)
 					)
 				)
-				(symbol "INA241A2_1_1"
+				(symbol "INA240A1_1_1"
 					(pin input line
 						(at -20.32 2.54 0)
 						(length 5.08)
@@ -5023,7 +5023,7 @@
 				)
 				(embedded_fonts no)
 			)
-	(symbol "SHUNT_5mR"
+	(symbol "SHUNT_5mR_2T"
 				(pin_names
 					(offset 1.016)
 				)
@@ -5042,7 +5042,7 @@
 						)
 					)
 				)
-				(property "Value" "SHUNT_5mR"
+				(property "Value" "SHUNT_5mR_2T"
 					(at 0 -10.922 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -5052,7 +5052,7 @@
 						)
 					)
 				)
-				(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
+				(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 					(at 0 0 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -5085,7 +5085,7 @@
 						)
 					)
 				)
-				(symbol "SHUNT_5mR_0_1"
+				(symbol "SHUNT_5mR_2T_0_1"
 					(rectangle
 						(start -10.16 6.35)
 						(end 10.16 -6.35)
@@ -5098,7 +5098,7 @@
 						)
 					)
 				)
-				(symbol "SHUNT_5mR_1_1"
+				(symbol "SHUNT_5mR_2T_1_1"
 					(pin passive line
 						(at -15.24 0 0)
 						(length 5.08)
@@ -5135,46 +5135,10 @@
 							)
 						)
 					)
-					(pin passive line
-						(at 0 11.43 270)
-						(length 5.08)
-						(name "KP"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-						(number "3"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-					)
-					(pin passive line
-						(at 0 -11.43 90)
-						(length 5.08)
-						(name "KN"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-						(number "4"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-					)
+					
+					
 				)
 				(embedded_fonts no)
-
-(jumper_pin_groups ("1" "3") ("2" "4"))
 )
 	(symbol "SN74LVC1G11"
 				(pin_names
@@ -5834,7 +5798,7 @@
 				)
 				(embedded_fonts no)
 			)
-	(symbol "TLV9024"
+	(symbol "LM339LV"
 				(pin_names
 					(offset 1.016)
 				)
@@ -5853,7 +5817,7 @@
 						)
 					)
 				)
-				(property "Value" "TLV9024"
+				(property "Value" "LM339LV"
 					(at 0 -22.86 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -5896,7 +5860,7 @@
 						)
 					)
 				)
-				(symbol "TLV9024_0_1"
+				(symbol "LM339LV_0_1"
 					(rectangle
 						(start -16.51 18.288)
 						(end 16.51 -18.288)
@@ -5909,7 +5873,7 @@
 						)
 					)
 				)
-				(symbol "TLV9024_1_1"
+				(symbol "LM339LV_1_1"
 					(pin open_collector line
 						(at 21.59 12.7 180)
 						(length 5.08)

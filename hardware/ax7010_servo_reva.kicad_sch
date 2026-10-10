@@ -96,16 +96,7 @@
 		)
 		(uuid "1b2e902c-44a1-4061-b482-696243539f6b")
 	)
-	(wire
-		(pts
-			(xy 177.8 144.78) (xy 182.88 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1b8d2f35-e956-4d6f-bf25-462d51b3edf9")
-	)
+	
 	(wire
 		(pts
 			(xy 73.66 166.37) (xy 78.74 166.37)
@@ -566,16 +557,7 @@
 		)
 		(uuid "d38579c5-1729-44bf-9285-8f1dd0177e1f")
 	)
-	(wire
-		(pts
-			(xy 177.8 129.54) (xy 182.88 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d4ed4ce7-40cb-40e0-83f0-c938ea507b13")
-	)
+	
 	(wire
 		(pts
 			(xy 274.32 63.5) (xy 279.4 63.5)
@@ -686,16 +668,7 @@
 		)
 		(uuid "e502d10d-8e1b-42ec-ac52-d8c7739be4f9")
 	)
-	(wire
-		(pts
-			(xy 177.8 114.3) (xy 182.88 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5195d16-3ce3-473c-82ff-ef6ee3879ad3")
-	)
+	
 	(wire
 		(pts
 			(xy 73.66 110.49) (xy 78.74 110.49)
@@ -886,7 +859,7 @@
 		)
 		(uuid "2c15d17a-ad4b-4ae7-aa02-c1733e0eeaba")
 	)
-	(label "SW_V"
+	(label "LS_V_SRC"
 		(at 182.88 124.46 0)
 		(effects
 			(font
@@ -896,17 +869,8 @@
 		)
 		(uuid "2dffaf26-c984-4e6b-9877-3e13ea537cb6")
 	)
-	(label "PH_V"
-		(at 182.88 129.54 0)
-		(effects
-			(font
-				(size 0.9 0.9)
-			)
-			(justify left bottom)
-		)
-		(uuid "2e056b06-e02c-449b-a3cd-1887c4df63a7")
-	)
-	(label "SW_U"
+	
+	(label "LS_U_SRC"
 		(at 182.88 109.22 0)
 		(effects
 			(font
@@ -926,16 +890,7 @@
 		)
 		(uuid "3627f844-c3d1-49df-9e9f-216cab39972c")
 	)
-	(label "PH_W"
-		(at 182.88 144.78 0)
-		(effects
-			(font
-				(size 0.9 0.9)
-			)
-			(justify left bottom)
-		)
-		(uuid "3900a352-d485-487f-8a43-c44c61863f9e")
-	)
+	
 	(label "ENC_Z"
 		(at 274.32 132.08 0)
 		(effects
@@ -1206,7 +1161,7 @@
 		)
 		(uuid "951c6594-68c6-4fc6-82af-2a46c1954a3b")
 	)
-	(label "PH_W"
+	(label "LS_W_SRC"
 		(at 279.4 68.58 0)
 		(effects
 			(font
@@ -1337,7 +1292,7 @@
 		)
 		(uuid "c4f4db3b-c9e5-4505-97ee-aca45a3f49a2")
 	)
-	(label "SW_W"
+	(label "LS_W_SRC"
 		(at 182.88 139.7 0)
 		(effects
 			(font
@@ -1377,7 +1332,7 @@
 		)
 		(uuid "d6a4a1ee-0e6f-4017-b4ab-4eea7b532693")
 	)
-	(label "PH_U"
+	(label "LS_U_SRC"
 		(at 279.4 38.1 0)
 		(effects
 			(font
@@ -1407,16 +1362,7 @@
 		)
 		(uuid "ea5087f9-cad8-42b0-949f-d57f4a17c563")
 	)
-	(label "PH_U"
-		(at 182.88 114.3 0)
-		(effects
-			(font
-				(size 0.9 0.9)
-			)
-			(justify left bottom)
-		)
-		(uuid "ec1c9f6c-59c5-4a8e-aa9b-1bc73c5b1e33")
-	)
+	
 	(label "VIO_3V3"
 		(at 162.56 38.1 0)
 		(effects
@@ -1467,7 +1413,7 @@
 		)
 		(uuid "fd166ce0-5251-4e12-8386-4fad9091b50a")
 	)
-	(label "PH_V"
+	(label "LS_V_SRC"
 		(at 279.4 53.34 0)
 		(effects
 			(font
@@ -1827,7 +1773,7 @@
 				(justify right)
 			)
 		)
-		(pin "PH_U" output
+		(pin "LS_U_SRC" output
 			(at 274.32 38.1 0)
 			(uuid "152fedfa-311f-4cc1-bf74-1c432bd940b0")
 			(effects
@@ -1847,7 +1793,7 @@
 				(justify right)
 			)
 		)
-		(pin "PH_V" output
+		(pin "LS_V_SRC" output
 			(at 274.32 53.34 0)
 			(uuid "644abad4-fd73-4090-a952-2a74f1905a7b")
 			(effects
@@ -1867,7 +1813,7 @@
 				(justify right)
 			)
 		)
-		(pin "PH_W" output
+		(pin "LS_W_SRC" output
 			(at 274.32 68.58 0)
 			(uuid "679f58d1-81fa-4f89-baf1-43ac2efdf17a")
 			(effects
@@ -2329,7 +2275,7 @@
 				(justify left)
 			)
 		)
-		(pin "SW_U" input
+		(pin "LS_U_SRC" input
 			(at 177.8 109.22 0)
 			(uuid "8d256856-deba-4e52-9c0d-7c543d605021")
 			(effects
@@ -2339,17 +2285,8 @@
 				(justify right)
 			)
 		)
-		(pin "PH_U" input
-			(at 177.8 114.3 0)
-			(uuid "854860ea-5e4b-46d5-82b8-c24302b71736")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SW_V" input
+		
+		(pin "LS_V_SRC" input
 			(at 177.8 124.46 0)
 			(uuid "092ffd2f-f709-4faa-a0fb-9ca05924255f")
 			(effects
@@ -2359,17 +2296,8 @@
 				(justify right)
 			)
 		)
-		(pin "PH_V" input
-			(at 177.8 129.54 0)
-			(uuid "a8ad187e-a232-4e9c-88f5-cb28612e8662")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "SW_W" input
+		
+		(pin "LS_W_SRC" input
 			(at 177.8 139.7 0)
 			(uuid "eb1cefe2-ccc5-41f9-8b64-ac9f093ddec6")
 			(effects
@@ -2379,16 +2307,7 @@
 				(justify right)
 			)
 		)
-		(pin "PH_W" input
-			(at 177.8 144.78 0)
-			(uuid "82892541-ad36-40ee-a324-aa420887cca5")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
+		
 		(instances
 			(project "ax7010_servo_reva"
 				(path "/05403145-af59-4aba-b68b-68be6600865e"

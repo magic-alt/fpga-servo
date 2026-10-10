@@ -1,0 +1,6 @@
+Ref group,Target MPN,LCSC C-code,Role,Schematic status,PCB status,Procurement status,Safety note
+U2 U3 U4,INA240A1DR,C2060769,Current sense 20 V/V,Implemented,Value-only same physical lands,Stock shown; recheck order,80V common-mode not qualified
+U15 U16,LM339LVPWR,C3658338,Open-drain quad comparator,Implemented,Value-only same physical lands,Stock shown; recheck order,Delay/OCP not qualified
+RSH1 RSH2 RSH3,LR2512-23R005F4,C154688,5mR 3W 2512 2-terminal shunt,SCHEMATIC IMPLEMENTED,PCB BLOCKED old 4-terminal through-hole holes,Stock shown; recheck order,PROHIBIT_FAB until Kelvin + thermal redesign
+Q1 to Q8,BSC040N10NS5ATMA1,,Power MOSFET,Original retained,Original retained,Manufacturer-grade procurement pending,Non-original-name alternatives require gate charge SOA thermal qualification
+U1,FD6288T,C97683,Gate driver,Original retained,Original retained,Stock shown; recheck order,Critical keep actual vendor

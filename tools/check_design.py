@@ -76,13 +76,13 @@ if schematic_paths[0].exists():
 for token in [
     "FD6288T",
     "ADS8588S",
-    "INA241A2",
+    "INA240A1",
     "AM26LV32E",
     "BSC040N10NS5",
     "LM5164",
     "TPS62901",
     "TPS389001",
-    "TLV9024",
+    "LM339LV",
     "LM74502",
     "SN74LVC1G11",
     "SN74LVC2G08",
@@ -144,7 +144,7 @@ if pcb_path.exists():
         "FD6288T",
         "ADS8588S",
         "BSC040N10NS5",
-        "INA241A2",
+        "INA240A1",
         "AX7010_PL_A",
         "AX7010_PL_B",
     ]:
@@ -203,19 +203,22 @@ if bom_path.exists():
     if set(bom_refs) != expected_refs or len(bom_refs) != len(set(bom_refs)):
         errors.append("BOM references must match the schematic exactly (one row per component)")
     joined = "\n".join(str(row) for row in rows)
-    for part in ["FD6288T", "BSC040N10NS5", "INA241A2", "ADS8588S", "AM26LV32E"]:
+    for part in ["FD6288T", "BSC040N10NS5", "INA240A1", "ADS8588S", "AM26LV32E"]:
         if part not in joined:
             errors.append(f"BOM missing part: {part}")
 
 if (HW / "ax7010_servo_reva.kicad_pcb").exists():
     errors.extend(check_vendor_lands((HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8")))
 
-errors.extend(check_internal_groups(
-    (HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8"),
-    (HW / "ax7010_servo_reva.kicad_sym").read_text(encoding="utf-8"),
-    (HW / "gate_inverter.kicad_sch").read_text(encoding="utf-8"),
-    (HW / "fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod").read_text(encoding="utf-8"),
-))
+# Fabrication must fail closed while this branch carries old inline/THT PCB copper.
+# Existing four-terminal Kelvin regressions cannot validate a two-terminal 2512 land.
+if 'fpga-servo:Ohmite_650_4T_P25.40x6.35mm' in (HW / 'ax7010_servo_reva.kicad_pcb').read_text(encoding='utf-8'):
+    errors.append('NO FAB: PCB still has original inline 4-terminal through-hole shunts; schematic now has low-side 2512 2-terminal shunts')
+for required_ref in ('RSH1','RSH2','RSH3'):
+    row = row_by_ref.get(required_ref)
+    if not row or row['MPN'] != 'LR2512-23R005F4' or row['Package'] != 'Resistor_SMD:R_2512_6332Metric':
+        errors.append(f'{required_ref}: missing low-side 2-terminal shunt source')
+
 
 rules_path = HW / "ax7010_servo_reva.kicad_dru"
 errors.extend(check_internal_pad_rules(rules_path.read_text(encoding="utf-8") if rules_path.exists() else ""))
