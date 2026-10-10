@@ -43,7 +43,7 @@ Current footprint decisions made while closing ERC:
 
 - J3: Phoenix Contact **1714971**, MKDS 5/2-9,5, project-local 9.52 mm footprint
 - J4: Phoenix Contact **1714984**, MKDS 5/3-9,5, project-local 9.52 mm footprint
-- RSH1..RSH3: Ohmite **650FPR005E**, 5 mOhm / 5 W at 25 C free air, four terminals; project-local footprint
+- RSH1..RSH3: legacy Ohmite **650FPR005E** is deprecated / NOT FOR BUILD. Proposed replacement RALEC **LR2512-23R005F4** (C154688), 5mOhm/3W, TWO physical terminals. Schematic and PCB Kelvin topology plus high-current layout must be redesigned before fabrication.
 - L2: W鐪塺th Elektronik **74438356022**, WE-MAPI 4020, 2.2 uH
 
 ## Important limitation
@@ -54,10 +54,14 @@ Before fabrication, complete fine digital routing, fanout, copper-pour refill, P
 
 OCP latch implementation and timing gates: `docs/ocp_latch_review_2026-10-09.md`. Latest PDF has eight pages.
 
-INA241 correction during package review: U2/U3/U4 reserved pin 4 connects to GND per TI SBOSA30D Table 5-1, despite its NC name. Symbol electrical type, schematic wiring and PCB pad nets match; net count changed from 183 to 180. `check_netlist_safety.py` rejects regression to the former floating pins.
+Historical INA241 correction during package review: U2/U3/U4 reserved pin 4 connects to GND per TI SBOSA30D Table 5-1, despite its NC name. Symbol electrical type, schematic wiring and PCB pad nets match; net count changed from 183 to 180. `check_netlist_safety.py` rejects regression to the former floating pins.
 
 The earlier schematic-only update externalized F1/J6 and made J3.1 VIN_FUSED. The subsequent layout-entry repair has now removed PCB F1 and synchronized J3.1 plus ADC/diode pads. System BOM remains159 rows; current board netlist157/166. The prior schematic-only record remains historical.
 
 ## Gate A/B electronic qualification status (2026-10-09)
 
 The repository now carries a [netlist-backed electrical verification tool](../tools/gate_ab_verify.py), a [native-KiCad + ngspice CI evidence workflow](../.github/workflows/gate-ab-electrical.yml) and a [documented release decision](../docs/gate_ab_verification_2026-10-09.md). Automated wiring checks and ideal passive simulation are not equivalent to vendor switching/protection models or hardware measurements. Both **Gate A and Gate B remain BLOCKED**; the PCB also remains unfinished.
+
+## Availability-first schematic selection (2026-10-10)
+
+U2/U3/U4: TI INA240A1DR, 20 V/V, LCSC C2060769; U15/U16: TI LM339LVPWR, open drain, LCSC C3658338. Both retain existing SOIC8/TSSOP14 pin maps and PCB lands. INA240 has only 80 V maximum common-mode; high-side switching excursions must be qualified. LM339LV has longer propagation delay than TLV9024; dynamic OCP qualification is OPEN. Shunt migration to 2512 is BLOCKED pending board-level redesign. See docs/lcsc_sourcing_review_2026-10-10.md.

@@ -76,13 +76,13 @@ if schematic_paths[0].exists():
 for token in [
     "FD6288T",
     "ADS8588S",
-    "INA241A2",
+    "INA240A1",
     "AM26LV32E",
     "BSC040N10NS5",
     "LM5164",
     "TPS62901",
     "TPS389001",
-    "TLV9024",
+    "LM339LV",
     "LM74502",
     "SN74LVC1G11",
     "SN74LVC2G08",
@@ -144,7 +144,7 @@ if pcb_path.exists():
         "FD6288T",
         "ADS8588S",
         "BSC040N10NS5",
-        "INA241A2",
+        "INA240A1",
         "AX7010_PL_A",
         "AX7010_PL_B",
     ]:
@@ -203,7 +203,7 @@ if bom_path.exists():
     if set(bom_refs) != expected_refs or len(bom_refs) != len(set(bom_refs)):
         errors.append("BOM references must match the schematic exactly (one row per component)")
     joined = "\n".join(str(row) for row in rows)
-    for part in ["FD6288T", "BSC040N10NS5", "INA241A2", "ADS8588S", "AM26LV32E"]:
+    for part in ["FD6288T", "BSC040N10NS5", "INA240A1", "ADS8588S", "AM26LV32E"]:
         if part not in joined:
             errors.append(f"BOM missing part: {part}")
 

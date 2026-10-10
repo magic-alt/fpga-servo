@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "3x INA241A2 + independent TLV9024 window OCP + ADS8588S")
+		(comment 1 "3x INA240A1 20V/V + LM339LV open-drain OCP (timing open) + ADS8588S")
 	)
 (lib_symbols
 		(symbol "ax7010_servo_reva:ADS8588S_SERIAL"
@@ -1376,7 +1376,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ax7010_servo_reva:INA241A2"
+		(symbol "ax7010_servo_reva:INA240A1"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1395,7 +1395,7 @@
 					)
 				)
 			)
-			(property "Value" "INA241A2"
+			(property "Value" "INA240A1"
 				(at 0 -22.352 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1438,7 +1438,7 @@
 					)
 				)
 			)
-			(symbol "INA241A2_0_1"
+			(symbol "INA240A1_0_1"
 				(rectangle
 					(start -15.24 12.7)
 					(end 15.24 -12.7)
@@ -1451,7 +1451,7 @@
 					)
 				)
 			)
-			(symbol "INA241A2_1_1"
+			(symbol "INA240A1_1_1"
 				(pin input line
 					(at -20.32 2.54 0)
 					(length 5.08)
@@ -1715,7 +1715,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ax7010_servo_reva:TLV9024"
+		(symbol "ax7010_servo_reva:LM339LV"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1734,7 +1734,7 @@
 					)
 				)
 			)
-			(property "Value" "TLV9024"
+			(property "Value" "LM339LV"
 				(at 0 -22.86 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1777,7 +1777,7 @@
 					)
 				)
 			)
-			(symbol "TLV9024_0_1"
+			(symbol "LM339LV_0_1"
 				(rectangle
 					(start -16.51 18.288)
 					(end 16.51 -18.288)
@@ -1790,7 +1790,7 @@
 					)
 				)
 			)
-			(symbol "TLV9024_1_1"
+			(symbol "LM339LV_1_1"
 				(pin open_collector line
 					(at 21.59 12.7 180)
 					(length 5.08)
@@ -2079,7 +2079,7 @@
 (symbol "PWR_VBUS_PROT_1_1" (pin passive line (at 0 0 90) (length 0) (name "VBUS_PROT" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
 )
 (symbol
-		(lib_id "ax7010_servo_reva:INA241A2")
+		(lib_id "ax7010_servo_reva:INA240A1")
 		(at 43.18 50.8 0.0)
 		(unit 1)
 		(body_style 1)
@@ -2099,7 +2099,7 @@
 				)
 			)
 		)
-		(property "Value" "INA241A2ID"
+		(property "Value" "INA240A1DR"
 			(at 45.72 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2130,7 +2130,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "INA241A2ID_U"
+		(property "Description" "INA240A1DR_U_20VperV"
 			(at 43.18 50.8 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2173,7 +2173,7 @@
 			)
 		)
 	(property "Manufacturer" "Texas Instruments" (at 43.18 50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "INA241A2ID" (at 43.18 50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "INA240A1DR" (at 43.18 50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:R")
@@ -2407,7 +2407,7 @@
 		)
 	)
 (symbol
-		(lib_id "ax7010_servo_reva:INA241A2")
+		(lib_id "ax7010_servo_reva:INA240A1")
 		(at 43.18 92.71 0.0)
 		(unit 1)
 		(body_style 1)
@@ -2427,7 +2427,7 @@
 				)
 			)
 		)
-		(property "Value" "INA241A2ID"
+		(property "Value" "INA240A1DR"
 			(at 45.72 95.25 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2458,7 +2458,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "INA241A2ID_V"
+		(property "Description" "INA240A1DR_V_20VperV"
 			(at 43.18 92.71 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2501,7 +2501,7 @@
 			)
 		)
 	(property "Manufacturer" "Texas Instruments" (at 43.18 92.71 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "INA241A2ID" (at 43.18 92.71 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "INA240A1DR" (at 43.18 92.71 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:R")
@@ -2735,7 +2735,7 @@
 		)
 	)
 (symbol
-		(lib_id "ax7010_servo_reva:INA241A2")
+		(lib_id "ax7010_servo_reva:INA240A1")
 		(at 43.18 134.62 0.0)
 		(unit 1)
 		(body_style 1)
@@ -2755,7 +2755,7 @@
 				)
 			)
 		)
-		(property "Value" "INA241A2ID"
+		(property "Value" "INA240A1DR"
 			(at 45.72 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2786,7 +2786,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "INA241A2ID_W"
+		(property "Description" "INA240A1DR_W_20VperV"
 			(at 43.18 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2829,7 +2829,7 @@
 			)
 		)
 	(property "Manufacturer" "Texas Instruments" (at 43.18 134.62 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "INA241A2ID" (at 43.18 134.62 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "INA240A1DR" (at 43.18 134.62 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:R")
@@ -3371,7 +3371,7 @@
 		)
 	)
 (symbol
-		(lib_id "ax7010_servo_reva:TLV9024")
+		(lib_id "ax7010_servo_reva:LM339LV")
 		(at 146.05 69.85 0.0)
 		(unit 1)
 		(body_style 1)
@@ -3391,7 +3391,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV9024PWR"
+		(property "Value" "LM339LVPWR"
 			(at 148.59 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3422,7 +3422,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "TLV9024PWR_HIGH"
+		(property "Description" "LM339LVPWR_HIGH"
 			(at 146.05 69.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3483,10 +3483,10 @@
 			)
 		)
 	(property "Manufacturer" "Texas Instruments" (at 146.05 69.85 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "TLV9024PWR" (at 146.05 69.85 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LM339LVPWR" (at 146.05 69.85 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
-		(lib_id "ax7010_servo_reva:TLV9024")
+		(lib_id "ax7010_servo_reva:LM339LV")
 		(at 146.05 132.08 0.0)
 		(unit 1)
 		(body_style 1)
@@ -3506,7 +3506,7 @@
 				)
 			)
 		)
-		(property "Value" "TLV9024PWR"
+		(property "Value" "LM339LVPWR"
 			(at 148.59 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3537,7 +3537,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "TLV9024PWR_LOW"
+		(property "Description" "LM339LVPWR_LOW"
 			(at 146.05 132.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3598,7 +3598,7 @@
 			)
 		)
 	(property "Manufacturer" "Texas Instruments" (at 146.05 132.08 0) (hide yes) (effects (font (size 1.016 1.016))))
-(property "MPN" "TLV9024PWR" (at 146.05 132.08 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LM339LVPWR" (at 146.05 132.08 0) (hide yes) (effects (font (size 1.016 1.016))))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:R")

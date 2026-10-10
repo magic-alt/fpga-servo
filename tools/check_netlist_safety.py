@@ -97,10 +97,15 @@ for ref in values:
 for i in range(1, 7):
     same((f"RG{i}", "2"), (f"Q{i}", "4"), (f"RGS{i}", "1"))
 for amp, resistor, adc_pin in [("U2", "R40", "49"), ("U3", "R41", "51"), ("U4", "R42", "53")]:
-    # TI SBOSA30D Table 5-1: reserved pin 4 must connect to ground.
+    # INA240 D-package Table 6-1: pin 4 NC may connect to GND.
+    if values.get(amp) != "INA240A1DR":
+        errors.append(f"{amp}: INA240A1DR 20V/V part required")
     rail(amp, "4", "GND")
     same((amp, "5"), (resistor, "1"))
     same((resistor, "2"), ("U6", adc_pin))
+for cmp in ("U15", "U16"):
+    if values.get(cmp) != "LM339LVPWR":
+        errors.append(f"{cmp}: LM339LVPWR open-drain OCP comparator required")
 rail("U11", "1", "GATE_EN")
 rail("U11", "3", "PWR_READY")
 rail("U11", "6", "ARMED")

@@ -129,9 +129,9 @@ RGS3,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MP
 RGS4,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 RGS5,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 RGS6,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
-RSH1,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
-RSH2,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
-RSH3,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,5mR_4T_5W_25C_free_air_Ohmite_650;_board_thermal_qualification_open,Fitted
+RSH1,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,BLOCKED_NO_BUILD; obsolete THT, RALEC C154688 2512 2T requires Kelvin PCB revision,Fitted
+RSH2,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,BLOCKED_NO_BUILD; obsolete THT, RALEC C154688 2512 2T requires Kelvin PCB revision,Fitted
+RSH3,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,BLOCKED_NO_BUILD; obsolete THT, RALEC C154688 2512 2T requires Kelvin PCB revision,Fitted
 RT1,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
 RT2,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
 RT3,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
@@ -141,9 +141,9 @@ TP3,1,TP_12V,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact 
 TP4,1,TP_5V,TBD,TBD,TestPoint:TestPoint_Pad_D2.0mm,See schematic,Fitted; exact MPN / rating qualification open
 TP5,1,ARMED,TBD,TBD,TestPoint:TestPoint_Pad_D1.5mm,See schematic,Fitted; exact MPN / rating qualification open
 U1,1,FD6288T,Fortior,FD6288T,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,See schematic,Fitted
-U2,1,INA241A2ID,Texas Instruments,INA241A2ID,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA241A2ID_U,Fitted
-U3,1,INA241A2ID,Texas Instruments,INA241A2ID,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA241A2ID_V,Fitted
-U4,1,INA241A2ID,Texas Instruments,INA241A2ID,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA241A2ID_W,Fitted
+U2,1,INA240A1DR,Texas Instruments,INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA240A1DR_U_20VperV; LCSC C2060769; 80V common-mode qualification OPEN,Fitted
+U3,1,INA240A1DR,Texas Instruments,INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA240A1DR_V_20VperV; LCSC C2060769; 80V common-mode qualification OPEN,Fitted
+U4,1,INA240A1DR,Texas Instruments,INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,INA240A1DR_W_20VperV; LCSC C2060769; 80V common-mode qualification OPEN,Fitted
 U6,1,ADS8588SIPM,Texas Instruments,ADS8588SIPM,Package_QFP:LQFP-64_10x10mm_P0.5mm,See schematic,Fitted
 U7,1,AM26LV32EIPWR,Texas Instruments,AM26LV32EIPWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,See schematic,Fitted
 U8,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,SN74LVC2G08DCUR_U,Fitted
@@ -152,8 +152,8 @@ U10,1,SN74LVC2G08DCUR,Texas Instruments,SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_V
 U11,1,SN74LVC1G11DCKR,Texas Instruments,SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,SN74LVC1G11DCKR_RUN_OK,Fitted
 U12,1,LM5164DDAR,Texas Instruments,LM5164DDAR,Package_SO:TI_SO-PowerPAD-8,See schematic,Fitted
 U13,1,TPS62901RPJR,Texas Instruments,TPS62901RPJR,fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm,5.1V nominal; external FB; forced PWM 2.5MHz; MODE=VIN,Fitted
-U15,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_HIGH,Fitted
-U16,1,TLV9024PWR,Texas Instruments,TLV9024PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,TLV9024PWR_LOW,Fitted
+U15,1,LM339LVPWR,Texas Instruments,LM339LVPWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,LM339LVPWR_HIGH; LCSC C3658338; OCP propagation qualification OPEN,Fitted
+U16,1,LM339LVPWR,Texas Instruments,LM339LVPWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,LM339LVPWR_LOW; LCSC C3658338; OCP propagation qualification OPEN,Fitted
 U18,1,LM74502DDFR,Texas Instruments,LM74502DDFR,fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm,See schematic,Fitted
 U19,1,TPD6E05U06RVZR,Texas Instruments,TPD6E05U06RVZR,Package_SON:Texas_R-PUSON-N14,See schematic,Fitted
 U20,1,SN74LVC1G74,Texas Instruments,SN74LVC1G74DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,See schematic,Fitted
