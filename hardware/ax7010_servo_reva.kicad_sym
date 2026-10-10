@@ -5023,7 +5023,7 @@
 				)
 				(embedded_fonts no)
 			)
-	(symbol "SHUNT_5mR"
+	(symbol "SHUNT_5mR_2T"
 				(pin_names
 					(offset 1.016)
 				)
@@ -5042,7 +5042,7 @@
 						)
 					)
 				)
-				(property "Value" "SHUNT_5mR"
+				(property "Value" "SHUNT_5mR_2T"
 					(at 0 -10.922 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -5052,7 +5052,7 @@
 						)
 					)
 				)
-				(property "Footprint" "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
+				(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
 					(at 0 0 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -5085,7 +5085,7 @@
 						)
 					)
 				)
-				(symbol "SHUNT_5mR_0_1"
+				(symbol "SHUNT_5mR_2T_0_1"
 					(rectangle
 						(start -10.16 6.35)
 						(end 10.16 -6.35)
@@ -5098,7 +5098,7 @@
 						)
 					)
 				)
-				(symbol "SHUNT_5mR_1_1"
+				(symbol "SHUNT_5mR_2T_1_1"
 					(pin passive line
 						(at -15.24 0 0)
 						(length 5.08)
@@ -5135,46 +5135,10 @@
 							)
 						)
 					)
-					(pin passive line
-						(at 0 11.43 270)
-						(length 5.08)
-						(name "KP"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-						(number "3"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-					)
-					(pin passive line
-						(at 0 -11.43 90)
-						(length 5.08)
-						(name "KN"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-						(number "4"
-							(effects
-								(font
-									(size 1.016 1.016)
-								)
-							)
-						)
-					)
+					
+					
 				)
 				(embedded_fonts no)
-
-(jumper_pin_groups ("1" "3") ("2" "4"))
 )
 	(symbol "SN74LVC1G11"
 				(pin_names

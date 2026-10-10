@@ -40,3 +40,7 @@ Critical: shunts, gate driver, MOSFETs, ADC/current chain, OCP/safety, power con
 ## Checks this branch can and cannot claim
 
 Textual KiCad symbol/instance/BOM/PCB value strings are updated for the ICs; underlying PCB copper, pads, net names and circuit component counts are intentionally unchanged. A script-level s-expression balance check was performed on generated content; actual KiCad10 ERC/DRC, no-fault OCP dynamics, SMT DFM and component procurement **have not been performed in this session**. Do not claim a safe-to-fabricate production release.
+
+## New low-side shunt topology instruction
+
+The KiCad schematic uses three independent 2-terminal 2512 shunts in the **lower MOSFET source returns**. The current PCB is not yet migrated. The previous 4-terminal inline sense layout is obsolete, irrespective of historical ERC/DRC pass. For safe completion and tests, consult [low-side migration plan](low_side_3shunt_migration_2026-10-10.md).

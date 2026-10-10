@@ -129,9 +129,9 @@ RGS3,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MP
 RGS4,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 RGS5,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
 RGS6,1,10k,TBD,TBD,Resistor_SMD:R_0603_1608Metric,See schematic,Fitted; exact MPN / rating qualification open
-RSH1,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,BLOCKED_NO_BUILD; obsolete THT, RALEC C154688 2512 2T requires Kelvin PCB revision,Fitted
-RSH2,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,BLOCKED_NO_BUILD; obsolete THT, RALEC C154688 2512 2T requires Kelvin PCB revision,Fitted
-RSH3,1,5mR,Ohmite,650FPR005E,fpga-servo:Ohmite_650_4T_P25.40x6.35mm,BLOCKED_NO_BUILD; obsolete THT, RALEC C154688 2512 2T requires Kelvin PCB revision,Fitted
+RSH1,1,5mR,RALEC,LR2512-23R005F4,Resistor_SMD:R_2512_6332Metric,Low-side 5mR 3W 2512 two-terminal; LCSC C154688; NO FAB until PCB Kelvin+thermal validation,Fitted
+RSH2,1,5mR,RALEC,LR2512-23R005F4,Resistor_SMD:R_2512_6332Metric,Low-side 5mR 3W 2512 two-terminal; LCSC C154688; NO FAB until PCB Kelvin+thermal validation,Fitted
+RSH3,1,5mR,RALEC,LR2512-23R005F4,Resistor_SMD:R_2512_6332Metric,Low-side 5mR 3W 2512 two-terminal; LCSC C154688; NO FAB until PCB Kelvin+thermal validation,Fitted
 RT1,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
 RT2,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open
 RT3,1,120R,TBD,TBD,Resistor_SMD:R_0603_1608Metric,120R_TERM_DNP,DNP; populate only after option review; exact MPN / rating qualification open

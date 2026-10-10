@@ -9,7 +9,7 @@
 		(date "2026-09-29")
 		(rev "A1")
 		(company "magic-alt/fpga-servo")
-		(comment 1 "3x INA240A1 20V/V + LM339LV open-drain OCP (timing open) + ADS8588S")
+		(comment 1 "3x INA240A1 low-side 20V/V + LM339LV OCP (dynamic OPEN)")
 	)
 (lib_symbols
 		(symbol "ax7010_servo_reva:ADS8588S_SERIAL"
@@ -4996,12 +4996,7 @@
 
 
 (wire (pts (xy 20.32 48.26) (xy 22.86 48.26)) (stroke (width 0) (type default)) (uuid "67459863-bf63-4b3b-970e-013ecc7d5038"))
-(hierarchical_label "PH_U"
-		(shape input)
-		(at 20.32 48.26 0)
-		(effects (font (size 1 1)) (justify right))
-		(uuid "378896a1-c611-4ac9-9f87-c2605c3a97e5")
-	)
+(label "GND" (at 20.32 48.26 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "378896a1-c611-4ac9-9f87-c2605c3a97e5"))
 (wire (pts (xy 39.37 71.12) (xy 43.18 71.12)) (stroke (width 0) (type default)) (uuid "308ce185-37d1-4fb5-95f6-dd30f29e8c5d"))
 (wire (pts (xy 39.37 68.58) (xy 39.37 71.12)) (stroke (width 0) (type default)) (uuid "bdd3aac9-717e-40ec-ad58-a74ffc012bbb"))
 (wire (pts (xy 43.18 68.58) (xy 43.18 71.12)) (stroke (width 0) (type default)) (uuid "ee7b8b49-5a63-4e39-9f1a-83ebba87d5f1"))
@@ -5033,7 +5028,7 @@
 (pin "1" (uuid "4b442e1c-2b5a-4e5a-b641-7ddb4cdec578")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/ea2b8780-1600-4910-9fa4-78ef2c01c307" (reference "#PWR1205") (unit 1)))))
 (label "VA_5V" (at 73.66 25.4 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "25e39ba4-1b01-4700-8938-a8d7fdcde8d1"))
 (wire (pts (xy 20.32 53.34) (xy 22.86 53.34)) (stroke (width 0) (type default)) (uuid "065a1c12-842f-46a4-9dc2-9493728cd807"))
-(hierarchical_label "SW_U"
+(hierarchical_label "LS_U_SRC"
 		(shape input)
 		(at 20.32 53.34 0)
 		(effects (font (size 1 1)) (justify right))
@@ -5044,12 +5039,7 @@
 (wire (pts (xy 91.44 50.8) (xy 91.44 54.61)) (stroke (width 0) (type default)) (uuid "bbf2ee09-61be-461c-a13d-073c78f96868"))
 (label "IU_ADC" (at 86.36 50.8 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "4b542394-c1f7-4026-b25d-154f2a7acebf"))
 (wire (pts (xy 20.32 90.17) (xy 22.86 90.17)) (stroke (width 0) (type default)) (uuid "aa3cc436-f579-413f-a857-8ece2289afa4"))
-(hierarchical_label "PH_V"
-		(shape input)
-		(at 20.32 90.17 0)
-		(effects (font (size 1 1)) (justify right))
-		(uuid "70f27286-808b-44ec-b232-e9226b6afd69")
-	)
+(label "GND" (at 20.32 90.17 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "70f27286-808b-44ec-b232-e9226b6afd69"))
 (wire (pts (xy 46.99 110.49) (xy 46.99 113.03)) (stroke (width 0) (type default)) (uuid "98be418d-7f96-420d-adb0-417985fc8093"))
 (wire (pts (xy 46.99 107.95) (xy 46.99 110.49)) (stroke (width 0) (type default)) (uuid "fb3804de-a91d-4a73-8fde-ec23f49b1796"))
 (wire (pts (xy 39.37 113.03) (xy 43.18 113.03)) (stroke (width 0) (type default)) (uuid "5cca250d-8cb8-478b-accd-eaeb29f399ea"))
@@ -5081,7 +5071,7 @@
 (pin "1" (uuid "049c4258-db45-4338-a931-95e7b9b1ce4d")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/ea2b8780-1600-4910-9fa4-78ef2c01c307" (reference "#PWR1207") (unit 1)))))
 (label "VA_5V" (at 73.66 67.31 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "60c857a5-e2d0-462d-bfd7-b39dad083b50"))
 (wire (pts (xy 20.32 95.25) (xy 22.86 95.25)) (stroke (width 0) (type default)) (uuid "b09ae47b-3bc9-4969-8948-d97e7bb052a4"))
-(hierarchical_label "SW_V"
+(hierarchical_label "LS_V_SRC"
 		(shape input)
 		(at 20.32 95.25 0)
 		(effects (font (size 1 1)) (justify right))
@@ -5092,12 +5082,7 @@
 (wire (pts (xy 91.44 92.71) (xy 91.44 96.52)) (stroke (width 0) (type default)) (uuid "a76f4559-20be-4211-8a78-5ae5044657bd"))
 (label "IV_ADC" (at 86.36 92.71 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "1439f560-17cc-4a4b-97de-96e0f14465ff"))
 (wire (pts (xy 20.32 132.08) (xy 22.86 132.08)) (stroke (width 0) (type default)) (uuid "0570e47b-3b9b-4635-84d8-2bfb159316f3"))
-(hierarchical_label "PH_W"
-		(shape input)
-		(at 20.32 132.08 0)
-		(effects (font (size 1 1)) (justify right))
-		(uuid "e28a5bb8-0db9-412d-b3fd-f96f53273911")
-	)
+(label "GND" (at 20.32 132.08 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "e28a5bb8-0db9-412d-b3fd-f96f53273911"))
 (wire (pts (xy 46.99 152.4) (xy 46.99 153.67)) (stroke (width 0) (type default)) (uuid "b3a50707-b3a9-4108-a07a-46c7c771e3de"))
 (wire (pts (xy 39.37 152.4) (xy 39.37 154.94)) (stroke (width 0) (type default)) (uuid "79550248-f511-41fa-a82a-df8408610160"))
 (wire (pts (xy 91.44 151.13) (xy 91.44 153.67)) (stroke (width 0) (type default)) (uuid "eb9ab4c4-a189-4720-b659-88f09cb5a758"))
@@ -5129,7 +5114,7 @@
 (pin "1" (uuid "e4cfacbc-ee99-4f7c-a149-39b335ca6a1d")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/ea2b8780-1600-4910-9fa4-78ef2c01c307" (reference "#PWR1209") (unit 1)))))
 (label "VA_5V" (at 73.66 109.22 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "c8735dc6-9cbe-4d48-8941-a04054721878"))
 (wire (pts (xy 20.32 137.16) (xy 22.86 137.16)) (stroke (width 0) (type default)) (uuid "f03020f8-dca3-41ee-82a1-2f7214abe402"))
-(hierarchical_label "SW_W"
+(hierarchical_label "LS_W_SRC"
 		(shape input)
 		(at 20.32 137.16 0)
 		(effects (font (size 1 1)) (justify right))
