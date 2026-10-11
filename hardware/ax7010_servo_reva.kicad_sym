@@ -3479,7 +3479,7 @@
 				)
 				(embedded_fonts no)
 			)
-	(symbol "INA241A2"
+	(symbol "INA240A1"
 				(pin_names
 					(offset 1.016)
 				)
@@ -3498,7 +3498,7 @@
 						)
 					)
 				)
-				(property "Value" "INA241A2"
+				(property "Value" "INA240A1"
 					(at 0 -22.352 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -3541,7 +3541,7 @@
 						)
 					)
 				)
-				(symbol "INA241A2_0_1"
+				(symbol "INA240A1_0_1"
 					(rectangle
 						(start -15.24 12.7)
 						(end 15.24 -12.7)
@@ -3554,7 +3554,7 @@
 						)
 					)
 				)
-				(symbol "INA241A2_1_1"
+				(symbol "INA240A1_1_1"
 					(pin input line
 						(at -20.32 2.54 0)
 						(length 5.08)
@@ -5834,7 +5834,7 @@
 				)
 				(embedded_fonts no)
 			)
-	(symbol "TLV9024"
+	(symbol "LM339LV"
 				(pin_names
 					(offset 1.016)
 				)
@@ -5853,7 +5853,7 @@
 						)
 					)
 				)
-				(property "Value" "TLV9024"
+				(property "Value" "LM339LV"
 					(at 0 -22.86 0)
 					(show_name no)
 					(do_not_autoplace no)
@@ -5896,7 +5896,7 @@
 						)
 					)
 				)
-				(symbol "TLV9024_0_1"
+				(symbol "LM339LV_0_1"
 					(rectangle
 						(start -16.51 18.288)
 						(end 16.51 -18.288)
@@ -5909,7 +5909,7 @@
 						)
 					)
 				)
-				(symbol "TLV9024_1_1"
+				(symbol "LM339LV_1_1"
 					(pin open_collector line
 						(at 21.59 12.7 180)
 						(length 5.08)
@@ -8260,4 +8260,300 @@
  (symbol "R_PRECISION_1_1"
   (pin passive line (at -3.81 0 0) (length 1.27) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
   (pin passive line (at 3.81 0 180) (length 1.27) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))))
+(symbol "SHUNT_5mR_SMD"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "RSH"
+			(at 0 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SHUNT_5mR_SMD"
+			(at 0 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:HoYLR2512_Kelvin"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260717/CBD056E172381209786DEB3E6F9AABB3.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "SHUNT_5mR_SMD_0_1"
+			(rectangle
+				(start -5.08 -1.27)
+				(end 5.08 1.27)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "SHUNT_5mR_SMD_1_1"
+			(pin passive line
+				(at -15.24 0 0)
+				(length 10.16)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 15.24 0 180)
+				(length 10.16)
+				(name "~"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "LM393LV"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM393LV"
+			(at 0 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:TI_DDF0008A"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm393lv.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM393LV_0_1"
+			(rectangle
+				(start -10.16 12.7)
+				(end 10.16 -15.24)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM393LV_1_1"
+			(pin open_collector line
+				(at 15.24 2.54 180)
+				(length 5.08)
+				(name "OUT1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 5.08)
+				(name "IN1-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 5.08 0)
+				(length 5.08)
+				(name "IN1+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -20.32 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 -7.62 0)
+				(length 5.08)
+				(name "IN2+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 -12.7 0)
+				(length 5.08)
+				(name "IN2-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 15.24 -10.16 180)
+				(length 5.08)
+				(name "OUT2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 17.78 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "PWR_VBUS_BRIDGE" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VBUS_BRIDGE" (at 0 4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_VBUS_BRIDGE_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_VBUS_BRIDGE_1_1" (pin passive line (at 0 0 90) (length 0) (name "VBUS_BRIDGE" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
 )

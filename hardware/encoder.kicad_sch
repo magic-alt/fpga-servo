@@ -1315,7 +1315,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+		(property "Footprint" "fpga-servo:JILN_3210_2x05_P2.54mm_D1.02"
 			(at 50.8 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -1326,7 +1326,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20190920/C429963_F9492D44774B1CF9B8CD95C0C24EAA23.pdf"
 			(at 50.8 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1346,6 +1346,96 @@
 				)
 			)
 		 (hide yes))
+		(property "MPN" "321010SG0ABK00A01"
+	(id 0)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "JILN(锦凌)"
+	(id 1)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C429962"
+	(id 2)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternate_MPN" "2.54-2*5P简牛"
+	(id 3)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternate_LCSC" "C5665"
+	(id 4)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Sourcing_Status" "China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm"
+	(id 5)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_MPN" "2.54-2*5P简牛"
+	(id 6)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_LCSC" "C5665"
+	(id 7)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_Status" "{\"status\": \"CONDITIONAL_CURRENT_AND_OEM_PROVENANCE_REVIEW\", \"family_pdf\": \"/private/tmp/passive-oem/9661.pdf\", \"origin\": \"Mainland China\", \"ratings\": \"1A,-55..105C,contact30mohmmax; not3Aequivalent\", \"land\": \"2.54pitch2rows,1.0finishedholes,0.64squarepins; samecopperpattern\", \"body\": \"L=2.54*n+7.6±.5;width9.0±.1;height8.8±.1;keywidth4.5±.1;tail3.3±.1\", \"provenance\": \"ChineseC9138page suppliesfamilydrawing 简牛2.54-2xnP(3<=n<=40), supplier栏blank; C5665page hasnoPDF. Mechanicalfamilyevidence exists but exactmanufacturerattestationnotproven.\", \"current_application\": \"J5 .5A PTC limits demand; J1 per-pin demand<1A required, system load qualification open.\"}"
+	(id 8)
+	(at 50.8 88.9 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 		(pin "1"
 			(uuid "91b7cfe3-445c-49dc-9e0f-5b6f8ee8fbc8")
 		)
@@ -1658,7 +1748,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/am26lv32e.pdf"
 			(at 203.2 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1734,8 +1824,12 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Texas Instruments" (at 203.2 88.9 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "TI(德州仪器)" (at 203.2 88.9 0) (hide yes) (effects (font (size 1.016 1.016))))
 (property "MPN" "AM26LV32EIPWR" (at 203.2 88.9 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C404024" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:FUSE")
@@ -1779,7 +1873,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20230515/141EC6E8F2A6D78FC40635A196E31E08.pdf"
 			(at 50.8 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1799,6 +1893,96 @@
 				)
 			)
 		 (hide yes))
+		(property "MPN" "ASMD1812-050"
+	(id 0)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "JDTfuse(集电通)"
+	(id 1)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C135358"
+	(id 2)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternate_MPN" "MF-MSMF050-2"
+	(id 3)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternate_LCSC" "C17313"
+	(id 4)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Sourcing_Status" "China stock2790 checked2026-10-10; local ambient<=85C; hold0.45A at40C; Bourns alternate land review required"
+	(id 5)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_MPN" "MF-MSMF050-2"
+	(id 6)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_LCSC" "C17313"
+	(id 7)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_Status" "CONDITIONAL: Bourns OEM land differs; ambient<=85C and derated hold current validation"
+	(id 8)
+	(at 50.8 40.64 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
 		(pin "1"
 			(uuid "63f3e8eb-11cb-4b2d-b8af-f997d58dd4a4")
 		)
@@ -1856,7 +2040,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
 			(at 243.84 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1890,7 +2074,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B104K500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C30926" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B104KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C1591" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 260.35 58.42 0.0)
@@ -1933,7 +2131,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260717/7FA3951AEFD121FDE352DC2C40859DA4.pdf"
 			(at 260.35 58.42 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1967,7 +2165,21 @@
 				)
 			)
 		)
-	)
+	
+	(property "Manufacturer" "HRE(芯声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "CGA0805X7R475K250MT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C6119942" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL21B475KOFNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C107365" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (symbol
 		(lib_id "ax7010_servo_reva:TPD6E05U06")
 		(at 124.46 119.38 270)
@@ -2010,7 +2222,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tpd6e05u06.pdf"
 			(at 124.46 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2059,9 +2271,13 @@
 				)
 			)
 		)
-	(property "Manufacturer" "Texas Instruments" (at 124.46 119.38 0) (hide yes) (effects (font (size 1.016 1.016))))
+	(property "Manufacturer" "TI(德州仪器)" (at 124.46 119.38 0) (hide yes) (effects (font (size 1.016 1.016))))
 (property "MPN" "TPD6E05U06RVZR" (at 124.46 119.38 0) (hide yes) (effects (font (size 1.016 1.016))))
-(pin "1" (uuid "8ce03ad2-84bb-475a-93f6-fbbfd9d18d29"))(pin "2" (uuid "11493eaf-570a-4447-89b6-fc99b11155dc"))(pin "3" (uuid "baf23146-7a67-404b-bfa5-e26038a006c3"))(pin "4" (uuid "e2cff3ff-2ff6-460c-9a09-a42cdc5a40bc"))(pin "6" (uuid "5a41530a-f507-4d54-9807-501e14ed89ea"))(pin "7" (uuid "81312b0b-b0ab-48c1-953d-d96ff8ea9a08"))(pin "10" (uuid "86666f3e-45c7-44e8-a18e-7b4ce7002360")))
+(pin "1" (uuid "8ce03ad2-84bb-475a-93f6-fbbfd9d18d29"))(pin "2" (uuid "11493eaf-570a-4447-89b6-fc99b11155dc"))(pin "3" (uuid "baf23146-7a67-404b-bfa5-e26038a006c3"))(pin "4" (uuid "e2cff3ff-2ff6-460c-9a09-a42cdc5a40bc"))(pin "6" (uuid "5a41530a-f507-4d54-9807-501e14ed89ea"))(pin "7" (uuid "81312b0b-b0ab-48c1-953d-d96ff8ea9a08"))(pin "10" (uuid "86666f3e-45c7-44e8-a18e-7b4ce7002360"))
+	(property "LCSC" "C962978" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 (wire (pts (xy 67.31 78.74) (xy 71.12 78.74)) (stroke (width 0) (type default)) (uuid "a20d552b-691e-479a-a5ac-0f5a0af03b55"))
 (wire (pts (xy 71.12 78.74) (xy 71.12 74.93)) (stroke (width 0) (type default)) (uuid "b67d3cc7-3bcc-42b2-857b-ce1505d06cc4"))
 (wire (pts (xy 71.12 74.93) (xy 180.34 74.93)) (stroke (width 0) (type default)) (uuid "fdcb89ee-3930-4b3f-9ec4-793d3fe2b8ac"))

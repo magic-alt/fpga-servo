@@ -5,7 +5,7 @@ import sys
 
 from kicad_native import extract_forms, property_value, strip_form
 from check_vendor_lands import check as check_vendor_lands, check_internal_pad_rules
-from check_pcb_kelvin import check_internal_groups
+from check_pcb_kelvin import check_shunt_contract
 
 ROOT = Path(__file__).resolve().parents[1]
 HW = ROOT / "hardware"
@@ -74,15 +74,15 @@ if schematic_paths[0].exists():
             errors.append(f"top schematic missing hierarchical child: {child}")
 
 for token in [
-    "FD6288T",
+    "DRV8300DPWR",
     "ADS8588S",
-    "INA241A2",
+    "INA240A1",
     "AM26LV32E",
     "BSC040N10NS5",
     "LM5164",
     "TPS62901",
     "TPS389001",
-    "TLV9024",
+    "LM393LV",
     "LM74502",
     "SN74LVC1G11",
     "SN74LVC2G08",
@@ -95,21 +95,30 @@ for token in ["U_SH_P", "U_SH_N", "V_SH_P", "V_SH_N", "W_SH_P", "W_SH_N"]:
     if token in schematic_text:
         errors.append(f"obsolete schematic construct remains: {token}")
 
-# The selected source fuse is system wiring, not a placeholder PCB land pattern.
+# On-board fuse protection is required; J6 is the off-board source interface.
 power_authored = strip_form((HW / "power_input.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
 fuses = [x.text for x in extract_forms(power_authored, "symbol")
          if property_value(x.text, "Reference") == "F1"]
 if len(fuses) != 1:
-    errors.append("exactly one external F1 system symbol required")
+    errors.append("exactly one onboard F1 required")
 else:
     fuse = fuses[0]
-    if "(on_board no)" not in fuse or "(in_pos_files no)" not in fuse:
-        errors.append("F1 must be external and excluded from PCB/placement")
-    if property_value(fuse, "Footprint"):
-        errors.append("external F1 must not retain a PCB placeholder footprint")
-    for prop, expected in [("MPN", "KLKD025.T"), ("Holder_MPN", "LPSM0001Z")]:
+    if "(on_board yes)" not in fuse or "(in_pos_files no)" in fuse:
+        errors.append("F1 must be on board and included in PCB placement")
+    for prop, expected in [("MPN", "0456025.ER"),
+                           ("Footprint", "fpga-servo:Littelfuse_456_25A_SMD")]:
         if property_value(fuse, prop) != expected:
-            errors.append(f"F1: selected external {prop} missing")
+            errors.append(f"F1: selected onboard {prop} missing")
+gate_authored = strip_form((HW / "gate_inverter.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
+current_authored = strip_form((HW / "current_adc.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
+placed = {property_value(x.text, "Reference"): x.text for text in (gate_authored, current_authored)
+          for x in extract_forms(text, "symbol")}
+if any(property_value(placed.get("U1", ""), field) != "DRV8300DPWR"
+       for field in ("Value", "MPN")):
+    errors.append("U1 requires non-inverted DRV8300DPWR; DI variants are prohibited")
+for obsolete in ("D2", "D3", "D4", "U16", "R51", "R52"):
+    if obsolete in placed:
+        errors.append(f"obsolete phase OCP/bootstrap component remains: {obsolete}")
 
 interface_authored = strip_form((HW / "ax7010_interface.kicad_sch").read_text(encoding="utf-8"), "lib_symbols")
 j1 = next(x.text for x in extract_forms(interface_authored, "symbol")
@@ -140,13 +149,14 @@ if pcb_path.exists():
             drill = re.search(r"\(drill\s+(\d+(?:\.\d+)?)\s*\)", pad.text)
             if not drill or float(drill.group(1)) < 3.2:
                 errors.append(f"PCB {ref}: M3 clearance hole requires drill >= 3.2 mm")
+    if any(property_value(f.text, "Reference") == "J2" for f in extract_forms(pcb, "footprint")):
+        errors.append("Unused J2 must not be fitted on PCB")
     for token in [
-        "FD6288T",
+        "DRV8300DPWR",
         "ADS8588S",
         "BSC040N10NS5",
-        "INA241A2",
+        "INA240A1",
         "AX7010_PL_A",
-        "AX7010_PL_B",
     ]:
         if token not in pcb:
             errors.append(f"PCB baseline missing token: {token}")
@@ -203,18 +213,18 @@ if bom_path.exists():
     if set(bom_refs) != expected_refs or len(bom_refs) != len(set(bom_refs)):
         errors.append("BOM references must match the schematic exactly (one row per component)")
     joined = "\n".join(str(row) for row in rows)
-    for part in ["FD6288T", "BSC040N10NS5", "INA241A2", "ADS8588S", "AM26LV32E"]:
+    for part in ["DRV8300DPWR", "BSC040N10NS5", "INA240A1", "ADS8588S", "AM26LV32E"]:
         if part not in joined:
             errors.append(f"BOM missing part: {part}")
 
 if (HW / "ax7010_servo_reva.kicad_pcb").exists():
     errors.extend(check_vendor_lands((HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8")))
 
-errors.extend(check_internal_groups(
+errors.extend(check_shunt_contract(
     (HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8"),
     (HW / "ax7010_servo_reva.kicad_sym").read_text(encoding="utf-8"),
     (HW / "gate_inverter.kicad_sch").read_text(encoding="utf-8"),
-    (HW / "fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod").read_text(encoding="utf-8"),
+    (HW / "fpga-servo.pretty/HoYLR2512_Kelvin.kicad_mod").read_text(encoding="utf-8"),
 ))
 
 rules_path = HW / "ax7010_servo_reva.kicad_dru"

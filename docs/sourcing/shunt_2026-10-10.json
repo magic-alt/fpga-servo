@@ -1,0 +1,116 @@
+[
+  {
+    "productModel": "HoYLR2512-3W-5mR-1%",
+    "productCode": "C5375461",
+    "stockNumber": 69964,
+    "theRatio": 10,
+    "minBuyNumber": 1,
+    "encapsulationModel": "2512",
+    "url": "https://item.szlcsc.com/6233958.html",
+    "stock": 69960,
+    "price": 0.1601,
+    "timestamp": "2026-10-10T14:13:50.395Z",
+    "params": [
+      {
+        "parameterName": "电阻类型",
+        "parameterCode": "param_11202",
+        "parameterDetailValue": "采样电阻",
+        "parameterValue": "采样电阻"
+      },
+      {
+        "parameterName": "阻值",
+        "parameterCode": "param_11205_n",
+        "parameterDetailValue": "5mΩ",
+        "parameterValue": "5mΩ"
+      },
+      {
+        "parameterName": "精度",
+        "parameterCode": "param_11206_s",
+        "parameterDetailValue": "±1%",
+        "parameterValue": "±1%"
+      },
+      {
+        "parameterName": "功率",
+        "parameterCode": "param_11207_n",
+        "parameterDetailValue": "3W",
+        "parameterValue": "3W"
+      },
+      {
+        "parameterName": "温度系数",
+        "parameterCode": "param_11208_s",
+        "parameterDetailValue": "±50ppm/℃",
+        "parameterValue": "±50ppm/℃"
+      },
+      {
+        "parameterName": "安装方式",
+        "parameterCode": "param_11209",
+        "parameterDetailValue": "贴片",
+        "parameterValue": "贴片"
+      }
+    ],
+    "pdf": {
+      "fileName": "HoYLR2512-3W-5mR-1%-规格书-2026-05-14.pdf",
+      "fileUrl": "/upload/public/pdf/source/20260717/CBD056E172381209786DEB3E6F9AABB3.pdf"
+    }
+  },
+  {
+    "productModel": "LR2512-23R005F4",
+    "productCode": "C154688",
+    "stockNumber": 8634,
+    "theRatio": 5,
+    "minBuyNumber": 1,
+    "encapsulationModel": "2512",
+    "url": "https://item.szlcsc.com/166030.html",
+    "stock": 8630,
+    "price": 0.3532,
+    "timestamp": "2026-10-10T14:35:29.157Z",
+    "params": [
+      {
+        "parameterName": "电阻类型",
+        "parameterCode": "param_11202",
+        "parameterDetailValue": "合金电阻",
+        "parameterValue": "合金电阻"
+      },
+      {
+        "parameterName": "阻值",
+        "parameterCode": "param_11205_n",
+        "parameterDetailValue": "5mΩ",
+        "parameterValue": "5mΩ"
+      },
+      {
+        "parameterName": "精度",
+        "parameterCode": "param_11206_s",
+        "parameterDetailValue": "±1%",
+        "parameterValue": "±1%"
+      },
+      {
+        "parameterName": "最大工作电压",
+        "parameterCode": "param_11204_n",
+        "parameterDetailValue": "-",
+        "parameterValue": "-"
+      },
+      {
+        "parameterName": "功率",
+        "parameterCode": "param_11207_n",
+        "parameterDetailValue": "3W",
+        "parameterValue": "3W"
+      },
+      {
+        "parameterName": "温度系数",
+        "parameterCode": "param_11208_s",
+        "parameterDetailValue": "±25ppm/℃",
+        "parameterValue": "±25ppm/℃"
+      },
+      {
+        "parameterName": "安装方式",
+        "parameterCode": "param_11209",
+        "parameterDetailValue": "贴片",
+        "parameterValue": "贴片"
+      }
+    ],
+    "pdf": {
+      "fileName": "wj45771",
+      "fileUrl": "/upload/public/pdf/source/20191219/C323806_6AA59EC2012F49CDB3E3BC364EF84C00.pdf"
+    }
+  }
+]

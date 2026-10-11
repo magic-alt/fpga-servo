@@ -1,0 +1,55 @@
+{
+  "code": "C602029",
+  "url": "https://item.szlcsc.com/631459.html",
+  "mpn": "FHD4020S-2R2MT",
+  "manufacturer": "cjiang(长江微电)",
+  "package": "SMD,4x4mm",
+  "stock": 115710,
+  "gd_stock": 115710,
+  "js_stock": 0,
+  "record_stock": 115714,
+  "min_buy": 1,
+  "multiple": 10,
+  "price": 0.1964,
+  "price_tiers": "",
+  "timestamp": "2026-10-10T14:59:13.225Z",
+  "params": [
+    {
+      "parameterName": "电感值",
+      "parameterCode": "param_11293_n",
+      "parameterDetailValue": "2.2uH",
+      "parameterValue": "2.2uH"
+    },
+    {
+      "parameterName": "精度",
+      "parameterCode": "param_11294_s",
+      "parameterDetailValue": "±20%",
+      "parameterValue": "±20%"
+    },
+    {
+      "parameterName": "额定电流",
+      "parameterCode": "param_11295_n",
+      "parameterDetailValue": "4.8A",
+      "parameterValue": "4.8A"
+    },
+    {
+      "parameterName": "饱和电流(Isat)",
+      "parameterCode": "param_11296_n",
+      "parameterDetailValue": "7.5A",
+      "parameterValue": "7.5A"
+    },
+    {
+      "parameterName": "直流电阻(DCR)",
+      "parameterCode": "param_11297_n",
+      "parameterDetailValue": "46mΩ",
+      "parameterValue": "46mΩ"
+    },
+    {
+      "parameterName": "类型",
+      "parameterCode": "param_14493",
+      "parameterDetailValue": "-",
+      "parameterValue": "-"
+    }
+  ],
+  "datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200609/C601990_BCEA243EC4DA0A9A288AA78A6DFB48A5.pdf"
+}

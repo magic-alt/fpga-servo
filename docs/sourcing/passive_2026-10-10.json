@@ -1,0 +1,3532 @@
+{
+  "scope": "Fitted capacitors/resistors excluding shunts; source snapshot only; no design edits",
+  "boards": 5,
+  "spares_fraction": 0.2,
+  "price_warning": "price_display_CNY is public page headline/unit starting price, not verified order-quantity quote. theRatio treated only as candidate order increment; cart MOQ/tiers must be confirmed.",
+  "qualification_warning": "READY_FOR_PROTOTYPE means selected part value,rating,tolerance and mechanical family evidence supports a prototype;not fabrication release,not a verified whole-board thermal/dynamic or lifetime margin. Conditional footprint statuses require parent to implement and run native checks. CANDIDATE_OEM_REVIEW_PENDING retains unresolved evidence explicitly. Stock is a timestamped page snapshot;headline prices and purchase multiples require cart verification.",
+  "brand_origin": {
+    "FH(风华)": "mainland China",
+    "RESI(开步睿思)": "mainland China",
+    "AISHI(艾华集团)": "mainland China",
+    "Jianghai(南通江海)": "mainland China",
+    "HRE(芯声)": "mainland China",
+    "Chinocera(华瓷)": "mainland China",
+    "FOJAN(富捷)": "mainland China",
+    "UNI-ROYAL(厚声)": "Taiwan-origin; mainland manufacturing; not categorized mainland-origin",
+    "YAGEO(国巨)": "Taiwan",
+    "RALEC(旺诠)": "Taiwan",
+    "SAMWHA(三和)": "South Korea",
+    "muRata(村田)": "Japan",
+    "PANASONIC(松下)": "Japan",
+    "faratronic(厦门法拉)": "mainland China",
+    "TDK": "Japan",
+    "SAMSUNG(三星)": "South Korea",
+    "SUSUMU": "Japan",
+    "PSA(信昌电子)": "Taiwan;not mainland-origin",
+    "VISHAY(威世)": "United States multinational;not mainland-origin",
+    "NCC(日本贵弥功)": "Japan",
+    "Rubycon(红宝石)": "Japan"
+  },
+  "groups": [
+    {
+      "refs": [
+        "C1",
+        "C2"
+      ],
+      "value": "100uF",
+      "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+      "requirements": [
+        "100uF_100V",
+        "100uF_100V"
+      ],
+      "quantity_per_board": 2,
+      "quantity_5_boards": 10,
+      "quantity_with_20pct_spares": 12,
+      "primary": {
+        "productModel": "EKZN101ELL101MJ20S",
+        "productCode": "C337258",
+        "encapsulationModel": "插件,D10xL20mm",
+        "productName": "100uF ±20% 100V",
+        "stockNumber": 2868,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": null,
+        "encaptionPrice": 261.48,
+        "manufacturer": "NCC(日本贵弥功)",
+        "url": "https://item.szlcsc.com/315233.html",
+        "stock_total": 2865,
+        "stock_gd": 2865,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100uF",
+          "精度": "±20%",
+          "额定电压": "100V",
+          "纹波电流": "1.43A@100kHz",
+          "等效串联电阻(ESR)": "68mΩ@100kHz",
+          "脚间距": "5mm",
+          "电容体直径": "10mm",
+          "电容体长度": "20mm",
+          "工作寿命": "10000hrs@105℃",
+          "极性类型": "有极性"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf",
+        "price_display_CNY": 1.3711,
+        "pageGeneratedAt": "2026-10-10T14:50:44.830Z",
+        "checked_at": "2026-10-10T14:50:44.885249+00:00"
+      },
+      "alternate": {
+        "productModel": "100ZLH100MEFC10X20",
+        "productCode": "C330940",
+        "encapsulationModel": "插件,D10xL20mm",
+        "productName": "100uF ±20% 100V",
+        "stockNumber": 4273,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": null,
+        "encaptionPrice": 149,
+        "manufacturer": "Rubycon(红宝石)",
+        "url": "https://item.szlcsc.com/310453.html",
+        "stock_total": 4270,
+        "stock_gd": 4270,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100uF",
+          "精度": "±20%",
+          "额定电压": "100V",
+          "纹波电流": "1.04A@100kHz",
+          "等效串联电阻(ESR)": "-",
+          "脚间距": "5mm",
+          "电容体直径": "10mm",
+          "电容体长度": "20mm",
+          "工作寿命": "10000hrs@105℃",
+          "工作温度": "-40℃~+105℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190927/C432431_5E9FA795B0A52BC2AD438593603F3699.pdf",
+        "price_display_CNY": 0.7917,
+        "pageGeneratedAt": "2026-10-10T14:50:44.855Z",
+        "checked_at": "2026-10-10T14:50:44.930746+00:00"
+      },
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 15,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "NCC EKZN101ELL101MJ20S C337258 stock2865 selected;100uF20%100V,D10xL20,P5mm,lead0.6mm. OEM KZN page3 exact EKZN101E[LL]101MJ20S rowconfirmsD10x20,1.43Arms@105C100kHz,0.068ohm impedance@20C100kHz (not universalESR);page1diameterD+.5max,heightL+1.5max,pitch5±.5mm. Rubycon100ZLH100MEFC10X20 C330940 stock4270 alternate same100uF20%100V,D10x20,P5mm with1.04Arms@105C100kHz and0.12ohm impedance;OEMpages1/3visuallyverified. ExistingD10P5footprint nominalgeometry retained butheight20mm(max~22) differsfromearlierAishi16mmcandidate;assemblyheightenvelope mustallowit. 100Vrated affords48Vbusmargin. Systeminverterripple,regenenergy,temperature/lifetime qualification remainsOPEN;loweralternate1.04Arating mustnotinheritprimary1.43Alimit. DomesticcandidatesretainedunderexplicitOEMdrawinghold.",
+      "domestic_candidates_pending_oem_drawing": {
+        "primary": {
+          "productModel": "ERS1KM101G16OT",
+          "productCode": "C106679",
+          "encapsulationModel": "插件,D10xL16mm",
+          "productName": "100uF ±20% 100V",
+          "stockNumber": 104628,
+          "theRatio": 5,
+          "minBuyNumber": 1,
+          "minWholeNumber": 250,
+          "encaptionPrice": 76.25,
+          "manufacturer": "AISHI(艾华集团)",
+          "url": "https://item.szlcsc.com/107895.html",
+          "stock_total": 104625,
+          "stock_gd": 104625,
+          "stock_js": 0,
+          "parameters": {
+            "容值": "100uF",
+            "精度": "±20%",
+            "额定电压": "100V",
+            "脚间距": "5mm",
+            "电容体直径": "10mm",
+            "电容体长度": "16mm",
+            "工作寿命": "7000hrs@105℃"
+          },
+          "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20191015/C438940_4B8E60A742BB0AE40DDEF87A5C89089D.pdf",
+          "price_display_CNY": 0.305,
+          "pageGeneratedAt": "2026-10-10T14:17:46.507Z",
+          "checked_at": "2026-10-10T14:17:46.367841+00:00"
+        },
+        "alternate": {
+          "productModel": "ECR2ABK101MLL100020",
+          "productCode": "C233097",
+          "encapsulationModel": "插件,D10xL20mm",
+          "productName": "100uF ±20% 100V",
+          "stockNumber": 5600,
+          "theRatio": 5,
+          "minBuyNumber": 1,
+          "minWholeNumber": 200,
+          "encaptionPrice": 112.84,
+          "manufacturer": "Jianghai(南通江海)",
+          "url": "https://item.szlcsc.com/232932.html",
+          "stock_total": 5600,
+          "stock_gd": 5600,
+          "stock_js": 0,
+          "parameters": {
+            "容值": "100uF",
+            "精度": "±20%",
+            "额定电压": "100V",
+            "脚间距": "5mm",
+            "电容体直径": "10mm",
+            "电容体长度": "20mm",
+            "工作寿命": "2000hrs@105℃"
+          },
+          "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200311/C495098_FA0ED9AA90557EB765133460871D2D37.pdf",
+          "price_display_CNY": 0.5642,
+          "pageGeneratedAt": "2026-10-10T14:17:46.515Z",
+          "checked_at": "2026-10-10T14:17:46.346222+00:00"
+        },
+        "reason": "AISHI ERS1KM101G16OT ChineseitemD10xL16 P5stock104625,however linkedRS OEMtable100V100uF isD12.5xL16. Manufacturer-owned https://www.aishi.com/files/RS.pdf explicitlylistsERS1KM101W16OT,D12.5x16,notG16;cannotapply750mA/.11ohm rowtoG16. JianghaiECR2ABK101MLL100020 itemD10x20 vslinkedCD263BK100V100uF tableD12.5x20 also unresolved. Bothremainrealstockedcandidates but exactD10mechanical/rippleapprovalrequiresmanufacturerdrawingorcorrectexactsheet. No changeofdiameter/MPN assumed."
+      },
+      "selection_exception": "Foreign critical capacitor exception because two mainland candidates lack matching exact OEM dimensional/ripple evidence.",
+      "source_qualification": {
+        "primary_oem_review": [
+          1,
+          3
+        ],
+        "alternate_oem_review": [
+          1,
+          3
+        ],
+        "footprint": "Existing Capacitor_THT:CP_Radial_D10.0mm_P5.00mm nominal diameter/pitch unchanged;check lead drill/courtyard and20mmheight in parentlayout",
+        "source_qualification": "Complete;applicationripple/lifetime qualificationseparate"
+      }
+    },
+    {
+      "refs": [
+        "C3"
+      ],
+      "value": "1uF",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "requirements": [
+        "1uF_100V_FILM"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "C212E105J6BC000",
+        "productCode": "C604836",
+        "encapsulationModel": "插件,P=15mm",
+        "productName": "1uF ±5% 250V",
+        "stockNumber": 944,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 500,
+        "encaptionPrice": 308.75,
+        "manufacturer": "faratronic(厦门法拉)",
+        "url": "https://item.szlcsc.com/635595.html",
+        "stock_total": 940,
+        "stock_gd": 940,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1uF",
+          "精度": "±5%",
+          "额定电压": "250V",
+          "介电材料": "金属化聚酯",
+          "工作温度": "-55℃~+105℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190717/C404859_EF21AC612EDD98432EE9D266CBC8B364.pdf",
+        "price_display_CNY": 0.7193,
+        "pageGeneratedAt": "2026-10-10T14:31:22.305Z",
+        "checked_at": "2026-10-10T14:31:22.175003+00:00"
+      },
+      "alternate": null,
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 10,
+      "status": "READY_FOR_LIMITED_ENERGY_PROTOTYPE_AFTER_FOOTPRINT_UPDATE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "Resolved exact6B body: Faratronic C212E105J6BC0001uF5%250V metallized polyester,mainland stock940. OEM scanned pages1-3 visually reviewed:code2E250V,1051uF,J5%,6P15,Bsmall,C000straight20..30mm leads; W17.5/H12.9/T7.2mm max,P15±.8mm,d.60±.05mm. Replace invalid1210 film placeholder with verified P15 THT footprint. Rated85C,derate1.25%/C to105C;234.4V@90C remains large margin over48V bus. OEM typical application includes DC bypass/filter/low pulse;dynamic bus ripple and pulse stress remains release gate (table250V/P15 PatternIII12V/us,applicability to small-bodyB must be confirmed before relying on that pulse rating). Appropriate for low-energy prototype after footprint/layout checks;not full-power film qualification. No different-manufacturer same-body alternate verified.",
+      "proposed_footprint": "THT radial film P15.00mm; body17.5x7.2mm max,height12.9mm max,lead diameter0.60±0.05mm; create/verify footprint with suitable hole and courtyard",
+      "footprint_implementation_status": "PROPOSED_NOT_APPLIED_BY_SUBAGENT_PARENT_PENDING"
+    },
+    {
+      "refs": [
+        "C4"
+      ],
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "requirements": [
+        "100nF_100V_C0G"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "C4532C0G2A104JT000N",
+        "productCode": "C342611",
+        "encapsulationModel": "1812",
+        "productName": "100nF ±5% 100V",
+        "stockNumber": 1265,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 500,
+        "encaptionPrice": 1555,
+        "manufacturer": "TDK",
+        "url": "https://item.szlcsc.com/319461.html",
+        "stock_total": 1265,
+        "stock_gd": 1265,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±5%",
+          "额定电压": "100V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20191028/C441477_722A9436F63B689BB01D466E49BFBC99.pdf",
+        "price_display_CNY": 3.11,
+        "pageGeneratedAt": "2026-10-10T14:23:38.697Z",
+        "checked_at": "2026-10-10T14:23:38.568088+00:00"
+      },
+      "alternate": {
+        "productModel": "FM43N104J101EGG",
+        "productCode": "C42391415",
+        "encapsulationModel": "1812",
+        "productName": "100nF ±5% 100V",
+        "stockNumber": 375,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 500,
+        "encaptionPrice": 645,
+        "manufacturer": "PSA(信昌电陶)",
+        "url": "https://item.szlcsc.com/44325719.html",
+        "stock_total": 375,
+        "stock_gd": 375,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±5%",
+          "额定电压": "100V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20231215/5C27E2218136388AF76B2850E14EBB2B.pdf",
+        "price_display_CNY": 1.49,
+        "pageGeneratedAt": "2026-10-10T14:23:38.753Z",
+        "checked_at": "2026-10-10T14:23:38.586160+00:00"
+      },
+      "order_multiple_candidate": 1,
+      "order_qty_candidate": 6,
+      "status": "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE",
+      "alternate_status": "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE",
+      "notes": "Retain100nF,100V,C0G; change1210 placeholder to1812. TDK catalogC4532C0G2A104J320KA maps labelC4532C0G2A104JT000N;4.5±0.4x3.2±0.4mm,height3.2±0.3. OEM dimensional/electrical compatibility for1812 verified. PSA FM43N104J101EGG1812 different manufacturer with same nominal voltage/value/dielectric; OEM catalog reviewed. Local bus bypass routing loop must be replanned after footprint update.",
+      "proposed_footprint": "Capacitor_SMD:C_1812_4532Metric",
+      "footprint_implementation_status": "PROPOSED_NOT_APPLIED_BY_SUBAGENT_PARENT_PENDING"
+    },
+    {
+      "refs": [
+        "C5"
+      ],
+      "value": "10nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "10nF_VBUS_SENSE"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0603B103K101NT",
+        "productCode": "C43253",
+        "encapsulationModel": "0603",
+        "productName": "10nF ±10% 100V",
+        "stockNumber": 27151,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 147.6,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/44244.html",
+        "stock_total": 27150,
+        "stock_gd": 27150,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "10nF",
+          "精度": "±10%",
+          "额定电压": "100V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0391,
+        "pageGeneratedAt": "2026-10-10T14:17:47.428Z",
+        "checked_at": "2026-10-10T14:17:47.270054+00:00"
+      },
+      "alternate": {
+        "productModel": "CL10B103KB8NNNC",
+        "productCode": "C1589",
+        "encapsulationModel": "0603",
+        "productName": "10nF ±10% 50V",
+        "stockNumber": 1500644,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 100,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/1941.html",
+        "stock_total": 1500600,
+        "stock_gd": 1500600,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "10nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.025,
+        "pageGeneratedAt": "2026-10-10T14:20:25.876Z",
+        "checked_at": "2026-10-10T14:20:25.726074+00:00"
+      },
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 50,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "10nF100V10%X7R0603 meets low-voltage bus-sense filter nominal;FH OEM B/X7R103/K/101 code and0603 outline confirmed. Sampling/filter settling remains ordinary system validation.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Samsung MLCC catalog pages4-6:CL10=0603,CL21=0805,B=X7R,C=C0G,K10%,J5%;voltageB50V,A25V,O16V;manufactureroutline and value/rating tables reviewed."
+    },
+    {
+      "refs": [
+        "C18"
+      ],
+      "value": "220nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "requirements": [
+        "220nF_25V_VCAP"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0805B224K500NT",
+        "productCode": "C163697",
+        "encapsulationModel": "0805",
+        "productName": "220nF ±10% 50V",
+        "stockNumber": 53331,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 246.4,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/175079.html",
+        "stock_total": 53300,
+        "stock_gd": 53300,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "220nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0616,
+        "pageGeneratedAt": "2026-10-10T14:17:47.453Z",
+        "checked_at": "2026-10-10T14:17:47.299639+00:00"
+      },
+      "alternate": {
+        "productModel": "CL21B224KBFNNNE",
+        "productCode": "C5378",
+        "encapsulationModel": "0805",
+        "productName": "220nF ±10% 50V",
+        "stockNumber": 49934,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 118,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/5810.html",
+        "stock_total": 49900,
+        "stock_gd": 49900,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "220nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.0614,
+        "pageGeneratedAt": "2026-10-10T14:20:26.540Z",
+        "checked_at": "2026-10-10T14:20:26.398928+00:00"
+      },
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 50,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "220nF50V10%X7R0805 exceeds original25VVCAP requirement;FH OEM224=220nF,K10%,50050V and0805outline confirmed. RegulatorVCAP effective capacitance/stability to verify during bring-up;no rating reduction.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Samsung MLCC catalog pages4-6:CL10=0603,CL21=0805,B=X7R,C=C0G,K10%,J5%;voltageB50V,A25V,O16V;manufactureroutline and value/rating tables reviewed."
+    },
+    {
+      "refs": [
+        "C19"
+      ],
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "requirements": [
+        "100nF_VS_BYPASS"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0805B104K101NT",
+        "productCode": "C89258",
+        "encapsulationModel": "0805",
+        "productName": "100nF ±10% 100V",
+        "stockNumber": 480559,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 99,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/90438.html",
+        "stock_total": 480540,
+        "stock_gd": 480540,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±10%",
+          "额定电压": "100V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.033,
+        "pageGeneratedAt": "2026-10-10T14:18:53.523Z",
+        "checked_at": "2026-10-10T14:18:53.347708+00:00"
+      },
+      "alternate": null,
+      "order_multiple_candidate": 20,
+      "order_qty_candidate": 20,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "100nF100V10%X7R0805 forVS bypass;100Vrating retained for bus-related48Vpower-input service. FH OEM104,K,101,B and0805outline confirmed. Transient bus limit remains a system gate.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      }
+    },
+    {
+      "refs": [
+        "C20",
+        "C21"
+      ],
+      "value": "2.2uF",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "requirements": [
+        "2.2uF_100V_X7R",
+        "2.2uF_100V_X7R"
+      ],
+      "quantity_per_board": 2,
+      "quantity_5_boards": 10,
+      "quantity_with_20pct_spares": 12,
+      "primary": {
+        "productModel": "1210B225K101NT",
+        "productCode": "C42400139",
+        "encapsulationModel": "1210",
+        "productName": "2.2uF ±10% 100V",
+        "stockNumber": 8972,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 1199.8,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/44351740.html",
+        "stock_total": 8970,
+        "stock_gd": 8970,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "2.2uF",
+          "精度": "±10%",
+          "额定电压": "100V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.5999,
+        "pageGeneratedAt": "2026-10-10T14:17:46.477Z",
+        "checked_at": "2026-10-10T14:17:46.316771+00:00"
+      },
+      "alternate": {
+        "productModel": "GCJ32DR72A225KA01L",
+        "productCode": "C388903",
+        "encapsulationModel": "1210",
+        "productName": "2.2uF ±10% 100V",
+        "stockNumber": 1094,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 1000,
+        "encaptionPrice": 2100,
+        "manufacturer": "muRata(村田)",
+        "url": "https://item.szlcsc.com/364227.html",
+        "stock_total": 1094,
+        "stock_gd": 1094,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "2.2uF",
+          "精度": "±10%",
+          "额定电压": "100V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190729/C388903_B5EF6FEF3965E3E94540307FC677703D.pdf",
+        "price_display_CNY": 2.1,
+        "pageGeneratedAt": "2026-10-10T14:17:46.507Z",
+        "checked_at": "2026-10-10T14:17:46.354138+00:00"
+      },
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 15,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "2.2uF100V10%X7R1210 each;FH OEM225,K,101 and1210outline confirmed. Nominal/rating/footprint source-qualified. Do not equate2.2uF nominal with guaranteed2.2uF at48VDC;effective capacitance,input ripple and buck operation remain application gates.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Murata exact GCJ32DR72A225KA01L OEMpage1:2.2uF10%100VX7R1210;L3.2±.4 W2.5±.3 T2.0±.3mm,softtermination."
+    },
+    {
+      "refs": [
+        "C22",
+        "C23"
+      ],
+      "value": "22uF",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "requirements": [
+        "22uF_25V_X7R",
+        "22uF_25V_X7R"
+      ],
+      "quantity_per_board": 2,
+      "quantity_5_boards": 10,
+      "quantity_with_20pct_spares": 12,
+      "primary": {
+        "productModel": "1210B226K250NT",
+        "productCode": "C5204920",
+        "encapsulationModel": "1210",
+        "productName": "22uF ±10% 25V",
+        "stockNumber": 18147,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 1000,
+        "encaptionPrice": 2339.3,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/5895626.html",
+        "stock_total": 18147,
+        "stock_gd": 18147,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "22uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 2.3393,
+        "pageGeneratedAt": "2026-10-10T14:17:46.538Z",
+        "checked_at": "2026-10-10T14:17:46.387177+00:00"
+      },
+      "alternate": {
+        "productModel": "CS3225X7R226K250NRL",
+        "productCode": "C2918511",
+        "encapsulationModel": "1210",
+        "productName": "22uF ±10% 25V",
+        "stockNumber": 48190,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 1000,
+        "encaptionPrice": 500.8,
+        "manufacturer": "SAMWHA(三和)",
+        "url": "https://item.szlcsc.com/3220363.html",
+        "stock_total": 48190,
+        "stock_gd": 48190,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "22uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20211014/DC6ECE73B29E536FDE2207A903E7E24F.pdf",
+        "price_display_CNY": 0.5008,
+        "pageGeneratedAt": "2026-10-10T14:17:46.494Z",
+        "checked_at": "2026-10-10T14:17:46.347645+00:00"
+      },
+      "order_multiple_candidate": 1,
+      "order_qty_candidate": 12,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_EXACT_OEM_SHEET_MISMATCH",
+      "notes": "22uF25V10%X7R1210 each;FH OEM226,K,250,B and1210outline confirmed.12Voutput duty has nominalvoltage margin;effective capacitance and control-loop stability remain application gates.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "DistributorlinksSamwha exactCS3225X7R225K101NRK2.2uF100Vapproval,notselectedCS3225X7R226K250NRL22uF25V. Genericorderingmakesvalueplausible but exactpart/height/electricalapprovalmissing;do notcertify."
+    },
+    {
+      "refs": [
+        "C24"
+      ],
+      "value": "2.2nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "2.2nF_BST_50V"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0603B222J500NT",
+        "productCode": "C60328",
+        "encapsulationModel": "0603",
+        "productName": "2.2nF ±5% 50V",
+        "stockNumber": 40308,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 113.2,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/61380.html",
+        "stock_total": 40300,
+        "stock_gd": 40300,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "2.2nF",
+          "精度": "±5%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0332,
+        "pageGeneratedAt": "2026-10-10T14:17:47.440Z",
+        "checked_at": "2026-10-10T14:17:47.281612+00:00"
+      },
+      "alternate": {
+        "productModel": "CL10B222KB8NNNC",
+        "productCode": "C16033",
+        "encapsulationModel": "0603",
+        "productName": "2.2nF ±10% 50V",
+        "stockNumber": 183157,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 120,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/16715.html",
+        "stock_total": 183150,
+        "stock_gd": 183150,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "2.2nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.03,
+        "pageGeneratedAt": "2026-10-10T14:20:25.838Z",
+        "checked_at": "2026-10-10T14:20:25.695710+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "2.2nF50V5%X7R0603;FH OEM222,J,500,B and0603outline confirmed;BST bootstrap voltage rating is acrossBST-SW differential,notabsolute switched-node voltage. TI regulator topology/recommendednominal unchanged.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Samsung MLCC catalog pages4-6:CL10=0603,CL21=0805,B=X7R,C=C0G,K10%,J5%;voltageB50V,A25V,O16V;manufactureroutline and value/rating tables reviewed.",
+      "alternate_caveat": "Samsung alternative tolerance10% vsFH5%;originalBOM specifies2.2nF_BST_50V without5%requirement;not interchangeable if later precisionrequirement freezes5%."
+    },
+    {
+      "refs": [
+        "C25"
+      ],
+      "value": "3.3nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "3.3nF_CA_X7R"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0603B332J500NT",
+        "productCode": "C20616243",
+        "encapsulationModel": "0603",
+        "productName": "3.3nF ±5% 50V",
+        "stockNumber": 2554,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 108.8,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/21982335.html",
+        "stock_total": 2550,
+        "stock_gd": 2550,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "3.3nF",
+          "精度": "±5%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0377,
+        "pageGeneratedAt": "2026-10-10T14:17:47.315Z",
+        "checked_at": "2026-10-10T14:17:47.106818+00:00"
+      },
+      "alternate": null,
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 50,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "3.3nF50V5%X7R0603;FH OEM332,J,500,B and0603outline confirmed;CA compensation nominal unchanged. Control-loop tuning remains system application test.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      }
+    },
+    {
+      "refs": [
+        "C26"
+      ],
+      "value": "56pF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "56pF_CB_C0G"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0603CG560J500NT",
+        "productCode": "C1676",
+        "encapsulationModel": "0603",
+        "productName": "56pF ±5% 50V",
+        "stockNumber": 140676,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 74.4,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/2028.html",
+        "stock_total": 140600,
+        "stock_gd": 140600,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "56pF",
+          "精度": "±5%",
+          "额定电压": "50V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0186,
+        "pageGeneratedAt": "2026-10-10T14:18:53.641Z",
+        "checked_at": "2026-10-10T14:18:53.503422+00:00"
+      },
+      "alternate": {
+        "productModel": "CL10C560JB81PNC",
+        "productCode": "C472797",
+        "encapsulationModel": "0603",
+        "productName": "56pF ±5% 50V",
+        "stockNumber": 0,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 192.4,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/478959.html",
+        "stock_total": 0,
+        "stock_gd": 0,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "56pF",
+          "精度": "±5%",
+          "额定电压": "50V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.0481,
+        "pageGeneratedAt": "2026-10-10T14:20:54.628Z",
+        "checked_at": "2026-10-10T14:20:54.477779+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_ZERO_STOCK",
+      "notes": "56pF50V5%C0G0603;FH OEM560,J,500,CG and0603outline confirmed. Stable compensationCB dielectric retained. Samsung same-value alternative iszero stock.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      }
+    },
+    {
+      "refs": [
+        "C30",
+        "C60",
+        "C61"
+      ],
+      "value": "10uF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "requirements": [
+        "10uF_25V_X7R",
+        "10uF_REFIO_X7R",
+        "10uF_REFCAP_X7R"
+      ],
+      "quantity_per_board": 3,
+      "quantity_5_boards": 15,
+      "quantity_with_20pct_spares": 18,
+      "primary": {
+        "productModel": "HGC0805R7106K250NSLJ",
+        "productCode": "C33546010",
+        "encapsulationModel": "0805",
+        "productName": "10uF ±10% 25V",
+        "stockNumber": 246088,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 1021.8,
+        "manufacturer": "Chinocera(华瓷)",
+        "url": "https://item.szlcsc.com/35278488.html",
+        "stock_total": 246085,
+        "stock_gd": 246085,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "10uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf",
+        "price_display_CNY": 0.3406,
+        "pageGeneratedAt": "2026-10-10T14:17:46.904Z",
+        "checked_at": "2026-10-10T14:17:46.750758+00:00"
+      },
+      "alternate": {
+        "productModel": "FCC0805B106K250FT",
+        "productCode": "C54619707",
+        "encapsulationModel": "0805",
+        "productName": "10uF ±10% 25V",
+        "stockNumber": 17227,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 2449.5,
+        "manufacturer": "FOJAN(富捷)",
+        "url": "https://item.szlcsc.com/58015466.html",
+        "stock_total": 17225,
+        "stock_gd": 17225,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "10uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R",
+          "工作温度": "-55℃~+125℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260824/C7059AD86670CB03FD643668122C4D10.pdf",
+        "price_display_CNY": 0.8165,
+        "pageGeneratedAt": "2026-10-10T14:17:46.987Z",
+        "checked_at": "2026-10-10T14:17:46.842730+00:00"
+      },
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 20,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "ChinoceraHGC0805R7106K250NSLJ10uF25V10%X7R0805. OEM pages2/3/6 decodeR7X7R10610uF,K10%,25025V,Ntermination,Sembossed,L1.25mm,J7inch;outline2.0±.2x1.25±.2mm. Fits C30/60/61 input/reference decoupling nominal requirements;reference settling and guaranteed effectivecap at bias remain applicationvalidation.",
+      "alternate_oem_basis": "FOJAN/FOSAN MLCC catalog pages3,4,12,24:0805B106K250FT10uF10%25VX7R;2012 footprint andFthickness1.25mm identified."
+    },
+    {
+      "refs": [
+        "C31"
+      ],
+      "value": "22uF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "requirements": [
+        "22uF_10V_X7R"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "CGA0805X7R226M100MT",
+        "productCode": "C23692981",
+        "encapsulationModel": "0805",
+        "productName": "22uF ±20% 10V",
+        "stockNumber": 7984,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 2346.6,
+        "manufacturer": "HRE(芯声)",
+        "url": "https://item.szlcsc.com/25421453.html",
+        "stock_total": 7980,
+        "stock_gd": 7980,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "22uF",
+          "精度": "±20%",
+          "额定电压": "10V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20240628/CF49925013D2B6594E99B01DE9E3F720.pdf",
+        "price_display_CNY": 0.7822,
+        "pageGeneratedAt": "2026-10-10T14:17:47.009Z",
+        "checked_at": "2026-10-10T14:17:46.870583+00:00"
+      },
+      "alternate": {
+        "productModel": "GRM21BZ71A226ME15L",
+        "productCode": "C907991",
+        "encapsulationModel": "0805",
+        "productName": "22uF ±20% 10V",
+        "stockNumber": 2792,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 2883.3,
+        "manufacturer": "muRata(村田)",
+        "url": "https://item.szlcsc.com/973892.html",
+        "stock_total": 80,
+        "stock_gd": 80,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "22uF",
+          "精度": "±20%",
+          "额定电压": "10V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20201022/C907991_FDD26F97C89A3C2FF3DDCDE25DF37A4B.pdf",
+        "price_display_CNY": 1.0656,
+        "pageGeneratedAt": "2026-10-10T14:17:46.911Z",
+        "checked_at": "2026-10-10T14:17:46.771364+00:00"
+      },
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 10,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "HRE exactOEM CGA0805X7R226M100MT page1:22uF20%10VX7R0805,2.0±.2x1.25±.2x1.25±.2mm,-55..125C±15%. Meets BOM sourcingparameters. Its5.1V effectivecap and ADCUVdynamic hold-up gate S01 remain OPEN;source-ready does not claim gate-off timing. Murata alternative exactOEM page2 confirms22uF20%10VX7R(Murata),not an inferred dielectric code;same0805outline.",
+      "alternate_oem_basis": "Murata exactGRM21BZ71A226ME15L data pages1/2:22uF20%10VX7R(Murata),0805,2.0x1.25x1.25mm.50%-ratedvoltage capacitance-change note does not supplyguaranteed5.1Veffective22uF."
+    },
+    {
+      "refs": [
+        "C40",
+        "C41",
+        "C42",
+        "C92"
+      ],
+      "value": "1nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "1nF_C0G_ADC",
+        "1nF_C0G_ADC",
+        "1nF_C0G_ADC",
+        "See schematic"
+      ],
+      "quantity_per_board": 4,
+      "quantity_5_boards": 20,
+      "quantity_with_20pct_spares": 24,
+      "primary": {
+        "productModel": "0603CG102J101NT",
+        "productCode": "C88489",
+        "encapsulationModel": "0603",
+        "productName": "1nF ±5% 100V",
+        "stockNumber": 908,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 234,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/89669.html",
+        "stock_total": 900,
+        "stock_gd": 900,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1nF",
+          "精度": "±5%",
+          "额定电压": "100V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0834,
+        "pageGeneratedAt": "2026-10-10T14:17:46.945Z",
+        "checked_at": "2026-10-10T14:17:46.792249+00:00"
+      },
+      "alternate": {
+        "productModel": "CL10C102JB8NNNC",
+        "productCode": "C163508",
+        "encapsulationModel": "0603",
+        "productName": "1nF ±5% 50V",
+        "stockNumber": 449490,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 98,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/174890.html",
+        "stock_total": 449450,
+        "stock_gd": 449450,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1nF",
+          "精度": "±5%",
+          "额定电压": "50V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20171228/C163510_15144412327381213809.pdf",
+        "price_display_CNY": 0.0245,
+        "pageGeneratedAt": "2026-10-10T14:20:25.852Z",
+        "checked_at": "2026-10-10T14:20:25.707496+00:00"
+      },
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 50,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "1nF100V5%C0G0603 fits ADC RCfilter andC92 stable filtering. OEMCG102J101 confirms stable0±30ppm/Cdielectric and1608outline. Samsung1nF50V5%C0G samefootprint meets low-voltage duty;100Vupgrade not a required alternate criterion.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Samsung MLCC catalog pages4-6:CL10=0603,CL21=0805,B=X7R,C=C0G,K10%,J5%;voltageB50V,A25V,O16V;manufactureroutline and value/rating tables reviewed."
+    },
+    {
+      "refs": [
+        "C43",
+        "C44",
+        "C45",
+        "C46",
+        "C70",
+        "C80",
+        "C81",
+        "C82",
+        "C83",
+        "C84",
+        "C85",
+        "C86",
+        "C87",
+        "C88",
+        "C89",
+        "C90",
+        "C91",
+        "C93"
+      ],
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "100nF_INA_DECOUPLE",
+        "100nF_INA_DECOUPLE",
+        "100nF_INA_DECOUPLE",
+        "100nF_DRV",
+        "100nF_VIO",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic"
+      ],
+      "quantity_per_board": 18,
+      "quantity_5_boards": 90,
+      "quantity_with_20pct_spares": 108,
+      "primary": {
+        "productModel": "0603B104K500NT",
+        "productCode": "C30926",
+        "encapsulationModel": "0603",
+        "productName": "100nF ±10% 50V",
+        "stockNumber": 762875,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 154.8,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/31683.html",
+        "stock_total": 762850,
+        "stock_gd": 762850,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0387,
+        "pageGeneratedAt": "2026-10-10T14:17:46.931Z",
+        "checked_at": "2026-10-10T14:17:46.795711+00:00"
+      },
+      "alternate": {
+        "productModel": "CL10B104KB8NNNC",
+        "productCode": "C1591",
+        "encapsulationModel": "0603",
+        "productName": "100nF ±10% 50V",
+        "stockNumber": 39831,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 96.4,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/1943.html",
+        "stock_total": 39800,
+        "stock_gd": 39800,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.0241,
+        "pageGeneratedAt": "2026-10-10T14:20:25.890Z",
+        "checked_at": "2026-10-10T14:20:25.760685+00:00"
+      },
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 150,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "100nF50V10%X7R0603 ordinary local bypasses;FH OEMB104K500 and1608outline confirmed.50Vrating exceeds all listed logic/analog/driver localrails. C94timing deliberately separate.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Samsung MLCC catalog pages4-6:CL10=0603,CL21=0805,B=X7R,C=C0G,K10%,J5%;voltageB50V,A25V,O16V;manufactureroutline and value/rating tables reviewed."
+    },
+    {
+      "refs": [
+        "C62",
+        "C63",
+        "C64",
+        "C65",
+        "C66",
+        "C67",
+        "C68"
+      ],
+      "value": "1uF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "1uF_REGCAP1",
+        "1uF_REGCAP2",
+        "1uF_AVDD1",
+        "1uF_AVDD2",
+        "1uF_AVDD3",
+        "1uF_AVDD4",
+        "1uF_DVDD"
+      ],
+      "quantity_per_board": 7,
+      "quantity_5_boards": 35,
+      "quantity_with_20pct_spares": 42,
+      "primary": {
+        "productModel": "0603B105K250NT",
+        "productCode": "C59302",
+        "encapsulationModel": "0603",
+        "productName": "1uF ±10% 25V",
+        "stockNumber": 863327,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 880,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/60350.html",
+        "stock_total": 863300,
+        "stock_gd": 863300,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.22,
+        "pageGeneratedAt": "2026-10-10T14:18:53.519Z",
+        "checked_at": "2026-10-10T14:18:53.354261+00:00"
+      },
+      "alternate": {
+        "productModel": "CL10B105KA8NNNC",
+        "productCode": "C29936",
+        "encapsulationModel": "0603",
+        "productName": "1uF ±10% 25V",
+        "stockNumber": 0,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 4000,
+        "encaptionPrice": 254.4,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/30690.html",
+        "stock_total": 0,
+        "stock_gd": 0,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.0636,
+        "pageGeneratedAt": "2026-10-10T14:20:25.837Z",
+        "checked_at": "2026-10-10T14:20:25.680199+00:00"
+      },
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 50,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_ZERO_STOCK",
+      "notes": "1uF25V10%X7R0603 forADCregcap,AVDD/DVDD localdecoupling;FH OEMB105K250 and1608outline confirmed. Actual railbias effectivecap/ADCregulator behavior remains bring-up qualification;Samsung matchingalternate currentlyzero stock.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      }
+    },
+    {
+      "refs": [
+        "C69"
+      ],
+      "value": "10uF",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "requirements": [
+        "10uF_25V_DRV"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "CGA1206X7R106K250NT",
+        "productCode": "C6119987",
+        "encapsulationModel": "1206",
+        "productName": "10uF ±10% 25V",
+        "stockNumber": 57663,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 1021.2,
+        "manufacturer": "HRE(芯声)",
+        "url": "https://item.szlcsc.com/7062693.html",
+        "stock_total": 57660,
+        "stock_gd": 57660,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "10uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250915/7997FE7A91CE9142B98B1A231623FA45.pdf",
+        "price_display_CNY": 0.5106,
+        "pageGeneratedAt": "2026-10-10T14:18:53.654Z",
+        "checked_at": "2026-10-10T14:18:53.506617+00:00"
+      },
+      "alternate": {
+        "productModel": "CC1206KKX7R8BB106",
+        "productCode": "C70462",
+        "encapsulationModel": "1206",
+        "productName": "10uF ±10% 25V",
+        "stockNumber": 250060,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 1873.6,
+        "manufacturer": "YAGEO(国巨)",
+        "url": "https://item.szlcsc.com/71559.html",
+        "stock_total": 250060,
+        "stock_gd": 250060,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "10uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250214/096C4C206003071F5D32E5F0D8E7F8DF.pdf",
+        "price_display_CNY": 0.9368,
+        "pageGeneratedAt": "2026-10-10T14:18:53.956Z",
+        "checked_at": "2026-10-10T14:18:53.796820+00:00"
+      },
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 10,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "HRE exactOEM CGA1206X7R106K250NT page1:10uF10%25VX7R1206,3.2±.2x1.6±.2x1.6±.2mm,-55..125C±15%.12Vdriver localbulk duty;source-compatible withoutfootprintchange. Effectivecap anddriver transient operation remain applicationchecks.",
+      "alternate_oem_basis": "YAGEO CC X7R general/highcapcatalog:CC1206KKX7R8BB106 decodes1206,10uF10%25VX7R;3216outline;electricalrange6.3..250V100pF..47uF. Applies to12Vlocaldriverbulk;bias/rippleapplicationgateindependent."
+    },
+    {
+      "refs": [
+        "C71"
+      ],
+      "value": "4.7uF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "requirements": [
+        "4.7uF_VIO"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "CGA0805X7R475K250MT",
+        "productCode": "C6119942",
+        "encapsulationModel": "0805",
+        "productName": "4.7uF ±10% 25V",
+        "stockNumber": 1140,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 307.2,
+        "manufacturer": "HRE(芯声)",
+        "url": "https://item.szlcsc.com/7062648.html",
+        "stock_total": 1140,
+        "stock_gd": 1140,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "4.7uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260717/7FA3951AEFD121FDE352DC2C40859DA4.pdf",
+        "price_display_CNY": 0.1536,
+        "pageGeneratedAt": "2026-10-10T14:44:23.549Z",
+        "checked_at": "2026-10-10T14:44:23.638587+00:00"
+      },
+      "alternate": {
+        "productModel": "CL21B475KOFNNNE",
+        "productCode": "C107365",
+        "encapsulationModel": "0805",
+        "productName": "4.7uF ±10% 16V",
+        "stockNumber": 76552,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 219.8,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/108584.html",
+        "stock_total": 76550,
+        "stock_gd": 76550,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "4.7uF",
+          "精度": "±10%",
+          "额定电压": "16V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+        "price_display_CNY": 0.1099,
+        "pageGeneratedAt": "2026-10-10T14:20:26.368Z",
+        "checked_at": "2026-10-10T14:20:26.244650+00:00"
+      },
+      "order_multiple_candidate": 10,
+      "order_qty_candidate": 10,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "Domestic stocked HRE CGA0805X7R475K250MT C6119942 selected,notzero-stockFH. ExactOEM page1:4.7uF10%25VX7R0805,2.0±.2x1.25±.2x1.25±.2mm,-55..125C±15%;appropriate3.3VIO bypass. SamsungCL21B475KOFNNNE alternate4.7uF10%16VX7R same0805;16V remainsample for3.3VIO,OEMSamsungcode/outline confirmed."
+    },
+    {
+      "refs": [
+        "C94"
+      ],
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "requirements": [
+        "TPS3890 reset recovery; CT 100nF; C0G or qualified stable effective capacitance"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "GRT31C5C1H104FA02L",
+        "productCode": "C3839854",
+        "encapsulationModel": "1206",
+        "productName": "100nF ±1% 50V",
+        "stockNumber": 1900,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 7260,
+        "manufacturer": "muRata(村田)",
+        "url": "https://item.szlcsc.com/4408337.html",
+        "stock_total": 1900,
+        "stock_gd": 1900,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±1%",
+          "额定电压": "50V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20230811/BB9CDD2B0AFC2108EC4F7AFDADD4823B.pdf",
+        "price_display_CNY": 3.63,
+        "pageGeneratedAt": "2026-10-10T14:23:13.504Z",
+        "checked_at": "2026-10-10T14:23:13.378158+00:00"
+      },
+      "alternate": {
+        "productModel": "C3216C0G1H104JT000N",
+        "productCode": "C319186",
+        "encapsulationModel": "1206",
+        "productName": "100nF ±5% 50V",
+        "stockNumber": 5563,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 2140,
+        "manufacturer": "TDK",
+        "url": "https://item.szlcsc.com/300452.html",
+        "stock_total": 5563,
+        "stock_gd": 5563,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "100nF",
+          "精度": "±5%",
+          "额定电压": "50V",
+          "温度系数": "C0G"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190322/C361206_9C300BFAC6DE9FB712DF280041B5B925.pdf",
+        "price_display_CNY": 1.07,
+        "pageGeneratedAt": "2026-10-10T14:27:59.274Z",
+        "checked_at": "2026-10-10T14:27:59.172340+00:00"
+      },
+      "order_multiple_candidate": 1,
+      "order_qty_candidate": 6,
+      "status": "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE",
+      "alternate_status": "CONDITIONAL_TIMING_REBUDGET_NOT_1PCT_EQUIVALENT",
+      "notes": "100nF stable TPS3890 timing capacitor. Replace0603 placeholder with1206 C0G50V; Murata exact GRT31C5C1H104FA02L100nF±1%,3.2±0.2x1.6±0.2x1.6±0.2mm,-55..125C,0±30ppm/C. TDK alternate same1206,100nF±5%,50VC0G; does not meet1% but meets original100nF stable requirement; timing budget must use selected tolerance. OEM TDK catalogC3216C0G1H104J160AA corresponds labelC3216C0G1H104JT000N. Nominal timing unchanged; no proposed dielectric downgrade.",
+      "proposed_footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "alternate_caveat": "Originalbom/functionanddocsstate100nFstable/C0G,notexplicit1%;primaryMuratais1%. TDK5%isnotaparametricequivalentto1%primaryandisnotapprovedasautomaticreplacement;useonlyafterexplicitselectedtoleranceandtimingbudgetupdate.",
+      "timing_budget": {
+        "source": "docs/layout_followup_qualification_2026-10-10.md sectionS09/TITPS3890",
+        "I_CT_uA": [
+          0.9,
+          1.35
+        ],
+        "V_CT_V": [
+          1.17,
+          1.29
+        ],
+        "primary1pct_ideal_cap_only_interval_ms": [
+          85.8,
+          144.76666666666668
+        ],
+        "alternate5pct_ideal_cap_only_interval_ms": [
+          82.33333333333333,
+          150.50000000000003
+        ],
+        "limitations": "Intervalsillustratetoleranceeffectonly;excludeC0Gtempco,internaldelay,CTresidualvoltage,leakage,injectedcurrent. Theyarenotguaranteedmin/max.S09actualreleasedfeedbackprotocolandfullboundsremainOPEN. C94footprintupdatepending."
+      },
+      "footprint_implementation_status": "PROPOSED_NOT_APPLIED_BY_SUBAGENT_PARENT_PENDING"
+    },
+    {
+      "refs": [
+        "CBOOT1",
+        "CBOOT2",
+        "CBOOT3"
+      ],
+      "value": "1uF",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "requirements": [
+        "1uF_25V_X7R",
+        "1uF_25V_X7R",
+        "1uF_25V_X7R"
+      ],
+      "quantity_per_board": 3,
+      "quantity_5_boards": 15,
+      "quantity_with_20pct_spares": 18,
+      "primary": {
+        "productModel": "0805B105K250NT",
+        "productCode": "C89190",
+        "encapsulationModel": "0805",
+        "productName": "1uF ±10% 25V",
+        "stockNumber": 154722,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 181.5,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/90370.html",
+        "stock_total": 154720,
+        "stock_gd": 154720,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0605,
+        "pageGeneratedAt": "2026-10-10T14:18:53.636Z",
+        "checked_at": "2026-10-10T14:18:53.486246+00:00"
+      },
+      "alternate": {
+        "productModel": "CL21B105KAFNNNE",
+        "productCode": "C116352",
+        "encapsulationModel": "0805",
+        "productName": "1uF ±10% 25V",
+        "stockNumber": 275694,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 2000,
+        "encaptionPrice": 230,
+        "manufacturer": "SAMSUNG(三星)",
+        "url": "https://item.szlcsc.com/117606.html",
+        "stock_total": 275690,
+        "stock_gd": 275690,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "1uF",
+          "精度": "±10%",
+          "额定电压": "25V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20170707/1499421471523.pdf",
+        "price_display_CNY": 0.115,
+        "pageGeneratedAt": "2026-10-10T14:20:25.868Z",
+        "checked_at": "2026-10-10T14:20:25.743790+00:00"
+      },
+      "order_multiple_candidate": 20,
+      "order_qty_candidate": 20,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "1uF25V10%X7R0805 bootstrap;FH OEMB105K250 and2012outline confirmed.25V applies acrossbootstrapHB-HS differential(~12Vdrive),not48VHS common-mode. Gatecharge,bias-effectivecap,maxon-time,droop,UVLO andrefreshremain S07applicationgate;sourcequalification complete.",
+      "source_qualification": {
+        "basis": "FH General Series MLCC OEM pages4-5 ordering and outline plus voltage/capacitance tables;distributor exactMPN/stock snapshot",
+        "dielectric_decode": "B=X7R -55..125C ±15%;CG=C0G -55..125C0±30ppm/C",
+        "tolerance_decode": "J=±5%;K=±10%",
+        "footprint_check": "0603=1.6x.8mm,0805=2.0x1.25mm,1210=3.2x2.5mm. Height varies bycap/rating;layout3D/assembly envelope not frozen.",
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+      },
+      "alternate_oem_basis": "Samsung MLCC catalog pages4-6:CL10=0603,CL21=0805,B=X7R,C=C0G,K10%,J5%;voltageB50V,A25V,O16V;manufactureroutline and value/rating tables reviewed."
+    },
+    {
+      "refs": [
+        "R1",
+        "R2"
+      ],
+      "value": "280k",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "requirements": [
+        "280k_0.1%",
+        "280k_0.1%"
+      ],
+      "quantity_per_board": 2,
+      "quantity_5_boards": 10,
+      "quantity_with_20pct_spares": 12,
+      "primary": {
+        "productModel": "PTFR0805B280KP9",
+        "productCode": "C2849140",
+        "encapsulationModel": "0805",
+        "productName": "薄膜电阻 280kΩ ±0.1% 130mW",
+        "stockNumber": 71,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 2194.5,
+        "manufacturer": "RESI(开步睿思)",
+        "url": "https://item.szlcsc.com/3048555.html",
+        "stock_total": 70,
+        "stock_gd": 70,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "280kΩ",
+          "精度": "±0.1%",
+          "功率": "130mW",
+          "工作电压": "150V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+        "price_display_CNY": 0.6729,
+        "pageGeneratedAt": "2026-10-10T14:27:59.272Z",
+        "checked_at": "2026-10-10T14:27:59.154070+00:00"
+      },
+      "alternate": {
+        "productModel": "RT0805BRD07280KL",
+        "productCode": "C865351",
+        "encapsulationModel": "0805",
+        "productName": "薄膜电阻 280kΩ ±0.1% 125mW",
+        "stockNumber": 4679,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 720.5,
+        "manufacturer": "YAGEO(国巨)",
+        "url": "https://item.szlcsc.com/925432.html",
+        "stock_total": 4660,
+        "stock_gd": 4660,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "280kΩ",
+          "精度": "±0.1%",
+          "功率": "125mW",
+          "工作电压": "150V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250609/0E6D5617EADA80FA3B707391883DF2D5.pdf",
+        "price_display_CNY": 0.1777,
+        "pageGeneratedAt": "2026-10-10T14:27:59.293Z",
+        "checked_at": "2026-10-10T14:27:59.239879+00:00"
+      },
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 15,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "RESI primary mainland China;280k0.1%25ppm0805,standard0.13W@70C150V,OEM visual review confirms B/P/9 ordering,2.0±.2x1.25±.2mm. Each resistor in560k bus divider dissipates about2mW@48V bus,voltage<25V. YAGEO alternative0.125W150V,same0805 and0.1%25ppm; RT OEM ordering and outline verified. Original netlist/value retained."
+    },
+    {
+      "refs": [
+        "R3"
+      ],
+      "value": "39k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "39k_0.1%"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "TC0325B3902T5F",
+        "productCode": "C2988897",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 39kΩ ±0.1% 100mW",
+        "stockNumber": 4691,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 315.5,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/3448320.html",
+        "stock_total": 4650,
+        "stock_gd": 4650,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "39kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250704/E55D4B940A787305EBFEE524BD083243.pdf",
+        "price_display_CNY": 0.0862,
+        "pageGeneratedAt": "2026-10-10T14:17:47.609Z",
+        "checked_at": "2026-10-10T14:17:47.445119+00:00"
+      },
+      "alternate": {
+        "productModel": "RT0603BRD0739KL",
+        "productCode": "C309652",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 39kΩ ±0.1% 100mW",
+        "stockNumber": 86838,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 693,
+        "manufacturer": "YAGEO(国巨)",
+        "url": "https://item.szlcsc.com/293268.html",
+        "stock_total": 86830,
+        "stock_gd": 86830,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "39kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250609/0E6D5617EADA80FA3B707391883DF2D5.pdf",
+        "price_display_CNY": 0.1386,
+        "pageGeneratedAt": "2026-10-10T14:17:47.671Z",
+        "checked_at": "2026-10-10T14:17:47.558855+00:00"
+      },
+      "order_multiple_candidate": 50,
+      "order_qty_candidate": 50,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "UNI-ROYAL TC0325B3902T5F OEM TC03=0603,25=25ppm,B=.1%,3902=39k,F=.1W;75V. Bus-sense lower leg has only a few volts,well below derated power;1.6x.8mm standard0603. YAGEO RT0603 alternate covered by RT OEM."
+    },
+    {
+      "refs": [
+        "R20",
+        "R56",
+        "R57",
+        "R58",
+        "R59",
+        "R60",
+        "R61",
+        "R89"
+      ],
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "100k_RON_1%",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "See schematic"
+      ],
+      "quantity_per_board": 8,
+      "quantity_5_boards": 40,
+      "quantity_with_20pct_spares": 48,
+      "primary": {
+        "productModel": "0603WAF1003T5E",
+        "productCode": "C25803",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 100kΩ ±1% 100mW",
+        "stockNumber": 12088276,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 46.5,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/26546.html",
+        "stock_total": 12088200,
+        "stock_gd": 12088200,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "100kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.0093,
+        "pageGeneratedAt": "2026-10-10T14:20:26.372Z",
+        "checked_at": "2026-10-10T14:20:26.246219+00:00"
+      },
+      "alternate": {
+        "productModel": "RS-03K1003FT",
+        "productCode": "C115320",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 100kΩ ±1% 100mW",
+        "stockNumber": 5816331,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 52,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/116568.html",
+        "stock_total": 5816300,
+        "stock_gd": 5816300,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "100kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+        "price_display_CNY": 0.0104,
+        "pageGeneratedAt": "2026-10-10T14:16:36.050Z",
+        "checked_at": "2026-10-10T14:16:35.888015+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED",
+      "notes": "Select UNI-ROYAL0603WAF1003T5E75V100mW1% as group primary because R20 is the bus-side RON element. At60V,100k dissipates36mW,below0.1W derated to~76mW@90C; voltage below75V. FH RS-03K1003FT alternate distributor50V conflicts with family75V; acceptable only for low-voltage R56..61/R89,not whole-group substitution on R20 without exact rating confirmation."
+    },
+    {
+      "refs": [
+        "R21",
+        "R23"
+      ],
+      "value": "453k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "453k_RFB1_1%",
+        "453k_RA_1%"
+      ],
+      "quantity_per_board": 2,
+      "quantity_5_boards": 10,
+      "quantity_with_20pct_spares": 12,
+      "primary": {
+        "productModel": "RC0603FR-07453KL",
+        "productCode": "C273765",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 453kΩ ±1% 100mW",
+        "stockNumber": 3622,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 119,
+        "manufacturer": "YAGEO(国巨)",
+        "url": "https://item.szlcsc.com/262180.html",
+        "stock_total": 3600,
+        "stock_gd": 3600,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "453kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf",
+        "price_display_CNY": 0.0282,
+        "pageGeneratedAt": "2026-10-10T14:18:54.324Z",
+        "checked_at": "2026-10-10T14:18:54.180296+00:00"
+      },
+      "alternate": {
+        "productModel": "RTT034533FTP",
+        "productCode": "C103651",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 453kΩ ±1% 100mW",
+        "stockNumber": 0,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 19.5,
+        "manufacturer": "RALEC(旺诠)",
+        "url": "https://item.szlcsc.com/104866.html",
+        "stock_total": 0,
+        "stock_gd": 0,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "453kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20191219/C158410_884373A5B7E1BC76BF57BC45A946C093.pdf",
+        "price_display_CNY": 0.0039,
+        "pageGeneratedAt": "2026-10-10T14:16:36.066Z",
+        "checked_at": "2026-10-10T14:16:35.919983+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "YAGEO RC0603FR-07453KL:453k1%,0603 1.6±.1x.8±.1mm,0.1W75V per OEM RC catalog;low-power feedback divider. RALEC matching alternate remains zero stock."
+    },
+    {
+      "refs": [
+        "R22"
+      ],
+      "value": "49.9k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "49.9k_RFB2_1%"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "0603WAF4992T5E",
+        "productCode": "C23184",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 49.9kΩ ±1% 100mW",
+        "stockNumber": 1464864,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 40,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/23911.html",
+        "stock_total": 1464800,
+        "stock_gd": 1464800,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "49.9kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.008,
+        "pageGeneratedAt": "2026-10-10T14:16:36.120Z",
+        "checked_at": "2026-10-10T14:16:35.968697+00:00"
+      },
+      "alternate": {
+        "productModel": "RT0603BRD0749K9L",
+        "productCode": "C705780",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 49.9kΩ ±0.1% 100mW",
+        "stockNumber": 157559,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 827.5,
+        "manufacturer": "YAGEO(国巨)",
+        "url": "https://item.szlcsc.com/742300.html",
+        "stock_total": 157540,
+        "stock_gd": 157540,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "49.9kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250609/0E6D5617EADA80FA3B707391883DF2D5.pdf",
+        "price_display_CNY": 0.1655,
+        "pageGeneratedAt": "2026-10-10T14:21:19.423Z",
+        "checked_at": "2026-10-10T14:21:19.270479+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "UNI-ROYAL0603WAF4992T5E49.9k1%100mW75V0603 per OEM standard thick-film catalog. YAGEORT0603BRD0749K9L49.9k0.1%25ppm100mW75V meets original1% in same footprint,RT OEM reviewed."
+    },
+    {
+      "refs": [
+        "R40",
+        "R41",
+        "R42"
+      ],
+      "value": "47R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "47R_ADC_ISOLATION",
+        "47R_ADC_ISOLATION",
+        "47R_ADC_ISOLATION"
+      ],
+      "quantity_per_board": 3,
+      "quantity_5_boards": 15,
+      "quantity_with_20pct_spares": 18,
+      "primary": {
+        "productModel": "RS-03K47R0FT",
+        "productCode": "C140087",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 47Ω ±1% 100mW",
+        "stockNumber": 189696,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 40.5,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/151413.html",
+        "stock_total": 189600,
+        "stock_gd": 189600,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "47Ω",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+        "price_display_CNY": 0.0081,
+        "pageGeneratedAt": "2026-10-10T14:18:53.973Z",
+        "checked_at": "2026-10-10T14:18:53.836856+00:00"
+      },
+      "alternate": {
+        "productModel": "0603WAF470JT5E",
+        "productCode": "C23182",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 47Ω ±1% 100mW",
+        "stockNumber": 122895,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 58,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/23909.html",
+        "stock_total": 122800,
+        "stock_gd": 122800,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "47Ω",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.0116,
+        "pageGeneratedAt": "2026-10-10T14:15:49.801Z",
+        "checked_at": "2026-10-10T14:16:35.597238+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "FH RS-03K47R0FT47ohm1%100mW0603; OEM series dimensions1.6x.8mm,100ppm,50V conservative item limit. Low-energy analog filtering duty; UNI-ROYAL same value1%0603 alternative OEM verified. Actual current/settling remains system ADC test."
+    },
+    {
+      "refs": [
+        "R50",
+        "R53",
+        "R70",
+        "R71"
+      ],
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "10k_0.1%_OCP_HI_TOP",
+        "10k_0.1%_OCP_LO_BOT",
+        "10k_0.1%_NTC_PULLUP",
+        "10k_0.1%_NTC_PULLUP"
+      ],
+      "quantity_per_board": 4,
+      "quantity_5_boards": 20,
+      "quantity_with_20pct_spares": 24,
+      "primary": {
+        "productModel": "TD03G1002BT",
+        "productCode": "C667034",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 10kΩ ±0.1% 100mW",
+        "stockNumber": 15732,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 414,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/696334.html",
+        "stock_total": 15730,
+        "stock_gd": 15730,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "10kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+        "price_display_CNY": 0.0828,
+        "pageGeneratedAt": "2026-10-10T14:16:36.627Z",
+        "checked_at": "2026-10-10T14:16:36.501809+00:00"
+      },
+      "alternate": {
+        "productModel": "PTFR0603B10K0P9",
+        "productCode": "C328421",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 10kΩ ±0.1% 100mW",
+        "stockNumber": 80594,
+        "theRatio": 10,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 642.5,
+        "manufacturer": "RESI(开步睿思)",
+        "url": "https://item.szlcsc.com/308323.html",
+        "stock_total": 80590,
+        "stock_gd": 80590,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "10kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "100V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+125℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+        "price_display_CNY": 0.1285,
+        "pageGeneratedAt": "2026-10-10T14:16:36.167Z",
+        "checked_at": "2026-10-10T14:16:36.027318+00:00"
+      },
+      "order_multiple_candidate": 10,
+      "order_qty_candidate": 30,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "FH TD03G1002BT10k0.1%25ppm0603; use conservative generic TD0603 rating62.5mW50V despite distributor100mW. Low-voltage OCP threshold/NTC divider load is well below62.5mW. RESI PTFR0603B10K0P9 alternate OEM visual review confirms.1%,25ppm,0.1W100V,1.6x.8mm; may use as domestic different-manufacturer alternative."
+    },
+    {
+      "refs": [
+        "R51",
+        "R52"
+      ],
+      "value": "160k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "160k_0.1%_OCP_HI_BOT",
+        "160k_0.1%_OCP_LO_TOP"
+      ],
+      "quantity_per_board": 2,
+      "quantity_5_boards": 10,
+      "quantity_with_20pct_spares": 12,
+      "primary": {
+        "productModel": "ERA3AEB164V",
+        "productCode": "C473259",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 160kΩ ±0.1% 100mW",
+        "stockNumber": 8414,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 1166,
+        "manufacturer": "PANASONIC(松下)",
+        "url": "https://item.szlcsc.com/479698.html",
+        "stock_total": 8410,
+        "stock_gd": 8410,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "160kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200515/C543414_D3FB4A44C151AC19BA141503575FC797.pdf",
+        "price_display_CNY": 0.2332,
+        "pageGeneratedAt": "2026-10-10T14:17:47.460Z",
+        "checked_at": "2026-10-10T14:17:47.328934+00:00"
+      },
+      "alternate": null,
+      "order_multiple_candidate": 5,
+      "order_qty_candidate": 15,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "Panasonic ERA3AEB164V foreign critical-value exception; OEM ERA3A=.1W75V0603,EB=.1%25ppm,160k within47ohm..330k allowed range;1.6x.8mm. Low-power OCP ratio divider load;prototype-ready. No stocked domestic exact alternate verified."
+    },
+    {
+      "refs": [
+        "R54"
+      ],
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "4.7k_OCP_PULLUP_TO_VIO"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "RS-03K4701FT",
+        "productCode": "C116693",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 4.7kΩ ±1% 100mW",
+        "stockNumber": 2972187,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 58,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/117947.html",
+        "stock_total": 2968300,
+        "stock_gd": 2968300,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "4.7kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+        "price_display_CNY": 0.0116,
+        "pageGeneratedAt": "2026-10-10T14:16:36.562Z",
+        "checked_at": "2026-10-10T14:16:36.445476+00:00"
+      },
+      "alternate": {
+        "productModel": "0603WAF4701T5E",
+        "productCode": "C23162",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 4.7kΩ ±1% 100mW",
+        "stockNumber": 8757828,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 44,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/23889.html",
+        "stock_total": 8757800,
+        "stock_gd": 8757800,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "4.7kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.0088,
+        "pageGeneratedAt": "2026-10-10T14:20:54.645Z",
+        "checked_at": "2026-10-10T14:20:54.562548+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "FH RS-03K4701FT4.7k1%100mW0603. VIO3.3V pull-up worst2.32mW vs~76mW at90C. UNI-ROYAL75V same0603/tolerance alternate OEM verified."
+    },
+    {
+      "refs": [
+        "R55",
+        "R80",
+        "R81",
+        "R82",
+        "R83",
+        "R84",
+        "R85",
+        "R86",
+        "R87",
+        "R90",
+        "R91",
+        "RGS1",
+        "RGS2",
+        "RGS3",
+        "RGS4",
+        "RGS5",
+        "RGS6"
+      ],
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "10k_PWR_GOOD_PULLUP",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic"
+      ],
+      "quantity_per_board": 17,
+      "quantity_5_boards": 85,
+      "quantity_with_20pct_spares": 102,
+      "primary": {
+        "productModel": "ABD03K1002FT",
+        "productCode": "C5139509",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 10kΩ ±1% 100mW",
+        "stockNumber": 11103,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 68,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/5751592.html",
+        "stock_total": 11100,
+        "stock_gd": 11100,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "10kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+        "price_display_CNY": 0.0156,
+        "pageGeneratedAt": "2026-10-10T14:16:36.603Z",
+        "checked_at": "2026-10-10T14:16:36.463303+00:00"
+      },
+      "alternate": {
+        "productModel": "0603WAF1002T5E",
+        "productCode": "C25804",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 10kΩ ±1% 100mW",
+        "stockNumber": 2002,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 35,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/6141756.html",
+        "stock_total": 2000,
+        "stock_gd": 2000,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "10kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.008,
+        "pageGeneratedAt": "2026-10-10T14:18:54.075Z",
+        "checked_at": "2026-10-10T14:18:53.879110+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 200,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "FH ABD03K1002FT10k1%100mW75V0603; OEM AB-series dimensions1.6±.1x.8±.1mm,K100ppm,F1%,derating above70C. Even12V gate-source pull-down dissipation14.4mW is below~76mW at90C. UNI-ROYAL identical value/size/tolerance75V alternative OEM verified."
+    },
+    {
+      "refs": [
+        "R88"
+      ],
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "See schematic"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "ABD03K1001FT",
+        "productCode": "C5125843",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 1kΩ ±1% 100mW",
+        "stockNumber": 97292,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 65,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/5725803.html",
+        "stock_total": 97200,
+        "stock_gd": 97200,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "1kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+        "price_display_CNY": 0.0139,
+        "pageGeneratedAt": "2026-10-10T14:18:54.174Z",
+        "checked_at": "2026-10-10T14:18:54.055714+00:00"
+      },
+      "alternate": {
+        "productModel": "CRCW06031K00FKEA",
+        "productCode": "C844920",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 1kΩ ±1% 100mW",
+        "stockNumber": 27564,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 60,
+        "manufacturer": "VISHAY(威世)",
+        "url": "https://item.szlcsc.com/904494.html",
+        "stock_total": 27500,
+        "stock_gd": 27500,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "1kΩ",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200922/C242478_0C7172CD6F5C3D507069694ED76193BB.pdf",
+        "price_display_CNY": 0.014,
+        "pageGeneratedAt": "2026-10-10T14:18:54.123Z",
+        "checked_at": "2026-10-10T14:18:53.984958+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "CANDIDATE_OEM_REVIEW_PENDING",
+      "notes": "FH ABD03K1001FT1k1%100mW75V0603 with AB OEM qualification;3.3V load10.9mW below~76mW derated at90C. Vishay alternate listing parameters match,exact OEM review remains pending."
+    },
+    {
+      "refs": [
+        "R92"
+      ],
+      "value": "3.24k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "3.24k 0603 0.1% maximum initial tolerance,25ppm/C maximum TCR; parent-approved revised prototype static bound0.00702 on R92; other precision divider resistors retain0.0025 budget."
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "TD03G3241BT",
+        "productCode": "C666977",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 3.24kΩ ±0.1% 100mW",
+        "stockNumber": 4452,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 339,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/696277.html",
+        "stock_total": 4440,
+        "stock_gd": 4440,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "3.24kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±25ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf",
+        "price_display_CNY": 0.1025,
+        "pageGeneratedAt": "2026-10-10T15:01:16.506Z",
+        "checked_at": "2026-10-10T15:01:16.594595+00:00"
+      },
+      "alternate": {
+        "productModel": "RT0603BRB073K24L",
+        "productCode": "C860367",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 3.24kΩ ±0.1% 100mW",
+        "stockNumber": 8951,
+        "theRatio": 5,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 3072.5,
+        "manufacturer": "YAGEO(国巨)",
+        "url": "https://item.szlcsc.com/920705.html",
+        "stock_total": 8950,
+        "stock_gd": 8950,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "3.24kΩ",
+          "精度": "±0.1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±10ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250609/0E6D5617EADA80FA3B707391883DF2D5.pdf",
+        "price_display_CNY": 0.6145,
+        "pageGeneratedAt": "2026-10-10T15:01:16.376Z",
+        "checked_at": "2026-10-10T15:01:16.476158+00:00"
+      },
+      "order_multiple_candidate": 20,
+      "order_qty_candidate": 20,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "Parent approved revised prototype design specification and0.00702 common R92 bound on2026-10-10;3.24k value and0603 footprint unchanged. FH primary mainland China; Yageo alternate Taiwan. OEM TD T-2.0 pp4-7 ordering/dimensions/rating; RT V16 pp2/5/6 confirm1.6x.8mm,0.1%,10ppm alternate. Parent static corner result falling~4.792V/risingmax~5.002V with>14mV margin after10mVripple. OEM qualification-test limits used for a prototype engineering budget are not guaranteed lifetime bounds; lifetime qualification remains open.",
+      "rejected_or_unavailable_precision_candidates": [
+        {
+          "productModel": "RG1608V-3241-P-T1",
+          "productCode": "C4321604",
+          "encapsulationModel": "0603",
+          "productName": "薄膜电阻 3.24kΩ ±0.02% 100mW",
+          "stockNumber": 0,
+          "theRatio": 1,
+          "minBuyNumber": 1,
+          "minWholeNumber": 1000,
+          "encaptionPrice": 2830,
+          "manufacturer": "SUSUMU",
+          "url": "https://item.szlcsc.com/4892054.html",
+          "stock_total": 0,
+          "stock_gd": 0,
+          "stock_js": 0,
+          "parameters": {
+            "电阻类型": "薄膜电阻",
+            "阻值": "3.24kΩ",
+            "精度": "±0.02%",
+            "功率": "100mW",
+            "温度系数": "±5ppm/℃",
+            "工作温度": "-55℃~+155℃"
+          },
+          "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20210606/6856878C575D79DFBFA2F7B3E671C5C0.pdf",
+          "price_display_CNY": 2.83,
+          "pageGeneratedAt": "2026-10-10T14:45:18.993Z",
+          "checked_at": "2026-10-10T14:45:19.091335+00:00"
+        },
+        {
+          "productModel": "PLTT0805Z3241QGT5",
+          "productCode": "C4237223",
+          "encapsulationModel": "0805",
+          "productName": "薄膜电阻 3.24kΩ ±0.02% 250mW",
+          "stockNumber": 0,
+          "theRatio": 1,
+          "minBuyNumber": 1,
+          "minWholeNumber": 500,
+          "encaptionPrice": 6875,
+          "manufacturer": "VISHAY(威世)",
+          "url": "https://item.szlcsc.com/4807639.html",
+          "stock_total": 0,
+          "stock_gd": 0,
+          "stock_js": 0,
+          "parameters": {
+            "电阻类型": "薄膜电阻",
+            "阻值": "3.24kΩ",
+            "精度": "±0.02%",
+            "功率": "250mW",
+            "温度系数": "±5ppm/℃",
+            "工作温度": "-55℃~+215℃"
+          },
+          "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20210703/EA84E01D0662BC7CCD3CEAC68CB877FC.pdf",
+          "price_display_CNY": 13.75,
+          "pageGeneratedAt": "2026-10-10T14:52:03.533Z",
+          "checked_at": "2026-10-10T14:52:03.574337+00:00"
+        },
+        {
+          "productModel": "RG1608N-3241-W-T5",
+          "productCode": "C1722999",
+          "encapsulationModel": "0603",
+          "productName": "薄膜电阻 3.24kΩ ±0.05% 100mW",
+          "stockNumber": 0,
+          "theRatio": 1,
+          "minBuyNumber": 1,
+          "minWholeNumber": 5000,
+          "encaptionPrice": 2926,
+          "manufacturer": "SUSUMU",
+          "url": "https://item.szlcsc.com/1813779.html",
+          "stock_total": 0,
+          "stock_gd": 0,
+          "stock_js": 0,
+          "parameters": {
+            "电阻类型": "薄膜电阻",
+            "阻值": "3.24kΩ",
+            "精度": "±0.05%",
+            "功率": "100mW",
+            "工作电压": "100V",
+            "温度系数": "±10ppm/℃",
+            "工作温度": "-55℃~+155℃"
+          },
+          "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20210604/C332225_945ECB787E58A490E925D92B7707E1BB.pdf",
+          "price_display_CNY": 0.5852,
+          "pageGeneratedAt": "2026-10-10T14:45:03.128Z",
+          "checked_at": "2026-10-10T14:45:03.217470+00:00"
+        }
+      ],
+      "alternate_order_multiple_candidate": 5,
+      "alternate_order_qty_candidate": 10
+    },
+    {
+      "refs": [
+        "R93"
+      ],
+      "value": "1k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "PTFR0603Q1K00N9",
+        "productCode": "C23067434",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 1kΩ ±0.02% 100mW",
+        "stockNumber": 21241,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 9100,
+        "manufacturer": "RESI(开步睿思)",
+        "url": "https://item.szlcsc.com/24793907.html",
+        "stock_total": 21241,
+        "stock_gd": 21241,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "1kΩ",
+          "精度": "±0.02%",
+          "功率": "100mW",
+          "工作电压": "100V",
+          "温度系数": "±10ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+        "price_display_CNY": 1.82,
+        "pageGeneratedAt": "2026-10-10T14:45:03.122Z",
+        "checked_at": "2026-10-10T14:45:03.248483+00:00"
+      },
+      "alternate": {
+        "productModel": "ERA-3ARW102V",
+        "productCode": "C2073443",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 1kΩ ±0.05% 100mW",
+        "stockNumber": 7252,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 9900,
+        "manufacturer": "PANASONIC(松下)",
+        "url": "https://item.szlcsc.com/2165028.html",
+        "stock_total": 7252,
+        "stock_gd": 7252,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "1kΩ",
+          "精度": "±0.05%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±10ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20210709/C2073443_299DC2F6828F5A03F70C67802913C736.pdf",
+        "price_display_CNY": 1.98,
+        "pageGeneratedAt": "2026-10-10T14:45:03.109Z",
+        "checked_at": "2026-10-10T14:45:03.187207+00:00"
+      },
+      "order_multiple_candidate": 1,
+      "order_qty_candidate": 6,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "READY_FOR_PROTOTYPE",
+      "notes": "Mainland RESI PTFR0603Q1K00N9,1k0.02%10ppm0603,improves original0.05% without value or TCR change. OEM PTFR pages2/3 visually verifies1k in100..5.1k range,.02%10ppm,0.1W100V1.6x.8mm. Panasonic ERA-3ARW102V alternate1k0.05%10ppm0603 .1W75V from OEM exact series ordering/specifications;stock7252. Low-power divider source qualification complete. Whole-application0.1%lifetime drift remains an engineering allocation.",
+      "foreign_exception_candidate": {
+        "manufacturer": "Susumu",
+        "manufacturer_origin": "Japan",
+        "productModel": "RG1608N-102-W-T5",
+        "url": "https://www.digikey.com/en/products/detail/susumu/RG1608N-102-W-T5/1257519",
+        "stock_reported": 2951,
+        "price_USD_qty1": 0.57,
+        "checked_at": "2026-10-10T14:32:28.030786+00:00",
+        "source_freshness": "web retrieved page; crawler 2 weeks ago;not real-time checkout",
+        "parameters": {
+          "tolerance_pct": 0.05,
+          "TCR_ppm_per_C": 10,
+          "package": "0603",
+          "power_W": 0.1
+        },
+        "datasheet_url": "https://www.susumu.co.jp/dl/?filename=n_catalog_partition01_en.pdf&type=application/pdf",
+        "status": "ELECTRICALLY_COMPATIBLE_FOREIGN_EXCEPTION_VERIFY_CHECKOUT",
+        "notes": "Exact required value preserved. T1/T5 is packaging;current OEM catalog listsT5/T10 and distributorT1 should be reconfirmed for75k. Chinese LCSC item/code unavailable;does not close Chinese sourcing requirement."
+      }
+    },
+    {
+      "refs": [
+        "R94"
+      ],
+      "value": "75k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "PTFR0603Q75K0N9",
+        "productCode": "C53280140",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 75kΩ ±0.02% 100mW",
+        "stockNumber": 3465,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 8950,
+        "manufacturer": "RESI(开步睿思)",
+        "url": "https://item.szlcsc.com/56346573.html",
+        "stock_total": 3465,
+        "stock_gd": 3465,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "75kΩ",
+          "精度": "±0.02%",
+          "功率": "100mW",
+          "工作电压": "100V",
+          "温度系数": "±10ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+        "price_display_CNY": 1.79,
+        "pageGeneratedAt": "2026-10-10T14:45:36.577Z",
+        "checked_at": "2026-10-10T14:45:36.774965+00:00"
+      },
+      "alternate": null,
+      "order_multiple_candidate": 1,
+      "order_qty_candidate": 6,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "Mainland RESI PTFR0603Q75K0N9,75k0.02%10ppm0603,stock3465;improves tolerance from0.05% while retaining same value andTCR. OEM PTFR permits5.1k..270k10ppm/.02%,0603 0.1W100V,1.6x.8mm. Whole-application lifetime drift allocation remains open;no Chinese-stock different-manufacturer precision-equivalent alternate verified.",
+      "foreign_exception_candidate": {
+        "manufacturer": "Susumu",
+        "manufacturer_origin": "Japan",
+        "productModel": "RG1608N-753-W-T1",
+        "url": "https://www.digikey.com/en/products/detail/susumu/RG1608N-753-W-T1/600642",
+        "stock_reported": 1232,
+        "price_USD_qty1": 0.6,
+        "checked_at": "2026-10-10T14:32:28.030864+00:00",
+        "source_freshness": "web retrieved page; crawler 5 days ago;not real-time checkout",
+        "parameters": {
+          "tolerance_pct": 0.05,
+          "TCR_ppm_per_C": 10,
+          "package": "0603",
+          "power_W": 0.1
+        },
+        "datasheet_url": "https://www.susumu.co.jp/dl/?filename=n_catalog_partition01_en.pdf&type=application/pdf",
+        "status": "ELECTRICALLY_COMPATIBLE_FOREIGN_EXCEPTION_VERIFY_CHECKOUT",
+        "notes": "Exact required value preserved. T1/T5 is packaging;current OEM catalog listsT5/T10 and distributorT1 should be reconfirmed for75k. Chinese LCSC item/code unavailable;does not close Chinese sourcing requirement."
+      }
+    },
+    {
+      "refs": [
+        "R95"
+      ],
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement"
+      ],
+      "quantity_per_board": 1,
+      "quantity_5_boards": 5,
+      "quantity_with_20pct_spares": 6,
+      "primary": {
+        "productModel": "PTFR0603Q10K0N9",
+        "productCode": "C51822132",
+        "encapsulationModel": "0603",
+        "productName": "薄膜电阻 10kΩ ±0.02% 100mW",
+        "stockNumber": 4382,
+        "theRatio": 1,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 8950,
+        "manufacturer": "RESI(开步睿思)",
+        "url": "https://item.szlcsc.com/54484928.html",
+        "stock_total": 4382,
+        "stock_gd": 4382,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "薄膜电阻",
+          "阻值": "10kΩ",
+          "精度": "±0.02%",
+          "功率": "100mW",
+          "工作电压": "100V",
+          "温度系数": "±10ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+        "price_display_CNY": 1.79,
+        "pageGeneratedAt": "2026-10-10T14:29:13.954Z",
+        "checked_at": "2026-10-10T14:29:13.832063+00:00"
+      },
+      "alternate": null,
+      "order_multiple_candidate": 1,
+      "order_qty_candidate": 6,
+      "status": "READY_FOR_PROTOTYPE",
+      "alternate_status": "BLOCKED_NOT_SOURCED_OR_NO_STOCK",
+      "notes": "Domestic critical precision exception resolved: RESIPTFR0603Q10K0N9 improves tolerance0.05%->0.02% and preserves10ppm/C,10k,0603. OEM visual pages2/3 supports0603,10kQ.02%N10ppm,0.1W100V and1.6x.8mm. Prototype qualification does not close whole-circuit0.1%lifetime drift budget;OEM rated-power2000h max drift±.1% plus other drift cannot be silently treated as application guarantee. Different-manufacturer Chinese-stock alternate still unresolved."
+    },
+    {
+      "refs": [
+        "RG1",
+        "RG2",
+        "RG3",
+        "RG4",
+        "RG5",
+        "RG6"
+      ],
+      "value": "10R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "requirements": [
+        "10R_HS_START",
+        "10R_LS_START",
+        "10R_HS_START",
+        "10R_LS_START",
+        "10R_HS_START",
+        "10R_LS_START"
+      ],
+      "quantity_per_board": 6,
+      "quantity_5_boards": 30,
+      "quantity_with_20pct_spares": 36,
+      "primary": {
+        "productModel": "RS-03K10R0FT",
+        "productCode": "C136596",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 10Ω ±1% 100mW",
+        "stockNumber": 357773,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 38,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/147912.html",
+        "stock_total": 357700,
+        "stock_gd": 357700,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "10Ω",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+        "price_display_CNY": 0.0076,
+        "pageGeneratedAt": "2026-10-10T14:18:54.075Z",
+        "checked_at": "2026-10-10T14:18:53.916258+00:00"
+      },
+      "alternate": {
+        "productModel": "0603WAF100JT5E",
+        "productCode": "C22859",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 10Ω ±1% 100mW",
+        "stockNumber": 3312025,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 51,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/23586.html",
+        "stock_total": 3312020,
+        "stock_gd": 3312020,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "10Ω",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±400ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.0102,
+        "pageGeneratedAt": "2026-10-10T14:16:36.169Z",
+        "checked_at": "2026-10-10T14:16:36.068330+00:00"
+      },
+      "order_multiple_candidate": 100,
+      "order_qty_candidate": 100,
+      "status": "READY_FOR_LIMITED_ENERGY_PROTOTYPE_PULSE_GATE_OPEN",
+      "alternate_status": "READY_FOR_LIMITED_ENERGY_PROTOTYPE_PULSE_GATE_OPEN",
+      "notes": "FH RS-03K10R0FT and UNI-ROYAL0603WAF100JT5E both10ohm1%0603. OEM nominal dimensions/power/tolerance verified. High-frequency gate pulse energy,average thermal duty and switching ringing require actual gate-charge/frequency/driver validation before full-power operation; nominal0.1W alone is not pulse qualification."
+    }
+  ],
+  "coverage": {
+    "fitted_refs": 105,
+    "groups": 36,
+    "missing": []
+  },
+  "excluded_dnp": [
+    "R32",
+    "RT1",
+    "RT2",
+    "RT3"
+  ],
+  "ntc_candidates": {
+    "refs": [
+      "NTC1",
+      "NTC2"
+    ],
+    "quantity_per_board": 2,
+    "quantity_5_boards": 10,
+    "quantity_with_20pct_spares": 12,
+    "primary": {
+      "productModel": "SDNT1608X103F3950FTF",
+      "productCode": "C279936",
+      "encapsulationModel": "0603",
+      "productName": "10kΩ 3950K 100mW 片式NTC热敏电阻器",
+      "stockNumber": 115546,
+      "theRatio": 20,
+      "minBuyNumber": 1,
+      "minWholeNumber": 4000,
+      "encaptionPrice": 312.4,
+      "manufacturer": "Sunlord(顺络)",
+      "url": "https://item.szlcsc.com/266512.html",
+      "stock_total": 115540,
+      "stock_gd": 115540,
+      "stock_js": 0,
+      "parameters": {
+        "功率": "100mW",
+        "阻值": "10kΩ",
+        "电阻精度": "±1%",
+        "B值精度": "±1%",
+        "B值(25℃/50℃)": "3950K",
+        "B值(25℃/75℃)": "-",
+        "B值(25℃/85℃)": "-",
+        "B值(25℃/100℃)": "-",
+        "最大稳态电流(25℃)": "330uA",
+        "耗散系数": "1mW/℃",
+        "热时间常数": "5s",
+        "工作温度": "-55℃~+125℃",
+        "长度": "1.6mm",
+        "宽度": "0.8mm",
+        "高度": "0.8mm"
+      },
+      "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250613/843D00CF2C300AE0276A3364ED88CCAD.pdf",
+      "price_display_CNY": 0.0781,
+      "pageGeneratedAt": "2026-10-10T14:21:19.396Z",
+      "checked_at": "2026-10-10T14:21:19.243299+00:00"
+    },
+    "alternate": {
+      "productModel": "NS1002FB395FDT100",
+      "productCode": "C42382283",
+      "encapsulationModel": "0603",
+      "productName": "10kΩ 3950K 100mW",
+      "stockNumber": 3501,
+      "theRatio": 20,
+      "minBuyNumber": 1,
+      "minWholeNumber": 4000,
+      "encaptionPrice": 430.8,
+      "manufacturer": "Dersonic(德尔创)",
+      "url": "https://item.szlcsc.com/44299272.html",
+      "stock_total": 3500,
+      "stock_gd": 3500,
+      "stock_js": 0,
+      "parameters": {
+        "功率": "100mW",
+        "阻值": "10kΩ",
+        "电阻精度": "±1%",
+        "B值精度": "±1%",
+        "B值(25℃/50℃)": "3950K",
+        "B值(25℃/75℃)": "-",
+        "B值(25℃/85℃)": "3987K",
+        "B值(25℃/100℃)": "-",
+        "最大稳态电流(25℃)": "330uA",
+        "耗散系数": "1mW/℃",
+        "热时间常数": "5s",
+        "工作温度": "-40℃~+125℃",
+        "直径(φD)": "-",
+        "长度": "1.6mm",
+        "宽度": "0.8mm",
+        "高度": "0.8mm",
+        "脚间距": "-"
+      },
+      "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20241113/A124A23DC9CE6AF47BCCC447FA65E49D.pdf",
+      "price_display_CNY": 0.1077,
+      "pageGeneratedAt": "2026-10-10T14:21:19.431Z",
+      "checked_at": "2026-10-10T14:21:19.280117+00:00"
+    },
+    "status": "CANDIDATE_OEM_REVIEW_PENDING",
+    "notes": "Both10k1%, B25/50=3950K1%,0603. Firmware R/T curve, sensor installation/self-heating must match; motor NTC0603 may require external mechanical arrangement."
+  },
+  "oem_review_evidence": [
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+      "document": "FH General Thick Film Chip Fixed Resistor",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "RS-03K family:0603 dimensions1.60±0.10x0.80±0.10mm;0.1W@70C with derating above70C;75V limiting element voltage but actual voltage=min(sqrt(P*R),limiting).K100ppm,C0.25%,F1%,B0.1%;10ohm..1Mohm supports100ppm. Distributor lists50V for several candidates; conservatively use50V until exact revision confirmed. Pulse qualification for RG1..6 still open."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+      "document": "FH AB thick film",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "ABD03=0603,1.6±.1x.8±.1mm,0.1W70C75V,K100ppm,F1%;derate above70C."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+      "document": "FH TD thin film",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "TD03G...B=0603,25ppm,.1%;use conservative62.5mW50V generic0603 rating until exact uprating confirmed."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250704/E55D4B940A787305EBFEE524BD083243.pdf",
+      "document": "UNI-ROYAL TC precision thin film",
+      "reviewed_pages": [
+        2,
+        3,
+        4
+      ],
+      "findings": "TC03=0603,25ppm,B.1%,F power suffix0.1W;75V."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+      "document": "UNI-ROYAL thick film",
+      "reviewed_pages": [
+        2,
+        3,
+        4
+      ],
+      "findings": "0603WA=.1W,F1%,T5E packing;75V;1.6x.8mm."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf",
+      "document": "YAGEO RC",
+      "reviewed_pages": [
+        2,
+        4,
+        5
+      ],
+      "findings": "RC0603FR453k:1%,.1W75V;1.6x.8mm."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250609/0E6D5617EADA80FA3B707391883DF2D5.pdf",
+      "document": "YAGEO RT",
+      "reviewed_pages": [
+        2,
+        4,
+        5
+      ],
+      "findings": "RT0805=2x1.25mm,.125W150V;RT0603=1.6x.8mm,.1W75V;B=.1%,D25ppm."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20200515/C543414_D3FB4A44C151AC19BA141503575FC797.pdf",
+      "document": "Panasonic precision resistor catalog",
+      "reviewed_pages": [
+        18
+      ],
+      "findings": "ERA3AEB164V160k.1%25ppm,0603 .1W75V;allowed47ohm..330k."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+      "document": "RESI PTFR C16003 V8",
+      "reviewed_pages": [
+        2,
+        3
+      ],
+      "findings": "Visual rendered PDF:0603 1.6±.2x.8±.2mm,0.1W100V;0805 2.0±.2x1.25±.2mm,0.13W150V. B.1%,A.05%,Q.02%;N10ppm,P25ppm;9standard.0603 5.1k..270k permits10ppm/.02%.280k0805 supports25ppm/.1%. Numbers missing in extracted text;visual evidence used."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20230811/BB9CDD2B0AFC2108EC4F7AFDADD4823B.pdf",
+      "document": "Murata GRT31C5C1H104FA02L",
+      "reviewed_pages": [
+        1
+      ],
+      "findings": "Exact100nF1%50VC0G1206;3.2x1.6x1.6mm nominal."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20190322/C361206_9C300BFAC6DE9FB712DF280041B5B925.pdf",
+      "document": "TDK general MLCC catalog",
+      "reviewed_pages": [
+        2,
+        29
+      ],
+      "findings": "Label/catalog suffix mapping andC3216C0G1H104J160AA:1206 100nF5%50VC0G."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20191028/C441477_722A9436F63B689BB01D466E49BFBC99.pdf",
+      "document": "TDK general MLCC catalog",
+      "reviewed_pages": [
+        2
+      ],
+      "findings": "C4532C0G2A104JT000N label maps100nF5%100VC0G1812 catalog."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20230425/2C6BE217A3BC949D2A12F695D1A17840.pdf",
+      "document": "Faratronic C21/CL21 film",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "250V1uFP15 suitable DC margin;6S exact body suffix not decoded;preserve mechanical/pulse hold."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20190717/C404859_EF21AC612EDD98432EE9D266CBC8B364.pdf",
+      "document": "Faratronic C21/CL21 exact6B small body",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "review_method": "Scanned OEM pages rendered and visually inspected",
+      "findings": "C212E105*6B1uF250VP15:W17.5,H12.9,T7.2mm max,diameter.6mm.15mm pitch. B=small,C000straight lead20..30mm.85C rated,105Cmax,1.25%/Cvoltage derating. Low-pulse/DC bypass application;small-body pulse table applicability unresolved."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "document": "FH General Series MLCC",
+      "reviewed_pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "findings": "Part code decodes exact listedcap/rating/tolerance/dielectric.0603/0805/1210dimensionsandX7R125C,C0G30ppmratingsreviewed."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf",
+      "document": "Chinocera HGC generalMLCC",
+      "reviewed_pages": [
+        2,
+        3,
+        6
+      ],
+      "findings": "HGC0805R7106K250NSLJ value/rating/size/tolerancedecoded;0805 L2.0 W1.25 T1.25nominal."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20240628/CF49925013D2B6594E99B01DE9E3F720.pdf",
+      "document": "HRE CGA0805X7R226M100MT exactspec",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "22uF20%10VX7R0805verified;effectivebiasedcapnotguaranteednominal."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20250915/7997FE7A91CE9142B98B1A231623FA45.pdf",
+      "document": "HRE CGA1206X7R106K250NT exactspec",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "10uF10%25VX7R1206exact3.2x1.6x1.6mm."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260717/7FA3951AEFD121FDE352DC2C40859DA4.pdf",
+      "document": "HRE CGA0805X7R475K250MT exactspec",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "4.7uF10%25VX7R0805exact2.0x1.25x1.25mm."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20160218/1457707763339.pdf",
+      "document": "Samsung MLCC catalog",
+      "reviewed_pages": [
+        4,
+        5,
+        6
+      ],
+      "findings": "CL10/CL21dimensions,dielectricC/B,C0G/X7R,voltageratingandvaluecodesreviewed."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20190729/C388903_B5EF6FEF3965E3E94540307FC677703D.pdf",
+      "document": "Murata GCJ32DR72A225KA01L",
+      "reviewed_pages": [
+        1
+      ],
+      "findings": "Exact2.2uF100VX7R1210softtermination."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20201022/C907991_FDD26F97C89A3C2FF3DDCDE25DF37A4B.pdf",
+      "document": "Murata GRM21BZ71A226ME15L",
+      "reviewed_pages": [
+        1,
+        2
+      ],
+      "findings": "Exact22uF10VX7R(Murata)0805,50%ratedvoltagecapcharacteristicnote."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260824/C7059AD86670CB03FD643668122C4D10.pdf",
+      "document": "FOJAN/FOSAN FCCMLCCcatalog",
+      "reviewed_pages": [
+        3,
+        4,
+        12,
+        24
+      ],
+      "findings": "FCC0805B106K250FT10uF25VX7R0805orderinganddimensionsreviewed."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20210709/C2073443_299DC2F6828F5A03F70C67802913C736.pdf",
+      "document": "Panasonic ERA metalfilm highreliability",
+      "reviewed_pages": [
+        1,
+        2,
+        3
+      ],
+      "findings": "ERA3ARW102V1k.05%10ppm0603.1W75V;ordering/rating/outlineverified."
+    },
+    {
+      "url": "https://www.aishi.com/files/RS.pdf",
+      "document": "AISHI current manufacturer-owned RS series",
+      "reviewed_pages": [
+        1,
+        4
+      ],
+      "findings": "100V100uF rowexactERS1KM101W16OT isD12.5x16;doesnotqualifyitemERS1KM101G16OTD10x16. Procurementexact-sizeconflictretained."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf",
+      "document": "NCC KZN exact100V100uF10x20",
+      "reviewed_pages": [
+        1,
+        3
+      ],
+      "findings": "OEMrowEKZN101E□□101MJ20S100V100uF10x20,1.43Arms/.068ohm@100kHz;dimensionsP5mm,lead.6mm;L20mm+1.5max."
+    },
+    {
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20190927/C432431_5E9FA795B0A52BC2AD438593603F3699.pdf",
+      "document": "Rubycon ZLH exact100V100uF10x20",
+      "reviewed_pages": [
+        1,
+        3
+      ],
+      "findings": "OEMvisualtable100V100uF10x20,1.04Arms/.12ohm@100kHz;P5mmlead.6mm;10000h105Cfamily fordiameter>=10mm."
+    }
+  ],
+  "updated_at": "2026-10-10T15:03:58.179769+00:00",
+  "source_vs_application_status": "READY_FOR_PROTOTYPE is component source qualification:value,rating,dielectric/tolerance,packageandstockevidence. Wholeboardcapacitancebias/ripple/lifetime/UVtiming/bootstrap gatesremainseparateandOPEN asdocumented. Doesnotauthorizeproductionorfullpower.",
+  "driver_optimization_candidates": {
+    "bootstrap": {
+      "primary": {
+        "productModel": "0805B474K500NT",
+        "productCode": "C49955",
+        "encapsulationModel": "0805",
+        "productName": "470nF ±10% 50V",
+        "stockNumber": 31119,
+        "theRatio": 50,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 193.5,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/50964.html",
+        "stock_total": 31100,
+        "stock_gd": 31100,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "470nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+        "price_display_CNY": 0.0684,
+        "pageGeneratedAt": "2026-10-10T14:56:53.895Z",
+        "checked_at": "2026-10-10T14:56:53.986081+00:00"
+      },
+      "alternate": {
+        "productModel": "0805B474K500CT-C",
+        "productCode": "C2991505",
+        "encapsulationModel": "0805",
+        "productName": "470nF ±10% 50V",
+        "stockNumber": 2665,
+        "theRatio": 20,
+        "minBuyNumber": 1,
+        "minWholeNumber": 3000,
+        "encaptionPrice": 358.2,
+        "manufacturer": "Walsin(华新科)",
+        "url": "https://item.szlcsc.com/3454072.html",
+        "stock_total": 2660,
+        "stock_gd": 2660,
+        "stock_js": 0,
+        "parameters": {
+          "容值": "470nF",
+          "精度": "±10%",
+          "额定电压": "50V",
+          "温度系数": "X7R"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20190614/C388069_4B3EF5497F6DC8E8932D1232046A3033.pdf",
+        "price_display_CNY": 0.1194,
+        "pageGeneratedAt": "2026-10-10T14:57:19.687Z",
+        "checked_at": "2026-10-10T14:57:19.764474+00:00"
+      },
+      "status": "SOURCE_QUALIFIED_DC_BIAS_APPLICATION_GATE_OPEN",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "oem_primary_product": "https://fhcomp.com/zh-cn/product_page/?code=010121&page=41",
+      "oem_pdfs": [
+        "/private/tmp/passive-oem/50964.pdf",
+        "/private/tmp/passive-oem/3454072.pdf"
+      ],
+      "maximum_initial_plus_temperature_nF": 594.55,
+      "required_bias_retention_fraction_excluding_aging": 0.3337505214851898,
+      "note": "Generic OEM specifications establish 470nF10%50VX7R0805; no exact DC-bias curve/minimum at12V in either PDF. Do not claim effective >=120nF until curve or measurement verified.",
+      "order_primary": 50,
+      "order_alternate": 20
+    },
+    "gate_resistor": {
+      "primary": {
+        "productModel": "RS-03K33R0FT",
+        "productCode": "C125766",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 33Ω ±1% 100mW",
+        "stockNumber": 392512,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 36.5,
+        "manufacturer": "FH(风华)",
+        "url": "https://item.szlcsc.com/137045.html",
+        "stock_total": 392500,
+        "stock_gd": 392500,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "33Ω",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "50V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+        "price_display_CNY": 0.0073,
+        "pageGeneratedAt": "2026-10-10T15:00:03.541Z",
+        "checked_at": "2026-10-10T15:00:03.662470+00:00"
+      },
+      "alternate": {
+        "productModel": "0603WAF330JT5E",
+        "productCode": "C23140",
+        "encapsulationModel": "0603",
+        "productName": "厚膜电阻 33Ω ±1% 100mW",
+        "stockNumber": 2984688,
+        "theRatio": 100,
+        "minBuyNumber": 1,
+        "minWholeNumber": 5000,
+        "encaptionPrice": 39,
+        "manufacturer": "UNI-ROYAL(厚声)",
+        "url": "https://item.szlcsc.com/23867.html",
+        "stock_total": 2984600,
+        "stock_gd": 2984600,
+        "stock_js": 0,
+        "parameters": {
+          "电阻类型": "厚膜电阻",
+          "阻值": "33Ω",
+          "精度": "±1%",
+          "功率": "100mW",
+          "工作电压": "75V",
+          "温度系数": "±100ppm/℃",
+          "工作温度": "-55℃~+155℃"
+        },
+        "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+        "price_display_CNY": 0.0078,
+        "pageGeneratedAt": "2026-10-10T14:59:09.703Z",
+        "checked_at": "2026-10-10T14:59:09.817475+00:00"
+      },
+      "status": "READY_FOR_LIMITED_ENERGY_PROTOTYPE_PULSE_GATE_OPEN",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "oem_pdfs": [
+        "/private/tmp/passive-oem/73924.pdf",
+        "/private/tmp/passive-oem/23867.pdf"
+      ],
+      "order_primary": 100,
+      "order_alternate": 100,
+      "note": "33ohm1%100mW0603. Both OEM dimensions1.6±.1x.8±.1mm. Switching loss/pulse stress remains application gate."
+    }
+  },
+  "r92_revised_bound_proposal": {
+    "primary": {
+      "productModel": "TD03G3241BT",
+      "productCode": "C666977",
+      "encapsulationModel": "0603",
+      "productName": "薄膜电阻 3.24kΩ ±0.1% 100mW",
+      "stockNumber": 4452,
+      "theRatio": 20,
+      "minBuyNumber": 1,
+      "minWholeNumber": 5000,
+      "encaptionPrice": 339,
+      "manufacturer": "FH(风华)",
+      "url": "https://item.szlcsc.com/696277.html",
+      "stock_total": 4440,
+      "stock_gd": 4440,
+      "stock_js": 0,
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "3.24kΩ",
+        "精度": "±0.1%",
+        "功率": "100mW",
+        "工作电压": "50V",
+        "温度系数": "±25ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf",
+      "price_display_CNY": 0.1025,
+      "pageGeneratedAt": "2026-10-10T15:01:16.506Z",
+      "checked_at": "2026-10-10T15:01:16.594595+00:00"
+    },
+    "alternate": {
+      "productModel": "RT0603BRB073K24L",
+      "productCode": "C860367",
+      "encapsulationModel": "0603",
+      "productName": "薄膜电阻 3.24kΩ ±0.1% 100mW",
+      "stockNumber": 8951,
+      "theRatio": 5,
+      "minBuyNumber": 1,
+      "minWholeNumber": 5000,
+      "encaptionPrice": 3072.5,
+      "manufacturer": "YAGEO(国巨)",
+      "url": "https://item.szlcsc.com/920705.html",
+      "stock_total": 8950,
+      "stock_gd": 8950,
+      "stock_js": 0,
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "3.24kΩ",
+        "精度": "±0.1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±10ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "datasheet_url": "https://atta.szlcsc.com/upload/public/pdf/source/20250609/0E6D5617EADA80FA3B707391883DF2D5.pdf",
+      "price_display_CNY": 0.6145,
+      "pageGeneratedAt": "2026-10-10T15:01:16.376Z",
+      "checked_at": "2026-10-10T15:01:16.476158+00:00"
+    },
+    "status": "ACCEPTED_BY_PARENT_FOR_PROTOTYPE",
+    "oem_pdfs": [
+      "/private/tmp/passive-oem/696277.pdf",
+      "/private/tmp/passive-oem/920705.pdf"
+    ],
+    "caution": "FH endurance ±(0.2%R+.05ohm), dampheat ±(.3%R+.05ohm). Yageo endurance ±(.5%+.05ohm). Proposed .1% drift not established by these OEM testlimits; parent must review bound. Exact3.24k preserved.",
+    "accepted_bound": 0.00702
+  }
+}

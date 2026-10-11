@@ -3,7 +3,9 @@
 This is not an analog transient model or a guarantee of gate-off timing.
 TPS3890 SLVSD65A: 1.15 V +/-1%, hysteresis <=0.825%, ISENSE <=100 nA.
 TPS62901 SLVSFS7A: external FB 0.6 V +/-0.9%, IFB <=70 nA.
-Resistor bound includes 0.05% initial, 10 ppm/C *100 C and 0.1% drift allocation.
+R93..R95: 0.05% initial, 10 ppm/C *100 C, 0.1% drift allocation.
+R92: 0.1% /25ppm primary or 0.1% /10ppm alternate, common0.702% bound
+covering reviewed individual qualification-test drift. This is not a lifetime guarantee.
 """
 from pathlib import Path
 import argparse
@@ -35,8 +37,9 @@ def verify(path):
 
     for ref in ('R92', 'R93', 'R94', 'R95'):
         fields = {f.attrib['name']: f.text for f in comps.get(ref, ET.Element('comp')).findall('./fields/field')}
-        if fields.get('Tolerance') != '0.05%' or fields.get('TCR') != '10ppm/C':
-            errors.append(f'{ref}: controlled 0.05%, 10ppm/C resistor specification missing')
+        tolerance, tcr = ('0.1%', '25ppm/C') if ref == 'R92' else ('0.05%', '10ppm/C')
+        if fields.get('Tolerance') != tolerance or fields.get('TCR') != tcr:
+            errors.append(f'{ref}: controlled {tolerance}, {tcr} resistor specification missing')
     # Actual TPS3890 DSE package numbering; not TPS3808-compatible.
     rail('U25', 4, 'VIO_3V3')
     rail('U25', 2, 'GND')
@@ -61,20 +64,23 @@ def verify(path):
     same(('U23', 4), ('U20', 6))
     same(('U20', 5), ('U11', 6))
 
-    tol = .0025  # initial + full temperature drift + application drift allocation
-    def bounds(ref, top, bottom, accuracy, leakage):
+    tol = .0025  # R93..95 initial + temperature + allocated application drift
+    r92_tol = .00702  # conservative common envelope; see sourcing qualification notes
+    def bounds(ref, top, bottom, accuracy, leakage, top_tol=tol):
         values = [v * (1 + a / b) + current * a
                   for v, a, b, current in itertools.product(
                       (ref*(1-accuracy), ref*(1+accuracy)),
-                      (top*(1-tol), top*(1+tol)),
+                      (top*(1-top_tol), top*(1+top_tol)),
                       (bottom*(1-tol), bottom*(1+tol)), (-leakage, leakage))]
         return min(values), max(values)
-    fall = bounds(1.15, 3240, 1000, .01, 100e-9)
+    fall = bounds(1.15, 3240, 1000, .01, 100e-9, r92_tol)
     recovery_max = fall[1] * 1.00825
     supply = bounds(.6, 75000, 10000, .009, 70e-9)
     if fall[0] <= 4.75 or recovery_max >= supply[0] - .01 or supply[1] + .01 >= 5.25:
         errors.append('static ADC inhibit/recovery margin insufficient')
-    numeric = {'falling_threshold_V': fall, 'rising_threshold_max_V': recovery_max,
+    numeric = {'resistor_fractional_bounds': {'R92': r92_tol, 'R93_R94_R95': tol},
+               'drift_scope': 'Prototype budget based on separate qualification tests/allocations; combined aging/environment and dynamic shutdown remain unqualified.',
+               'falling_threshold_V': fall, 'rising_threshold_max_V': recovery_max,
                'regulated_static_V': supply, 'normal_negative_ripple_budget_V': .01,
                'adc_min_V': 4.75, 'adc_max_V': 5.25,
                'static_shutdown_headroom_V': fall[0] - 4.75,

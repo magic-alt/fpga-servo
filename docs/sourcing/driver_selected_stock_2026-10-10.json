@@ -1,0 +1,186 @@
+[
+  {
+    "url": "https://item.szlcsc.com/3585292.html",
+    "mpn": "DRV8300DPWR",
+    "manufacturer": "TI(德州仪器)",
+    "code": "C3036056",
+    "package": "TSSOP-20",
+    "stock": 4653,
+    "gd_stock": 4653,
+    "js_stock": 0,
+    "record_stock": 4732,
+    "min_buy": 1,
+    "multiple": 1,
+    "price": 2.15,
+    "timestamp": "2026-10-10T14:53:32.880Z",
+    "params": [
+      {
+        "parameterName": "驱动类型",
+        "parameterCode": "param_32581",
+        "parameterDetailValue": "三相",
+        "parameterValue": "三相"
+      },
+      {
+        "parameterName": "集成FET",
+        "parameterCode": "param_27932",
+        "parameterDetailValue": "否",
+        "parameterValue": "否"
+      },
+      {
+        "parameterName": "半桥数量",
+        "parameterCode": "param_32582_n",
+        "parameterDetailValue": "3",
+        "parameterValue": "3"
+      },
+      {
+        "parameterName": "输出电流",
+        "parameterCode": "param_27934_s",
+        "parameterDetailValue": "750mA；1.5A",
+        "parameterValue": "750mA；1.5A"
+      },
+      {
+        "parameterName": "峰值电流",
+        "parameterCode": "param_27937_n",
+        "parameterDetailValue": "1.5A",
+        "parameterValue": "1.5A"
+      },
+      {
+        "parameterName": "工作电压",
+        "parameterCode": "param_27933_s",
+        "parameterDetailValue": "5V~20V",
+        "parameterValue": "5V~20V"
+      },
+      {
+        "parameterName": "静态电流(Iq)",
+        "parameterCode": "param_32583_n",
+        "parameterDetailValue": "800uA",
+        "parameterValue": "800uA"
+      },
+      {
+        "parameterName": "接口类型",
+        "parameterCode": "param_27936",
+        "parameterDetailValue": "PWM",
+        "parameterValue": "PWM"
+      },
+      {
+        "parameterName": "工作温度",
+        "parameterCode": "param_27938_st",
+        "parameterDetailValue": "-40℃~+125℃",
+        "parameterValue": "-40℃~+125℃"
+      },
+      {
+        "parameterName": "功能特性",
+        "parameterCode": "param_34055",
+        "parameterDetailValue": "交错导通保护",
+        "parameterValue": "交错导通保护"
+      }
+    ],
+    "datasheet": null
+  },
+  {
+    "url": "https://item.szlcsc.com/51381592.html",
+    "mpn": "ZX-DG10-9.5-3P",
+    "manufacturer": "Megastar(兆星)",
+    "code": "C49023060",
+    "package": "插件,P=9.5mm",
+    "stock": 125,
+    "gd_stock": 125,
+    "js_stock": 0,
+    "record_stock": 127,
+    "min_buy": 1,
+    "multiple": 5,
+    "price": 1.1311,
+    "timestamp": "2026-10-10T14:53:54.883Z",
+    "params": [
+      {
+        "parameterName": "隔板类型",
+        "parameterCode": "param_13330",
+        "parameterDetailValue": "两面",
+        "parameterValue": "两面"
+      },
+      {
+        "parameterName": "间距",
+        "parameterCode": "param_13333_n",
+        "parameterDetailValue": "9.5mm",
+        "parameterValue": "9.5mm"
+      },
+      {
+        "parameterName": "结构",
+        "parameterCode": "param_15632",
+        "parameterDetailValue": "1x3P",
+        "parameterValue": "1x3P"
+      },
+      {
+        "parameterName": "安装方式",
+        "parameterCode": "param_13334",
+        "parameterDetailValue": "直插",
+        "parameterValue": "直插"
+      },
+      {
+        "parameterName": "引脚位置",
+        "parameterCode": "param_13410",
+        "parameterDetailValue": "中脚",
+        "parameterValue": "中脚"
+      },
+      {
+        "parameterName": "总PIN数",
+        "parameterCode": "param_18213",
+        "parameterDetailValue": "3P",
+        "parameterValue": "3P"
+      },
+      {
+        "parameterName": "排数",
+        "parameterCode": "param_13332_n",
+        "parameterDetailValue": "1",
+        "parameterValue": "1"
+      },
+      {
+        "parameterName": "每排PIN数",
+        "parameterCode": "param_13331_n",
+        "parameterDetailValue": "3",
+        "parameterValue": "3"
+      },
+      {
+        "parameterName": "额定电流",
+        "parameterCode": "param_13335_n",
+        "parameterDetailValue": "32A",
+        "parameterValue": "32A"
+      },
+      {
+        "parameterName": "额定电压",
+        "parameterCode": "param_13336_n",
+        "parameterDetailValue": "450V",
+        "parameterValue": "450V"
+      },
+      {
+        "parameterName": "线规 - AWG",
+        "parameterCode": "param_13337",
+        "parameterDetailValue": "12~22",
+        "parameterValue": "12~22"
+      },
+      {
+        "parameterName": "线规 - 平方毫米",
+        "parameterCode": "param_13338",
+        "parameterDetailValue": "0.5~4",
+        "parameterValue": "0.5~4"
+      },
+      {
+        "parameterName": "工作温度",
+        "parameterCode": "param_13341_s",
+        "parameterDetailValue": "-40℃~+105℃",
+        "parameterValue": "-40℃~+105℃"
+      },
+      {
+        "parameterName": "颜色",
+        "parameterCode": "param_13409",
+        "parameterDetailValue": "黑色",
+        "parameterValue": "黑色"
+      }
+    ],
+    "datasheet": {
+      "fileName": "ZX-DG10-9.5-NP.pdf",
+      "urlSign": "?Expires=4070880000&OSSAccessKeyId=LTAIJDIkh7KmGS1H&Signature=b3k1F8nwBVGXh9TQpQEfcwYmEjM%3D&response-content-disposition=attachment%3Bfilename%3DC49023060_%25E6%25A0%2585%25E6%25A0%258F%25E5%25BC%258F%25E6%258E%25A5%25E7%25BA%25BF%25E7%25AB%25AF%25E5%25AD%2590_ZX-DG10-9.5-3P_%25E8%25A7%2584%25E6%25A0%25BC%25E4%25B9%25A6_ZX-DG10-9.5-NP.PDF",
+      "fileUrl": "/upload/public/pdf/source/20250530/5474CEAED13188F6AF7A64F449835882.pdf"
+    }
+  }
+]

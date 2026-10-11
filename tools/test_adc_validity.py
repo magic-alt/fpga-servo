@@ -42,6 +42,12 @@ class AdcValidityTests(unittest.TestCase):
         errors, _ = self.mutate(change)
         self.assertTrue(any('R92' in e for e in errors))
 
+    def test_unbudgeted_r92_temperature_coefficient_rejected(self):
+        def change(root):
+            root.find("./components/comp[@ref='R92']/fields/field[@name='TCR']").text = '50ppm/C'
+        errors, _ = self.mutate(change)
+        self.assertTrue(any('R92' in e for e in errors))
+
     def test_low_trip_resistor_substitution_rejected(self):
         def change(root):
             root.find("./components/comp[@ref='R92']/value").text = '3k'

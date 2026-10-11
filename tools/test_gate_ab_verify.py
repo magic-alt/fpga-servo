@@ -29,17 +29,37 @@ class PassiveTests(unittest.TestCase):
             with self.assertRaises(qa.TopologyError):
                 qa.passive(source)
 
-    def test_corner_sweep_is_symmetric_for_real_dividers(self):
-        values = {"R50": 10e3, "R51": 160e3, "R52": 160e3,
-                  "R53": 10e3, "RSH1": .005}
-        out = qa.corner_current_limits(values)
-        self.assertAlmostEqual(out["positive_trip_nominal_A"], 22.0588235294, places=7)
-        self.assertAlmostEqual(out["reference_high_nominal_V"], 4.7058823529, places=7)
-        self.assertAlmostEqual(out["reference_low_nominal_V"], .2941176471, places=7)
-        self.assertAlmostEqual(out["positive_passive_corner_A"][0],
-                               out["negative_abs_passive_corner_A"][0], places=10)
-        self.assertAlmostEqual(out["positive_passive_corner_A"][1],
-                               out["negative_abs_passive_corner_A"][1], places=10)
+    def test_bus_corner_sweep_is_positive_only_and_rail_dependent(self):
+        values = {"R50": 8200., "R53": 2000., "RSH4": .002}
+        out = qa.corner_current_limits(values, rail_range=(5.0, 5.2), nominal_rail=5.1)
+        self.assertAlmostEqual(out["positive_trip_nominal_A"], 25.0)
+        self.assertAlmostEqual(out["reference_nominal_V"], 1.0)
+        self.assertLess(out["positive_passive_corner_A"][0], 25)
+        self.assertGreater(out["positive_passive_corner_A"][1], 25)
+        self.assertFalse(out["reverse_current_protection"])
+        self.assertNotIn("negative_abs_passive_corner_A", out)
+
+    def test_bus_active_temperature_budget_expands_passive_interval(self):
+        values = {"R50": 8200., "R53": 2000., "RSH4": .002}
+        rails = (5.026621229738155, 5.17392252349624)
+        passive = qa.corner_current_limits(values, rail_range=rails)
+        budget = qa.bus_static_error_budget(values, rails)
+        lo, hi = budget["positive_static_engineering_corner_A"]
+        self.assertLess(lo, passive["positive_passive_corner_A"][0])
+        self.assertGreater(hi, passive["positive_passive_corner_A"][1])
+        self.assertFalse(budget["guaranteed_trip_interval"])
+        self.assertEqual(budget["component_temperature_scope_C"], [25, 125])
+        self.assertEqual(budget["nominal_trip_A"], 25)
+
+    def test_phase_filter_deck_has_no_bus_ocp_threshold(self):
+        with tempfile.TemporaryDirectory() as folder:
+            decks = qa.generate_spice({"C1": 100e-6, "C2": 100e-6,
+                                       "R40": 47., "C40": 1e-9}, Path(folder))
+            self.assertIn("phase_current_filter", decks)
+            self.assertNotIn("ocp_filter", decks)
+            text = decks["phase_current_filter"].read_text()
+            self.assertNotIn("R50", text)
+            self.assertNotIn("R51", text)
 
     def test_historical_g50_threshold_cannot_guarantee_adc_min(self):
         maximum_trip = 4.65 * 1.02  # Historical defective supervisor, not current U25.
@@ -47,8 +67,8 @@ class PassiveTests(unittest.TestCase):
         self.assertAlmostEqual(qa.ADC_AVDD_MIN_V-maximum_trip, .007, places=7)
 
     def test_charge_time_is_only_an_illustrative_ratio(self):
-        self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.FD6288_SOURCE_PEAK_A, 48e-9)
-        self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.FD6288_SINK_PEAK_A, 40e-9)
+        self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.DRV8300_SOURCE_PEAK_A, 96e-9)
+        self.assertAlmostEqual(qa.MOSFET_QG_MAX_C/qa.DRV8300_SINK_PEAK_A, 48e-9)
 
 
 class EvidenceIntegrityTests(unittest.TestCase):
@@ -105,6 +125,17 @@ class RealNetlistMutationTests(unittest.TestCase):
         self.assertFalse(out["numerics"]["adc_supply_vs_supervisor"]["transient_gate_off_qualified"])
         self.assertEqual(len(out["source_netlist_sha256"]), 64)
 
+    def test_strict_gates_remain_blocked(self):
+        with tempfile.TemporaryDirectory() as folder:
+            output = Path(folder) / "report.json"
+            result = subprocess.run([sys.executable, qa.__file__, "--netlist", str(self.netlist),
+                                     "--output", str(output), "--strict-gates"],
+                                    capture_output=True, text=True)
+            self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+            report = json.loads(output.read_text())
+            self.assertEqual(report["gate_a"]["status"], "BLOCKED")
+            self.assertEqual(report["gate_b"]["status"], "BLOCKED")
+
     def test_netlist_only_report_does_not_claim_erc_pass(self):
         out = qa.gate_report(self.netlist)
         self.assertFalse(any("ERC" in item for item in out["gate_a"]["passed_checks"]))
@@ -114,7 +145,7 @@ class RealNetlistMutationTests(unittest.TestCase):
                          "Needs ngspice and POSIX true")
     def test_stale_waveforms_cannot_pass_noop_simulator(self):
         values = {ref: qa.passive(self.components[ref]) for ref in (
-            "C1", "C2", "R50", "R51", "R40", "C40")}
+            "C1", "C2", "R40", "C40")}
         with tempfile.TemporaryDirectory() as folder:
             qa.run_spice(values, Path(folder), NGSPICE)
             with self.assertRaises((RuntimeError, OSError)):
@@ -125,13 +156,44 @@ class RealNetlistMutationTests(unittest.TestCase):
         with self.assertRaisesRegex(qa.TopologyError, "U6.33"):
             qa.require_graph(self.components, self.pins)
 
-    def test_bootstrap_diode_reversal_detected(self):
-        self.pins[("D2", "1")] = "/VDRV_12V"
+    def test_obsolete_bootstrap_diode_detected(self):
+        self.components["D2"] = "SS110"
         with self.assertRaises(qa.TopologyError):
             qa.require_graph(self.components, self.pins)
 
     def test_comparator_reference_fault_detected(self):
-        self.pins[("U15", "5")] = "/WRONG"
+        self.pins[("U15", "3")] = "/WRONG"
+        with self.assertRaises(qa.TopologyError):
+            qa.require_graph(self.components, self.pins)
+
+    def test_inverted_driver_variant_rejected(self):
+        self.components["U1"] = "DRV8300DIPWR"
+        with self.assertRaisesRegex(qa.TopologyError, "U1"):
+            qa.require_graph(self.components, self.pins)
+
+    def test_bus_ina_swapped_polarity_rejected(self):
+        self.pins[("U5", "8")], self.pins[("U5", "1")] = (
+            self.pins[("U5", "1")], self.pins[("U5", "8")])
+        with self.assertRaises(qa.TopologyError):
+            qa.require_graph(self.components, self.pins)
+
+    def test_phase_ocp_tap_resurrection_rejected(self):
+        self.pins[("U15", "2")] = self.pins[("R40", "2")]
+        with self.assertRaises(qa.TopologyError):
+            qa.require_graph(self.components, self.pins)
+
+    def test_obsolete_phase_comparator_rejected(self):
+        self.components["U16"] = "LM339LVPWR"
+        with self.assertRaises(qa.TopologyError):
+            qa.require_graph(self.components, self.pins)
+
+    def test_bus_threshold_value_rejected(self):
+        self.components["R50"] = "10k"
+        with self.assertRaises(qa.TopologyError):
+            qa.require_graph(self.components, self.pins)
+
+    def test_onboard_fuse_bypass_rejected(self):
+        self.pins[("J3", "1")] = self.pins[("F1", "2")]
         with self.assertRaises(qa.TopologyError):
             qa.require_graph(self.components, self.pins)
 
@@ -154,7 +216,7 @@ class RealNetlistMutationTests(unittest.TestCase):
     @unittest.skipUnless(shutil.which(NGSPICE), "ngspice CLI not available")
     def test_ngspice_regen_and_ideal_rc_crossing(self):
         vals = {ref: qa.passive(self.components[ref]) for ref in (
-            "C1", "C2", "R50", "R51", "R40", "C40")}
+            "C1", "C2", "R40", "C40")}
         with tempfile.TemporaryDirectory() as folder:
             result = qa.run_spice(vals, Path(folder), NGSPICE)
             self.assertEqual(result["status"], "PASS_ONLY_IDEAL_PASSIVE")

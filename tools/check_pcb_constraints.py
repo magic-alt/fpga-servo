@@ -33,7 +33,7 @@ def check(board: str, project: dict, netlist: str) -> list[str]:
     classes = {x["name"]: x for x in project["net_settings"]["classes"]}
     patterns = project["net_settings"].get("netclass_patterns") or []
     assignments = {x["pattern"]: x["netclass"] for x in patterns}
-    power = {"VIN_RAW", "VIN_FUSED", "RPP_SRC", "VBUS_PROT", "SW_U", "SW_V", "SW_W", "PH_U", "PH_V", "PH_W"}
+    power = {"VIN_RAW", "VIN_FUSED", "RPP_SRC", "VBUS_PROT", "VBUS_BRIDGE", "SW_U", "SW_V", "SW_W", "PH_U", "PH_V", "PH_W"}
     gate = {"VDRV_12V", "BST_U", "BST_V", "BST_W", "GH_U", "GL_U", "GH_V", "GL_V", "GH_W", "GL_W"}
     for net in extract_forms(netlist, "net"):
         name = field(net.text, "name")

@@ -11,14 +11,16 @@ LANDS = {}
 for ref in ("U8", "U9", "U10", "U20", "U26"):
     LANDS[ref] = ("TI_DCU0008A_VSSOP8_P0.5mm", (0.85, 0.30), 1.55, 0.50)
 LANDS["U18"] = ("TI_DDF0008A_SOT23_8_P0.65mm", (1.05, 0.45), 1.30, 0.65)
-for ref in ("U2", "U3", "U4"):
+LANDS["U15"] = ("TI_DDF0008A", (1.05, 0.45), 1.30, 0.65)
+for ref in ("U2", "U3", "U4", "U5"):
     LANDS[ref] = ("TI_D0008A_SOIC8_P1.27mm", (1.55, 0.60), 2.70, 1.27)
 INTERNAL_GAPS = {
     **{f"Q{i}": 0.60 for i in range(1, 9)},
-    **{f"U{i}": 0.65 for i in (2, 3, 4)},
+    **{f"U{i}": 0.65 for i in (2, 3, 4, 5)},
     "U1": 0.25,
     "U6": 0.20,
     "U18": 0.20,
+    "U15": 0.20,
 }
 
 
@@ -77,7 +79,7 @@ def check_internal_pad_rules(text):
     names = [head_string(rule.text, "rule") for rule in rules]
     if set(names) != set(expected) or len(names) != len(expected):
         errors.append(
-            "internal pad rules: expected exactly the reviewed fourteen rules"
+            "internal pad rules: expected exactly the reviewed sixteen rules"
         )
     for rule in rules:
         name = head_string(rule.text, "rule")

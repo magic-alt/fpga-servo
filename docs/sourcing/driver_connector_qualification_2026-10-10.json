@@ -1,0 +1,83 @@
+{
+  "driver": {
+    "decision": "APPROVE_LIMITED_ENERGY_PROTOTYPE_SELECTION_ONLY",
+    "metadata": {
+      "Value": "DRV8300DPWR",
+      "MPN": "DRV8300DPWR",
+      "Manufacturer": "Texas Instruments",
+      "LCSC": "C3036056",
+      "Datasheet": "https://www.ti.com/lit/ds/symlink/drv8300.pdf",
+      "Footprint": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+      "Sourcing_Status": "Stocked limited-energy prototype candidate; full gate-off, slew, UVLO discharge, bootstrap refresh and thermal qualification OPEN"
+    },
+    "changes": [
+      "Remove external bootstrap D2/D3/D4; internal GVDD-to-BST diode path",
+      "CBOOT1..3: 470nF25V X7R; qualified MPN/effective-C evidence required",
+      "RG1..6:33ohm initial empirical tuning; qualified pulse-rated MPN required",
+      "Keep RGS1..6=10kohm; keep six AND gates and OCP latch topology"
+    ],
+    "physical_map": {
+      "1": "INHA",
+      "2": "INHB",
+      "3": "INHC",
+      "4": "INLA",
+      "5": "INLB",
+      "6": "INLC",
+      "7": "GVDD",
+      "8": "GND",
+      "9": "GLC",
+      "10": "GLB",
+      "11": "GLA",
+      "12": "SHC",
+      "13": "GHC",
+      "14": "BSTC",
+      "15": "SHB",
+      "16": "GHB",
+      "17": "BSTB",
+      "18": "SHA",
+      "19": "GHA",
+      "20": "BSTA"
+    },
+    "datasheet_evidence": {
+      "p3": "D=non-inverted; DI=inverted and rejected",
+      "p5": "Pin-compatible functional mapping;>=10uF local GVDD decoupling",
+      "p6_7": "CBOOT<=1uF; above requires diode-current limitation; D slew<=2V/ns; SHx recommended<=85V",
+      "p7_9": "VIH2.0V,VIL0.8V; GVDD UVLO rise4.45..4.7V/fall4.2..4.4V,deglitch5..13us; BSTUV rise3.6..4.8V/fall3.5..4.5V,deglitch6..22us",
+      "p8": "Propagation70..180ns unloaded;fall5..30ns1nF;source0.4..1.2A,sink0.85..2.1A;not full MOSFET-off bound",
+      "p16": "Healthy all0=>all0;GVDDUV=>allHi-Z,automatic recovery;BSTUV=>GHxHi-Z,recovery requires healthyBST and risingINHx",
+      "p19": "Ceff>=Qtotal/deltaV; example59nFminimum,100nFrecommended; include pulldown leakage in our calculation",
+      "p20": "15ohm illustrated for CSD19532Q5B;not ourMOSFET"
+    },
+    "engineering_calculations": {
+      "boot_illustration": "72nC+220uA/20kHz+(12V/10kohm)*50us=143nC;1Vdroop requires>=143nFeffective. Qg72nC applies vendor10V/50V/50A condition,not worst12V application. Require effective-C and maximum high-side on-time/refresh proof.",
+      "gate_illustration": "BSC040N10NS5 Qgdtyp12nC,Vplateautyp4.6V;ignore driver/internalR:33ohm charge54ns/discharge86ns,48V/54ns~0.9V/ns.Typical only;minimumQgd absent,not upper bound."
+    },
+    "open_gates": [
+      "Measured both-edge peak SHx slew<=2V/ns including ringing under voltage/current/temperature corners",
+      "Complete OCP sense-to-VGSoff and SOA under33ohm discharge",
+      "GVDD/BSTdroop Hi-Z discharge and recovery; no internal thermal shutdown",
+      "Effective bootstrap capacitance, startup precharge, maximum on-time and refresh",
+      "Switching loss,temperature,100V MOSFET margin and mechanical footprint QA"
+    ],
+    "thermal_source": "https://e2e.ti.com/support/motor-drivers-group/motor-drivers/f/motor-drivers-forum/1009233/drv8300-thermal-protection",
+    "slew_source": "https://e2e.ti.com/support/motor-drivers-group/motor-drivers/f/motor-drivers-forum/1021446/drv8300-slew-rate-on-shx-pins-on-drv8300d",
+    "gate_tuning_source": "https://e2e.ti.com/support/motor-drivers-group/motor-drivers/f/motor-drivers-forum/1588375/drv8300-drv8300d-application-question",
+    "mosfet_source": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsc040n10ns5-datasheet-en.pdf"
+  },
+  "J4": {
+    "primary": "KEFA KF950-9.5-3P C475107",
+    "primary_oem": "https://www.cnkefa.com/products/7736.html",
+    "primary_land": "3pins9.50pitch;Ø1.80+0.10/-0holes;body28.50x12.60;height21.45;row5.50frombodyedge;pin1.30x0.80,insertion4.80±0.30;M3/0.5Nm",
+    "primary_rating": "IEC32A4mm2;UL30AgroupB/10AgroupD;temperature-40..105C",
+    "alternate": "Megastar ZX-DG10-9.5-3P C49023060",
+    "alternate_datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250530/5474CEAED13188F6AF7A64F449835882.pdf",
+    "alternate_land": "3pins9.50pitch;Ø2.10holes;body30.40x16.30;height18.40;rowcentered8.15;pin1.50±0.05x0.80±0.05,insertion5.20±0.30;M4/1.2Nm",
+    "alternate_rating": "IEC32A450V;UL25A300V;0.5..4mm2;temperature-40..105C",
+    "decision": "Two real electrical candidates;different footprints,envelopes,torques.No same-land dropin claim;mechanical/pull/thermal/cable qualification OPEN.",
+    "stock_evidence": "/private/tmp/driver_connector_review_stock.json",
+    "renders": [
+      "/private/tmp/kefa-connector.png",
+      "/private/tmp/megastar_j4.png"
+    ]
+  }
+}

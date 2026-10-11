@@ -1,0 +1,1123 @@
+{
+  "C1": {
+    "Manufacturer": "NCC(日本贵弥功)",
+    "MPN": "EKZN101ELL101MJ20S",
+    "LCSC": "C337258",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "100ZLH100MEFC10X20",
+    "Alternative_LCSC": "C330940",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C2": {
+    "Manufacturer": "NCC(日本贵弥功)",
+    "MPN": "EKZN101ELL101MJ20S",
+    "LCSC": "C337258",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "100ZLH100MEFC10X20",
+    "Alternative_LCSC": "C330940",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C5": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B103K101NT",
+    "LCSC": "C43253",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B103KB8NNNC",
+    "Alternative_LCSC": "C1589",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C18": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0805B224K500NT",
+    "LCSC": "C163697",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL21B224KBFNNNE",
+    "Alternative_LCSC": "C5378",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C19": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0805B104K101NT",
+    "LCSC": "C89258",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C20": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "1210B225K101NT",
+    "LCSC": "C42400139",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "GCJ32DR72A225KA01L",
+    "Alternative_LCSC": "C388903",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C21": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "1210B225K101NT",
+    "LCSC": "C42400139",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "GCJ32DR72A225KA01L",
+    "Alternative_LCSC": "C388903",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C22": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "1210B226K250NT",
+    "LCSC": "C5204920",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CS3225X7R226K250NRL",
+    "Alternative_LCSC": "C2918511",
+    "Alternative_Status": "BLOCKED_EXACT_OEM_SHEET_MISMATCH"
+  },
+  "C23": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "1210B226K250NT",
+    "LCSC": "C5204920",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CS3225X7R226K250NRL",
+    "Alternative_LCSC": "C2918511",
+    "Alternative_Status": "BLOCKED_EXACT_OEM_SHEET_MISMATCH"
+  },
+  "C24": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B222J500NT",
+    "LCSC": "C60328",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B222KB8NNNC",
+    "Alternative_LCSC": "C16033",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C25": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B332J500NT",
+    "LCSC": "C20616243",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C26": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603CG560J500NT",
+    "LCSC": "C1676",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C30": {
+    "Manufacturer": "Chinocera(华瓷)",
+    "MPN": "HGC0805R7106K250NSLJ",
+    "LCSC": "C33546010",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "FCC0805B106K250FT",
+    "Alternative_LCSC": "C54619707",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C60": {
+    "Manufacturer": "Chinocera(华瓷)",
+    "MPN": "HGC0805R7106K250NSLJ",
+    "LCSC": "C33546010",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "FCC0805B106K250FT",
+    "Alternative_LCSC": "C54619707",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C61": {
+    "Manufacturer": "Chinocera(华瓷)",
+    "MPN": "HGC0805R7106K250NSLJ",
+    "LCSC": "C33546010",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "FCC0805B106K250FT",
+    "Alternative_LCSC": "C54619707",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C31": {
+    "Manufacturer": "HRE(芯声)",
+    "MPN": "CGA0805X7R226M100MT",
+    "LCSC": "C23692981",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20240628/CF49925013D2B6594E99B01DE9E3F720.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "GRM21BZ71A226ME15L",
+    "Alternative_LCSC": "C907991",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C40": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603CG102J101NT",
+    "LCSC": "C88489",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10C102JB8NNNC",
+    "Alternative_LCSC": "C163508",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C41": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603CG102J101NT",
+    "LCSC": "C88489",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10C102JB8NNNC",
+    "Alternative_LCSC": "C163508",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C42": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603CG102J101NT",
+    "LCSC": "C88489",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10C102JB8NNNC",
+    "Alternative_LCSC": "C163508",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C92": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603CG102J101NT",
+    "LCSC": "C88489",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10C102JB8NNNC",
+    "Alternative_LCSC": "C163508",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C43": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C44": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C45": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C46": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C70": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C80": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C81": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C82": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C83": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C84": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C85": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C86": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C87": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C88": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C89": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C90": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C91": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C93": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B104K500NT",
+    "LCSC": "C30926",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL10B104KB8NNNC",
+    "Alternative_LCSC": "C1591",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C62": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C63": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C64": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C65": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C66": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C67": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C68": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0603B105K250NT",
+    "LCSC": "C59302",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "C69": {
+    "Manufacturer": "HRE(芯声)",
+    "MPN": "CGA1206X7R106K250NT",
+    "LCSC": "C6119987",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250915/7997FE7A91CE9142B98B1A231623FA45.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CC1206KKX7R8BB106",
+    "Alternative_LCSC": "C70462",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "C71": {
+    "Manufacturer": "HRE(芯声)",
+    "MPN": "CGA0805X7R475K250MT",
+    "LCSC": "C6119942",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260717/7FA3951AEFD121FDE352DC2C40859DA4.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL21B475KOFNNNE",
+    "Alternative_LCSC": "C107365",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "CBOOT1": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0805B105K250NT",
+    "LCSC": "C89190",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL21B105KAFNNNE",
+    "Alternative_LCSC": "C116352",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "CBOOT2": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0805B105K250NT",
+    "LCSC": "C89190",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL21B105KAFNNNE",
+    "Alternative_LCSC": "C116352",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "CBOOT3": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "0805B105K250NT",
+    "LCSC": "C89190",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CL21B105KAFNNNE",
+    "Alternative_LCSC": "C116352",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R1": {
+    "Manufacturer": "RESI(开步睿思)",
+    "MPN": "PTFR0805B280KP9",
+    "LCSC": "C2849140",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "RT0805BRD07280KL",
+    "Alternative_LCSC": "C865351",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R2": {
+    "Manufacturer": "RESI(开步睿思)",
+    "MPN": "PTFR0805B280KP9",
+    "LCSC": "C2849140",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "RT0805BRD07280KL",
+    "Alternative_LCSC": "C865351",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R3": {
+    "Manufacturer": "UNI-ROYAL(厚声)",
+    "MPN": "TC0325B3902T5F",
+    "LCSC": "C2988897",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250704/E55D4B940A787305EBFEE524BD083243.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "RT0603BRD0739KL",
+    "Alternative_LCSC": "C309652",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R20": {
+    "Manufacturer": "UNI-ROYAL(厚声)",
+    "MPN": "0603WAF1003T5E",
+    "LCSC": "C25803",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "RS-03K1003FT",
+    "Alternative_LCSC": "C115320",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R56": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R57": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R58": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R59": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R60": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R61": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R89": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K1003FT",
+    "LCSC": "C115320",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1003T5E",
+    "Alternative_LCSC": "C25803",
+    "Alternative_Status": "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+  },
+  "R21": {
+    "Manufacturer": "YAGEO(国巨)",
+    "MPN": "RC0603FR-07453KL",
+    "LCSC": "C273765",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "R23": {
+    "Manufacturer": "YAGEO(国巨)",
+    "MPN": "RC0603FR-07453KL",
+    "LCSC": "C273765",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "R22": {
+    "Manufacturer": "UNI-ROYAL(厚声)",
+    "MPN": "0603WAF4992T5E",
+    "LCSC": "C23184",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "RT0603BRD0749K9L",
+    "Alternative_LCSC": "C705780",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R40": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K47R0FT",
+    "LCSC": "C140087",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF470JT5E",
+    "Alternative_LCSC": "C23182",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R41": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K47R0FT",
+    "LCSC": "C140087",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF470JT5E",
+    "Alternative_LCSC": "C23182",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R42": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K47R0FT",
+    "LCSC": "C140087",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF470JT5E",
+    "Alternative_LCSC": "C23182",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R50": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "TD03G1002BT",
+    "LCSC": "C667034",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "PTFR0603B10K0P9",
+    "Alternative_LCSC": "C328421",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R53": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "TD03G1002BT",
+    "LCSC": "C667034",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "PTFR0603B10K0P9",
+    "Alternative_LCSC": "C328421",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R70": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "TD03G1002BT",
+    "LCSC": "C667034",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "PTFR0603B10K0P9",
+    "Alternative_LCSC": "C328421",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R71": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "TD03G1002BT",
+    "LCSC": "C667034",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "PTFR0603B10K0P9",
+    "Alternative_LCSC": "C328421",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R51": {
+    "Manufacturer": "PANASONIC(松下)",
+    "MPN": "ERA3AEB164V",
+    "LCSC": "C473259",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200515/C543414_D3FB4A44C151AC19BA141503575FC797.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "R52": {
+    "Manufacturer": "PANASONIC(松下)",
+    "MPN": "ERA3AEB164V",
+    "LCSC": "C473259",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200515/C543414_D3FB4A44C151AC19BA141503575FC797.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "R54": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "RS-03K4701FT",
+    "LCSC": "C116693",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF4701T5E",
+    "Alternative_LCSC": "C23162",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R55": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R80": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R81": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R82": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R83": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R84": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R85": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R86": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R87": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R90": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R91": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "RGS1": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "RGS2": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "RGS3": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "RGS4": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "RGS5": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "RGS6": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1002FT",
+    "LCSC": "C5139509",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "0603WAF1002T5E",
+    "Alternative_LCSC": "C25804",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R88": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "ABD03K1001FT",
+    "LCSC": "C5125843",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "CRCW06031K00FKEA",
+    "Alternative_LCSC": "C844920",
+    "Alternative_Status": "CANDIDATE_OEM_REVIEW_PENDING"
+  },
+  "R92": {
+    "Manufacturer": "FH(风华)",
+    "MPN": "TD03G3241BT",
+    "LCSC": "C666977",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "RT0603BRB073K24L",
+    "Alternative_LCSC": "C860367",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R93": {
+    "Manufacturer": "RESI(开步睿思)",
+    "MPN": "PTFR0603Q1K00N9",
+    "LCSC": "C23067434",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified",
+    "Alternative_MPN": "ERA-3ARW102V",
+    "Alternative_LCSC": "C2073443",
+    "Alternative_Status": "READY_FOR_PROTOTYPE"
+  },
+  "R94": {
+    "Manufacturer": "RESI(开步睿思)",
+    "MPN": "PTFR0603Q75K0N9",
+    "LCSC": "C53280140",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "R95": {
+    "Manufacturer": "RESI(开步睿思)",
+    "MPN": "PTFR0603Q10K0N9",
+    "LCSC": "C51822132",
+    "Datasheet": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+    "Sourcing_Status": "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+  },
+  "U2": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "INA240A1DR",
+    "LCSC": "C2060769",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+  },
+  "U3": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "INA240A1DR",
+    "LCSC": "C2060769",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+  },
+  "U4": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "INA240A1DR",
+    "LCSC": "C2060769",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+  },
+  "U6": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "ADS8588SIPM",
+    "LCSC": "C1543171",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/ads8588s.pdf"
+  },
+  "U7": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "AM26LV32EIPWR",
+    "LCSC": "C404024",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/am26lv32e.pdf"
+  },
+  "U8": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC2G08DCUR",
+    "LCSC": "C91875",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc2g08.pdf"
+  },
+  "U9": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC2G08DCUR",
+    "LCSC": "C91875",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc2g08.pdf"
+  },
+  "U10": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC2G08DCUR",
+    "LCSC": "C91875",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc2g08.pdf"
+  },
+  "U11": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC1G11DCKR",
+    "LCSC": "C529281",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g11.pdf"
+  },
+  "U23": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC1G11DCKR",
+    "LCSC": "C529281",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g11.pdf"
+  },
+  "U12": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "LM5164DDAR",
+    "LCSC": "C477928",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/lm5164.pdf"
+  },
+  "U13": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "TPS62901RPJR",
+    "LCSC": "C2864847",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/tps62901.pdf"
+  },
+  "U15": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "LM339LVPWR",
+    "LCSC": "C3658338",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/lm339lv.pdf"
+  },
+  "U16": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "LM339LVPWR",
+    "LCSC": "C3658338",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/lm339lv.pdf"
+  },
+  "U18": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "LM74502DDFR",
+    "LCSC": "C3236215",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/lm74502.pdf"
+  },
+  "U19": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "TPD6E05U06RVZR",
+    "LCSC": "C962978",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/tpd6e05u06.pdf"
+  },
+  "U20": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC1G74DCUR",
+    "LCSC": "C70285",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf"
+  },
+  "U21": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC1G17DBVR",
+    "LCSC": "C7836",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf"
+  },
+  "U22": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC1G14DBVR",
+    "LCSC": "C7835",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf"
+  },
+  "U24": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "TPS3808G33DBVR",
+    "LCSC": "C43698",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/tps3808.pdf"
+  },
+  "U25": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "TPS389001DSER",
+    "LCSC": "C1509297",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/tps3890.pdf"
+  },
+  "U26": {
+    "Manufacturer": "TI(德州仪器)",
+    "MPN": "SN74LVC3G17DCUR",
+    "LCSC": "C68245",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74lvc3g17.pdf"
+  },
+  "Q1": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q2": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q3": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q4": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q5": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q6": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q7": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "Q8": {
+    "Manufacturer": "Infineon(英飞凌)",
+    "MPN": "BSC040N10NS5",
+    "LCSC": "C534334",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+  },
+  "J3": {
+    "Manufacturer": "Phoenix Contact(菲尼克斯)",
+    "MPN": "1714971",
+    "LCSC": "C92145",
+    "Sourcing_Status": "Existing critical part retained; single-source exception; stock checked 2026-10-10",
+    "Datasheet": "https://www.phoenixcontact.com/en-us/products/1714971"
+  }
+}

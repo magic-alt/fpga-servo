@@ -1,0 +1,26 @@
+{
+  "status": "PASS_STATIC_ONLY",
+  "errors": [],
+  "calculations": {
+    "resistor_fractional_bounds": {
+      "R92": 0.00702,
+      "R93_R94_R95": 0.0025
+    },
+    "drift_scope": "Prototype budget based on separate qualification tests/allocations; combined aging/environment and dynamic shutdown remain unqualified.",
+    "falling_threshold_V": [
+      4.791889042759301,
+      4.961002299743158
+    ],
+    "rising_threshold_max_V": 5.001930568716039,
+    "regulated_static_V": [
+      5.026621229738155,
+      5.17392252349624
+    ],
+    "normal_negative_ripple_budget_V": 0.01,
+    "adc_min_V": 4.75,
+    "adc_max_V": 5.25,
+    "static_shutdown_headroom_V": 0.041889042759301276,
+    "transient_gate_off_qualified": false,
+    "delay_note": "18us TPS3890 typical at 5% overdrive is NOT a guaranteed maximum; rapid droop and full-chain delay remain open."
+  }
+}

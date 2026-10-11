@@ -1,0 +1,6 @@
+DESIGN CHECK FAILED
+ - U15: expected manufacturer land-pattern identifier
+ - U15: expected physical pads 1..8 exactly once
+ - U5: missing footprint
+ - All four two-terminal SMD shunts required
+ - internal pad rules: expected exactly the reviewed sixteen rules
