@@ -3,6 +3,8 @@
 **Current delivery scope (user revision, 2026-10-10): BOM and schematic only. PCB/layout repair is deferred. The working PCB retains earlier development edits and is not synchronized to the final bus-OCP schematic; the isolated unfinished routing candidate is not adopted. Do not use this board for fabrication or reuse historical zero-DRC/parity claims for the current schematic.**
 
 
+**2026-10-11 design-for-manufacture review:** [Rev.A-P simplified design, cost and ECO plan](../docs/rev_a_simplified_design_production_review_2026-10-11.md) and [68-group BOM cost matrix](reva_cost_eco_2026-10-11.csv) establish the current review priorities. This assessment does **not** change the KiCad electrical nets, make the unsynchronized PCB fabricable or lift the dynamic Gate A/B hold.
+
 ## Files
 
 - `ax7010_servo_reva.kicad_sch` - KiCad 10-native top-level schematic
