@@ -5080,7 +5080,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "10k_B3950_MOTOR"
+		(property "Description" "10k_B3950_BOARD_AUX"
 			(at 55.88 190.5 0)
 			(show_name no)
 			(do_not_autoplace no)
