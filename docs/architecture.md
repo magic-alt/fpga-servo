@@ -54,9 +54,11 @@ The latest user instruction removes the brake circuit from scope (2026-10-10). N
    - CH1/2/3: IU/IV/IW
    - CH4: VBUS
    - CH5: MOSFET-board NTC
-   - CH6: board-mounted NTC2 (legacy net name NTC_MOTOR); no external motor sensor interface exists. S12 remains OPEN until the required sensing location/interface is confirmed.
+   - CH6: board-mounted NTC2 (actual net NTC_BOARD_AUX); no external motor sensor interface exists. S12 remains OPEN until the required sensing location/interface is confirmed.
    - CH7/8: unused, currently tied to GND
    - serial interface uses two DOUT lines; J2 is removed; only J1 connects the active AX7010 J10 signals
+   - ADS8588S takes eight simultaneously sampled 16-bit channels but emits two serial data lanes (CH1-4 DOUTA, CH5-8 DOUTB), 64 SCLK cycles/frame; initial HDL goal 10 MHz, SCLK max 20 MHz; CONVST/BUSY/frame sequencing and the approximately 16 kHz internal analog LPF at ±5V require separate time-domain and loop-phase validation
+   - unpopulated J11/PL_B parallel-mode XDC entries are comments only, not fitted signals; see [current ADC/FPGA contract](adc_fpga_timing_and_freeze_2026-10-12.md)
    - serial-mode DB0..6, DB9..13 and DB14/HBEN now visibly grounded; U6 uses the dedicated ADS8588S_SERIAL symbol
 
 5. **Encoder**
