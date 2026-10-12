@@ -5,6 +5,8 @@
 
 **2026-10-11 design-for-manufacture review:** [Rev.A-P simplified design, cost and ECO plan](../docs/rev_a_simplified_design_production_review_2026-10-11.md) and [68-group BOM cost matrix](reva_cost_eco_2026-10-11.csv) establish the current review priorities. This assessment does **not** change the KiCad electrical nets, make the unsynchronized PCB fabricable or lift the dynamic Gate A/B hold.
 
+**2026-10-12 schematic correctness update:** `current_adc.kicad_sch` now uses `NTC_BOARD_AUX` (instead of the misleading `NTC_MOTOR`) and annotates the ADS8588S dual-DOUT interface; C3 250 V rating and L1 qualification metadata are corrected in KiCad/BOM; inactive J11 parallel FPGA XDC constraints are commented. These are source/metadata/interface changes, **not a claim of fresh native KiCad ERC, PCB parity or 48 V qualification**. See [ADC timing contract](../docs/adc_fpga_timing_and_freeze_2026-10-12.md), [project selection freeze matrix](../docs/reva_schematic_component_freeze_matrix_2026-10-12.md) and `python tools/check_adc_serial_contract.py`.
+
 ## Files
 
 - `ax7010_servo_reva.kicad_sch` - KiCad 10-native top-level schematic
