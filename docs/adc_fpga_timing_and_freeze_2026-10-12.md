@@ -5,6 +5,8 @@
 - 硬件目标：24–48V单轴PMSM/BLDC、20kHz PWM、3路相线电流同时采样
 - **状态：ADS8588S接口架构和使用策略可冻结（DESIGN DECISION）；真实ADC与FPGA联合时序、驱动波形和PCB仍未通过实板/STA资格（NOT FOR FABRICATION）。**
 
+> **历史硬件ADC时序合同，当前U6=ADS8588SIPM依然适用，但不是高速电流环新版的目标ADC。** 2026-10-12用户将设计目标提升为3–5kHz及更高电流环，性能版首选[AD7606C-16BSTZ 4lane新方案](adc_high_performance_reselection_2026-10-12.md)。只有经KiCad电气工程/PCB/FPGA实测迁移后，才能停止旧ADS8588S的ERC和接口回归；现阶段保留双配置证据且不将未来配置误写成现有接线。
+
 ## 1. 结论：同时采样≠全通道并行数据输出
 
 TI [ADS8588S SBAS642A数据表](https://www.ti.com/lit/ds/symlink/ads8588s.pdf)：
