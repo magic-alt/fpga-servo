@@ -90,6 +90,13 @@ def check(root: Path = ROOT) -> list[str]:
     if bom.get("L1", {}).get("Function") != "68uH_12V_BUCK_L1_IRMS_ISAT_OPEN":
         errors.append("L1 qualification state must remain explicit until Irms/Isat sign-off")
 
+    # Vivado indexed buses use [get_ports {ADC_DB[0]}], not a scalar.
+    # Reject accidental live J11 constraints in both syntaxes.
+    for raw_line in xdc.splitlines():
+        line = raw_line.strip()
+        if line.startswith("set_property") and "[get_ports {ADC_DB[" in line:
+            errors.append("unfitted J11/PL_B parallel ADC_DB bus pin constraint")
+
     pins = get_pin_lines(xdc)
     for name, expected_pin in FPGA_PINS.items():
         actual = pins.get(name, [])
