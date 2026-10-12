@@ -117,6 +117,12 @@
 5. **FPGA RTL**：独立ADC驱动状态机、初始化寄存器读回、BUSY超时、采样触发调度、4个并行16bit移位器/帧对齐、固定时间戳/有效标记和CRC/模式回归；记录Vivado STA实际 SCLK IO delay和J10端波形，不得依赖不存在的J11。
 6. **资格分层**：新鲜KiCad全严重度ERC0、物理脚/节点网表检查、真实PCB全部端点一致且DRC0/未连接0/DFM通过；逻辑/有源电路仿真与实际硬件低能量PWM噪声、ADC线性/频响、FPGA 20MHz/40MHz校验；维持独立硬件OCP及VA5动态关断门禁BLOCKED直到实测。
 
+### PR #16 新鲜源检查（不等于目标器件已应用）
+
+[GitHub hardware-sanity #38211317168](https://github.com/magic-alt/fpga-servo/actions/runs/38211317168) 证实新增候选规格脚本**PASS**，其7项含错误注入回归全部PASS；旧ADS8588S源检查6项亦PASS。正式`check_design.py`仍FAIL，原因是本来就没有与当前BOM/母线OCP相同的PCB，不是ADC候选规格脚本的通过就能解除的PCB门禁。
+
+[GitHub kicad-erc #38211317075](https://github.com/magic-alt/fpga-servo/actions/runs/38211317075) 在本次提交的**旧ADS8588S原理图**上运行原生KiCad10得到**ERC 0 errors / 0 warnings / 0 violations**，并导出158板载器件/135网络网表；`check_pcb_parity.py`依旧FAIL（166 footprints旧板），因此整项工作流为失败状态。**不能把这个ERC0当作AD7606C新原理图ERC已通过。** 原硬件保护Gate A/B、L1及PCB制造资格保持BLOCKED；独立[迁移Issue #19](https://github.com/magic-alt/fpga-servo/issues/19)负责后续真实ECO。
+
 ## 8. 最终状态与设计决定
 
 **Performance ADC SELECTED = AD7606C-16BSTZ / 4lane / unipolar 0–5V three current + 0–10V housekeeping / no oversampling / high bandwidth CH1..4。**
