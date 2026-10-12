@@ -4,6 +4,8 @@
 
 This board is a lab/engineering servo-drive daughter board for the ALINX AX7010. It deliberately keeps the hard real-time PWM, ADC timing and encoder counting in the Zynq PL while leaving high-power switching, signal conditioning and encoder line reception on the daughter board.
 
+> **2026-10-12高速ADC设计决策已更新（待ECO，尚未应用）**：当前源原理图继续以ADS8588SIPM为实际硬件，但面向FPGA 3–5kHz电流环目标，下一高速版首选[AD7606C-16BSTZ四路DOUT方案](adc_high_performance_reselection_2026-10-12.md)。下方ADC=8ch/200kSPS的数据仍描述**现有KiCad**，不应作为新芯片交付规格。新芯片还需要真实J10三根新增信号及原理图/PCB/FPGA电路改版，F1/F2冻结不因选型报告而通过。
+
 ## Electrical target
 
 | Item | Rev.A target |
