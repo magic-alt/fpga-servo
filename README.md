@@ -4,6 +4,10 @@ FPGA-based single-axis PMSM/BLDC servo-drive daughterboard for the ALINX AX7010 
 
 > **Design / manufacturing hold — 2026-10-11.** The latest `main` incorporates [PR #15](https://github.com/magic-alt/fpga-servo/pull/15), which changed the **schematic, BOM and part selection only**. The working PCB was deliberately not synchronized with the final positive bus-OCP circuit (U5/RSH4/U15). The zero-DRC result from an older PCB revision is **not** valid for the current schematic. There is no fabrication release, no certified OCP fault-off delay, and no approval for full-power operation.
 
+## 高速电流环 ADC 重新选型（2026-10-12）
+
+**新性能目标首选ADI AD7606C-16BSTZ（LCSC C5371769）**，8通道16位同时采样/1MSPS、0–5V高速模式典型1.7µs相位延迟，建议使用J10的四路DOUT并行串行读取（20MHz下32clk=1.6µs）；要新增J10针脚29、30、31的DOUTC、DOUTD及SDI。此选择面向未来3–5kHz及更高电流环，不等于当前硬件已更换：**现有KiCad U6及BOM仍是ADS8588SIPM，FPGA原XDC尚没有新增三根真实网线**；应在新KiCad与PCB同步ECO中进行替换。详见[高速ADC选型与迁移规格](docs/adc_high_performance_reselection_2026-10-12.md)、[6种真实器件候选及报价币种](hardware/adc_fast_candidates_2026-10-12.csv)和[可验证的FPGA寄存器/IO分配草案](fpga/ad7606c_fast_candidate_profile_2026-10-12.json)。
+
 ## Rev.A-P prototype design basis
 
 | Item | Current design (not yet qualified) |
