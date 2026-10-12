@@ -54,12 +54,31 @@ jobs:
           python tools/check_schematic_connectivity.py
           python tools/check_schematic_layout.py
           python tools/check_power_wiring.py
+          python tools/check_adc_serial_contract.py
+          python tools/test_adc_serial_contract.py -v
+          python tools/check_ad7606c_fast_profile.py
+          python tools/test_ad7606c_fast_profile.py -v
 
           test "$(find hardware -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 8
           test -s hardware/ax7010_servo_reva.kicad_sym
           test -z "$(find hardware -maxdepth 1 -name '*.sch' -type f -print -quit)"
           test -z "$(find hardware -maxdepth 1 -name '*.lib' -type f -print -quit)"
           test -s hardware/sym-lib-table
+
+      - name: Run KiCad 10 ERC on tracked native hierarchy
+        run: |
+          mkdir -p artifacts
+          set +e
+          cd hardware
+          kicad-cli sch erc \
+            --exit-code-violations \
+            --severity-all \
+            --output ../artifacts/ax7010_servo_reva_erc.rpt \
+            ax7010_servo_reva.kicad_sch
+          rc=$?
+          set -e
+          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
+          exit "$rc"
 
       - name: Export native KiCad netlist
         run: |
@@ -78,21 +97,6 @@ jobs:
           python3 ../tools/test_adc_validity.py --netlist ../artifacts/adc_validity.xml -v
           python3 ../tools/check_pcb_parity.py ../artifacts/ax7010_servo_reva.net --output ../artifacts/pcb_parity.json
           python3 ../tools/check_pcb_constraints.py ../artifacts/ax7010_servo_reva.net
-
-      - name: Run KiCad 10 ERC on tracked native hierarchy
-        run: |
-          mkdir -p artifacts
-          set +e
-          cd hardware
-          kicad-cli sch erc \
-            --exit-code-violations \
-            --severity-all \
-            --output ../artifacts/ax7010_servo_reva_erc.rpt \
-            ax7010_servo_reva.kicad_sch
-          rc=$?
-          set -e
-          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
-          exit "$rc"
 
       - name: Upload ERC evidence
         if: always()

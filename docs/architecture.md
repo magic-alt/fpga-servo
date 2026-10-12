@@ -4,6 +4,8 @@
 
 This board is a lab/engineering servo-drive daughter board for the ALINX AX7010. It deliberately keeps the hard real-time PWM, ADC timing and encoder counting in the Zynq PL while leaving high-power switching, signal conditioning and encoder line reception on the daughter board.
 
+> **2026-10-12高速ADC设计决策已更新（待ECO，尚未应用）**：当前源原理图继续以ADS8588SIPM为实际硬件，但面向FPGA 3–5kHz电流环目标，下一高速版首选[AD7606C-16BSTZ四路DOUT方案](adc_high_performance_reselection_2026-10-12.md)。下方ADC=8ch/200kSPS的数据仍描述**现有KiCad**，不应作为新芯片交付规格。新芯片还需要真实J10三根新增信号及原理图/PCB/FPGA电路改版，F1/F2冻结不因选型报告而通过。
+
 ## Electrical target
 
 | Item | Rev.A target |
@@ -54,9 +56,11 @@ The latest user instruction removes the brake circuit from scope (2026-10-10). N
    - CH1/2/3: IU/IV/IW
    - CH4: VBUS
    - CH5: MOSFET-board NTC
-   - CH6: board-mounted NTC2 (legacy net name NTC_MOTOR); no external motor sensor interface exists. S12 remains OPEN until the required sensing location/interface is confirmed.
+   - CH6: board-mounted NTC2 (actual net NTC_BOARD_AUX); no external motor sensor interface exists. S12 remains OPEN until the required sensing location/interface is confirmed.
    - CH7/8: unused, currently tied to GND
    - serial interface uses two DOUT lines; J2 is removed; only J1 connects the active AX7010 J10 signals
+   - ADS8588S takes eight simultaneously sampled 16-bit channels but emits two serial data lanes (CH1-4 DOUTA, CH5-8 DOUTB), 64 SCLK cycles/frame; initial HDL goal 10 MHz, SCLK max 20 MHz; CONVST/BUSY/frame sequencing and the approximately 16 kHz internal analog LPF at ±5V require separate time-domain and loop-phase validation
+   - unpopulated J11/PL_B parallel-mode XDC entries are comments only, not fitted signals; see [current ADC/FPGA contract](adc_fpga_timing_and_freeze_2026-10-12.md)
    - serial-mode DB0..6, DB9..13 and DB14/HBEN now visibly grounded; U6 uses the dedicated ADS8588S_SERIAL symbol
 
 5. **Encoder**

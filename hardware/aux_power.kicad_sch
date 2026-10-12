@@ -1845,7 +1845,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "68uH_MSS1246T-683MLC"
+		(property "Description" "68uH_LM5164_L1_QUALIFICATION_OPEN"
 			(at 140.97 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
