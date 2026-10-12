@@ -18,6 +18,8 @@ jobs:
       - run: python tools/check_power_wiring.py
       - run: python tools/check_adc_serial_contract.py
       - run: python tools/test_adc_serial_contract.py -v
+      - run: python tools/check_ad7606c_fast_profile.py
+      - run: python tools/test_ad7606c_fast_profile.py -v
       - run: python tools/check_design.py
       - run: python tools/test_pcb_checks.py
       - run: python tools/test_vendor_lands.py
