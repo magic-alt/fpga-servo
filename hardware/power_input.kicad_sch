@@ -3151,7 +3151,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "1uF_100V_FILM"
+		(property "Description" "1uF_250V_FILM"
 			(at 200.66 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
