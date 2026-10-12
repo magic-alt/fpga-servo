@@ -37,6 +37,24 @@ Rev.A明确**保留**第三路相电流、ADS8588S（不更换成4ch导致额外
 
 L1关闭条件：厂家原厂签章规格文件及型号/封装/推荐焊盘、具体采购渠道库存快照与不少于5板数量、额定电流/温升/饱和定义、LM5164最差电流限值和最小频率的电感峰值预算、满载/过载/开关动态及PCB 2oz工艺验收。**没有这些证据，不通过MPN冻结。**
 
+## C2. 最新TI限制：68µH的1A端到端电流裕量尚不能保证
+
+TI LM5164新版原厂规格：[2026-02 Rev.D PDF](https://www.ti.com/lit/ds/symlink/lm5164.pdf) 第6页给出**最小峰值限流1.25A、典型1.5A、最大1.75A**；其12V/1A典型应用第17页用68µH Coilcraft参考电感，**不能将该典型示例等价成48V、全温、全容差、所有批次的1A保证**。另见[TI应用工程师的电感建议](https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum/1568691/lm5164-lm5164ddar-schematics-review)：当1A载流和高输入电压接近限流角点，建议考虑约120µH并评估反馈纹波和电容有效容量。
+
+理想连续导通CCM初步模型（未含频率漂移、DCR、器件电感随电流下降、峰值限流检测延迟）：
+
+```
+Vin = 48 V, Vout = 12 V, fsw = 300 kHz illustrative
+ΔIL_pp = Vout*(1-Vout/Vin)/(L*fsw)
+68µH min -20% = 54.4µH → ΔIL_pp ≈ 0.551A
+@12V/0.5A → Ipeak ≈ 0.776A，距离1.25A静态门限约0.474A
+@12V/1.0A → Ipeak ≈ 1.276A，超过1.25A静态门限约0.026A
+120µH min -20% = 96µH → ΔIL_pp ≈ 0.313A
+@12V/1.0A → Ipeak ≈ 1.156A，距离最小门限仅约0.094A
+```
+
+**工程裁决**：Rev.A真实12V总峰/连续负载若可证明≤0.5A，继续68µH + 具备原厂Irms/Isat的候选电感即可；若定义必须**保证**1A，重新核算最小/最大开关频率、限流全温及负载动态并优先评审≥120µH电感，不能只换“68µH大电流牌子”。具体120µH库存及电气候选包括[PROD Tech PSPHAQ127-121M，C2983074](https://www.lcsc.com/product-detail/power-inductors_prod-tech-psphaq127-121m_C2983074.html)（120µH、2A、Isat2A、DCR250mΩ）及[Bourns SRR1210-121M，C2045692](https://www.lcsc.com/product-detail/C2045692.html)（120µH、Irms2.3A、Isat1.9A、DCR170mΩ）；两者**都不自动满足芯片限流设计、PCB焊盘、损耗和采购预算**，只列待询价。无外部负载及磁件/PCB资格前，F1原理图冻结**必须维持BLOCKED**。
+
 ## D. 原理图KiCad实际修改及净表影响
 
 - `hardware/current_adc.kicad_sch`：两处真实`(label "NTC_MOTOR")`统一为`(label "NTC_BOARD_AUX")`，NTC2的Description同时更正；8通道ADS8588S双串行信息写入页标题栏注释。**同一节点标签改名，网络连接物理拓扑未被故意改变；但网名发生变化，PCB须后续同步**。
