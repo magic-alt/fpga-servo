@@ -74,6 +74,16 @@ Vin = 48 V, Vout = 12 V, fsw = 300 kHz illustrative
 | F3 功率与时序样机资格 | OCP sense→6VGS-off延迟/SOA、VA5快速跌落、死区/driver D slew、ADC LPF与RTL/STA、温升/电源限能 | **BLOCKED：没有本轮测量证据** |
 | F4 48V满载/制造放行 | 电源短路分断/I²t/线束、回馈系统合同、10Arms长稳态、20A30s/冷却、首件检测 | **BLOCKED：不得声称量产或额定通过** |
 
+## F. 2026-10-12 GitHub Actions 新鲜原理图/PCB证据（冻结裁决）
+
+本轮在commit `c6f03144a70da6ab4fd168637f71472fcd8654e7` 的CI实机KiCad 10核查：
+
+- [kicad-erc run #38209360502](https://github.com/magic-alt/fpga-servo/actions/runs/38209360502)：`kicad-cli sch erc --severity-all` 导出 **0 violations / 0 errors / 0 warnings**，原始工件可在run下载，随后按**原始不放宽**的板级一致性测试仍**FAIL**（158个元件 /135网络 /166 footprints）。这说明**现行8页原理图通过原生ERC，但生产PCB仍不匹配**。
+- [hardware-sanity run #38209360509](https://github.com/magic-alt/fpga-servo/actions/runs/38209360509)：新6项ADS8588S双串行/防误配置回归**全部通过**，原生文本/网格/图面/连线检查通过；`check_design.py` **FAIL**：旧PCB还留J2，PCB缺DRV8300型号，U15焊盘与物理脚位不符，U5不存在，RSH1–3不符SMD制造封装/物理两脚，缺第4个shunt和已审核规则组。
+- [gate-ab run #38209360634](https://github.com/magic-alt/fpga-servo/actions/runs/38209360634)：静态OCP/ADC工具与Gate A/B热/能量资格分开审查；最终关闭Gate A/B的必要动态/实验依据仍不可由这个工作流代替。
+
+**发布状态仍严格保持** F0 DESIGN SELECTED、F1 MPN/全源设计冻结BLOCKED（L1规格及测量）、F2 PCB同步BLOCKED（独立[Issue #17](https://github.com/magic-alt/fpga-servo/issues/17)）、F3/F4实验/功率释放BLOCKED。L1专项由[Issue #18](https://github.com/magic-alt/fpga-servo/issues/18)追踪。
+
 ### 技术验收命令（须基于当前分支真实执行，不能使用旧日志冒充）
 
 ```sh
