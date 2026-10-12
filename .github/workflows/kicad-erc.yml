@@ -63,6 +63,21 @@ jobs:
           test -z "$(find hardware -maxdepth 1 -name '*.lib' -type f -print -quit)"
           test -s hardware/sym-lib-table
 
+      - name: Run KiCad 10 ERC on tracked native hierarchy
+        run: |
+          mkdir -p artifacts
+          set +e
+          cd hardware
+          kicad-cli sch erc \
+            --exit-code-violations \
+            --severity-all \
+            --output ../artifacts/ax7010_servo_reva_erc.rpt \
+            ax7010_servo_reva.kicad_sch
+          rc=$?
+          set -e
+          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
+          exit "$rc"
+
       - name: Export native KiCad netlist
         run: |
           mkdir -p artifacts
@@ -80,21 +95,6 @@ jobs:
           python3 ../tools/test_adc_validity.py --netlist ../artifacts/adc_validity.xml -v
           python3 ../tools/check_pcb_parity.py ../artifacts/ax7010_servo_reva.net --output ../artifacts/pcb_parity.json
           python3 ../tools/check_pcb_constraints.py ../artifacts/ax7010_servo_reva.net
-
-      - name: Run KiCad 10 ERC on tracked native hierarchy
-        run: |
-          mkdir -p artifacts
-          set +e
-          cd hardware
-          kicad-cli sch erc \
-            --exit-code-violations \
-            --severity-all \
-            --output ../artifacts/ax7010_servo_reva_erc.rpt \
-            ax7010_servo_reva.kicad_sch
-          rc=$?
-          set -e
-          cat ../artifacts/ax7010_servo_reva_erc.rpt || true
-          exit "$rc"
 
       - name: Upload ERC evidence
         if: always()
