@@ -16,6 +16,8 @@ The servo PCB is designed for **cabled 2x20 2.54 mm connections** in Rev.A. This
 
 > **ADC serial contract:** `ADS8588S` samples all eight analog inputs simultaneously but the implemented J10 interface reads them as two simultaneous 16-bit serial lanes (DOUTA channels 1–4, DOUTB channels 5–8). A frame needs 64 SCLK cycles, with 10 MHz recommended for initial FPGA verification; 20 MHz is the datasheet maximum and needs actual I/O setup/hold closure. Refer to [ADC/FPGA timing and freeze contract](adc_fpga_timing_and_freeze_2026-10-12.md). The J11 parallel ADC mapping below is a historical reference only; reactivating its XDC lines alone does not install a connector.
 
+> **高速ADC性能候选（尚未焊接）**：在保留现有J10 ADC八信号的前提下，AD7606C-16四路DOUT版拟使用**J10.29 U12→ADC_DOUTC、J10.30 T12→ADC_DOUTD、J10.31 T10→ADC_SDI**，属于目前未连接的SPARE_A0/A1/A2。当前`fpga/ax7010_servo_reva.xdc`和PCB不含这三条已装配连接；待[高速ADC迁移ECO](adc_high_performance_reselection_2026-10-12.md)实施后才能在XDC真正启用，不能因为文档映射而宣布物理网络存在。
+
 ## PL_A / official J10 mapping
 
 | Header pin | Servo signal | Zynq package pin |
