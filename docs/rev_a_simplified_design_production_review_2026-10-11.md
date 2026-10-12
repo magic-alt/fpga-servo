@@ -8,7 +8,7 @@
 - **不能直接删的电路**：DRV8300D PW20无独立EN/nSLEEP脚；不能把六路硬件PWM关断误改成“一根ENABLE”。相电流分流器位于电机相线上，对上/下桥臂直通不保证覆盖；独立母线分流检测覆盖路径不同（仍须验证电容位置、铜路径与故障时延）。ADC欠压异步禁止不能用FPGA软件采样取代。
 - **省钱优先级**：不为省约几元而更换ADC架构或取消闭环观察能力。首先关闭未确认额定、昂贵但可以按可用误差替换的电容/精密无源、机械选型及物理PCB重工；随后基于验证结果分离 Rev.B-Cost 选件。
 - **系统边界**：不得把25A母线OCP误写成20A相峰值的保证限幅或反向回馈保护；不得把板载25A保险写成25A连续板载电流保证、或可分断任意电源短路；不得把DNP的TVS或200µF电容当成制动吸收。
-- **本ECO文档只记录方案与制造决策，不修改电气网表。** 未取得实测数据时，在GitHub PR保持待审和“不允许投板”状态。
+- **本轮ECO不改变功率与保护电气拓扑；2026-10-12新增几项实际原理图/BOM描述修正和NTC2局部网络改名（NTC_MOTOR→NTC_BOARD_AUX），故最新源/PCB parity必须重新生成。** 未取得实测数据时，在GitHub PR保持待审和“不允许投板”状态。
 
 ## 1. 唯一有效设计输入
 
@@ -72,7 +72,7 @@
 
 | 备选具体订货号 | 数据来源和标示参数 | 决策 |
 |---|---|---|
-| 顺翔诺 `SMDRI127-680MT`，立创 `C9907` | [LCSC商品资料](https://www.lcsc.com/product-detail/C9907.html)：68µH±20%、2.1A标称额定、Isat 4A、DCR 140mΩ、12.3×12.3mm；页面当期显示有库存 | **国内采购优先送样候选**。并非可直接替换L1；须取得制造商完整原厂规格、Irms/Isat测试定义及温度降额曲线，重做专用焊盘/钢网和12V负载阶跃/热测试 |
+| 顺翔诺 `SMDRI127-680MT`，立创 `C9907` | [LCSC商品资料](https://www.lcsc.com/product-detail/C9907.html)：68µH±20%、2.1A标称额定、Isat 4A、DCR 140mΩ、12.3×12.3mm；原厂规格可核验；不同采购页面库存信息不一致（有页面显示零库存），需实际询价 | **国内采购优先送样候选**。并非可直接替换L1；须取得制造商完整原厂规格、Irms/Isat测试定义及温度降额曲线，重做专用焊盘/钢网和12V负载阶跃/热测试 |
 | Coilcraft `MSS1246T-683MLC` | [Coilcraft原厂页](https://www.coilcraft.com/en-us/products/power/shielded-inductors/ferrite-drum/mss-mos/mss1246t/mss1246t-683/)：68µH±20%、最大DCR 186mΩ；Isat 2.3A（10%电感下降）、Irms 1.3A（升温20°C）/1.8A（升温40°C） | **可核算的对照件/非默认采购**。额定电流是测试升温定义，不是绝对温度许可；原厂样品报价为美元，不能与国内采购表人民币单价无依据直接比较 |
 
 仅做**理想开关斜率量级估算**：`Vin=48V`、`Vout=12V`、`Lmin=68×0.8=54.4µH`、`fsw=300kHz`时，降压电感 `ΔIL≈Vout×(1−Vout/Vin)/(Lmin×fsw)=0.551A峰峰值`；若直流负载为1A，得到理想峰值约1.276A。但LM5164工作频率是受工作状态、元件和角点影响的，不能把300kHz典型频率的结果当成Isat、短路或满温保证。还须计入限流、瞬态、ESR/DCR发热、有效电容、实际焊盘和铜散热、最高环境与FET额外负载。**候选不得未签核就改 BOM/PCB，也不得计入当前164.67元材料基准。**
@@ -128,10 +128,10 @@
 
 ## 9. 实施顺序及分支操作
 
-### ECO-A（本PR执行：无电气风险的来源和方案修复）
+### ECO-A（PR #16：审查与受控的非拓扑原理图修正）
 
 - 建立最新设计基线/优化及成本矩阵；修正旧README误导性器件清单、过期DRC数字，明确未闭合投板门禁。
-- 保留 `hardware/*.kicad_sch`、现有PCB和原始采购记录原样，不为“看起来合理”无验证删除门级/电源或替换MPN。
+- 2026-10-12已在现有原理图进行非拓扑改动：C3=250V真实描述、NTC2改为板载网络名（连接拓扑不故意变动）及L1选型资格标注；同源BOM、FPGA J11未装配XDC约束一并同步。**PCB仍未同步且新源ERC/DRC必须重新运行。** 不为了“看起来合理”未经验证删除门级/电源或替换MPN。
 - 本PR的静态审阅**不能**替代任何硬件自动/人工测试。
 
 ### ECO-B（下一独立原理图/封装PR）
@@ -151,7 +151,11 @@
 - 先做受限能量空载/阻性负载/非再生场景的故障注入，禁止在尚未确认完整关断延迟、MOS SOA与回馈吸收前直接做48V满载电机运行。
 - 独立闭合Gate A/B；本PR不会把绿色CI/ERC误标为电气投板许可。
 
-## 10. 现有证据及供货状态参考
+## 10. 2026-10-12 原理图冻结专项增补
+
+此次继续审查已经实际修改了`hardware/current_adc.kicad_sch`、`hardware/power_input.kicad_sch`、`hardware/aux_power.kicad_sch`的非拓扑描述和NTC2网名，并修正`hardware/bom.csv`、禁用未装配J11 XDC虚拟pin；新增[ADS8588S 8路同时采样/双串行64 SCLK时序合同](adc_fpga_timing_and_freeze_2026-10-12.md)和[正式设计/BOM冻结矩阵](reva_schematic_component_freeze_matrix_2026-10-12.md)及源检查测试。不能以原PR“仅文档”作为现在提交范围或源状态。架构选择已固定，但L1/生产原理图冻结与动态电气及PCB门禁仍为BLOCKED。特别注意ADS8588S ±5V内置模拟滤波器16kHz截止频率与FOC环路的时间延迟，**20MHz总线频率不能消除模拟滤波的相位影响**。
+
+## 11. 现有证据及供货状态参考
 
 - [当前功能架构](architecture.md)、[电气计算](design_calculations.md)、[生产门禁](release_gates.md)、[最新选型记录](lcsc_sourcing_review_2026-10-10.md)、[最新PR #15](https://github.com/magic-alt/fpga-servo/pull/15)、[当前PCB不同步证据](reviews/selection_2026-10-10/layout-deferred.json)。
 - 原厂技术参考： [DRV8300](https://www.ti.com/product/DRV8300)、[ADS8588S](https://www.ti.com/product/ADS8588S)、[ADS8584S（仅候选比较）](https://www.ti.com/product/ADS8584S)、[INA240](https://www.ti.com/product/INA240)、[LM74502](https://www.ti.com/product/LM74502)、[LM5164](https://www.ti.com/product/LM5164)、[LM393LV](https://www.ti.com/product/LM393LV)。
