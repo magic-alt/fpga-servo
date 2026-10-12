@@ -42,7 +42,7 @@ def get_pin_lines(xdc: str) -> dict[str, list[str]]:
         if not line or line.startswith("#"):
             continue
         m = re.search(
-            r"set_property\\s+PACKAGE_PIN\\s+(\\w+)\\s+\\[get_ports\\s+([A-Z0-9_]+)\\]",
+            r"set_property\s+PACKAGE_PIN\s+(\w+)\s+\[get_ports\s+([A-Z0-9_]+)\]",
             line,
         )
         if m:
