@@ -2,6 +2,8 @@
 
 > **当前状态：ARCHITECTURE SELECTED / SCHEMATIC FREEZE BLOCKED / NOT FOR FABRICATION**。本文件是冻结审核记录，不是假装已经完成ERC/DRC、SPICE动态证明、PCB制造首件/48V功率运行。本轮PR #16直接修正KiCad源和BOM的语义错误，不调整未经实测的硬件功率/保护拓扑。本表以最新`main`合并PR #15和本PR增量为基础；更改原理图后，先不要复用#15旧ERC计数或历史PCB的DRC0结论。
 
+> **2026-10-12新增性能要求后的冻结级别修订**：下表中的ADS8588S是仍在原理图内的实际版次，F0原有“保留ADS8588S架构选定”不再适用于3–5kHz+高速电流环候选。首选[AD7606C-16BSTZ低延迟4lane](adc_high_performance_reselection_2026-10-12.md)，处于**PERFORMANCE ARCHITECTURE SELECTED / ADC KiCad+BOM ECO NOT IMPLEMENTED / F1仍BLOCKED**。原U6=ADS8588S的静态ERC0不构成新ADC原理图通过。L1/PCB与动态门禁仍各自未通过。
+
 ## A. 硬件设计输入与必须保持的电气拓扑
 
 | 系统模块 | 冻结选型 / 范围 | 本轮裁决 | 尚未完成的证据 / 可退出条件 |
