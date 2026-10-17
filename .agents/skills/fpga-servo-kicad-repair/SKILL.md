@@ -9,7 +9,7 @@ Use the repository root containing `hardware/ads8588s_servo/ax7010_servo_reva.ki
 
 ## Find the actual design
 
-The source is native KiCad 10: `hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch` with project-local `ax7010_servo_reva.kicad_sym` and `sym-lib-table`. The old `.sch`, `.lib` and `check_legacy_schematic.py` commands are obsolete. Enumerate sheet children from the top source instead of assuming a fixed page count. Count exported components and nets; zero ERC on an empty or stale export is not evidence.
+The source is native KiCad 10: `hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch` with project-local `ax7010_servo_reva.kicad_sym` and `sym-lib-table`. The old `.sch`, `.lib` and legacy schematic checker commands are obsolete. Enumerate sheet children from the top source instead of assuming a fixed page count. Count exported components and nets; zero ERC on an empty or stale export is not evidence.
 
 Resolve `kicad-cli` from PATH or provide its location as a local command argument. Use a KiCad Python environment with `pcbnew` for board checks. Keep workstation installation paths out of public files.
 
@@ -31,7 +31,7 @@ intersected wire and pin; split new T branches and add explicit junctions.
 Export baseline/final KiCad XML netlists and compare exact component identity,
 net names and physical pin memberships with
 `.agents/skills/schematic-humanizer/scripts/compare_connectivity.py`.
-Run `python tools/check_power_wiring.py` and review every rendered page plus
+Run `python tools/pcb.py check --project ads8588s --scope schematic` and review every rendered page plus
 power/ground crops. That check intentionally ignores label links; native ERC
 and netlist equivalence remain separate acceptance gates.
 
@@ -39,20 +39,16 @@ Trace critical paths through exported physical pin numbers. Use manufacturer dat
 
 For hardware OCP, verify raw OCP diagnostic routing, asynchronous trip, supervised startup, default enable bias and deliberate re-arm. Fault recovery without a new clear edge must remain inhibited. Describe pulse-width and recovery/removal limits; boolean behavior checks are not analog transient or bench proof. Keep supply/regeneration energy and current/thermal assumptions visible when unknown.
 
-After edits, export the BOM using `python tools/export_bom.py`, then export the netlist:
+After edits, use the shared configured entry. Exports go to independent evidence directories rather than overwriting authored BOMs:
 
 ```sh
-kicad-cli sch export netlist --output artifacts/ax7010_servo_reva.net hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
-python tools/check_native_schematic.py
-python tools/check_kicad_grid.py
-python tools/check_schematic_layout.py
-python tools/check_schematic_connectivity.py
-python tools/check_power_wiring.py
-python tools/check_design.py
-python tools/check_netlist_safety.py artifacts/ax7010_servo_reva.net
-python tools/check_ocp_behavior.py artifacts/ax7010_servo_reva.net
-kicad-cli sch erc --severity-all --exit-code-violations --format json --output artifacts/ax7010_servo_reva_erc.json hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py export --project ads8588s --kind bom
+python tools/pcb.py verify --project ads8588s --scope schematic
+python tools/pcb.py verify --project ads8588s --scope release
 ```
+
+Select `--project ad7606c` for its independent schematic; that configuration also checks the retained ADS8588S reference. Native verify includes fresh physical-pin safety/OCP and all-severity ERC. Strict release still blocks the archived, unsynchronized PCB and open engineering gates; a successful schematic scope does not waive them. Use `python tools/pcb.py test --kicad-cli kicad-cli` for full fresh-netlist regressions and `--pcb-python` for the native geometry lane.
 
 Run any additional focused checks introduced by the change. Test a new safety constraint against the old faulty netlist before relying on its passing result. Review exported schematic pages visually after geometry or symbol edits. Update interface documentation/XDC together only if physical pin assignments change.
 

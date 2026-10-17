@@ -1,96 +1,56 @@
 name: kicad-erc
-
 on:
   workflow_dispatch:
   pull_request:
     paths:
       - 'hardware/**'
       - 'tools/**'
-      - '.github/workflows/kicad-erc.yml'
-
+      - 'docs/**'
+      - '.agents/**'
+      - '.github/workflows/**'
+      - 'AGENTS.md'
 jobs:
   erc:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install KiCad 10 CLI
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install native KiCad 10 and ngspice
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends software-properties-common
+          sudo apt-get install -y --no-install-recommends software-properties-common ngspice
           sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
-            kicad kicad-footprints kicad-symbols
+          sudo apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
           kicad-cli --version
-
-      - name: Preseed KiCad 10 user library tables
+          ngspice --version
+      - name: Preseed KiCad library tables
         run: |
           cfg="$HOME/.config/kicad/10.0"
           mkdir -p "$cfg"
-
           printf '(sym_lib_table\n  (version 7)\n)\n' > "$cfg/sym-lib-table"
-
           if [ -f /usr/share/kicad/template/fp-lib-table ]; then
             cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
           else
             printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
           fi
-
-          ls -lh "$cfg/sym-lib-table" "$cfg/fp-lib-table"
-
-      - name: Validate native project symbol library with KiCad
+      - name: Validate both native symbol libraries without modifying sources
         run: |
-          kicad-cli sym upgrade --force \
-            --output /tmp/ax7010_servo_reva.validated.kicad_sym \
-            hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym
-          test -s /tmp/ax7010_servo_reva.validated.kicad_sym
-
-      - name: Verify native schematic source contract
-        run: |
-          python tools/check_native_schematic.py
-          python tools/check_kicad_grid.py
-          python tools/check_schematic_connectivity.py
-          python tools/check_schematic_layout.py
-          python tools/check_power_wiring.py
-          python tools/check_adc_serial_contract.py
-          python tools/test_adc_serial_contract.py -v
-          python tools/check_ad7606c_fast_profile.py
-          python tools/test_ad7606c_fast_profile.py -v
-
-          test "$(find hardware/ads8588s_servo -maxdepth 1 -name '*.kicad_sch' -type f | wc -l)" -eq 8
-          test -s hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym
-          test -z "$(find hardware/ads8588s_servo -maxdepth 1 -name '*.sch' -type f -print -quit)"
-          test -z "$(find hardware/ads8588s_servo -maxdepth 1 -name '*.lib' -type f -print -quit)"
-          test -s hardware/ads8588s_servo/sym-lib-table
-
-      - name: Validate AD7606C project symbol library with KiCad
-        run: |
-          kicad-cli sym upgrade --force \
-            --output /tmp/ax7010_servo_ad7606c.validated.kicad_sym \
-            hardware/ad7606c_servo/ax7010_servo_reva.kicad_sym
-          test -s /tmp/ax7010_servo_ad7606c.validated.kicad_sym
-
-      - name: Check both native hierarchies and fresh netlists (schematic delivery)
-        run: python hardware/ad7606c_servo/tools/run_checks.py --kicad-cli kicad-cli --schematic-only
-
-      - name: Assert generated public evidence remains portable
-        run: python tools/check_public_paths.py
-
-      - name: Upload ERC evidence
+          mkdir -p artifacts/library-validation
+          kicad-cli sym upgrade --force --output artifacts/library-validation/ads8588s.kicad_sym hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym
+          kicad-cli sym upgrade --force --output artifacts/library-validation/ad7606c.kicad_sym hardware/ad7606c_servo/ax7010_servo_reva.kicad_sym
+          test -s artifacts/library-validation/ads8588s.kicad_sym
+          test -s artifacts/library-validation/ad7606c.kicad_sym
+      - run: python tools/pcb.py verify --project ads8588s --scope schematic
+      - run: python tools/pcb.py verify --project ad7606c --scope schematic
+      - run: python tools/pcb.py test --kicad-cli kicad-cli --ngspice ngspice --pcb-python /usr/bin/python3
+      - name: Upload native evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: kicad-erc-report
-          path: |
-            hardware/ad7606c_servo/evidence/erc.json
-            hardware/ad7606c_servo/evidence/legacy-erc.json
-            hardware/ad7606c_servo/evidence/ad7606c.xml
-            hardware/ad7606c_servo/evidence/ad7606c.net
-            hardware/ad7606c_servo/evidence/legacy-baseline.xml
-            hardware/ad7606c_servo/evidence/legacy-baseline.net
-            hardware/ad7606c_servo/evidence/verification.json
-            hardware/ad7606c_servo/evidence/logs/
-            hardware/ad7606c_servo/evidence/schematic.pdf
+          path: artifacts/
           if-no-files-found: warn

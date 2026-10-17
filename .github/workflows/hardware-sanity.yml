@@ -2,7 +2,6 @@ name: hardware-sanity
 on:
   push:
   pull_request:
-
 jobs:
   repository-checks:
     runs-on: ubuntu-latest
@@ -11,20 +10,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python tools/check_public_paths.py
-      - run: python tools/test_public_paths.py -v
-      - run: python tools/check_native_schematic.py
-      - run: python tools/check_kicad_grid.py
-      - run: python tools/check_schematic_layout.py
-      - run: python tools/check_schematic_connectivity.py
-      - run: python tools/check_power_wiring.py
-      - run: python tools/check_adc_serial_contract.py
-      - run: python tools/test_adc_serial_contract.py -v
-      - run: python tools/check_ad7606c_fast_profile.py
-      - run: python tools/test_ad7606c_fast_profile.py -v
-      - run: python tools/check_design.py --schematic-only
-      - run: python tools/check_legacy_pcb_baseline.py
-      - run: python tools/test_ci_scope.py -v
-      - run: python tools/test_pcb_checks.py
-      - run: python tools/test_vendor_lands.py
-      - run: python tools/test_pcb_escape.py
+      - run: python tools/pcb.py check --project ads8588s --scope schematic
+      - run: python tools/pcb.py check --project ad7606c --scope schematic
+      - run: python tools/pcb.py test --lane static

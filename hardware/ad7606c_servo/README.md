@@ -30,7 +30,7 @@
 | `adc_profile.json` / `*.xdc` | 本工程独立配置和 FPGA 引脚约束；尚无驱动 RTL/STA |
 | `evidence/adc-physical-pins.csv` | 64 脚与实际网表所有相连端点 |
 | `source_manifest.json` | 原方案基线和原文件 SHA-256，防止意外覆盖 |
-| `tools/` | 有范围的原生结构生成和独立验收工具 |
+| `../../tools/pcb.py` | 配置驱动的统一开发与验收入口 |
 
 `sym-lib-table` 和 `fp-lib-table` 都使用 `${KIPRJMOD}`；项目本地符号和 `fpga-servo.pretty` 已复制。标准 KiCad 元件封装库仍需随 KiCad 安装。
 
@@ -40,7 +40,7 @@
 
 新工程验证包括：完整物理脚和模式检查、层次一致性、50 mil 网格/A4 布局、可见电源连线、18 项错误注入、531 项 OCP 稳态数字场景、ADC 供电静态阈值和原生全严重度 ERC。最新网表为 **181 个系统元件对象 / 162 个网络**，其中板载元件对象 180 个，另 1 个为外部 J6；DNP 另列于 BOM。原工程保留为 159 元件/135 网络。
 
-原理图交付模式已完整通过新旧工程检查、旧 ADC 串行/候选规格/选型/供电/安全/OCP 回归、两工程 ERC 及旧板精确差异回归。默认严格 `check_design.py` 仍因旧 PCB 中 J2、旧驱动器/分流器/封装及规则不一致而失败。旧板没有修改，也没有获得 parity/DRC/制造批准；记录中明确区分交付范围和 PCB 发布状态。
+原理图交付模式已完整通过新旧工程检查、旧 ADC 串行/候选规格/选型/供电/安全/OCP 回归、两工程 ERC 及旧板精确差异回归。严格 `check --project ads8588s --scope pcb` 仍因旧 PCB 中 J2、旧驱动器/分流器/封装及规则不一致而失败。旧板没有修改，也没有获得 parity/DRC/制造批准；记录中明确区分交付范围和 PCB 发布状态。
 
 沿用原项目四类 ERC ignore 设置：`footprint_filter`、`four_way_junction`、`simulation_model_issue`、`single_global_label`；未增加忽略项或 ERC exclusions。ERC0 不代表动态供电、环路性能或制造验收完成。
 
@@ -50,12 +50,12 @@
 
 在仓库根目录执行：
 
-```powershell
-python -X utf8 hardware/ad7606c_servo/tools/run_checks.py --schematic-only
+```sh
+python tools/pcb.py check --project ad7606c --scope schematic
+python tools/pcb.py verify --project ad7606c --scope schematic
+python tools/pcb.py test --kicad-cli kicad-cli
 ```
 
-如 KiCad 路径不同，追加 `--kicad-cli <kicad-cli.exe路径>`。完整输出在 `evidence/logs/`，逐步骤退出码在 `evidence/verification.json`。显式原理图模式返回 0 只表示本次原理图交付及旧板回归通过。省略 `--schematic-only` 的默认严格模式仍会因旧 PCB 门禁返回 1。
+使用 `--kicad-cli <executable>` 指定本机工具。完整新鲜输出写入 artifacts 下独立目录；本目录 evidence 保留先前交付证据，不覆盖。原理图通过不表示 PCB、RTL/STA 或实物资格通过；本工程没有 PCB，请求 PCB/release 会明确失败。
 
-`tools/build_project.py` 是可重复生成入口，固定读取 `17166bc` 的原始图纸；**重跑会覆盖本目录内生成的原理图/库/配置，应先把新增手工修改纳入生成器或另行保存。** 它拒绝在 main/master 或 detached HEAD 上生成。日常验收只运行 `run_checks.py`，不需要重新生成。
-
-CI 范围与严格 PCB 发布入口见[检查说明](../../docs/ci_schematic_scope.md)。原理图模式需显式指定；默认严格模式仍会报告旧 PCB 阻塞。
+一次性生成源码已移至 [历史工具归档](../../tools/archive/README.md)，不属于日常工作流。更多命令和接入方式见 [工具说明](../../docs/pcb_toolkit.md) 与 [CI 范围](../../docs/ci_schematic_scope.md)。

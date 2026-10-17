@@ -139,14 +139,14 @@ The high-current path must not rely on a single narrow trace. Plan wide top-laye
 
 ## Local passive simulation (2026-10-10)
 
-`tools/simulate_layout_entry.py` extracts actual passive values and checks their physical-pin topology in a fresh KiCad XML netlist before emitting six ngspice decks, CSV waveforms, JSON results and a plot. This is not a complete inverter/device simulation.
+`tools/archive/layout_2026_10/simulate_layout_entry.py` extracts actual passive values and checks their physical-pin topology in a fresh KiCad XML netlist before emitting six ngspice decks, CSV waveforms, JSON results and a plot. This is not a complete inverter/device simulation.
 
 - R40/C40: tau=47ns, fc=3.386MHz; 20kHz attenuation is only -0.0001515dB. The filter does not remove PWM ripple and serves only the phase ADC. Its ideal 2.5-to-4.9 V step crosses the 3.7 V midpoint at about 1.03358 us for a step beginning at 1.001 us; this is phase ADC settling, not bus OCP delay.
 - R88/C92: tau=1us with an ideal FPGA output. No Schmitt threshold, propagation, metastability or power-ramp model is included.
 - C1+C2=200uF nominal: an unsunk ideal 1A regeneration current raises 48V to 55V in 1.4ms, storing only 0.0721J extra. 55V is an overvoltage example, not an operating allowance.
 - Three 5mOhm shunts at 10A RMS dissipate 0.5W each, 1.5W total. Package rating alone does not qualify assembly temperature.
 
-Full current/thermal/switching qualification remains open; see [power-stage review](power_stage_layout_review_2026-10-09.md) and [analog/safety review](analog_safety_layout_review_2026-10-09.md).
+Full current/thermal/switching qualification remains open; see [power-stage review](archive/reviews/power_stage_layout_review_2026-10-09.md) and [analog/safety review](archive/reviews/analog_safety_layout_review_2026-10-09.md).
 
 
 ## Kelvin electrical-node modeling

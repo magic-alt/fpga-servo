@@ -2,7 +2,7 @@
 
 FPGA-based single-axis PMSM/BLDC servo-drive daughterboard for the ALINX AX7010 / Zynq-7000 (2022 board, active PL connector J10).
 
-> **Design / manufacturing hold — 2026-10-11.** The latest `main` incorporates [PR #15](https://github.com/magic-alt/fpga-servo/pull/15), which changed the **schematic, BOM and part selection only**. The working PCB was deliberately not synchronized with the final positive bus-OCP circuit (U5/RSH4/U15). The zero-DRC result from an older PCB revision is **not** valid for the current schematic. There is no fabrication release, no certified OCP fault-off delay, and no approval for full-power operation.
+> **Design / manufacturing hold — 2026-10-17.** The repository contains separate ADS8588S and AD7606C schematic/BOM projects. The retained ADS8588S PCB is unsynchronized with the current selection; AD7606C has no PCB. Historical zero-DRC results do not qualify either current design. There is no fabrication release, qualified OCP fault-off delay or full-power approval.
 
 ## 高速电流环 ADC 重新选型（2026-10-12）
 
@@ -45,3 +45,15 @@ The driver is the **DRV8300D** non-inverting PW20 variant, **not** the older FD6
 - `.github/workflows/`: static/native review workflows. **Passing CI/ERC alone is not a manufacturing or electrical safety release.**
 
 See [AGENTS.md](AGENTS.md) before making an electrical edit. Implement all hardware ECOs on a separate branch with fresh native KiCad netlist/physical-pin comparison, ERC, DRC and bench qualification; do not replace the current board based on a document-only review.
+
+## 开发与验证入口
+
+当前工具统一为 `python tools/pcb.py`，按工程配置执行检查、原生验证、导出和开发预览。新增板卡优先增加配置和领域规则，不新建一套独立检查脚本。
+
+```sh
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py check --project ad7606c --scope schematic
+python tools/pcb.py test --lane static
+```
+
+详见 [文档索引](docs/README.md)、[使用说明](docs/pcb_toolkit.md)、[新 PCB 接入](docs/pcb_toolkit_extension.md)；已替代的过程文档见 [归档](docs/archive/README.md)。

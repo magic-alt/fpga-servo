@@ -23,11 +23,11 @@ Apply root `AGENTS.md`'s mandatory power/GND visible-wiring rules and the
 [project repair skill](../fpga-servo-kicad-repair/SKILL.md#visible-power-and-ground-wiring).
 Power, ground, PWR_FLAG and child hierarchy ports must connect by visible
 native wiring to real component pins; label-only isolated stubs fail acceptance.
-Require `python tools/check_power_wiring.py`, baseline/final XML netlist
+Require `python tools/pcb.py check --project ads8588s --scope schematic`, baseline/final XML netlist
 equivalence, native ERC and visual review of all power/ground regions.
 
 Real footprint mapping is assigned, approved and versioned; native ERC zero error/warning on checked SHA; expected functional component/net changes intentional; BOM matches schematic. Do not claim footprint is production-qualified without datasheet/dimensional signoff.
 
 ## fpga-servo local integration
 
-Read `docs/ai_pcb_local_setup_2026-10-09.md` and the existing project skill `.agents/skills/fpga-servo-kicad-repair/SKILL.md` before applying this workflow. Root AGENTS.md and user authorization take precedence. Use existing `tools/check_pcb_parity.py` for physical pin/net/value/DNP verification; the tutorial XML audit is supplemental. Use fresh exports rather than the tutorial historical 124-component/32-footprint baseline. Tool names must be discovered from the active MCP; do not assume a sync/router tool exists.
+Read `docs/pcb_toolkit.md` and the existing project skill `.agents/skills/fpga-servo-kicad-repair/SKILL.md` before applying this workflow. Root AGENTS.md and user authorization take precedence. Use existing `python tools/pcb.py check --project ads8588s --scope pcb --netlist <fresh.net>` for physical pin/net/value/DNP verification; the tutorial XML audit is supplemental. Use fresh exports rather than the tutorial historical 124-component/32-footprint baseline. Tool names must be discovered from the active MCP; do not assume a sync/router tool exists.

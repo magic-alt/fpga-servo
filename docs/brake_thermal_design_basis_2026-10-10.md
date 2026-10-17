@@ -37,4 +37,4 @@
 - [Ohmite 650FPR005E](https://www.ohmite.com/catalog/60-series/650FPR005E/)：5W、1%、100ppm/°C；完整温度/寿命/装配资格仍需补齐。
 - [TI LM74502](https://www.ti.com/product/LM74502)：反接保护不包含反向电流阻断。
 
-以上是热设计输入、计算及编码器候选供电合同，没有新增实体波形或热浸证据。PCB候选的原生DRC结果另见[铜线修复记录](pcb_legacy_route_repair_2026-10-10.md)。
+以上是热设计输入、计算及编码器候选供电合同，没有新增实体波形或热浸证据。PCB候选的原生DRC结果另见[铜线修复记录](archive/reviews/pcb_legacy_route_repair_2026-10-10.md)。
