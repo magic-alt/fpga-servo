@@ -13,5 +13,7 @@
     "ad7606c",
     "protection"
   ],
-  "parameters": {}
+  "parameters": {
+    "forbid_global_labels": true
+  }
 }

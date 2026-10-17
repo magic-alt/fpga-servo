@@ -17,6 +17,8 @@
     "power_layout",
     "archived_pcb"
   ],
-  "parameters": {},
+  "parameters": {
+    "forbid_global_labels": true
+  },
   "board": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"
 }
