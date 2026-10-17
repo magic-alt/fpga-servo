@@ -9,14 +9,23 @@ from .kicad import run_native, read_xml_summary
 NETLIST = None
 NGSPICE = "ngspice"
 
-def run_tests(pattern="test_*.py", cli="kicad-cli", ngspice="ngspice", pcb_python=None):
+def run_tests(pattern="test_*.py", cli="kicad-cli", ngspice="ngspice", pcb_python=None, lane="all"):
     global NETLIST, NGSPICE
     NGSPICE=ngspice
     tools=Path(__file__).resolve().parents[1]
     root=tools.parent
+    if lane=="native":
+        executable=pcb_python or sys.executable
+        probe=run_native([executable,"-c","import pcbnew"],root,30)
+        if probe["exit_code"]:
+            print("Native geometry NOT_RUN: requested interpreter has no pcbnew")
+            return 1
+        r=run_native([executable,"-X","utf8","-m","unittest","discover","-s",str(tools/"tests"),"-p","test_pcb_*.py","-v"],root,300)
+        print(r["stdout"]+r["stderr"])
+        return 0 if r["exit_code"]==0 else 1
     errors=[]
     with tempfile.TemporaryDirectory(prefix="pcb-tests-") as folder:
-        needs_xml=any(fnmatch.fnmatch(name,pattern) for name in ("test_adc_validity.py","test_gate_ab_verify.py"))
+        needs_xml=lane!="static" and any(fnmatch.fnmatch(name,pattern) for name in ("test_adc_validity.py","test_gate_ab_verify.py"))
         NETLIST=None
         if needs_xml:
             target=Path(folder)/"fresh.xml"
@@ -35,9 +44,14 @@ def run_tests(pattern="test_*.py", cli="kicad-cli", ngspice="ngspice", pcb_pytho
         result=unittest.TextTestRunner(verbosity=2).run(suite)
         native_code=0
         if pcb_python:
-            r=run_native([pcb_python,"-X","utf8","-m","unittest","discover","-s",str(tools/"tests"),"-p","test_pcb_*.py","-v"],root,300)
-            print(r["stdout"]+r["stderr"])
-            native_code=r["exit_code"]
+            probe=run_native([pcb_python,"-c","import pcbnew"],root,30)
+            if probe["exit_code"]:
+                errors.append("Native geometry NOT_RUN: requested interpreter has no pcbnew")
+                native_code=1
+            else:
+                r=run_native([pcb_python,"-X","utf8","-m","unittest","discover","-s",str(tools/"tests"),"-p","test_pcb_*.py","-v"],root,300)
+                print(r["stdout"]+r["stderr"])
+                native_code=r["exit_code"]
         for message in errors: print(message)
         NETLIST=None
         return 0 if result.wasSuccessful() and not errors and not native_code else 1

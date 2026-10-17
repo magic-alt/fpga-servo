@@ -182,3 +182,32 @@ def portable_netlist(path: Path, source: str) -> None:
     text,n = re.subn(pattern, lambda m:m[1]+value, text)
     if n != 1: raise ValueError("Expected exactly one native source metadata field")
     path.write_text(text, encoding="utf-8")
+
+
+def read_native_netlist_summary(path: Path) -> dict:
+    """Validate native S-expression identity and physical membership, fail closed."""
+    text=path.read_text(encoding="utf-8")
+    assert_balanced(text)
+    if not re.match(r"^\s*\(export(?:\s|\))",text): raise ValueError("Expected native export root")
+    def required(form,key):
+        fields=extract_forms(form,key)
+        if len(fields)!=1: raise ValueError(f"Native record requires one {key}")
+        value=head_string(fields[0].text,key)
+        if not value: raise ValueError(f"Native record has empty {key}")
+        return value
+    comps=extract_forms(text,"comp")
+    nets=extract_forms(text,"net")
+    if not comps or not nets: raise ValueError("Empty native component/net records")
+    refs=[required(c.text,"ref") for c in comps]
+    if len(set(refs))!=len(refs): raise ValueError("Duplicate native references")
+    pins=set();names=set()
+    for net in nets:
+        name=required(net.text,"name")
+        if name in names: raise ValueError("Duplicate native net names")
+        names.add(name)
+        for node in extract_forms(net.text,"node"):
+            key=(required(node.text,"ref"),required(node.text,"pin"))
+            if key[0] not in refs or key in pins: raise ValueError("Absent component or duplicate physical pin")
+            pins.add(key)
+    if not pins: raise ValueError("Native netlist has no physical pin memberships")
+    return {"components":len(comps),"nets":len(nets),"physical_pins":len(pins)}

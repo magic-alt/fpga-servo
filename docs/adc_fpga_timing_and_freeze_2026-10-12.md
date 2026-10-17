@@ -89,7 +89,7 @@ TI ADS8588S的每路集成三级Butterworth反混叠LPF，在 **±5V RANGE=0时�
 
 ## 6. 源文件检查、验收及冻结结论
 
-新增 `tools/check_adc_serial_contract.py`：
+新增 `tools/pcbtools/rules/adc.py`：
 - 判断8条实际J10 ADC信号、双DOUT的原理图层级接口和XDC脚约束；
 - 禁止未安装J11的平行数据引脚被误用成Vivado有效端口约束；
 - 锁定CH6只描述板载NTC2、不宣称电机绕组温度；修正C3实际250V额定描述；提醒L1电流额定仍需资格；

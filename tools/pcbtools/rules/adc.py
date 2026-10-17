@@ -634,7 +634,7 @@ def ad7606c_api(project):
             if not electrical_errors(bad,pins):
                 raise AssertionError(f"DNP startup bias was not rejected: {ref}")
             extra+=2
-        profile=json.loads((HERE/"adc_profile.json").read_text());xdc=(HERE/"ax7010_servo_ad7606c.xdc").read_text()
+        profile=json.loads((HERE/"adc_profile.json").read_text(encoding="utf-8"));xdc=(HERE/"ax7010_servo_ad7606c.xdc").read_text(encoding="utf-8")
         bad=copy.deepcopy(profile);bad["configuration"]["0x02"]["value"]="0x00"
         if not profile_errors(bad,xdc):
             raise AssertionError("Incorrect lane configuration was not rejected")

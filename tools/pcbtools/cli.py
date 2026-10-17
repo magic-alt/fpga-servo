@@ -30,6 +30,7 @@ def parser():
             mode.add_argument("--apply", action="store_true")
     t = sub.add_parser("test")
     t.add_argument("--pattern", default="test_*.py")
+    t.add_argument("--lane", choices=("static","all","native"), default="all")
     t.add_argument("--kicad-cli", default="kicad-cli")
     t.add_argument("--ngspice", default="ngspice")
     t.add_argument("--pcb-python")
@@ -40,7 +41,7 @@ def main(argv=None):
         args = parser().parse_args(argv)
         if args.command == "test":
             from .testing import run_tests
-            return run_tests(args.pattern,args.kicad_cli,args.ngspice,args.pcb_python)
+            return run_tests(args.pattern,args.kicad_cli,args.ngspice,args.pcb_python,args.lane)
         project = load_project(args.config) if args.config else resolve_project(args.project)
         if getattr(args, "scope", "") in {"pcb", "release"}: project.require_board()
         from .report import RunReport, exit_code

@@ -1,7 +1,7 @@
 # Agent rules
 
 - Never read, display, log, or transmit sensitive environment-variable values or `.env` contents. Mention variable names only; redact any user-provided credentials before external use.
-- Make hardware changes on a topic branch. Preserve existing uncommitted work; never reset or overwrite it to switch branches. The active OCP repair branch is `fix/ocp-latch-industrial-review`; verify the actual branch before edits.
+- Make hardware changes on a topic branch. Preserve existing uncommitted work; never reset or overwrite it to switch branches. Verify the actual topic branch before edits; historical OCP branch names do not determine the current task branch.
 - For this project's schematic/ERC/PCB work, read `.agents/skills/fpga-servo-kicad-repair/SKILL.md` and `docs/release_gates.md`.
 
 ## 电源与 GND 可见连线规则（强制）
@@ -11,42 +11,37 @@
 - 电源优先在上、GND 优先在下；使用 50 mil 正交连线和清晰分支点。禁止导线穿过无关引脚、符号或文字；不能为追求全页连续地线而制造长绕线。
 - 跨功能块或跨页连接可以保留标签，但同名标签、靠近导线及零 ERC 都不能代替局部可见连接证明。现有被动电源图形不负责命名网络，不能为美观删除其必要的网络标签。
 - 移动端口、符号或引线后，检查新端点是否碰到其他网络；新增 T 分支须正确分段并放置连接点。重新导出修改前后 KiCad XML 网表，要求元件身份、网名和每个物理引脚的归属精确一致；电气变更须另有明确授权。
-- 原理图验收必须运行 `python tools/check_power_wiring.py`、项目全部检查和原生 ERC，并逐页查看导出图及电源/地密集区域。不得通过忽略检查、隐藏符号、删除连接或改为 NC 绕过验收。
+- 原理图验收必须运行 `python tools/pcb.py check --project ads8588s --scope schematic`、项目全部检查和原生 ERC，并逐页查看导出图及电源/地密集区域。不得通过忽略检查、隐藏符号、删除连接或改为 NC 绕过验收。
 
 # Repository Guidelines
 
 ## Project Structure & Module Organization
 
-`hardware/` contains separate `ads8588s_servo/` (Rev.A original) and `ad7606c_servo/` (new ADC development) projects, each with its own schematic hierarchy, local libraries and BOM; only the original has a PCB baseline. `fpga/ax7010_servo_reva.xdc` defines AX7010 PL pin constraints. `docs/` holds architecture, interface, bring-up, calculations, and release-gate notes. `tools/` contains standalone Python checks; `.github/workflows/` runs them in CI. There is no firmware or HDL implementation in this repository yet.
+`hardware/` contains separate `ads8588s_servo/` (Rev.A original) and `ad7606c_servo/` (new ADC development) projects, each with its own schematic hierarchy, local libraries and BOM; only the original has a PCB baseline. `fpga/ax7010_servo_reva.xdc` defines AX7010 PL pin constraints. `docs/` holds architecture, interface, bring-up, calculations, and release-gate notes. `tools/` contains a unified Python CLI and reusable domain modules; `.github/workflows/` runs them in CI. There is no firmware or HDL implementation in this repository yet.
 
 ## Build, Test, and Development Commands
 
-Run the repository checks from the root with Python 3.12:
+Run the shared entry from the repository root with Python 3.12:
 
 ```sh
-python tools/check_native_schematic.py
-python tools/check_kicad_grid.py
-python tools/check_schematic_layout.py
-python tools/check_schematic_connectivity.py
-python tools/check_power_wiring.py
-python tools/check_design.py
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py check --project ad7606c --scope schematic
+python tools/pcb.py test --lane static
+python tools/pcb.py verify --project ads8588s --scope schematic
+python tools/pcb.py verify --project ad7606c --scope schematic
 ```
 
-These validate native schematic syntax, the connection grid, layout and connectivity rules, and required design files. For schematic changes, run KiCad ERC from `hardware/ads8588s_servo/`:
-
-```sh
-kicad-cli sch erc --exit-code-violations --severity-all ax7010_servo_reva.kicad_sch
-```
+The verify commands require KiCad 10; ADS8588S ideal-model evidence also requires ngspice. Use `test --kicad-cli kicad-cli` for the full fresh-netlist regression suite and `--pcb-python` for native PCB geometry. Missing required inputs are not passes. See `docs/pcb_toolkit.md` and `docs/pcb_toolkit_extension.md`.
 
 Open `hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb` in KiCad for board review and DRC. The PCB remains a development baseline; consult `docs/release_gates.md` before treating outputs as fabrication ready.
 
 ## Coding Style & Naming Conventions
 
-Use four-space indentation in Python and keep checks executable as standalone `tools/check_*.py` scripts. Follow the existing lower-case, underscore-separated file names. Use KiCad 10 native `.kicad_sch` and `.kicad_sym`: A4 landscape, valid hierarchical ports, and a 50 mil connection grid. Keep project-local symbols and embedded symbols consistent; resolve the library through `hardware/ads8588s_servo/sym-lib-table`. Update the XDC and interface documentation together when pin assignments change.
+Use four-space indentation in Python. Add rules to the appropriate `tools/pcbtools` domain, with project configuration rather than a new standalone script. Keep `tools/pcb.py` as the daily entry. Follow the existing lower-case, underscore-separated file names. Use KiCad 10 native `.kicad_sch` and `.kicad_sym`: A4 landscape, valid hierarchical ports, and a 50 mil connection grid. Keep project-local symbols and embedded symbols consistent; resolve the library through `hardware/ads8588s_servo/sym-lib-table`. Update the XDC and interface documentation together when pin assignments change.
 
 ## Testing Guidelines
 
-The Python checks are the repository's regression tests; no separate test framework or coverage target is configured. Run all six checks above before a PR. For hardware edits, also run ERC and document any remaining violations; review PCB DRC where layout changes apply. Add a focused `check_*.py` rule when introducing a new machine-checkable design constraint.
+The shared CLI discovers unittest regressions under `tools/tests` and the independent tutorial tests. Run both project checks and the full applicable regression lanes before a PR. For hardware edits, also run ERC and document any remaining violations; review PCB DRC where layout changes apply. Add a focused rule and a negative regression in the appropriate domain when introducing a new machine-checkable constraint.
 
 ## Commit & Pull Request Guidelines
 
@@ -54,13 +49,14 @@ Recent commits use Conventional Commit style, such as `fix(schematic): ...`, `te
 
 ## Native netlist and hardware acceptance
 
-Export a fresh netlist before checking safety connectivity:
+Generate fresh native evidence before checking safety connectivity:
 
 ```sh
-kicad-cli sch export netlist --output artifacts/ax7010_servo_reva.net hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
-python tools/check_netlist_safety.py artifacts/ax7010_servo_reva.net
-python tools/check_ocp_behavior.py artifacts/ax7010_servo_reva.net
+python tools/pcb.py verify --project ads8588s --scope schematic
+python tools/pcb.py verify --project ads8588s --scope release
 ```
+
+The second command keeps all strict PCB, native DRC and engineering gates. The preserved board is currently blocked. Do not interpret the archived PCB regression as a release check.
 
 Do not reduce ERC/DRC severities, add blanket exclusions, delete connections, or mark required pins NC to get zero counts. Record fresh component/net counts and ERC errors/warnings/exclusions. Compare netlist references, physical pin numbers, footprints and nets before PCB synchronization. Preserve board snapshots and mechanical features; old baseline footprints may be placeholders.
 

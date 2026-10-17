@@ -27,6 +27,22 @@ class DevelopmentTests(unittest.TestCase):
             self.assertEqual(len(list(Path(folder).rglob("snapshot.json"))),2)
             for p in Path(folder).rglob("*.kicad_pcb"):self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),before)
         self.assertEqual(before,self.digest())
+    def test_snapshot_includes_local_library_dependencies(self):
+        from pcbtools.project import load_project
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/"top.kicad_sch").write_text('(kicad_sch (version 20250114) (paper "A4") (lib_symbols))')
+            (root/"sym-lib-table").write_text('(sym_lib_table)')
+            (root/"fp-lib-table").write_text('(fp_lib_table (lib (name "Local") (uri "${KIPRJMOD}/Local.pretty")))')
+            (root/"Local.pretty").mkdir()
+            (root/"Local.pretty/Land.kicad_mod").write_text('(footprint "Land")')
+            (root/"config.json").write_text(json.dumps({"schema_version":1,"id":"local","root":".","schematic":"top.kicad_sch","output":"evidence","rule_sets":[]}))
+            p=load_project(root/"config.json")
+            r=develop(p,"snapshot",True,p.output)
+            self.assertEqual(exit_code(r),0)
+            plan=json.loads(next(p.output.glob("*/snapshot.json")).read_text())
+            names={x["source"] for x in plan}
+            self.assertTrue({"sym-lib-table","fp-lib-table","Local.pretty/Land.kicad_mod"}<=names,names)
     def test_sync_apply_rejected(self):
         before=self.digest()
         with tempfile.TemporaryDirectory() as folder:

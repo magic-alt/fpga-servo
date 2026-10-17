@@ -6,7 +6,7 @@ import shutil
 from .schematic import discover_sheets
 from .verification import new_run_directory, source_hashes, save_run
 from .report import Finding, RunReport
-from .project import ProjectError
+from .project import ProjectError, local_dependencies
 
 def develop(project, operation, apply=False, output=None):
     if operation not in {"snapshot","sync"}: raise ProjectError("Unknown development operation")
@@ -18,7 +18,7 @@ def develop(project, operation, apply=False, output=None):
             report.evidence["plan"]={"schematic":str(project.schematic.relative_to(project.root)),"board":str(project.board.relative_to(project.root)) if project.board else None,"steps":["Export a fresh netlist using pcb.py export --kind netlist", "Back up the project using develop --operation snapshot --apply", "Open the configured project in KiCad; use native Update PCB from Schematic (F8)", "Review additions, removals, physical pads and mechanical references", "Run verify --scope pcb after the reviewed native operation"],"automatic_sync_available":False}
             report.findings.append(Finding("development.sync","FAIL" if apply else "NOT_RUN","No native automatic synchronization backend configured; review plan produced, no board changed"))
         else:
-            paths=set(discover_sheets(project)) | set(project.libraries)
+            paths=set(discover_sheets(project)) | set(project.libraries) | local_dependencies(project)
             paths.update(p for p in (project.board,project.bom) if p)
             for suffix in (".kicad_pro",".kicad_dru"):
                 p=project.schematic.with_suffix(suffix)

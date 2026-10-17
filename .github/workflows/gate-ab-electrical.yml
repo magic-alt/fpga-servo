@@ -1,25 +1,22 @@
 name: gate-ab-electrical
-
 on:
   workflow_dispatch:
     inputs:
       pcb_release:
-        description: "Run strict PCB parity, constraints, DRC and engineering gates (currently blocked)"
+        description: "Run strict PCB/DRC and engineering gates (currently blocked)"
         type: boolean
         default: false
   pull_request:
     paths:
       - "hardware/**"
       - "tools/**"
+      - "docs/**"
       - ".github/workflows/gate-ab-electrical.yml"
-      - "docs/gate_ab_verification_2026-10-09.md"
-      - "docs/release_gates.md"
   push:
     branches: [main]
     paths:
       - "hardware/**"
       - "tools/**"
-
 jobs:
   gate-ab-automated-evidence:
     runs-on: ubuntu-24.04
@@ -29,7 +26,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install native KiCad 10 and headless ngspice
+      - name: Install native KiCad 10 and ngspice
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends software-properties-common ngspice
@@ -38,7 +35,7 @@ jobs:
           sudo apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
           kicad-cli --version
           ngspice --version
-      - name: Preseed user library tables
+      - name: Preseed KiCad library tables
         run: |
           cfg="$HOME/.config/kicad/10.0"
           mkdir -p "$cfg"
@@ -49,18 +46,18 @@ jobs:
             printf '(fp_lib_table\n  (version 7)\n)\n' > "$cfg/fp-lib-table"
           fi
       - name: Run evidence isolation regressions
-        run: python -m unittest discover -s tools -p test_run_gate_ab.py -v
-      - name: Collect fresh Gate A/B evidence through shared local entry point
+        run: python tools/pcb.py test --pattern test_run_gate_ab.py
+      - name: Collect native evidence through the shared entry
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.pcb_release }}" = "true" ]; then
-            python tools/run_gate_ab.py --with-drc --strict-gates
+            python tools/pcb.py verify --project ads8588s --scope release
           else
-            python tools/run_gate_ab.py --schematic-only
+            python tools/pcb.py verify --project ads8588s --scope schematic
           fi
       - name: Upload reviewable evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: gate-ab-electrical-evidence
-          path: artifacts/gate-ab/
+          path: artifacts/pcb/ads8588s/
           if-no-files-found: warn

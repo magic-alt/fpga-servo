@@ -25,7 +25,10 @@
       "H3",
       "H4"
     ],
-    "procurement_source": "docs/sourcing"
+    "procurement_source": "docs/sourcing",
+    "source_files": [
+      "fpga/ax7010_servo_reva.xdc"
+    ]
   },
   "board": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"
 }

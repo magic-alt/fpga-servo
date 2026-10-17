@@ -1,7 +1,7 @@
 # 通用 KiCad PCB 工具与文档整理设计
 
 日期：2026-10-17
-状态：对话方案与本文均已由用户确认；实施计划编写完成，尚未开始迁移实现。
+状态：用户已确认并实施完成；实际结果及未执行边界见 docs/toolkit_migration.md。
 分支：`refactor/docs-tools-maintenance`
 
 ## 目标与范围

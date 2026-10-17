@@ -5,8 +5,8 @@
 在仓库根目录运行：
 
 ```sh
-python tools/check_public_paths.py
-python tools/test_public_paths.py -v
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py test --lane static --pattern test_public_paths.py
 ```
 
 检查只报告文件名和行号，不回显路径值，也不读取 `.env` 文件。它检查已跟踪文本；公开 PDF 另行检查页面文字和元数据。

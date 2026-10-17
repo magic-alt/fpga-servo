@@ -64,7 +64,7 @@ Vin = 48 V, Vout = 12 V, fsw = 300 kHz illustrative
 - `hardware/ads8588s_servo/aux_power.kicad_sch`：L1 Description从过期Coilcraft描述改成当前资格开放提示；不偷偷换MPN或改变焊盘。
 - `hardware/ads8588s_servo/bom.csv`：C3、L1、NTC2 Function三项与现行选型/硬件安装位置相符，159个对象结构未改变。
 - `fpga/ax7010_servo_reva.xdc`：J11不存在的30项并行/辅助pin assignment仅注释，J10 active 26条真实物理映射保持。
-- `tools/check_adc_serial_contract.py`及`tools/test_adc_serial_contract.py`：接口/源语义和负向变异回归；已接入两个硬件CI工作流。**此类静态检查无法证明真实功率关断或替代KiCad ERC**。
+- `tools/pcbtools/rules/adc.py`及`tools/tests/test_adc_serial_contract.py`：接口/源语义和负向变异回归；已接入两个硬件CI工作流。**此类静态检查无法证明真实功率关断或替代KiCad ERC**。
 
 ## E. 五级冻结Gate
 
@@ -89,18 +89,13 @@ Vin = 48 V, Vout = 12 V, fsw = 300 kHz illustrative
 ### 技术验收命令（须基于当前分支真实执行，不能使用旧日志冒充）
 
 ```sh
-python tools/check_native_schematic.py
-python tools/check_kicad_grid.py
-python tools/check_schematic_layout.py
-python tools/check_schematic_connectivity.py
-python tools/check_power_wiring.py
-python tools/check_adc_serial_contract.py
-python tools/test_adc_serial_contract.py -v
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py test --lane static --pattern test_adc_serial_contract.py
 
 # 需要KiCad 10本机环境，并且本分支原理图已同步本机库：
 kicad-cli sch erc --exit-code-violations --severity-all hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 kicad-cli sch export netlist --format kicadxml --output /tmp/reva_latest.xml hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
-python tools/check_adc_validity.py /tmp/reva_latest.xml
+python tools/pcb.py check --project ads8588s --scope schematic
 ```
 
 本轮任何Github CI的绿色也只能证明其包含的静态/原生语法和脚位检查；**电气/热/保护动态与生产冻结必须独立签署**。工程不因这一组源文件的小修而获得送厂资格。

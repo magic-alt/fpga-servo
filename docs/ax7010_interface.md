@@ -106,7 +106,7 @@ The table below is historical reference only. J2 and its NoConn markers were del
 
 ## VA5 supervision update (2026-10-10)
 
-VA_5V is nominally 5.1V after the ADC-validity repair. J1 pin assignments and XDC are unchanged. U25 independently senses VA5 and clears ARMED on undervoltage; FAULT_CLEAR still requires GATE_EN low and healthy supplies. Recovery cannot restart PWM automatically. Encoder supply via F2 shares VA5: qualify the actual encoder voltage range, cable drop and faults. See [repair evidence and acceptance limits](adc_undervoltage_repair_2026-10-10.md).
+VA_5V is nominally 5.1V after the ADC-validity repair. J1 pin assignments and XDC are unchanged. U25 independently senses VA5 and clears ARMED on undervoltage; FAULT_CLEAR still requires GATE_EN low and healthy supplies. Recovery cannot restart PWM automatically. Encoder supply via F2 shares VA5: qualify the actual encoder voltage range, cable drop and faults. See [repair evidence and acceptance limits](archive/reviews/adc_undervoltage_repair_2026-10-10.md).
 
 ## Selection update (2026-10-10)
 

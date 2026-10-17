@@ -29,12 +29,16 @@ class Project:
         output = output.resolve()
         sources = [self.schematic, *self.libraries]
         sources += [p for p in (self.board, self.bom) if p]
+        sources += list(local_dependencies(self))
         # Evidence directories must be separate from source directories.
         for source in sources:
             if output == source or output == source.parent or output in source.parents:
                 raise ProjectError("Output overlaps project sources")
         if output.exists() and not output.is_dir():
             raise ProjectError("Output must be a directory")
+        for dependency in local_dependencies(self):
+            if dependency.suffix.lower() in {".kicad_mod",".step",".stp",".wrl"} and output.is_relative_to(dependency.parent):
+                raise ProjectError("Output overlaps local library sources")
         return output
 
 def load_project(path: Path) -> Project:
@@ -83,3 +87,45 @@ def resolve_project(name: str) -> Project:
     if name not in {"ads8588s", "ad7606c"}:
         raise ProjectError(f"Unknown project: {name}; use --config for another board")
     return load_project(Path(__file__).resolve().parents[1] / "projects" / (name + ".json"))
+
+
+def local_dependencies(project: Project) -> set[Path]:
+    """Collect declared local tables, lands/models and adjacent project metadata.
+
+    Installed libraries using other KiCad variables remain external dependencies;
+    no environment values are read or expanded.
+    """
+    from .kicad import extract_forms, head_string
+    home=project.schematic.parent
+    paths=set()
+    directories={p for p in home.iterdir() if p.is_dir() and p.suffix in {".pretty",".3dshapes"}}
+    for name in ("sym-lib-table","fp-lib-table"):
+        table=home/name
+        if not table.is_file():continue
+        paths.add(table)
+        for form in extract_forms(table.read_text(encoding="utf-8"),"uri"):
+            uri=head_string(form.text,"uri") or ""
+            if uri.startswith("${KIPRJMOD}"):
+                target=(home/uri.replace("${KIPRJMOD}/","",1)).resolve()
+            elif "$" not in uri and not Path(uri).is_absolute():target=(home/uri).resolve()
+            else:continue
+            if not target.is_relative_to(project.root):raise ProjectError("Project-local library outside root")
+            if target.is_dir():directories.add(target)
+            elif target.is_file():paths.add(target)
+    for directory in directories:
+        for p in directory.rglob("*"):
+            if p.is_file() and p.suffix.lower() in {".kicad_mod",".kicad_sym",".step",".stp",".wrl"}:
+                if not p.resolve().is_relative_to(project.root): raise ProjectError("Local library symlink outside root")
+                paths.add(p)
+    for suffix in (".kicad_pro",".kicad_dru"):
+        path=project.schematic.with_suffix(suffix)
+        if path.is_file(): paths.add(path)
+    extras=project.parameters.get("source_files",[])
+    if not isinstance(extras,list): raise ProjectError("source_files must be an array")
+    for name in extras:
+        if not isinstance(name,str) or not name or Path(name).is_absolute(): raise ProjectError("Invalid source_files path")
+        path=(project.root/name).resolve()
+        if not path.is_relative_to(project.root) or not path.is_file() or any(part==".env" or part.startswith(".env.") for part in path.parts):
+            raise ProjectError("Missing, sensitive or outside-root source_files input")
+        paths.add(path)
+    return paths

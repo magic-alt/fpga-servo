@@ -41,4 +41,4 @@ DRC 日志：`Swift/SwiftNativeNSArray.swift:78: Fatal error: Array index out of
 
 此目录保存精选原始报告，manifest 中保留完整运行全部产物的哈希。完整原始运行（含新导出网表与 SPICE 波形）分别位于隔离工作区的 `artifacts/gate-ab/20261009T153147Z-ys3wvk8b` 与 `artifacts/gate-ab/20261009T153206Z-k4xtcjo3`；可用 `python3.12 tools/run_gate_ab.py` 重新生成独立证据。入口失败隔离回归另用 `python3.12 -m unittest discover -s tools -p test_run_gate_ab.py -v` 执行。
 
-Gate A/B 工程门禁仍 BLOCKED；主动器件动态模型、ADC 欠压许可、回馈策略、总关断时间及台架实测等清单见 [资格说明](../../gate_ab_verification_2026-10-09.md) 和 [release gates](../../release_gates.md)。远端 CI 尚未运行本地优化提交。
+Gate A/B 工程门禁仍 BLOCKED；主动器件动态模型、ADC 欠压许可、回馈策略、总关断时间及台架实测等清单见 [资格说明](../../archive/reviews/gate_ab_verification_2026-10-09.md) 和 [release gates](../../release_gates.md)。远端 CI 尚未运行本地优化提交。

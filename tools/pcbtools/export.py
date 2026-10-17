@@ -10,52 +10,46 @@ from .kicad import extract_forms, property_value, strip_form, run_native, portab
 from .report import Finding, RunReport
 from .project import ProjectError
 
-def export_bom(project, output):
-    rows = []
-    for path in discover_sheets(project):
-        text = strip_form(path.read_text(encoding="utf-8"), "lib_symbols")
-        for symbol in extract_forms(text, "symbol"):
-            ref = property_value(symbol.text, "Reference")
-            if not ref or ref.startswith("#"):
-                continue
-            mpn = property_value(symbol.text, "MPN") or "TBD"
-            dnp = "(dnp yes)" in symbol.text
-            note = "DNP; populate only after option review" if dnp else "Fitted"
-            if "(on_board no)" in symbol.text:
-                note = "External; NOT fitted to PCB"
-                holder = property_value(symbol.text, "Holder_MPN")
-                if holder:
-                    note += "; required holder " + holder
-            if mpn == "TBD":
-                note += "; exact MPN / rating qualification open"
-            rows.append({
-                "Ref": ref, "Qty": 1,
-                "Value / Part": property_value(symbol.text, "Value"),
-                "Manufacturer": property_value(symbol.text, "Manufacturer") or "TBD",
-                "MPN": mpn,
-                "Package": property_value(symbol.text, "Footprint"),
-                "LCSC": property_value(symbol.text, "LCSC") or "UNVERIFIED",
-                "Alternative MPN": property_value(symbol.text, "Alternative_MPN") or "UNQUALIFIED",
-                "Alternative LCSC": property_value(symbol.text, "Alternative_LCSC") or "UNVERIFIED",
-                "Alternative status": property_value(symbol.text, "Alternative_Status") or "OPEN",
-                "Sourcing status": property_value(symbol.text, "Sourcing_Status") or "OPEN",
-                "Function": property_value(symbol.text, "Description") or "See schematic",
-                "Status / note": note,
-            })
-    rows.sort(key=lambda row: (re.sub(r"\d+", "", row["Ref"]), int(re.search(r"\d+", row["Ref"]).group())))
-    rows = list({row["Ref"]: row for row in rows}.values())
-    if not rows: raise ValueError("No components to export")
-    with (output / "bom.csv").open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
-        writer.writeheader()
-        writer.writerows(rows)
+def export_bom(project, output, cli="kicad-cli"):
+    import xml.etree.ElementTree as ET
+    from .kicad import read_xml_summary
+    target=output/"bom-source.xml"
+    r=run_native([cli,"sch","export","netlist","--format","kicadxml","--output",str(target),str(project.schematic)],project.root,180)
+    if r["exit_code"]:
+        raise RuntimeError("Native BOM export " + r["status"] + ": " + r.get("error",r.get("stderr","failed")))
+    read_xml_summary(target)
+    portable_netlist(target,project.schematic.relative_to(project.root).as_posix())
+    components=ET.parse(target).getroot().findall("./components/comp")
+    rows=[]
+    for comp in components:
+        fields={f.get("name"):f.text or "" for f in comp.findall("fields/field")}
+        ref=comp.get("ref")
+        mpn=fields.get("MPN") or "TBD"
+        note="DNP; populate only after option review" if comp.find("property[@name='dnp']") is not None else "Fitted"
+        if comp.find("property[@name='exclude_from_board']") is not None:
+            note="External; NOT fitted to PCB"
+            if fields.get("Holder_MPN"):note+="; required holder "+fields["Holder_MPN"]
+        if mpn=="TBD":note+="; exact MPN / rating qualification open"
+        rows.append({"Ref":ref,"Qty":1,"Value / Part":comp.findtext("value", ""),
+                     "Manufacturer":fields.get("Manufacturer") or "TBD","MPN":mpn,
+                     "Package":comp.findtext("footprint", ""),"LCSC":fields.get("LCSC") or "UNVERIFIED",
+                     "Alternative MPN":fields.get("Alternative_MPN") or "UNQUALIFIED",
+                     "Alternative LCSC":fields.get("Alternative_LCSC") or "UNVERIFIED",
+                     "Alternative status":fields.get("Alternative_Status") or "OPEN",
+                     "Sourcing status":fields.get("Sourcing_Status") or "OPEN",
+                     "Function":fields.get("Description") or "See schematic","Status / note":note})
+    rows.sort(key=lambda row:(re.sub(r"\d+","",row["Ref"]),tuple(int(n) for n in re.findall(r"\d+",row["Ref"])),row["Ref"]))
+    with (output/"bom.csv").open("w",encoding="utf-8",newline="") as handle:
+        writer=csv.DictWriter(handle,fieldnames=list(rows[0]))
+        writer.writeheader();writer.writerows(rows)
     return len(rows)
+
 
 def export_procurement(root, source, bom_path, output):
     source = Path(source)
     decisions = json.loads((source / 'selected_overrides_2026-10-10.json').read_text(encoding="utf-8"))
     selected = decisions['refs']
-    with bom_path.open(newline='') as handle:
+    with bom_path.open(newline='', encoding='utf-8') as handle:
         authored = {row['Ref']: row for row in csv.DictReader(handle)}
     excluded = dict(decisions.get('excluded_refs', {}))
     excluded.update({ref: 'Removed by final architecture' for ref in decisions['removed_refs']})
@@ -158,7 +152,7 @@ def export_project(project, kind, output, tools):
     report = RunReport(project.id, [], {"output":str(out), "pcb_release":"BLOCKED"})
     try:
         if kind == "bom":
-            count=export_bom(project,out)
+            count=export_bom(project,out,tools.get("kicad-cli","kicad-cli"))
             report.findings.append(Finding("export.bom","PASS",f"{count} components exported"))
         elif kind == "procurement":
             name=project.parameters.get("procurement_source")
@@ -183,6 +177,6 @@ def export_project(project, kind, output, tools):
     except ProjectError:
         raise
     except Exception as exc:
-        report.findings.append(Finding("export."+kind,"FAIL",f"{type(exc).__name__}: {exc}"))
+        report.findings.append(Finding("export."+kind,"NOT_RUN" if "NOT_RUN" in str(exc) else "FAIL",f"{type(exc).__name__}: {exc}"))
     save_run(report,out)
     return report

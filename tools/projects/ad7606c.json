@@ -15,6 +15,12 @@
   ],
   "parameters": {
     "forbid_global_labels": true,
-    "baseline_config": "tools/projects/ads8588s.json"
+    "baseline_config": "tools/projects/ads8588s.json",
+    "source_files": [
+      "hardware/ad7606c_servo/adc_profile.json",
+      "hardware/ad7606c_servo/adc_pin_map.json",
+      "hardware/ad7606c_servo/source_manifest.json",
+      "hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc"
+    ]
   }
 }

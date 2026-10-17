@@ -54,6 +54,27 @@ class WorkflowTests(unittest.TestCase):
         # subprocess argument lists preserve spaces without invoking a shell.
         r=run_native([sys.executable,"-c","import sys; print(sys.argv[1])","a b c"],Path.cwd(),2)
         self.assertEqual(r["stdout"].strip(),"a b c")
+    def test_bom_repeated_child_uses_annotated_instances(self):
+        from pcbtools.project import load_project
+        from pcbtools.export import export_bom
+        import csv
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            top='(kicad_sch (version 20250114) (uuid "root") (paper "A4") (lib_symbols) (sheet (uuid "a") (property "Sheetfile" "child.kicad_sch")) (sheet (uuid "b") (property "Sheetfile" "child.kicad_sch")))'
+            child='(kicad_sch (version 20250114) (uuid "child") (paper "A4") (lib_symbols) (symbol (lib_id "Device:R") (unit 1) (property "Reference" "R1") (property "Value" "10k") (instances (project "top" (path "/root/a" (reference "R1") (unit 1)) (path "/root/b" (reference "R2") (unit 1))))))'
+            (root/"top.kicad_sch").write_text(top)
+            (root/"child.kicad_sch").write_text(child)
+            (root/"config.json").write_text(json.dumps({"schema_version":1,"id":"repeated","root":".","schematic":"top.kicad_sch","output":"evidence","rule_sets":[]}))
+            project=load_project(root/"config.json")
+            out=root/"evidence";out.mkdir()
+            native_xml='<export><design><source>top.kicad_sch</source></design><components><comp ref="R1"><value>10k</value><footprint>L:R</footprint></comp><comp ref="R2"><value>10k</value><footprint>L:R</footprint></comp></components><nets><net name="GND"><node ref="R1" pin="1"/><node ref="R2" pin="1"/></net></nets></export>'
+            def native(command,cwd,timeout):
+                Path(command[command.index("--output")+1]).write_text(native_xml)
+                return {"exit_code":0,"status":"PASS","stdout":"","stderr":""}
+            with patch("pcbtools.export.run_native",side_effect=native):
+                self.assertEqual(export_bom(project,out),2)
+            with (out/"bom.csv").open(encoding="utf-8",newline="") as f:rows=list(csv.DictReader(f))
+            self.assertEqual({r["Ref"] for r in rows},{"R1","R2"})
     def test_export_cannot_overwrite_sources(self):
         p=resolve_project("ads8588s")
         with self.assertRaises(ValueError): export_project(p,"bom",p.schematic.parent,{})

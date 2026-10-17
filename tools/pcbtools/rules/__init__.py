@@ -30,7 +30,7 @@ def run_rules(project, scope, inputs):
         from .adc import ad7606c_api
         api = ad7606c_api(project)
         check("adc.ad7606c", api.source_checks)
-        check("adc.profile", lambda: api.profile_errors(json.loads((project.schematic.parent/"adc_profile.json").read_text()), (project.schematic.parent/"ax7010_servo_ad7606c.xdc").read_text()))
+        check("adc.profile", lambda: api.profile_errors(json.loads((project.schematic.parent/"adc_profile.json").read_text(encoding="utf-8")), (project.schematic.parent/"ax7010_servo_ad7606c.xdc").read_text(encoding="utf-8")))
         if inputs.get("xml") and inputs.get("baseline_xml"):
             def electrical():
                 components,pins=api.load_xml(inputs["xml"])
@@ -48,7 +48,7 @@ def run_rules(project, scope, inputs):
         from .servo import baseline_api
         def archived():
             api=baseline_api(project)
-            expected=json.loads(api.BASELINE.read_text())["snapshot"]
+            expected=json.loads(api.BASELINE.read_text(encoding="utf-8"))["snapshot"]
             return api.compare_snapshot(api.collect_snapshot(inputs.get("netlist")),expected,require_parity=bool(inputs.get("netlist")))
         check("pcb.archived_regression",archived)
     if "protection" in project.rule_sets:
@@ -81,7 +81,7 @@ def run_rules(project, scope, inputs):
         rules=project.board.with_suffix(".kicad_dru").read_text(encoding="utf-8")
         check("pcb.internal_pad_rules",lambda:vendor_api().check_internal_pad_rules(rules))
         if inputs.get("netlist"):
-            check("pcb.constraints",lambda:constraints_api().check(board_text,json.loads(project.board.with_suffix(".kicad_pro").read_text()),Path(inputs["netlist"]).read_text()))
+            check("pcb.constraints",lambda:constraints_api().check(board_text,json.loads(project.board.with_suffix(".kicad_pro").read_text(encoding="utf-8")),Path(inputs["netlist"]).read_text(encoding="utf-8")))
         try:
             import pcbnew
         except ImportError:

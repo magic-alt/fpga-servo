@@ -1,5 +1,6 @@
 """Grouped rule families; explicit contexts and no import-time checks."""
 from types import SimpleNamespace
+from pathlib import Path
 
 def parity_api():
     """Compare a freshly exported KiCad netlist with physical PCB pad assignments.
@@ -175,6 +176,11 @@ def check_board(project, netlist=None):
     project.require_board()
     if netlist is None:
         return [Finding("pcb.parity", "NOT_RUN", "Fresh native netlist required")]
+    from .kicad import read_native_netlist_summary
+    try:
+        read_native_netlist_summary(Path(netlist))
+    except (OSError,ValueError) as exc:
+        return [Finding("pcb.parity","FAIL",str(exc))]
     report = parity_api().audit_text(Path(netlist).read_text(encoding="utf-8"), project.board.read_text(encoding="utf-8"), set(project.parameters.get("mechanical_refs", [])))
     # Empty exports cannot prove parity, even for a deliberately empty board.
     valid = report["passed"] and report["schematic_components"] > 0 and report["schematic_nets"] > 0

@@ -21,6 +21,24 @@ class RuleTests(unittest.TestCase):
         self.assertIn("adc.serial",[f.rule_id for f in ads])
         self.assertNotIn("adc.serial",[f.rule_id for f in ad])
         self.assertNotIn("adc.ad7606c",[f.rule_id for f in ads])
+    def test_configured_board_with_netlist_returns_findings(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path=Path(folder)/"fresh.net"
+            path.write_text('(export (components (comp (ref "R1") (value "10k") (footprint "L:P"))) (nets (net (name "GND") (node (ref "R1") (pin "1")))))')
+            findings=check_board(resolve_project("ads8588s"),path)
+            self.assertEqual(findings[0].rule_id,"pcb.parity")
+            self.assertEqual(findings[0].status,"FAIL")
+    def test_pinless_native_netlist_cannot_prove_parity(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/"top.kicad_sch").write_text('(kicad_sch (version 20250114) (paper "A4") (lib_symbols))')
+            (root/"top.kicad_pcb").write_text('(kicad_pcb (footprint "L:R" (property "Reference" "R1") (property "Value" "10k")))')
+            (root/"fresh.net").write_text('(export (components (comp (ref "R1") (value "10k") (footprint "L:R"))) (nets (net (name "GND"))))')
+            (root/"config.json").write_text(json.dumps({"schema_version":1,"id":"generic","root":".","schematic":"top.kicad_sch","board":"top.kicad_pcb","output":"evidence","rule_sets":[]}))
+            with patch("pcbtools.board.Path",Path,create=True):
+                findings=check_board(load_project(root/"config.json"),root/"fresh.net")
+            self.assertEqual(findings[0].status,"FAIL")
     def test_missing_netlist_not_pass(self):
         result=check_board(resolve_project("ads8588s"),None)
         self.assertTrue(any(f.status=="NOT_RUN" for f in result))

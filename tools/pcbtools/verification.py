@@ -7,7 +7,7 @@ import subprocess
 import tempfile
 from .kicad import run_native, read_xml_summary, portable_netlist
 from .report import Finding, RunReport, write_report
-from .project import ProjectError, load_project
+from .project import ProjectError, load_project, local_dependencies
 
 
 def new_run_directory(output):
@@ -18,7 +18,14 @@ def new_run_directory(output):
 
 def source_hashes(project):
     from .schematic import discover_sheets
-    paths=set(discover_sheets(project)) | set(project.libraries) | {project.config}
+    paths={project.schematic,project.config} | set(project.libraries) | local_dependencies(project)
+    try:
+        paths.update(discover_sheets(project))
+    except (ProjectError,ValueError,OSError):
+        pass  # The schematic rule records the actual hierarchy failure.
+    for suffix in (".kicad_pro",".kicad_dru"):
+        related=project.schematic.with_suffix(suffix)
+        if related.is_file(): paths.add(related)
     if project.board: paths.add(project.board)
     if project.bom: paths.add(project.bom)
     # Cover tracked source inputs as well as external project sources; never env files.
@@ -90,7 +97,7 @@ def verify(project, scope, output=None, tools=None):
     if scope not in {"schematic","pcb","release"}: raise ProjectError("Unknown verification scope")
     if scope in {"pcb","release"}: project.require_board()
     out=new_run_directory(project.safe_output(output or project.output))
-    evidence={"schema_version":1,"output":str(out),"started_utc":datetime.now(timezone.utc).isoformat(),"steps":[],"tools":{},"erc":{"status":"NOT_RUN"},"drc":{"status":"NOT_RUN"},"gate_a":{"status":"BLOCKED"},"gate_b":{"status":"BLOCKED"},"pcb_release":"BLOCKED","delivery_scope":"SCHEMATIC_BOM" if scope=="schematic" else "FULL_DESIGN"}
+    evidence={"schema_version":1,"output":str(out),"started_utc":datetime.now(timezone.utc).isoformat(),"steps":[],"tools":{"python":__import__("sys").version.split()[0]},"erc":{"status":"NOT_RUN"},"drc":{"status":"NOT_RUN"},"gate_a":{"status":"BLOCKED"},"gate_b":{"status":"BLOCKED"},"pcb_release":"BLOCKED","delivery_scope":"SCHEMATIC_BOM" if scope=="schematic" else "FULL_DESIGN"}
     report=RunReport(project.id,[],evidence,"BLOCKED" if scope=="release" else "NOT_EVALUATED")
     before=source_hashes(project);evidence["source_hashes_before"]=before
     cli=tools.get("kicad-cli","kicad-cli")
@@ -113,9 +120,8 @@ def verify(project, scope, output=None, tools=None):
                 if key=="xml":
                     evidence[prefix+"netlist_counts"]=read_xml_summary(target)
                 else:
-                    from .board import parity_api
-                    parsed=parity_api().audit_text(target.read_text(encoding="utf-8"),'(kicad_pcb)')
-                    if not parsed["schematic_components"] or not parsed["schematic_nets"]: raise ValueError("Empty native netlist")
+                    from .kicad import read_native_netlist_summary
+                    read_native_netlist_summary(target)
                 portable_netlist(target,p.schematic.relative_to(p.root).as_posix())
                 inputs[key]=target
                 report.findings.append(Finding(prefix+"native.export_"+key,"PASS","Fresh native export"))

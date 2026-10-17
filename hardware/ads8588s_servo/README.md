@@ -24,7 +24,7 @@
 
 `fp-lib-table` resolves `fpga-servo.pretty` through `${KIPRJMOD}`. `sym-lib-table` is versioned and resolves the project library through `${KIPRJMOD}`. The project therefore opens and passes ERC without a machine-specific global symbol table. `*.kicad_prl` and lock files remain local state.
 
-The 2026-10-09 review fixed stale hierarchy instance roots, added seven FPGA-input pull-downs and six local IC bypass capacitors, repaired C43/C44/C45 (previously both terminals on GND), and synchronized the BOM and actual DNP flags. See `docs/schematic_review_2026-10-09.md` for evidence and remaining layout gates.
+The 2026-10-09 review fixed stale hierarchy instance roots, added seven FPGA-input pull-downs and six local IC bypass capacitors, repaired C43/C44/C45 (previously both terminals on GND), and synchronized the BOM and actual DNP flags. See `docs/archive/reviews/schematic_review_2026-10-09.md` for evidence and remaining layout gates.
 
 ## Layout partitioning
 
@@ -58,3 +58,13 @@ The [selection record](../../docs/lcsc_sourcing_review_2026-10-10.md) and curren
 Run all repository checks, native ERC, fresh physical-pin netlist checks, all-severity PCB DRC with schematic parity, and the eight-branch Kelvin audit. Review every exported schematic page. A zero count does not establish electrical or thermal qualification.
 
 See [release gates](../../docs/release_gates.md). Gate A/B remain blocked pending measured switching, OCP delay/SOA, supply sequencing, current/thermal, connector and regeneration qualification. No fabrication approval is implied. Older implementation reports remain historical evidence; their external fuse, INA241, FD6288 and phase-window OCP descriptions do not describe this revision.
+
+## 统一工具入口
+
+```sh
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py verify --project ads8588s --scope schematic
+python tools/pcb.py verify --project ads8588s --scope release
+```
+
+从仓库根目录执行；详见 [工具说明](../../docs/pcb_toolkit.md)。严格 release 仍会报告当前旧板差异和工程资格阻断，不能用原理图通过代替。历史证据保留原路径，新执行写入独立 artifacts 目录。

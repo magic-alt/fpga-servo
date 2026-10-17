@@ -1,6 +1,6 @@
 # 通用 PCB 工具与文档整理 Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans for inline implementation, or superpowers:subagent-driven-development only if the user selects delegation. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:executing-plans for inline implementation, or superpowers:subagent-driven-development only if the user selects delegation. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** 将当前工具整合为可配置、多工程复用的 KiCad 开发验证工具，并整理当前文档和历史归档。
 
@@ -78,11 +78,11 @@ check 原理图作用域也运行项目声明的仓库/选型/接口静态规则
 
 **Interfaces:** 产出上述 Project/Finding/RunReport API；`cli.main(argv: list[str] | None = None) -> int`。暂未迁移的命令明确失败，不返回空成功。
 
-- [ ] 先记录 Python 解释器和可用工具版本，运行现有六项检查、hardware-sanity 对应检查及旧测试；输出写临时证据目录，不修改源。依赖缺失和已知严格 PCB 失败分别记录，不作为迁移引起的失败。
-- [ ] 添加 `test_config_relative_to_file`、`test_unknown_key_rejected`、`test_space_and_external_root`、`test_missing_board_requested`、`test_required_not_run_is_failure`、`test_blocked_and_failed_precedence`。断言精确路径、64/1/2 退出语义及无输出覆盖；先运行确认因 API 缺失失败。
-- [ ] 实现冻结配置模型、严格 schema、输出冲突校验、状态归并和 CLI 参数互斥。两个配置声明真实工程能力，AD7606C 不虚构 PCB。
-- [ ] 运行 `python -m unittest discover -s tools/tests -p test_toolkit_core.py -v`，要求全部通过；验证 `python tools/pcb.py --help` 返回 0。
-- [ ] 仅暂存本任务文件并提交 `refactor(tools): add project configuration and unified CLI`。
+- [x] 先记录 Python 解释器和可用工具版本，运行现有六项检查、hardware-sanity 对应检查及旧测试；输出写临时证据目录，不修改源。依赖缺失和已知严格 PCB 失败分别记录，不作为迁移引起的失败。
+- [x] 添加 `test_config_relative_to_file`、`test_unknown_key_rejected`、`test_space_and_external_root`、`test_missing_board_requested`、`test_required_not_run_is_failure`、`test_blocked_and_failed_precedence`。断言精确路径、64/1/2 退出语义及无输出覆盖；先运行确认因 API 缺失失败。
+- [x] 实现冻结配置模型、严格 schema、输出冲突校验、状态归并和 CLI 参数互斥。两个配置声明真实工程能力，AD7606C 不虚构 PCB。
+- [x] 运行 `python -m unittest discover -s tools/tests -p test_toolkit_core.py -v`，要求全部通过；验证 `python tools/pcb.py --help` 返回 0。
+- [x] 仅暂存本任务文件并提交 `refactor(tools): add project configuration and unified CLI`。
 
 ## Task 2：原理图与公共 KiCad 解析
 
@@ -90,11 +90,11 @@ check 原理图作用域也运行项目声明的仓库/选型/接口静态规则
 
 **Interfaces:** 消费 Project/Finding；产出 `discover_sheets(project: Project) -> list[Path]`、`check_schematic(project: Project) -> list[Finding]`；保留 extract_forms、property_value 等解析函数签名供后续迁移。
 
-- [ ] 测试 `test_nested_hierarchy`、`test_missing_child_fails`、`test_cycle_fails`、`test_repeated_source_instance_allowed`、`test_duplicate_instance_path_fails`。临时第三工程不使用伺服命名；测试坏括号、偏格连接和悬空电源图例必须失败。先确认新增 API 缺失导致失败。
-- [ ] 抽取原检查实际逻辑，参数化尺寸/网格和工程输入。顶层执行代码改为显式函数，导入无读取设计、写文件或执行工具的副作用。
-- [ ] 将特定 ADC/器件断言暂注册到对应规则接口，记录每一条旧约束去向；不能借通用化删除原有物理引脚要求。
-- [ ] 运行新原理图测试；对两个实际工程运行原理图公共检查，并与 Task 1 的适用检查结果逐项比对。
-- [ ] 提交 `refactor(tools): share schematic parsing and validation`。
+- [x] 测试 `test_nested_hierarchy`、`test_missing_child_fails`、`test_cycle_fails`、`test_repeated_source_instance_allowed`、`test_duplicate_instance_path_fails`。临时第三工程不使用伺服命名；测试坏括号、偏格连接和悬空电源图例必须失败。先确认新增 API 缺失导致失败。
+- [x] 抽取原检查实际逻辑，参数化尺寸/网格和工程输入。顶层执行代码改为显式函数，导入无读取设计、写文件或执行工具的副作用。
+- [x] 将特定 ADC/器件断言暂注册到对应规则接口，记录每一条旧约束去向；不能借通用化删除原有物理引脚要求。
+- [x] 运行新原理图测试；对两个实际工程运行原理图公共检查，并与 Task 1 的适用检查结果逐项比对。
+- [x] 提交 `refactor(tools): share schematic parsing and validation`。
 
 ## Task 3：PCB 与工程规则迁移
 
@@ -102,11 +102,11 @@ check 原理图作用域也运行项目声明的仓库/选型/接口静态规则
 
 **Interfaces:** 消费 Project、Finding 和公共解析；产出 check_board/run_rules；规则注册包含稳定标识、适用作用域和必需输入，未注册规则报配置错误。
 
-- [ ] 写 `test_generic_project_has_no_servo_rules`、`test_unknown_rules_fail`、`test_explicit_adc_profiles_do_not_leak`、`test_missing_netlist_not_pass`；对旧测试改导入后先确认相应模块缺失失败。
-- [ ] 按映射迁移纯函数和断言，取消全局 ROOT/HW、脚本互相导入、runpy、临时修改模块常量等复用方式。把引用名、物理引脚合同和来源放入工程参数或具名规则集。
-- [ ] 保留旧故障注入测试：错引脚、错误分流器/封装、Kelvin 铜误接、无效 ADC、OCP 违规恢复、历史 PCB 内容变化均须被拒绝。原生依赖按需导入，普通规则不要求 pcbnew。
-- [ ] 运行 `python -m unittest discover -s tools/tests -v`，逐项记录尚待后续迁移的依赖；本任务拥有的规则测试全部通过。严格旧板 PCB 检查须继续报告既有阻断。
-- [ ] 提交 `refactor(tools): separate generic board checks from project rules`。
+- [x] 写 `test_generic_project_has_no_servo_rules`、`test_unknown_rules_fail`、`test_explicit_adc_profiles_do_not_leak`、`test_missing_netlist_not_pass`；对旧测试改导入后先确认相应模块缺失失败。
+- [x] 按映射迁移纯函数和断言，取消全局 ROOT/HW、脚本互相导入、runpy、临时修改模块常量等复用方式。把引用名、物理引脚合同和来源放入工程参数或具名规则集。
+- [x] 保留旧故障注入测试：错引脚、错误分流器/封装、Kelvin 铜误接、无效 ADC、OCP 违规恢复、历史 PCB 内容变化均须被拒绝。原生依赖按需导入，普通规则不要求 pcbnew。
+- [x] 运行 `python -m unittest discover -s tools/tests -v`，逐项记录尚待后续迁移的依赖；本任务拥有的规则测试全部通过。严格旧板 PCB 检查须继续报告既有阻断。
+- [x] 提交 `refactor(tools): separate generic board checks from project rules`。
 
 ## Task 4：原生验证、导出与证据编排
 
@@ -114,11 +114,11 @@ check 原理图作用域也运行项目声明的仓库/选型/接口静态规则
 
 **Interfaces:** `run_native(command: list[str], cwd: Path, timeout: float) -> dict` 返回退出码/输出/异常诊断；verify 使用已定义签名；`export_project(project: Project, kind: str, output: Path, tools: dict[str, str]) -> RunReport`。
 
-- [ ] 先添加失败测试：缺失 EXE、超时、退出零但空网表/残缺 ERC、旧输出污染、含空格程序路径、重复运行目录隔离、导出覆盖源文件。通过注入执行器测试跨平台逻辑，不把模拟结果写作真实 KiCad 通过。
-- [ ] 迁移 Gate A/B 和 AD7606C 新鲜导出/验收逻辑；要求非空组件/网络及完整原生结果。源摘要范围排除本次输出、缓存和敏感文件；不得读取 .env 或环境变量值用于日志。
-- [ ] 迁移 BOM、采购、网表和 PDF 导出；不回写受版本控制的 BOM。未配置采购输入明确报错；日期和未资格替代品的限制继续出现在采购结果。
-- [ ] verify schematic 对无 PCB 项目有效；pcb/release 不跳过必需板级输入；release 的 Gate A/B 与硬件证据仍为独立阻断，0 ERC 不覆盖它们。
-- [ ] 运行新工作流测试与已迁移门禁测试；对实际可用原生工具运行两个项目验证，逐项报告未执行条件。提交 `refactor(tools): unify native verification and evidence export`。
+- [x] 先添加失败测试：缺失 EXE、超时、退出零但空网表/残缺 ERC、旧输出污染、含空格程序路径、重复运行目录隔离、导出覆盖源文件。通过注入执行器测试跨平台逻辑，不把模拟结果写作真实 KiCad 通过。
+- [x] 迁移 Gate A/B 和 AD7606C 新鲜导出/验收逻辑；要求非空组件/网络及完整原生结果。源摘要范围排除本次输出、缓存和敏感文件；不得读取 .env 或环境变量值用于日志。
+- [x] 迁移 BOM、采购、网表和 PDF 导出；不回写受版本控制的 BOM。未配置采购输入明确报错；日期和未资格替代品的限制继续出现在采购结果。
+- [x] verify schematic 对无 PCB 项目有效；pcb/release 不跳过必需板级输入；release 的 Gate A/B 与硬件证据仍为独立阻断，0 ERC 不覆盖它们。
+- [x] 运行新工作流测试与已迁移门禁测试；对实际可用原生工具运行两个项目验证，逐项报告未执行条件。提交 `refactor(tools): unify native verification and evidence export`。
 
 ## Task 5：开发辅助与历史工具隔离
 
@@ -126,10 +126,10 @@ check 原理图作用域也运行项目声明的仓库/选型/接口静态规则
 
 **Interfaces:** `develop(project: Project, operation: str, apply: bool, output: Path) -> RunReport`；默认 preview，snapshot/apply 创建独立快照，sync 仅提供原生审阅计划。
 
-- [ ] 写 `test_preview_changes_no_source_bytes`、`test_snapshot_is_non_overwriting`、`test_sync_apply_rejected`、`test_check_does_not_import_pcbnew_or_archive`；先执行确认失败。
-- [ ] 实现源/输出冲突拒绝、快照 manifest 与前后摘要；不引入未验证的自动修板或布线功能。
-- [ ] 将历史工具移入归档目录并记录原路径、来源提交、适用旧设计和依赖。保留历史源码作为证据，不尝试通过执行它们验证当前板卡。
-- [ ] 运行开发辅助测试，在临时工程上验证 apply 只产生快照，原设计摘要精确不变；提交 `refactor(tools): isolate historical board repair utilities`。
+- [x] 写 `test_preview_changes_no_source_bytes`、`test_snapshot_is_non_overwriting`、`test_sync_apply_rejected`、`test_check_does_not_import_pcbnew_or_archive`；先执行确认失败。
+- [x] 实现源/输出冲突拒绝、快照 manifest 与前后摘要；不引入未验证的自动修板或布线功能。
+- [x] 将历史工具移入归档目录并记录原路径、来源提交、适用旧设计和依赖。保留历史源码作为证据，不尝试通过执行它们验证当前板卡。
+- [x] 运行开发辅助测试，在临时工程上验证 apply 只产生快照，原设计摘要精确不变；提交 `refactor(tools): isolate historical board repair utilities`。
 
 ## Task 6：文档归档、CI 切换与最终验收
 
@@ -137,17 +137,21 @@ check 原理图作用域也运行项目声明的仓库/选型/接口静态规则
 
 **Interfaces:** 消费全部 CLI/API；test 默认发现 tools/tests 和 ai_pcb_guide/tests，--pattern 用于筛选，运行异常和测试发现失败非零退出。
 
-- [ ] 添加端到端测试：两个工程配置解析且不串用规则、外部第三工程通用检查、CLI 子命令退出码、工作流必需检查集合不缩减。添加当前 Markdown 本地链接与有效入口引用检查，历史执行事实不强制改写。
-- [ ] 在 docs/toolkit_migration.md 完成逐文件归档映射。优先归档已被替代的 2026-10-09/10 修复过程和完成的旧计划；当前采购/接口/时序/冻结/门禁说明保留。引用先确认再移动，不按日期批量归档。
-- [ ] 保留 reviews/sourcing 原始证据路径与内容；历史报告移动后修复相对链接，并加历史标识及当前入口。release_gates 当前区移除与新选型矛盾的历史勾选展示，将原记录链接到归档，开放门禁不改为完成。
-- [ ] 所有 CI 和当前文档改用统一入口。CI 保留 schematic 与严格 release 区别；完整 test 执行所有原有回归及新增通用性测试。更新技能引用只修调用路径，不改其电气审批要求。
-- [ ] 删除重复旧实现和临时包装入口，检查源码及配置实际引用无旧路径；仅历史档案允许保留旧命令并标明历史语义。
-- [ ] 执行 `python tools/pcb.py test`、两个项目 `check --scope schematic`、可用原生 `verify --scope schematic`；严格 ADS8588S release 单独记录既有失败和 BLOCKED，不以通过为预期。
-- [ ] 比较 Task 1 基线清单、检查发现项及输入哈希。运行 `git diff --check`，检查原理图/PCB/库/封装/BOM/XDC 未改动、hardware/.history 未纳入，记录实际工具版本与每项未执行边界。
-- [ ] 提交 `docs(tools): migrate CI and document reusable PCB workflows`；交付分支、迁移统计、实际检查结果与剩余发布阻断，不推送或合并。
+- [x] 添加端到端测试：两个工程配置解析且不串用规则、外部第三工程通用检查、CLI 子命令退出码、工作流必需检查集合不缩减。添加当前 Markdown 本地链接与有效入口引用检查，历史执行事实不强制改写。
+- [x] 在 docs/toolkit_migration.md 完成逐文件归档映射。优先归档已被替代的 2026-10-09/10 修复过程和完成的旧计划；当前采购/接口/时序/冻结/门禁说明保留。引用先确认再移动，不按日期批量归档。
+- [x] 保留 reviews/sourcing 原始证据路径与内容；历史报告移动后修复相对链接，并加历史标识及当前入口。release_gates 当前区移除与新选型矛盾的历史勾选展示，将原记录链接到归档，开放门禁不改为完成。
+- [x] 所有 CI 和当前文档改用统一入口。CI 保留 schematic 与严格 release 区别；完整 test 执行所有原有回归及新增通用性测试。更新技能引用只修调用路径，不改其电气审批要求。
+- [x] 删除重复旧实现和临时包装入口，检查源码及配置实际引用无旧路径；仅历史档案允许保留旧命令并标明历史语义。
+- [x] 执行 `python tools/pcb.py test`、两个项目 `check --scope schematic`、可用原生 `verify --scope schematic`；严格 ADS8588S release 单独记录既有失败和 BLOCKED，不以通过为预期。
+- [x] 比较 Task 1 基线清单、检查发现项及输入哈希。运行 `git diff --check`，检查原理图/PCB/库/封装/BOM/XDC 未改动、hardware/.history 未纳入，记录实际工具版本与每项未执行边界。
+- [x] 提交 `docs(tools): migrate CI and document reusable PCB workflows`；交付分支、迁移统计、实际检查结果与剩余发布阻断，不推送或合并。
 
 ## 计划自审与执行交接
 
 设计的配置、通用检查、规则隔离、原生证据、导出、开发保护、文档归档和完整验收分别落在 Task 1–6。上面的五类 Review Focus 均有具名失败测试。计划中的临时不完整模块只存在于实现过程，最终交付不保留空壳命令或并行旧入口。
 
 推荐由当前代理在本会话顺序实施：各任务共享模型和迁移接口，顺序推进可减少并行修改冲突。用户也可选择分任务代理实施与审阅；未选择前不启动子代理。计划审阅通过并选定方式后再执行。
+
+## 执行完成
+
+全部六项任务完成；实际验证、独立审阅修复和环境边界见 [迁移记录](../../toolkit_migration.md)。按已批准范围保留本地主题分支，不推送或合并。
