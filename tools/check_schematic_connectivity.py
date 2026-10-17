@@ -13,7 +13,7 @@ from kicad_native import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-HW = ROOT / "hardware"
+HW = ROOT / "hardware" / "ads8588s_servo"
 TOP = HW / "ax7010_servo_reva.kicad_sch"
 CHILDREN = [
     HW / "power_input.kicad_sch",

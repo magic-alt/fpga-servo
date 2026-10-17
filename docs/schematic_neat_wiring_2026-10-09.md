@@ -2,8 +2,8 @@
 
 2026-10-09, branch `fix/ocp-latch-industrial-review`.
 
-Only the geometry of `hardware/gate_inverter.kicad_sch` and
-`hardware/current_adc.kicad_sch` was changed in this iteration. The snapshot is
+Only the geometry of `hardware/ads8588s_servo/gate_inverter.kicad_sch` and
+`hardware/ads8588s_servo/current_adc.kicad_sch` was changed in this iteration. The snapshot is
 `artifacts/schematic_neat/before/`. Existing work on other sheets was preserved.
 
 ## Drawing changes

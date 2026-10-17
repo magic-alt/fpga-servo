@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class VendorLandsTests(unittest.TestCase):
     def setUp(self):
-        self.rules = (ROOT / "hardware/ax7010_servo_reva.kicad_dru").read_text(
+        self.rules = (ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru").read_text(
             encoding="utf-8"
         )
 
@@ -33,7 +33,7 @@ class VendorLandsTests(unittest.TestCase):
         self.assertTrue(check_internal_pad_rules("(version 1)"))
 
     def test_actual_ti_lands(self):
-        board = (ROOT / "hardware/ax7010_servo_reva.kicad_pcb").read_text(
+        board = (ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb").read_text(
             encoding="utf-8"
         )
         self.assertEqual(check(board), [])

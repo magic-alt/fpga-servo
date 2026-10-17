@@ -17,7 +17,7 @@
 
 ## Project Structure & Module Organization
 
-`hardware/` contains the Rev.A KiCad schematic hierarchy, PCB baseline, local symbol library, and BOM. `fpga/ax7010_servo_reva.xdc` defines AX7010 PL pin constraints. `docs/` holds architecture, interface, bring-up, calculations, and release-gate notes. `tools/` contains standalone Python checks; `.github/workflows/` runs them in CI. There is no firmware or HDL implementation in this repository yet.
+`hardware/` contains separate `ads8588s_servo/` (Rev.A original) and `ad7606c_servo/` (new ADC development) projects, each with its own schematic hierarchy, local libraries and BOM; only the original has a PCB baseline. `fpga/ax7010_servo_reva.xdc` defines AX7010 PL pin constraints. `docs/` holds architecture, interface, bring-up, calculations, and release-gate notes. `tools/` contains standalone Python checks; `.github/workflows/` runs them in CI. There is no firmware or HDL implementation in this repository yet.
 
 ## Build, Test, and Development Commands
 
@@ -32,17 +32,17 @@ python tools/check_power_wiring.py
 python tools/check_design.py
 ```
 
-These validate native schematic syntax, the connection grid, layout and connectivity rules, and required design files. For schematic changes, run KiCad ERC from `hardware/`:
+These validate native schematic syntax, the connection grid, layout and connectivity rules, and required design files. For schematic changes, run KiCad ERC from `hardware/ads8588s_servo/`:
 
 ```sh
 kicad-cli sch erc --exit-code-violations --severity-all ax7010_servo_reva.kicad_sch
 ```
 
-Open `hardware/ax7010_servo_reva.kicad_pcb` in KiCad for board review and DRC. The PCB remains a development baseline; consult `docs/release_gates.md` before treating outputs as fabrication ready.
+Open `hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb` in KiCad for board review and DRC. The PCB remains a development baseline; consult `docs/release_gates.md` before treating outputs as fabrication ready.
 
 ## Coding Style & Naming Conventions
 
-Use four-space indentation in Python and keep checks executable as standalone `tools/check_*.py` scripts. Follow the existing lower-case, underscore-separated file names. Use KiCad 10 native `.kicad_sch` and `.kicad_sym`: A4 landscape, valid hierarchical ports, and a 50 mil connection grid. Keep project-local symbols and embedded symbols consistent; resolve the library through `hardware/sym-lib-table`. Update the XDC and interface documentation together when pin assignments change.
+Use four-space indentation in Python and keep checks executable as standalone `tools/check_*.py` scripts. Follow the existing lower-case, underscore-separated file names. Use KiCad 10 native `.kicad_sch` and `.kicad_sym`: A4 landscape, valid hierarchical ports, and a 50 mil connection grid. Keep project-local symbols and embedded symbols consistent; resolve the library through `hardware/ads8588s_servo/sym-lib-table`. Update the XDC and interface documentation together when pin assignments change.
 
 ## Testing Guidelines
 
@@ -57,7 +57,7 @@ Recent commits use Conventional Commit style, such as `fix(schematic): ...`, `te
 Export a fresh netlist before checking safety connectivity:
 
 ```sh
-kicad-cli sch export netlist --output artifacts/ax7010_servo_reva.net hardware/ax7010_servo_reva.kicad_sch
+kicad-cli sch export netlist --output artifacts/ax7010_servo_reva.net hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 python tools/check_netlist_safety.py artifacts/ax7010_servo_reva.net
 python tools/check_ocp_behavior.py artifacts/ax7010_servo_reva.net
 ```

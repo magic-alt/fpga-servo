@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>E:\work\Project\fpga-servo\hardware\ad7606c_servo\ax7010_servo_ad7606c.kicad_sch</source>
-    <date>2026-10-17T22:17:20</date>
+    <date>2026-10-17T22:24:48</date>
     <tool>Eeschema 10.0.3</tool>
     <textvar name="ADC">AD7606C-16BSTZ</textvar>
     <textvar name="DESIGN_STATUS">DEVELOPMENT - NOT FOR FABRICATION</textvar>

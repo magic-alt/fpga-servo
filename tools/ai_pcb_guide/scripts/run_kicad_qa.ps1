@@ -14,8 +14,8 @@ param(
 $ErrorActionPreference = 'Stop'
 $PSNativeCommandUseErrorActionPreference = $false
 $ProjectRoot = (Resolve-Path $ProjectRoot).Path
-$Sch = Join-Path $ProjectRoot 'hardware\ax7010_servo_reva.kicad_sch'
-$Pcb = Join-Path $ProjectRoot 'hardware\ax7010_servo_reva.kicad_pcb'
+$Sch = Join-Path $ProjectRoot 'hardware\ads8588s_servo\ax7010_servo_reva.kicad_sch'
+$Pcb = Join-Path $ProjectRoot 'hardware\ads8588s_servo\ax7010_servo_reva.kicad_pcb'
 $Audit = Join-Path $ProjectRoot 'tools\ai_pcb_guide\scripts\board_parity_audit.py'
 $Artifact = Join-Path $ProjectRoot 'artifacts\pcb-qa'
 New-Item -ItemType Directory -Force $Artifact | Out-Null

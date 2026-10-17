@@ -19,7 +19,7 @@ def main():
     logs=evidence/"logs";logs.mkdir(exist_ok=True)
     cli=args.kicad_cli
     top=HERE/"ax7010_servo_ad7606c.kicad_sch"
-    old=ROOT/"hardware/ax7010_servo_reva.kicad_sch"
+    old=ROOT/"hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch"
     steps=[]
 
     def run(name,cmd,scope):

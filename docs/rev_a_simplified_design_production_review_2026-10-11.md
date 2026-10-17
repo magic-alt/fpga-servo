@@ -49,12 +49,12 @@
 
 ## 3. BOM与采购成本：使用当前实际采购文件，不臆造量产价格
 
-- 仓库 `hardware/bom.csv`：159个对象，采购导出认为148个装配采购位号、分为68个采购组；其余包括DNP/外部端子/裸测试点。
-- `hardware/procurement_candidates.csv`：68组均为 `SOURCED_PROTOTYPE_ELIGIBLE`；此状态**仅是有近期立创库存、OEM初筛和装配采购位号覆盖，绝非PCB可装配/寿命/温升已批准**。
+- 仓库 `hardware/ads8588s_servo/bom.csv`：159个对象，采购导出认为148个装配采购位号、分为68个采购组；其余包括DNP/外部端子/裸测试点。
+- `hardware/ads8588s_servo/procurement_candidates.csv`：68组均为 `SOURCED_PROTOTYPE_ELIGIBLE`；此状态**仅是有近期立创库存、OEM初筛和装配采购位号覆盖，绝非PCB可装配/寿命/温升已批准**。
 - 每组按 `参考起始单价 × 该组每板数量` 求和：**164.6667元/板参考材料价格**。五板+20%备品并按当前记录的包装/最小订购量取整，估算一次购买**1069.9774元**；这是固定库存快照的算术结果，不是厂商实时报价。
 - 不包括：PCB制造、SMT贴片及通孔焊接、钢网、拼板、焊接损耗、代采手续费、运费、税费、测试治具、线束/电源/风扇、报废、售后和备货。
 - **前三成本贡献**：U6 40.82元 + Q1..Q8 26.40元 + U2..U4 10.38元 = 77.60元，占约47.1%。其余大量被动保护门级即使少数删去，总成本收益也未必抵得上重新布板和失效率风险。
-- 参见与2026-10-10库存快照一一对应的 `hardware/reva_cost_eco_2026-10-11.csv`。后续每次采购应刷新单价、库存、批次、最小起订量和可替代规则。
+- 参见与2026-10-10库存快照一一对应的 `hardware/ads8588s_servo/reva_cost_eco_2026-10-11.csv`。后续每次采购应刷新单价、库存、批次、最小起订量和可替代规则。
 
 ## 4. P0：必须先修复、否则不允许投板
 
@@ -155,7 +155,7 @@
 
 ## 10. 2026-10-12 原理图冻结专项增补
 
-此次继续审查已经实际修改了`hardware/current_adc.kicad_sch`、`hardware/power_input.kicad_sch`、`hardware/aux_power.kicad_sch`的非拓扑描述和NTC2网名，并修正`hardware/bom.csv`、禁用未装配J11 XDC虚拟pin；新增[ADS8588S 8路同时采样/双串行64 SCLK时序合同](adc_fpga_timing_and_freeze_2026-10-12.md)和[正式设计/BOM冻结矩阵](reva_schematic_component_freeze_matrix_2026-10-12.md)及源检查测试。不能以原PR“仅文档”作为现在提交范围或源状态。架构选择已固定，但L1/生产原理图冻结与动态电气及PCB门禁仍为BLOCKED。特别注意ADS8588S ±5V内置模拟滤波器16kHz截止频率与FOC环路的时间延迟，**20MHz总线频率不能消除模拟滤波的相位影响**。
+此次继续审查已经实际修改了`hardware/ads8588s_servo/current_adc.kicad_sch`、`hardware/ads8588s_servo/power_input.kicad_sch`、`hardware/ads8588s_servo/aux_power.kicad_sch`的非拓扑描述和NTC2网名，并修正`hardware/ads8588s_servo/bom.csv`、禁用未装配J11 XDC虚拟pin；新增[ADS8588S 8路同时采样/双串行64 SCLK时序合同](adc_fpga_timing_and_freeze_2026-10-12.md)和[正式设计/BOM冻结矩阵](reva_schematic_component_freeze_matrix_2026-10-12.md)及源检查测试。不能以原PR“仅文档”作为现在提交范围或源状态。架构选择已固定，但L1/生产原理图冻结与动态电气及PCB门禁仍为BLOCKED。特别注意ADS8588S ±5V内置模拟滤波器16kHz截止频率与FOC环路的时间延迟，**20MHz总线频率不能消除模拟滤波的相位影响**。
 
 ## 11. 现有证据及供货状态参考
 

@@ -4,7 +4,7 @@ import sys
 from kicad_native import extract_forms, parse_at, parse_xy, strip_form
 
 ROOT = Path(__file__).resolve().parents[1]
-HW = ROOT / "hardware"
+HW = ROOT / "hardware" / "ads8588s_servo"
 SCHEMATICS = sorted(HW.glob("*.kicad_sch"))
 GRID_MM = 1.27  # 50 mil
 TOL = 1e-6

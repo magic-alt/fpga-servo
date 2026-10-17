@@ -47,7 +47,7 @@ class EscapeRuleTests(unittest.TestCase):
 @unittest.skipIf(p is None, "native pcbnew required for physical escape audits")
 class NativeEscapeTests(unittest.TestCase):
     def setUp(self):
-        self.board = p.LoadBoard(str(ROOT / "hardware/ax7010_servo_reva.kicad_pcb"))
+        self.board = p.LoadBoard(str(ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"))
 
     def via(self):
         return next(

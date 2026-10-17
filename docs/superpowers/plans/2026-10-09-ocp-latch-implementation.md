@@ -12,7 +12,7 @@ Review Focus: Q=pin5、反相 Q=pin3；TPS3808 DBV 引脚；故障优先；清�
 ## Task 1: RED 网表安全约束
 - [x] 修改 tools/check_netlist_safety.py，要求真实 J1.10 清除路径、ARMED 接 U11.6、异步清零、监控器和去耦；对当前网表运行必须失败。
 ## Task 2: GREEN 电路与层级
-- [x] 新建 hardware/ocp_latch.kicad_sch；同步本地符号库；新器件独立去耦和明确默认偏置。
+- [x] 新建 hardware/ads8588s_servo/ocp_latch.kicad_sch；同步本地符号库；新器件独立去耦和明确默认偏置。
 - [x] 修改顶层、gate_inverter、原理图文件清单；导出 BOM、网表；通过安全连接检查。
 ## Task 3: 时序与验收
 - [x] 记录数据手册阈值/延迟/最小脉宽及清除竞争限制；运行基于实际网表的数字行为场景（不冒充模拟/台架验证）。

@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-工作分支 `fix/ocp-latch-industrial-review`。在保留既有页面布局的前提下新增 `hardware/ocp_latch.kicad_sch`，接入原先未使用的 FAULT_CLEAR；当前八页原理图、158 个器件、183 条网络。旧审查文件中的 137/163 或 137/169 为相应历史阶段的结果。
+工作分支 `fix/ocp-latch-industrial-review`。在保留既有页面布局的前提下新增 `hardware/ads8588s_servo/ocp_latch.kicad_sch`，接入原先未使用的 FAULT_CLEAR；当前八页原理图、158 个器件、183 条网络。旧审查文件中的 137/163 或 137/169 为相应历史阶段的结果。
 
 U20 SN74LVC1G74DCUR：CLK=1、D=2、反相 Q=3（NC）、GND=4、Q=5、/CLR=6、/PRE=7、VCC=8。D 来自 U22 对 GATE_EN 的反相，CLK 来自 U21 对清除信号的施密特整形。/PRE 固定为 VIO，/CLR 为 U23 输出 `OCP_OK & PWR_READY & POR_OK`。U11 第三输入改为 ARMED，原始 OCP_N 保留 J1.23 诊断。TP5 引出 ARMED。
 

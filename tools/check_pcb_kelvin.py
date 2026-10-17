@@ -142,7 +142,7 @@ def audit(board):
 def main():
     import pcbnew as p
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('board', nargs='?', type=Path, default=ROOT/'hardware/ax7010_servo_reva.kicad_pcb')
+    ap.add_argument('board', nargs='?', type=Path, default=ROOT/'hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb')
     ap.add_argument('--output', type=Path)
     args = ap.parse_args()
     folder = args.board.parent

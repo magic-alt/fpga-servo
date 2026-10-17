@@ -8,7 +8,7 @@ from check_vendor_lands import check as check_vendor_lands, check_internal_pad_r
 from check_pcb_kelvin import check_shunt_contract
 
 ROOT = Path(__file__).resolve().parents[1]
-HW = ROOT / "hardware"
+HW = ROOT / "hardware" / "ads8588s_servo"
 errors: list[str] = []
 
 schematic_paths = [

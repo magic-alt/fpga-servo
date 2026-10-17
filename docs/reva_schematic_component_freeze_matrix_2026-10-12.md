@@ -59,10 +59,10 @@ Vin = 48 V, Vout = 12 V, fsw = 300 kHz illustrative
 
 ## D. 原理图KiCad实际修改及净表影响
 
-- `hardware/current_adc.kicad_sch`：两处真实`(label "NTC_MOTOR")`统一为`(label "NTC_BOARD_AUX")`，NTC2的Description同时更正；8通道ADS8588S双串行信息写入页标题栏注释。**同一节点标签改名，网络连接物理拓扑未被故意改变；但网名发生变化，PCB须后续同步**。
-- `hardware/power_input.kicad_sch`：C3 Description `1uF_100V_FILM`→`1uF_250V_FILM`，保持1µF和原厂选中的实际250V订货号。
-- `hardware/aux_power.kicad_sch`：L1 Description从过期Coilcraft描述改成当前资格开放提示；不偷偷换MPN或改变焊盘。
-- `hardware/bom.csv`：C3、L1、NTC2 Function三项与现行选型/硬件安装位置相符，159个对象结构未改变。
+- `hardware/ads8588s_servo/current_adc.kicad_sch`：两处真实`(label "NTC_MOTOR")`统一为`(label "NTC_BOARD_AUX")`，NTC2的Description同时更正；8通道ADS8588S双串行信息写入页标题栏注释。**同一节点标签改名，网络连接物理拓扑未被故意改变；但网名发生变化，PCB须后续同步**。
+- `hardware/ads8588s_servo/power_input.kicad_sch`：C3 Description `1uF_100V_FILM`→`1uF_250V_FILM`，保持1µF和原厂选中的实际250V订货号。
+- `hardware/ads8588s_servo/aux_power.kicad_sch`：L1 Description从过期Coilcraft描述改成当前资格开放提示；不偷偷换MPN或改变焊盘。
+- `hardware/ads8588s_servo/bom.csv`：C3、L1、NTC2 Function三项与现行选型/硬件安装位置相符，159个对象结构未改变。
 - `fpga/ax7010_servo_reva.xdc`：J11不存在的30项并行/辅助pin assignment仅注释，J10 active 26条真实物理映射保持。
 - `tools/check_adc_serial_contract.py`及`tools/test_adc_serial_contract.py`：接口/源语义和负向变异回归；已接入两个硬件CI工作流。**此类静态检查无法证明真实功率关断或替代KiCad ERC**。
 
@@ -98,8 +98,8 @@ python tools/check_adc_serial_contract.py
 python tools/test_adc_serial_contract.py -v
 
 # 需要KiCad 10本机环境，并且本分支原理图已同步本机库：
-kicad-cli sch erc --exit-code-violations --severity-all hardware/ax7010_servo_reva.kicad_sch
-kicad-cli sch export netlist --format kicadxml --output /tmp/reva_latest.xml hardware/ax7010_servo_reva.kicad_sch
+kicad-cli sch erc --exit-code-violations --severity-all hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
+kicad-cli sch export netlist --format kicadxml --output /tmp/reva_latest.xml hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 python tools/check_adc_validity.py /tmp/reva_latest.xml
 ```
 

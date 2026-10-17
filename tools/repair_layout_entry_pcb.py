@@ -20,7 +20,7 @@ def field(text, key):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("netlist", type=Path)
-    parser.add_argument("--board", type=Path, default=Path("hardware/ax7010_servo_reva.kicad_pcb"))
+    parser.add_argument("--board", type=Path, default=Path("hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"))
     parser.add_argument("--report", type=Path, required=True)
     parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()

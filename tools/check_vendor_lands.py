@@ -112,7 +112,7 @@ def main():
         "board",
         nargs="?",
         type=Path,
-        default=ROOT / "hardware/ax7010_servo_reva.kicad_pcb",
+        default=ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb",
     )
     args = parser.parse_args()
     errors = check(args.board.read_text(encoding="utf-8"))

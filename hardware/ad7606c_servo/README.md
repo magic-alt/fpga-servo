@@ -1,6 +1,6 @@
 # AX7010 + AD7606C-16 独立开发工程
 
-本工程把已有高速 ADC 迁移规格落实为新的 KiCad 10 原理图，保留原 `hardware/ax7010_servo_reva.*` / ADS8588S 方案。源基线为 `17166bc`，开发分支为 `feat/ad7606c-independent-project`。所有新增文件均在本目录；未把旧 PCB 复制成新版 PCB。
+本工程把已有高速 ADC 迁移规格落实为新的 KiCad 10 原理图，保留原 `hardware/ads8588s_servo/ax7010_servo_reva.*` / ADS8588S 方案。源基线为 `17166bc`，开发分支为 `feat/ad7606c-independent-project`。所有新增文件均在本目录；未把旧 PCB 复制成新版 PCB。
 
 用 KiCad 打开 [ax7010_servo_ad7606c.kicad_pro](ax7010_servo_ad7606c.kicad_pro)。直接查看完整图纸可打开 [11 页原理图 PDF](evidence/schematic.pdf)。[开发板方案与调试流程](development_board.md) 说明接口、启动、配置、时序和后续 PCB 工作。
 

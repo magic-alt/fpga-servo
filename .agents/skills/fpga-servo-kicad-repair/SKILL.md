@@ -5,11 +5,11 @@ description: Use when repairing the fpga-servo AX7010 KiCad hierarchy, OCP and p
 
 # FPGA servo KiCad repair
 
-Use the repository root containing `hardware/ax7010_servo_reva.kicad_pro`. Read root `AGENTS.md` and `docs/release_gates.md`. Keep changes on a topic branch, carrying existing uncommitted changes intact. Inspect `git status -sb` and save local snapshots before editing electrical sources. Do not push or merge merely because this skill is loaded.
+Use the repository root containing `hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro`. Read root `AGENTS.md` and `docs/release_gates.md`. Keep changes on a topic branch, carrying existing uncommitted changes intact. Inspect `git status -sb` and save local snapshots before editing electrical sources. Do not push or merge merely because this skill is loaded.
 
 ## Find the actual design
 
-The source is native KiCad 10: `hardware/ax7010_servo_reva.kicad_sch` with project-local `ax7010_servo_reva.kicad_sym` and `sym-lib-table`. The old `.sch`, `.lib` and `check_legacy_schematic.py` commands are obsolete. Enumerate sheet children from the top source instead of assuming a fixed page count. Count exported components and nets; zero ERC on an empty or stale export is not evidence.
+The source is native KiCad 10: `hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch` with project-local `ax7010_servo_reva.kicad_sym` and `sym-lib-table`. The old `.sch`, `.lib` and `check_legacy_schematic.py` commands are obsolete. Enumerate sheet children from the top source instead of assuming a fixed page count. Count exported components and nets; zero ERC on an empty or stale export is not evidence.
 
 On this Windows installation KiCad CLI and its pcbnew-capable Python are under `D:/Software/KiCad/10.0/bin`. If a tool cannot open the local Windows path, use local CLI/source checks instead of changing the project to satisfy that tool.
 
@@ -42,7 +42,7 @@ For hardware OCP, verify raw OCP diagnostic routing, asynchronous trip, supervis
 After edits, export the BOM using `python tools/export_bom.py`, then export the netlist:
 
 ```sh
-kicad-cli sch export netlist --output artifacts/ax7010_servo_reva.net hardware/ax7010_servo_reva.kicad_sch
+kicad-cli sch export netlist --output artifacts/ax7010_servo_reva.net hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 python tools/check_native_schematic.py
 python tools/check_kicad_grid.py
 python tools/check_schematic_layout.py
@@ -51,7 +51,7 @@ python tools/check_power_wiring.py
 python tools/check_design.py
 python tools/check_netlist_safety.py artifacts/ax7010_servo_reva.net
 python tools/check_ocp_behavior.py artifacts/ax7010_servo_reva.net
-kicad-cli sch erc --severity-all --exit-code-violations --format json --output artifacts/ax7010_servo_reva_erc.json hardware/ax7010_servo_reva.kicad_sch
+kicad-cli sch erc --severity-all --exit-code-violations --format json --output artifacts/ax7010_servo_reva_erc.json hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 ```
 
 Run any additional focused checks introduced by the change. Test a new safety constraint against the old faulty netlist before relying on its passing result. Review exported schematic pages visually after geometry or symbol edits. Update interface documentation/XDC together only if physical pin assignments change.

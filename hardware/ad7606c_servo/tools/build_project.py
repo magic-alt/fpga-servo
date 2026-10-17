@@ -16,6 +16,7 @@ import build_levelshift
 
 HERE = Path(__file__).resolve().parents[1]
 ROOT = HERE.parents[1]
+LEGACY_HW = ROOT / "hardware" / "ads8588s_servo"
 sys.path.insert(0, str(ROOT / "tools"))
 from kicad_native import (extract_forms, head_string, parse_at, parse_xy,
                           property_value, strip_form, _scan_balanced)
@@ -83,6 +84,7 @@ def head(form):
 
 
 def source(name):
+    # BASE predates the directory reorganization; its historical Git path stays.
     return subprocess.check_output(["git", "show", f"{BASE}:hardware/{name}"],
                                    cwd=ROOT).decode("utf-8")
 
@@ -257,17 +259,17 @@ def build():
         raise RuntimeError("Generate hardware only on a topic branch")
     # Save source file hashes; reject dirty source drift rather than copying it.
     manifest={"base_commit":subprocess.check_output(["git","rev-parse",BASE],cwd=ROOT,text=True).strip(),"files":{}}
-    for path in sorted((ROOT/"hardware").iterdir()):
+    for path in sorted(LEGACY_HW.iterdir()):
         if path.is_file() and (path.suffix in {".kicad_sch",".kicad_sym",".kicad_pro",".kicad_pcb",".kicad_dru"} or path.name in {"bom.csv","sym-lib-table","fp-lib-table"}):
-            manifest["files"][str(path.relative_to(ROOT))]=hashlib.sha256(path.read_bytes()).hexdigest()
+            manifest["files"][path.relative_to(ROOT).as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
     (HERE/"source_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
     for name in SHEETS:
         if name in {"adc_core","adc_power","adc_levelshift","current_adc","ax7010_interface"}:
             continue
         (HERE/(name+".kicad_sch")).write_text(rename_instances(source(name+".kicad_sch"),name),encoding="utf-8")
-    shutil.copytree(ROOT/"hardware/fpga-servo.pretty",HERE/"fpga-servo.pretty",dirs_exist_ok=True)
+    shutil.copytree(LEGACY_HW/"fpga-servo.pretty",HERE/"fpga-servo.pretty",dirs_exist_ok=True)
     for name in ["sym-lib-table","fp-lib-table"]:
-        shutil.copy2(ROOT/"hardware"/name,HERE/name)
+        shutil.copy2(LEGACY_HW/name,HERE/name)
     lib=source("ax7010_servo_reva.kicad_sym")
     # Keep all reused library definitions and append the new vendor-audited symbol.
     lib=lib.rstrip()[:-1]+"\n"+ADC+"\n"+TXU+"\n)\n"

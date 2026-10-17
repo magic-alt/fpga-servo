@@ -40,7 +40,7 @@
 
 | 检查 | 本次结果 | 说明 |
 |---|---|---|
-| XML、板级网表、独立BOM、完整PDF导出 | exit 0 | 均从当前原生层次生成；未运行会覆盖hardware/bom.csv的旧导出脚本 |
+| XML、板级网表、独立BOM、完整PDF导出 | exit 0 | 均从当前原生层次生成；未运行会覆盖hardware/ads8588s_servo/bom.csv的旧导出脚本 |
 | 原生ERC | exit 0；8页，0错误/0警告/0排除 | 报告包含error/warning/exclusion；继承4类ignored_checks，见下表 |
 | 六项源检查 | 全部exit 0 | native_schematic、kicad_grid、schematic_layout、schematic_connectivity、power_wiring、design |
 | 安全网表 | exit 0 | 157元件/166网，逐物理脚关键连接回归 |

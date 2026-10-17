@@ -22,8 +22,8 @@ import tempfile
 from kicad_native import extract_forms, property_value
 
 ROOT = Path(__file__).resolve().parents[1]
-SCH = ROOT / 'hardware/ax7010_servo_reva.kicad_sch'
-BOARD = ROOT / 'hardware/ax7010_servo_reva.kicad_pcb'
+SCH = ROOT / 'hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch'
+BOARD = ROOT / 'hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb'
 
 
 def source_hashes() -> dict[str, str]:

@@ -6,7 +6,7 @@
 
 ## 已完成的独立 PCB 候选
 
-候选文件：`artifacts/remaining-repair/20261010/candidate/ax7010_servo_reva.kicad_pcb`。用户随后明确批准采用此候选，已写入 `hardware/ax7010_servo_reva.kicad_pcb`；写回后与审阅候选逐字节一致。**当前工作板是未通过发布验收的开发基线，未完成 layout**。可重现脚本：`tools/repair_legacy_pcb_routes.py`，使用 KiCad10 Python 从本轮 before 快照生成独立输出；禁止直接输出到 hardware。
+候选文件：`artifacts/remaining-repair/20261010/candidate/ax7010_servo_reva.kicad_pcb`。用户随后明确批准采用此候选，已写入 `hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb`；写回后与审阅候选逐字节一致。**当前工作板是未通过发布验收的开发基线，未完成 layout**。可重现脚本：`tools/repair_legacy_pcb_routes.py`，使用 KiCad10 Python 从本轮 before 快照生成独立输出；禁止直接输出到 hardware。
 
 - 20条旧铜线逐条重建，保留每条旧线的UUID作为第一段；旧PGND/VBUS/U_SH_P等网络改为网表中对应的真实网络。原路径、替换路径、铜宽和层记录在[migration.json](reviews/pcb_legacy_routes_2026-10-10/migration.json)，没有删除旧线来消数。
 - 六条 Kelvin 线分别从 RSH1..3 的专用 sense3/sense4 到 U2..4 的物理8/1脚；负载路径使用force1/force2。INA和去耦移到分流器附近。去耦位置已调整，供电/输出等其余网络尚待布线。
