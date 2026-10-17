@@ -65,38 +65,18 @@ jobs:
           test -z "$(find hardware/ads8588s_servo -maxdepth 1 -name '*.lib' -type f -print -quit)"
           test -s hardware/ads8588s_servo/sym-lib-table
 
-      - name: Run KiCad 10 ERC on tracked native hierarchy
+      - name: Validate AD7606C project symbol library with KiCad
         run: |
-          mkdir -p artifacts
-          set +e
-          cd hardware/ads8588s_servo
-          kicad-cli sch erc \
-            --exit-code-violations \
-            --severity-all \
-            --output ../../artifacts/ax7010_servo_reva_erc.rpt \
-            ax7010_servo_reva.kicad_sch
-          rc=$?
-          set -e
-          cat ../../artifacts/ax7010_servo_reva_erc.rpt || true
-          exit "$rc"
+          kicad-cli sym upgrade --force \
+            --output /tmp/ax7010_servo_ad7606c.validated.kicad_sym \
+            hardware/ad7606c_servo/ax7010_servo_reva.kicad_sym
+          test -s /tmp/ax7010_servo_ad7606c.validated.kicad_sym
 
-      - name: Export native KiCad netlist
-        run: |
-          mkdir -p artifacts
-          cd hardware/ads8588s_servo
-          kicad-cli sch export netlist \
-            --output ../../artifacts/ax7010_servo_reva.net \
-            ax7010_servo_reva.kicad_sch
+      - name: Check both native hierarchies and fresh netlists (schematic delivery)
+        run: python hardware/ad7606c_servo/tools/run_checks.py --kicad-cli kicad-cli --schematic-only
 
-          python3 ../../tools/check_netlist_safety.py ../../artifacts/ax7010_servo_reva.net
-          python3 ../../tools/check_ocp_behavior.py ../../artifacts/ax7010_servo_reva.net
-          kicad-cli sch export netlist --format kicadxml \
-            --output ../../artifacts/adc_validity.xml ax7010_servo_reva.kicad_sch
-          python3 ../../tools/check_adc_validity.py ../../artifacts/adc_validity.xml \
-            --output ../../artifacts/adc_validity.json
-          python3 ../../tools/test_adc_validity.py --netlist ../../artifacts/adc_validity.xml -v
-          python3 ../../tools/check_pcb_parity.py ../../artifacts/ax7010_servo_reva.net --output ../../artifacts/pcb_parity.json
-          python3 ../../tools/check_pcb_constraints.py ../../artifacts/ax7010_servo_reva.net
+      - name: Assert generated public evidence remains portable
+        run: python tools/check_public_paths.py
 
       - name: Upload ERC evidence
         if: always()
@@ -104,7 +84,13 @@ jobs:
         with:
           name: kicad-erc-report
           path: |
-            artifacts/ax7010_servo_reva.net
-            artifacts/pcb_parity.json
-            artifacts/ax7010_servo_reva_erc.rpt
+            hardware/ad7606c_servo/evidence/erc.json
+            hardware/ad7606c_servo/evidence/legacy-erc.json
+            hardware/ad7606c_servo/evidence/ad7606c.xml
+            hardware/ad7606c_servo/evidence/ad7606c.net
+            hardware/ad7606c_servo/evidence/legacy-baseline.xml
+            hardware/ad7606c_servo/evidence/legacy-baseline.net
+            hardware/ad7606c_servo/evidence/verification.json
+            hardware/ad7606c_servo/evidence/logs/
+            hardware/ad7606c_servo/evidence/schematic.pdf
           if-no-files-found: warn

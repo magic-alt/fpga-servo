@@ -258,10 +258,13 @@ def build():
     if not branch or branch in {"main","master"}:
         raise RuntimeError("Generate hardware only on a topic branch")
     # Save source file hashes; reject dirty source drift rather than copying it.
-    manifest={"base_commit":subprocess.check_output(["git","rev-parse",BASE],cwd=ROOT,text=True).strip(),"files":{}}
+    manifest={"base_commit":subprocess.check_output(["git","rev-parse",BASE],cwd=ROOT,text=True).strip(),"files":{},"text_sha256_lf":{},"original_paths":{},"text_hash_policy":"UTF-8 with LF line endings; files retains original byte hashes"}
     for path in sorted(LEGACY_HW.iterdir()):
         if path.is_file() and (path.suffix in {".kicad_sch",".kicad_sym",".kicad_pro",".kicad_pcb",".kicad_dru"} or path.name in {"bom.csv","sym-lib-table","fp-lib-table"}):
-            manifest["files"][path.relative_to(ROOT).as_posix()]=hashlib.sha256(path.read_bytes()).hexdigest()
+            name=path.relative_to(ROOT).as_posix()
+            manifest["files"][name]=hashlib.sha256(path.read_bytes()).hexdigest()
+            manifest["text_sha256_lf"][name]=hashlib.sha256(path.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+            manifest["original_paths"][name]="hardware/"+path.name
     (HERE/"source_manifest.json").write_text(json.dumps(manifest,indent=2)+"\n")
     for name in SHEETS:
         if name in {"adc_core","adc_power","adc_levelshift","current_adc","ax7010_interface"}:

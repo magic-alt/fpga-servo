@@ -4,6 +4,8 @@
 Exit 0: requested automated checks passed; 1: execution/check failed;
 2: --strict-gates requested and engineering gates remain blocked.
 --with-drc includes unfinished PCB DRC as a blocking automated check.
+--schematic-only checks schematic/BOM plus exact archived PCB regression;
+its success never certifies PCB parity, DRC or engineering gate closure.
 """
 from __future__ import annotations
 
@@ -32,6 +34,7 @@ def source_hashes() -> dict[str, str]:
         for path in (ROOT / directory).rglob('*'):
             if (path.is_file() and '.history' not in path.parts
                     and '__pycache__' not in path.parts
+                    and path.name != '.env' and not path.name.startswith('.env.')
                     and path.suffix not in ('.pyc', '.kicad_prl', '.lck')):
                 paths.add(path)
     return {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
@@ -43,9 +46,12 @@ def main() -> int:
     parser.add_argument('--output', type=Path, default=ROOT / 'artifacts/gate-ab')
     parser.add_argument('--kicad-cli', default='kicad-cli')
     parser.add_argument('--ngspice', default='ngspice')
+    parser.add_argument('--schematic-only', action='store_true')
     parser.add_argument('--with-drc', action='store_true')
     parser.add_argument('--strict-gates', action='store_true')
     args = parser.parse_args()
+    if args.schematic_only and args.with_drc:
+        parser.error('--schematic-only cannot include PCB release DRC')
     args.output.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ-')
     out = Path(tempfile.mkdtemp(prefix=stamp, dir=args.output.resolve()))
@@ -56,6 +62,8 @@ def main() -> int:
         'erc': {'status': 'NOT_RUN'}, 'drc': {'status': 'NOT_RUN'},
         'gate_a': {'status': 'BLOCKED'}, 'gate_b': {'status': 'BLOCKED'},
         'scope': 'Automated evidence only; no engineering or fabrication sign-off',
+        'delivery_scope': 'SCHEMATIC_BOM' if args.schematic_only else 'FULL_DESIGN',
+        'pcb_release': 'BLOCKED',
     }
 
     def run(name: str, command: list[str], timeout: int = 180) -> int:
@@ -170,13 +178,22 @@ def main() -> int:
                                       '-o', str(net), str(SCH)]) == 0 and net.is_file()
         for check in ('native_schematic', 'kicad_grid', 'schematic_layout',
                       'schematic_connectivity', 'power_wiring', 'design'):
-            run('check_' + check, [sys.executable, str(ROOT / f'tools/check_{check}.py')])
+            command = [sys.executable, str(ROOT / f'tools/check_{check}.py')]
+            if check == 'design' and args.schematic_only:
+                command.append('--schematic-only')
+            run('check_' + check, command)
         for name, location in [('pcb_regressions', 'tools/test_pcb_checks.py'),
                                ('tutorial_regressions', 'tools/ai_pcb_guide/tests/test_board_parity_audit.py')]:
             run(name, [sys.executable, str(ROOT / location)])
         if net_ok:
-            for check in ('netlist_safety', 'ocp_behavior', 'pcb_parity', 'pcb_constraints'):
+            checks = ('netlist_safety', 'ocp_behavior')
+            if not args.schematic_only:
+                checks += ('pcb_parity', 'pcb_constraints')
+            for check in checks:
                 run('check_' + check, [sys.executable, str(ROOT / f'tools/check_{check}.py'), str(net)])
+            if args.schematic_only:
+                run('archived_pcb_regression', [sys.executable, str(ROOT / 'tools/check_legacy_pcb_baseline.py'),
+                    '--netlist', str(net), '--output', str(out / 'archived_pcb.json')])
         if xml_ok:
             run('adc_regressions', [sys.executable, str(ROOT / 'tools/test_adc_validity.py'),
                                     '--netlist', str(xml), '-v'])

@@ -175,8 +175,12 @@ def run_shared_geometry(name):
 
 def source_errors():
     errors=[]
-    for name,digest in json.loads((HERE/"source_manifest.json").read_text())["files"].items():
-        if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=digest:
+    manifest=json.loads((HERE/"source_manifest.json").read_text(encoding="utf-8"))
+    if set(manifest["text_sha256_lf"]) != set(manifest["files"]):
+        return ["Original source hash coverage differs"]
+    for name,digest in manifest["text_sha256_lf"].items():
+        data=(ROOT/name).read_text(encoding="utf-8").encode("utf-8")
+        if hashlib.sha256(data).hexdigest()!=digest:
             errors.append(f"Original file changed: {name}")
     return errors
 

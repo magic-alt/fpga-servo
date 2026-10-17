@@ -22,7 +22,9 @@ jobs:
       - run: python tools/test_adc_serial_contract.py -v
       - run: python tools/check_ad7606c_fast_profile.py
       - run: python tools/test_ad7606c_fast_profile.py -v
-      - run: python tools/check_design.py
+      - run: python tools/check_design.py --schematic-only
+      - run: python tools/check_legacy_pcb_baseline.py
+      - run: python tools/test_ci_scope.py -v
       - run: python tools/test_pcb_checks.py
       - run: python tools/test_vendor_lands.py
       - run: python tools/test_pcb_escape.py

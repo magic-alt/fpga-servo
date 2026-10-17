@@ -5,6 +5,8 @@
 
 Rev.A is not fabrication-approved until every blocking item below is closed.
 
+PR automation now uses the explicit [schematic/BOM CI scope](ci_schematic_scope.md), with exact regression checks for the preserved unsynchronized PCB. Strict PCB parity/constraints/DRC checks remain available and blocking for release; a green PR does not close these gates.
+
 ## Current selection revision (2026-10-10)
 
 This section supersedes the component choices and routing counts in the archived chronology below. See [selection record](lcsc_sourcing_review_2026-10-10.md) for current verification and procurement evidence. The design uses phase-inline INA240A1DR with three 5 mΩ SMD shunts, plus bus-only **positive nominal +25 A** OCP (2 mΩ shunt, INA240A1DR, LM393LV). Phase-window OCP is removed; no reverse-current trip is claimed. DRV8300DPWR replaces FD6288, and unused J2 is removed. F1 is **onboard** 0456025.ER; there is no external fuse holder.

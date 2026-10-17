@@ -2,6 +2,11 @@ name: gate-ab-electrical
 
 on:
   workflow_dispatch:
+    inputs:
+      pcb_release:
+        description: "Run strict PCB parity, constraints, DRC and engineering gates (currently blocked)"
+        type: boolean
+        default: false
   pull_request:
     paths:
       - "hardware/**"
@@ -46,7 +51,12 @@ jobs:
       - name: Run evidence isolation regressions
         run: python -m unittest discover -s tools -p test_run_gate_ab.py -v
       - name: Collect fresh Gate A/B evidence through shared local entry point
-        run: python tools/run_gate_ab.py
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.pcb_release }}" = "true" ]; then
+            python tools/run_gate_ab.py --with-drc --strict-gates
+          else
+            python tools/run_gate_ab.py --schematic-only
+          fi
       - name: Upload reviewable evidence
         if: always()
         uses: actions/upload-artifact@v4

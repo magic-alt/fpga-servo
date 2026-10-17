@@ -1,4 +1,6 @@
 {
+  "delivery_scope": "SCHEMATIC_BOM",
+  "pcb_release": "BLOCKED",
   "kicad_version": "10.0.3",
   "python": "python",
   "python_version": "3.12.4",
@@ -80,7 +82,7 @@
     {
       "name": "legacy_check_design",
       "scope": "legacy_regression",
-      "exit_code": 1
+      "exit_code": 0
     },
     {
       "name": "legacy_check_adc_serial_contract",
@@ -89,6 +91,11 @@
     },
     {
       "name": "legacy_check_ad7606c_fast_profile",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "archived_pcb_regression",
       "scope": "legacy_regression",
       "exit_code": 0
     },

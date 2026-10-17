@@ -33,5 +33,23 @@
     "hardware/ads8588s_servo/ocp_latch.kicad_sch": "hardware/ocp_latch.kicad_sch",
     "hardware/ads8588s_servo/power_input.kicad_sch": "hardware/power_input.kicad_sch",
     "hardware/ads8588s_servo/sym-lib-table": "hardware/sym-lib-table"
-  }
+  },
+  "text_sha256_lf": {
+    "hardware/ads8588s_servo/aux_power.kicad_sch": "2e6209ebe6059ce2b6d90711a0e8bda1af4596c84c6d9579201185a4464138c9",
+    "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "e72b85ac598d5458c2e1aa9202cdec21a4ae4061175f6490a26d9c148e910fbc",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "1337aae80c538c8ca87922a66b530c5ae50224b92513cc30630637922d5cbedd",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "6c92243b051071892cbbd347c35e9e79499ce2a72e876ef01e37df815e2fd169",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "afe1395bb634f7c9225f7e59cead82905a03f28f7ee1399479bd3e82a97eec4e",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "4e88dc5bbf9a23111f9c81184de31a5c6e7912eb468ed71376bac8c75c43847a",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "77ff76eb44d8918ecbc93b296f5b1c1fbcb5251f8247d29e197034b8d08aad8b",
+    "hardware/ads8588s_servo/bom.csv": "b5679ffc81568e8b1bce66e1ac269f452f6241bc2accf5b5027398eab85a95ae",
+    "hardware/ads8588s_servo/current_adc.kicad_sch": "8a654358f26df9d2f5f7d8cfc272ec3ea2f0fa7e316bdc0472248ad6ffcbc4a9",
+    "hardware/ads8588s_servo/encoder.kicad_sch": "3f6d6bed782d1ae342547d57145b4a5877e8cd00205827b29322ad27ecccac97",
+    "hardware/ads8588s_servo/fp-lib-table": "9adf1e09e2691c07ac791c2c6a49e02a6a07f04e4ff2f1aa7a04299a93884cf7",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "28d4b3d581fb79e2028793641a83072b57fc35e8a4c2c590d46b33ec2ebe9048",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "36db27448f285938c1a4fc594538d3536ce5765b2cce4a100425a7f025b4ca57",
+    "hardware/ads8588s_servo/power_input.kicad_sch": "7e9551b80a397e5be3b0a07e9dd02b04fa6ced0738496b95ae622b159ad2440c",
+    "hardware/ads8588s_servo/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e"
+  },
+  "text_hash_policy": "UTF-8 with LF line endings; files retains original byte hashes"
 }

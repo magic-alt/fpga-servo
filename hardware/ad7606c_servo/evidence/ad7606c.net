@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch")
-		(date "2026-10-17T22:24:48")
+		(date "2026-10-17T22:54:27")
 		(tool "Eeschema 10.0.3")
 		(textvar
 			(name "ADC") "AD7606C-16BSTZ")
