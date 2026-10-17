@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from pcbtools.project import resolve_project
 """Regression and deliberate-error tests for proposed AD7606C profile."""
 import copy

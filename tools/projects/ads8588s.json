@@ -24,7 +24,8 @@
       "H2",
       "H3",
       "H4"
-    ]
+    ],
+    "procurement_source": "docs/sourcing"
   },
   "board": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"
 }

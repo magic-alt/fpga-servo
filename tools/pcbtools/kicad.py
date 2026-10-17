@@ -1,6 +1,7 @@
 """Shared KiCad native parsing; no project-specific references."""
 
 import re
+from pathlib import Path
 from dataclasses import dataclass
 
 NUMBER = r"-?\d+(?:\.\d+)?"
@@ -131,3 +132,53 @@ def property_value(form: str, name: str) -> str | None:
         form,
     )
     return match.group(1) if match else None
+
+
+def run_native(command: list[str], cwd: Path, timeout: float = 180) -> dict:
+    """Use argument vectors and retain failure evidence without logging env vars."""
+    import subprocess
+    try:
+        p = subprocess.run([str(x) for x in command], cwd=cwd, capture_output=True,
+                           encoding="utf-8", errors="replace", timeout=timeout)
+        return {"exit_code": p.returncode, "stdout": p.stdout, "stderr": p.stderr,
+                "status": "PASS" if p.returncode == 0 else "FAIL"}
+    except (OSError, subprocess.TimeoutExpired) as exc:
+        return {"exit_code": 1, "stdout": "", "stderr": "",
+                "status": "NOT_RUN", "error": type(exc).__name__}
+
+
+def read_xml_summary(path: Path) -> dict:
+    import xml.etree.ElementTree as ET
+    root = ET.parse(path).getroot()
+    comps = root.findall("./components/comp")
+    nets = root.findall("./nets/net")
+    if root.tag != "export" or not comps or not nets:
+        raise ValueError("Empty or incomplete native XML export")
+    refs = [c.get("ref") for c in comps]
+    if None in refs or len(set(refs)) != len(refs): raise ValueError("Duplicate/missing component reference")
+    pins = set()
+    for net in nets:
+        if not net.get("name"): raise ValueError("Unnamed native net")
+        for node in net.findall("node"):
+            key = (node.get("ref"),node.get("pin"))
+            if key[0] not in refs or not key[1] or key in pins:
+                raise ValueError("Invalid or duplicate physical pin")
+            pins.add(key)
+    if not pins: raise ValueError("Native XML has no physical pins")
+    return {"components":len(comps), "nets":len(nets), "physical_pins":len(pins)}
+
+
+def portable_netlist(path: Path, source: str) -> None:
+    # Export metadata alone is normalized; connectivity records remain exact.
+    from xml.sax.saxutils import escape
+    import json
+    text = path.read_text(encoding="utf-8")
+    if "<source>" in text:
+        pattern = r"(<design>\s*)<source>[^<]*</source>"
+        value = "<source>" + escape(source) + "</source>"
+    else:
+        pattern = r'(\(design\s*)\(source\s+"(?:[^"\\]|\\.)*"\)'
+        value = "(source " + json.dumps(source) + ")"
+    text,n = re.subn(pattern, lambda m:m[1]+value, text)
+    if n != 1: raise ValueError("Expected exactly one native source metadata field")
+    path.write_text(text, encoding="utf-8")

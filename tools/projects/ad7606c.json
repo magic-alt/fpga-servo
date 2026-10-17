@@ -14,6 +14,7 @@
     "protection"
   ],
   "parameters": {
-    "forbid_global_labels": true
+    "forbid_global_labels": true,
+    "baseline_config": "tools/projects/ads8588s.json"
   }
 }

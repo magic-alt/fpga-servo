@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from pcbtools.project import resolve_project
 """Meaningful fault-injection tests for ADC inhibit contracts on fresh XML."""
 from pathlib import Path
@@ -14,8 +14,12 @@ verify = _family.verify
 
 
 class AdcValidityTests(unittest.TestCase):
-    # Generate this file through kicad-cli; never use a tracked historical XML.
-    source = Path('artifacts/adc_validity.xml')
+    @classmethod
+    def setUpClass(cls):
+        from pcbtools import testing
+        if testing.NETLIST is None:
+            raise unittest.SkipTest("Fresh XML unavailable; use pcb.py test --kicad-cli EXE")
+        cls.source = testing.NETLIST
 
     def mutate(self, change):
         if not self.source.is_file():

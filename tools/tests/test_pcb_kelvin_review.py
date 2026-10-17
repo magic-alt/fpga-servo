@@ -1,11 +1,11 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from pcbtools.project import resolve_project
 """Independent review regressions. Run from repository root with KiCad Python."""
 import sys
 import unittest
-sys.path.insert(0, 'tools')
+sys.path.append('tools')
 from test_pcb_kelvin import fixture, v, p
 from pcbtools.rules.power_layout import kelvin_api
 _family = kelvin_api()

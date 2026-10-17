@@ -4,7 +4,7 @@ from pathlib import Path
 import sys
 import tempfile
 import unittest
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from pcbtools.project import load_project, resolve_project
 from pcbtools.rules import run_rules
 from pcbtools.board import check_board

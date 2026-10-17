@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from pcbtools.project import resolve_project
 """Regression tests for the narrowly bounded package escape exception."""
 
@@ -13,10 +13,7 @@ condition = _family.condition
 audit = _family.audit
 
 try:
-    try:
     import pcbnew as p
-except ImportError:
-    raise unittest.SkipTest("pcbnew unavailable in this interpreter; run native geometry lane")
 except ImportError:
     p = None
 
