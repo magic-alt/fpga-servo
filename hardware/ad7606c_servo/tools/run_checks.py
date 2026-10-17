@@ -9,11 +9,13 @@ import xml.etree.ElementTree as ET
 
 HERE=Path(__file__).resolve().parents[1]
 ROOT=HERE.parents[1]
+sys.path.insert(0,str(ROOT/"tools"))
+from check_public_paths import portable_netlist_text
 
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument("--kicad-cli",default="E:/Software/KiCad/bin/kicad-cli.exe")
+    ap.add_argument("--kicad-cli",default="kicad-cli")
     args=ap.parse_args()
     evidence=HERE/"evidence";evidence.mkdir(exist_ok=True)
     logs=evidence/"logs";logs.mkdir(exist_ok=True)
@@ -38,6 +40,7 @@ def main():
     for name,src,fmt,out in exports:
         if not run(name,[cli,"sch","export","netlist","--format",fmt,"--output",out,src],"native_export"):
             return 1
+        out.write_text(portable_netlist_text(out.read_text(encoding="utf-8"),src.relative_to(ROOT).as_posix()),encoding="utf-8")
     run("new_static_and_ocp",[sys.executable,"-X","utf8",HERE/"tools/check_project.py"],"new_schematic")
     run("new_visible_power",[sys.executable,"-X","utf8",ROOT/"tools/check_power_wiring.py",HERE],"new_schematic")
     run("new_erc",[cli,"sch","erc","--severity-all","--exit-code-violations","--format","json","--output",evidence/"erc.json",top],"new_schematic")
@@ -55,7 +58,7 @@ def main():
     source_files=[*HERE.glob("*.kicad_sch"),*HERE.glob("*.kicad_sym"),*HERE.glob("*.kicad_pro"),*HERE.glob("*.xdc"),HERE/"adc_profile.json"]
     erc=json.loads((evidence/"erc.json").read_text(encoding="utf-8"))
     violations=[v for s in erc["sheets"] for v in s["violations"]]
-    summary={"kicad_version":version,"python":sys.executable,"python_version":sys.version.split()[0],
+    summary={"kicad_version":version,"python":"python","python_version":sys.version.split()[0],
              "new_erc_errors":sum(v["severity"]=="error" for v in violations),
              "new_erc_warnings":sum(v["severity"]=="warning" for v in violations),
              "new_erc_exclusions":sum(bool(v.get("excluded",False)) for v in violations),

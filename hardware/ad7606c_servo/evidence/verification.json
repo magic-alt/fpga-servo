@@ -1,6 +1,6 @@
 {
   "kicad_version": "10.0.3",
-  "python": "E:\\anaconda3\\python.exe",
+  "python": "python",
   "python_version": "3.12.4",
   "new_erc_errors": 0,
   "new_erc_warnings": 0,

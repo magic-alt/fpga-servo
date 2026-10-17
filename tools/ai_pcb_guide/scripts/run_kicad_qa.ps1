@@ -8,7 +8,7 @@
 [CmdletBinding()]
 param(
     [string] $ProjectRoot = (Resolve-Path '.').Path,
-    [string] $KiCadCli = 'D:\Software\KiCad\10.0\bin\kicad-cli.exe',
+    [string] $KiCadCli = 'kicad-cli',
     [string] $PythonExe = 'python'
 )
 $ErrorActionPreference = 'Stop'
@@ -19,6 +19,7 @@ $Pcb = Join-Path $ProjectRoot 'hardware\ads8588s_servo\ax7010_servo_reva.kicad_p
 $Audit = Join-Path $ProjectRoot 'tools\ai_pcb_guide\scripts\board_parity_audit.py'
 $Artifact = Join-Path $ProjectRoot 'artifacts\pcb-qa'
 New-Item -ItemType Directory -Force $Artifact | Out-Null
+$KiCadCli = (Get-Command -Name $KiCadCli -CommandType Application -ErrorAction Stop).Source
 foreach ($p in @($KiCadCli, $Sch, $Pcb, $Audit)) { if (!(Test-Path $p)) { throw "Missing: $p" } }
 $rc = @{}
 & $KiCadCli version

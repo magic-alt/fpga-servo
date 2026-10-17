@@ -36,7 +36,7 @@
 
 ## 实际验证与边界
 
-本机 KiCad 10.0.3，`E:\anaconda3\python.exe` 3.12.4。最终执行记录见 [verification.json](evidence/verification.json) 和 [静态结果](evidence/static-checks.json)。新旧 XML 均为本轮原生导出，不使用历史计数代替。
+本机 KiCad 10.0.3，`python` 3.12.4。最终执行记录见 [verification.json](evidence/verification.json) 和 [静态结果](evidence/static-checks.json)。新旧 XML 均为本轮原生导出，不使用历史计数代替。
 
 新工程验证包括：完整物理脚和模式检查、层次一致性、50 mil 网格/A4 布局、可见电源连线、18 项错误注入、531 项 OCP 稳态数字场景、ADC 供电静态阈值和原生全严重度 ERC。最新网表为 **181 个系统元件对象 / 162 个网络**，其中板载元件对象 180 个，另 1 个为外部 J6；DNP 另列于 BOM。原工程保留为 159 元件/135 网络。
 
@@ -51,7 +51,7 @@
 在仓库根目录执行：
 
 ```powershell
-E:\anaconda3\python.exe -X utf8 hardware/ad7606c_servo/tools/run_checks.py
+python -X utf8 hardware/ad7606c_servo/tools/run_checks.py
 ```
 
 如 KiCad 路径不同，追加 `--kicad-cli <kicad-cli.exe路径>`。完整输出在 `evidence/logs/`，逐步骤退出码在 `evidence/verification.json`。旧 PCB 门禁失败会让总命令返回 1。

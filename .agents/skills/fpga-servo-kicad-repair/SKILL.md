@@ -11,7 +11,7 @@ Use the repository root containing `hardware/ads8588s_servo/ax7010_servo_reva.ki
 
 The source is native KiCad 10: `hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch` with project-local `ax7010_servo_reva.kicad_sym` and `sym-lib-table`. The old `.sch`, `.lib` and `check_legacy_schematic.py` commands are obsolete. Enumerate sheet children from the top source instead of assuming a fixed page count. Count exported components and nets; zero ERC on an empty or stale export is not evidence.
 
-On this Windows installation KiCad CLI and its pcbnew-capable Python are under `D:/Software/KiCad/10.0/bin`. If a tool cannot open the local Windows path, use local CLI/source checks instead of changing the project to satisfy that tool.
+Resolve `kicad-cli` from PATH or provide its location as a local command argument. Use a KiCad Python environment with `pcbnew` for board checks. Keep workstation installation paths out of public files.
 
 ## Repair and verify the electrical graph
 

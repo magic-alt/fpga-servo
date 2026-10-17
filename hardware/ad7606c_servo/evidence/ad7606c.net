@@ -1,7 +1,7 @@
 (export
 	(version "E")
 	(design
-		(source "E:\\work\\Project\\fpga-servo\\hardware\\ad7606c_servo\\ax7010_servo_ad7606c.kicad_sch")
+		(source "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch")
 		(date "2026-10-17T22:24:48")
 		(tool "Eeschema 10.0.3")
 		(textvar

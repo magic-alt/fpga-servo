@@ -20,6 +20,6 @@
   "passed": true,
   "source_sha256": {
     "artifacts\\routing-completion-20261010\\final.net": "7ce191d104b67dfa8abd691541856f3787a1221c63c90ec5991464d398a1545f",
-    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "5a83d0cbe352fc35a273143347556f10eed2327f1856d91eb6a9205ab1c23d5c"
+    "hardware/ax7010_servo_reva.kicad_pcb": "5a83d0cbe352fc35a273143347556f10eed2327f1856d91eb6a9205ab1c23d5c"
   }
 }

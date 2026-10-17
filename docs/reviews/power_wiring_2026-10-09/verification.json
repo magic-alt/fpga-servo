@@ -1,7 +1,7 @@
 [
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/export_bom.py"
     ],
     "returncode": 0,
@@ -9,7 +9,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_native_schematic.py"
     ],
     "returncode": 0,
@@ -17,7 +17,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_kicad_grid.py"
     ],
     "returncode": 0,
@@ -25,7 +25,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_schematic_layout.py"
     ],
     "returncode": 0,
@@ -33,7 +33,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_schematic_connectivity.py"
     ],
     "returncode": 0,
@@ -41,7 +41,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_design.py"
     ],
     "returncode": 0,
@@ -49,7 +49,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_power_wiring.py"
     ],
     "returncode": 0,
@@ -57,7 +57,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/test_pcb_checks.py"
     ],
     "returncode": 0,
@@ -65,7 +65,7 @@
   },
   {
     "command": [
-      "D:/Software/KiCad/10.0/bin/kicad-cli.exe",
+      "kicad-cli",
       "sch",
       "export",
       "netlist",
@@ -78,7 +78,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_netlist_safety.py",
       "artifacts\\power_wiring_review\\final.net"
     ],
@@ -87,7 +87,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_ocp_behavior.py",
       "artifacts\\power_wiring_review\\final.net"
     ],
@@ -96,7 +96,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       ".agents/skills/schematic-humanizer/scripts/compare_connectivity.py",
       "artifacts\\power_wiring_review\\before.xml",
       "artifacts\\power_wiring_review\\final.xml"

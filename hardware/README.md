@@ -12,7 +12,7 @@
 仓库根目录的检查脚本默认检查 `ads8588s_servo/`。两个方案的完整原生检查入口为：
 
 ```powershell
-E:\anaconda3\python.exe -X utf8 hardware/ad7606c_servo/tools/run_checks.py
+python -X utf8 hardware/ad7606c_servo/tools/run_checks.py
 ```
 
 目录整理不改变电气设计，也不解除发布门禁。原方案 PCB 的已知检查失败、新方案 PCB/RTL/STA/硬件实测的未完成状态保持不变，详见各方案说明和 [发布门禁](../docs/release_gates.md)。

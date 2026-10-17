@@ -10,8 +10,8 @@
 
 实际可用工具：
 
-- KiCad CLI：`D:/Software/KiCad/10.0/bin/kicad-cli.exe`，10.0.3。
-- KiCad Python：`D:/Software/KiCad/10.0/bin/python.exe`，已验证 `import pcbnew` 与版本 10.0.3。
+- KiCad CLI：`kicad-cli`，10.0.3。
+- KiCad Python：`python`，已验证 `import pcbnew` 与版本 10.0.3。
 - 默认 `python`：3.13.9。本次所有检查在它上面通过；CI 固定 3.12，本次没有验证本地 3.12。`py` 启动器不可用。
 - 现有 KiCad MCP 可读取本工程 Windows 路径，`get_pcb_statistics` 调用成功。当前工具集合包含分析、ERC/DRC、报告/渲染/制造导出及部分原理图编辑能力；不能把工具包提及的另一 MCP 的同步或自动布线能力视为已安装。同步可使用 KiCad GUI F8，编辑可使用经验证的原生 pcbnew。
 
@@ -25,15 +25,13 @@ Windows 受限命令工具当前出现 `helper_unknown_error: setup refresh had 
 & .\tools\ai_pcb_guide\scripts\run_kicad_qa.ps1
 ```
 
-可用 `-KiCadCli`、`-PythonExe`、`-ProjectRoot` 显式覆盖路径；默认 KiCad 路径已适配本机。入口运行原生 ERC、XML 与原生网表导出、教程静态审计、五项仓库检查、11 项 PCB 回归、安全连接、531 项 OCP 稳态场景、逐焊盘 PCB 一致性和机械/网络类约束，再运行全部严重级别的原生 DRC（含一致性检查与内存铺铜更新）。无 `--save-board`，不保存 PCB；不改严重级别或排除项。
+可用 `-KiCadCli`、`-PythonExe`、`-ProjectRoot` 显式覆盖路径；默认通过 PATH 查找 `kicad-cli`。入口运行原生 ERC、XML 与原生网表导出、教程静态审计、五项仓库检查、11 项 PCB 回归、安全连接、531 项 OCP 稳态场景、逐焊盘 PCB 一致性和机械/网络类约束，再运行全部严重级别的原生 DRC（含一致性检查与内存铺铜更新）。无 `--save-board`，不保存 PCB；不改严重级别或排除项。
 
 报告位于 `artifacts/pcb-qa/`，每步退出码见 `step_exit_codes.json`。存在违规时整体应失败，不能当作部署失败忽略，也不能将辅助静态审计当作制造资格。导出失败时不使用历史网表继续证明通过。Bash 脚本仅是补充 ERC/DRC 入口，路径已调整，本机未执行验证。
 
 四个技能的格式验证命令（Windows 需 UTF-8）：
 
-```powershell
-python -X utf8 C:/Users/GCB002/.codex/skills/.system/skill-creator/scripts/quick_validate.py .agents/skills/kicad-audit
-```
+使用已安装的 `skill-creator` 技能中的 `scripts/quick_validate.py`，以 `.agents/skills/kicad-audit` 为参数。工具安装位置只在本地命令中指定，不写入公开仓库。
 
 对另外三个技能分别运行相同命令。四项均通过；这只验证技能格式，不能证明任何自动布线或制造能力。
 

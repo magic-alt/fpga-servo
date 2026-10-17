@@ -66,7 +66,7 @@ VDRV_12V由母线产生，VA_5V来自12V级；VIO_3V3由AX7010提供。所有域
 
 ```powershell
 kicad-cli sch export netlist --format kicadxml --output artifacts/layout_netlist.xml hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
-python tools/simulate_layout_entry.py artifacts/layout_netlist.xml --ngspice-library D:/Software/KiCad/10.0/bin/ngspice.dll --output artifacts/layout_simulation
+python tools/simulate_layout_entry.py artifacts/layout_netlist.xml --ngspice-library ngspice.dll --output artifacts/layout_simulation
 ```
 
 独立审查已重跑同一工具，数值结果一致；另用网表副本移除R40.2，验证脚本在加载模拟器前拒绝错误拓扑（[拒绝测试](reviews/layout_entry_2026-10-09/simulation_guard_test.json)）。文档本地链接、证据哈希及图像布局已检查。

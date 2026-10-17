@@ -6,7 +6,7 @@
 
 | 项目 | 结果 |
 |---|---|
-| 本机工具 | KiCad 10.0.3；E:\anaconda3\python.exe 3.12.4 |
+| 本机工具 | KiCad 10.0.3；python 3.12.4 |
 | 新原生 XML | 181 系统元件对象，162 网络；板载对象 180，另有外部 J6 |
 | 新原生 ERC | 0 errors / 0 warnings / 0 exclusions |
 | 旧原生 XML/ERC | 159 元件 / 135 网络；ERC 0/0 |
