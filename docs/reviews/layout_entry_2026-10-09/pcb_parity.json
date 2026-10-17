@@ -31,6 +31,6 @@
   "passed": false,
   "source_sha256": {
     "artifacts\\layout_entry_2026-10-09\\netlist.net": "1e1c40c5d5cdb43b73fa2803731811e4a77a8e81d4ca0a9dee941f4958a27117",
-    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec"
+    "hardware/ax7010_servo_reva.kicad_pcb": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec"
   }
 }

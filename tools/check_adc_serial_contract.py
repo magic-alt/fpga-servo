@@ -66,10 +66,10 @@ def timing():
 
 def check(root: Path = ROOT) -> list[str]:
     errors: list[str] = []
-    sch = (root / "hardware/current_adc.kicad_sch").read_text(encoding="utf-8")
-    interface = (root / "hardware/ax7010_interface.kicad_sch").read_text(encoding="utf-8")
+    sch = (root / "hardware/ads8588s_servo/current_adc.kicad_sch").read_text(encoding="utf-8")
+    interface = (root / "hardware/ads8588s_servo/ax7010_interface.kicad_sch").read_text(encoding="utf-8")
     xdc = (root / "fpga/ax7010_servo_reva.xdc").read_text(encoding="utf-8")
-    with (root / "hardware/bom.csv").open(encoding="utf-8", newline="") as fd:
+    with (root / "hardware/ads8588s_servo/bom.csv").open(encoding="utf-8", newline="") as fd:
         bom = {r["Ref"]: r for r in csv.DictReader(fd)}
 
     for name in ADC_SIGNAL_NAMES:

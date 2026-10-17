@@ -77,7 +77,7 @@
     {
       "name": "kicad_version",
       "command": [
-        "/Users/kaermax/.local/bin/kicad-cli",
+        "kicad-cli",
         "--version"
       ],
       "log": "kicad_version.log",
@@ -95,7 +95,7 @@
     {
       "name": "erc",
       "command": [
-        "/Users/kaermax/.local/bin/kicad-cli",
+        "kicad-cli",
         "sch",
         "erc",
         "--severity-all",
@@ -112,7 +112,7 @@
     {
       "name": "export_xml",
       "command": [
-        "/Users/kaermax/.local/bin/kicad-cli",
+        "kicad-cli",
         "sch",
         "export",
         "netlist",
@@ -128,7 +128,7 @@
     {
       "name": "export_native",
       "command": [
-        "/Users/kaermax/.local/bin/kicad-cli",
+        "kicad-cli",
         "sch",
         "export",
         "netlist",

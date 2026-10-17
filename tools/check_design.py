@@ -1,4 +1,5 @@
 from pathlib import Path
+import argparse
 import csv
 import re
 import sys
@@ -7,8 +8,12 @@ from kicad_native import extract_forms, property_value, strip_form
 from check_vendor_lands import check as check_vendor_lands, check_internal_pad_rules
 from check_pcb_kelvin import check_shunt_contract
 
+parser = argparse.ArgumentParser(description="Validate schematic/BOM; PCB checks remain strict by default")
+parser.add_argument("--schematic-only", action="store_true", help="Explicit schematic/BOM delivery scope; no PCB release approval")
+args = parser.parse_args()
+
 ROOT = Path(__file__).resolve().parents[1]
-HW = ROOT / "hardware"
+HW = ROOT / "hardware" / "ads8588s_servo"
 errors: list[str] = []
 
 schematic_paths = [
@@ -131,7 +136,7 @@ if "(on_board no)" not in j6 or property_value(j6, "Footprint"):
     errors.append("J6 must remain an external source wiring terminal without a PCB footprint")
 
 pcb_path = HW / "ax7010_servo_reva.kicad_pcb"
-if pcb_path.exists():
+if not args.schematic_only and pcb_path.exists():
     pcb = pcb_path.read_text(errors="ignore")
     if pcb.count("(") != pcb.count(")"):
         errors.append("PCB s-expression parentheses are unbalanced")
@@ -217,7 +222,7 @@ if bom_path.exists():
         if part not in joined:
             errors.append(f"BOM missing part: {part}")
 
-if (HW / "ax7010_servo_reva.kicad_pcb").exists():
+if not args.schematic_only and (HW / "ax7010_servo_reva.kicad_pcb").exists():
     errors.extend(check_vendor_lands((HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8")))
 
 errors.extend(check_shunt_contract(
@@ -225,10 +230,12 @@ errors.extend(check_shunt_contract(
     (HW / "ax7010_servo_reva.kicad_sym").read_text(encoding="utf-8"),
     (HW / "gate_inverter.kicad_sch").read_text(encoding="utf-8"),
     (HW / "fpga-servo.pretty/HoYLR2512_Kelvin.kicad_mod").read_text(encoding="utf-8"),
+    include_board=not args.schematic_only,
 ))
 
 rules_path = HW / "ax7010_servo_reva.kicad_dru"
-errors.extend(check_internal_pad_rules(rules_path.read_text(encoding="utf-8") if rules_path.exists() else ""))
+if not args.schematic_only:
+    errors.extend(check_internal_pad_rules(rules_path.read_text(encoding="utf-8") if rules_path.exists() else ""))
 
 if errors:
     print("DESIGN CHECK FAILED")
@@ -236,4 +243,4 @@ if errors:
         print(" -", error)
     sys.exit(1)
 
-print("DESIGN CHECK PASSED")
+print("SCHEMATIC / BOM CHECK PASSED (PCB release not evaluated)" if args.schematic_only else "DESIGN CHECK PASSED")

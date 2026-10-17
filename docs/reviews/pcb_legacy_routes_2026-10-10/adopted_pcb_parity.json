@@ -20,6 +20,6 @@
   "passed": true,
   "source_sha256": {
     "artifacts\\pcb-adoption\\20261010-103916\\current.net": "acc1355f37db8063e5180b658cf47d1121891cf9d3fbbac9dca32a1a6777852e",
-    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "99edf086370a93c0a4bda5b896e857abdd282a1ba9471337c61a5517087f173c"
+    "hardware/ax7010_servo_reva.kicad_pcb": "99edf086370a93c0a4bda5b896e857abdd282a1ba9471337c61a5517087f173c"
   }
 }

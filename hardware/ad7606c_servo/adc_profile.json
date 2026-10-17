@@ -1,0 +1,189 @@
+{
+  "schema": 1,
+  "status": "IMPLEMENTED_IN_INDEPENDENT_SCHEMATIC_ONLY",
+  "decision_date": "2026-10-12",
+  "selection": {
+    "manufacturer": "Analog Devices",
+    "mpn": "AD7606C-16BSTZ",
+    "lcsc": "C5371769",
+    "packaging_alternate": "AD7606C-16BSTZ-RL",
+    "packaging_alternate_lcsc": "C5240947",
+    "datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf"
+  },
+  "hardware": {
+    "adc_supply_analog": "VA_5V nominal 5.1V, min normal 5.026V max normal 5.174V but actual dynamic remains unqualified",
+    "adc_supply_digital": "VA_5V, same physical rail as AVCC; U27-U29 TXU0204PWR translate to AX7010 VIO_3V3",
+    "enable_switching_condition": "Only after ADC register readback & fast fault chain valid",
+    "connector": "J10 / 40pin / currently one header",
+    "sourcing_review": "Not yet approved production; same LQFP-64 dimensions are NOT pin-compatible",
+    "interface_enable": "PWR_READY drives all TXU0204 OE pins"
+  },
+  "external_pins": [
+    {
+      "header_pin": 11,
+      "fpga_pin": "Y14",
+      "signal": "ADC_CONVST",
+      "legacy_signal": "ADC_CONVST"
+    },
+    {
+      "header_pin": 12,
+      "fpga_pin": "W14",
+      "signal": "ADC_SCLK",
+      "legacy_signal": "ADC_SCLK"
+    },
+    {
+      "header_pin": 13,
+      "fpga_pin": "P18",
+      "signal": "ADC_CS_N",
+      "legacy_signal": "ADC_CS_N"
+    },
+    {
+      "header_pin": 14,
+      "fpga_pin": "N17",
+      "signal": "ADC_RESET",
+      "legacy_signal": "ADC_RESET"
+    },
+    {
+      "header_pin": 15,
+      "fpga_pin": "U15",
+      "signal": "ADC_DOUTA",
+      "legacy_signal": "ADC_DOUTA"
+    },
+    {
+      "header_pin": 16,
+      "fpga_pin": "U14",
+      "signal": "ADC_DOUTB",
+      "legacy_signal": "ADC_DOUTB"
+    },
+    {
+      "header_pin": 17,
+      "fpga_pin": "P16",
+      "signal": "ADC_BUSY",
+      "legacy_signal": "ADC_BUSY"
+    },
+    {
+      "header_pin": 18,
+      "fpga_pin": "P15",
+      "signal": "ADC_FRSTDATA",
+      "legacy_signal": "ADC_FRSTDATA"
+    },
+    {
+      "header_pin": 29,
+      "fpga_pin": "U12",
+      "signal": "ADC_DOUTC",
+      "legacy_signal": "SPARE_A0"
+    },
+    {
+      "header_pin": 30,
+      "fpga_pin": "T12",
+      "signal": "ADC_DOUTD",
+      "legacy_signal": "SPARE_A1"
+    },
+    {
+      "header_pin": 31,
+      "fpga_pin": "T10",
+      "signal": "ADC_SDI",
+      "legacy_signal": "SPARE_A2"
+    }
+  ],
+  "mode_straps": {
+    "OS2": 1,
+    "OS1": 1,
+    "OS0": 1,
+    "PAR_SER_SEL": 1,
+    "STBY": 1,
+    "RANGE": "TIE_STABLE_HIGH_OR_LOW_IN_SOFTWARE_MODE",
+    "REF_SELECT": 1
+  },
+  "configuration": {
+    "0x02": {
+      "name": "CONFIG",
+      "value": "0x10",
+      "explanation": "4 lanes, normal, no status header, no ext oversampling clock"
+    },
+    "0x03": {
+      "name": "RANGE_CH1_CH2",
+      "value": "0x55",
+      "explanation": "both 0-5V"
+    },
+    "0x04": {
+      "name": "RANGE_CH3_CH4",
+      "value": "0x65",
+      "explanation": "CH3 0-5V / CH4 0-10V"
+    },
+    "0x05": {
+      "name": "RANGE_CH5_CH6",
+      "value": "0x66",
+      "explanation": "both 0-10V"
+    },
+    "0x06": {
+      "name": "RANGE_CH7_CH8",
+      "value": "0x66",
+      "explanation": "unused 0-10V"
+    },
+    "0x07": {
+      "name": "BANDWIDTH",
+      "value": "0x0F",
+      "explanation": "CH1..4 high-BW"
+    },
+    "0x08": {
+      "name": "OVERSAMPLING",
+      "value": "0x00",
+      "explanation": "no digital averaging"
+    }
+  },
+  "data_lanes": {
+    "DOUTA": [
+      "IU_ADC",
+      "IV_ADC"
+    ],
+    "DOUTB": [
+      "IW_ADC",
+      "VBUS_ADC"
+    ],
+    "DOUTC": [
+      "NTC_BOARD",
+      "NTC_BOARD_AUX"
+    ],
+    "DOUTD": [
+      "UNUSED_CH7",
+      "UNUSED_CH8"
+    ]
+  },
+  "timing": {
+    "resolution_bits": 16,
+    "adc_channels": 8,
+    "serial_lanes": 4,
+    "frame_sclk_edges": 32,
+    "initial_sclk_hz": 5000000,
+    "initial_frame_time_us": 6.4,
+    "conversion_time_max_us": 0.65,
+    "analog_phase_delay_typ_us": 1.7,
+    "phase_delay_mode": "unipolar0-5V, high BW",
+    "analog_3db_bandwidth_khz": 150,
+    "digital_sclk_max_hz_at_3v3": 63500000,
+    "pwm_base_frequency_hz": 20000,
+    "target_current_loop_bandwidth_hz": [
+      3000,
+      5000
+    ],
+    "qualification_target_sclk_hz": 20000000,
+    "qualification_target_frame_time_us": 1.6,
+    "translator_round_trip_timing": "OPEN: SCLK A->B + ADC tD_SCK_DO + DOUT B->A + cable + FPGA capture margin"
+  },
+  "blocking_gates": [
+    "ADC/connector footprint and new PCB placement, routing, parity, DRC/DFM closure",
+    "ADC register readback, frame alignment, error handling and AX7010 Vivado STA",
+    "PWM switching noise, calibrated current response and measured loop stability",
+    "Regulator load, AVCC rapid undervoltage and full OCP dynamic shutdown qualification"
+  ],
+  "schematic": "ax7010_servo_ad7606c.kicad_sch",
+  "startup": {
+    "full_reset_min_high_ns": 3200,
+    "post_full_reset_min_us": 274,
+    "stable_rails_before_first_reset_min_ms": 10,
+    "first_reset_note": "Rev.A Table3 footnote3: tPOWER-UP + tDEVICE_SETUP > 2 seconds",
+    "development_first_reset_wait_ms": 2100,
+    "gate_enable_policy": "Keep GATE_EN low until rail/setup timing, device ID, config readback and fresh frames pass"
+  }
+}

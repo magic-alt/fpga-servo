@@ -2,7 +2,7 @@
 
 日期：2026-10-09。分支：`fix/ocp-latch-industrial-review`。
 
-本轮修改原生 `hardware/gate_inverter.kicad_sch`、`hardware/current_adc.kicad_sch` 和项目符号库。保留已有未提交工作，不修改 PCB。
+本轮修改原生 `hardware/ads8588s_servo/gate_inverter.kicad_sch`、`hardware/ads8588s_servo/current_adc.kicad_sch` 和项目符号库。保留已有未提交工作，不修改 PCB。
 
 ## 网上参考与 Skill
 

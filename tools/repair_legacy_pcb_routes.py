@@ -17,7 +17,7 @@ def main():
     ap.add_argument("output", type=Path)
     args = ap.parse_args()
     assert args.source.resolve() != args.output.resolve()
-    assert args.output.parent.resolve() != (Path(__file__).resolve().parents[1] / "hardware"), "Candidate outputs only; adoption requires separate review"
+    assert not args.output.resolve().is_relative_to(Path(__file__).resolve().parents[1] / "hardware"), "Candidate outputs only; adoption requires separate review"
     b = p.LoadBoard(str(args.source))
     fps = {f.GetReference(): f for f in b.GetFootprints()}
     tracks = {t.m_Uuid.AsString(): t for t in b.GetTracks()}

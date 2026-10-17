@@ -1,5 +1,5 @@
 {
-  "candidate": "D:\\Project\\fpga-servo\\artifacts\\adc-uv-repair\\20261010\\pcb_candidate.kicad_pcb",
+  "candidate": "artifacts/adc-uv-repair/20261010/pcb_candidate.kicad_pcb",
   "copper_mechanics_preserved": true,
   "provisional_new_positions_mm": {
     "R92": [

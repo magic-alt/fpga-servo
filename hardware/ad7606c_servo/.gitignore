@@ -1,0 +1,11 @@
+*.kicad_prl
+~*.lck
+*-backups/
+tools/__pycache__/
+evidence/diagnostic/
+evidence/*-test.xml
+evidence/page-*.png
+evidence/logs/
+evidence/svg/
+evidence/legacy-baseline.net
+evidence/reorganization/*.xml

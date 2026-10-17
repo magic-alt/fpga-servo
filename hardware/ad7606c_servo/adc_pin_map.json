@@ -1,0 +1,578 @@
+[
+  {
+    "number": 1,
+    "name": "AVCC",
+    "type": "power_in",
+    "unit": 4,
+    "x": -50.8,
+    "y": 12.7,
+    "angle": 270
+  },
+  {
+    "number": 2,
+    "name": "AGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": -57.15,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 3,
+    "name": "OS0",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": 20.32,
+    "angle": 0
+  },
+  {
+    "number": 4,
+    "name": "OS1",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": 15.24,
+    "angle": 0
+  },
+  {
+    "number": 5,
+    "name": "OS2",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": 10.16,
+    "angle": 0
+  },
+  {
+    "number": 6,
+    "name": "PAR_SER_SEL",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": 5.08,
+    "angle": 0
+  },
+  {
+    "number": 7,
+    "name": "STBY",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": 0.0,
+    "angle": 0
+  },
+  {
+    "number": 8,
+    "name": "RANGE",
+    "type": "input",
+    "unit": 3,
+    "x": 22.86,
+    "y": -10.16,
+    "angle": 180
+  },
+  {
+    "number": 9,
+    "name": "CONVST",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": 35.56,
+    "angle": 0
+  },
+  {
+    "number": 10,
+    "name": "WR_N",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": -5.079999999999998,
+    "angle": 0
+  },
+  {
+    "number": 11,
+    "name": "RESET",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": 27.94,
+    "angle": 0
+  },
+  {
+    "number": 12,
+    "name": "SCLK",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": 20.32,
+    "angle": 0
+  },
+  {
+    "number": 13,
+    "name": "CS_N",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": 12.700000000000003,
+    "angle": 0
+  },
+  {
+    "number": 14,
+    "name": "BUSY",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": 5.080000000000002,
+    "angle": 180
+  },
+  {
+    "number": 15,
+    "name": "FRSTDATA",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": -2.539999999999999,
+    "angle": 180
+  },
+  {
+    "number": 16,
+    "name": "DB0_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -10.16,
+    "angle": 0
+  },
+  {
+    "number": 17,
+    "name": "DB1_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -12.7,
+    "angle": 0
+  },
+  {
+    "number": 18,
+    "name": "DB2_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -15.24,
+    "angle": 0
+  },
+  {
+    "number": 19,
+    "name": "DOUTE",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": -10.159999999999997,
+    "angle": 180
+  },
+  {
+    "number": 20,
+    "name": "DOUTF",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": -17.78,
+    "angle": 180
+  },
+  {
+    "number": 21,
+    "name": "DOUTG",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": -25.4,
+    "angle": 180
+  },
+  {
+    "number": 22,
+    "name": "DOUTH",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": -33.019999999999996,
+    "angle": 180
+  },
+  {
+    "number": 23,
+    "name": "VDRIVE",
+    "type": "power_in",
+    "unit": 4,
+    "x": 71.12,
+    "y": 12.7,
+    "angle": 270
+  },
+  {
+    "number": 24,
+    "name": "DOUTA",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": 35.56,
+    "angle": 180
+  },
+  {
+    "number": 25,
+    "name": "DOUTB",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": 27.94,
+    "angle": 180
+  },
+  {
+    "number": 26,
+    "name": "AGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": -39.37,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 27,
+    "name": "DOUTC",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": 20.32,
+    "angle": 180
+  },
+  {
+    "number": 28,
+    "name": "DOUTD",
+    "type": "output",
+    "unit": 2,
+    "x": 25.4,
+    "y": 12.700000000000003,
+    "angle": 180
+  },
+  {
+    "number": 29,
+    "name": "SDI",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": 5.080000000000002,
+    "angle": 0
+  },
+  {
+    "number": 30,
+    "name": "DB12_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -17.78,
+    "angle": 0
+  },
+  {
+    "number": 31,
+    "name": "DB13_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -20.32,
+    "angle": 0
+  },
+  {
+    "number": 32,
+    "name": "DB14_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -22.86,
+    "angle": 0
+  },
+  {
+    "number": 33,
+    "name": "DB15_SER_GND",
+    "type": "input",
+    "unit": 2,
+    "x": -25.4,
+    "y": -25.4,
+    "angle": 0
+  },
+  {
+    "number": 34,
+    "name": "REF_SELECT",
+    "type": "input",
+    "unit": 3,
+    "x": -22.86,
+    "y": -10.16,
+    "angle": 0
+  },
+  {
+    "number": 35,
+    "name": "AGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": -21.589999999999996,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 36,
+    "name": "REGCAP_A",
+    "type": "passive",
+    "unit": 5,
+    "x": -38.1,
+    "y": 12.7,
+    "angle": 0
+  },
+  {
+    "number": 37,
+    "name": "AVCC",
+    "type": "power_in",
+    "unit": 4,
+    "x": -20.319999999999997,
+    "y": 12.7,
+    "angle": 270
+  },
+  {
+    "number": 38,
+    "name": "AVCC",
+    "type": "power_in",
+    "unit": 4,
+    "x": 10.160000000000004,
+    "y": 12.7,
+    "angle": 270
+  },
+  {
+    "number": 39,
+    "name": "REGCAP_D",
+    "type": "passive",
+    "unit": 5,
+    "x": -38.1,
+    "y": -12.7,
+    "angle": 0
+  },
+  {
+    "number": 40,
+    "name": "AGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": -3.809999999999995,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 41,
+    "name": "AGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": 13.970000000000006,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 42,
+    "name": "REFIN_REFOUT",
+    "type": "passive",
+    "unit": 5,
+    "x": 38.1,
+    "y": 12.7,
+    "angle": 180
+  },
+  {
+    "number": 43,
+    "name": "REFGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": 49.53000000000001,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 44,
+    "name": "REFCAPA",
+    "type": "passive",
+    "unit": 5,
+    "x": 38.1,
+    "y": -12.7,
+    "angle": 180
+  },
+  {
+    "number": 45,
+    "name": "REFCAPB",
+    "type": "passive",
+    "unit": 5,
+    "x": 38.1,
+    "y": -20.32,
+    "angle": 180
+  },
+  {
+    "number": 46,
+    "name": "REFGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": 67.31,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 47,
+    "name": "AGND",
+    "type": "power_in",
+    "unit": 4,
+    "x": 31.750000000000007,
+    "y": -33.02,
+    "angle": 90
+  },
+  {
+    "number": 48,
+    "name": "AVCC",
+    "type": "power_in",
+    "unit": 4,
+    "x": 40.64,
+    "y": 12.7,
+    "angle": 270
+  },
+  {
+    "number": 49,
+    "name": "V1+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": 33.02,
+    "angle": 0
+  },
+  {
+    "number": 50,
+    "name": "V1-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": 33.02,
+    "angle": 180
+  },
+  {
+    "number": 51,
+    "name": "V2+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": 25.400000000000002,
+    "angle": 0
+  },
+  {
+    "number": 52,
+    "name": "V2-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": 25.400000000000002,
+    "angle": 180
+  },
+  {
+    "number": 53,
+    "name": "V3+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": 17.78,
+    "angle": 0
+  },
+  {
+    "number": 54,
+    "name": "V3-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": 17.78,
+    "angle": 180
+  },
+  {
+    "number": 55,
+    "name": "V4+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": 10.160000000000004,
+    "angle": 0
+  },
+  {
+    "number": 56,
+    "name": "V4-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": 10.160000000000004,
+    "angle": 180
+  },
+  {
+    "number": 57,
+    "name": "V5+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": 2.5400000000000027,
+    "angle": 0
+  },
+  {
+    "number": 58,
+    "name": "V5-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": 2.5400000000000027,
+    "angle": 180
+  },
+  {
+    "number": 59,
+    "name": "V6+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": -5.079999999999998,
+    "angle": 0
+  },
+  {
+    "number": 60,
+    "name": "V6-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": -5.079999999999998,
+    "angle": 180
+  },
+  {
+    "number": 61,
+    "name": "V7+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": -12.699999999999996,
+    "angle": 0
+  },
+  {
+    "number": 62,
+    "name": "V7-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": -12.699999999999996,
+    "angle": 180
+  },
+  {
+    "number": 63,
+    "name": "V8+",
+    "type": "input",
+    "unit": 1,
+    "x": -25.4,
+    "y": -20.32,
+    "angle": 0
+  },
+  {
+    "number": 64,
+    "name": "V8-",
+    "type": "input",
+    "unit": 1,
+    "x": 25.4,
+    "y": -20.32,
+    "angle": 180
+  }
+]

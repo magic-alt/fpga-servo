@@ -31,6 +31,6 @@
   "passed": false,
   "source_sha256": {
     "artifacts\\power_wiring_review\\precommit.net": "be43ce28b39040168103a2fe52ed4665580fd4fd3eea67fca0a6b39a4871b940",
-    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec"
+    "hardware/ax7010_servo_reva.kicad_pcb": "581f590151e439a771ab280e0449887680f917d3f7b9451c74a67d4b1b849eec"
   }
 }

@@ -120,7 +120,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("netlist", type=Path)
     parser.add_argument("board", nargs="?", type=Path,
-                        default=ROOT / "hardware/ax7010_servo_reva.kicad_pcb")
+                        default=ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb")
     parser.add_argument("--output", type=Path)
     args = parser.parse_args()
     report = audit_text(args.netlist.read_text(encoding="utf-8"),

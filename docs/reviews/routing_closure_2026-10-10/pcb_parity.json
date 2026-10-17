@@ -20,6 +20,6 @@
   "passed": true,
   "source_sha256": {
     "artifacts\\routing-closure\\20261010\\after.net": "398d441e62140d452b2bcdb70196f824f2c2f664b911d1c857d5bdc9a2882439",
-    "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb": "d73a6b2815c1241e7cb9264c3f5e24d5a00731f4bdf7493a795a480d57fd3c4d"
+    "hardware/ax7010_servo_reva.kicad_pcb": "d73a6b2815c1241e7cb9264c3f5e24d5a00731f4bdf7493a795a480d57fd3c4d"
   }
 }

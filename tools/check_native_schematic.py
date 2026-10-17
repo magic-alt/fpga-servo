@@ -5,7 +5,7 @@ import sys
 from kicad_native import assert_balanced, extract_forms, head_string, property_value, strip_form
 
 ROOT = Path(__file__).resolve().parents[1]
-HW = ROOT / "hardware"
+HW = ROOT / "hardware" / "ads8588s_servo"
 TOP = HW / "ax7010_servo_reva.kicad_sch"
 CHILD_NAMES = [
     "power_input.kicad_sch",
@@ -55,7 +55,7 @@ def check_serial_adc(text: str, source: str, required_name: str) -> None:
             errors.append(f"{source}: ADC status/DOUT pin{number} must remain output")
 
 if not SYMBOL_LIB.exists() or SYMBOL_LIB.stat().st_size == 0:
-    errors.append("missing/empty native symbol library: hardware/ax7010_servo_reva.kicad_sym")
+    errors.append("missing/empty native symbol library: hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym")
 else:
     symbol_text = SYMBOL_LIB.read_text(encoding="utf-8", errors="strict")
     check_diode_terminals(symbol_text, SYMBOL_LIB.name)

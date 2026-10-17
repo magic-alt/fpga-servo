@@ -1,0 +1,4940 @@
+(kicad_sch (version 20260306) (generator "eeschema") (generator_version "10.0") (uuid "147b5f2c-34d8-5116-8923-36feec95b95a") (paper "A4") (title_block (title "Rev.B - current sensing / independent bus OCP") (date "2026-10-17") (rev "B-DEV") (company "magic-alt/fpga-servo") (comment 1 "AD7606C independent development schematic; release gates OPEN")) (lib_symbols (symbol "LM393LV"
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at 0 -1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM393LV"
+			(at 0 1.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:TI_DDF0008A"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm393lv.pdf"
+			(at 0 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "LM393LV_0_1"
+			(rectangle
+				(start -10.16 12.7)
+				(end 10.16 -15.24)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+		)
+		(symbol "LM393LV_1_1"
+			(pin open_collector line
+				(at 15.24 2.54 180)
+				(length 5.08)
+				(name "OUT1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 0 0)
+				(length 5.08)
+				(name "IN1-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 5.08 0)
+				(length 5.08)
+				(name "IN1+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 -20.32 90)
+				(length 5.08)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 -7.62 0)
+				(length 5.08)
+				(name "IN2+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -15.24 -12.7 0)
+				(length 5.08)
+				(name "IN2-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin open_collector line
+				(at 15.24 -10.16 180)
+				(length 5.08)
+				(name "OUT2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 0 17.78 270)
+				(length 5.08)
+				(name "VCC"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+(symbol "ax7010_servo_reva:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -3.048 1.016) (xy 3.048 1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -1.016) (xy 3.048 -1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 6.35 270)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "ax7010_servo_reva:INA240A1"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 22.352 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "INA240A1"
+				(at 0 -22.352 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "INA240A1_0_1"
+				(rectangle
+					(start -15.24 12.7)
+					(end 15.24 -12.7)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "INA240A1_1_1"
+				(pin input line
+					(at -20.32 2.54 0)
+					(length 5.08)
+					(name "IN-"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -17.78 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -17.78 90)
+					(length 5.08)
+					(name "REF2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 -17.78 90)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 20.32 0 180)
+					(length 5.08)
+					(name "OUT"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 17.78 270)
+					(length 5.08)
+					(name "VS"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 2.54 17.78 270)
+					(length 5.08)
+					(name "REF1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -20.32 -2.54 0)
+					(length 5.08)
+					(name "IN+"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "ax7010_servo_reva:PWR_GND" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 0 -4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_GND_0_1" (polyline (pts (xy 0 0) (xy 0 -1.27) (xy -1.27 -1.27) (xy 0 -2.54) (xy 1.27 -1.27) (xy 0 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_GND_1_1" (pin passive line (at 0 0 90) (length 0) (name "GND" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+(symbol "ax7010_servo_reva:PWR_VA_5V" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VA_5V" (at 0 4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_VA_5V_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_VA_5V_1_1" (pin passive line (at 0 0 90) (length 0) (name "VA_5V" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+(symbol "ax7010_servo_reva:PWR_VIO_3V3" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VIO_3V3" (at 0 4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_VIO_3V3_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_VIO_3V3_1_1" (pin passive line (at 0 0 90) (length 0) (name "VIO_3V3" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+(symbol "ax7010_servo_reva:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names (offset 0) (hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -3.81 1.524)
+					(end 3.81 -1.524)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		))
+(symbol
+		(lib_id "ax7010_servo_reva:INA240A1")
+		(at 43.18 50.8 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a000015")
+		(property "Reference" "U2"
+			(at 45.72 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA240A1DR"
+			(at 45.72 53.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+			(at 43.18 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+			(at 43.18 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "INA240A1DR_U_20VperV"
+			(at 43.18 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "eff8786b-00a6-4d0c-9ccd-94894a988377")
+		)
+		(pin "2"
+			(uuid "30503792-db6a-4fd1-8651-f437aa9b912f")
+		)
+		(pin "3"
+			(uuid "cba2c04d-aa15-4b99-b11e-e50ec7841f9c")
+		)
+		(pin "4"
+			(uuid "6e152ef7-7c38-4899-ac0f-866c5b77fd87")
+		)
+		(pin "5"
+			(uuid "1fefcc4e-1c3e-4956-8443-888f22338ae7")
+		)
+		(pin "6"
+			(uuid "2e97e327-e8b0-443b-bb76-2feabee62f6c")
+		)
+		(pin "7"
+			(uuid "a270a312-0b81-4419-b5a4-7383ba56921b")
+		)
+		(pin "8"
+			(uuid "e7dce3f0-0201-4e82-8a5f-698f6a678787")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	(property "Manufacturer" "TI(德州仪器)" (at 43.18 50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "INA240A1DR" (at 43.18 50.8 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C2060769" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 76.2 50.8 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a000016")
+		(property "Reference" "R40"
+			(at 78.74 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47R"
+			(at 78.74 53.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 76.2 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+			(at 76.2 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "47R_ADC_ISOLATION"
+			(at 76.2 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "c2824e33-7b5f-4e19-8b0e-613178514da9")
+		)
+		(pin "2"
+			(uuid "9a1efa9b-c4e6-4044-896b-3b1098412ff7")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "R40")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "RS-03K47R0FT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C140087" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "0603WAF470JT5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C23182" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 91.44 60.96 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a000017")
+		(property "Reference" "C40"
+			(at 93.98 58.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 93.98 63.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 91.44 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 91.44 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "1nF_C0G_ADC"
+			(at 91.44 60.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "e67fc17b-6ed8-472f-ad48-2021047bd1c3")
+		)
+		(pin "2"
+			(uuid "6ca8f9d9-660a-4df4-b877-461b27190773")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "C40")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603CG102J101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C88489" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10C102JB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C163508" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 73.66 34.29 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a000018")
+		(property "Reference" "C43"
+			(at 76.2 31.75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 76.2 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 73.66 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 73.66 34.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100nF_INA_DECOUPLE"
+			(at 73.66 34.29 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "a3b55290-5702-4d95-a047-252434a0853a")
+		)
+		(pin "2"
+			(uuid "e55e1aac-3f33-480f-a030-89e1a9ffa88a")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "C43")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B104K500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C30926" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B104KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C1591" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:INA240A1")
+		(at 43.18 92.71 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a000019")
+		(property "Reference" "U3"
+			(at 45.72 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA240A1DR"
+			(at 45.72 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+			(at 43.18 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+			(at 43.18 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "INA240A1DR_V_20VperV"
+			(at 43.18 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "c58cc536-f141-4a19-ab84-834fa7a5aadc")
+		)
+		(pin "2"
+			(uuid "fc4910a4-7339-4a70-91b7-be269e3c54d6")
+		)
+		(pin "3"
+			(uuid "47ef88fe-842d-4f70-88ac-a81c6f0b82ac")
+		)
+		(pin "4"
+			(uuid "58619459-ccef-45fe-937e-33f6cb4a0e47")
+		)
+		(pin "5"
+			(uuid "d73079d4-5490-45a3-a09a-9c5f33f164db")
+		)
+		(pin "6"
+			(uuid "07053316-2654-4aad-ae0d-dfa23969e13b")
+		)
+		(pin "7"
+			(uuid "1c274fa6-2d78-4d65-aa13-b15fb8541741")
+		)
+		(pin "8"
+			(uuid "6b5f9947-b90d-4943-9229-5515280d23c4")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	(property "Manufacturer" "TI(德州仪器)" (at 43.18 92.71 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "INA240A1DR" (at 43.18 92.71 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C2060769" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 76.2 92.71 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a00001a")
+		(property "Reference" "R41"
+			(at 78.74 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47R"
+			(at 78.74 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 76.2 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+			(at 76.2 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "47R_ADC_ISOLATION"
+			(at 76.2 92.71 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "5343be67-626c-42a3-b035-2908b6aa97be")
+		)
+		(pin "2"
+			(uuid "3a34b777-ede2-48d0-aff8-4707ca5f2b75")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "R41")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "RS-03K47R0FT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C140087" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "0603WAF470JT5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C23182" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 91.44 102.87 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a00001b")
+		(property "Reference" "C41"
+			(at 93.98 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 93.98 105.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 91.44 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 91.44 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "1nF_C0G_ADC"
+			(at 91.44 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "951984b4-7d61-4230-a3ca-c904aa0df3bc")
+		)
+		(pin "2"
+			(uuid "8135bad0-2630-482a-aa0e-9ce431942bb9")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "C41")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603CG102J101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C88489" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10C102JB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C163508" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 73.66 76.2 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a00001c")
+		(property "Reference" "C44"
+			(at 76.2 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 76.2 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 73.66 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 73.66 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100nF_INA_DECOUPLE"
+			(at 73.66 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "fc383555-6dd2-4870-be3d-274b24aa81f6")
+		)
+		(pin "2"
+			(uuid "a6a67449-85fb-44e0-bca1-6a18e5ebeffe")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "C44")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B104K500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C30926" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B104KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C1591" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:INA240A1")
+		(at 43.18 134.62 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a00001d")
+		(property "Reference" "U4"
+			(at 45.72 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA240A1DR"
+			(at 45.72 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+			(at 43.18 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+			(at 43.18 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "INA240A1DR_W_20VperV"
+			(at 43.18 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "a9a30a4c-94d2-42b1-8038-5a298237ee81")
+		)
+		(pin "2"
+			(uuid "25dc96d7-bb4e-4fdf-a333-f6526ce992bb")
+		)
+		(pin "3"
+			(uuid "d54a5abc-94c8-473b-952b-8ee1bb24261b")
+		)
+		(pin "4"
+			(uuid "2028b091-90ee-4cef-9842-14d31a952753")
+		)
+		(pin "5"
+			(uuid "2cb706d8-a4a0-43bd-9049-1027a5239fd7")
+		)
+		(pin "6"
+			(uuid "2ff09d67-684d-42f1-80f0-7961f213f5ed")
+		)
+		(pin "7"
+			(uuid "9bad6013-81d5-490c-991d-a83ac4aa023d")
+		)
+		(pin "8"
+			(uuid "9fe88b20-2cf4-422e-9503-53ad1695cda5")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	(property "Manufacturer" "TI(德州仪器)" (at 43.18 134.62 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "INA240A1DR" (at 43.18 134.62 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C2060769" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 76.2 134.62 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a00001e")
+		(property "Reference" "R42"
+			(at 78.74 132.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47R"
+			(at 78.74 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 76.2 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+			(at 76.2 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "47R_ADC_ISOLATION"
+			(at 76.2 134.62 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "c7d6bf7b-94b0-4cae-b417-418619a34bc1")
+		)
+		(pin "2"
+			(uuid "f20cc865-d8a7-4272-8e56-2e34b01316f7")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "R42")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "RS-03K47R0FT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C140087" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "0603WAF470JT5E" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C23182" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 91.44 144.78 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a00001f")
+		(property "Reference" "C42"
+			(at 93.98 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1nF"
+			(at 93.98 147.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 91.44 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 91.44 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "1nF_C0G_ADC"
+			(at 91.44 144.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "97bd80c3-f0d0-4a5d-a07d-a4af74b6dc41")
+		)
+		(pin "2"
+			(uuid "83cb8abd-2d80-4513-bcfc-6f1471207545")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "C42")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603CG102J101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C88489" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10C102JB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C163508" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 73.66 118.11 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006a000020")
+		(property "Reference" "C45"
+			(at 76.2 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 76.2 120.65 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 73.66 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 73.66 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100nF_INA_DECOUPLE"
+			(at 73.66 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "1be9d561-3609-4c30-8558-573ef9eab30b")
+		)
+		(pin "2"
+			(uuid "82e87d62-6f4f-4915-9357-bbc201f63383")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "C45")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B104K500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C30926" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B104KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C1591" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 27.94 172.72 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006abaf00f")
+		(property "Reference" "R70"
+			(at 30.48 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 30.48 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 27.94 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf"
+			(at 27.94 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "10k_0.1%_NTC_PULLUP"
+			(at 27.94 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "58d9ccfe-d301-4e09-9a38-24839113b005")
+		)
+		(pin "2"
+			(uuid "e3fb5719-a51d-4e1a-8a10-34a034db715d")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "R70")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "TD03G1002BT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C667034" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "PTFR0603B10K0P9" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C328421" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 55.88 172.72 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006abaf010")
+		(property "Reference" "NTC1"
+			(at 58.42 170.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 58.42 175.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:NTC_0603_Shiheng_KUU"
+			(at 55.88 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20210906/B03A8E165737D41272F439C17FAA3AAF.pdf"
+			(at 55.88 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "10k_B3950_BOARD"
+			(at 55.88 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(property "MPN" "CMFA 103F3950"
+	(id 0)
+	(at 55.88 172.72 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "Shiheng"
+	(id 1)
+	(at 55.88 172.72 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C2889049"
+	(id 2)
+	(at 55.88 172.72 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_MPN" "KNTC0603/10KF3950"
+	(id 3)
+	(at 55.88 172.72 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_LCSC" "C2892547"
+	(id 4)
+	(at 55.88 172.72 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_Status" "Different manufacturer KUU; same recommended land and10k1%/B25-50=3950; temperature calibration required"
+	(id 5)
+	(at 55.88 172.72 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(pin "1"
+			(uuid "9cec503d-e1a6-4975-89a2-94f121413278")
+		)
+		(pin "2"
+			(uuid "68e94646-54a6-4bc8-b770-1fab228fb65c")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "NTC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 27.94 190.5 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006abaf011")
+		(property "Reference" "R71"
+			(at 30.48 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 30.48 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 27.94 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf"
+			(at 27.94 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "10k_0.1%_NTC_PULLUP"
+			(at 27.94 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "c7892daf-f7a3-4340-94ef-a0d2cbcc9182")
+		)
+		(pin "2"
+			(uuid "c9c45b2f-a317-418d-a818-e4f4339c168a")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "R71")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "TD03G1002BT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C667034" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "PTFR0603B10K0P9" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C328421" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 55.88 190.5 0.0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006abaf012")
+		(property "Reference" "NTC2"
+			(at 58.42 187.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 58.42 193.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:NTC_0603_Shiheng_KUU"
+			(at 55.88 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20210906/B03A8E165737D41272F439C17FAA3AAF.pdf"
+			(at 55.88 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "10k_B3950_BOARD_AUX"
+			(at 55.88 190.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(property "MPN" "CMFA 103F3950"
+	(id 0)
+	(at 55.88 190.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "Shiheng"
+	(id 1)
+	(at 55.88 190.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C2889049"
+	(id 2)
+	(at 55.88 190.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_MPN" "KNTC0603/10KF3950"
+	(id 3)
+	(at 55.88 190.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_LCSC" "C2892547"
+	(id 4)
+	(at 55.88 190.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_Status" "Different manufacturer KUU; same recommended land and10k1%/B25-50=3950; temperature calibration required"
+	(id 5)
+	(at 55.88 190.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(pin "1"
+			(uuid "9184a664-3ff0-4402-bfda-25880d895ae7")
+		)
+		(pin "2"
+			(uuid "84cfae39-e56d-4577-bc2f-011200377856")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+					(reference "NTC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+(text "CURRENT SENSE + RC FILTER" (at 16.51 27.94 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid "fa34d05e-77ee-43d5-ad14-d7006a6bfa7e"))
+(text "BUS OCP: +25A NOMINAL"
+	(at 106.68 16.51 0)
+	(effects
+		(font
+			(size 0.9 0.9)
+		)
+(justify left)
+	)
+	(uuid "9bcde9c8-9863-46a5-9827-103a6bc474a9")
+)
+(text "No reverse-current trip; latch requires explicit re-arm"
+	(at 104.14 162.56 0)
+	(effects
+		(font
+			(size 0.9 0.9)
+		)
+(justify left)
+	)
+	(uuid "9dd26019-7439-4427-9073-a808bd56802a")
+)
+(text "Bridge bus shunt after DC-link capacitors"
+	(at 106.68 31.75 0)
+	(effects
+		(font
+			(size 0.9 0.9)
+		)
+(justify left)
+	)
+	(uuid "e2708307-125d-4e70-a099-1b1920f1db1b")
+)
+(hierarchical_label "GND"
+		(shape input)
+		(at 27.94 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "210fe820-06d5-4bae-b77c-7498c56a5d81")
+	)
+(hierarchical_label "VA_5V"
+		(shape input)
+		(at 50.8 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bcbc677e-e0f5-4dfa-bc94-0d73670f2670")
+	)
+(wire (pts (xy 20.32 48.26) (xy 22.86 48.26)) (stroke (width 0) (type default)) (uuid "67459863-bf63-4b3b-970e-013ecc7d5038"))
+(hierarchical_label "PH_U"
+		(shape input)
+		(at 20.32 48.26 0)
+		(effects (font (size 1 1)) (justify right))
+		(uuid "378896a1-c611-4ac9-9f87-c2605c3a97e5")
+	)
+(wire (pts (xy 39.37 71.12) (xy 43.18 71.12)) (stroke (width 0) (type default)) (uuid "308ce185-37d1-4fb5-95f6-dd30f29e8c5d"))
+(wire (pts (xy 39.37 68.58) (xy 39.37 71.12)) (stroke (width 0) (type default)) (uuid "bdd3aac9-717e-40ec-ad58-a74ffc012bbb"))
+(wire (pts (xy 43.18 68.58) (xy 43.18 71.12)) (stroke (width 0) (type default)) (uuid "ee7b8b49-5a63-4e39-9f1a-83ebba87d5f1"))
+(wire (pts (xy 43.18 71.12) (xy 46.99 71.12)) (stroke (width 0) (type default)) (uuid "31fb4a3c-021f-4e57-b337-898c5ab15379"))
+(wire (pts (xy 71.12 66.04) (xy 91.44 66.04)) (stroke (width 0) (type default)) (uuid "f8f2d90c-3d70-4899-b1b5-83927a161bf3"))
+(wire (pts (xy 46.99 66.04) (xy 71.12 66.04)) (stroke (width 0) (type default)) (uuid "f4dc8ebf-2a70-49d1-8653-e22d7c3b1891"))
+(wire (pts (xy 71.12 43.18) (xy 71.12 66.04)) (stroke (width 0) (type default)) (uuid "222098f5-1917-4f90-93c4-9fb3abe2b6d4"))
+(wire (pts (xy 91.44 66.04) (xy 91.44 67.31)) (stroke (width 0) (type default)) (uuid "0cd3d761-7ff0-42ef-b381-ff4bc3c6848a"))
+(wire (pts (xy 46.99 68.58) (xy 46.99 71.12)) (stroke (width 0) (type default)) (uuid "0fcddd97-9795-4eed-9d78-36398f580c71"))
+(wire (pts (xy 46.99 66.04) (xy 46.99 68.58)) (stroke (width 0) (type default)) (uuid "4a4261e8-622c-4e02-9fe4-259d78507821"))
+(wire (pts (xy 73.66 40.64) (xy 73.66 43.18)) (stroke (width 0) (type default)) (uuid "1904f0ac-2526-4e5e-8a86-2cab7d9266fc"))
+(wire (pts (xy 71.12 43.18) (xy 73.66 43.18)) (stroke (width 0) (type default)) (uuid "c28549e8-461c-4970-8f9d-10503279ab6f"))
+(wire (pts (xy 91.44 67.31) (xy 91.44 69.85)) (stroke (width 0) (type default)) (uuid "a0b656fb-e9a7-4372-8588-a0ca0fe61354"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 91.44 69.85 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "bb263c1c-0039-4239-9079-4ec56b964562")
+(property "Reference" "#PWR1204" (at 91.44 69.85 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 91.44 69.85 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "bd1492f1-3f0c-444a-8572-3693e491b872")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1204") (unit 1)))))
+(label "GND" (at 91.44 69.85 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "1c58420d-9f78-4d69-bf26-de4c7a883a9f"))
+(wire (pts (xy 63.5 50.8) (xy 68.58 50.8)) (stroke (width 0) (type default)) (uuid "f0accea0-3726-448d-8ac3-28edffbe56ca"))
+(wire (pts (xy 45.72 30.48) (xy 45.72 33.02)) (stroke (width 0) (type default)) (uuid "5baa522c-8010-47f2-ab60-dc9743de4a48"))
+(wire (pts (xy 45.72 30.48) (xy 73.66 30.48)) (stroke (width 0) (type default)) (uuid "de43e20f-2ae2-480d-8517-05a8fb70443b"))
+(wire (pts (xy 40.64 30.48) (xy 45.72 30.48)) (stroke (width 0) (type default)) (uuid "f233b0b1-3c13-446f-991c-e9048af32075"))
+(wire (pts (xy 73.66 27.94) (xy 73.66 30.48)) (stroke (width 0) (type default)) (uuid "dbd0eeed-6718-4f0f-a69b-ecb93522d529"))
+(wire (pts (xy 40.64 30.48) (xy 40.64 33.02)) (stroke (width 0) (type default)) (uuid "4c2ee8e6-15e2-43ac-9c8b-f82b68eca14c"))
+(wire (pts (xy 73.66 25.4) (xy 73.66 27.94)) (stroke (width 0) (type default)) (uuid "7ff6b19f-318d-4b49-910d-3f01b5cdfb49"))
+(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 73.66 25.4 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "1462686b-ba03-417d-a2ad-b836028bee74")
+(property "Reference" "#PWR1205" (at 73.66 25.4 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VA_5V" (at 73.66 25.4 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "4b442e1c-2b5a-4e5a-b641-7ddb4cdec578")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1205") (unit 1)))))
+(label "VA_5V" (at 73.66 25.4 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "25e39ba4-1b01-4700-8938-a8d7fdcde8d1"))
+(wire (pts (xy 20.32 53.34) (xy 22.86 53.34)) (stroke (width 0) (type default)) (uuid "065a1c12-842f-46a4-9dc2-9493728cd807"))
+(hierarchical_label "SW_U"
+		(shape input)
+		(at 20.32 53.34 0)
+		(effects (font (size 1 1)) (justify right))
+		(uuid "cad01571-dc54-496c-8004-a9e78ce5c1f0")
+	)
+(wire (pts (xy 83.82 50.8) (xy 86.36 50.8)) (stroke (width 0) (type default)) (uuid "f4f7013a-6594-4a9f-bcc9-3745bc93682a"))
+(wire (pts (xy 86.36 50.8) (xy 91.44 50.8)) (stroke (width 0) (type default)) (uuid "d95d5fa0-efe4-440a-b1e6-55aa64597d35"))
+(wire (pts (xy 91.44 50.8) (xy 91.44 54.61)) (stroke (width 0) (type default)) (uuid "bbf2ee09-61be-461c-a13d-073c78f96868"))
+(wire (pts (xy 91.44 50.8) (xy 101.6 50.8)) (stroke (width 0) (type default)) (uuid "e15ebe07-33fc-52f8-be93-73ed34eafe66"))
+(junction (at 91.44 50.8) (diameter 0) (color 0 0 0 0) (uuid "6ec10487-d7be-58e3-bb82-7d7c275d3f31"))
+(hierarchical_label "IU_ADC" (shape output) (at 101.6 50.8 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "b4ce0066-cbd8-521d-aebb-1fb490b86e5a"))
+(wire (pts (xy 20.32 90.17) (xy 22.86 90.17)) (stroke (width 0) (type default)) (uuid "aa3cc436-f579-413f-a857-8ece2289afa4"))
+(hierarchical_label "PH_V"
+		(shape input)
+		(at 20.32 90.17 0)
+		(effects (font (size 1 1)) (justify right))
+		(uuid "70f27286-808b-44ec-b232-e9226b6afd69")
+	)
+(wire (pts (xy 46.99 110.49) (xy 46.99 113.03)) (stroke (width 0) (type default)) (uuid "98be418d-7f96-420d-adb0-417985fc8093"))
+(wire (pts (xy 46.99 107.95) (xy 46.99 110.49)) (stroke (width 0) (type default)) (uuid "fb3804de-a91d-4a73-8fde-ec23f49b1796"))
+(wire (pts (xy 39.37 113.03) (xy 43.18 113.03)) (stroke (width 0) (type default)) (uuid "5cca250d-8cb8-478b-accd-eaeb29f399ea"))
+(wire (pts (xy 39.37 110.49) (xy 39.37 113.03)) (stroke (width 0) (type default)) (uuid "0b497811-9130-4e2a-9c82-bb5ad59e1678"))
+(wire (pts (xy 73.66 82.55) (xy 73.66 85.09)) (stroke (width 0) (type default)) (uuid "c06a1c82-291d-4b1c-bd4b-6245954d15c9"))
+(wire (pts (xy 43.18 110.49) (xy 43.18 113.03)) (stroke (width 0) (type default)) (uuid "deacce72-7eec-45b5-85e7-e0f3560f9b18"))
+(wire (pts (xy 71.12 107.95) (xy 91.44 107.95)) (stroke (width 0) (type default)) (uuid "26545ddd-2cd2-4cb3-982c-9493e8b7c378"))
+(wire (pts (xy 91.44 107.95) (xy 91.44 109.22)) (stroke (width 0) (type default)) (uuid "accf6363-47e0-4dd2-81b7-ca9cdedd8445"))
+(wire (pts (xy 43.18 113.03) (xy 46.99 113.03)) (stroke (width 0) (type default)) (uuid "6130f426-e019-49a0-bf5e-9b9920e423e7"))
+(wire (pts (xy 71.12 85.09) (xy 71.12 107.95)) (stroke (width 0) (type default)) (uuid "02556fa1-5345-46a3-8b2f-14047c0a7d7c"))
+(wire (pts (xy 71.12 85.09) (xy 73.66 85.09)) (stroke (width 0) (type default)) (uuid "11ce64bb-fbd8-4d50-ad90-45bdc5301fc4"))
+(wire (pts (xy 46.99 107.95) (xy 71.12 107.95)) (stroke (width 0) (type default)) (uuid "e9530996-a733-4aec-b24b-1cf1849b0096"))
+(wire (pts (xy 91.44 109.22) (xy 91.44 111.76)) (stroke (width 0) (type default)) (uuid "9128739e-d1a7-4bbf-8591-3ed3115bf390"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 91.44 111.76 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "6c6d13b2-5592-4e74-a627-11e316921e20")
+(property "Reference" "#PWR1206" (at 91.44 111.76 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 91.44 111.76 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "c0bac7dd-4212-4230-b08a-1bcfb62af563")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1206") (unit 1)))))
+(label "GND" (at 91.44 111.76 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "bf99666b-65a2-44fe-9404-0519d64467b6"))
+(wire (pts (xy 63.5 92.71) (xy 68.58 92.71)) (stroke (width 0) (type default)) (uuid "4871ccf6-cdf9-42b1-a179-e33f9b789d2a"))
+(wire (pts (xy 45.72 72.39) (xy 45.72 74.93)) (stroke (width 0) (type default)) (uuid "dbc771df-9096-4aad-9af8-1d0fa0c44ca2"))
+(wire (pts (xy 40.64 72.39) (xy 40.64 74.93)) (stroke (width 0) (type default)) (uuid "863a54f3-45b8-47c8-be5c-7782d00deca9"))
+(wire (pts (xy 73.66 69.85) (xy 73.66 72.39)) (stroke (width 0) (type default)) (uuid "378c943d-9715-4335-bce7-bdca100d27eb"))
+(wire (pts (xy 45.72 72.39) (xy 73.66 72.39)) (stroke (width 0) (type default)) (uuid "b0b2428c-c395-4b66-9357-3bdb05d0a8ae"))
+(wire (pts (xy 40.64 72.39) (xy 45.72 72.39)) (stroke (width 0) (type default)) (uuid "d749e3a5-b6c6-4653-84bd-32c1c963d378"))
+(wire (pts (xy 73.66 67.31) (xy 73.66 69.85)) (stroke (width 0) (type default)) (uuid "ae80c2f1-270c-4f22-a7a5-54599a593ce0"))
+(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 73.66 67.31 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "5cd5bd39-2859-4bc3-ab8c-874e0a7c07c8")
+(property "Reference" "#PWR1207" (at 73.66 67.31 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VA_5V" (at 73.66 67.31 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "049c4258-db45-4338-a931-95e7b9b1ce4d")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1207") (unit 1)))))
+(label "VA_5V" (at 73.66 67.31 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "60c857a5-e2d0-462d-bfd7-b39dad083b50"))
+(wire (pts (xy 20.32 95.25) (xy 22.86 95.25)) (stroke (width 0) (type default)) (uuid "b09ae47b-3bc9-4969-8948-d97e7bb052a4"))
+(hierarchical_label "SW_V"
+		(shape input)
+		(at 20.32 95.25 0)
+		(effects (font (size 1 1)) (justify right))
+		(uuid "a24361dc-b190-4a0d-83c7-40f3f2eb5e26")
+	)
+(wire (pts (xy 83.82 92.71) (xy 86.36 92.71)) (stroke (width 0) (type default)) (uuid "189ce08d-c080-4c50-8f79-292de0cb767a"))
+(wire (pts (xy 86.36 92.71) (xy 91.44 92.71)) (stroke (width 0) (type default)) (uuid "fb98793f-aedb-4378-830c-35f15817c2ad"))
+(wire (pts (xy 91.44 92.71) (xy 91.44 96.52)) (stroke (width 0) (type default)) (uuid "a76f4559-20be-4211-8a78-5ae5044657bd"))
+(wire (pts (xy 91.44 92.71) (xy 101.6 92.71)) (stroke (width 0) (type default)) (uuid "00642407-21b8-5cb7-b3c6-ab2db6b7acbd"))
+(junction (at 91.44 92.71) (diameter 0) (color 0 0 0 0) (uuid "e1ded705-08d7-5078-84d6-cb59b3bedafd"))
+(hierarchical_label "IV_ADC" (shape output) (at 101.6 92.71 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "2fef8ecc-9c7c-5816-a2eb-8954f5e68d98"))
+(wire (pts (xy 20.32 132.08) (xy 22.86 132.08)) (stroke (width 0) (type default)) (uuid "0570e47b-3b9b-4635-84d8-2bfb159316f3"))
+(hierarchical_label "PH_W"
+		(shape input)
+		(at 20.32 132.08 0)
+		(effects (font (size 1 1)) (justify right))
+		(uuid "e28a5bb8-0db9-412d-b3fd-f96f53273911")
+	)
+(wire (pts (xy 46.99 152.4) (xy 46.99 153.67)) (stroke (width 0) (type default)) (uuid "b3a50707-b3a9-4108-a07a-46c7c771e3de"))
+(wire (pts (xy 39.37 152.4) (xy 39.37 154.94)) (stroke (width 0) (type default)) (uuid "79550248-f511-41fa-a82a-df8408610160"))
+(wire (pts (xy 91.44 151.13) (xy 91.44 153.67)) (stroke (width 0) (type default)) (uuid "eb9ab4c4-a189-4720-b659-88f09cb5a758"))
+(wire (pts (xy 71.12 153.67) (xy 91.44 153.67)) (stroke (width 0) (type default)) (uuid "e266cd5d-f9b4-493e-9b6a-b445412c2ef4"))
+(wire (pts (xy 71.12 127.0) (xy 71.12 153.67)) (stroke (width 0) (type default)) (uuid "e3707a5c-a796-44b9-a381-b21e90a55d89"))
+(wire (pts (xy 71.12 127.0) (xy 73.66 127.0)) (stroke (width 0) (type default)) (uuid "8c0eb43d-a012-4b34-82eb-58469daabd31"))
+(wire (pts (xy 46.99 153.67) (xy 46.99 154.94)) (stroke (width 0) (type default)) (uuid "170bd383-5c2f-4767-9496-443c36a62093"))
+(wire (pts (xy 43.18 154.94) (xy 46.99 154.94)) (stroke (width 0) (type default)) (uuid "fc74fa3b-20f4-4275-bd0c-4c89f85f4a86"))
+(wire (pts (xy 73.66 124.46) (xy 73.66 127.0)) (stroke (width 0) (type default)) (uuid "bfaf8607-2bcb-430f-9c1e-898836ecdb14"))
+(wire (pts (xy 46.99 153.67) (xy 71.12 153.67)) (stroke (width 0) (type default)) (uuid "9342b22a-9087-4523-b35e-5558aa0a8bf5"))
+(wire (pts (xy 39.37 154.94) (xy 43.18 154.94)) (stroke (width 0) (type default)) (uuid "6e98fbc3-cae2-46fa-b9d0-58b697b04f05"))
+(wire (pts (xy 43.18 152.4) (xy 43.18 154.94)) (stroke (width 0) (type default)) (uuid "1c7143a2-21d1-4410-9f2d-43e5c8266223"))
+(wire (pts (xy 91.44 151.13) (xy 91.44 153.67)) (stroke (width 0) (type default)) (uuid "24581e81-86c4-441d-a475-de0237bbe0f0"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 91.44 153.67 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "6d44ae74-32e1-46b3-ac5f-4c116f3f618b")
+(property "Reference" "#PWR1208" (at 91.44 153.67 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 91.44 153.67 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "09c458c3-44c3-4372-8365-10d4ea2ce484")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1208") (unit 1)))))
+(label "GND" (at 91.44 153.67 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "70964a4c-2f63-4fa6-abda-ccb9a5aa5d82"))
+(wire (pts (xy 63.5 134.62) (xy 68.58 134.62)) (stroke (width 0) (type default)) (uuid "9137e964-0cde-46fd-9611-1c308e301481"))
+(wire (pts (xy 73.66 111.76) (xy 73.66 114.3)) (stroke (width 0) (type default)) (uuid "f5294e6f-5b1f-4b4e-b130-90fe99a262cc"))
+(wire (pts (xy 45.72 114.3) (xy 45.72 116.84)) (stroke (width 0) (type default)) (uuid "42d5465c-b6d2-4b10-a2bf-38cf97b51b38"))
+(wire (pts (xy 45.72 114.3) (xy 73.66 114.3)) (stroke (width 0) (type default)) (uuid "5fce2eb3-a1c2-4384-867c-be585d2d8cc7"))
+(wire (pts (xy 40.64 114.3) (xy 45.72 114.3)) (stroke (width 0) (type default)) (uuid "f78ac3e2-1fa9-4731-a9f6-f65192793d8d"))
+(wire (pts (xy 40.64 114.3) (xy 40.64 116.84)) (stroke (width 0) (type default)) (uuid "8e28bf49-8129-4374-809c-69882daa6c59"))
+(wire (pts (xy 73.66 109.22) (xy 73.66 111.76)) (stroke (width 0) (type default)) (uuid "c7bbc487-3442-48ae-ab5b-270d93a3b3a6"))
+(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 73.66 109.22 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "802bd207-5e11-4ab1-861b-87efe972fd05")
+(property "Reference" "#PWR1209" (at 73.66 109.22 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VA_5V" (at 73.66 109.22 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "e4cfacbc-ee99-4f7c-a149-39b335ca6a1d")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1209") (unit 1)))))
+(label "VA_5V" (at 73.66 109.22 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "c8735dc6-9cbe-4d48-8941-a04054721878"))
+(wire (pts (xy 20.32 137.16) (xy 22.86 137.16)) (stroke (width 0) (type default)) (uuid "f03020f8-dca3-41ee-82a1-2f7214abe402"))
+(hierarchical_label "SW_W"
+		(shape input)
+		(at 20.32 137.16 0)
+		(effects (font (size 1 1)) (justify right))
+		(uuid "3605a1c9-1b4e-4434-aa03-7159e985a17f")
+	)
+(wire (pts (xy 83.82 134.62) (xy 86.36 134.62)) (stroke (width 0) (type default)) (uuid "13ed6f62-7dd2-4ce5-a39a-b6e5166e129d"))
+(wire (pts (xy 86.36 134.62) (xy 91.44 134.62)) (stroke (width 0) (type default)) (uuid "2d0c548f-a24d-4fe3-a7f4-e87d9ad12fae"))
+(wire (pts (xy 91.44 134.62) (xy 91.44 138.43)) (stroke (width 0) (type default)) (uuid "30130526-d0bf-4a21-8779-b2bd96272ba0"))
+(wire (pts (xy 91.44 134.62) (xy 101.6 134.62)) (stroke (width 0) (type default)) (uuid "e069425a-71f0-51a4-9c3c-fc8a1d24430e"))
+(junction (at 91.44 134.62) (diameter 0) (color 0 0 0 0) (uuid "e2dba990-f367-531f-9d9a-42d5e7554cfb"))
+(hierarchical_label "IW_ADC" (shape output) (at 101.6 134.62 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "fed5eb50-9d9b-5083-920c-7c505d649204"))
+(hierarchical_label "BUS_SENSE_P"
+	(shape input)
+	(at 106.68 24.13 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "d720d197-fb74-4318-b33d-b9339915f730")
+)
+(hierarchical_label "BUS_SENSE_N"
+	(shape output)
+	(at 177.8 24.13 180)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "3b504d0e-9cba-4737-a892-bcf92442be7c")
+)
+(hierarchical_label "OCP_N"
+	(shape output)
+	(at 177.8 124.46 180)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "9acf1972-805d-422f-990c-7c6843c2034d")
+)
+(wire (pts (xy 17.78 172.72) (xy 20.32 172.72)) (stroke (width 0) (type default)) (uuid "51efeb94-c549-4d35-894c-4ad4714f86bb"))
+(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 17.78 172.72 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "fd4d38ab-688b-4cd8-8eb0-29c150071ca7")
+(property "Reference" "#PWR1222" (at 17.78 172.72 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VA_5V" (at 17.78 172.72 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "22d6ab6e-cc72-4b12-b144-0ff0593c040d")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1222") (unit 1)))))
+(label "VA_5V" (at 17.78 172.72 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "37633c48-8ed2-421f-a7fc-07d958c9c701"))
+(wire (pts (xy 35.56 172.72) (xy 38.1 172.72)) (stroke (width 0) (type default)) (uuid "365679ad-b341-43e7-b90b-d29d988a6f61"))
+(wire (pts (xy 38.1 172.72) (xy 48.26 172.72)) (stroke (width 0) (type default)) (uuid "0fbe00de-4c6a-49ea-8816-d2232720e2f3"))
+(wire (pts (xy 38.1 172.72) (xy 38.1 167.64)) (stroke (width 0) (type default)) (uuid "f2125f2b-4597-56b8-92d9-a78c330067d4"))
+(wire (pts (xy 38.1 167.64) (xy 50.8 167.64)) (stroke (width 0) (type default)) (uuid "e2d53eba-d97c-529d-9f9e-22f84fe2e704"))
+(junction (at 38.1 172.72) (diameter 0) (color 0 0 0 0) (uuid "4e6ae9e9-38c4-53cf-a298-29124c96bf5a"))
+(hierarchical_label "NTC_BOARD" (shape output) (at 50.8 167.64 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7f4dccd4-4cc2-56a4-9348-d7e3ad336b30"))
+(wire (pts (xy 63.5 172.72) (xy 66.04 172.72)) (stroke (width 0) (type default)) (uuid "0f98fd5e-9c7d-4151-bfed-9b2d4bbe7d40"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 66.04 172.72 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "24599171-b07e-4188-abec-ae64cc22fe49")
+(property "Reference" "#PWR1223" (at 66.04 172.72 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 66.04 172.72 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "a2fce603-6d06-49f3-b788-2d2577e734e8")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1223") (unit 1)))))
+(label "GND" (at 66.04 172.72 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "09501dda-4651-4b51-8114-fc20c8636e45"))
+(wire (pts (xy 17.78 190.5) (xy 20.32 190.5)) (stroke (width 0) (type default)) (uuid "eee6a9e9-df4c-4de3-b218-2c2aee564e83"))
+(symbol (lib_id "ax7010_servo_reva:PWR_VA_5V") (at 17.78 190.5 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "01f12522-71d6-4d9a-8f7f-eb44deba690f")
+(property "Reference" "#PWR1224" (at 17.78 190.5 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VA_5V" (at 17.78 190.5 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "451b69f3-06ba-459c-b537-66be63521788")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1224") (unit 1)))))
+(label "VA_5V" (at 17.78 190.5 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "82b47619-dec8-4e86-8b43-1457bffdd94c"))
+(wire (pts (xy 35.56 190.5) (xy 38.1 190.5)) (stroke (width 0) (type default)) (uuid "ffdd05f2-a4eb-41e7-b6a5-70a1396af38f"))
+(wire (pts (xy 38.1 190.5) (xy 48.26 190.5)) (stroke (width 0) (type default)) (uuid "bf0a2b96-fc82-4532-a305-03fcab81966b"))
+(wire (pts (xy 38.1 190.5) (xy 38.1 185.42)) (stroke (width 0) (type default)) (uuid "4572fbee-a7f2-59c1-b0f6-6476ec45e1e7"))
+(wire (pts (xy 38.1 185.42) (xy 50.8 185.42)) (stroke (width 0) (type default)) (uuid "244dd092-0d84-584a-a035-cbc90fae739f"))
+(junction (at 38.1 190.5) (diameter 0) (color 0 0 0 0) (uuid "48a86b43-fdd7-5934-b615-663baf856a43"))
+(hierarchical_label "NTC_BOARD_AUX" (shape output) (at 50.8 185.42 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "08c370a8-cf14-550e-b27a-64d20d995db6"))
+(wire (pts (xy 63.5 190.5) (xy 66.04 190.5)) (stroke (width 0) (type default)) (uuid "e57bd3b3-3fa4-49df-987b-b0c997573e9e"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 66.04 190.5 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "9c51330f-a8cd-404e-8053-7b7daeaf533a")
+(property "Reference" "#PWR1225" (at 66.04 190.5 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 66.04 190.5 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "2296dcc4-13fe-44d4-b04b-d8ad3ee688ea")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1225") (unit 1)))))
+(label "GND" (at 66.04 190.5 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "790e18cc-c8fe-4dc9-b917-99fc6e6d8683"))
+(junction (at 45.72 114.3) (diameter 0) (color 0 0 0 0) (uuid "3a117d1f-80ba-451d-ad71-491611fb6f2a"))
+(junction (at 71.12 66.04) (diameter 0) (color 0 0 0 0) (uuid "2c8788b8-d3dc-42e8-b89b-6a10f189ca6e"))
+(junction (at 91.44 153.67) (diameter 0) (color 0 0 0 0) (uuid "684a35b1-69d5-41f3-beae-3fc4958de7a3"))
+(junction (at 45.72 30.48) (diameter 0) (color 0 0 0 0) (uuid "6a125184-4251-4d03-9680-3eb5704754c0"))
+(junction (at 46.99 68.58) (diameter 0) (color 0 0 0 0) (uuid "0fd4d72f-40a2-4d9a-a7ab-893d9422c9fc"))
+(junction (at 43.18 71.12) (diameter 0) (color 0 0 0 0) (uuid "4d3a687a-06ac-4cdd-a3d7-b01c4a120388"))
+(junction (at 71.12 153.67) (diameter 0) (color 0 0 0 0) (uuid "3fae203d-b753-4685-901a-2440edda2315"))
+(junction (at 71.12 107.95) (diameter 0) (color 0 0 0 0) (uuid "d5c82a7a-829f-485d-8ea7-4f644d324ea0"))
+(junction (at 43.18 113.03) (diameter 0) (color 0 0 0 0) (uuid "98f4fef6-3b89-4935-bc6f-e771a59ea1a8"))
+(junction (at 91.44 67.31) (diameter 0) (color 0 0 0 0) (uuid "94e06026-eb04-420f-a7e9-6c5f99c007f9"))
+(junction (at 46.99 153.67) (diameter 0) (color 0 0 0 0) (uuid "05f700ef-db5a-4edf-989a-cf61e2f6bc23"))
+(junction (at 91.44 109.22) (diameter 0) (color 0 0 0 0) (uuid "a2b6f3bd-f3cd-4413-80ea-d8e01c14f480"))
+(junction (at 73.66 111.76) (diameter 0) (color 0 0 0 0) (uuid "c873d93b-d078-4fc6-a64c-d79b573729d4"))
+(junction (at 46.99 110.49) (diameter 0) (color 0 0 0 0) (uuid "ecfd5f54-601e-4bcc-8785-be563bd107c4"))
+(junction (at 43.18 154.94) (diameter 0) (color 0 0 0 0) (uuid "f12faeb4-4468-45d7-8486-89df41d8d429"))
+(junction (at 45.72 72.39) (diameter 0) (color 0 0 0 0) (uuid "c3606b58-88ca-43dd-8fb8-e029904ffe32"))
+(junction (at 91.44 151.13) (diameter 0) (color 0 0 0 0) (uuid "67f5e4d1-d65d-4c02-a541-a607d78e9208"))
+(junction (at 73.66 27.94) (diameter 0) (color 0 0 0 0) (uuid "dfa855b2-e320-4859-b82a-324f21c669f3"))
+(junction (at 73.66 69.85) (diameter 0) (color 0 0 0 0) (uuid "3dfffbee-d706-4fd8-aaed-81943cd99ad0"))
+(wire (pts (xy 27.94 71.12) (xy 39.37 71.12)) (stroke (width 0) (type default)) (uuid "75d45a27-8854-4019-9ef0-1385b8e5ce73"))
+(wire (pts (xy 50.8 25.4) (xy 73.66 25.4)) (stroke (width 0) (type default)) (uuid "5226a031-7def-4adc-964f-926be90e3a40"))
+(wire
+	(pts
+		(xy 106.68 24.13) (xy 132.08 24.13)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "f508ff8b-4409-470f-ae0a-dc1ea6ddb7d6")
+)
+(wire
+	(pts
+		(xy 147.32 24.13) (xy 177.8 24.13)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "19f303b5-a9e7-4c4c-8788-ba54e1af616f")
+)
+(wire
+	(pts
+		(xy 114.3 60.96) (xy 119.38 60.96)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "1c993f52-e47f-436a-94c8-86ad2500ad1e")
+)
+(wire
+	(pts
+		(xy 114.3 66.04) (xy 119.38 66.04)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "f7d22aa3-b642-4f67-bf83-a0c6d1d7a014")
+)
+(wire
+	(pts
+		(xy 160.02 63.5) (xy 167.64 63.5)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "ca56fa86-c42c-48e7-a314-cbd558b21667")
+)
+(wire
+	(pts
+		(xy 137.16 36.83) (xy 137.16 39.37)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "9d65261d-2649-4d52-8cbd-094e2410fdcf")
+)
+(wire
+	(pts
+		(xy 137.16 39.37) (xy 137.16 45.72)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "10e011be-e069-4d2a-96ca-953f34587e3c")
+)
+(wire
+	(pts
+		(xy 137.16 39.37) (xy 175.26 39.37)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "2a8efbed-09f6-4cab-94c4-f16460f23ed9")
+)
+(wire
+	(pts
+		(xy 175.26 39.37) (xy 175.26 41.91)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "3dc14053-efee-4bdd-83b3-ff501848e83a")
+)
+(wire
+	(pts
+		(xy 175.26 54.61) (xy 175.26 57.15)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "a1faac3f-e8ca-46ea-8807-64571c453b3f")
+)
+(wire
+	(pts
+		(xy 142.24 45.72) (xy 152.4 45.72)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "12e10d65-052d-4616-94d4-979a6ee99ff3")
+)
+(wire
+	(pts
+		(xy 135.89 81.28) (xy 135.89 83.82)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "095084c6-9eff-4799-be03-51b6313fd283")
+)
+(wire
+	(pts
+		(xy 135.89 83.82) (xy 139.7 83.82)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "cbe28134-a4ed-42bb-81a4-8f425933f73e")
+)
+(wire
+	(pts
+		(xy 139.7 83.82) (xy 143.51 83.82)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "f689e013-d81b-47b4-9975-733a93fc8eb5")
+)
+(wire
+	(pts
+		(xy 143.51 83.82) (xy 143.51 81.28)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "21045466-da08-426b-bf6a-234ed1ba547a")
+)
+(wire
+	(pts
+		(xy 139.7 81.28) (xy 139.7 83.82)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "ee4b3ed7-4991-48d8-8a96-84597c47087b")
+)
+(wire
+	(pts
+		(xy 139.7 83.82) (xy 139.7 86.36)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "374c4aa5-5c62-4222-b376-27c9b4e6bb5d")
+)
+(wire
+	(pts
+		(xy 111.76 107.95) (xy 111.76 110.49)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "ade979f9-70bc-4fbe-8149-adb733b34981")
+)
+(wire
+	(pts
+		(xy 111.76 125.73) (xy 111.76 132.08)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "26817215-951a-4c4e-9d0d-06521b997019")
+)
+(wire
+	(pts
+		(xy 111.76 132.08) (xy 111.76 137.16)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "17d63806-e48c-41c0-9b31-2c1f1af5cd5b")
+)
+(wire
+	(pts
+		(xy 111.76 152.4) (xy 111.76 156.21)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "daf918ec-003f-4bfa-8d7c-2b86d0feb28e")
+)
+(wire
+	(pts
+		(xy 111.76 132.08) (xy 119.38 132.08)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "80735e25-0967-4391-aab1-e643e5611b89")
+)
+(wire
+	(pts
+		(xy 119.38 132.08) (xy 119.38 121.92)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "450d41c0-cee5-42d7-b7b2-921c2e4f54db")
+)
+(wire
+	(pts
+		(xy 119.38 121.92) (xy 124.46 121.92)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "470ab4a4-7767-46dc-8b07-309c975d0776")
+)
+(wire
+	(pts
+		(xy 119.38 132.08) (xy 119.38 139.7)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "b65a44f2-30f3-47a9-b40f-88abc09e0144")
+)
+(wire
+	(pts
+		(xy 119.38 139.7) (xy 124.46 139.7)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "abaa0c81-7e90-4ae3-9cfd-eb63f1ec3cc5")
+)
+(wire
+	(pts
+		(xy 121.92 127) (xy 124.46 127)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "d78ac5be-f9dd-4a90-8f3a-f826bb728cdf")
+)
+(wire
+	(pts
+		(xy 121.92 134.62) (xy 124.46 134.62)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "44f764a8-9734-40c3-92f0-67f0085c444f")
+)
+(wire
+	(pts
+		(xy 139.7 92.71) (xy 139.7 95.25)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "26f59336-f200-4d44-8b4d-a3b20e876219")
+)
+(wire
+	(pts
+		(xy 139.7 95.25) (xy 139.7 109.22)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "ac33bfdf-4487-43d8-8d17-55af61f8885c")
+)
+(wire
+	(pts
+		(xy 139.7 95.25) (xy 165.1 95.25)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "9150728e-928f-4e08-9a7f-860c2adb49b9")
+)
+(wire
+	(pts
+		(xy 165.1 95.25) (xy 165.1 97.79)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "a2a822af-96aa-4114-91e6-a48e552f7542")
+)
+(wire
+	(pts
+		(xy 165.1 110.49) (xy 165.1 113.03)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "774f389f-c02c-4f0e-b76d-3a7dff0fb23d")
+)
+(wire
+	(pts
+		(xy 139.7 147.32) (xy 139.7 151.13)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "5434a3f1-a27b-4d2b-bbbd-c7cb62df0e01")
+)
+(wire
+	(pts
+		(xy 170.18 104.14) (xy 170.18 106.68)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "753df627-3444-42d3-8146-ac5a1001977c")
+)
+(wire
+	(pts
+		(xy 170.18 121.92) (xy 170.18 124.46)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "db382d70-2cc5-4a09-aa72-582194f057d3")
+)
+(wire
+	(pts
+		(xy 154.94 124.46) (xy 170.18 124.46)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "e2c7e6c4-784c-4573-bce7-75ce2f66d4c9")
+)
+(wire
+	(pts
+		(xy 170.18 124.46) (xy 177.8 124.46)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "338b192d-4969-4538-8a39-8545fcdb3822")
+)
+(label "BUS_SENSE_N"
+	(at 114.3 60.96 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "1bb40b57-7714-4a35-a065-170854e8c057")
+)
+(label "BUS_SENSE_P"
+	(at 114.3 66.04 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "90e170d4-6aa7-4378-9486-2d60c05519c4")
+)
+(label "BUS_CURRENT"
+	(at 167.64 63.5 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "84549eba-cd1d-47cc-84f0-796c6154965a")
+)
+(label "BUS_CURRENT"
+	(at 121.92 127 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "e981a991-412f-4599-b60a-3bf4c626b183")
+)
+(label "BUS_OCP_REF"
+	(at 111.76 132.08 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "fae53b53-e175-4017-ac86-63e1e60ef6aa")
+)
+(label "VA_5V"
+	(at 137.16 36.83 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "bfd90b8a-154c-411b-a0d3-3c85442f60ab")
+)
+(label "GND"
+	(at 175.26 57.15 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "6d82b69c-80b9-4153-ae11-2c091320d6da")
+)
+(label "GND"
+	(at 152.4 45.72 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "cba85750-c426-4a9f-af09-332be05638be")
+)
+(label "GND"
+	(at 139.7 86.36 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "8dedb53e-06f9-4cee-b3f3-2bfdca68e5b2")
+)
+(label "VA_5V"
+	(at 111.76 107.95 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "2e796e5e-feb4-4a89-a9d2-587209b01497")
+)
+(label "GND"
+	(at 111.76 156.21 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "9e44734d-ec9f-4be0-9720-0abbd2c35e42")
+)
+(label "GND"
+	(at 121.92 134.62 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "f272ab36-77a9-4574-a071-2d7c359ce098")
+)
+(label "VA_5V"
+	(at 139.7 92.71 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "20eef31e-9198-4493-84be-6afac4fdb3bf")
+)
+(label "GND"
+	(at 165.1 113.03 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "e701f93a-6aee-45e3-9415-e4dec3113962")
+)
+(label "GND"
+	(at 139.7 151.13 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "1b013d7c-3557-4335-b44c-812bed1ca105")
+)
+(label "VIO_3V3"
+	(at 170.18 104.14 0)
+	(effects
+		(font
+			(size 0.762 0.762)
+		)
+	)
+	(uuid "3b3c0046-7e85-4784-b2f8-741463125b96")
+)
+(symbol
+	(lib_name "ax7010_servo_reva:R")
+	(lib_id "ax7010_servo_reva:R")
+	(at 139.7 24.13 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "7bd92da5-bb2d-411b-ace3-cabe66385ac7")
+	(property "Reference" "RSH4"
+		(at 139.7 20.32 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+	)
+	(property "Value" "2mR"
+		(at 139.7 27.94 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+	)
+	(property "Footprint" "fpga-servo:HoYLR2512_Kelvin"
+		(at 139.7 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260807/2744A3B9486B05923CE3C700940B3DAC.pdf"
+		(at 139.7 24.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Manufacturer" "Milliohm(毫欧)"
+	(id 0)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "HoYLR2512-3W-2mR-1%"
+	(id 1)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C5375458"
+	(id 2)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Description" "2mR 1% 3W; bus-current sense; pulse/thermal qualification OPEN"
+	(id 3)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_MPN" "LR2512-23R002F4"
+	(id 4)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_LCSC" "C154685"
+	(id 5)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_Status" "FOOTPRINT_REVIEW_REQUIRED"
+	(id 6)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN"
+	(id 7)
+	(at 139.7 24.13 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "210636b3-736b-41ca-bc93-d4588dd224a7")
+)
+	(pin "2"
+	(uuid "8070e472-7d1f-4bbf-b47c-a3cb5b60bc7c")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "RSH4")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "RSH4")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:INA240A1")
+	(lib_id "ax7010_servo_reva:INA240A1")
+	(at 139.7 63.5 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "3b7b8023-15a1-41af-9905-dd94b1c460e1")
+	(property "Reference" "U5"
+		(at 139.7 59.69 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+	)
+	(property "Value" "INA240A1DR"
+		(at 139.7 67.31 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+	)
+	(property "Footprint" "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+		(at 139.7 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina240.pdf"
+		(at 139.7 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Manufacturer" "TI(德州仪器)"
+	(id 0)
+	(at 139.7 63.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "INA240A1DR"
+	(id 1)
+	(at 139.7 63.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C2060769"
+	(id 2)
+	(at 139.7 63.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10"
+	(id 3)
+	(at 139.7 63.5 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "66099243-0fbe-4ba1-b5c0-a02cc046be90")
+)
+	(pin "2"
+	(uuid "68c922e6-2141-4aef-9e1c-3faad324b0f9")
+)
+	(pin "3"
+	(uuid "b59937ff-cc2b-4e32-af5b-16568e2a9729")
+)
+	(pin "4"
+	(uuid "06d83ab1-ecf0-4177-b759-4c4fbeb5cda9")
+)
+	(pin "5"
+	(uuid "3c757561-1000-48fb-8862-fb9b0e454798")
+)
+	(pin "6"
+	(uuid "da8b2583-4bd9-4e3f-8df1-cc4990a1b1d6")
+)
+	(pin "7"
+	(uuid "28750c72-895f-478a-b9e9-1340a061a263")
+)
+	(pin "8"
+	(uuid "40fe3a8a-611e-4b30-a2fb-213dcca159ff")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "U5")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "U5")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "LM393LV")
+	(lib_id "ax7010_servo_reva:LM393LV")
+	(at 139.7 127 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "2fc92833-992b-42be-965a-be77e00f5ffb")
+	(property "Reference" "U15"
+		(at 139.7 123.19 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+	)
+	(property "Value" "LM393LVDDFR"
+		(at 139.7 130.81 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+		)
+	)
+	(property "Footprint" "fpga-servo:TI_DDF0008A"
+		(at 139.7 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm393lv.pdf"
+		(at 139.7 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Manufacturer" "Texas Instruments"
+	(id 0)
+	(at 139.7 127 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "LM393LVDDFR"
+	(id 1)
+	(at 139.7 127 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C5213974"
+	(id 2)
+	(at 139.7 127 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; stock checked 2026-10-10; power-off I/O verified; transient qualification OPEN"
+	(id 3)
+	(at 139.7 127 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "c0076ad7-aaba-468f-b59e-f3b5e9078ae7")
+)
+	(pin "2"
+	(uuid "e94ac43c-3e68-46b8-98c2-026dc77dc7f8")
+)
+	(pin "3"
+	(uuid "5d6168a9-efab-4ae9-a1e8-214583994f42")
+)
+	(pin "4"
+	(uuid "2441c73c-82b4-4c24-a5ea-754fac5abddc")
+)
+	(pin "5"
+	(uuid "6450db00-8f77-4941-8e9a-67c118692bec")
+)
+	(pin "6"
+	(uuid "65c2ae03-e722-4e47-a4d0-78dae35d54a6")
+)
+	(pin "7"
+	(uuid "2412b084-be1a-465c-94aa-e064f1af5b25")
+)
+	(pin "8"
+	(uuid "970f2369-cc24-400f-bcd3-288c0fe686b7")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "U15")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "U15")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:R")
+	(lib_id "ax7010_servo_reva:R")
+	(at 111.76 118.11 270)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "1874ef16-93b9-43d5-8d67-e2663596d153")
+	(property "Reference" "R50"
+		(at 114.30000000000001 116.84 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Value" "8.2k"
+		(at 114.30000000000001 119.38 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(at 111.76 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf"
+		(at 111.76 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Tolerance" "0.1%"
+	(id 0)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Description" "Bus OCP divider; nominal 1.000V at VA_5V=5.1V"
+	(id 1)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Manufacturer" "RESI(开步睿思)"
+	(id 2)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "PTFR0603B8K20P9"
+	(id 3)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C351624"
+	(id 4)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_MPN" "RT0603BRD078K2L"
+	(id 5)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_LCSC" "C861589"
+	(id 6)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE"
+	(id 7)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN"
+	(id 8)
+	(at 111.76 118.11 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "7a167e30-d6b9-4045-b7d8-d172d7da7d38")
+)
+	(pin "2"
+	(uuid "743ee0da-c94f-4670-be32-49aed71f7271")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "R50")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "R50")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:R")
+	(lib_id "ax7010_servo_reva:R")
+	(at 111.76 144.78 270)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "7f5da5c1-f789-4f4d-882b-5ce5ce9470d1")
+	(property "Reference" "R53"
+		(at 114.30000000000001 143.51 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Value" "2k"
+		(at 114.30000000000001 146.05 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(at 111.76 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf"
+		(at 111.76 144.78 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Tolerance" "0.1%"
+	(id 0)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Description" "Bus OCP divider; nominal 1.000V at VA_5V=5.1V"
+	(id 1)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Manufacturer" "FH(风华)"
+	(id 2)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "TD03G2001BT"
+	(id 3)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C666953"
+	(id 4)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_MPN" "ERA3AEB202V"
+	(id 5)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_LCSC" "C193242"
+	(id 6)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE"
+	(id 7)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN"
+	(id 8)
+	(at 111.76 144.78 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "8550b3c4-5cac-4cc3-a584-b42ce2cfe718")
+)
+	(pin "2"
+	(uuid "b760ca43-d0b9-47a3-839e-8a48d40b7525")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "R53")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "R53")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:R")
+	(lib_id "ax7010_servo_reva:R")
+	(at 170.18 114.3 90)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "3a43314c-483c-439d-a9bb-28bed3167f45")
+	(property "Reference" "R54"
+		(at 172.72 113.03 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Value" "4.7k"
+		(at 172.72 115.57 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(at 170.18 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(at 170.18 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Manufacturer" "FH(风华)"
+	(id 0)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "RS-03K4701FT"
+	(id 1)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C116693"
+	(id 2)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+	(id 3)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_MPN" "0603WAF4701T5E"
+	(id 4)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_LCSC" "C23162"
+	(id 5)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE"
+	(id 6)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Description" "4.7k_OCP_PULLUP_TO_VIO"
+	(id 7)
+	(at 170.18 114.3 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "6ad18165-da4b-4996-867e-216e9838d2fb")
+)
+	(pin "2"
+	(uuid "4579bba0-2bbd-40d8-85cb-5507e9e3b530")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "R54")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "R54")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:C")
+	(lib_id "ax7010_servo_reva:C")
+	(at 175.26 48.26 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "fecfa02c-f69e-4061-b321-306091936762")
+	(property "Reference" "C84"
+		(at 177.79999999999998 46.989999999999995 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Value" "100nF"
+		(at 177.79999999999998 49.53 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify left)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(at 175.26 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+		(at 175.26 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Manufacturer" "FH(风华)"
+	(id 0)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "0603B104K500NT"
+	(id 1)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C30926"
+	(id 2)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+	(id 3)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_MPN" "CL10B104KB8NNNC"
+	(id 4)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_LCSC" "C1591"
+	(id 5)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE"
+	(id 6)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Description" ""
+	(id 7)
+	(at 175.26 48.26 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "e8489b42-86dd-46e5-a734-c72012f2bc08")
+)
+	(pin "2"
+	(uuid "8e5ef6ed-3c33-4a16-a28b-cd7ac85615da")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "C84")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "C84")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:C")
+	(lib_id "ax7010_servo_reva:C")
+	(at 165.1 104.14 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "3494182d-06f1-4be3-bf8d-17464820aae2")
+	(property "Reference" "C85"
+		(at 162.56 102.87 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify right)
+		)
+	)
+	(property "Value" "100nF"
+		(at 162.56 105.41 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(justify right)
+		)
+	)
+	(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(at 165.1 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+		(at 165.1 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Manufacturer" "FH(风华)"
+	(id 0)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "MPN" "0603B104K500NT"
+	(id 1)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "LCSC" "C30926"
+	(id 2)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+	(id 3)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_MPN" "CL10B104KB8NNNC"
+	(id 4)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_LCSC" "C1591"
+	(id 5)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE"
+	(id 6)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(property "Description" ""
+	(id 7)
+	(at 165.1 104.14 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+	(pin "1"
+	(uuid "34a5623d-a4dd-42a4-88f1-fb63af5a2e3c")
+)
+	(pin "2"
+	(uuid "9e88afc8-10e3-4fe5-af27-f2989c5a9e09")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "C85")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "C85")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_VA_5V")
+	(lib_id "ax7010_servo_reva:PWR_VA_5V")
+	(at 137.16 36.83 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "a5ad7e5b-c77f-461e-8271-682a041ce3c1")
+	(property "Reference" "#PWR1300"
+		(at 137.16 33.02 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/VA_5V"
+		(at 137.16 40.64 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 137.16 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 137.16 36.83 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "809046d0-6b5d-4b09-aae8-8d919cac5bf7")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1300")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1300")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 175.26 57.15 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "6ac2012c-9936-426f-b8a9-a9514bee67b0")
+	(property "Reference" "#PWR1301"
+		(at 175.26 53.34 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 175.26 60.96 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 175.26 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 175.26 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "407d6f21-7f3e-4597-8158-2de763cca7f5")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1301")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1301")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 152.4 45.72 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "071531e9-3454-4ea3-b31d-b1403faede5d")
+	(property "Reference" "#PWR1302"
+		(at 152.4 41.91 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 152.4 49.53 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 152.4 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 152.4 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "050cb38f-855c-434b-8a8a-3952caeb971c")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1302")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1302")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 139.7 86.36 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "acbbf92f-02c3-4902-a93b-13f369a25920")
+	(property "Reference" "#PWR1303"
+		(at 139.7 82.55 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 139.7 90.17 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 139.7 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 139.7 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "1d16e43b-76b8-4d58-aca5-accade1c24d1")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1303")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1303")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_VA_5V")
+	(lib_id "ax7010_servo_reva:PWR_VA_5V")
+	(at 111.76 107.95 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "b94af2a5-71bf-4dd3-b6a9-6c8afb45c565")
+	(property "Reference" "#PWR1304"
+		(at 111.76 104.14 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/VA_5V"
+		(at 111.76 111.76 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 111.76 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 111.76 107.95 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "162fc24f-f3a5-47f1-aa37-217cc695bf77")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1304")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1304")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 111.76 156.21 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "d63b03a3-54e0-4751-8ce9-a326b42fb00a")
+	(property "Reference" "#PWR1305"
+		(at 111.76 152.4 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 111.76 160.02 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 111.76 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 111.76 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "5de45333-bd22-466b-8ef9-b523f0459245")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1305")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1305")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 121.92 134.62 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "fe39635b-5c99-487f-a477-aaee2ec76197")
+	(property "Reference" "#PWR1306"
+		(at 121.92 130.81 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 121.92 138.43 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 121.92 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 121.92 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "7d833c59-f7ed-45a6-8553-fb66b221cb9b")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1306")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1306")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_VA_5V")
+	(lib_id "ax7010_servo_reva:PWR_VA_5V")
+	(at 139.7 92.71 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "a3f31199-0188-4e97-aa79-7ab60d8ce928")
+	(property "Reference" "#PWR1307"
+		(at 139.7 88.9 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/VA_5V"
+		(at 139.7 96.52 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 139.7 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 139.7 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "0290ba79-f0c5-45bb-ad95-788c1322b215")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1307")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1307")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 165.1 113.03 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "bc4fb33b-93fa-47b7-aa12-9668d2144ff1")
+	(property "Reference" "#PWR1308"
+		(at 165.1 109.22 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 165.1 116.84 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 165.1 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 165.1 113.03 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "847c9e9a-6b1a-44c3-8e92-99d8b09389b6")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1308")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1308")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_GND")
+	(lib_id "ax7010_servo_reva:PWR_GND")
+	(at 139.7 151.13 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "379e14fd-2f00-41a9-b068-d94d6b2cfd4c")
+	(property "Reference" "#PWR1309"
+		(at 139.7 147.32 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/GND"
+		(at 139.7 154.94 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 139.7 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 139.7 151.13 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "6ed491e3-7e68-488b-ab30-841b375a9937")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1309")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1309")
+				(unit 1)
+			)
+		)
+	)
+)
+(symbol
+	(lib_name "ax7010_servo_reva:PWR_VIO_3V3")
+	(lib_id "ax7010_servo_reva:PWR_VIO_3V3")
+	(at 170.18 104.14 0)
+	(unit 1)
+	(exclude_from_sim no)
+	(in_bom yes)
+	(on_board yes)
+	(dnp no)
+	(uuid "66c9e3bc-9a43-41ed-a7f8-4846b8aab258")
+	(property "Reference" "#PWR1310"
+		(at 170.18 100.33 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Value" "/VIO_3V3"
+		(at 170.18 107.95 0)
+		(effects
+			(font
+				(size 0.9 0.9)
+			)
+(hide yes)
+		)
+	)
+	(property "Footprint" ""
+		(at 170.18 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 170.18 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(hide yes)
+		)
+	)
+	(pin "1"
+	(uuid "c3334ccc-6b67-4e21-8d91-09947a07e281")
+)
+	(instances
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1310")
+				(unit 1)
+			)
+		)
+		(project "ax7010_servo_ad7606c"
+			(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904"
+				(reference "#PWR1310")
+				(unit 1)
+			)
+		)
+	)
+)
+(no_connect
+	(at 154.94 137.16)
+	(uuid "c92a96b1-f582-4f10-8391-01b08bcd83a8")
+)
+(text "ADC moved to dedicated core + power sheets" (at 195.58 30.48 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "a30ceca6-15a9-5d06-8aff-7507a5ea54f5"))
+(wire (pts (xy 170.18 104.14) (xy 182.88 104.14)) (stroke (width 0) (type default)) (uuid "43885801-8c05-59db-88d3-8e0d227ef674"))
+(hierarchical_label "VIO_3V3" (shape input) (at 182.88 104.14 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7fe6a99f-39b6-5ad9-b397-c7f6ca817f92"))
+(text "Phase RC: 47R / 1nF retained for first prototype; tune after PWM-noise tests" (at 17.78 13.97 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "20ab6d77-7430-50d7-840f-b3f9ee402732"))
+(embedded_fonts no))

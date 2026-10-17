@@ -1,0 +1,182 @@
+﻿Ref,Qty,Value / Part,Manufacturer,MPN,Package,LCSC,Alternative MPN,Alternative LCSC,Status,On_board,DNP
+C1,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C337258,100ZLH100MEFC10X20,C330940,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C2,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C337258,100ZLH100MEFC10X20,C330940,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C3,1,1uF,Faratronic,C212E105J6BC000,Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3,C604836,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+C4,1,100nF,TDK,C4532C0G2A104JT000N,Capacitor_SMD:C_1812_4532Metric,C342611,FM43N104J101EGG,C42391415,OPEN,True,False
+C5,1,10nF,FH(风华),0603B103K101NT,Capacitor_SMD:C_0603_1608Metric,C43253,CL10B103KB8NNNC,C1589,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C18,1,220nF,FH(风华),0805B224K500NT,Capacitor_SMD:C_0805_2012Metric,C163697,CL21B224KBFNNNE,C5378,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C19,1,100nF,FH(风华),0805B104K101NT,Capacitor_SMD:C_0805_2012Metric,C89258,0805B104K101CT,C77456,Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified,True,False
+C20,1,2.2uF,FH(风华),1210B225K101NT,Capacitor_SMD:C_1210_3225Metric,C42400139,GCJ32DR72A225KA01L,C388903,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C21,1,2.2uF,FH(风华),1210B225K101NT,Capacitor_SMD:C_1210_3225Metric,C42400139,GCJ32DR72A225KA01L,C388903,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C22,1,22uF,FH(风华),1210B226K250NT,Capacitor_SMD:C_1210_3225Metric,C5204920,CS3225X7R226K250NRL,C2918511,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C23,1,22uF,FH(风华),1210B226K250NT,Capacitor_SMD:C_1210_3225Metric,C5204920,CS3225X7R226K250NRL,C2918511,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C24,1,2.2nF,FH(风华),0603B222J500NT,Capacitor_SMD:C_0603_1608Metric,C60328,CL10B222KB8NNNC,C16033,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C25,1,3.3nF,FH(风华),0603B332J500NT,Capacitor_SMD:C_0603_1608Metric,C20616243,CC0603JRX7R9BB332,C519530,Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified,True,False
+C26,1,56pF,FH(风华),0603CG560J500NT,Capacitor_SMD:C_0603_1608Metric,C1676,CL10C560JB81PNC,C472797,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C30,1,10uF,Chinocera(华瓷),HGC0805R7106K250NSLJ,Capacitor_SMD:C_0805_2012Metric,C33546010,FCC0805B106K250FT,C54619707,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C31,1,22uF,HRE(芯声),CGA0805X7R226M100MT,Capacitor_SMD:C_0805_2012Metric,C23692981,GRM21BZ71A226ME15L,C907991,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C40,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C41,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C42,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C43,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C44,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C45,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C46,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C60,1,10uF,Chinocera(华瓷),HGC0805R7106K250NSLJ,Capacitor_SMD:C_0805_2012Metric,C33546010,FCC0805B106K250FT,C54619707,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C61,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C62,1,1uF,FH(风华),0603B105K250NT,Capacitor_SMD:C_0603_1608Metric,C59302,CL10B105KA8NNNC,C29936,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C63,1,1uF,FH(风华),0603B105K250NT,Capacitor_SMD:C_0603_1608Metric,C59302,CL10B105KA8NNNC,C29936,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C64,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C65,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C66,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C67,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C68,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C69,1,10uF,HRE(芯声),CGA1206X7R106K250NT,Capacitor_SMD:C_1206_3216Metric,C6119987,CC1206KKX7R8BB106,C70462,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C70,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C71,1,4.7uF,HRE(芯声),CGA0805X7R475K250MT,Capacitor_SMD:C_0805_2012Metric,C6119942,CL21B475KOFNNNE,C107365,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C80,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C81,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C82,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C83,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C84,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C85,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C86,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C87,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C88,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C89,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C90,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C91,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C92,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C93,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C94,1,100nF,Murata,GRT31C5C1H104FA02L,Capacitor_SMD:C_1206_3216Metric,C3839854,C3216C0G1H104JT000N,C319186,OPEN,True,False
+C100,1,10uF,Chinocera(华瓷),HGC0805R7106K250NSLJ,Capacitor_SMD:C_0805_2012Metric,C33546010,FCC0805B106K250FT,C54619707,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C101,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C102,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C103,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C104,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C105,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C106,1,100nF,FH(风华),0603B104K500NT,Capacitor_SMD:C_0603_1608Metric,C30926,CL10B104KB8NNNC,C1591,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+CBOOT1,1,470nF,FH(风华),0805B474K500NT,Capacitor_SMD:C_0805_2012Metric,C49955,0805B474K500CT-C,C2991505,Prototype candidate; stock checked 2026-10-10; bootstrap effective capacitance OPEN,True,False
+CBOOT2,1,470nF,FH(风华),0805B474K500NT,Capacitor_SMD:C_0805_2012Metric,C49955,0805B474K500CT-C,C2991505,Prototype candidate; stock checked 2026-10-10; bootstrap effective capacitance OPEN,True,False
+CBOOT3,1,470nF,FH(风华),0805B474K500NT,Capacitor_SMD:C_0805_2012Metric,C49955,0805B474K500CT-C,C2991505,Prototype candidate; stock checked 2026-10-10; bootstrap effective capacitance OPEN,True,False
+D1,1,SMCJ54A,UNVERIFIED,UNVERIFIED,Diode_SMD:D_SMC,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
+F1,1,25A_0456025.ER,Littelfuse,0456025.ER,fpga-servo:Littelfuse_456_25A_SMD,C315877,UNQUALIFIED,UNVERIFIED,China stock2574 checked2026-10-10;critical protection single-source exception;coordinationOPEN,True,False
+F2,1,0.5A_PTC_ENCODER_5V,JDTfuse(集电通),ASMD1812-050,Fuse:Fuse_1812_4532Metric,C135358,MF-MSMF050-2,C17313,China stock2790 checked2026-10-10; local ambient<=85C; hold0.45A at40C; Bourns alternate land review required,True,False
+J1,1,AX7010_PL_A,JILN(锦凌),321040SG0ABK00A01,fpga-servo:JILN_3210_2x20_P2.54mm_D1.02,C601944,2.54-2*20P直简牛,C9138,China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm,True,False
+J3,1,DC_IN_48V,Phoenix Contact(菲尼克斯),1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,C92145,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+J4,1,MOTOR_UVW,KEFA,KF950-9.5-3P,fpga-servo:KEFA_KF950_3_9.50mm,C475107,UNQUALIFIED,UNVERIFIED,China stock200 checked2026-10-10; OEM land reviewed; 32A IEC rating; mechanical/current/thermal qualification OPEN; critical power connector single-source exception,True,False
+J5,1,ABZ_DIFF_ENCODER,JILN(锦凌),321010SG0ABK00A01,fpga-servo:JILN_3210_2x05_P2.54mm_D1.02,C429962,2.54-2*5P简牛,C5665,China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm,True,False
+J6,1,PSU_EXT,System interface,TBD,,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,False,False
+L1,1,68uH,SOREDE,SDRH.1209.LF680MT00,fpga-servo:SOREDE_SDRH1209_68uH,C2942326,UNQUALIFIED,UNVERIFIED,Stock55; prototype only; Irms/guaranteed1A/thermal OPEN; critical power single-source exception,True,False
+L2,1,2.2uH,Sunlord,SWPA4020S2R2MT,fpga-servo:Sunlord_SWPA4020S,C83423,FHD4020S-2R2MT,C602029,OPEN,True,False
+NTC1,1,10k,Shiheng,CMFA 103F3950,fpga-servo:NTC_0603_Shiheng_KUU,C2889049,KNTC0603/10KF3950,C2892547,OPEN,True,False
+NTC2,1,10k,Shiheng,CMFA 103F3950,fpga-servo:NTC_0603_Shiheng_KUU,C2889049,KNTC0603/10KF3950,C2892547,OPEN,True,False
+Q1,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q2,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q3,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q4,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q5,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q6,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q7,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+Q8,1,BSC040N10NS5,Infineon(英飞凌),BSC040N10NS5,Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm,C534334,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+R1,1,280k,RESI(开步睿思),PTFR0805B280KP9,Resistor_SMD:R_0805_2012Metric,C2849140,RT0805BRD07280KL,C865351,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R2,1,280k,RESI(开步睿思),PTFR0805B280KP9,Resistor_SMD:R_0805_2012Metric,C2849140,RT0805BRD07280KL,C865351,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R3,1,39k,UNI-ROYAL(厚声),TC0325B3902T5F,Resistor_SMD:R_0603_1608Metric,C2988897,RT0603BRD0739KL,C309652,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R20,1,100k,UNI-ROYAL(厚声),0603WAF1003T5E,Resistor_SMD:R_0603_1608Metric,C25803,RS-03K1003FT,C115320,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R21,1,453k,YAGEO(国巨),RC0603FR-07453KL,Resistor_SMD:R_0603_1608Metric,C273765,RTT034533FTP,C103651,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R22,1,49.9k,UNI-ROYAL(厚声),0603WAF4992T5E,Resistor_SMD:R_0603_1608Metric,C23184,RT0603BRD0749K9L,C705780,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R23,1,453k,YAGEO(国巨),RC0603FR-07453KL,Resistor_SMD:R_0603_1608Metric,C273765,RTT034533FTP,C103651,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R32,1,100k,UNVERIFIED,UNVERIFIED,Resistor_SMD:R_0603_1608Metric,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
+R40,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R41,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R42,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R50,1,8.2k,RESI(开步睿思),PTFR0603B8K20P9,Resistor_SMD:R_0603_1608Metric,C351624,RT0603BRD078K2L,C861589,Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN,True,False
+R53,1,2k,FH(风华),TD03G2001BT,Resistor_SMD:R_0603_1608Metric,C666953,ERA3AEB202V,C193242,Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN,True,False
+R54,1,4.7k,FH(风华),RS-03K4701FT,Resistor_SMD:R_0603_1608Metric,C116693,0603WAF4701T5E,C23162,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R55,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R56,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R57,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R58,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R59,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R60,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R61,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R70,1,10k,FH(风华),TD03G1002BT,Resistor_SMD:R_0603_1608Metric,C667034,PTFR0603B10K0P9,C328421,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R71,1,10k,FH(风华),TD03G1002BT,Resistor_SMD:R_0603_1608Metric,C667034,PTFR0603B10K0P9,C328421,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R80,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R81,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R82,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R83,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R84,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R85,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R86,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R87,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R88,1,1k,FH(风华),ABD03K1001FT,Resistor_SMD:R_0603_1608Metric,C5125843,CRCW06031K00FKEA,C844920,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R89,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R90,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R91,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R92,1,3.24k,FH(风华),TD03G3241BT,Resistor_SMD:R_0603_1608Metric,C666977,RT0603BRB073K24L,C860367,FH C666977 primary /Yageo C860367 alternate; revised R92 total0.702% prototype budget; static ADC margin recalculated; combined aging/dynamics OPEN,True,False
+R93,1,1k,RESI(开步睿思),PTFR0603Q1K00N9,Resistor_SMD:R_0603_1608Metric,C23067434,ERA-3ARW102V,C2073443,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R94,1,75k,RESI(开步睿思),PTFR0603Q75K0N9,Resistor_SMD:R_0603_1608Metric,C53280140,UNQUALIFIED,UNVERIFIED,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R95,1,10k,RESI(开步睿思),PTFR0603Q10K0N9,Resistor_SMD:R_0603_1608Metric,C51822132,UNQUALIFIED,UNVERIFIED,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R100,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R101,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R102,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R103,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R104,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R105,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R106,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R107,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R108,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R109,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R110,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R111,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RG1,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RG2,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RG3,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RG4,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RG5,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RG6,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RGS1,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RGS2,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RGS3,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RGS4,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RGS5,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RGS6,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+RSH1,1,5mR,Milliohm (毫欧),HoYLR2512-3W-5mR-1%,fpga-servo:HoYLR2512_Kelvin,C5375461,LR2512-23R005F4,C154688,OPEN,True,False
+RSH2,1,5mR,Milliohm (毫欧),HoYLR2512-3W-5mR-1%,fpga-servo:HoYLR2512_Kelvin,C5375461,LR2512-23R005F4,C154688,OPEN,True,False
+RSH3,1,5mR,Milliohm (毫欧),HoYLR2512-3W-5mR-1%,fpga-servo:HoYLR2512_Kelvin,C5375461,LR2512-23R005F4,C154688,OPEN,True,False
+RSH4,1,2mR,Milliohm(毫欧),HoYLR2512-3W-2mR-1%,fpga-servo:HoYLR2512_Kelvin,C5375458,LR2512-23R002F4,C154685,Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN,True,False
+RT1,1,120R,UNVERIFIED,UNVERIFIED,Resistor_SMD:R_0603_1608Metric,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
+RT2,1,120R,UNVERIFIED,UNVERIFIED,Resistor_SMD:R_0603_1608Metric,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
+RT3,1,120R,UNVERIFIED,UNVERIFIED,Resistor_SMD:R_0603_1608Metric,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
+TP1,1,TP_VBUS_PROT,UNVERIFIED,UNVERIFIED,TestPoint:TestPoint_Pad_D2.0mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+TP2,1,TP_GND,UNVERIFIED,UNVERIFIED,TestPoint:TestPoint_Pad_D2.0mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+TP3,1,TP_12V,UNVERIFIED,UNVERIFIED,TestPoint:TestPoint_Pad_D2.0mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+TP4,1,TP_5V,UNVERIFIED,UNVERIFIED,TestPoint:TestPoint_Pad_D2.0mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+TP5,1,ARMED,UNVERIFIED,UNVERIFIED,TestPoint:TestPoint_Pad_D1.5mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+U1,1,DRV8300DPWR,Texas Instruments,DRV8300DPWR,Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm,C3036056,UNQUALIFIED,UNVERIFIED,"Limited-energy prototype candidate; stock checked 2026-10-10; slew, gate-off, UVLO, bootstrap and thermal qualification OPEN",True,False
+U2,1,INA240A1DR,TI(德州仪器),INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,C2060769,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U3,1,INA240A1DR,TI(德州仪器),INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,C2060769,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U4,1,INA240A1DR,TI(德州仪器),INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,C2060769,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U5,1,INA240A1DR,TI(德州仪器),INA240A1DR,fpga-servo:TI_D0008A_SOIC8_P1.27mm,C2060769,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U6,1,AD7606C-16BSTZ,Analog Devices,AD7606C-16BSTZ,Package_QFP:LQFP-64_10x10mm_P0.5mm,C5371769,AD7606C-16BSTZ-RL,C5240947,Development selection; refresh actual quote before purchasing,True,False
+U7,1,AM26LV32EIPWR,TI(德州仪器),AM26LV32EIPWR,Package_SO:TSSOP-16_4.4x5mm_P0.65mm,C404024,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U8,1,SN74LVC2G08DCUR,TI(德州仪器),SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C91875,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U9,1,SN74LVC2G08DCUR,TI(德州仪器),SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C91875,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U10,1,SN74LVC2G08DCUR,TI(德州仪器),SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C91875,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U11,1,SN74LVC1G11DCKR,TI(德州仪器),SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,C529281,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U12,1,LM5164DDAR,TI(德州仪器),LM5164DDAR,Package_SO:TI_SO-PowerPAD-8,C477928,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U13,1,TPS62901RPJR,TI(德州仪器),TPS62901RPJR,fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm,C2864847,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U15,1,LM393LVDDFR,Texas Instruments,LM393LVDDFR,fpga-servo:TI_DDF0008A,C5213974,UNQUALIFIED,UNVERIFIED,Prototype candidate; stock checked 2026-10-10; power-off I/O verified; transient qualification OPEN,True,False
+U18,1,LM74502DDFR,TI(德州仪器),LM74502DDFR,fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm,C3236215,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U19,1,TPD6E05U06RVZR,TI(德州仪器),TPD6E05U06RVZR,Package_SON:Texas_R-PUSON-N14,C962978,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U20,1,SN74LVC1G74,TI(德州仪器),SN74LVC1G74DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C70285,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U21,1,SN74LVC1G17,TI(德州仪器),SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,C7836,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U22,1,SN74LVC1G14,TI(德州仪器),SN74LVC1G14DBVR,Package_TO_SOT_SMD:SOT-23-5,C7835,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U23,1,SN74LVC1G11,TI(德州仪器),SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,C529281,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U24,1,TPS3808G33,TI(德州仪器),TPS3808G33DBVR,Package_TO_SOT_SMD:SOT-23-6,C43698,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U25,1,TPS389001DSER,TI(德州仪器),TPS389001DSER,fpga-servo:Texas_DSE0006A_WSON-6_1.5x1.5mm,C1509297,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U26,1,SN74LVC3G17,TI(德州仪器),SN74LVC3G17DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C68245,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U27,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
+U28,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
+U29,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False

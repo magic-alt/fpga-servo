@@ -50,9 +50,9 @@ KiCad 10.0.3 对当前原生七页层级原理图执行 `sch erc --severity-all 
 从根目录执行五项 `tools/check_*.py` 仓库检查；原生语法检查为 `check_native_schematic.py`，旧 `check_legacy_schematic.py` 已不存在。导出网表后运行：
 
 ```sh
-kicad-cli sch export netlist -o artifacts/ax7010_servo_reva.net hardware/ax7010_servo_reva.kicad_sch
+kicad-cli sch export netlist -o artifacts/ax7010_servo_reva.net hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 python tools/check_netlist_safety.py artifacts/ax7010_servo_reva.net
-kicad-cli sch erc --severity-all --exit-code-violations -o artifacts/ax7010_servo_reva_erc.rpt hardware/ax7010_servo_reva.kicad_sch
+kicad-cli sch erc --severity-all --exit-code-violations -o artifacts/ax7010_servo_reva_erc.rpt hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch
 ```
 
 BOM 通过 `python tools/export_bom.py` 从原理图字段生成。本轮未提交、推送或修改 PCB。

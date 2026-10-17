@@ -51,8 +51,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("netlist", type=Path)
     args = parser.parse_args()
-    errors = check((ROOT / "hardware/ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8"),
-                   json.loads((ROOT / "hardware/ax7010_servo_reva.kicad_pro").read_text(encoding="utf-8")),
+    errors = check((ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8"),
+                   json.loads((ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro").read_text(encoding="utf-8")),
                    args.netlist.read_text(encoding="utf-8"))
     print("PCB CONSTRAINTS " + ("FAILED" if errors else "PASSED"))
     for error in errors:

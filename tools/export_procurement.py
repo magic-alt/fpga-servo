@@ -18,7 +18,7 @@ def export(root=ROOT):
     source = root / 'docs/sourcing'
     decisions = json.loads((source / 'selected_overrides_2026-10-10.json').read_text())
     selected = decisions['refs']
-    with (root / 'hardware/bom.csv').open(newline='') as handle:
+    with (root / 'hardware/ads8588s_servo/bom.csv').open(newline='') as handle:
         authored = {row['Ref']: row for row in csv.DictReader(handle)}
     excluded = dict(decisions.get('excluded_refs', {}))
     excluded.update({ref: 'Removed by final architecture' for ref in decisions['removed_refs']})
@@ -100,7 +100,7 @@ def export(root=ROOT):
             'Notes': choice.get('notes', 'No exact source decision reviewed for this fitted reference.')})
     seen = [ref for group in groups.values() for ref in group['refs']]
     assert len(seen) == len(set(seen)) and set(seen) == set(fitted), 'Fitted coverage/duplicate failure'
-    output = root / 'hardware/procurement_candidates.csv'
+    output = root / 'hardware/ads8588s_servo/procurement_candidates.csv'
     with output.open('w', newline='') as handle:
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
         writer.writeheader()

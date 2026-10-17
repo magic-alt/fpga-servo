@@ -76,7 +76,7 @@ def check(path):
 
 
 def main():
-    root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parents[1] / "hardware"
+    root = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).resolve().parents[1] / "hardware" / "ads8588s_servo"
     errors = []
     for path in sorted(root.glob("*.kicad_sch")):
         if path.name != "ax7010_servo_reva.kicad_sch":

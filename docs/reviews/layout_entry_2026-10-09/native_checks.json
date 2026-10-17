@@ -1,7 +1,7 @@
 [
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_native_schematic.py"
     ],
     "returncode": 0,
@@ -9,7 +9,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_kicad_grid.py"
     ],
     "returncode": 0,
@@ -17,7 +17,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_schematic_layout.py"
     ],
     "returncode": 0,
@@ -25,7 +25,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_schematic_connectivity.py"
     ],
     "returncode": 0,
@@ -33,7 +33,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_power_wiring.py"
     ],
     "returncode": 0,
@@ -41,7 +41,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_design.py"
     ],
     "returncode": 0,
@@ -49,7 +49,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/test_pcb_checks.py"
     ],
     "returncode": 0,
@@ -57,7 +57,7 @@
   },
   {
     "command": [
-      "D:/Software/KiCad/10.0/bin/kicad-cli.exe",
+      "kicad-cli",
       "sch",
       "export",
       "netlist",
@@ -72,7 +72,7 @@
   },
   {
     "command": [
-      "D:/Software/KiCad/10.0/bin/kicad-cli.exe",
+      "kicad-cli",
       "sch",
       "export",
       "netlist",
@@ -85,7 +85,7 @@
   },
   {
     "command": [
-      "D:/Software/KiCad/10.0/bin/kicad-cli.exe",
+      "kicad-cli",
       "sch",
       "erc",
       "--severity-all",
@@ -101,7 +101,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_netlist_safety.py",
       "artifacts\\layout_entry_2026-10-09\\netlist.net"
     ],
@@ -110,7 +110,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_ocp_behavior.py",
       "artifacts\\layout_entry_2026-10-09\\netlist.net"
     ],
@@ -119,7 +119,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_pcb_parity.py",
       "artifacts\\layout_entry_2026-10-09\\netlist.net",
       "--output",
@@ -130,7 +130,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/check_pcb_constraints.py",
       "artifacts\\layout_entry_2026-10-09\\netlist.net"
     ],
@@ -139,7 +139,7 @@
   },
   {
     "command": [
-      "D:\\Software\\anaconda3\\python.exe",
+      "python",
       "tools/ai_pcb_guide/scripts/board_parity_audit.py",
       "--help"
     ],

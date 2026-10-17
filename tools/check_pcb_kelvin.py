@@ -12,16 +12,16 @@ from kicad_native import extract_forms, property_value, head_string
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def check_shunt_contract(board_text, symbol_text, embedded_text, footprint_text):
+def check_shunt_contract(board_text, symbol_text, embedded_text, footprint_text, *, include_board=True):
     errors = []
     sources = []
-    for form in extract_forms(board_text, 'footprint'):
+    for form in extract_forms(board_text, 'footprint') if include_board else []:
         ref = property_value(form.text, 'Reference')
         if ref in {'RSH1', 'RSH2', 'RSH3', 'RSH4'}:
             sources.append((ref, form.text, 'pad', 'jumper_pad_groups'))
             if head_string(form.text, 'footprint') != 'fpga-servo:HoYLR2512_Kelvin':
                 errors.append(ref + ': manufacturer SMD land required')
-    if {x[0] for x in sources} != {'RSH1', 'RSH2', 'RSH3', 'RSH4'}:
+    if include_board and {x[0] for x in sources} != {'RSH1', 'RSH2', 'RSH3', 'RSH4'}:
         errors.append('All four two-terminal SMD shunts required')
     sources.append(('land library', footprint_text, 'pad', 'jumper_pad_groups'))
     for label, text in [('symbol library', symbol_text), ('embedded symbol', embedded_text)]:
@@ -142,7 +142,7 @@ def audit(board):
 def main():
     import pcbnew as p
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('board', nargs='?', type=Path, default=ROOT/'hardware/ax7010_servo_reva.kicad_pcb')
+    ap.add_argument('board', nargs='?', type=Path, default=ROOT/'hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb')
     ap.add_argument('--output', type=Path)
     args = ap.parse_args()
     folder = args.board.parent

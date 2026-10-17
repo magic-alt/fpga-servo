@@ -1,0 +1,60 @@
+{
+  "original_moved_files_byte_identical": 37,
+  "original_readme": "links and directory note updated",
+  "legacy_netlist": {
+    "components": 159,
+    "nets": 135,
+    "pin_memberships": 592,
+    "exact_equivalence": true
+  },
+  "new_netlist": {
+    "components": 181,
+    "nets": 162,
+    "pin_memberships": 672,
+    "exact_equivalence": true
+  },
+  "erc_both_variants": {
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0
+  },
+  "isolated_generator_files_byte_identical": 16,
+  "existing_regressions": {
+    "adc_serial": 6,
+    "candidate_profile": 7,
+    "pcb_parity_logic": 11,
+    "vendor_lands": {
+      "passed": 4,
+      "failed": 2,
+      "failures_match_pre_move": true
+    }
+  },
+  "preserved_local_state": [
+    "hardware/.history/",
+    "hardware/~ax7010_servo_reva.kicad_pro.lck"
+  ],
+  "not_run": [
+    "GitHub Actions",
+    "PCB DRC",
+    "hardware tests"
+  ],
+  "markdown_link_check": {
+    "new_missing_targets": 0,
+    "existing_untracked_artifact_targets": [
+      {
+        "file": "docs/schematic_neat_wiring_2026-10-09.md",
+        "target": "../artifacts/schematic_neat/Gate_Driver_Current_Sense_optimized.pdf"
+      },
+      {
+        "file": "docs/schematic_neat_wiring_2026-10-09.md",
+        "target": "../artifacts/schematic_neat/final.pdf"
+      },
+      {
+        "file": "docs/schematic_layout_entry_audit_2026-10-10.md",
+        "target": "../artifacts/schematic-audit/20261010/"
+      }
+    ]
+  },
+  "yaml_parse": "PASS: kicad-erc, hardware-sanity, gate-ab-electrical",
+  "powershell_qa_entry_syntax": "PASS"
+}

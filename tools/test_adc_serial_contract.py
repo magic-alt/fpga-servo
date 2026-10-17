@@ -13,9 +13,9 @@ class ADCSerialContractTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         for source in (
-            "hardware/current_adc.kicad_sch",
-            "hardware/ax7010_interface.kicad_sch",
-            "hardware/bom.csv",
+            "hardware/ads8588s_servo/current_adc.kicad_sch",
+            "hardware/ads8588s_servo/ax7010_interface.kicad_sch",
+            "hardware/ads8588s_servo/bom.csv",
             "fpga/ax7010_servo_reva.xdc",
         ):
             dst = self.root / source
@@ -56,14 +56,14 @@ class ADCSerialContractTests(unittest.TestCase):
         self.assertTrue(any("ADC_DOUTB" in e for e in errs), errs)
 
     def test_motor_ntc_mislabel_rejected(self):
-        self.mutate("hardware/current_adc.kicad_sch",
+        self.mutate("hardware/ads8588s_servo/current_adc.kicad_sch",
                     'label "NTC_BOARD_AUX"',
                     'label "NTC_MOTOR"')
         errs = contract.check(self.root)
         self.assertTrue(any("NTC2" in e for e in errs), errs)
 
     def test_stale_250v_film_metadata_rejected(self):
-        self.mutate("hardware/bom.csv", ",1uF_250V_FILM,Fitted",
+        self.mutate("hardware/ads8588s_servo/bom.csv", ",1uF_250V_FILM,Fitted",
                     ",1uF_100V_FILM,Fitted")
         errs = contract.check(self.root)
         self.assertTrue(any("C3" in e for e in errs), errs)

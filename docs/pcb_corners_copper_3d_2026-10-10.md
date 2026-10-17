@@ -56,7 +56,7 @@ python tools/test_pcb_corners.py
 python tools/check_pcb_escape.py
 python tools/check_pcb_kelvin.py
 python docs/reviews/pcb_corners_copper_2026-10-10/audit_copper.py \
-  hardware/ax7010_servo_reva.kicad_pcb /tmp/pcb-copper.json
+  hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb /tmp/pcb-copper.json
 ```
 
 此次为布局几何修复，不关闭 [release gates](release_gates.md) 中的动态保护、时序、热、机械及制造资格门禁。

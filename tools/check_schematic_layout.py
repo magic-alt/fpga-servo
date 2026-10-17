@@ -4,7 +4,7 @@ import sys
 from kicad_native import extract_forms, head_string, parse_at, parse_xy, strip_form
 
 ROOT = Path(__file__).resolve().parents[1]
-HW = ROOT / "hardware"
+HW = ROOT / "hardware" / "ads8588s_servo"
 SCHEMATICS = sorted(HW.glob("*.kicad_sch"))
 
 # Legacy safe envelope converted exactly from mils to millimetres.

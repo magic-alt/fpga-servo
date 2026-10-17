@@ -1,6 +1,6 @@
 # PCB DRC and connection repair - 2026-10-10
 
-Routing completion verified and adopted to `hardware/ax7010_servo_reva.kicad_pcb`: **0 DRC violations /0 unconnected /0 schematic parity issues**, with native ERC0. The 64-item checkpoint below is historical. Dynamic and manufacturing acceptance remain OPEN.
+Routing completion verified and adopted to `hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb`: **0 DRC violations /0 unconnected /0 schematic parity issues**, with native ERC0. The 64-item checkpoint below is historical. Dynamic and manufacturing acceptance remain OPEN.
 
 ## Actual repair
 

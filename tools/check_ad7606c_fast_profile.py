@@ -13,10 +13,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = Path("fpga/ad7606c_fast_candidate_profile_2026-10-12.json")
-CANDIDATES = Path("hardware/adc_fast_candidates_2026-10-12.csv")
-SOURCE_BOM = Path("hardware/bom.csv")
+CANDIDATES = Path("hardware/ad7606c_servo/adc_fast_candidates_2026-10-12.csv")
+SOURCE_BOM = Path("hardware/ads8588s_servo/bom.csv")
 XDC = Path("fpga/ax7010_servo_reva.xdc")
-SCHEMATIC = Path("hardware/current_adc.kicad_sch")
+SCHEMATIC = Path("hardware/ads8588s_servo/current_adc.kicad_sch")
 
 LEGACY = {
     "ADC_CONVST": (11, "Y14"),

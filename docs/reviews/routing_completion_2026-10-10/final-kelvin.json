@@ -1,5 +1,5 @@
 {
-  "board": "D:\\Project\\fpga-servo\\hardware\\ax7010_servo_reva.kicad_pcb",
+  "board": "hardware/ax7010_servo_reva.kicad_pcb",
   "passed": true,
   "branches": [
     {

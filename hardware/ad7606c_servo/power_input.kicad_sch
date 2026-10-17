@@ -1,0 +1,4417 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "05a76445-5adf-4fe2-9343-49554577b902")
+	(paper "A4")
+	(title_block
+		(title "Rev.A1 - DC Input & Protection")
+		(date "2026-09-29")
+		(rev "A1")
+		(company "magic-alt/fpga-servo")
+		(comment 1 "24..48V operating bus; source transient / regeneration qualification OPEN")
+	)
+	(lib_symbols
+		(symbol "ax7010_servo_reva:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -3.048 1.016) (xy 3.048 1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -1.016) (xy 3.048 -1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 6.35 270)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:FUSE"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "FUSE"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "FUSE_0_1"
+				(rectangle
+					(start -4.064 1.778)
+					(end 4.064 -1.778)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "FUSE_1_1"
+				(pin passive line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:LM74502"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LM74502"
+				(at 0 -17.78 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LM74502_0_1"
+				(rectangle
+					(start -13.97 13.208)
+					(end 13.97 -13.208)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LM74502_1_1"
+				(pin input line
+					(at -19.05 7.62 0)
+					(length 5.08)
+					(name "EN_UVLO"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 5.08)
+					(name "GND"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -19.05 -7.62 0)
+					(length 5.08)
+					(name "NC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 19.05 -6.35 180)
+					(length 5.08)
+					(name "VCAP"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 19.05 -2.54 180)
+					(length 5.08)
+					(name "VS"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 19.05 2.54 180)
+					(length 5.08)
+					(name "GATE"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -19.05 -2.54 0)
+					(length 5.08)
+					(name "OV"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 19.05 7.62 180)
+					(length 5.08)
+					(name "SRC"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:NFET_HORIZ"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0 13.462 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NFET_HORIZ"
+				(at 0 -13.462 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NFET_HORIZ_0_1"
+				(rectangle
+					(start -10.16 8.89)
+					(end 10.16 -8.89)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "NFET_HORIZ_1_1"
+				(pin passive line
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -13.97 90)
+					(length 5.08)
+					(name "G"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 0 0)
+					(length 5.08)
+					(name "D"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:NFET_HORIZ_REV"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "Q"
+				(at 0 13.462 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NFET_HORIZ_REV"
+				(at 0 -13.462 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "NFET_HORIZ_REV_0_1"
+				(rectangle
+					(start -10.16 8.89)
+					(end 10.16 -8.89)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "NFET_HORIZ_REV_1_1"
+				(pin passive line
+					(at -15.24 0 0)
+					(length 5.08)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 0 0)
+					(length 5.08)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -15.24 0 0)
+					(length 5.08)
+					(name "S"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -13.97 90)
+					(length 5.08)
+					(name "G"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 15.24 0 180)
+					(length 5.08)
+					(name "D"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:PWR_FLAG"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#FLG"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "PWR_FLAG"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "PWR_FLAG_1_1"
+				(pin power_out line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names (offset 0) (hide yes))
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -3.81 1.524)
+					(end 3.81 -1.524)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at -7.62 0 0)
+					(length 3.81)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:TERM2"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 10.922 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TERM2"
+				(at 0 -10.922 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TERM2_0_1"
+				(rectangle
+					(start -8.89 6.35)
+					(end 8.89 -6.35)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TERM2_1_1"
+				(pin passive line
+					(at -13.97 0 0)
+					(length 5.08)
+					(name "P1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 13.97 0 180)
+					(length 5.08)
+					(name "P2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:TP"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 4.572 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "TP"
+				(at 0 -4.572 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TP_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.778)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP_1_1"
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "ax7010_servo_reva:TVS"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TVS"
+				(at 2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TVS_0_1"
+				(polyline
+					(pts
+						(xy -2.032 2.54) (xy -2.032 -2.54) (xy 2.286 0)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 2.54) (xy 2.286 -2.54) (xy 3.556 -3.556)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TVS_1_1"
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 5.08)
+					(name "A"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 7.62 270)
+					(length 5.08)
+					(name "K"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+
+(symbol "ax7010_servo_reva:PWR_GND" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 0 -4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_GND_0_1" (polyline (pts (xy 0 0) (xy 0 -1.27) (xy -1.27 -1.27) (xy 0 -2.54) (xy 1.27 -1.27) (xy 0 -1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_GND_1_1" (pin passive line (at 0 0 90) (length 0) (name "GND" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+
+(symbol "ax7010_servo_reva:PWR_VBUS_PROT" (pin_names (offset 0) (hide yes)) (pin_numbers (hide yes)) (in_bom no) (on_board no) (in_pos_files no)
+(property "Reference" "#PWR" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VBUS_PROT" (at 0 4.445 0) (effects (font (size 1 1)) (hide yes)))
+(symbol "PWR_VBUS_PROT_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+)
+(symbol "PWR_VBUS_PROT_1_1" (pin passive line (at 0 0 90) (length 0) (name "VBUS_PROT" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+)
+	(text "Local wiring: power, gate, divider/filter and ground. See docs/schematic_full_review_2026-10-09.md."
+		(exclude_from_sim no)
+		(at 16.51 169.164 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d8ad96d-4ee7-45e6-b84a-038d942adb8a")
+	)
+	(text "LM74502 OV is tied low in Rev.A1; positive surge is NOT claimed as closed. The 48V source/cable transient must be measured and kept inside the controller/downstream qualification envelope."
+		(exclude_from_sim no)
+		(at 15.24 146.558 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "398a25d0-4c9c-455e-a85b-e0d83d28486f")
+	)
+	(text "VBUS_ADC divider = 280k + 280k over 39k, plus 10nF at the ADC node. Keep the high-side resistors split for voltage stress and route the sense return away from commutation current."
+		(exclude_from_sim no)
+		(at 16.51 165.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "775b2f57-e667-42bd-9687-b8270645d792")
+	)
+	(text "F1: ONBOARD 0456025.ER 25A SMD. Verify fault current, inrush and thermal coordination. D1 stays DNP pending surge qualification."
+		(exclude_from_sim no)
+		(at 15.24 150.876 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fdb0441-97b6-444b-b1f3-dc1f0ca910c4")
+	)
+	(text "Q7/Q8 are back-to-back N-MOSFETs driven by LM74502 for low-loss reverse-polarity protection. Reverse current is not blocked when enabled; regeneration needs a receptive source."
+		(exclude_from_sim no)
+		(at 15.24 142.24 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.3048)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "93655499-e890-4053-97c5-b74ab0b4324a")
+	)
+	(text "SOURCE + -> J3.1 -> ONBOARD F1 -> LM74502 RPP -> DC-LINK"
+		(exclude_from_sim no)
+		(at 16.51 16.51 0)
+		(effects
+			(font
+				(size 1.651 1.651)
+				(thickness 0.3302)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "bab3858b-32f1-4b29-8143-3083c79c0517")
+	)
+	(no_connect
+		(at 69.85 88.9)
+		(uuid "df2d1425-7c85-42ef-8906-175045ef13fb")
+	)
+	(wire
+		(pts
+			(xy 17.78 43.18) (xy 17.78 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000001")
+	)
+	(wire
+		(pts
+			(xy 17.78 33.02) (xy 41.91 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000002")
+	)
+
+	(wire
+		(pts
+			(xy 41.91 39.37) (xy 43.18 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000004")
+	)
+	(wire
+		(pts
+			(xy 45.72 43.18) (xy 45.72 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000005")
+	)
+	(wire
+		(pts
+			(xy 60.96 39.37) (xy 64.77 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000006")
+	)
+	(wire
+		(pts
+			(xy 64.77 39.37) (xy 72.39 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000007")
+	)
+	(wire
+		(pts
+			(xy 72.39 39.37) (xy 76.2 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000008")
+	)
+	(wire
+		(pts
+			(xy 72.39 39.37) (xy 72.39 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000009")
+	)
+	(wire
+		(pts
+			(xy 72.39 73.66) (xy 69.85 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000010")
+	)
+	(wire
+		(pts
+			(xy 104.14 39.37) (xy 106.68 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000011")
+	)
+	(wire
+		(pts
+			(xy 106.68 39.37) (xy 107.95 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000012")
+	)
+	(wire
+		(pts
+			(xy 107.95 73.66) (xy 111.76 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000013")
+	)
+	(wire
+		(pts
+			(xy 138.43 39.37) (xy 142.24 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000014")
+	)
+	(wire
+		(pts
+			(xy 91.44 53.34) (xy 91.44 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000015")
+	)
+	(wire
+		(pts
+			(xy 123.19 53.34) (xy 123.19 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000016")
+	)
+	(wire
+		(pts
+			(xy 91.44 57.15) (xy 123.19 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000017")
+	)
+	(wire
+		(pts
+			(xy 123.19 57.15) (xy 139.7 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000018")
+	)
+	(wire
+		(pts
+			(xy 139.7 57.15) (xy 139.7 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000019")
+	)
+	(wire
+		(pts
+			(xy 107.95 78.74) (xy 139.7 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000020")
+	)
+	(wire
+		(pts
+			(xy 142.24 39.37) (xy 142.24 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000021")
+	)
+	(wire
+		(pts
+			(xy 142.24 60.96) (xy 142.24 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000022")
+	)
+	(wire
+		(pts
+			(xy 142.24 60.96) (xy 146.05 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000023")
+	)
+	(wire
+		(pts
+			(xy 146.05 60.96) (xy 167.64 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000024")
+	)
+	(wire
+		(pts
+			(xy 167.64 60.96) (xy 184.15 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000025")
+	)
+	(wire
+		(pts
+			(xy 184.15 60.96) (xy 200.66 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000026")
+	)
+	(wire
+		(pts
+			(xy 200.66 60.96) (xy 217.17 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000027")
+	)
+	(wire
+		(pts
+			(xy 217.17 60.96) (xy 243.84 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000028")
+	)
+	(wire
+		(pts
+			(xy 146.05 60.96) (xy 146.05 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000029")
+	)
+	(wire
+		(pts
+			(xy 167.64 60.96) (xy 167.64 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000030")
+	)
+	(wire
+		(pts
+			(xy 167.64 62.23) (xy 167.64 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000031")
+	)
+	(wire
+		(pts
+			(xy 184.15 60.96) (xy 184.15 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000032")
+	)
+	(wire
+		(pts
+			(xy 200.66 60.96) (xy 200.66 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000033")
+	)
+	(wire
+		(pts
+			(xy 217.17 60.96) (xy 217.17 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000034")
+	)
+	(wire
+		(pts
+			(xy 243.84 45.72) (xy 243.84 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000035")
+	)
+	(wire
+		(pts
+			(xy 142.24 115.57) (xy 147.32 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000036")
+	)
+	(wire
+		(pts
+			(xy 107.95 87.63) (xy 111.76 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000037")
+	)
+	(wire
+		(pts
+			(xy 111.76 87.63) (xy 115.57 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000038")
+	)
+	(wire
+		(pts
+			(xy 115.57 87.63) (xy 115.57 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000039")
+	)
+	(wire
+		(pts
+			(xy 107.95 83.82) (xy 111.76 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000040")
+	)
+	(wire
+		(pts
+			(xy 111.76 83.82) (xy 123.19 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000041")
+	)
+	(wire
+		(pts
+			(xy 123.19 83.82) (xy 132.08 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000042")
+	)
+	(wire
+		(pts
+			(xy 132.08 83.82) (xy 132.08 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000043")
+	)
+	(wire
+		(pts
+			(xy 115.57 104.14) (xy 123.19 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000044")
+	)
+	(wire
+		(pts
+			(xy 123.19 104.14) (xy 123.19 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000045")
+	)
+	(wire
+		(pts
+			(xy 146.05 80.01) (xy 146.05 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000046")
+	)
+	(wire
+		(pts
+			(xy 167.64 78.74) (xy 167.64 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000047")
+	)
+	(wire
+		(pts
+			(xy 167.64 82.55) (xy 167.64 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000048")
+	)
+	(wire
+		(pts
+			(xy 184.15 78.74) (xy 184.15 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000049")
+	)
+	(wire
+		(pts
+			(xy 200.66 78.74) (xy 200.66 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000050")
+	)
+	(wire
+		(pts
+			(xy 217.17 78.74) (xy 217.17 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000051")
+	)
+	(wire
+		(pts
+			(xy 146.05 83.82) (xy 167.64 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000052")
+	)
+	(wire
+		(pts
+			(xy 167.64 83.82) (xy 184.15 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000053")
+	)
+	(wire
+		(pts
+			(xy 184.15 83.82) (xy 200.66 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000054")
+	)
+	(wire
+		(pts
+			(xy 200.66 83.82) (xy 217.17 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000055")
+	)
+	(wire
+		(pts
+			(xy 217.17 83.82) (xy 231.14 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000056")
+	)
+	(wire
+		(pts
+			(xy 231.14 83.82) (xy 231.14 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000057")
+	)
+	(wire
+		(pts
+			(xy 69.85 83.82) (xy 59.69 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000058")
+	)
+	(wire
+		(pts
+			(xy 59.69 83.82) (xy 59.69 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000059")
+	)
+	(wire
+		(pts
+			(xy 88.9 99.06) (xy 88.9 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000060")
+	)
+	(wire
+		(pts
+			(xy 132.08 104.14) (xy 132.08 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000061")
+	)
+	(wire
+		(pts
+			(xy 162.56 115.57) (xy 166.37 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000062")
+	)
+	(wire
+		(pts
+			(xy 166.37 115.57) (xy 170.18 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000063")
+	)
+	(wire
+		(pts
+			(xy 185.42 115.57) (xy 189.23 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000064")
+	)
+	(wire
+		(pts
+			(xy 189.23 115.57) (xy 193.04 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000065")
+	)
+	(wire
+		(pts
+			(xy 189.23 115.57) (xy 189.23 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000066")
+	)
+	(wire
+		(pts
+			(xy 189.23 121.92) (xy 218.44 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000067")
+	)
+	(wire
+		(pts
+			(xy 208.28 115.57) (xy 226.06 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000068")
+	)
+	(wire
+		(pts
+			(xy 226.06 115.57) (xy 226.06 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000069")
+	)
+	(wire
+		(pts
+			(xy 218.44 134.62) (xy 218.44 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000070")
+	)
+	(wire
+		(pts
+			(xy 243.84 90.17) (xy 243.84 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000071")
+	)
+	(wire
+		(pts
+			(xy 243.84 93.98) (xy 243.84 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000072")
+	)
+	(wire
+		(pts
+			(xy 45.72 138.43) (xy 59.69 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000073")
+	)
+	(wire
+		(pts
+			(xy 59.69 138.43) (xy 88.9 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000074")
+	)
+	(wire
+		(pts
+			(xy 88.9 138.43) (xy 132.08 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000075")
+	)
+	(wire
+		(pts
+			(xy 132.08 138.43) (xy 218.44 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000076")
+	)
+	(wire
+		(pts
+			(xy 218.44 138.43) (xy 226.06 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000077")
+	)
+	(wire
+		(pts
+			(xy 226.06 138.43) (xy 231.14 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000078")
+	)
+	(wire
+		(pts
+			(xy 231.14 138.43) (xy 243.84 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a000000-0000-0000-0000-000000000079")
+	)
+	(label "VIN_RAW"
+		(at 41.91 39.37 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000001")
+	)
+	(label "VIN_FUSED"
+		(at 64.77 39.37 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000002")
+	)
+	(label "VIN_FUSED"
+		(at 111.76 83.82 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000003")
+	)
+	(label "RPP_SRC"
+		(at 104.14 39.37 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000004")
+	)
+	(label "RPP_SRC"
+		(at 111.76 73.66 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000005")
+	)
+	(label "RPP_GATE"
+		(at 123.19 57.15 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000006")
+	)
+	(label "VCAP_RPP"
+		(at 111.76 87.63 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000007")
+	)
+	(label "VBUS_DIV_MID"
+		(at 166.37 110.49 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b000000-0000-0000-0000-000000000008")
+	)
+	(hierarchical_label "VBUS_ADC"
+		(shape output)
+		(at 189.23 115.57 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "105a9d11-3654-42ec-98f3-6788caeab60a")
+	)
+	(hierarchical_label "GND"
+		(shape bidirectional)
+		(at 243.84 93.98 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8f1df9ad-c3b1-4adc-810d-759987259af8")
+	)
+	(hierarchical_label "VBUS_PROT"
+		(shape output)
+		(at 142.24 39.37 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9cb0b599-4fbf-48c5-9ff7-327895957985")
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:TERM2")
+		(at 31.75 43.18 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000001")
+		(property "Reference" "J3"
+			(at 34.29 40.64 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DC_IN_48V"
+			(at 34.29 45.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:PhoenixContact_MKDS_5_2_9.52mm"
+			(at 31.75 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/en-us/products/1714971"
+			(at 31.75 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "DC input; J3.1 VIN_RAW then onboard F1 then VIN_FUSED to Q7"
+			(at 31.75 43.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "5783e369-8294-4d2b-b8fc-850bbdabf4c6")
+		)
+		(pin "2"
+			(uuid "f7712d8b-5174-4cd4-b9d2-5e95ceebd6b7")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+
+(property "MPN" "1714971" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+(property "Manufacturer" "Phoenix Contact(菲尼克斯)" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C92145" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:FUSE")
+		(at 53.34 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000002")
+		(property "Reference" "F1"
+			(at 55.88 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "25A_0456025.ER"
+			(at 55.88 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:Littelfuse_456_25A_SMD"
+			(at 53.34 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.littelfuse.com/assetdocs/littelfuse_fuse_456_datasheet.pdf?assetguid=d86b18f9-14fa-4764-87ff-8aec12e9a89d"
+			(at 53.34 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "ONBOARD SMD25A very-fast;500A@72VDC;bus<=72V and prospectivefault<=500A qualificationOPEN"
+			(at 53.34 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(property "MPN" "0456025.ER" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "Littelfuse" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Holder_MPN" "Not applicable - SMD soldered on PCB" (at 53.34 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "LCSC" "C315877"
+	(id 0)
+	(at 53.34 39.37 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Sourcing_Status" "China stock2574 checked2026-10-10;critical protection single-source exception;coordinationOPEN"
+	(id 1)
+	(at 53.34 39.37 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(pin "1"
+			(uuid "b8fe9941-9de9-43f0-ab6e-96b63a9ff5ae")
+		)
+		(pin "2"
+			(uuid "6922fd49-6066-4690-9759-ef3843962a3e")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:NFET_HORIZ")
+		(at 91.44 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000003")
+		(property "Reference" "Q7"
+			(at 93.98 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BSC040N10NS5"
+			(at 93.98 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm"
+			(at 91.44 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "BSC040N10NS5_RPP_Q7"
+			(at 91.44 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "ed148e8f-d138-4b47-863a-73cc05929bea")
+		)
+		(pin "2"
+			(uuid "bcc0ad26-e262-4ca3-993a-cbe62d392bd3")
+		)
+		(pin "3"
+			(uuid "a3b92be6-16ee-4a9d-bda0-eff0a35ffa44")
+		)
+		(pin "4"
+			(uuid "3ecf8111-4e06-4c22-ad60-a77511429893")
+		)
+		(pin "5"
+			(uuid "c986a1dc-2d82-4437-8c4d-a72efceda3d0")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	(property "Manufacturer" "Infineon(英飞凌)" (at 91.44 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "BSC040N10NS5" (at 91.44 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C534334" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:LM74502")
+		(at 88.9 81.28 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000004")
+		(property "Reference" "U18"
+			(at 91.44 78.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LM74502DDFR"
+			(at 91.44 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm"
+			(at 88.9 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm74502.pdf"
+			(at 88.9 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" ""
+			(at 88.9 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "3e42305f-0c25-4092-ad4a-0d6c4cfcd047")
+		)
+		(pin "2"
+			(uuid "2e810ff1-649f-4a5a-98be-14e191686668")
+		)
+		(pin "3"
+			(uuid "d1462639-8294-4336-b8a8-fb862c1939de")
+		)
+		(pin "4"
+			(uuid "af2f726e-624a-4cdd-8f50-96d21f8031f5")
+		)
+		(pin "5"
+			(uuid "3dbea063-1ad3-430e-afac-e97d19ecfc1c")
+		)
+		(pin "6"
+			(uuid "73aeb381-14a0-434d-bda6-bcc9f51cbc11")
+		)
+		(pin "7"
+			(uuid "bcaf79f7-274c-4e90-8bc1-396903bf689e")
+		)
+		(pin "8"
+			(uuid "4d03ea9f-1fc0-4962-8a32-b5384a254428")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "U18")
+					(unit 1)
+				)
+			)
+		)
+	(property "Manufacturer" "TI(德州仪器)" (at 88.9 81.28 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "LM74502DDFR" (at 88.9 81.28 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C3236215" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 115.57 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000005")
+		(property "Reference" "C18"
+			(at 118.11 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220nF"
+			(at 118.11 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 115.57 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 115.57 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "220nF_25V_VCAP"
+			(at 115.57 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "fc2b01eb-5abf-4325-a357-be28763d5bb1")
+		)
+		(pin "2"
+			(uuid "79374067-454d-431a-8e1b-f4d21a484b31")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0805B224K500NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C163697" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL21B224KBFNNNE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C5378" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:TVS")
+		(at 146.05 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "00000000-0000-0000-0000-000066000006")
+		(property "Reference" "D1"
+			(at 148.59 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SMCJ54A"
+			(at 148.59 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMC"
+			(at 146.05 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "SMCJ54A_DNP_VERIFY_CLAMP"
+			(at 146.05 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "2"
+			(uuid "0fa4c0f2-cd4b-4347-b7af-fbba0c5ef7e6")
+		)
+		(pin "1"
+			(uuid "48b56869-54b3-4d50-88d4-a630384e4817")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 167.64 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000007")
+		(property "Reference" "C1"
+			(at 170.18 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100uF"
+			(at 170.18 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+			(at 167.64 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf"
+			(at 167.64 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100uF_100V"
+			(at 167.64 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "f0656353-f69f-41f1-8b87-5434511c59af")
+		)
+		(pin "2"
+			(uuid "f203d0ad-8077-4f59-b83a-609ca5e79117")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "NCC(日本贵弥功)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "EKZN101ELL101MJ20S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C337258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "100ZLH100MEFC10X20" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C330940" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 184.15 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000008")
+		(property "Reference" "C2"
+			(at 186.69 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100uF"
+			(at 186.69 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
+			(at 184.15 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf"
+			(at 184.15 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100uF_100V"
+			(at 184.15 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "65e399c2-3e08-496f-a268-f5f31070fd4c")
+		)
+		(pin "2"
+			(uuid "28e2d961-a568-4123-bc3b-0fce41a75794")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "NCC(日本贵弥功)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "EKZN101ELL101MJ20S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C337258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "100ZLH100MEFC10X20" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C330940" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 200.66 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000009")
+		(property "Reference" "C3"
+			(at 203.2 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 203.2 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3"
+			(at 200.66 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "1uF_250V_FILM"
+			(at 200.66 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(property "MPN" "C212E105J6BC000"
+	(id 0)
+	(at 200.66 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "Faratronic"
+	(id 1)
+	(at 200.66 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C604836"
+	(id 2)
+	(at 200.66 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(pin "1"
+			(uuid "6a4cd843-38be-463c-88c1-34ffeb0706ad")
+		)
+		(pin "2"
+			(uuid "00c280d2-4c5b-4b83-97b8-a914992ddcdd")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 217.17 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006600000a")
+		(property "Reference" "C4"
+			(at 219.71 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 219.71 74.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1812_4532Metric"
+			(at 217.17 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100nF_100V_C0G"
+			(at 217.17 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(property "MPN" "C4532C0G2A104JT000N"
+	(id 0)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Manufacturer" "TDK"
+	(id 1)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "LCSC" "C342611"
+	(id 2)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_MPN" "FM43N104J101EGG"
+	(id 3)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_LCSC" "C42391415"
+	(id 4)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(property "Alternative_Status" "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE"
+	(id 5)
+	(at 217.17 72.39 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+		(pin "1"
+			(uuid "f4781922-7b3a-4363-a1b4-5bda71a972e0")
+		)
+		(pin "2"
+			(uuid "8d46db8d-9ad3-48bd-bc88-abf2389924fa")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 154.94 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006600000b")
+		(property "Reference" "R1"
+			(at 157.48 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "280k"
+			(at 157.48 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 154.94 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf"
+			(at 154.94 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "280k_0.1%"
+			(at 154.94 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "86d0fbaf-d420-4e76-bfa2-2719ca79bc4d")
+		)
+		(pin "2"
+			(uuid "b4d585d0-9914-4815-9d43-fa8e856ccd69")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "RESI(开步睿思)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "PTFR0805B280KP9" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C2849140" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0805BRD07280KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C865351" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 177.8 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006600000c")
+		(property "Reference" "R2"
+			(at 180.34 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "280k"
+			(at 180.34 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 177.8 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf"
+			(at 177.8 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "280k_0.1%"
+			(at 177.8 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "b25911ba-b35a-4d69-856c-441767424a3e")
+		)
+		(pin "2"
+			(uuid "293ab757-333a-424b-84f7-db61ab302d16")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "RESI(开步睿思)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "PTFR0805B280KP9" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C2849140" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0805BRD07280KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C865351" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:R")
+		(at 200.66 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006600000d")
+		(property "Reference" "R3"
+			(at 203.2 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "39k"
+			(at 203.2 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 200.66 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250704/E55D4B940A787305EBFEE524BD083243.pdf"
+			(at 200.66 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "39k_0.1%"
+			(at 200.66 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "81bf70f1-fdb3-4331-9a35-70451b0ec51b")
+		)
+		(pin "2"
+			(uuid "2df943e1-f5a5-4c42-89b9-44e20d88a6a8")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "UNI-ROYAL(厚声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "TC0325B3902T5F" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C2988897" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "RT0603BRD0739KL" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C309652" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 218.44 128.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006600000e")
+		(property "Reference" "C5"
+			(at 220.98 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10nF"
+			(at 220.98 130.81 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 218.44 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 218.44 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "10nF_VBUS_SENSE"
+			(at 218.44 128.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "a454e9b3-0172-474b-969b-4ce5ec5a3a2b")
+		)
+		(pin "2"
+			(uuid "9de7a887-cb9e-4b20-b712-cf48ff9afe25")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0603B103K101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C43253" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "CL10B103KB8NNNC" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_LCSC" "C1589" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:TP")
+		(at 243.84 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006600000f")
+		(property "Reference" "TP1"
+			(at 246.38 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_VBUS_PROT"
+			(at 246.38 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 243.84 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" ""
+			(at 243.84 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "c86b9e41-9fca-4e34-a715-40d31ef81b97")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "TP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:TP")
+		(at 243.84 83.82 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-000066000010")
+		(property "Reference" "TP2"
+			(at 246.38 81.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_GND"
+			(at 246.38 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+			(at 243.84 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 243.84 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" ""
+			(at 243.84 83.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "25d734dd-0bba-4f23-958b-2be368802e32")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "TP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:NFET_HORIZ_REV")
+		(at 123.19 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006abaf000")
+		(property "Reference" "Q8"
+			(at 125.73 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "BSC040N10NS5"
+			(at 125.73 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm"
+			(at 123.19 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "BSC040N10NS5_RPP_Q8"
+			(at 123.19 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "d7e44d09-7744-40a5-82e9-b11184a7417c")
+		)
+		(pin "2"
+			(uuid "87ad171a-10ae-47c7-9d82-07e86fcc4805")
+		)
+		(pin "3"
+			(uuid "3c10b575-8805-4733-96a8-7730349deb6f")
+		)
+		(pin "4"
+			(uuid "63e92f1a-863a-44a3-a333-016328e58dfd")
+		)
+		(pin "5"
+			(uuid "5b1043cb-9874-476c-a98f-832db4aeba98")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "Q8")
+					(unit 1)
+				)
+			)
+		)
+	(property "Manufacturer" "Infineon(英飞凌)" (at 123.19 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+(property "MPN" "BSC040N10NS5" (at 123.19 39.37 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+	(property "LCSC" "C534334" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:C")
+		(at 132.08 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006abaf001")
+		(property "Reference" "C19"
+			(at 134.62 95.25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF"
+			(at 134.62 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 132.08 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+			(at 132.08 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "100nF_VS_BYPASS"
+			(at 132.08 97.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "88182fcc-a69d-4097-a90a-fba8be9ca246")
+		)
+		(pin "2"
+			(uuid "6d36ff9a-2b2f-45a6-a60e-a7fca9c204a6")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+
+	(property "Manufacturer" "FH(风华)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "MPN" "0805B104K101NT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "LCSC" "C89258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Sourcing_Status" "Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+
+	(property "Alternative_MPN" "0805B104K101CT"
+	(id 0)
+	(at 132.08 97.79 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_LCSC" "C77456"
+	(id 1)
+	(at 132.08 97.79 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+
+	(property "Alternative_Status" "READY_FOR_PROTOTYPE; OEM same nominal/tolerance/voltage/X7R/package reviewed; application and first-article checks OPEN"
+	(id 2)
+	(at 132.08 97.79 0)
+	(effects
+		(font
+			(size 1.27 1.27)
+		)
+		(hide yes)
+	)
+)
+)
+	(symbol
+		(lib_id "ax7010_servo_reva:PWR_FLAG")
+		(at 64.77 39.37 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006ac00001")
+		(property "Reference" "#FLG0101"
+			(at 64.77 37.465 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 64.77 34.925 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" ""
+			(at 64.77 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "eb0970ab-8db7-46c9-bb6d-9a366301b73a")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "#FLG0101")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:PWR_FLAG")
+		(at 167.64 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006ac00002")
+		(property "Reference" "#FLG0102"
+			(at 167.64 60.325 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 167.64 57.785 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" ""
+			(at 167.64 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "3b6d3eb6-4131-4e36-85ab-70944660e977")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "#FLG0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ax7010_servo_reva:PWR_FLAG")
+		(at 167.64 82.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00000000-0000-0000-0000-00006ac00003")
+		(property "Reference" "#FLG0103"
+			(at 167.64 80.645 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 167.64 78.105 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 167.64 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 167.64 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" ""
+			(at 167.64 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "97bce893-7b3d-4d70-af54-c85af9225d7d")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "#FLG0103")
+					(unit 1)
+				)
+			)
+		)
+	)
+
+	(symbol
+		(lib_id "ax7010_servo_reva:TERM2")
+		(at 31.75 76.2 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "5ac55dac-af87-46c5-b16a-a930be635259")
+		(property "Reference" "J6"
+			(at 34.29 73.66 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PSU_EXT"
+			(at 34.29 86.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			 (hide yes))
+		)
+		(property "Description" "External PSU output reference only; no external fuse holder; onboard F1 protects downstream board"
+			(at 31.75 76.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		 (hide yes))
+		(pin "1"
+			(uuid "f99c8272-7f34-48bf-9420-3d238b34c9f8")
+		)
+		(pin "2"
+			(uuid "a92749bf-0708-4ca8-9c22-bd5de16d8b81")
+		)
+		(instances
+			(project "ax7010_servo_ad7606c"
+				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+
+(property "MPN" "TBD" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+
+(property "Manufacturer" "System interface" (at 7.62 0 0) (hide yes) (effects (font (size 1.016 1.016))))
+)
+	(wire (pts (xy 17.78 76.2) (xy 12.7 76.2)) (stroke (width 0) (type default)) (uuid "eea81c7a-10bb-4404-a0d0-54d87b875282"))
+	(wire (pts (xy 12.7 76.2) (xy 12.7 31.75)) (stroke (width 0) (type default)) (uuid "7e7da6be-f8f5-4093-8d96-ac8210970cf9"))
+	(wire (pts (xy 12.7 31.75) (xy 43.18 31.75)) (stroke (width 0) (type default)) (uuid "8bf58704-d086-4f87-aebc-65b73f18d560"))
+	(wire (pts (xy 43.18 31.75) (xy 43.18 39.37)) (stroke (width 0) (type default)) (uuid "09fca468-f3a5-4958-bf99-7a5c1250737d"))
+	(wire (pts (xy 43.18 39.37) (xy 45.72 39.37)) (stroke (width 0) (type default)) (uuid "61355155-f0be-4984-96d8-3964d329fdae"))
+	(wire (pts (xy 45.72 76.2) (xy 50.8 76.2)) (stroke (width 0) (type default)) (uuid "53b4f31b-e3e5-4b48-ac4f-a0ad5b08b3a5"))
+	(junction (at 43.18 39.37) (diameter 0) (color 0 0 0 0) (uuid "df802ae8-c774-4e60-bd02-b59a79f84654"))
+	(junction
+	(at 43.18 33.02)
+	(diameter 0)
+	(color 0 0 0 0)
+	(uuid "a3fb0b1f-4da8-4b73-bd06-61d2a99ebe08")
+)
+	(label "GND" (at 50.8 76.2 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5ac53e08-19eb-4a2d-b0f2-73718db5b90e"))
+
+(wire (pts (xy 166.37 115.57) (xy 166.37 110.49)) (stroke (width 0) (type default)) (uuid "7f70cad5-a49f-4611-b1d4-10472a7ada76"))
+
+
+
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 50.8 76.2 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "2be73019-cbc4-40bc-a4ae-a2681d9c0f0b")
+(property "Reference" "#PWR2001" (at 50.8 76.2 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 50.8 76.2 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "c6d595b7-0fb2-47b9-a704-ffc6f127fbb0")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (reference "#PWR2001") (unit 1)))))
+
+(wire (pts (xy 200.66 83.82) (xy 200.66 86.36)) (stroke (width 0) (type default)) (uuid "057d7f84-8055-498f-95ad-07d27313953c"))
+(label "GND" (at 200.66 86.36 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "16632736-270b-4976-a312-787b18c4a0d3"))
+(wire (pts (xy 142.24 36.83) (xy 142.24 39.37)) (stroke (width 0) (type default)) (uuid "45e76ac6-889e-4693-9382-5150a2556c06"))
+(wire
+	(pts
+		(xy 41.91 33.02) (xy 43.18 33.02)
+	)
+	(stroke
+		(width 0)
+		(type default)
+	)
+	(uuid "7547c2e9-e7cc-4c88-be99-77035830a631")
+)
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 200.66 86.36 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "5d555edc-cf16-4790-a769-7edd2817d234")
+(property "Reference" "#PWR28001" (at 200.66 86.36 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 200.66 86.36 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "3421045a-48b0-4c97-a4f9-9a4addf62cd9")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (reference "#PWR28001") (unit 1)))))
+(symbol (lib_id "ax7010_servo_reva:PWR_VBUS_PROT") (at 142.24 36.83 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "eb30d1c2-9039-4280-bb6e-c02160950ae0")
+(property "Reference" "#PWR28002" (at 142.24 36.83 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/VBUS_PROT" (at 142.24 36.83 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "d1d0dae8-3da4-48a7-86e8-03bb7420f59f")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (reference "#PWR28002") (unit 1)))))
+)

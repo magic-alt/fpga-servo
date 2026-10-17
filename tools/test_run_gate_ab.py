@@ -34,6 +34,25 @@ class RunnerTests(unittest.TestCase):
             record = json.loads(next(out.glob('*/manifest.json')).read_text())
             self.assertEqual(record['erc']['status'], 'FAILED')
 
+    def test_schematic_scope_cannot_request_pcb_release_drc(self):
+        with tempfile.TemporaryDirectory() as folder:
+            result = subprocess.run([sys.executable, str(ROOT / 'tools/run_gate_ab.py'),
+                '--output', folder, '--schematic-only', '--with-drc'], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 2)
+            self.assertFalse(list(Path(folder).glob('*/manifest.json')))
+
+    def test_schematic_scope_does_not_turn_missing_tools_into_pass(self):
+        with tempfile.TemporaryDirectory() as folder:
+            result = subprocess.run([sys.executable, str(ROOT / 'tools/run_gate_ab.py'),
+                '--output', folder, '--schematic-only', '--kicad-cli', str(Path(folder) / 'missing-cli')],
+                capture_output=True, text=True)
+            self.assertEqual(result.returncode, 1)
+            record = json.loads(next(Path(folder).glob('*/manifest.json')).read_text())
+            self.assertEqual(record['status'], 'FAILED')
+            self.assertEqual(record['delivery_scope'], 'SCHEMATIC_BOM')
+            self.assertEqual(record['pcb_release'], 'BLOCKED')
+            self.assertEqual(record['gate_a']['status'], 'BLOCKED')
+
     def test_missing_cli_writes_failure_and_does_not_reuse_old_netlist(self):
         with tempfile.TemporaryDirectory() as folder:
             out = Path(folder)

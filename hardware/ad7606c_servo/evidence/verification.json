@@ -1,0 +1,155 @@
+{
+  "delivery_scope": "SCHEMATIC_BOM",
+  "pcb_release": "BLOCKED",
+  "kicad_version": "10.0.3",
+  "python": "python",
+  "python_version": "3.12.4",
+  "new_erc_errors": 0,
+  "new_erc_warnings": 0,
+  "new_erc_exclusions": 0,
+  "inherited_ignored_erc_categories": [
+    "footprint_filter",
+    "four_way_junction",
+    "simulation_model_issue",
+    "single_global_label"
+  ],
+  "steps": [
+    {
+      "name": "legacy_xml",
+      "scope": "native_export",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_netlist",
+      "scope": "native_export",
+      "exit_code": 0
+    },
+    {
+      "name": "new_xml",
+      "scope": "native_export",
+      "exit_code": 0
+    },
+    {
+      "name": "new_netlist",
+      "scope": "native_export",
+      "exit_code": 0
+    },
+    {
+      "name": "new_static_and_ocp",
+      "scope": "new_schematic",
+      "exit_code": 0
+    },
+    {
+      "name": "new_visible_power",
+      "scope": "new_schematic",
+      "exit_code": 0
+    },
+    {
+      "name": "new_erc",
+      "scope": "new_schematic",
+      "exit_code": 0
+    },
+    {
+      "name": "new_adc_supply_validity",
+      "scope": "new_schematic",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_native_schematic",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_kicad_grid",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_schematic_layout",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_schematic_connectivity",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_power_wiring",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_design",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_adc_serial_contract",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_ad7606c_fast_profile",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "archived_pcb_regression",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_adc_validity",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_check_selection_contract",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_safety",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_ocp",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "legacy_erc",
+      "scope": "legacy_regression",
+      "exit_code": 0
+    },
+    {
+      "name": "pdf",
+      "scope": "new_schematic",
+      "exit_code": 0
+    },
+    {
+      "name": "svg",
+      "scope": "new_schematic",
+      "exit_code": 0
+    }
+  ],
+  "source_sha256": {
+    "adc_core.kicad_sch": "79b6ac48d7755459a04e2866d6d84229e9d37705af114749b4cfbcf433aaa27d",
+    "adc_levelshift.kicad_sch": "7075b495868044600ab5ce996d44d273d4ad7ef2a88d3da683532cead772c02b",
+    "adc_power.kicad_sch": "fadfcaea2d4e4517b86fa0bb49f476da23aaf9dd320774b44c81fa8b22f4c96d",
+    "aux_power.kicad_sch": "220714ccd484ce241ea11259a61db17082110b09e678458a9f4c740ef93ae7d5",
+    "ax7010_interface.kicad_sch": "fba1eeab9fe0d658a5ef66c773569cd11ea3ac2db26c2fb08739ddf1248d535f",
+    "ax7010_servo_ad7606c.kicad_sch": "5ecf3de93601b419fe30d22f1de36cc1481ed9b2c1c0e511b7bd84e566dc1c9f",
+    "current_adc.kicad_sch": "44521d3d23c347eb502a5d20a3c9e53460fa5cd27f0ee12d62c1445532254832",
+    "encoder.kicad_sch": "280a6906e6784fe6d3b818f01501f1ef82ca40b70303ee3961367daea3a276fb",
+    "gate_inverter.kicad_sch": "1d087ed7d2ab6944adf15e4f835a61fc8cd3112ea16fe5230cd9cbc6b377e765",
+    "ocp_latch.kicad_sch": "967c22b18486697001e934d78a8816324c9f948003c2560c7db36d2d4e64492a",
+    "power_input.kicad_sch": "78539adeceba2d8361a5b8d1d2b9575687f6eea6f51de344c4fd0ba3a755eeea",
+    "ax7010_servo_reva.kicad_sym": "57e9b23591187790eebe1dd9d254b3856a765055c94f5462a7a8f1d7ad672e09",
+    "ax7010_servo_ad7606c.kicad_pro": "3a1796bc14376ac733341c1887e46f0eed1b5aa525d7cd99af17bc5dfc568e2f",
+    "ax7010_servo_ad7606c.xdc": "076706a79cfdd9771b0e6ae8e09e76ba1c02933d869a8c4bc7dbd068df15a284",
+    "adc_profile.json": "5ef1e145c1cfff76b363cf654ae7b639581cd7df09b2376fa46f09576d0df73c"
+  }
+}

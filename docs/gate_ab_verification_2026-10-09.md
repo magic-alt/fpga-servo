@@ -5,7 +5,7 @@
 
 ## 1. 设计基线 / 不确定性
 
-- 源代码：`hardware/ax7010_servo_reva.kicad_sch` 和七张子页；目标 KiCad 10。
+- 源代码：`hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch` 和七张子页；目标 KiCad 10。
 - 冻结的目标：24–48 V 母线、20 kHz PWM、10 A 连续相电流。当前计算暂按 **10 Arms**，实际额定定义、峰值电流、工作环境及散热、回馈能量/电源吸收能力均未获验收。
 - 原历史证据（2026-10-09，非本轮新执行结果）：ERC 0/0、图板 parity PASS、PCB DRC 271 条违规 + 478 未连接。新的 CI 从每次提交的原生 KiCad 源文件重新导出；绝不通过复制历史 XML 来伪造本轮 PASS。
 - `tools/gate_ab_verify.py` 对每份**新导出的 XML 网表**重核物理引脚、关键被动值、模拟/保护链路，生成容差计算和两份 ngspice 理想模型。原源及自定义物理焊盘、元件选型、PCB 此 PR 不修改。

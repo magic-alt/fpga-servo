@@ -6,7 +6,7 @@ from kicad_native import extract_forms, property_value, strip_form
 
 root = Path(__file__).resolve().parents[1]
 rows = []
-for path in sorted((root / "hardware").glob("*.kicad_sch")):
+for path in sorted((root / "hardware" / "ads8588s_servo").glob("*.kicad_sch")):
     text = strip_form(path.read_text(encoding="utf-8"), "lib_symbols")
     for symbol in extract_forms(text, "symbol"):
         ref = property_value(symbol.text, "Reference")
@@ -37,7 +37,7 @@ for path in sorted((root / "hardware").glob("*.kicad_sch")):
             "Status / note": note,
         })
 rows.sort(key=lambda row: (re.sub(r"\d+", "", row["Ref"]), int(re.search(r"\d+", row["Ref"]).group())))
-with (root / "hardware/bom.csv").open("w", encoding="utf-8", newline="") as handle:
+with (root / "hardware/ads8588s_servo/bom.csv").open("w", encoding="utf-8", newline="") as handle:
     writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
     writer.writeheader()
     writer.writerows(rows)
