@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "ads8588s",
+  "root": "../..",
+  "schematic": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch",
+  "libraries": [
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym"
+  ],
+  "bom": "hardware/ads8588s_servo/bom.csv",
+  "output": "artifacts/pcb/ads8588s",
+  "rule_sets": [
+    "repository",
+    "servo",
+    "adc_serial",
+    "adc_fast",
+    "protection",
+    "power_layout",
+    "archived_pcb"
+  ],
+  "parameters": {},
+  "board": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "ad7606c",
+  "root": "../..",
+  "schematic": "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch",
+  "libraries": [
+    "hardware/ad7606c_servo/ax7010_servo_reva.kicad_sym"
+  ],
+  "bom": "hardware/ad7606c_servo/bom.csv",
+  "output": "artifacts/pcb/ad7606c",
+  "rule_sets": [
+    "repository",
+    "ad7606c",
+    "protection"
+  ],
+  "parameters": {}
+}
