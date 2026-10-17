@@ -181,4 +181,3 @@ def check_power(path):
     live = {find(p) for p in physical}
     return [f"{path.name}: {name} at {p} has no visible wire path to a component pin"
             for name, p in targets if find(p) not in live]
-

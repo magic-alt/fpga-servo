@@ -18,7 +18,13 @@
     "archived_pcb"
   ],
   "parameters": {
-    "forbid_global_labels": true
+    "forbid_global_labels": true,
+    "mechanical_refs": [
+      "H1",
+      "H2",
+      "H3",
+      "H4"
+    ]
   },
   "board": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"
 }
