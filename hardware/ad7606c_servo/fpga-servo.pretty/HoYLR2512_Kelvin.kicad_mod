@@ -1,0 +1,109 @@
+(footprint "HoYLR2512_Kelvin"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "HoYLR2512-3W-5mR-1%: manufacturer HoS20260514-63 A0 p4; two terminals, independent inner-edge Kelvin pickup")
+	(property "Reference" "RSH**"
+		(at 0 -3 0)
+		(layer "F.SilkS")
+		(uuid "339ff3ea-5db8-4ffc-bc5a-8e4d3b7b1f83")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Value" "HoYLR2512-3W-5mR-1%"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f9742264-601c-4dd3-95a9-57481ab70eeb")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40f84ef8-e8f5-4d87-a47b-d288f74fc5f5")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "884a98c2-cfa1-47e8-9cc5-24633d038e4f")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.8 -1.8)
+		(end 1.8 -1.8)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6f4284db-826c-42b4-87f8-b747c5591e13")
+	)
+	(fp_line
+		(start -1.8 1.8)
+		(end 1.8 1.8)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8e1a87b9-b245-419b-87a6-f4416f5b9ff9")
+	)
+	(fp_rect
+		(start -4.45 -2.3)
+		(end 4.45 2.3)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "c2b197f0-bcc3-484b-8bc2-3833640aecfe")
+	)
+	(fp_rect
+		(start -3.2 -1.6)
+		(end 3.2 1.6)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "849f6dfe-3f63-4a42-ad0b-907858152c3a")
+	)
+	(pad "1" smd rect
+		(at -3.1 0)
+		(size 2.1 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "71ddf083-59e4-4bb5-901f-72404aa60739")
+	)
+	(pad "2" smd rect
+		(at 3.1 0)
+		(size 2.1 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "0a092f3f-de80-40f6-82f3-eb5313b447bb")
+	)
+	(embedded_fonts no)
+)

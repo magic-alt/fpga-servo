@@ -1,0 +1,12 @@
+{
+  "components": 181,
+  "on_board_component_objects": 180,
+  "nets": 162,
+  "adc_physical_pins": 64,
+  "retained_circuit_connectivity": "PASS",
+  "original_source_hashes": "UNCHANGED",
+  "fault_injection_cases": 18,
+  "ocp_stable_level_scenarios": 531,
+  "pcb": "NOT_CREATED_ROUTING_DEFERRED",
+  "qualification": "SCHEMATIC_STATIC_ONLY"
+}
