@@ -1,3 +1,11 @@
 # Keep machine-produced evidence byte-for-byte for its SHA256 manifests.
 docs/reviews/layout_entry_2026-10-09/** -text whitespace=cr-at-eol
 docs/reviews/layout_entry_repair_2026-10-09/** -text whitespace=cr-at-eol
+
+# Native CAD, models and provenance manifests are hashed as exact file bytes.
+hardware/** -text whitespace=cr-at-eol
+docs/reviews/dual_prototype_2026-10-18/** -text whitespace=cr-at-eol
+
+# Explicit project inputs participate in source-bound engineering signatures.
+tools/projects/ad7606c.json -text whitespace=cr-at-eol
+tools/projects/ads8588s.json -text whitespace=cr-at-eol

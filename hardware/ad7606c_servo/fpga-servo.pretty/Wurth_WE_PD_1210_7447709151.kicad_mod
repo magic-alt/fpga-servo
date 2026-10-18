@@ -10,8 +10,8 @@
 		(uuid "33bde9a6-9f37-4d0d-98dc-c0ec53f7d779")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.12)
+				(size 1.0 1.0)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -54,7 +54,7 @@
 		(start -6.38 -6.38)
 		(end 6.38 -6.38)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type default)
 		)
 		(layer "F.SilkS")
@@ -64,7 +64,7 @@
 		(start -6.38 6.38)
 		(end 6.38 6.38)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type default)
 		)
 		(layer "F.SilkS")

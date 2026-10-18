@@ -228,7 +228,36 @@ def electrical_api():
         result = {ref: passive(components[ref]) for ref in (
             "R1", "R2", "R3", "C5", "C1", "C2", "R50", "R53", "R40", "C40", "RSH1", "RSH2", "RSH3", "RSH4"
         )}
+        bank_caps = ['C1', 'C2', *[f'C{i}' for i in range(120, 128)]]
+        if any(ref in components for ref in ['R120', *bank_caps[2:]]):
+            for index, cap_ref in enumerate(bank_caps):
+                resistor = f'R{120+index}'
+                value(cap_ref, 100e-6)
+                value(resistor, .33)
+                rail(resistor, 1, 'VBUS_PROT')
+                rail(cap_ref, 2, 'GND')
+                same((resistor, 2), (cap_ref, 1))
+                branch = net(cap_ref, 1)
+                nodes = {node for node, name in pins.items() if name == branch}
+                if nodes != {(resistor, '2'), (cap_ref, '1')}:
+                    raise TopologyError(f'{cap_ref}: damped branch has unexpected physical pins')
+            result['DC_LINK_TOTAL_F'] = sum(passive(components[ref]) for ref in bank_caps)
+            result['DC_LINK_R_EQ_OHM'] = 1 / sum(1 / passive(components[f'R{120+i}'])
+                                                for i in range(len(bank_caps)))
+        else:
+            for cap_ref in ('C1', 'C2'):
+                rail(cap_ref, 1, 'VBUS_PROT')
+                rail(cap_ref, 2, 'GND')
         return result
+
+
+    def bulk_model(values):
+        """Nominal equal-branch passive equivalent; excludes ESL/tolerance/source dynamics."""
+        cap = values.get('DC_LINK_TOTAL_F', values['C1'] + values['C2'])
+        resistance = values.get('DC_LINK_R_EQ_OHM', 0.)
+        if not math.isfinite(cap) or cap <= 0 or not math.isfinite(resistance) or resistance < 0:
+            raise TopologyError('Invalid nominal DC-link equivalent')
+        return cap, resistance
 
 
     def corner_current_limits(values: dict[str, float],
@@ -328,7 +357,7 @@ def electrical_api():
         components, pins = read_netlist(netlist)
         v = require_graph(components, pins)
         require_bus_budget_parts(netlist)
-        cap = v["C1"] + v["C2"]
+        cap, bank_resistance = bulk_model(v)
         shunt_powers = [PHASE_RMS_A**2 * v[ref] for ref in ("RSH1", "RSH2", "RSH3")]
         tau = v["R40"] * v["C40"]
         from pcbtools.rules.adc import validity_api
@@ -361,10 +390,11 @@ def electrical_api():
                 "illustrative_qg_div_peak_sink_s_NOT_a_bound": MOSFET_QG_MAX_C/DRV8300_SINK_PEAK_A,
                 "regeneration": {
                     "bulk_nominal_F": cap,
+                    "series_damping_nominal_equivalent_ohm": bank_resistance,
                     "energy_48_to_55_J": 0.5*cap*(55**2-48**2),
-                    "ideal_no_sink_1A_time_48_to_55_s": (55-48)*cap,
-                    "illustrative_1A_no_sink_after_1ms_V": 48 + 0.001/cap,
-                    "warning": "55V is NOT an approved voltage; ignores source/load and parasitics",
+                    "ideal_no_sink_1A_time_48_to_55_s": max(0., 55-48-bank_resistance)*cap,
+                    "illustrative_1A_no_sink_after_1ms_V": 48 + bank_resistance + 0.001/cap,
+                    "warning": "55V is NOT an approved voltage; isolated bulk-bank model excludes C3/C4, source/load, distributed ESL and actual PWM spectrum",
                 },
                 "adc_supply_vs_supervisor": {
                     "ADS8588S_AVDD_min_V": ADC_AVDD_MIN_V,
@@ -397,11 +427,14 @@ def electrical_api():
     def generate_spice(values: dict[str, float], output_dir: Path) -> dict[str, Path]:
         """Explicit ideal-source/passive decks; no hidden vendor-model claim."""
         output_dir.mkdir(parents=True, exist_ok=True)
-        cap = values["C1"] + values["C2"]
+        cap, bank_resistance = bulk_model(values)
+        capacitor_node = 'capnode' if bank_resistance else 'bus'
+        damping = f'Rbank bus capnode {bank_resistance:.12g}\n' if bank_resistance else ''
         regen = output_dir / "regeneration.cir"
         regen.write_text(f"""* Ideal unsunk DC-link regeneration. Not a clamp qualification.
+    * Isolated bulk bank only; excludes C3/C4, source/cable impedance and distributed ESL.
     Iregen 0 bus DC 1
-    Cbulk bus 0 {cap:.12g} IC=48
+    {damping}Cbulk {capacitor_node} 0 {cap:.12g} IC=48
     .tran 1u 1.4m uic
     .control
     set wr_singlescale
@@ -475,9 +508,10 @@ def electrical_api():
             logs.append(name)
         regen = _rows(output_dir / "regeneration.dat")
         last_t, last_v = regen[-1]
-        if regen[0][0] > 2e-6 or abs(regen[0][1] - 48) > 0.025:
+        cap, bank_resistance = bulk_model(values)
+        if regen[0][0] > 2e-6 or abs(regen[0][1] - (48 + bank_resistance)) > 0.025:
             raise RuntimeError("Invalid regeneration initial conditions")
-        expected = 48 + last_t / (values["C1"] + values["C2"])
+        expected = 48 + bank_resistance + last_t / cap
         if abs(last_v-expected) > 0.025 or not 0.00139 <= last_t <= 0.00141:
             raise AssertionError(f"Regeneration SPICE != analytical capacitor law: {last_v} vs {expected}")
         trace = _rows(output_dir / "phase_current_filter.dat")
@@ -608,6 +642,44 @@ def ocp_behavior(pins):
                     assert levels[pins[("U1", driver_pin)]] == (raw and run), (gate, out, mask)
             checks += 1
     return checks
+
+def gate_resistor_errors(parts, selection):
+    errors = []
+    for i in range(1, 7):
+        ref = f'RG{i}'
+        expected = {'MPN': selection['mpn'], 'Value': '33R', 'Footprint': selection['footprint']}
+        if parts.get(ref) != expected:
+            errors.append(f'{ref}: retain reviewed pulse-proof 33R identity and OEM land')
+    return errors
+
+
+def check_gate_resistors(project, xml=None):
+    import csv
+    import xml.etree.ElementTree as ET
+    from pcbtools.schematic import discover_sheets
+    from pcbtools.kicad import extract_forms, property_value
+    selection = project.parameters['gate_resistor_selection']
+    parts = {}
+    for path in discover_sheets(project):
+        for form in extract_forms(path.read_text(encoding='utf-8'), 'symbol'):
+            if '(lib_id ' in form.text:
+                parts[property_value(form.text, 'Reference')] = {
+                    k: property_value(form.text,k) for k in ['MPN','Value','Footprint']}
+    errors = gate_resistor_errors(parts, selection)
+    with project.bom.open(encoding='utf-8-sig', newline='') as stream:
+        rows = {r['Ref']: r for r in csv.DictReader(stream)}
+    for i in range(1,7):
+        row = rows.get(f'RG{i}', {})
+        if row.get('MPN') != selection['mpn'] or row.get('Package') != selection['footprint']:
+            errors.append(f'RG{i}: BOM pulse-proof selection differs from schematic')
+    if xml:
+        root = ET.parse(xml).getroot()
+        native = {c.get('ref'): {'Value':c.findtext('value'), 'Footprint':c.findtext('footprint'),
+                  'MPN':c.findtext('fields/field[@name="MPN"]')}
+                  for c in root.findall('components/comp')}
+        errors += gate_resistor_errors(native, selection)
+    return errors
+
 
 def check_safety(project, path):
     """Check exported KiCad netlist for critical safety and acquisition paths."""
@@ -800,7 +872,8 @@ def check_safety(project, path):
         rail(pull, "2", "GND")
     for gate in ["U8", "U9", "U10"]:
         same(("U11", "4"), (gate, "2"), (gate, "6"))
-    for esd_pin, receiver_pin in [("14", "1"), ("13", "2"), ("12", "4"), ("11", "5"), ("9", "10"), ("8", "11")]:
+    # TI SLLS849E PW16: + / - inputs are 2/1, 6/7, 10/9.
+    for esd_pin, receiver_pin in [("14", "2"), ("13", "1"), ("12", "6"), ("11", "7"), ("9", "10"), ("8", "9")]:
         same(("U19", esd_pin), ("U7", receiver_pin))
     for esd_pin in ["5", "10"]:
         rail("U19", esd_pin, "GND")

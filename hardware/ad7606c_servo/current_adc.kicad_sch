@@ -2336,12 +2336,12 @@
 (wire (pts (xy 39.37 68.58) (xy 39.37 71.12)) (stroke (width 0.1524) (type default)) (uuid "bdd3aac9-717e-40ec-ad58-a74ffc012bbb"))
 (wire (pts (xy 43.18 68.58) (xy 43.18 71.12)) (stroke (width 0.1524) (type default)) (uuid "ee7b8b49-5a63-4e39-9f1a-83ebba87d5f1"))
 (wire (pts (xy 43.18 71.12) (xy 46.99 71.12)) (stroke (width 0.1524) (type default)) (uuid "31fb4a3c-021f-4e57-b337-898c5ab15379"))
-(wire (pts (xy 71.12 66.04) (xy 91.44 66.04)) (stroke (width 0.1524) (type default)) (uuid "f8f2d90c-3d70-4899-b1b5-83927a161bf3"))
-(wire (pts (xy 46.99 66.04) (xy 71.12 66.04)) (stroke (width 0.1524) (type default)) (uuid "f4dc8ebf-2a70-49d1-8653-e22d7c3b1891"))
-(wire (pts (xy 71.12 43.18) (xy 71.12 66.04)) (stroke (width 0.1524) (type default)) (uuid "222098f5-1917-4f90-93c4-9fb3abe2b6d4"))
-(wire (pts (xy 91.44 66.04) (xy 91.44 67.31)) (stroke (width 0.1524) (type default)) (uuid "0cd3d761-7ff0-42ef-b381-ff4bc3c6848a"))
+
+
+(wire (pts (xy 71.12 43.18) (xy 71.12 71.12)) (stroke (width 0.1524) (type default)) (uuid "222098f5-1917-4f90-93c4-9fb3abe2b6d4"))
+
 (wire (pts (xy 46.99 68.58) (xy 46.99 71.12)) (stroke (width 0.1524) (type default)) (uuid "0fcddd97-9795-4eed-9d78-36398f580c71"))
-(wire (pts (xy 46.99 66.04) (xy 46.99 68.58)) (stroke (width 0.1524) (type default)) (uuid "4a4261e8-622c-4e02-9fe4-259d78507821"))
+
 (wire (pts (xy 73.66 40.64) (xy 73.66 43.18)) (stroke (width 0.1524) (type default)) (uuid "1904f0ac-2526-4e5e-8a86-2cab7d9266fc"))
 (wire (pts (xy 71.12 43.18) (xy 73.66 43.18)) (stroke (width 0.1524) (type default)) (uuid "c28549e8-461c-4970-8f9d-10503279ab6f"))
 (wire (pts (xy 91.44 67.31) (xy 91.44 69.85)) (stroke (width 0.1524) (type default)) (uuid "a0b656fb-e9a7-4372-8588-a0ca0fe61354"))
@@ -2383,17 +2383,17 @@
 		(uuid "70f27286-808b-44ec-b232-e9226b6afd69")
 	)
 (wire (pts (xy 46.99 110.49) (xy 46.99 113.03)) (stroke (width 0.1524) (type default)) (uuid "98be418d-7f96-420d-adb0-417985fc8093"))
-(wire (pts (xy 46.99 107.95) (xy 46.99 110.49)) (stroke (width 0.1524) (type default)) (uuid "fb3804de-a91d-4a73-8fde-ec23f49b1796"))
+
 (wire (pts (xy 39.37 113.03) (xy 43.18 113.03)) (stroke (width 0.1524) (type default)) (uuid "5cca250d-8cb8-478b-accd-eaeb29f399ea"))
 (wire (pts (xy 39.37 110.49) (xy 39.37 113.03)) (stroke (width 0.1524) (type default)) (uuid "0b497811-9130-4e2a-9c82-bb5ad59e1678"))
 (wire (pts (xy 73.66 82.55) (xy 73.66 85.09)) (stroke (width 0.1524) (type default)) (uuid "c06a1c82-291d-4b1c-bd4b-6245954d15c9"))
 (wire (pts (xy 43.18 110.49) (xy 43.18 113.03)) (stroke (width 0.1524) (type default)) (uuid "deacce72-7eec-45b5-85e7-e0f3560f9b18"))
-(wire (pts (xy 71.12 107.95) (xy 91.44 107.95)) (stroke (width 0.1524) (type default)) (uuid "26545ddd-2cd2-4cb3-982c-9493e8b7c378"))
-(wire (pts (xy 91.44 107.95) (xy 91.44 109.22)) (stroke (width 0.1524) (type default)) (uuid "accf6363-47e0-4dd2-81b7-ca9cdedd8445"))
+
+
 (wire (pts (xy 43.18 113.03) (xy 46.99 113.03)) (stroke (width 0.1524) (type default)) (uuid "6130f426-e019-49a0-bf5e-9b9920e423e7"))
-(wire (pts (xy 71.12 85.09) (xy 71.12 107.95)) (stroke (width 0.1524) (type default)) (uuid "02556fa1-5345-46a3-8b2f-14047c0a7d7c"))
+(wire (pts (xy 71.12 85.09) (xy 71.12 113.03)) (stroke (width 0.1524) (type default)) (uuid "02556fa1-5345-46a3-8b2f-14047c0a7d7c"))
 (wire (pts (xy 71.12 85.09) (xy 73.66 85.09)) (stroke (width 0.1524) (type default)) (uuid "11ce64bb-fbd8-4d50-ad90-45bdc5301fc4"))
-(wire (pts (xy 46.99 107.95) (xy 71.12 107.95)) (stroke (width 0.1524) (type default)) (uuid "e9530996-a733-4aec-b24b-1cf1849b0096"))
+
 (wire (pts (xy 91.44 109.22) (xy 91.44 111.76)) (stroke (width 0.1524) (type default)) (uuid "9128739e-d1a7-4bbf-8591-3ed3115bf390"))
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 91.44 111.76 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "6c6d13b2-5592-4e74-a627-11e316921e20")
 (property "Reference" "#PWR1206" (at 91.44 111.76 0) (effects (font (size 1 1)) (hide yes)))
@@ -2542,13 +2542,13 @@
 (pin "1" (uuid "2296dcc4-13fe-44d4-b04b-d8ad3ee688ea")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR1225") (unit 1)))))
 (label "GND" (at 66.04 190.5 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "790e18cc-c8fe-4dc9-b917-99fc6e6d8683"))
 (junction (at 45.72 114.3) (diameter 0.635) (color 0 0 0 0) (uuid "3a117d1f-80ba-451d-ad71-491611fb6f2a"))
-(junction (at 71.12 66.04) (diameter 0.635) (color 0 0 0 0) (uuid "2c8788b8-d3dc-42e8-b89b-6a10f189ca6e"))
+
 (junction (at 91.44 153.67) (diameter 0.635) (color 0 0 0 0) (uuid "684a35b1-69d5-41f3-beae-3fc4958de7a3"))
 (junction (at 45.72 30.48) (diameter 0.635) (color 0 0 0 0) (uuid "6a125184-4251-4d03-9680-3eb5704754c0"))
 (junction (at 46.99 68.58) (diameter 0.635) (color 0 0 0 0) (uuid "0fd4d72f-40a2-4d9a-a7ab-893d9422c9fc"))
 (junction (at 43.18 71.12) (diameter 0.635) (color 0 0 0 0) (uuid "4d3a687a-06ac-4cdd-a3d7-b01c4a120388"))
 (junction (at 71.12 153.67) (diameter 0.635) (color 0 0 0 0) (uuid "3fae203d-b753-4685-901a-2440edda2315"))
-(junction (at 71.12 107.95) (diameter 0.635) (color 0 0 0 0) (uuid "d5c82a7a-829f-485d-8ea7-4f644d324ea0"))
+
 (junction (at 43.18 113.03) (diameter 0.635) (color 0 0 0 0) (uuid "98f4fef6-3b89-4935-bc6f-e771a59ea1a8"))
 (junction (at 91.44 67.31) (diameter 0.635) (color 0 0 0 0) (uuid "94e06026-eb04-420f-a7e9-6c5f99c007f9"))
 (junction (at 46.99 153.67) (diameter 0.635) (color 0 0 0 0) (uuid "05f700ef-db5a-4edf-989a-cf61e2f6bc23"))
@@ -4926,4 +4926,15 @@
 (wire (pts (xy 170.18 104.14) (xy 182.88 104.14)) (stroke (width 0.1524) (type default)) (uuid "43885801-8c05-59db-88d3-8e0d227ef674"))
 (hierarchical_label "VIO_3V3" (shape input) (at 182.88 104.14 180) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7fe6a99f-39b6-5ad9-b397-c7f6ca817f92"))
 (text "Phase RC: 47R / 1nF retained for first prototype; tune after PWM-noise tests" (at 17.78 13.97 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "20ab6d77-7430-50d7-840f-b3f9ee402732"))
-(embedded_fonts no))
+(embedded_fonts no)(wire (pts (xy 46.99 71.12) (xy 71.12 71.12)) (stroke (width 0.1524) (type default)) (uuid "240ac717-c8c2-46f7-8442-6d8dc0440bc7"))
+(junction (at 46.99 71.12) (diameter 0) (color 0 0 0 0) (uuid "219ed660-886c-4a9f-be62-a36c51213823"))
+(wire (pts (xy 46.99 113.03) (xy 71.12 113.03)) (stroke (width 0.1524) (type default)) (uuid "b62b66b7-3e5c-445b-8b58-9b34c840aa5b"))
+(junction (at 46.99 113.03) (diameter 0) (color 0 0 0 0) (uuid "d5e690ed-674b-4c8c-9421-ec3973f571a7"))
+(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 36.83 113.03 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "b9e74950-0631-49ee-b0e6-f1ede9a3c281")
+(property "Reference" "#PWR99001" (at 36.83 113.03 0) (effects (font (size 1 1)) (hide yes)))
+(property "Value" "/GND" (at 36.83 113.03 0) (effects (font (size 1 1)) (hide yes)))
+(pin "1" (uuid "32c8f9f6-5d92-43c3-9489-09505dae79be")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904" (reference "#PWR99001") (unit 1)))))
+(label "GND" (at 36.83 113.03 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "396c6853-4a90-409a-82de-9deca1174b88"))
+(wire (pts (xy 39.37 113.03) (xy 36.83 113.03)) (stroke (width 0.1524) (type default)) (uuid "82517d4a-69c3-4749-b161-a7e8d1b14f9f"))
+(junction (at 39.37 113.03) (diameter 0) (color 0 0 0 0) (uuid "7f8e01aa-ce14-4b00-953f-9fef15df7e1a"))
+)

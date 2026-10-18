@@ -1,0 +1,68 @@
+{
+  "ads8588s": {
+    "before_components": 178,
+    "after_components": 180,
+    "physical_memberships": 634,
+    "existing_changed_pins": {
+      "U13.8": {
+        "before": "unconnected-(U13-SS/TR-Pad8)",
+        "after": "Net-(U13-SS/TR)"
+      }
+    },
+    "added_references": [
+      "C132",
+      "C133"
+    ],
+    "identity_changed_references": [
+      "C30",
+      "C31"
+    ],
+    "erc_errors_warnings_exclusions": [
+      0,
+      0,
+      0
+    ],
+    "sha256": {
+      "aux_power.kicad_sch": "956228853106414bc6b64f5a5829594e8c0b5bc1c83025132acff9f59518fccd",
+      "bom.csv": "a3b7fb0171c15d68b35584902fe657bda6585609f3b53bce5322c84629df0518",
+      "fpga-servo.pretty/Murata_GRM32_1210.kicad_mod": "3e2fb3dd5100b9a4b775085e61b430485cc04dc63ec96c3e507e2db908efb55c",
+      "before.xml": "81599cc02461728ce7c17136baa87d394fcf6db0a3f9d852f4d3b10c023844c8",
+      "after.xml": "28c35278447ea22f3f2eaaec6a32360dd117b5e2a52e866143aecdcc3528126f",
+      "erc.json": "66306ac27d53db570e00c29d6d81f88bfc18ce24a58afe4eed7d01b0ccbfebcf"
+    },
+    "physical_qualification": "NOT_RUN"
+  },
+  "ad7606c": {
+    "before_components": 200,
+    "after_components": 202,
+    "physical_memberships": 714,
+    "existing_changed_pins": {
+      "U13.8": {
+        "before": "unconnected-(U13-SS/TR-Pad8)",
+        "after": "Net-(U13-SS/TR)"
+      }
+    },
+    "added_references": [
+      "C132",
+      "C133"
+    ],
+    "identity_changed_references": [
+      "C30",
+      "C31"
+    ],
+    "erc_errors_warnings_exclusions": [
+      0,
+      0,
+      0
+    ],
+    "sha256": {
+      "aux_power.kicad_sch": "4f2ed67c10d2064df7db62135c135aac8760ddcfb8fa374986fcf7a0ec37e98b",
+      "bom.csv": "ab36fe505c79761137b33fd80b27fed044138eb0e73817aa8adc8f7bd8425654",
+      "fpga-servo.pretty/Murata_GRM32_1210.kicad_mod": "3e2fb3dd5100b9a4b775085e61b430485cc04dc63ec96c3e507e2db908efb55c",
+      "before.xml": "95486ac03d4a116805f4da7e950ec58086e7f49a9775f170abc092b141157cdc",
+      "after.xml": "758cf35a3416e308bf50cd347fc6214502028cb24b9d3972f79c954e45c02fc9",
+      "erc.json": "244a7002ec5fce15f0f03262490ad9e7cc876512e5ea66fc4ab024e260ebabed"
+    },
+    "physical_qualification": "NOT_RUN"
+  }
+}

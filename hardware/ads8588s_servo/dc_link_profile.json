@@ -1,0 +1,52 @@
+{
+  "continuous_phase_arms": 10.0,
+  "peak_phase_amplitude_a": 20.0,
+  "peak_duration_s": 30,
+  "waveform": "BALANCED_SINUSOIDAL",
+  "branches": [
+    {
+      "capacitor": "C1",
+      "resistor": "R120"
+    },
+    {
+      "capacitor": "C2",
+      "resistor": "R121"
+    },
+    {
+      "capacitor": "C120",
+      "resistor": "R122"
+    },
+    {
+      "capacitor": "C121",
+      "resistor": "R123"
+    },
+    {
+      "capacitor": "C122",
+      "resistor": "R124"
+    },
+    {
+      "capacitor": "C123",
+      "resistor": "R125"
+    },
+    {
+      "capacitor": "C124",
+      "resistor": "R126"
+    },
+    {
+      "capacitor": "C125",
+      "resistor": "R127"
+    },
+    {
+      "capacitor": "C126",
+      "resistor": "R128"
+    },
+    {
+      "capacitor": "C127",
+      "resistor": "R129"
+    }
+  ],
+  "sharing_factor": 0.8,
+  "waveform_allowance": 1.1,
+  "resistor_hot_power_limit_w": 0.708,
+  "qualification_status": "STATIC_DESIGN_ONLY_BENCH_OPEN"
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "project_id": "ads8588s",
+  "manufacturer": "JLCPCB",
+  "stackup": {
+    "profile_id": "JLC041621-3313",
+    "copper_layers": 4,
+    "thickness_mm": 1.6,
+    "copper_oz": [
+      2,
+      1,
+      1,
+      2
+    ],
+    "copper_thickness_mm": [
+      0.07,
+      0.03,
+      0.03,
+      0.07
+    ],
+    "dielectric_material": "Nan Ya NP-155F Tg155",
+    "evidence": {
+      "path": "docs/reviews/dual_prototype_2026-10-18/jlc_stackup_query_manifest.json",
+      "sha256": "98421aaa91d1f84f84275648f670e213b5e01f9886a3e624a95e127e720c229d"
+    },
+    "dielectric_layers": [
+      {
+        "name": "dielectric 1",
+        "type": "prepreg",
+        "thickness_mm": 0.092,
+        "epsilon_r": 4.1
+      },
+      {
+        "name": "dielectric 2",
+        "type": "core",
+        "thickness_mm": 1.23,
+        "epsilon_r": 4.42
+      },
+      {
+        "name": "dielectric 3",
+        "type": "prepreg",
+        "thickness_mm": 0.092,
+        "epsilon_r": 4.1
+      }
+    ]
+  },
+  "reviews": {},
+  "status_note": "CANDIDATE_ONLY_NOT_FABRICATION_READY; actual source-bound engineering reviews still required",
+  "manufacturing_requirements": {
+    "finish": "ENIG",
+    "solder_mask": "green",
+    "header_finished_hole_mm": 1.02,
+    "header_finished_hole_tolerance_mm": 0.05,
+    "header_process": "Controlled circular finished-hole process on multilayer ENIG; ordinary PTH tolerance insufficient; acceptance OPEN",
+    "material_difference": "Published Tg155 candidate replaces unverified Tg170 target for ongoing first-prototype design; no order authorized",
+    "motor_connector_finished_hole_mm": 1.85,
+    "motor_connector_finished_hole_tolerance_mm": 0.05,
+    "motor_connector_process": "Controlled circular finished diameter1.80..1.90mm; special ENIG multilayer +/-0.05 process; explicit manufacturer acceptance before order",
+    "via_covering": "Type VII epoxy filled and copper capped (POFV)",
+    "via_process": "Paid four-layer POFV; all electrical through vias, including in-pad thermal vias; actual drill range and final UUID/XY map must be verified from frozen CAD. No assumption of ink plugging or simple tenting equivalence.",
+    "stencil_thickness_mm": 0.125
+  }
+}

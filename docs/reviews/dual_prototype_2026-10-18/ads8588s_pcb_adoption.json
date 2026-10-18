@@ -1,0 +1,16 @@
+{
+  "branch": "feat/dual-servo-fabrication-readiness",
+  "authorization": "User requested full dual design repairs and implementation of reviewed plan",
+  "candidate_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+  "previous_provisional_sha256": "a4b8158240253f0aefcf333f37987b9d69afbe30419be8a3440ff2483388c666",
+  "previous_adoption_record": "ads8588s_pcb_adoption_provisional_a4b815.json",
+  "status": "ADOPTED_CAD_STATIC_CHECKS_PASS_MANUFACTURING_BLOCKED",
+  "native_DRC": "0 violations / 0 unconnected / 0 parity, all severity; no exclusions",
+  "native_drc_sha256": "44e1c5e4ae983d78bc3e3bfd907251f5457deb6750241e98d4b96475d9c6038f",
+  "geometry_proof": "ads8588s_final_native_geometry.json",
+  "routing_ECO": "ads8588s_in1_supply_bridge_eco.json",
+  "full_zone_connectivity_witness": "ads8588s_in1_zone_connectivity.json",
+  "scope": "Exactly21 removed copper objects,11 added (2vias+9Fsegments); unchanged physical pads/footprints/poses/ink/zone definitions/project rules/local models. Necessary VA5 island supply preserved via4.8926mm/.5mmF bridge;32actualVA5pads one native connected component.",
+  "rejected_attempt": "Removing21 without replacement created1UC and was rejected. Analysis without zones did not establish a disposable supply branch.",
+  "limits": "No human signature, material/process/vendor acceptance, hardware qualification or fabrication order."
+}

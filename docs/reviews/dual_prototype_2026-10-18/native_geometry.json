@@ -1,0 +1,7272 @@
+{
+  "ads": {
+    "board": "artifacts/dual-servo/ads-integrated/common-power-final/ax7010_servo_reva.kicad_pcb",
+    "sha256": "62aa44939e2df58b38ed732a21646c08892b4eeca3c1271be44323a8951c2f32",
+    "footprints": {
+      "U6": {
+        "footprint": "Package_QFP:LQFP-64_10x10mm_P0.5mm",
+        "value": "ADS8588SIPM",
+        "pose_mm": [
+          46.0,
+          74.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -5.675,
+              -3.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              70.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              -5.675,
+              0.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              74.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              -5.675,
+              1.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              75.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              -5.675,
+              1.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              75.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              -5.675,
+              2.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              76.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              -5.675,
+              2.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              76.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "15",
+            "local_center_mm": [
+              -5.675,
+              3.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              77.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "16",
+            "local_center_mm": [
+              -5.675,
+              3.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              77.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "17",
+            "local_center_mm": [
+              -3.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              42.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "18",
+            "local_center_mm": [
+              -3.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              42.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "19",
+            "local_center_mm": [
+              -2.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              43.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -5.675,
+              -3.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              70.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "20",
+            "local_center_mm": [
+              -2.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              43.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "21",
+            "local_center_mm": [
+              -1.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              44.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "22",
+            "local_center_mm": [
+              -1.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              44.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "23",
+            "local_center_mm": [
+              -0.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              45.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "24",
+            "local_center_mm": [
+              -0.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              45.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "25",
+            "local_center_mm": [
+              0.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              46.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "26",
+            "local_center_mm": [
+              0.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              46.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "27",
+            "local_center_mm": [
+              1.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              47.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "28",
+            "local_center_mm": [
+              1.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              47.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "29",
+            "local_center_mm": [
+              2.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              48.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -5.675,
+              -2.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              71.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "30",
+            "local_center_mm": [
+              2.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              48.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "31",
+            "local_center_mm": [
+              3.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              49.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "32",
+            "local_center_mm": [
+              3.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              49.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "33",
+            "local_center_mm": [
+              5.675,
+              3.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              77.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "34",
+            "local_center_mm": [
+              5.675,
+              3.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              77.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "35",
+            "local_center_mm": [
+              5.675,
+              2.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              76.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "36",
+            "local_center_mm": [
+              5.675,
+              2.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              76.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "37",
+            "local_center_mm": [
+              5.675,
+              1.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              75.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "38",
+            "local_center_mm": [
+              5.675,
+              1.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              75.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "39",
+            "local_center_mm": [
+              5.675,
+              0.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              74.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -5.675,
+              -2.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              71.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "40",
+            "local_center_mm": [
+              5.675,
+              0.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              74.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "41",
+            "local_center_mm": [
+              5.675,
+              -0.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              73.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "42",
+            "local_center_mm": [
+              5.675,
+              -0.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              73.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "43",
+            "local_center_mm": [
+              5.675,
+              -1.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              72.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "44",
+            "local_center_mm": [
+              5.675,
+              -1.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              72.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "45",
+            "local_center_mm": [
+              5.675,
+              -2.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              71.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "46",
+            "local_center_mm": [
+              5.675,
+              -2.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              71.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "47",
+            "local_center_mm": [
+              5.675,
+              -3.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              70.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "48",
+            "local_center_mm": [
+              5.675,
+              -3.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              70.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "49",
+            "local_center_mm": [
+              3.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              49.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -5.675,
+              -1.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              72.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "50",
+            "local_center_mm": [
+              3.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              49.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "51",
+            "local_center_mm": [
+              2.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              48.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "52",
+            "local_center_mm": [
+              2.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              48.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "53",
+            "local_center_mm": [
+              1.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              47.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "54",
+            "local_center_mm": [
+              1.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              47.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "55",
+            "local_center_mm": [
+              0.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              46.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "56",
+            "local_center_mm": [
+              0.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              46.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "57",
+            "local_center_mm": [
+              -0.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              45.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "58",
+            "local_center_mm": [
+              -0.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              45.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "59",
+            "local_center_mm": [
+              -1.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              44.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -5.675,
+              -1.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              72.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "60",
+            "local_center_mm": [
+              -1.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              44.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "61",
+            "local_center_mm": [
+              -2.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              43.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "62",
+            "local_center_mm": [
+              -2.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              43.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "63",
+            "local_center_mm": [
+              -3.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              42.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "64",
+            "local_center_mm": [
+              -3.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              42.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -5.675,
+              -0.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              73.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              -5.675,
+              -0.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              73.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              -5.675,
+              0.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              74.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            40.95,
+            68.95,
+            10.1,
+            10.1
+          ],
+          "F.Courtyard": [
+            39.275,
+            67.275,
+            13.45,
+            13.45
+          ]
+        }
+      },
+      "U7": {
+        "footprint": "Package_SO:TSSOP-16_4.4x5mm_P0.65mm",
+        "value": "AM26LV32EIPWR",
+        "pose_mm": [
+          29.0,
+          83.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -2.8625,
+              -2.275
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              80.725
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              2.8625,
+              1.625
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              84.625
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              2.8625,
+              0.975
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              83.975
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              2.8625,
+              0.325
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              83.325
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              2.8625,
+              -0.325
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              82.675
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              2.8625,
+              -0.975
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              82.025
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "15",
+            "local_center_mm": [
+              2.8625,
+              -1.625
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              81.375
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "16",
+            "local_center_mm": [
+              2.8625,
+              -2.275
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              80.725
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -2.8625,
+              -1.625
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              81.375
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -2.8625,
+              -0.975
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              82.025
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -2.8625,
+              -0.325
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              82.675
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -2.8625,
+              0.325
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              83.325
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -2.8625,
+              0.975
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              83.975
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -2.8625,
+              1.625
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              84.625
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              -2.8625,
+              2.275
+            ],
+            "absolute_center_mm": [
+              26.1375,
+              85.275
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              2.8625,
+              2.275
+            ],
+            "absolute_center_mm": [
+              31.8625,
+              85.275
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            26.75,
+            80.45,
+            4.5,
+            5.1
+          ],
+          "F.Courtyard": [
+            25.125,
+            80.225,
+            7.75,
+            5.55
+          ]
+        }
+      },
+      "U19": {
+        "footprint": "Package_SON:Texas_R-PUSON-N14",
+        "value": "TPD6E05U06RVZR",
+        "pose_mm": [
+          25.0,
+          91.5
+        ],
+        "angle_deg": 180.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -0.675,
+              -1.5
+            ],
+            "absolute_center_mm": [
+              25.675,
+              93.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              0.675,
+              0.5
+            ],
+            "absolute_center_mm": [
+              24.325,
+              91.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              0.675,
+              0.0
+            ],
+            "absolute_center_mm": [
+              24.325,
+              91.5
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              0.675,
+              -0.5
+            ],
+            "absolute_center_mm": [
+              24.325,
+              92.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              0.675,
+              -1.0
+            ],
+            "absolute_center_mm": [
+              24.325,
+              92.5
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              0.675,
+              -1.5
+            ],
+            "absolute_center_mm": [
+              24.325,
+              93.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -0.675,
+              -1.0
+            ],
+            "absolute_center_mm": [
+              25.675,
+              92.5
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -0.675,
+              -0.5
+            ],
+            "absolute_center_mm": [
+              25.675,
+              92.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -0.675,
+              0.0
+            ],
+            "absolute_center_mm": [
+              25.675,
+              91.5
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -0.675,
+              0.5
+            ],
+            "absolute_center_mm": [
+              25.675,
+              91.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -0.675,
+              1.0
+            ],
+            "absolute_center_mm": [
+              25.675,
+              90.5
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -0.675,
+              1.5
+            ],
+            "absolute_center_mm": [
+              25.675,
+              90.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              0.675,
+              1.5
+            ],
+            "absolute_center_mm": [
+              24.325,
+              90.0
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              0.675,
+              1.0
+            ],
+            "absolute_center_mm": [
+              24.325,
+              90.5
+            ],
+            "size_mm": [
+              0.75,
+              0.2
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 180.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            24.275,
+            89.7,
+            1.45,
+            3.6
+          ],
+          "F.Courtyard": [
+            23.675,
+            89.475,
+            2.65,
+            4.05
+          ]
+        }
+      },
+      "U12": {
+        "footprint": "Package_SO:TI_SO-PowerPAD-8",
+        "value": "LM5164DDAR",
+        "pose_mm": [
+          60.0,
+          12.0
+        ],
+        "angle_deg": 90.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -2.78,
+              -1.905
+            ],
+            "absolute_center_mm": [
+              58.095,
+              14.78
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -2.78,
+              -0.635
+            ],
+            "absolute_center_mm": [
+              59.365,
+              14.78
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -2.78,
+              0.635
+            ],
+            "absolute_center_mm": [
+              60.635,
+              14.78
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -2.78,
+              1.905
+            ],
+            "absolute_center_mm": [
+              61.905,
+              14.78
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              2.78,
+              1.905
+            ],
+            "absolute_center_mm": [
+              61.905,
+              9.22
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              2.78,
+              0.635
+            ],
+            "absolute_center_mm": [
+              60.635,
+              9.22
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              2.78,
+              -0.635
+            ],
+            "absolute_center_mm": [
+              59.365,
+              9.22
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              2.78,
+              -1.905
+            ],
+            "absolute_center_mm": [
+              58.095,
+              9.22
+            ],
+            "size_mm": [
+              1.91,
+              0.61
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              -0.6025,
+              -0.775
+            ],
+            "absolute_center_mm": [
+              59.225,
+              12.6025
+            ],
+            "size_mm": [
+              1.205,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              -0.241,
+              -0.31
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              -0.6025,
+              0.775
+            ],
+            "absolute_center_mm": [
+              60.775,
+              12.6025
+            ],
+            "size_mm": [
+              1.205,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              -0.241,
+              -0.31
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              0.6025,
+              -0.775
+            ],
+            "absolute_center_mm": [
+              59.225,
+              11.3975
+            ],
+            "size_mm": [
+              1.205,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              -0.241,
+              -0.31
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              0.6025,
+              0.775
+            ],
+            "absolute_center_mm": [
+              60.775,
+              11.3975
+            ],
+            "size_mm": [
+              1.205,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              -0.241,
+              -0.31
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            57.475,
+            9.975,
+            5.05,
+            4.05
+          ],
+          "F.Courtyard": [
+            57.275,
+            7.975,
+            5.45,
+            8.05
+          ]
+        }
+      },
+      "C1": {
+        "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+        "value": "100uF",
+        "pose_mm": [
+          76.2,
+          73.3
+        ],
+        "angle_deg": 90.0,
+        "layer": "F.Cu",
+        "attributes": 1,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              0.0,
+              0.0
+            ],
+            "absolute_center_mm": [
+              76.2,
+              73.3
+            ],
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              5.0,
+              0.0
+            ],
+            "absolute_center_mm": [
+              76.2,
+              68.3
+            ],
+            "size_mm": [
+              2.0,
+              2.0
+            ],
+            "drill_mm": [
+              1.0,
+              1.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            71.15,
+            65.75,
+            10.1,
+            10.1
+          ],
+          "F.Courtyard": [
+            70.925,
+            65.525,
+            10.55,
+            10.55
+          ]
+        }
+      },
+      "C3": {
+        "footprint": "Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3",
+        "value": "1uF",
+        "pose_mm": [
+          69.0,
+          7.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 1,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              0.0,
+              0.0
+            ],
+            "absolute_center_mm": [
+              69.0,
+              7.0
+            ],
+            "size_mm": [
+              2.4,
+              2.4
+            ],
+            "drill_mm": [
+              1.2,
+              1.2
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              15.0,
+              0.0
+            ],
+            "absolute_center_mm": [
+              84.0,
+              7.0
+            ],
+            "size_mm": [
+              2.4,
+              2.4
+            ],
+            "drill_mm": [
+              1.2,
+              1.2
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            67.45,
+            2.95,
+            18.1,
+            8.1
+          ],
+          "F.Courtyard": [
+            67.225,
+            2.725,
+            18.55,
+            8.55
+          ]
+        }
+      },
+      "J4": {
+        "footprint": "fpga-servo:KEFA_KF950_3_9.50mm",
+        "value": "MOTOR_UVW",
+        "pose_mm": [
+          123.0,
+          39.0
+        ],
+        "angle_deg": -90.0,
+        "layer": "F.Cu",
+        "attributes": 1,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              0.0,
+              0.0
+            ],
+            "absolute_center_mm": [
+              123.0,
+              39.0
+            ],
+            "size_mm": [
+              3.4,
+              3.4
+            ],
+            "drill_mm": [
+              1.8,
+              1.8
+            ],
+            "angle_deg": 270.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              9.5,
+              0.0
+            ],
+            "absolute_center_mm": [
+              123.0,
+              48.5
+            ],
+            "size_mm": [
+              3.4,
+              3.4
+            ],
+            "drill_mm": [
+              1.8,
+              1.8
+            ],
+            "angle_deg": 270.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              19.0,
+              0.0
+            ],
+            "absolute_center_mm": [
+              123.0,
+              58.0
+            ],
+            "size_mm": [
+              3.4,
+              3.4
+            ],
+            "drill_mm": [
+              1.8,
+              1.8
+            ],
+            "angle_deg": 270.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "B.Cu",
+              "B.Mask",
+              "In1.Cu",
+              "In2.Cu",
+              "In3.Cu",
+              "In4.Cu",
+              "In5.Cu",
+              "In6.Cu",
+              "In7.Cu",
+              "In8.Cu",
+              "In9.Cu",
+              "In10.Cu",
+              "In11.Cu",
+              "In12.Cu",
+              "In13.Cu",
+              "In14.Cu",
+              "In15.Cu",
+              "In16.Cu",
+              "In17.Cu",
+              "In18.Cu",
+              "In19.Cu",
+              "In20.Cu",
+              "In21.Cu",
+              "In22.Cu",
+              "In23.Cu",
+              "In24.Cu",
+              "In25.Cu",
+              "In26.Cu",
+              "In27.Cu",
+              "In28.Cu",
+              "In29.Cu",
+              "In30.Cu"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            115.85,
+            34.2,
+            12.7,
+            28.6
+          ],
+          "F.Courtyard": [
+            115.375,
+            33.725,
+            13.65,
+            29.55
+          ]
+        }
+      },
+      "NTC1": {
+        "footprint": "fpga-servo:NTC_0603_Shiheng_KUU",
+        "value": "10k",
+        "pose_mm": [
+          36.5,
+          61.0
+        ],
+        "angle_deg": 90.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -0.675,
+              0.0
+            ],
+            "absolute_center_mm": [
+              36.5,
+              61.675
+            ],
+            "size_mm": [
+              0.65,
+              0.7
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              0.675,
+              0.0
+            ],
+            "absolute_center_mm": [
+              36.5,
+              60.325
+            ],
+            "size_mm": [
+              0.65,
+              0.7
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 90.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            36.05,
+            60.15,
+            0.9,
+            1.7
+          ],
+          "F.Courtyard": [
+            35.775,
+            59.725,
+            1.45,
+            2.55
+          ]
+        }
+      },
+      "NTC2": {
+        "footprint": "fpga-servo:NTC_0603_Shiheng_KUU",
+        "value": "10k",
+        "pose_mm": [
+          63.5,
+          57.6
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -0.675,
+              0.0
+            ],
+            "absolute_center_mm": [
+              62.825,
+              57.6
+            ],
+            "size_mm": [
+              0.65,
+              0.7
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              0.675,
+              0.0
+            ],
+            "absolute_center_mm": [
+              64.175,
+              57.6
+            ],
+            "size_mm": [
+              0.65,
+              0.7
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            62.65,
+            57.15,
+            1.7,
+            0.9
+          ],
+          "F.Courtyard": [
+            62.225,
+            56.875,
+            2.55,
+            1.45
+          ]
+        }
+      }
+    }
+  },
+  "ad": {
+    "board": "artifacts/dual-servo/power-merged/frozen-critical-20261019-0113/ax7010_servo_ad7606c.kicad_pcb",
+    "sha256": "c6dc2cbeeb0ee528e655432da6c9e9cdb6f3ef32cb09301dd720b2d57a91a26b",
+    "footprints": {
+      "U6": {
+        "footprint": "Package_QFP:LQFP-64_10x10mm_P0.5mm",
+        "value": "AD7606C-16BSTZ",
+        "pose_mm": [
+          46.0,
+          74.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -5.675,
+              -3.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              70.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              -5.675,
+              0.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              74.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              -5.675,
+              1.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              75.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              -5.675,
+              1.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              75.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              -5.675,
+              2.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              76.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              -5.675,
+              2.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              76.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "15",
+            "local_center_mm": [
+              -5.675,
+              3.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              77.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "16",
+            "local_center_mm": [
+              -5.675,
+              3.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              77.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "17",
+            "local_center_mm": [
+              -3.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              42.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "18",
+            "local_center_mm": [
+              -3.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              42.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "19",
+            "local_center_mm": [
+              -2.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              43.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -5.675,
+              -3.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              70.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "20",
+            "local_center_mm": [
+              -2.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              43.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "21",
+            "local_center_mm": [
+              -1.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              44.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "22",
+            "local_center_mm": [
+              -1.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              44.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "23",
+            "local_center_mm": [
+              -0.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              45.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "24",
+            "local_center_mm": [
+              -0.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              45.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "25",
+            "local_center_mm": [
+              0.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              46.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "26",
+            "local_center_mm": [
+              0.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              46.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "27",
+            "local_center_mm": [
+              1.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              47.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "28",
+            "local_center_mm": [
+              1.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              47.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "29",
+            "local_center_mm": [
+              2.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              48.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -5.675,
+              -2.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              71.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "30",
+            "local_center_mm": [
+              2.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              48.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "31",
+            "local_center_mm": [
+              3.25,
+              5.675
+            ],
+            "absolute_center_mm": [
+              49.25,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "32",
+            "local_center_mm": [
+              3.75,
+              5.675
+            ],
+            "absolute_center_mm": [
+              49.75,
+              79.675
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "33",
+            "local_center_mm": [
+              5.675,
+              3.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              77.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "34",
+            "local_center_mm": [
+              5.675,
+              3.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              77.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "35",
+            "local_center_mm": [
+              5.675,
+              2.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              76.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "36",
+            "local_center_mm": [
+              5.675,
+              2.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              76.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "37",
+            "local_center_mm": [
+              5.675,
+              1.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              75.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "38",
+            "local_center_mm": [
+              5.675,
+              1.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              75.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "39",
+            "local_center_mm": [
+              5.675,
+              0.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              74.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -5.675,
+              -2.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              71.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "40",
+            "local_center_mm": [
+              5.675,
+              0.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              74.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "41",
+            "local_center_mm": [
+              5.675,
+              -0.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              73.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "42",
+            "local_center_mm": [
+              5.675,
+              -0.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              73.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "43",
+            "local_center_mm": [
+              5.675,
+              -1.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              72.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "44",
+            "local_center_mm": [
+              5.675,
+              -1.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              72.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "45",
+            "local_center_mm": [
+              5.675,
+              -2.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              71.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "46",
+            "local_center_mm": [
+              5.675,
+              -2.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              71.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "47",
+            "local_center_mm": [
+              5.675,
+              -3.25
+            ],
+            "absolute_center_mm": [
+              51.675,
+              70.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "48",
+            "local_center_mm": [
+              5.675,
+              -3.75
+            ],
+            "absolute_center_mm": [
+              51.675,
+              70.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "49",
+            "local_center_mm": [
+              3.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              49.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -5.675,
+              -1.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              72.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "50",
+            "local_center_mm": [
+              3.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              49.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "51",
+            "local_center_mm": [
+              2.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              48.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "52",
+            "local_center_mm": [
+              2.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              48.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "53",
+            "local_center_mm": [
+              1.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              47.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "54",
+            "local_center_mm": [
+              1.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              47.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "55",
+            "local_center_mm": [
+              0.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              46.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "56",
+            "local_center_mm": [
+              0.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              46.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "57",
+            "local_center_mm": [
+              -0.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              45.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "58",
+            "local_center_mm": [
+              -0.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              45.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "59",
+            "local_center_mm": [
+              -1.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              44.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -5.675,
+              -1.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              72.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "60",
+            "local_center_mm": [
+              -1.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              44.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "61",
+            "local_center_mm": [
+              -2.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              43.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "62",
+            "local_center_mm": [
+              -2.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              43.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "63",
+            "local_center_mm": [
+              -3.25,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              42.75,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "64",
+            "local_center_mm": [
+              -3.75,
+              -5.675
+            ],
+            "absolute_center_mm": [
+              42.25,
+              68.325
+            ],
+            "size_mm": [
+              0.3,
+              1.55
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -5.675,
+              -0.75
+            ],
+            "absolute_center_mm": [
+              40.325,
+              73.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              -5.675,
+              -0.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              73.75
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              -5.675,
+              0.25
+            ],
+            "absolute_center_mm": [
+              40.325,
+              74.25
+            ],
+            "size_mm": [
+              1.55,
+              0.3
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            40.95,
+            68.95,
+            10.1,
+            10.1
+          ],
+          "F.Courtyard": [
+            39.275,
+            67.275,
+            13.45,
+            13.45
+          ]
+        }
+      },
+      "U27": {
+        "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+        "value": "TXU0204PWR",
+        "pose_mm": [
+          25.5,
+          28.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -2.8625,
+              -1.95
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              26.05
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              2.8625,
+              0.65
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              28.65
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              2.8625,
+              0.0
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              28.0
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              2.8625,
+              -0.65
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              27.35
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              2.8625,
+              -1.3
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              26.7
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              2.8625,
+              -1.95
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              26.05
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -2.8625,
+              -1.3
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              26.7
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -2.8625,
+              -0.65
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              27.35
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -2.8625,
+              0.0
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              28.0
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -2.8625,
+              0.65
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              28.65
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -2.8625,
+              1.3
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              29.3
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -2.8625,
+              1.95
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              29.95
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              2.8625,
+              1.95
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              29.95
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              2.8625,
+              1.3
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              29.3
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            23.25,
+            25.45,
+            4.5,
+            5.1
+          ],
+          "F.Courtyard": [
+            21.625,
+            25.225,
+            7.75,
+            5.55
+          ]
+        }
+      },
+      "U28": {
+        "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+        "value": "TXU0204PWR",
+        "pose_mm": [
+          25.5,
+          42.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -2.8625,
+              -1.95
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              40.05
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              2.8625,
+              0.65
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              42.65
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              2.8625,
+              0.0
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              42.0
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              2.8625,
+              -0.65
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              41.35
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              2.8625,
+              -1.3
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              40.7
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              2.8625,
+              -1.95
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              40.05
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -2.8625,
+              -1.3
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              40.7
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -2.8625,
+              -0.65
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              41.35
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -2.8625,
+              0.0
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              42.0
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -2.8625,
+              0.65
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              42.65
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -2.8625,
+              1.3
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              43.3
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -2.8625,
+              1.95
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              43.95
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              2.8625,
+              1.95
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              43.95
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              2.8625,
+              1.3
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              43.3
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            23.25,
+            39.45,
+            4.5,
+            5.1
+          ],
+          "F.Courtyard": [
+            21.625,
+            39.225,
+            7.75,
+            5.55
+          ]
+        }
+      },
+      "U29": {
+        "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+        "value": "TXU0204PWR",
+        "pose_mm": [
+          25.5,
+          56.0
+        ],
+        "angle_deg": 0.0,
+        "layer": "F.Cu",
+        "attributes": 2,
+        "pads": [
+          {
+            "number": "1",
+            "local_center_mm": [
+              -2.8625,
+              -1.95
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              54.05
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "10",
+            "local_center_mm": [
+              2.8625,
+              0.65
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              56.65
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "11",
+            "local_center_mm": [
+              2.8625,
+              0.0
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              56.0
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "12",
+            "local_center_mm": [
+              2.8625,
+              -0.65
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              55.35
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "13",
+            "local_center_mm": [
+              2.8625,
+              -1.3
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              54.7
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "14",
+            "local_center_mm": [
+              2.8625,
+              -1.95
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              54.05
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "2",
+            "local_center_mm": [
+              -2.8625,
+              -1.3
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              54.7
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "3",
+            "local_center_mm": [
+              -2.8625,
+              -0.65
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              55.35
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "4",
+            "local_center_mm": [
+              -2.8625,
+              0.0
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              56.0
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "5",
+            "local_center_mm": [
+              -2.8625,
+              0.65
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              56.65
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "6",
+            "local_center_mm": [
+              -2.8625,
+              1.3
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              57.3
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "7",
+            "local_center_mm": [
+              -2.8625,
+              1.95
+            ],
+            "absolute_center_mm": [
+              22.6375,
+              57.95
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "8",
+            "local_center_mm": [
+              2.8625,
+              1.95
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              57.95
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          },
+          {
+            "number": "9",
+            "local_center_mm": [
+              2.8625,
+              1.3
+            ],
+            "absolute_center_mm": [
+              28.3625,
+              57.3
+            ],
+            "size_mm": [
+              1.475,
+              0.4
+            ],
+            "drill_mm": [
+              0.0,
+              0.0
+            ],
+            "angle_deg": 0.0,
+            "layers": [
+              "F.Cu",
+              "F.Mask",
+              "F.Paste"
+            ],
+            "solder_paste_margin_mm": [
+              0.0,
+              0.0
+            ],
+            "mask_expansion_mm": 0.0
+          }
+        ],
+        "graphic_layer_bboxes": {
+          "F.Fab": [
+            23.25,
+            53.45,
+            4.5,
+            5.1
+          ],
+          "F.Courtyard": [
+            21.625,
+            53.225,
+            7.75,
+            5.55
+          ]
+        }
+      }
+    }
+  }
+}

@@ -11,8 +11,8 @@
 		(uuid "2167d435-970b-408b-91d5-58fea6565377")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.12)
+				(size 1.0 1.0)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -57,7 +57,7 @@
 		(uuid "6d98fcee-7965-4900-8d4a-919e4f3e9ce3")
 		(effects
 			(font
-				(size 1 1)
+				(size 1.0 1.0)
 				(thickness 0.15)
 			)
 		)
@@ -92,7 +92,7 @@
 		(start -2.06 -2.56)
 		(end 2.06 -2.56)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -102,7 +102,7 @@
 		(start -2.06 -2.465)
 		(end -2.06 -2.56)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -112,7 +112,7 @@
 		(start -2.06 2.56)
 		(end -2.06 2.465)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -122,7 +122,7 @@
 		(start 2.06 -2.56)
 		(end 2.06 -2.465)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -132,7 +132,7 @@
 		(start 2.06 2.465)
 		(end 2.06 2.56)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -142,7 +142,7 @@
 		(start 2.06 2.56)
 		(end -2.06 2.56)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -153,7 +153,7 @@
 			(xy -2.6 -2.47) (xy -2.84 -2.8) (xy -2.36 -2.8)
 		)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(fill yes)
@@ -384,7 +384,7 @@
 		(uuid "b9b63ae9-5ac5-4203-9dc7-4069a7164b44")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step"
+	(model "${KIPRJMOD}/mechanical/frozen-system-models-v1/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

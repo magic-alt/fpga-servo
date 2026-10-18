@@ -19,6 +19,9 @@ def run_rules(project, scope, inputs):
     if "aux_power" in project.rule_sets:
         from .aux_power import check_project
         check("power.auxiliary_1a", lambda: check_project(project, inputs.get("xml")))
+    if "dc_link" in project.rule_sets:
+        from .dc_link import check_project
+        check("power.dc_link", lambda: check_project(project, inputs.get("xml")))
     if "servo" in project.rule_sets:
         from .servo import check_design, native_contract
         check("servo.native_contract", lambda: native_contract(project))
@@ -55,6 +58,11 @@ def run_rules(project, scope, inputs):
             return api.compare_snapshot(api.collect_snapshot(inputs.get("netlist")),expected,require_parity=bool(inputs.get("netlist")))
         check("pcb.archived_regression",archived)
     if "protection" in project.rule_sets:
+        if project.parameters.get("gate_resistor_selection"):
+            from .protection import check_gate_resistors
+            check("gate.pulse_resistor_selection", lambda: check_gate_resistors(project, inputs.get("xml")))
+        from .encoder import check_project as check_encoder
+        check("encoder.physical_contract", lambda: check_encoder(project, inputs.get("xml")))
         xml=inputs.get("xml")
         netlist=inputs.get("netlist")
         if xml:
@@ -91,6 +99,10 @@ def run_rules(project, scope, inputs):
             findings.append(Finding("pcb.native_geometry","NOT_RUN","Run this command with pcbnew-enabled Python for copper geometry"))
         else:
             board=pcbnew.LoadBoard(str(project.board))
+            from .power_layout import reserved_ground_api
+            check("pcb.reserved_ground_layers", lambda: reserved_ground_api().check_project(project, board))
+            from .adc_layout import check_project as check_adc_body
+            check("pcb.adc_body_digital_exclusion", lambda: check_adc_body(project, board))
             check("pcb.kelvin",lambda:kelvin_api().audit(board)[1])
             check("pcb.escape",lambda:escape_api().audit(board)[1])
             check("pcb.corners",lambda:[str(r) for r in corners_api().audit(board) if r["category"]=="exposed_bend"])

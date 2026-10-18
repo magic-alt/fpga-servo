@@ -54,6 +54,26 @@ def extract_forms(text: str, head: str) -> list[Form]:
     return forms
 
 
+def direct_child_forms(text: str, head: str) -> list[Form]:
+    """Select immediate children of one native form, respecting quoted strings."""
+    assert_balanced(text)
+    tokens = re.finditer(r'"(?:\\.|[^"\\])*"|[()]|[^\s()"]+', text)
+    depth, previous, opening = 0, None, None
+    forms = []
+    for token in tokens:
+        value = token.group()
+        if value == "(":
+            depth += 1
+            opening = token.start()
+        elif value == ")":
+            depth -= 1
+        elif depth == 2 and previous == "(" and value == head:
+            end = _scan_balanced(text, opening)
+            forms.append(Form(text[opening:end], text.count("\n", 0, opening) + 1))
+        previous = value
+    return forms
+
+
 def strip_form(text: str, head: str) -> str:
     forms = extract_forms(text, head)
     if not forms:

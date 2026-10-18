@@ -143,7 +143,7 @@ The high-current path must not rely on a single narrow trace. Plan wide top-laye
 
 - R40/C40: tau=47ns, fc=3.386MHz; 20kHz attenuation is only -0.0001515dB. The filter does not remove PWM ripple and serves only the phase ADC. Its ideal 2.5-to-4.9 V step crosses the 3.7 V midpoint at about 1.03358 us for a step beginning at 1.001 us; this is phase ADC settling, not bus OCP delay.
 - R88/C92: tau=1us with an ideal FPGA output. No Schmitt threshold, propagation, metastability or power-ramp model is included.
-- C1+C2=200uF nominal: an unsunk ideal 1A regeneration current raises 48V to 55V in 1.4ms, storing only 0.0721J extra. 55V is an overvoltage example, not an operating allowance.
+- Current bank: C1/C2/C120–C127, ten 100 µF /100 V branches, each with its own 0.33 Ω WSL2512 damping resistor. The isolated ideal bank is 1 mF /0.033 Ω; an unsunk 1 A step reaches 55 V from 48 V in 6.967 ms. This model excludes C3/C4, distributed ESL, source/cable impedance and actual PWM spectrum. 55 V is an example, not a qualified allowance. See [bounded ECO proof](reviews/dual_prototype_2026-10-18/dc_link_eco_verification.json) and [conditional ripple/loss/fixture budget](reviews/dual_prototype_2026-10-18/power_static_budget.md).
 - Three 5mOhm shunts at 10A RMS dissipate 0.5W each, 1.5W total. Package rating alone does not qualify assembly temperature.
 
 Full current/thermal/switching qualification remains open; see [power-stage review](archive/reviews/power_stage_layout_review_2026-10-09.md) and [analog/safety review](archive/reviews/analog_safety_layout_review_2026-10-09.md).

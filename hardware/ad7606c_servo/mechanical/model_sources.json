@@ -1,0 +1,290 @@
+{
+  "source_library_version": "Installed KiCad10.0.3; original model bytes retained",
+  "models": [
+    {
+      "project_file": "mechanical/envelopes-v1/CLEARANCE_Q_PG_TDSON8_NOT_OEM.step",
+      "sha256": "a9b66d07904e27f9b00c68631ad389cc6f9653c6f7f0bdcbbbd41a5a12f809a2",
+      "classification": "CLEARANCE_ONLY_NOT_OEM",
+      "provenance": "Analytic clearance envelope generated for this review; NOT OEM model",
+      "basis": "envelopes-v1/envelope_manifest.json"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+      "sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_1206_3216Metric.step",
+      "sha256": "11e948c72c90e2b6322436b72745f40ff4e8ba0da64fb2a0df943dfa61e89c1a",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Capacitor_SMD.3dshapes/C_1206_3216Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+      "sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+      "sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+      "sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/envelopes-v1/CLEARANCE_NCC_D10p5_H21p5_NOT_OEM.step",
+      "sha256": "5c939fbaf74a48596b8db7fe35b77a204db0c1c5f5d331cd7a326e37bf892902",
+      "classification": "CLEARANCE_ONLY_NOT_OEM",
+      "provenance": "Analytic clearance envelope generated for this review; NOT OEM model",
+      "basis": "envelopes-v1/envelope_manifest.json"
+    },
+    {
+      "project_file": "mechanical/envelopes-v1/CLEARANCE_J4_KEFA_NOT_OEM.step",
+      "sha256": "073be1d25e29c69625729a7b83cac714524e72c81a3424cc88cdaef1f9427c6f",
+      "classification": "CLEARANCE_ONLY_NOT_OEM",
+      "provenance": "Analytic clearance envelope generated for this review; NOT OEM model",
+      "basis": "envelopes-v1/envelope_manifest.json"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+      "sha256": "720a6eab0024069bbee68e7cb4c3ff1149468a34611225cdc852662c5d0ec2b7",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_SO.3dshapes/VSSOP-8_2.3x2mm_P0.5mm.step",
+      "sha256": "353552981eef35cb93635057d4aeb89aef22648c77af6fd095e328bfe6b834bd",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_SO.3dshapes/VSSOP-8_2.3x2mm_P0.5mm.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_SO.3dshapes/TSSOP-14_4.4x5mm_P0.65mm.step",
+      "sha256": "3ee5786aae56190997aa793ba3cfc003fd616782770e29719b4562f012982245",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_SO.3dshapes/TSSOP-14_4.4x5mm_P0.65mm.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-23-8.step",
+      "sha256": "b9dc5b435d49868df7491668d5322debfe5d699dbb41c2ad93a41518ec9b5007",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_TO_SOT_SMD.3dshapes/SOT-23-8.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_SO.3dshapes/TSSOP-20_4.4x6.5mm_P0.65mm.step",
+      "sha256": "97339947f3a7196470ec2f1d9f9b92bb2fc2ab66ad53be0cf105192585ef3c9a",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_SO.3dshapes/TSSOP-20_4.4x6.5mm_P0.65mm.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+      "sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-363_SC-70-6.step",
+      "sha256": "045cc95e18ee7a13d1623c3ce6604fc833049bdb4f952f68c26e3c5767d122e4",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_TO_SOT_SMD.3dshapes/SOT-363_SC-70-6.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+      "sha256": "07f46cff378d30e6c27dfd5a03092c795323f86d91c71fc7e743f4f418dc553a",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_QFP.3dshapes/LQFP-64_10x10mm_P0.5mm.step",
+      "sha256": "b0c827bc5c05552175d28affe44a5bd2ab45c9c36efff6ff07a74cc449b13db4",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_QFP.3dshapes/LQFP-64_10x10mm_P0.5mm.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/TSOT-23-8.step",
+      "sha256": "dc644a91883054d8f75e38542e63c2050dc8f2e8b7f12e1c57dcd93245fbd473",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_TO_SOT_SMD.3dshapes/TSOT-23-8.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_SO.3dshapes/TSSOP-16_4.4x5mm_P0.65mm.step",
+      "sha256": "6ad5e98224d02a427d9a6b929a28dbc158b9925fba5adec12db05079f1016948",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_SO.3dshapes/TSSOP-16_4.4x5mm_P0.65mm.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.step",
+      "sha256": "4ac293d6a2a02e11fb656cd94214ca3eee4fdb4219ec44112b35866a7c7bb127",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+      "sha256": "c9fe686b4d1b56927a41fa84a9bc1efb61d8a45a123a3db43bcaa05c2891d635",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Capacitor_THT.3dshapes/C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3.step",
+      "sha256": "53c43d6558a286aafeb64f1960b93462a4f9052145a412812a7d834a16ce50b2",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Capacitor_THT.3dshapes/C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Diode_SMD.3dshapes/D_SMC.step",
+      "sha256": "30dab4c2e22239b7e3694a4d45304e04255c6b70a79d28e9c34c6072ba647991",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Diode_SMD.3dshapes/D_SMC.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_1812_4532Metric.step",
+      "sha256": "be9e130425233dd580e42f23cf98ed84335b8e1671ef374a8d185999ab4c2d93",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Capacitor_SMD.3dshapes/C_1812_4532Metric.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/envelopes-v1/CLEARANCE_J3_PHOENIX_NOT_OEM.step",
+      "sha256": "6dbd53b21030a64e3ef37d1c7e27b3a155397cdc1254a14cb356722cc2d4022b",
+      "classification": "CLEARANCE_ONLY_NOT_OEM",
+      "provenance": "Analytic clearance envelope generated for this review; NOT OEM model",
+      "basis": "envelopes-v1/envelope_manifest.json"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Package_SON.3dshapes/Texas_R-PUSON-N14.step",
+      "sha256": "f8a35b6e9ff286632ba08e69f946c13ea52c1c5e76a563c017eb804baaa624bf",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Package_SON.3dshapes/Texas_R-PUSON-N14.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/envelopes-v1/CLEARANCE_F2_JDT1812_NOT_OEM.step",
+      "sha256": "819d1592465f99e06bcc60fd64763cbf80d54598d850bb4def4805f128dc5cec",
+      "classification": "CLEARANCE_ONLY_NOT_OEM",
+      "provenance": "Analytic clearance envelope generated for this review; NOT OEM model",
+      "basis": "envelopes-v1/envelope_manifest.json"
+    },
+    {
+      "project_file": "mechanical/frozen-system-models-v1/Connector_IDC.3dshapes/IDC-Header_2x20_P2.54mm_Vertical.step",
+      "sha256": "b4c4f2a81aa970bdb46cb2ef80833d2370a5d0d023d178729b0cbb368db263cc",
+      "classification": "EXISTING_GENERIC_MODEL_UNCHANGED_BYTES_NOT_EXACT_OEM_CLAIM",
+      "installed_library": "KiCad 10.0.3 packages3D; unchanged installed bytes",
+      "upstream_project": "https://github.com/KiCad/kicad-packages3D",
+      "upstream_relative_file": "Connector_IDC.3dshapes/IDC-Header_2x20_P2.54mm_Vertical.step",
+      "original_bytes_exact": true,
+      "license": "CC-BY-SA-4.0 with KiCad design exception; preserved per-file notices and local LICENSE.md"
+    },
+    {
+      "project_file": "mechanical/envelopes-v1/CLEARANCE_J7_PHOENIX_NOT_OEM.step",
+      "sha256": "12927ea8b144f3a05d24dfea44618546876477e0190b5d0202eaa51988bdbf66",
+      "classification": "CLEARANCE_ONLY_NOT_OEM",
+      "provenance": "Analytic clearance envelope generated for this review; NOT OEM model",
+      "basis": "envelopes-v1/envelope_manifest.json"
+    }
+  ],
+  "generic_models_are_not_exact_OEM_qualification": true,
+  "generated_orange_envelopes_are_not_OEM": true,
+  "library_license_downloads": {
+    "packages3D": {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-packages3D/master/LICENSE.md",
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef"
+    },
+    "footprints": {
+      "url": "https://raw.githubusercontent.com/KiCad/kicad-footprints/master/LICENSE.md",
+      "sha256": "285b027a721577d0bc0198f36e948c6c282ddaa4b58fef8ed826749576eb0aef"
+    }
+  },
+  "footprint_changes": "Project-local used-library mirrors retain FPIDs and pads. Reviewed changes include legend stroke/reference sizing, portable model references, authorized custom lands and existing ADS mounting-hole courtyard matching. Refer to PCB adoption and assembly ECO records."
+}

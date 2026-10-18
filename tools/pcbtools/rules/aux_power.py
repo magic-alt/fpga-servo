@@ -4,7 +4,95 @@ import json
 import math
 import re
 from pathlib import Path
-from ..kicad import extract_forms, property_value
+from ..kicad import extract_forms, property_value, head_string
+
+
+def controller_internal_rule_errors(text):
+    from .power_layout import vendor_api
+    rules=[r for r in extract_forms(text,'rule') if head_string(r.text,'rule')=='U12 internal lands']
+    if len(rules)!=1:
+        return ['U12 requires exactly one reviewed internal Pad-Pad 0.45mm rule']
+    return vendor_api().internal_pad_rule_errors(rules[0].text,'U12',.45)
+
+
+def output_population_errors(profile, values, pins):
+    """Reject unreviewed added capacitance on the complete converter rail."""
+    actual = {ref: value for ref, value in values.items() if ref.startswith('C')
+              and {pins.get((ref, '1')), pins.get((ref, '2'))} == {'/VA_5V', '/GND'}}
+    if actual != profile.get('output_capacitor_population'):
+        return ['5V complete output capacitor population changed; recompute stability/startup budget']
+    return []
+
+
+def controller_land_errors(text):
+    """Bound U12 copper and mask/paste separately; ordinary vias are not filled."""
+    errors = []
+    if re.search(r'\(layer\s+"[FB]\.(?:Mask|Paste)"\)',text):
+        errors.append('U12 extra mask/paste graphic bypasses the reviewed aperture union')
+    pads = extract_forms(text, 'pad')
+    numbered = {}
+    apertures = []
+    for form in pads:
+        match = re.match(r'\(pad\s+"([^"]*)"\s+smd\s+(\w+)', form.text)
+        if not match:
+            errors.append('U12 unsupported pad type'); continue
+        number, shape = match.groups()
+        def pair(head):
+            found = re.search(r'\('+head+r'\s+(-?[\d.]+)\s+(-?[\d.]+)\)', form.text)
+            return tuple(float(v) for v in found.groups()) if found else None
+        layers = extract_forms(form.text,'layers')
+        record = (pair('at'), pair('size'), set(re.findall(r'"([^"]+)"',layers[0].text)) if layers else set(), shape)
+        if number:
+            if number in numbered: errors.append('U12 duplicate physical pad '+number)
+            numbered[number] = record
+        else: apertures.append(record)
+    if set(numbered) != {str(i) for i in range(1,10)}:
+        errors.append('U12 requires exactly physical pads 1..9')
+    for number in range(1,9):
+        index = number-1 if number<=4 else 8-number
+        expected = ((-2.7 if number<=4 else 2.7, round(-1.905+1.27*index,3)),(1.55,.6),{'F.Cu','F.Mask','F.Paste'},'roundrect')
+        if numbered.get(str(number)) != expected: errors.append('U12 signal land differs from reviewed DDA0008B')
+    if numbered.get('9') != ((0.,0.),(2.95,4.9),{'F.Cu'},'roundrect'):
+        errors.append('U12 EP metal must be copper-only 2.95x4.9; mask union must not expose thermal vias')
+    if apertures != [((0.,0.),(2.71,3.4),{'F.Mask','F.Paste'},'roundrect')]:
+        errors.append('U12 requires one unnumbered 2.71x3.4 mask/paste aperture')
+    for form in pads:
+        if re.match(r'\(pad\s+""',form.text):
+            ratio = re.search(r'\(roundrect_rratio\s+([\d.]+)\)',form.text)
+            if not ratio or not math.isclose(float(ratio[1])*2.71,.05,abs_tol=1e-6):
+                errors.append('U12 aperture corner radius must be 0.05mm')
+    return sorted(set(errors))
+
+
+def evaluate_5v(profile, pins=None):
+    """TPS62901 MODE=VIN, 2.5MHz, L=2.2uH reviewed engineering envelope.
+
+    Effective capacitance uses an OEM combined AC/DC model plus reserves;
+    this check never turns typical characteristics into guaranteed limits.
+    """
+    errors = []
+    for key, minimum in [('input_effective_uf', 3), ('output_effective_uf', 10),
+                         ('soft_start_min_ms', 1)]:
+        value = profile.get(key, 0)
+        if not isinstance(value, (int, float)) or not math.isfinite(value) or value < minimum:
+            errors.append(f'5V {key} below reviewed minimum {minimum}')
+    nominal = profile.get('output_nominal_max_uf', 0)
+    if not 10 <= nominal < 100:
+        errors.append('5V output population outside reviewed low-ESR / 2.2uH envelope')
+    if profile.get('qualification_status') != 'TYPICAL_MODEL_WITH_RESERVES_BENCH_OPEN':
+        errors.append('5V model must retain physical qualification boundary')
+    if pins is not None:
+        expected = {('C133', '2'): '/GND', ('C132', '1'): '/VA_5V',
+                    ('C132', '2'): '/GND', ('C31', '1'): '/VA_5V',
+                    ('C31', '2'): '/GND', ('C30', '1'): '/VDRV_12V',
+                    ('C30', '2'): '/GND', ('U13', '7'): '/VDRV_12V'}
+        for pin, net in expected.items():
+            if pins.get(pin) != net:
+                errors.append(f'5V {pin[0]}.{pin[1]} must connect to {net}')
+        ss = pins.get(('U13', '8'), '')
+        if not ss or ss.startswith('unconnected-') or ss in ['/GND', '/VA_5V', '/VDRV_12V'] or ss != pins.get(('C133', '1')):
+            errors.append('U13 SS/TR requires its dedicated C133 soft-start node')
+    return errors
 
 
 def evaluate(profile):
@@ -91,6 +179,8 @@ def check_project(project, xml=None):
     path = project.root / project.parameters['aux_power_profile']
     profile = json.loads(path.read_text(encoding='utf-8'))
     errors, _ = evaluate(profile)
+    if 'downstream_5v' in profile:
+        errors += evaluate_5v(profile['downstream_5v'])
     ind, controller = profile['inductor'], profile['controller']
     expected_parts = {part['ref']: {'Value':part['value'], 'Footprint':part['footprint'],
                                   **{k:part[k] for k in ('Manufacturer','MPN','LCSC')}}
@@ -110,10 +200,24 @@ def check_project(project, xml=None):
         errors.append('Auxiliary controller changed without recalculation')
     if property_value(symbols.get(controller['ref'], ''), 'MPN') != controller['value']:
         errors.append('Auxiliary controller MPN differs from model')
+    land = controller.get('footprint')
+    if land != 'fpga-servo:TI_DDA0008B_LM5164':
+        errors.append('U12 reviewed Footprint selection missing from controller profile')
+    if property_value(symbols.get(controller['ref'], ''),'Footprint') != land:
+        errors.append('U12 schematic Footprint differs from reviewed DDA0008B land')
+    local = project.schematic.parent/'fpga-servo.pretty/TI_DDA0008B_LM5164.kicad_mod'
+    if not local.is_file(): errors.append('U12 local Footprint missing')
+    else: errors += controller_land_errors(local.read_text(encoding='utf-8'))
+    rules=project.schematic.with_suffix('.kicad_dru')
+    if not rules.is_file():errors.append('U12 reviewed internal pad rule file missing')
+    elif land=='fpga-servo:TI_DDA0008B_LM5164':
+        errors += controller_internal_rule_errors(rules.read_text(encoding='utf-8'))
     if property_value(symbols.get(controller['ron_ref'], ''), 'Value') != f"{controller['ron_resistance_ohm'] / 1000:g}k":
         errors.append('Actual RON resistor differs from frequency model')
     with project.bom.open(encoding='utf-8-sig', newline='') as stream:
         bom = {row['Ref']: row for row in csv.DictReader(stream)}
+    if bom.get(controller['ref'],{}).get('Package') != land:
+        errors.append('U12 BOM Package differs from reviewed Footprint')
     for ref, expected in expected_parts.items():
         row = bom.get(ref, {})
         for field, value in expected.items():
@@ -124,6 +228,8 @@ def check_project(project, xml=None):
         import xml.etree.ElementTree as ET
         tree = ET.parse(xml).getroot()
         comps = {x.attrib['ref']: x for x in tree.findall('components/comp')}
+        if comps.get(controller['ref']) is None or comps[controller['ref']].findtext('footprint') != land:
+            errors.append('U12 fresh native Footprint differs from reviewed DDA0008B land')
         for ref, expected in expected_parts.items():
             comp = comps.get(ref)
             if comp is None:
@@ -136,6 +242,10 @@ def check_project(project, xml=None):
                     errors.append(f"Fresh netlist {ref} {field} mismatch")
         pins = {(n.attrib['ref'], n.attrib['pin']): net.attrib['name']
                 for net in tree.findall('nets/net') for n in net.findall('node')}
+        if 'downstream_5v' in profile:
+            errors += evaluate_5v(profile['downstream_5v'], pins)
+            errors += output_population_errors(profile['downstream_5v'],
+                                               {ref: comp.findtext('value') for ref, comp in comps.items()}, pins)
         if pins.get((ind['ref'], '1')) != pins.get((controller['ref'], '8')):
             errors.append('Auxiliary SW-to-L1 physical pin connection changed')
         if pins.get((ind['ref'], '2')) != '/VDRV_12V':

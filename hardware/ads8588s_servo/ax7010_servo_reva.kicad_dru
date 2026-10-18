@@ -1,4 +1,9 @@
 (version 1)
+
+# TI DDA0008B EP copper to signal-pad gap; same U12 pads only.
+(rule "U12 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U12' && B.Reference == 'U12'")
+  (constraint clearance (min 0.45mm)))
 # Package copper spacing only; external routes retain net-class clearance.
 (rule "Q1 internal lands"
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'Q1' && B.Reference == 'Q1'")
@@ -50,3 +55,17 @@
 (rule "U18 bounded pad escape"
   (condition "A.memberOf('U18_pad_escape') && ((B.Type == 'Pad' && B.Reference == 'U18') || B.memberOf('U18_pad_escape'))")
   (constraint clearance (min 0.2mm)))
+
+# Same reviewed manufacturer package as corresponding shared channel.
+(rule "U5 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U5' && B.Reference == 'U5'")
+  (constraint clearance (min 0.65mm)))
+
+# Same reviewed manufacturer package as corresponding shared channel.
+(rule "U15 internal lands"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == 'U15' && B.Reference == 'U15'")
+  (constraint clearance (min 0.2mm)))
+
+(rule "ADS8588S U6 no digital under body"
+  (condition "A.intersectsArea('ADS8588S U6 body signal exclusion') && !(A.NetName == '/GND' || A.NetName == '/VA_5V' || A.NetName == '/VIO_3V3' || A.NetName == '/VBUS_ADC' || A.NetName == 'Net-(U4-OUT)')")
+  (constraint disallow track via))

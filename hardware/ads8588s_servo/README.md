@@ -1,70 +1,28 @@
-# AX7010 Servo Drive Rev.A - ADS8588S original
+# AX7010 + ADS8588S 四层工程板
 
-原方案已整体迁移到本目录；电气文件和PCB内容保持不变。新ADC方案见 [AD7606C独立工程](../ad7606c_servo/README.md)，双方案入口见 [上一级README](../README.md)。
+2026-10-19：当前源已采用修复后的四层 PCB，完成 U7 物理引脚、独立阻尼 DC-link/J7、12 V 总负载 1 A、5 V 有效容量/软启动、装配焊盘及关键布线修复。原生 ERC 为 0 错误 / 0 警告 / 0 排除，原生 DRC 为 0 违规 / 0 未连接 / 0 图板差异；八路 Kelvin、严格局部逃线、自由直角和 ADC 最大 10.2 mm 本体数字铜路检查通过。**制造放行仍为 BLOCKED，禁止直接投板。**
 
-**Current delivery scope (user revision, 2026-10-10): BOM and schematic only. PCB/layout repair is deferred. The working PCB retains earlier development edits and is not synchronized to the final bus-OCP schematic; the isolated unfinished routing candidate is not adopted. Do not use this board for fabrication or reuse historical zero-DRC/parity claims for the current schematic.**
+打开 [KiCad 工程](ax7010_servo_reva.kicad_pro) 或 [PCB](ax7010_servo_reva.kicad_pcb)。当前 PCB SHA256：`e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226`。[采用与来源记录](../../docs/reviews/dual_prototype_2026-10-18/ads8588s_pcb_adoption.json)不构成人工批准。
 
+- 原生源：9 页、180 元件 / 145 网络 / 634 引脚归属，包含 DNP 和板外 J6。
+- 采购实装：169 项；五个裸铜测试点不进入装配 BOM/CPL，DNP/板外件独立排除。
+- U6：ADS8588SIPM，双 DOUT 接口；[接口与时序合同](../../docs/adc_fpga_timing_and_freeze_2026-10-12.md)。
+- 板框中心线 130 × 95 mm，原连接器与四安装孔锚点保留。H1–H4 为 3.2 mm PTH / 5 mm 铜焊盘，不能改称 NPTH。
+- 候选叠构为 JLC041621-3313 / NP-155F Tg155，外层 70 µm、内层 30 µm、ENIG；材料接受、付费四层 POFV 和受控成品孔工艺尚未关闭。
+- 本地 `mechanical/` 包含原样保存的通用模型及明确标为 NOT OEM 的橙色净空模型，不能代替实际配合、座高、工具和机箱审核。来源与许可见 [model_sources.json](mechanical/model_sources.json)。
 
-**2026-10-11 design-for-manufacture review:** [Rev.A-P simplified design, cost and ECO plan](../../docs/rev_a_simplified_design_production_review_2026-10-11.md) and [68-group BOM cost matrix](reva_cost_eco_2026-10-11.csv) establish the current review priorities. This assessment does **not** change the KiCad electrical nets, make the unsynchronized PCB fabricable or lift the dynamic Gate A/B hold.
+设计目标：24–48 V、20 kHz、10 Arms 连续相电流、20 A 瞬时正弦相电流幅值 30 s（14.142 Arms）、40°C 强迫风冷；12 V **总**连续 1 A。额定工作与全部物理试验尚未资格化。没有板载制动；电机运行前需独立验证外部吸能/钳位，J7 绕过输入 F1，外部夹具必须提供支路保护。
 
-**2026-10-12 schematic correctness update:** `current_adc.kicad_sch` now uses `NTC_BOARD_AUX` (instead of the misleading `NTC_MOTOR`) and annotates the ADS8588S dual-DOUT interface; C3 250 V rating and L1 qualification metadata are corrected in KiCad/BOM; inactive J11 parallel FPGA XDC constraints are commented. These are source/metadata/interface changes, **not a claim of fresh native KiCad ERC, PCB parity or 48 V qualification**. See [ADC timing contract](../../docs/adc_fpga_timing_and_freeze_2026-10-12.md), [project selection freeze matrix](../../docs/reva_schematic_component_freeze_matrix_2026-10-12.md) and `python tools/check_adc_serial_contract.py`.
-
-## 2026-10-12 高速电流环ADC替换候选：尚未应用
-
-按新的3–5kHz+电流环目标，审查首选`AD7606C-16BSTZ`（C5371769），0–5V输入高速模式相位延迟典型1.7µs，J10四路DOUT（需要新接线DOUTC/DOUTD/SDI）。详细规格：[高速ADC选型及KiCad/FPGA迁移合同](../../docs/adc_high_performance_reselection_2026-10-12.md)和[受控候选BOM](../ad7606c_servo/adc_fast_candidates_2026-10-12.csv)。**当前本文件下列Rev.A现物和已签核ERC的U6仍是ADS8588SIPM**。不允许直接改一行BOM/MPN代替64脚原理图重绘、供电/输入范围/参考/配置、J1布线和FPGA固件/STA及原生ERC验证。本次性能重选不消除既有PCB不一致。
-
-## Files
-
-- `ax7010_servo_reva.kicad_sch` - KiCad 10-native top-level schematic
-- `power_input.kicad_sch`, `aux_power.kicad_sch`, `gate_inverter.kicad_sch`, `current_adc.kicad_sch`, `encoder.kicad_sch`, `ax7010_interface.kicad_sch`, `ocp_latch.kicad_sch` - native hierarchical child sheets
-- `ax7010_servo_reva.kicad_sym` - versioned KiCad 10-native project symbol library
-- `ax7010_servo_reva.kicad_pcb` - 2-layer PCB placement / critical-routing baseline
-- `ax7010_servo_reva.kicad_pro` - KiCad project settings
-- `bom.csv` - first-pass BOM and sourcing gates
-
-`fp-lib-table` resolves `fpga-servo.pretty` through `${KIPRJMOD}`. `sym-lib-table` is versioned and resolves the project library through `${KIPRJMOD}`. The project therefore opens and passes ERC without a machine-specific global symbol table. `*.kicad_prl` and lock files remain local state.
-
-The 2026-10-09 review fixed stale hierarchy instance roots, added seven FPGA-input pull-downs and six local IC bypass capacitors, repaired C43/C44/C45 (previously both terminals on GND), and synchronized the BOM and actual DNP flags. See `docs/archive/reviews/schematic_review_2026-10-09.md` for evidence and remaining layout gates.
-
-## Layout partitioning
-
-From left to right in the PCB file:
-
-1. AX7010 PL headers and signal interface
-2. ADC + analog acquisition
-3. gate driver / safety logic
-4. six-MOSFET bridge + current shunts
-5. motor and DC-bus terminal blocks
-
-The auxiliary buck supply is kept along the top edge, away from the current-sense/ADC area.
-
-## Current selection implementation (2026-10-10)
-
-The eight-page native hierarchy retains three phase-inline INA240A1DR channels and 5 mΩ / 3 W two-terminal SMD shunts. Unused J2 is removed. Bus-only positive OCP uses a fourth INA240A1DR, a 2 mΩ / 3 W shunt and one LM393LV comparator at nominal +25 A. U16 and phase-window divider parts are removed. The hardware ARM latch and supervised clear remain.
-
-The gate driver is non-inverting DRV8300DPWR with internal bootstrap diodes, 470 nF bootstrap capacitors and initial 33 Ω gate resistors. F1 is onboard Littelfuse 0456025.ER; no external fuse holder is required. J3.1 is VIN_RAW and F1 feeds VIN_FUSED. J6 remains an off-board PSU reference.
-
-Important land decisions:
-
-- RSH1..RSH4: local HoYLR2512_Kelvin two-terminal land; independent inner-side sense routing is required on all eight inputs.
-- J4: KEFA KF950-9.5-3P; J1/J5: JILN 3210 family, finished holes 1.02 ±0.03 mm.
-- L1: SOREDE 68 µH prototype selection; full 1 A regulator operation and inductor thermal rating remain unqualified. L2: Sunlord SWPA4020S2R2MT.
-- NTC1/2: Shiheng CMFA103F3950 on a shared reviewed 0603 land. The onboard NTC2 does not establish actual remote motor temperature.
-
-The [selection record](../../docs/lcsc_sourcing_review_2026-10-10.md) and current native verification evidence supersede previous component counts and selection snapshots. BOM and procurement candidates are generated from the current hierarchy and sourcing evidence; stock observations are not reservations.
-
-## Acceptance and limits
-
-Run all repository checks, native ERC, fresh physical-pin netlist checks, all-severity PCB DRC with schematic parity, and the eight-branch Kelvin audit. Review every exported schematic page. A zero count does not establish electrical or thermal qualification.
-
-See [release gates](../../docs/release_gates.md). Gate A/B remain blocked pending measured switching, OCP delay/SOA, supply sequencing, current/thermal, connector and regeneration qualification. No fabrication approval is implied. Older implementation reports remain historical evidence; their external fuse, INA241, FD6288 and phase-window OCP descriptions do not describe this revision.
-
-## 统一工具入口
+从仓库根目录运行：
 
 ```sh
 python tools/pcb.py check --project ads8588s --scope schematic
-python tools/pcb.py verify --project ads8588s --scope schematic
-python tools/pcb.py verify --project ads8588s --scope release
+python tools/pcb.py verify --project ads8588s --scope prototype
+python tools/pcb.py test --lane all --kicad-cli kicad-cli --pcb-python <KiCad-python>
 ```
 
-从仓库根目录执行；详见 [工具说明](../../docs/pcb_toolkit.md)。严格 release 仍会报告当前旧板差异和工程资格阻断，不能用原理图通过代替。历史证据保留原路径，新执行写入独立 artifacts 目录。
+`prototype` 必须包含原生几何和七项源哈希绑定的人工审核，缺失时保持 BLOCKED；ngspice 仅证明静态/理想模型部分。详见[统一工具](../../docs/pcb_toolkit.md)、[本轮审核](../../docs/reviews/dual_prototype_2026-10-18/README.md)、[首板边界](../../docs/reviews/dual_prototype_2026-10-18/first_board_boundary.md)与[低能量上电程序](../../docs/bringup.md)。
+
+顶层、全部子页（含 `dc_link.kicad_sch`）、`.kicad_sym`、`.kicad_pro/.kicad_dru`、`bom.csv`、XDC、工艺/电源 profile 及本地库共同构成当前设计。`${KIPRJMOD}` 引用可随仓库迁移。历史双层 PCB 快照在 `evidence/legacy_pcb_before_dual_prototype_2026-10-18/`，旧未同步结论和旧零 DRC 不能作为当前板验收。
+
+AD7606C 是[独立工程](../ad7606c_servo/README.md)，不是本板中一行 MPN 替换。本仓库尚无 HDL 或固件；候选性能配置和 RTL/STA/实测资格分开维护。历史成本和采购表保留其原日期，不代表当前价格或可替代资格。

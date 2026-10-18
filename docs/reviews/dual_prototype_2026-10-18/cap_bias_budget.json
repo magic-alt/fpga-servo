@@ -1,0 +1,70 @@
+{
+  "model_rows": [
+    {
+      "part": "GRM32ER71E226KE15",
+      "temperature_C": 25,
+      "AC_Vrms": 0.01,
+      "typical_capacitance_uF": {
+        "0": 16.819736076197003,
+        "5.2": 15.33294383259642,
+        "12.6": 8.70169869115132
+      },
+      "source": "GRM32ER71E226KE15-bias-response.json",
+      "source_sha256": "aff7c3f31ccd0f6a357181eae5ef1432908b97e46dab1bd57547c4259e6f279f"
+    },
+    {
+      "part": "GRM32ER71E226KE15",
+      "temperature_C": 25,
+      "AC_Vrms": 0.5,
+      "typical_capacitance_uF": {
+        "0": 23.830333333333332,
+        "5.2": 18.62918663605811,
+        "12.6": 8.75685676842335
+      },
+      "source": "GRM32ER71E226KE15-bias-response.json",
+      "source_sha256": "aff7c3f31ccd0f6a357181eae5ef1432908b97e46dab1bd57547c4259e6f279f"
+    },
+    {
+      "part": "GRM32ER71A476KE15",
+      "temperature_C": 25,
+      "AC_Vrms": 0.01,
+      "typical_capacitance_uF": {
+        "0": 33.23550509757357,
+        "5.2": 24.5178277698886
+      },
+      "source": "GRM32ER71A476KE15-bias-response.json",
+      "source_sha256": "8704edfc84b9f9dd5bdb362043d88ef3032014f7f784cec2efbb1483c1aa8e59"
+    },
+    {
+      "part": "GRM32ER71A476KE15",
+      "temperature_C": 25,
+      "AC_Vrms": 0.5,
+      "typical_capacitance_uF": {
+        "0": 50.21033333333334,
+        "5.2": 27.64510856517736
+      },
+      "source": "GRM32ER71A476KE15-bias-response.json",
+      "source_sha256": "8704edfc84b9f9dd5bdb362043d88ef3032014f7f784cec2efbb1483c1aa8e59"
+    }
+  ],
+  "budget": {
+    "engineering_reserve_factor": 0.6885,
+    "tolerance": 0.9,
+    "temperature_reserve": 0.85,
+    "aging_reserve": 0.9,
+    "guaranteed_minimum": false,
+    "C30_input_single_12_6V_uF": 5.991119548857683,
+    "C31_C132_output_pair_5_2V_uF": 21.113463657485273,
+    "SS_C133_reserves": {
+      "tolerance": 0.9,
+      "temperature": 0.85,
+      "aging": 0.9,
+      "DC_bias": 0.9,
+      "C_min_pF": 6196.5,
+      "Vref_min_assumed_V": 0.78,
+      "ISS_max_uA": 2.7,
+      "K_upper_bound_us": 700
+    },
+    "SS_C133_lower_bound_ms": 1.0901
+  }
+}

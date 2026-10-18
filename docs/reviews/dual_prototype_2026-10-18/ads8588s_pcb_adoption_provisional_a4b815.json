@@ -1,0 +1,382 @@
+{
+  "branch": "feat/dual-servo-fabrication-readiness",
+  "authorization": "User requested comprehensive dual-board repairs and implementation of reviewed plan",
+  "native_DRC": "0 violations / 0 unconnected / 0 parity, all severity; no exclusions",
+  "candidate_sha256": "a4b8158240253f0aefcf333f37987b9d69afbe30419be8a3440ff2483388c666",
+  "native_drc_sha256": "6633b7521cbd5262f7e4326ccdda03ea0de32780045fd51a9f10d6c95c08e6ef",
+  "changes": [
+    {
+      "path": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb",
+      "before_sha256": "d13af37991cc22f871cc9628bb0e218fe9dcf33abd05d61852db3a6e053b1346",
+      "after_sha256": "a4b8158240253f0aefcf333f37987b9d69afbe30419be8a3440ff2483388c666"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fp-lib-table",
+      "before_sha256": "b62c2da429e080fb3980770dae027a1bd4405039df34c55ebea928c748fa9768",
+      "after_sha256": "4a788cf16d28753d9dc7f2e894c1f88410a686054738ba4be0ac84c11fcb30b2"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/CLEARANCE_Q_PG_TDSON8_NOT_OEM.step",
+      "before_sha256": null,
+      "after_sha256": "a9b66d07904e27f9b00c68631ad389cc6f9653c6f7f0bdcbbbd41a5a12f809a2"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Resistor_SMD.3dshapes/R_0603_1608Metric.step",
+      "before_sha256": null,
+      "after_sha256": "1875571c326d0d9e96f36b4efeb8094068ef7619f0a449c781caf0b49c2e5861"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_1206_3216Metric.step",
+      "before_sha256": null,
+      "after_sha256": "11e948c72c90e2b6322436b72745f40ff4e8ba0da64fb2a0df943dfa61e89c1a"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_0603_1608Metric.step",
+      "before_sha256": null,
+      "after_sha256": "4857b3dc717675bf1fb22edda622ac3b3ae03cf44d81eefaf3fa3ba3a86d84c1"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/CLEARANCE_NCC_D10p5_H21p5_NOT_OEM.step",
+      "before_sha256": null,
+      "after_sha256": "5c939fbaf74a48596b8db7fe35b77a204db0c1c5f5d331cd7a326e37bf892902"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_1210_3225Metric.step",
+      "before_sha256": null,
+      "after_sha256": "f8510481c5044113cf49b0fa6dd54ddab9224508bd6808e1afab8ef0cefdefc9"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_0805_2012Metric.step",
+      "before_sha256": null,
+      "after_sha256": "9a669c1a2f1ea25b88b401acef6efeaa80a067bd7da9db6993de719a7fbe155c"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/CLEARANCE_J7_PHOENIX_NOT_OEM.step",
+      "before_sha256": null,
+      "after_sha256": "12927ea8b144f3a05d24dfea44618546876477e0190b5d0202eaa51988bdbf66"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/CLEARANCE_J4_KEFA_NOT_OEM.step",
+      "before_sha256": null,
+      "after_sha256": "073be1d25e29c69625729a7b83cac714524e72c81a3424cc88cdaef1f9427c6f"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-23-5.step",
+      "before_sha256": null,
+      "after_sha256": "720a6eab0024069bbee68e7cb4c3ff1149468a34611225cdc852662c5d0ec2b7"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_SO.3dshapes/VSSOP-8_2.3x2mm_P0.5mm.step",
+      "before_sha256": null,
+      "after_sha256": "353552981eef35cb93635057d4aeb89aef22648c77af6fd095e328bfe6b834bd"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-23-8.step",
+      "before_sha256": null,
+      "after_sha256": "b9dc5b435d49868df7491668d5322debfe5d699dbb41c2ad93a41518ec9b5007"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_SO.3dshapes/TSSOP-20_4.4x6.5mm_P0.65mm.step",
+      "before_sha256": null,
+      "after_sha256": "97339947f3a7196470ec2f1d9f9b92bb2fc2ab66ad53be0cf105192585ef3c9a"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+      "before_sha256": null,
+      "after_sha256": "ded342cdb394fb45395227beaaa75cc390613cf2581b29cd6d22c12abd6103b2"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-363_SC-70-6.step",
+      "before_sha256": null,
+      "after_sha256": "045cc95e18ee7a13d1623c3ce6604fc833049bdb4f952f68c26e3c5767d122e4"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_SO.3dshapes/SOIC-8_3.9x4.9mm_P1.27mm.step",
+      "before_sha256": null,
+      "after_sha256": "07f46cff378d30e6c27dfd5a03092c795323f86d91c71fc7e743f4f418dc553a"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_QFP.3dshapes/LQFP-64_10x10mm_P0.5mm.step",
+      "before_sha256": null,
+      "after_sha256": "b0c827bc5c05552175d28affe44a5bd2ab45c9c36efff6ff07a74cc449b13db4"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/TSOT-23-8.step",
+      "before_sha256": null,
+      "after_sha256": "dc644a91883054d8f75e38542e63c2050dc8f2e8b7f12e1c57dcd93245fbd473"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_SO.3dshapes/TSSOP-16_4.4x5mm_P0.65mm.step",
+      "before_sha256": null,
+      "after_sha256": "6ad5e98224d02a427d9a6b929a28dbc158b9925fba5adec12db05079f1016948"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.step",
+      "before_sha256": null,
+      "after_sha256": "4ac293d6a2a02e11fb656cd94214ca3eee4fdb4219ec44112b35866a7c7bb127"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_TO_SOT_SMD.3dshapes/SOT-23-6.step",
+      "before_sha256": null,
+      "after_sha256": "c9fe686b4d1b56927a41fa84a9bc1efb61d8a45a123a3db43bcaa05c2891d635"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Capacitor_THT.3dshapes/C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3.step",
+      "before_sha256": null,
+      "after_sha256": "53c43d6558a286aafeb64f1960b93462a4f9052145a412812a7d834a16ce50b2"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Diode_SMD.3dshapes/D_SMC.step",
+      "before_sha256": null,
+      "after_sha256": "30dab4c2e22239b7e3694a4d45304e04255c6b70a79d28e9c34c6072ba647991"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Capacitor_SMD.3dshapes/C_1812_4532Metric.step",
+      "before_sha256": null,
+      "after_sha256": "be9e130425233dd580e42f23cf98ed84335b8e1671ef374a8d185999ab4c2d93"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/CLEARANCE_J3_PHOENIX_NOT_OEM.step",
+      "before_sha256": null,
+      "after_sha256": "6dbd53b21030a64e3ef37d1c7e27b3a155397cdc1254a14cb356722cc2d4022b"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Package_SON.3dshapes/Texas_R-PUSON-N14.step",
+      "before_sha256": null,
+      "after_sha256": "f8a35b6e9ff286632ba08e69f946c13ea52c1c5e76a563c017eb804baaa624bf"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/CLEARANCE_F2_JDT1812_NOT_OEM.step",
+      "before_sha256": null,
+      "after_sha256": "819d1592465f99e06bcc60fd64763cbf80d54598d850bb4def4805f128dc5cec"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/frozen-system-models-v1/Connector_IDC.3dshapes/IDC-Header_2x20_P2.54mm_Vertical.step",
+      "before_sha256": null,
+      "after_sha256": "b4c4f2a81aa970bdb46cb2ef80833d2370a5d0d023d178729b0cbb368db263cc"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_SON.pretty/Infineon_PG-TDSON-8_6.15x5.15mm.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "cdfbb8d5076c6bfb414590073b560c33875a1ac7d24d13158486dc3fbae7e067"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "b8c7e5c159ffe6b11265f223f75e78d690a0de1c2eb089bce5abcb1defdc6147"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "ecd01c017bd2fc5945ec00376cc2512c6b51bc04717325726bd6f494a5c17a44"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/HoYLR2512_Kelvin.kicad_mod",
+      "before_sha256": "fe3e68311bfdce7bd70dc6aeb14bad3963fdfb6d8cb33bda447208f1b49ad827",
+      "after_sha256": "6f044a36e3ec5dfce78818f7528e312bbbd9051a11edb0a73dd107a50484b5e6"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod",
+      "before_sha256": "b4054b6b92a639c4400e81c3762957ff225a7c196165316e3f994d4fbef4a73e",
+      "after_sha256": "1fd1324e956d2ef01cbdcf56ba91b7c8da910a25fb2c2bf240ade02c0eaf73b8"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "968d226af1efd722fdce5f7246e51edff33717b09e58dc343de4aee3430034cd"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/NCC_KZN_D10_P5_Courtyard11.kicad_mod",
+      "before_sha256": "c655c716ff356eead1bb03c7f866497b6affc6820c2d4c89f6bba9cb7e7f9ee8",
+      "after_sha256": "768bee452d88cb8b7301a4112e8b663499f5ecd14c59eb6d8e296259754a6da1"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/NTC_0603_Shiheng_KUU.kicad_mod",
+      "before_sha256": "29b6492136dbd7af465e92fe8a5b098a7b6ab26f1d145308a0daffea6f4996b1",
+      "after_sha256": "29b6492136dbd7af465e92fe8a5b098a7b6ab26f1d145308a0daffea6f4996b1"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "3bab71c25b88f2659a331d74c3ee0ea5f245bf2cc9b705e4244e11cdfeb40804"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "016857f42b216574d2ab43807c920fca321e86aec715fb22a2893606ea9a0201"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Vishay_WSL2512_0R33.kicad_mod",
+      "before_sha256": "612e61886267a6d565b4ccea8c26a827adfa57d638b8a6534ead9447e66dd8b9",
+      "after_sha256": "fe4314a04c7e953deb2be0ff9c12d67b07d329cee9093bb2013c73255cee3c6b"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/PhoenixContact_MKDS_5_2_9.52mm.kicad_mod",
+      "before_sha256": "682e244f50838f4fb5bbcfb583e89e2e7fa6f17d6668cd8512b926f4b5fcc126",
+      "after_sha256": "b7f741463b9bb65485bceacce3adc87916da0c27030d1b6ba3f9460416121fd5"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Vishay_CRCW0603_HP.kicad_mod",
+      "before_sha256": "924a2581e12c32070cf1273d8c9b03094ff68b42dcb4150e311af48a9a2eeb80",
+      "after_sha256": "729a13ac4234007a4ac1e950472dde76c691070b93e8f2edffcd97c6a3ec8c89"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Sunlord_SWPA4020S.kicad_mod",
+      "before_sha256": "e392d4c5c7cad7840d52b684ecc7f9677262a2b6d7512d02ba4b6ba306f165f5",
+      "after_sha256": "a472ab8d516d3cc6b8d68d48707176e1bc14696121f809b06c7edc70f7ff0d34"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Littelfuse_456_25A_SMD.kicad_mod",
+      "before_sha256": "076edd6e9b21eb8fab19a8651cf95cafa34b2a1b93aa61a686a0a2c8acb8ec5d",
+      "after_sha256": "abe9001dbb04f692357b54fab0775aef213bbf6a8e535991196c91e6e0bfb55b"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm_D1.85.kicad_mod",
+      "before_sha256": "454f7a4feba1ac0f85452902e8c19cff36d531b8751db76a78d3738ea2337cb3",
+      "after_sha256": "d215da32f5a7b14c7142c72ccc230f2bac8006196ecd7822af4522e4438e14f2"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/MountingHole_M3_3.2mm_PTH_Pad5mm.kicad_mod",
+      "before_sha256": "33b92e369d7f553b611dcf12846713dd1994630b12bbc010a66f38c1be936832",
+      "after_sha256": "b9952288ecba58f1395c2bbfacda7ec0fd961f33f09c8ab4a449795c05b483a1"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "450e32a20041cbc1b5c6cc3c6610494a35938624111487743267e7a7425602f6"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/TI_DCU0008A_VSSOP8_P0.5mm.kicad_mod",
+      "before_sha256": "3166969a6e29fcfb237f932f339afb9b37c4c293fb20e445d6e8b0202d269a58",
+      "after_sha256": "ebb6a8e4ea39818846418317a42e356fae894f0757480d63dc2e4be9e11d11f5"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod",
+      "before_sha256": "82af96f53701bb74ec4f7ff27cce0a915563f62068787ec7c961dc25a334bdb2",
+      "after_sha256": "2bf68dab98a3fe724df076f0e1caf51f619ea67208e97a7cc5e56f571b95b954"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_SO.pretty/TSSOP-20_4.4x6.5mm_P0.65mm.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "988f704c52e3ec3a828c92c23090cecf92e35ea4ed4dc253f7675132e160937e"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "71b4e218c3a7f4db0cf98e71a9ad64b4d41f134cfe1a02bf7a290e13e4c4553f"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_TO_SOT_SMD.pretty/SOT-363_SC-70-6.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "59a56dbc4b431ebe05fd17aef388a7c4cebd356f7bf54b906e58900c6331e0c4"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/TI_D0008A_SOIC8_P1.27mm.kicad_mod",
+      "before_sha256": "81f70711953e2fe886873c3ec6356e657945c749386e2a551c75408b3fdfe692",
+      "after_sha256": "5ab122d8f47ac21c8f1d24e368282d1b74c1b5f47459c1920ac393e1bfc1bc79"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_QFP.pretty/LQFP-64_10x10mm_P0.5mm.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "90013c51f95a6ef3e694ed66edb09c89628299d787fd74c1c601712fc5acfdfc"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod",
+      "before_sha256": "1a56ab5dfd377eaac50c379d71c9774b105cf6ebc6ab8c4e14c7f5755cf64bb6",
+      "after_sha256": "05ffe301f111503a1ef2d76b9640bea0d4b1dfdb387efee17c7f9144b88e3264"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/TestPoint.pretty/TestPoint_Pad_D2.0mm.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "c33e30602dd78193371c9c7158141691789c30b41d508908043d12e9fbe5fe10"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_SO.pretty/TSSOP-16_4.4x5mm_P0.65mm.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "2db5f643f756170db6b069ab7cb7687887d0fc7b3cb614102cd07ec2b8772fbb"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/TestPoint.pretty/TestPoint_Pad_D1.5mm.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "71cd3d6468e812939a4ae6843a60b311adcca80eab8e1913b3efe6bdef17a1c1"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/JILN_3210_2x05_P2.54mm_D1.02.kicad_mod",
+      "before_sha256": "cbb23b34bf06f2846a6241a21e5903fac18beda1b61829179880330a6c79a8e4",
+      "after_sha256": "5f19406cc1512965ecfbaa34aa78ba67c52e21ea8868bf4679d0bd5cbe726200"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDA0008B_LM5164.kicad_mod",
+      "before_sha256": "f0a4da14d3ffae6de3cd99702886d15b2e7e97c955f3f1f5e6731555c5032bc2",
+      "after_sha256": "d60516df959a5c8c4ad6438ec7295f68ad128f8cb1209946d698310d5ebfd2bb"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Package_TO_SOT_SMD.pretty/SOT-23-6.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "eec30fe8572da6adef6a1827e4cd84bb9de1c1861f815e36325415f7b41df7a6"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_THT.pretty/C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "d66630eef845b83dce14f21731c5bc0c79f1b6fcec32cb55fc496cea6567a41f"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod",
+      "before_sha256": "de16bf633d8280196b776a76654d93ab2c6ff0452dfa42b6cb8a15abf32568cb",
+      "after_sha256": "fa8bc7763e3afb76ad226e3050793ce5004b9d402dba5971652957cb49cd9fe5"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Murata_GRM32_1210.kicad_mod",
+      "before_sha256": "3e2fb3dd5100b9a4b775085e61b430485cc04dc63ec96c3e507e2db908efb55c",
+      "after_sha256": "3ec18266fa816476baee2ba52c5a0b3276c73c2e87aa7ce4106113b01913c54d"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Diode_SMD.pretty/D_SMC.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "ff752e60896e6055ed2495f16df158b2d32440cc8f32435673fdd43159ebd658"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod",
+      "before_sha256": "4963801380b585d2a2c8cea3f80d727aa071ea7d35fa76f0fb6728b93ab4dab2",
+      "after_sha256": "7e72c5d42fbe453af76a49f5f69b6072f41994e7027e2a283bb1b7c74513eff3"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_1812_4532Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "e57d07d90f71367eeee67400451b32939955e35efdfa54d1de2a9fcdf5c57925"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/TI_RVZ0014A_W025.kicad_mod",
+      "before_sha256": "22e5459936e49206529f663d8faecf4e7439482fd5008565df6ec1f141325dbd",
+      "after_sha256": "b02bda5fbc4d065ea3ffea100aa772c990169ff7b70f407cafe16cb592439e9d"
+    },
+    {
+      "path": "hardware/ads8588s_servo/manufacturing-ink-libs/Fuse.pretty/Fuse_1812_4532Metric.kicad_mod",
+      "before_sha256": null,
+      "after_sha256": "ae3f201b2be3b33dd4f336acec767ca15de7e160bc9be23dbf2c511bf89da8e7"
+    },
+    {
+      "path": "hardware/ads8588s_servo/fpga-servo.pretty/JILN_3210_2x20_P2.54mm_D1.02.kicad_mod",
+      "before_sha256": "a557de35d96add771f8890583b8df438a244ddf56ba4231938552c7718f3edcc",
+      "after_sha256": "263ed9892ef425b5f421fc7013fbae0c97349dffad3a98b233a98146b3e06415"
+    },
+    {
+      "path": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru",
+      "before_sha256": "0329a8f75183dcc83986dec46c9fcedddd7acb844e29bceaa0138b66badbf360",
+      "after_sha256": "6005aca1af5750c90a5de8f2e0df553deeffa6907d3bd64208fa939366e01129"
+    },
+    {
+      "path": "hardware/ads8588s_servo/mechanical/envelopes-v1/envelope_manifest.json",
+      "before_sha256": null,
+      "after_sha256": "80c4e2535b96ab927f050ca992cbf5c663fa87c1512483b400ea945f66d942f6"
+    }
+  ],
+  "status": "CAD_ADOPTED_MANUFACTURING_HUMAN_REVIEW_AND_PHYSICAL_QUALIFICATION_OPEN",
+  "post_adoption_geometry_findings": {
+    "status": "PROVISIONAL_BLOCKED_PENDING_REPAIR",
+    "non_GND_In1_tracks": 14,
+    "net": "/VA_5V",
+    "root_cause": "Common transfer incorrectly classified 14 VA5 track removals as AD-only. ADS retained the legacy trunk.",
+    "limitations": "No final pure-GND-In1 claim or manufacturing approval for a4b815."
+  }
+}

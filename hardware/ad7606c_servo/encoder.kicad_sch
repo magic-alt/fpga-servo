@@ -98,7 +98,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -116,7 +116,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -152,7 +152,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "6"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -170,7 +170,7 @@
 							)
 						)
 					)
-					(number "5"
+					(number "7"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -188,7 +188,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "5"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -206,7 +206,7 @@
 							)
 						)
 					)
-					(number "7"
+					(number "4"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -242,7 +242,7 @@
 							)
 						)
 					)
-					(number "9"
+					(number "11"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -278,7 +278,7 @@
 							)
 						)
 					)
-					(number "11"
+					(number "9"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -296,7 +296,7 @@
 							)
 						)
 					)
-					(number "12"
+					(number "13"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -314,7 +314,7 @@
 							)
 						)
 					)
-					(number "13"
+					(number "14"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -332,7 +332,7 @@
 							)
 						)
 					)
-					(number "14"
+					(number "15"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -350,7 +350,7 @@
 							)
 						)
 					)
-					(number "15"
+					(number "12"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -1396,7 +1396,7 @@
 		(hide yes)
 	)
 )
-		(property "Sourcing_Status" "China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm"
+		(property "Sourcing_Status" "Exact JILN primary only; original OEM drawing recovered; finished holes1.02+/-0.05mm; controlled JLC multilayer ENIG process acceptance OPEN; alternates UNQUALIFIED"
 	(id 5)
 	(at 50.8 88.9 0)
 	(effects
@@ -1406,7 +1406,7 @@
 		(hide yes)
 	)
 )
-		(property "Alternative_MPN" "2.54-2*5P简牛"
+		(property "Alternative_MPN" "UNQUALIFIED"
 	(id 6)
 	(at 50.8 88.9 0)
 	(effects
@@ -1416,7 +1416,7 @@
 		(hide yes)
 	)
 )
-		(property "Alternative_LCSC" "C5665"
+		(property "Alternative_LCSC" "UNVERIFIED"
 	(id 7)
 	(at 50.8 88.9 0)
 	(effects
@@ -1426,7 +1426,7 @@
 		(hide yes)
 	)
 )
-		(property "Alternative_Status" "{\"status\": \"CONDITIONAL_CURRENT_AND_OEM_PROVENANCE_REVIEW\", \"family_pdf\": \"/private/tmp/passive-oem/9661.pdf\", \"origin\": \"Mainland China\", \"ratings\": \"1A,-55..105C,contact30mohmmax; not3Aequivalent\", \"land\": \"2.54pitch2rows,1.0finishedholes,0.64squarepins; samecopperpattern\", \"body\": \"L=2.54*n+7.6±.5;width9.0±.1;height8.8±.1;keywidth4.5±.1;tail3.3±.1\", \"provenance\": \"ChineseC9138page suppliesfamilydrawing 简牛2.54-2xnP(3<=n<=40), supplier栏blank; C5665page hasnoPDF. Mechanicalfamilyevidence exists but exactmanufacturerattestationnotproven.\", \"current_application\": \"J5 .5A PTC limits demand; J1 per-pin demand<1A required, system load qualification open.\"}"
+		(property "Alternative_Status" "UNQUALIFIED"
 	(id 8)
 	(at 50.8 88.9 0)
 	(effects
@@ -1768,49 +1768,49 @@
 				)
 			)
 		 (hide yes))
-		(pin "1"
+		(pin "2"
 			(uuid "b90f30cb-8b39-43f1-a539-c61217404cd6")
 		)
-		(pin "2"
+		(pin "1"
 			(uuid "99a0a8df-1b82-4eac-b659-6813100d4613")
 		)
 		(pin "3"
 			(uuid "f3f04583-ea32-460c-9b25-30126ece5d39")
 		)
-		(pin "4"
+		(pin "6"
 			(uuid "50e77bd4-4fad-4cf0-a53a-fd28c63007ae")
 		)
-		(pin "5"
+		(pin "7"
 			(uuid "6e37154b-f1e5-4f9b-a817-d25954d64c45")
 		)
-		(pin "6"
+		(pin "5"
 			(uuid "8a71f33f-5ae3-4969-9859-29f86e90e768")
 		)
-		(pin "7"
+		(pin "4"
 			(uuid "60757ec1-02ca-42ef-896a-885bd65215f4")
 		)
 		(pin "8"
 			(uuid "6fa3ba60-264a-45ff-aa3e-14a711e2c7a0")
 		)
-		(pin "9"
+		(pin "11"
 			(uuid "ef0519d2-1713-43eb-8e7a-5d2e58116567")
 		)
 		(pin "10"
 			(uuid "bc899cf2-6021-4984-8f60-958e8274793d")
 		)
-		(pin "11"
+		(pin "9"
 			(uuid "6fbb4353-63e3-4bf8-b469-11fe9f59cbce")
 		)
-		(pin "12"
+		(pin "13"
 			(uuid "f69ac818-11e5-4210-be4e-6056afa03390")
 		)
-		(pin "13"
+		(pin "14"
 			(uuid "ae992aa7-905b-4050-aa67-8cee981d3f71")
 		)
-		(pin "14"
+		(pin "15"
 			(uuid "dfda781e-0f4b-4d84-b305-5a1645a5ac17")
 		)
-		(pin "15"
+		(pin "12"
 			(uuid "41494961-b392-40da-b1cf-f80133c32b78")
 		)
 		(pin "16"
@@ -2211,7 +2211,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SON:Texas_R-PUSON-N14"
+		(property "Footprint" "fpga-servo:TI_RVZ0014A_W025"
 			(at 124.46 119.38 0)
 			(hide yes)
 			(show_name no)

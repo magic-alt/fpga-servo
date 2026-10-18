@@ -1,0 +1,64 @@
+[
+  {
+    "file": "ti-lm5164.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+    "bytes": 2153326,
+    "sha256": "cce03619fbe13951eea47458cd45e140361637d8fef32ae143b82b16d597e32d",
+    "retrieved": true
+  },
+  {
+    "file": "ti-am26lv32e.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/am26lv32e.pdf",
+    "bytes": 1278801,
+    "sha256": "2e3c8f022c192972982a712da7b04f96dd181caf854a420ae59aa670b9798618",
+    "retrieved": true
+  },
+  {
+    "file": "ti-tpd6e05u06.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tpd6e05u06.pdf",
+    "bytes": 2801466,
+    "sha256": "c167cf1e72a5473a4d2c59b6a3c0251498701da05b7785919b9ceaae3b3e02c6",
+    "retrieved": true
+  },
+  {
+    "file": "ti-txu0204.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/txu0204.pdf",
+    "bytes": 2573045,
+    "sha256": "d54f3853ad68ee6c1b59531b87f09b9e9badbac17b8eb9d90a6033ed7c7403a3",
+    "retrieved": true
+  },
+  {
+    "file": "ti-ads8588s.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/ads8588s.pdf",
+    "bytes": 1761337,
+    "sha256": "7afe638840d773260f34b9e66e341ac26c65ed20f9c23df896f96cb4dc05652c",
+    "retrieved": true
+  },
+  {
+    "file": "adi-ad7606c16.pdf",
+    "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf",
+    "bytes": 3994442,
+    "sha256": "51b7051688a3c9ec61f90a01fda77a4ee0373adedacc1c7ea30a3d0e1c8041a5",
+    "retrieved": true
+  },
+  {
+    "file": "ncc-kzn.pdf",
+    "url": "https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/KZN-e.PDF",
+    "retrieved": false,
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "shiheng-ntc.pdf",
+    "url": "https://atta.szlcsc.com/upload/public/pdf/source/20210906/B03A8E165737D41272F439C17FAA3AAF.pdf",
+    "bytes": 814961,
+    "sha256": "1522cc8f65c15fec2c38da38ac27afbd6b106d0ab1e4c6ba416781b56f80be01",
+    "retrieved": true
+  },
+  {
+    "file": "kefa-kf950.pdf",
+    "url": "https://atta.szlcsc.com/upload/public/pdf/source/20230317/5CF0E53AE61B49AED08041D18ECB4E9D.pdf",
+    "bytes": 325262,
+    "sha256": "322d8c850a4ff5cb099b9333ce2d6c1f9f999eeb93e27efa1dcd4fdedb5dd989",
+    "retrieved": true
+  }
+]

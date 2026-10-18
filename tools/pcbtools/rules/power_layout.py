@@ -1,6 +1,89 @@
 """Grouped rule families; explicit contexts and no import-time checks."""
 from types import SimpleNamespace
 
+
+def reserved_ground_api():
+    """Audit explicitly reserved copper layers across the entire native board.
+
+    Foreign through-vias make antipads, not routed plane tracks. Rule areas are
+    constraints, not copper. Neither exception permits a foreign track, arc or
+    copper zone. Configuration is mandatory only for projects selecting this
+    rule family; layer and net names are supplied by each project.
+    """
+    def audit(board, config):
+        import pcbnew as p
+
+        report = {'status':'FAIL', 'violations':[], 'reserved_layers':[],
+                  'checked_tracks':0, 'checked_copper_zones':0,
+                  'through_vias_not_plane_tracks':0, 'rule_areas_not_copper':0}
+        if not isinstance(config, list) or not config:
+            return report, ['Reserved ground layers require an explicit nonempty configuration']
+        enabled = {board.GetLayerName(layer):layer
+                   for layer in board.GetEnabledLayers().CuStack()}
+        selected, errors = {}, []
+        for row in config:
+            if (not isinstance(row, dict) or set(row) != {'layer','net'}
+                    or any(not isinstance(row[k], str) or not row[k].strip()
+                           or any(c in row[k] for c in '*?[]') for k in ['layer','net'])):
+                errors.append('Reserved ground layer requires exact layer and net names')
+                continue
+            if row['layer'] not in enabled:
+                errors.append('Reserved ground layer is disabled, unknown or non-copper: '+row['layer'])
+            elif enabled[row['layer']] in selected:
+                errors.append('Duplicate reserved ground layer: '+row['layer'])
+            else:
+                selected[enabled[row['layer']]] = row['net']
+                report['reserved_layers'].append(dict(row))
+        if errors:
+            return report, errors
+
+        def reject(item, layer, kind):
+            box = item.GetBoundingBox()
+            row = {'uuid':item.m_Uuid.AsString(), 'kind':kind,
+                   'layer':board.GetLayerName(layer), 'net':item.GetNetname(),
+                   'required_net':selected[layer],
+                   'copper_bounds_mm':[box.GetLeft()/1e6,box.GetTop()/1e6,
+                                       box.GetRight()/1e6,box.GetBottom()/1e6]}
+            report['violations'].append(row)
+            errors.append(f"{row['uuid']}: {kind} net {row['net']!r} occupies reserved "
+                          f"{row['layer']} (requires {row['required_net']!r})")
+
+        for item in board.GetTracks():
+            if isinstance(item, p.PCB_VIA):
+                report['through_vias_not_plane_tracks'] += 1
+                continue
+            report['checked_tracks'] += 1
+            layer = item.GetLayer()
+            if layer in selected and item.GetNetname() != selected[layer]:
+                reject(item, layer, 'arc' if isinstance(item,p.PCB_ARC) else 'track')
+        # Native board.Zones() excludes footprint-owned zones. These can be
+        # real copper as well as package keepouts, so inspect both containers
+        # and deduplicate their native identities before classifying either.
+        zones = list(board.Zones())
+        for footprint in board.GetFootprints():
+            zones.extend(footprint.Zones())
+        seen_zone_uuids = set()
+        for item in zones:
+            uuid = item.m_Uuid.AsString()
+            if uuid in seen_zone_uuids:
+                continue
+            seen_zone_uuids.add(uuid)
+            if item.GetIsRuleArea():
+                report['rule_areas_not_copper'] += 1
+                continue
+            report['checked_copper_zones'] += 1
+            for layer in selected:
+                if item.GetLayerSet().Contains(layer) and item.GetNetname() != selected[layer]:
+                    reject(item, layer, 'copper_zone')
+        report['status'] = 'FAIL' if errors else 'PASS'
+        return report, errors
+
+    def check_project(project, board):
+        return audit(board, project.parameters.get('reserved_ground_layers'))[1]
+
+    return SimpleNamespace(audit=audit, check_project=check_project)
+
+
 def escape_api():
     """Verify exact package escape rules and physically bounded, pad-connected copper."""
 
@@ -234,6 +317,24 @@ def vendor_api():
         return errors
 
 
+    def internal_pad_rule_errors(text, ref, gap):
+        errors = []
+        conditions = extract_forms(text, "condition")
+        intended = f"A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == '{ref}' && B.Reference == '{ref}'"
+        if len(conditions) != 1 or head_string(conditions[0].text, "condition") != intended:
+            errors.append(ref + ": internal clearance must apply only to two pads of this exact instance")
+        minimum = re.search(r"\(constraint\s+clearance\s+\(min\s+([\d.]+)mm\)\)",text)
+        if not minimum or abs(float(minimum[1])-gap)>1e-9:
+            errors.append(ref + ": internal clearance differs from reviewed minimum")
+        if re.search(r"\(severity\b",text):
+            errors.append(ref + ": severity override is prohibited")
+        if ref == 'U12':
+            constraints = extract_forms(text,'constraint')
+            if len(constraints)!=1 or re.sub(r'\s+',' ',constraints[0].text).strip()!='(constraint clearance (min 0.45mm))':
+                errors.append('U12: require only the reviewed internal pad clearance constraint')
+        return errors
+
+
     def check_internal_pad_rules(text):
         """Reject scope expansion to tracks/vias/other instances or reduced minima."""
         errors = []
@@ -244,8 +345,16 @@ def vendor_api():
         if escape_rules:
             errors.extend(check_escape_rules(text, required=False))
         rules = [r for r in rules if r not in escape_rules]
+        from pcbtools.rules.adc_layout import classify_native_body_rules
+        body_rules, body_errors = classify_native_body_rules(text)
+        errors.extend(body_errors)
+        rules = [r for r in rules if r not in body_rules]
         expected = {ref + " internal lands": ref for ref in INTERNAL_GAPS}
         names = [head_string(rule.text, "rule") for rule in rules]
+        # Keep the historic sixteen required rules and their exact diagnostics.
+        # U12 is independently mandatory only for the selected new DDA footprint.
+        if 'U12 internal lands' in names:
+            expected['U12 internal lands']='U12'
         if set(names) != set(expected) or len(names) != len(expected):
             errors.append(
                 "internal pad rules: expected exactly the reviewed sixteen rules"
@@ -255,23 +364,7 @@ def vendor_api():
             if name not in expected:
                 continue
             ref = expected[name]
-            conditions = extract_forms(rule.text, "condition")
-            intended = f"A.Type == 'Pad' && B.Type == 'Pad' && A.Reference == '{ref}' && B.Reference == '{ref}'"
-            if (
-                len(conditions) != 1
-                or head_string(conditions[0].text, "condition") != intended
-            ):
-                errors.append(
-                    ref
-                    + ": internal clearance must apply only to two pads of this exact instance"
-                )
-            minimum = re.search(
-                r"\(constraint\s+clearance\s+\(min\s+([\d.]+)mm\)\)", rule.text
-            )
-            if not minimum or abs(float(minimum[1]) - INTERNAL_GAPS[ref]) > 1e-9:
-                errors.append(ref + ": internal clearance differs from reviewed minimum")
-            if re.search(r"\(severity\b", rule.text):
-                errors.append(ref + ": severity override is prohibited")
+            errors.extend(internal_pad_rule_errors(rule.text,ref,.45 if ref=='U12' else INTERNAL_GAPS[ref]))
         return errors
     return SimpleNamespace(**locals())
 

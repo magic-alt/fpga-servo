@@ -149,9 +149,9 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
@@ -671,13 +671,53 @@
       {
         "netclass": "GATE",
         "pattern": "Net-(Q6-G)"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C1_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C2_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C120_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C121_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C122_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C123_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C124_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C125_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C126_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/power_input/DC Link Bank/DC_LINK_C127_P"
       }
     ]
   },
   "pcbnew": {
     "last_paths": {
       "idf": "",
-      "netlist": "",
+      "netlist": "../../artifacts/dual-servo/ad7606c-encoder.net",
       "plot": "",
       "specctra_dsn": "",
       "vrml": ""

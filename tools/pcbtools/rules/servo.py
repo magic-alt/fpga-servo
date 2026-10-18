@@ -1,7 +1,7 @@
 """Grouped rule families; explicit contexts and no import-time checks."""
 from types import SimpleNamespace
 
-def check_design(project, schematic_only=False):
+def check_design(project, schematic_only=False, *, board_root=None):
     from pathlib import Path
     import csv, re
     from pcbtools.kicad import extract_forms, property_value, strip_form
@@ -11,11 +11,17 @@ def check_design(project, schematic_only=False):
     check_shunt_contract = kelvin_api().check_shunt_contract
     ROOT = project.root
     HW = ROOT / "hardware" / "ads8588s_servo"
+    # Only explicit historical regression selects another PCB directory. Every
+    # schematic, symbol, BOM and interface check continues to use actual sources.
+    pcb_root = Path(board_root) if board_root is not None else HW
+    pcb_path = pcb_root / "ax7010_servo_reva.kicad_pcb"
+    pro_path = pcb_root / "ax7010_servo_reva.kicad_pro"
     errors: list[str] = []
 
     schematic_paths = [
         HW / "ax7010_servo_reva.kicad_sch",
         HW / "power_input.kicad_sch",
+        HW / "dc_link.kicad_sch",
         HW / "aux_power.kicad_sch",
         HW / "gate_inverter.kicad_sch",
         HW / "current_adc.kicad_sch",
@@ -27,8 +33,8 @@ def check_design(project, schematic_only=False):
     required = [
         *schematic_paths,
         HW / "ax7010_servo_reva.kicad_sym",
-        HW / "ax7010_servo_reva.kicad_pro",
-        HW / "ax7010_servo_reva.kicad_pcb",
+        pro_path,
+        pcb_path,
         HW / "bom.csv",
         ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.xdc",
     ]
@@ -132,7 +138,6 @@ def check_design(project, schematic_only=False):
     if "(on_board no)" not in j6 or property_value(j6, "Footprint"):
         errors.append("J6 must remain an external source wiring terminal without a PCB footprint")
 
-    pcb_path = HW / "ax7010_servo_reva.kicad_pcb"
     if not schematic_only and pcb_path.exists():
         pcb = pcb_path.read_text(errors="ignore")
         if pcb.count("(") != pcb.count(")"):
@@ -219,18 +224,18 @@ def check_design(project, schematic_only=False):
             if part not in joined:
                 errors.append(f"BOM missing part: {part}")
 
-    if not schematic_only and (HW / "ax7010_servo_reva.kicad_pcb").exists():
-        errors.extend(check_vendor_lands((HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8")))
+    if not schematic_only and pcb_path.exists():
+        errors.extend(check_vendor_lands(pcb_path.read_text(encoding="utf-8")))
 
     errors.extend(check_shunt_contract(
-        (HW / "ax7010_servo_reva.kicad_pcb").read_text(encoding="utf-8"),
+        pcb_path.read_text(encoding="utf-8"),
         (HW / "ax7010_servo_reva.kicad_sym").read_text(encoding="utf-8"),
         (HW / "gate_inverter.kicad_sch").read_text(encoding="utf-8"),
         (HW / "fpga-servo.pretty/HoYLR2512_Kelvin.kicad_mod").read_text(encoding="utf-8"),
         include_board=not schematic_only,
     ))
 
-    rules_path = HW / "ax7010_servo_reva.kicad_dru"
+    rules_path = pcb_root / "ax7010_servo_reva.kicad_dru"
     if not schematic_only:
         errors.extend(check_internal_pad_rules(rules_path.read_text(encoding="utf-8") if rules_path.exists() else ""))
     return errors
@@ -260,8 +265,16 @@ def baseline_api(project):
     constraints = _family_check_pcb_constraints.check
 
     ROOT = project.root
-    HW = ROOT / "hardware/ads8588s_servo"
-    BASELINE = HW / "evidence/pcb_ci_baseline.json"
+    from pcbtools.project import ProjectError
+    name = project.parameters.get("archived_pcb_dir")
+    if not isinstance(name, str) or not name or Path(name).is_absolute():
+        raise ProjectError("Historical PCB regression requires archived_pcb_dir")
+    HW = (ROOT / name).resolve()
+    if not HW.is_relative_to(ROOT) or not HW.is_dir():
+        raise ProjectError("Historical PCB archive missing or outside project root")
+    if HW == project.schematic.parent.resolve():
+        raise ProjectError("Historical PCB archive cannot be the active source directory")
+    BASELINE = HW / "pcb_ci_baseline.json"
     CORE_KEYS = {"source_sha256", "design_errors", "vendor_lands", "internal_pad_rules"}
 
 
@@ -275,6 +288,8 @@ def baseline_api(project):
 
 
     def collect_snapshot(netlist: Path | None = None) -> dict:
+        if netlist is None:
+            netlist = HW / "board.net"
         sources = {name: (HW / ("ax7010_servo_reva" + suffix)).read_text(encoding="utf-8")
                    for name, suffix in [("board", ".kicad_pcb"), ("project", ".kicad_pro"),
                                         ("rules", ".kicad_dru")]}
@@ -291,7 +306,7 @@ def baseline_api(project):
                 raise ValueError("Archived board mechanical features changed")
             snapshot["parity"] = parity
             snapshot["constraints"] = constraints(sources["board"], json.loads(sources["project"]), text)
-        errors = check_design(project, schematic_only=False)
+        errors = check_design(project, schematic_only=False, board_root=HW)
         if not errors: raise ValueError("Archived PCB unexpectedly has no strict blockers")
         snapshot["design_errors"] = errors
         return canonical(snapshot)

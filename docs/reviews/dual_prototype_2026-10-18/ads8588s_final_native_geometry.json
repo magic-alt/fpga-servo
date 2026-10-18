@@ -1,0 +1,471 @@
+{
+  "board_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+  "project_config_sha256": "b6004941743d89f8c2845f94b764768a2d244f3915d97eac6225cb6b7c1e5d4a",
+  "status": "PASS_STATIC_NATIVE_GEOMETRY_ONLY",
+  "errors": {
+    "kelvin": [],
+    "escape": [],
+    "ADC_body": [],
+    "free_corners": [],
+    "In1": [],
+    "other_digital_body_intrusion": [],
+    "vendor_lands_and_internal_rules": []
+  },
+  "kelvin": [
+    {
+      "net": "/SW_U",
+      "expected_pads": [
+        "RSH1.1",
+        "U2.8"
+      ],
+      "actual_pads_outside_land": [
+        "U2.8"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "00d0bf3b-1ac6-4d4e-b8ad-bf915e123886",
+        "04400ef1-be0f-43b0-b07c-b3cd19290f40",
+        "26bb9498-930a-4fe7-9408-ad54839be24e",
+        "27bec728-3755-46b8-97ec-0fe9e65563c0",
+        "7df9706b-7898-4182-8b33-ac53336d176f",
+        "8a6908a6-3cc6-439d-a208-61f57783ac09",
+        "a403733a-8ea7-429b-bced-568a64971656",
+        "a47216ea-7e5b-46ad-a788-785e195b5227",
+        "fd44aea5-6d59-4eef-8009-cbf3b9b58c3f"
+      ]
+    },
+    {
+      "net": "/PH_U",
+      "expected_pads": [
+        "RSH1.2",
+        "U2.1"
+      ],
+      "actual_pads_outside_land": [
+        "U2.1"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "15801aa6-8ddc-4756-8cd0-e009ed3cb4d1",
+        "16982833-d545-4056-b060-2e916f1d302c",
+        "34ce4693-f74c-4618-92d0-a5ddf7a4a3f5",
+        "639751c3-7a97-4f32-8717-4239edaaa808",
+        "83f3cc91-a3b8-4555-bf32-7d4ee95ae7c1",
+        "947f3886-390e-4b22-adff-f371a1a645f0",
+        "c6e980e0-6d0e-4e1f-9427-5a5aae9b1ba3",
+        "cc03ddd9-6098-4406-b35a-24e5413fb3a9",
+        "e0a02464-5ab1-4dae-b3cd-d7a9191c6e88",
+        "e1db50b7-cdeb-4da2-9e22-83c42257b8c2",
+        "f69de236-0fdb-43ff-8cd4-8ba13f72c802"
+      ]
+    },
+    {
+      "net": "/SW_V",
+      "expected_pads": [
+        "RSH2.1",
+        "U3.8"
+      ],
+      "actual_pads_outside_land": [
+        "U3.8"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "21a3552e-50c2-4903-a06d-edd095ba3c7b",
+        "40409752-9908-412e-81b6-9d754df26f87",
+        "93d65ca2-c85d-4008-a939-fe32740f7ff3",
+        "a55c256f-26fa-42c6-aa25-3005f27d93d0",
+        "c3e59f60-4b20-475f-a124-ea2cf3e79d06",
+        "cd7cf5eb-0569-4f51-a5a2-6d4f24fc0b16",
+        "f1cb1b1e-c08b-4ae2-b55f-bb77fef3c200",
+        "fbbdbbd8-367e-4ff8-88f1-01b989883cce",
+        "fe90c359-4fa8-4e46-99eb-9e187c8bef93"
+      ]
+    },
+    {
+      "net": "/PH_V",
+      "expected_pads": [
+        "RSH2.2",
+        "U3.1"
+      ],
+      "actual_pads_outside_land": [
+        "U3.1"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "12ce4111-2a13-439c-a415-809dc4667701",
+        "aaaf5f60-e209-4eab-a887-18b136858db6",
+        "b0846ffe-c617-4e47-8460-f623ea9d814a",
+        "c9f4fb1f-0055-4ef6-8bd4-1f8fb8fc1c87",
+        "d173d4bd-1caf-4037-804f-aac25368bd02",
+        "d5ab8870-72f1-4e04-a8eb-69ff2a62cce4",
+        "e5466da7-5f56-44b3-b0aa-4b1cc3f1005e",
+        "ec865533-171c-42b3-a00c-4cf5d2f2466b",
+        "edf40928-bbbe-4844-970a-3deb2c209fc1",
+        "f7518902-1afa-4ff4-80f0-e7f379fd26a6",
+        "fa2ecb65-97e1-4df9-9388-6f790cff6994"
+      ]
+    },
+    {
+      "net": "/SW_W",
+      "expected_pads": [
+        "RSH3.1",
+        "U4.8"
+      ],
+      "actual_pads_outside_land": [
+        "U4.8"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "0b5451b0-e462-47ed-b131-4ae913a814c1",
+        "119a3232-2e50-4595-b2d3-de582dc88043",
+        "493a5ff4-7273-4160-95b9-f637dd5fdcc7",
+        "756c94c0-7c0e-45be-bafd-76212671c003",
+        "816dcc5c-1991-4685-bf95-aaae31533de9",
+        "9d0f27c0-b5db-4280-871c-d37ebf0ae56b",
+        "a55563b3-8e28-4a54-96de-4dc99004cc2d",
+        "ba700a55-2796-4b62-81a6-94c33199b49a",
+        "de7734c6-6544-4120-bd06-a4b7fa8881f1"
+      ]
+    },
+    {
+      "net": "/PH_W",
+      "expected_pads": [
+        "RSH3.2",
+        "U4.1"
+      ],
+      "actual_pads_outside_land": [
+        "U4.1"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "099e5156-afc0-4fc0-a1c0-70d4e27821e0",
+        "18e42294-89b9-497f-861c-08fa7aa8365d",
+        "21b4fb85-726a-497e-967f-888dd665b2c6",
+        "3d829438-eb0a-4507-943c-3de153140f09",
+        "4660f8c6-3b92-409e-9f0a-d3c17b703338",
+        "59f7b063-719a-49ac-93bc-45678bf49ed0",
+        "5c194c17-2145-40b5-80b6-cab86d458362",
+        "9b18e672-b7a9-4e1a-8aca-73cd997754a5",
+        "a0231535-a92c-4a99-b848-50a76b3a0035",
+        "d9835d5f-bc85-40e8-a006-be59753fbc01",
+        "e27de2cb-9550-4ceb-808b-4399fc471675"
+      ]
+    },
+    {
+      "net": "/VBUS_PROT",
+      "expected_pads": [
+        "RSH4.1",
+        "U5.8"
+      ],
+      "actual_pads_outside_land": [
+        "U5.8"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "5df9c1ac-1602-4c88-b641-7d3022f92a2e"
+      ]
+    },
+    {
+      "net": "/VBUS_BRIDGE",
+      "expected_pads": [
+        "RSH4.2",
+        "U5.1"
+      ],
+      "actual_pads_outside_land": [
+        "U5.1"
+      ],
+      "inner_pickup": true,
+      "passed": true,
+      "copper_uuids": [
+        "91d02d5a-ed50-4210-b9ad-46a2026f6c8c"
+      ]
+    }
+  ],
+  "escape": [
+    {
+      "reference": "U1",
+      "tracks": 69,
+      "pad_connected": 69,
+      "clearance": 0.25,
+      "bounds_mm": [
+        61.0,
+        69.7,
+        44.0,
+        52.0
+      ],
+      "detached_uuids": []
+    },
+    {
+      "reference": "U18",
+      "tracks": 17,
+      "pad_connected": 17,
+      "clearance": 0.2,
+      "bounds_mm": [
+        107.3,
+        112.7,
+        17.0,
+        21.0
+      ],
+      "detached_uuids": []
+    }
+  ],
+  "ADC_body": {
+    "status": "PASS_STATIC_GEOMETRY_ONLY",
+    "violations": [],
+    "checked_objects": 147,
+    "reference": "U6",
+    "mpn": "ADS8588SIPM",
+    "package": "TI_PM0064A",
+    "body_size_mm": [
+      10.2,
+      10.2
+    ],
+    "body_corners_mm": [
+      [
+        40.9,
+        68.9
+      ],
+      [
+        51.1,
+        68.9
+      ],
+      [
+        51.1,
+        79.1
+      ],
+      [
+        40.9,
+        79.1
+      ]
+    ],
+    "body_pose": {
+      "xy_mm": [
+        46.0,
+        74.0
+      ],
+      "rotation_deg": 0.0
+    },
+    "OEM_source": "https://www.ti.com/lit/ds/symlink/ads8588s.pdf",
+    "OEM_drawing": "Rev A, package page 59 / PM0064A, 4215162/A 03/2017",
+    "body_policy": "Maximum molded body; no inset. Separate mechanical mold-flash/assembly envelope review remains required.",
+    "digital_nets": [
+      "/ADC_BUSY",
+      "/ADC_CONVST",
+      "/ADC_CS_N",
+      "/ADC_DOUTA",
+      "/ADC_DOUTB",
+      "/ADC_FRSTDATA",
+      "/ADC_RESET",
+      "/ADC_SCLK"
+    ],
+    "minimum_track_width_mm": 0.2,
+    "forbidden_routing_layers": [
+      "In1.Cu"
+    ]
+  },
+  "corner_classifications": [
+    {
+      "layer": "F.Cu",
+      "x_mm": 60.635,
+      "y_mm": 14.78,
+      "net": "/VBUS_PROT",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "In2.Cu",
+      "x_mm": 63.0,
+      "y_mm": 23.3,
+      "net": "/VBUS_PROT",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "In2.Cu",
+      "x_mm": 69.0,
+      "y_mm": 7.0,
+      "net": "/VBUS_PROT",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 64.5,
+      "y_mm": 12.0,
+      "net": "/GND",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 34.8,
+      "y_mm": 15.75,
+      "net": "/GND",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 43.1,
+      "y_mm": 35.9,
+      "net": "/GND",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 45.25,
+      "y_mm": 81.725,
+      "net": "/VIO_3V3",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 123.0,
+      "y_mm": 40.0,
+      "net": "/PH_U",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 38.275,
+      "y_mm": 70.25,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 112.275,
+      "y_mm": 31.0,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 48.975,
+      "y_mm": 75.75,
+      "net": "/VA_5V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 45.6,
+      "y_mm": 47.5,
+      "net": "/OCP hardware latch/POR_N",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 47.6,
+      "y_mm": 34.1,
+      "net": "/OCP hardware latch/OCP_OK",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 82.8,
+      "y_mm": 55.0,
+      "net": "/Gate Driver {slash} Inverter/GH_W",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 82.8,
+      "y_mm": 43.0,
+      "net": "/Gate Driver {slash} Inverter/GH_V",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "B.Cu",
+      "x_mm": 30.1521,
+      "y_mm": 29.7971,
+      "net": "/PWM_UH",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 40.325,
+      "y_mm": 74.25,
+      "net": "/ADC_CONVST",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "In2.Cu",
+      "x_mm": 15.29,
+      "y_mm": 58.8979,
+      "net": "/ADC_RESET",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "In2.Cu",
+      "x_mm": 16.0526,
+      "y_mm": 61.3337,
+      "net": "/ADC_SCLK",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 35.0655,
+      "y_mm": 86.4177,
+      "net": "/ADC_DOUTB",
+      "category": "sub_micron_stub"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 48.75,
+      "y_mm": 61.775,
+      "net": "/Current Sense {slash} OCP {slash} ADC/IV_ADC",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "In2.Cu",
+      "x_mm": 24.8,
+      "y_mm": 80.12,
+      "net": "/Differential ABZ Encoder/ENC_A_P",
+      "category": "pad_or_via_anchor"
+    },
+    {
+      "layer": "F.Cu",
+      "x_mm": 39.175,
+      "y_mm": 36.0,
+      "net": "/FAULT_CLEAR",
+      "category": "pad_or_via_anchor"
+    }
+  ],
+  "In1": {
+    "non_GND_tracks": [],
+    "non_GND_zones": []
+  },
+  "reserved_ground_layers": {
+    "status": "PASS",
+    "violations": [],
+    "reserved_layers": [
+      {
+        "layer": "In1.Cu",
+        "net": "/GND"
+      }
+    ],
+    "checked_tracks": 1923,
+    "checked_copper_zones": 32,
+    "through_vias_not_plane_tracks": 468,
+    "rule_areas_not_copper": 3
+  },
+  "supplemental_control_net_basename_prefixes": [
+    "PWM_",
+    "GH_",
+    "GL_",
+    "HIN_",
+    "LIN_",
+    "BST_",
+    "SH_",
+    "SAFE_",
+    "FAULT",
+    "OCP_",
+    "GATE_EN",
+    "PWR_READY",
+    "POR_",
+    "ENC_"
+  ],
+  "board_unchanged": true,
+  "limits": "No human approval, manufacturer acceptance, dynamic/thermal/physical qualification inferred."
+}

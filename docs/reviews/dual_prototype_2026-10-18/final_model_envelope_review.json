@@ -1,0 +1,490 @@
+{
+  "status": "OBSERVED_STATIC_ENGINEERING_ENVELOPES_WITH_OPEN_MECHANICAL_LIMITS",
+  "reviewer_agent": "prototype_tooling",
+  "not_manufacturer_acceptance_or_human_approval": true,
+  "projects": {
+    "ad7606c": {
+      "final_board_sha256": "dc0fb0a39529daa627db700bc2f53dd435f776633b9bd93aa8b1f0053b5f2134",
+      "complete_native_FP_AST_and_selected_model_bytes_transforms_identical_to_prior_envelope_candidate": true,
+      "model_instance_count": 171,
+      "selected_local_model_files": 29,
+      "native_final_3D_render_actually_viewed": {
+        "path": "artifacts\\dual-servo\\final-visual\\model-render-ad7606c\\native-final-3d.png",
+        "sha256": "21713a4a77c77c8584e47f935d8b9556d9ecde7eff73ec629e86a7d92efde9df"
+      },
+      "prior_XY_height_drawing_equivalent_by_complete_FP_and_model_AST_proof": {
+        "path": "artifacts\\dual-servo\\assembly-envelope\\ad-envelopes\\assembly-envelope-drawing.png",
+        "sha256": "d1c4f0985933b83b3fb6734a062ddf2a32095b5d437bb97512a2ae4525737763",
+        "review_json": "artifacts\\dual-servo\\assembly-envelope\\ad-envelopes\\connector_max_envelope_review.json",
+        "review_json_sha256": "a77c953cfecc4a1c9996d92b2e22f12a8f1c75ade10cc1b16c33e0fef9844ac6"
+      },
+      "visible_orange_refs": [
+        "Q8",
+        "C2",
+        "J4",
+        "Q4",
+        "C121",
+        "C122",
+        "C124",
+        "C127",
+        "C123",
+        "C125",
+        "C120",
+        "Q7",
+        "Q5",
+        "Q3",
+        "Q6",
+        "C1",
+        "Q2",
+        "J3",
+        "F2",
+        "C126",
+        "Q1",
+        "J7"
+      ],
+      "missing_model_refs": [
+        "C132",
+        "C30",
+        "C31",
+        "F1",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "L1",
+        "L2",
+        "NTC1",
+        "NTC2",
+        "R120",
+        "R121",
+        "R122",
+        "R123",
+        "R124",
+        "R125",
+        "R126",
+        "R127",
+        "R128",
+        "R129",
+        "RSH1",
+        "RSH2",
+        "RSH3",
+        "RSH4",
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "U12",
+        "U13",
+        "U25"
+      ],
+      "connector_review": {
+        "J3": {
+          "max_engineering_envelope_bounds_mm": [
+            95.47,
+            2.849999999999998,
+            115.01,
+            15.850000000000001
+          ],
+          "height_mm": 22.0,
+          "minimum_envelope_to_board_edge_mm": 0.8499999999999979,
+          "nearest_body_envelopes_or_nominal_FFab_AABBs": [
+            {
+              "ref": "C18",
+              "distance_mm": 1.4749999999999994
+            },
+            {
+              "ref": "U18",
+              "distance_mm": 1.6499999999999995
+            },
+            {
+              "ref": "C19",
+              "distance_mm": 2.974999999999998
+            },
+            {
+              "ref": "F1",
+              "distance_mm": 3.9399999999999977
+            },
+            {
+              "ref": "Q7",
+              "distance_mm": 6.375000000000001
+            }
+          ],
+          "same_side_body_AABB_intersections": [],
+          "board_cover_exact": true
+        },
+        "J4": {
+          "max_engineering_envelope_bounds_mm": [
+            115.4,
+            33.75,
+            129.0,
+            63.25
+          ],
+          "height_mm": 21.95,
+          "minimum_envelope_to_board_edge_mm": 3.0,
+          "nearest_body_envelopes_or_nominal_FFab_AABBs": [
+            {
+              "ref": "R1",
+              "distance_mm": 2.274999999999999
+            },
+            {
+              "ref": "R2",
+              "distance_mm": 2.274999999999999
+            },
+            {
+              "ref": "C122",
+              "distance_mm": 2.2936685185304384
+            },
+            {
+              "ref": "R3",
+              "distance_mm": 2.487500000000001
+            },
+            {
+              "ref": "U2",
+              "distance_mm": 2.9000000000000057
+            }
+          ],
+          "same_side_body_AABB_intersections": [],
+          "board_cover_exact": true
+        },
+        "J7": {
+          "max_engineering_envelope_bounds_mm": [
+            50.19,
+            82.35,
+            69.73,
+            95.35
+          ],
+          "height_mm": 22.0,
+          "minimum_envelope_to_board_edge_mm": 1.6500000000000057,
+          "nearest_body_envelopes_or_nominal_FFab_AABBs": [
+            {
+              "ref": "C123",
+              "distance_mm": 1.21366851853044
+            },
+            {
+              "ref": "R54",
+              "distance_mm": 1.3874999999999889
+            },
+            {
+              "ref": "R109",
+              "distance_mm": 1.5775000000000006
+            },
+            {
+              "ref": "C65",
+              "distance_mm": 2.6499999999999915
+            },
+            {
+              "ref": "R125",
+              "distance_mm": 3.117999999999995
+            }
+          ],
+          "same_side_body_AABB_intersections": [],
+          "board_cover_exact": true
+        }
+      }
+    },
+    "ads8588s": {
+      "final_board_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+      "complete_native_FP_AST_and_selected_model_bytes_transforms_identical_to_prior_envelope_candidate": true,
+      "model_instance_count": 149,
+      "selected_local_model_files": 28,
+      "native_final_3D_render_actually_viewed": {
+        "path": "artifacts\\dual-servo\\final-visual\\model-render-ads8588s\\native-final-3d.png",
+        "sha256": "6c609ba82a5556229ee58a4c0dcd560f4116cfbc49e9db3ff84452f83cd20e4b"
+      },
+      "prior_XY_height_drawing_equivalent_by_complete_FP_and_model_AST_proof": {
+        "path": "artifacts\\dual-servo\\assembly-envelope\\ads-envelopes\\assembly-envelope-drawing.png",
+        "sha256": "b15f26e912704fdbbfbd14f5fd41d2644801763f7aee5e97098337daf3361f40",
+        "review_json": "artifacts\\dual-servo\\assembly-envelope\\ads-envelopes\\connector_max_envelope_review.json",
+        "review_json_sha256": "c197d2a013fa70394e4e1591b619ed18e195000d4a9c72f9061686f87cf0927d"
+      },
+      "visible_orange_refs": [
+        "Q8",
+        "C124",
+        "J7",
+        "C2",
+        "J4",
+        "Q4",
+        "C126",
+        "C122",
+        "Q7",
+        "C121",
+        "Q5",
+        "Q3",
+        "C125",
+        "C120",
+        "Q6",
+        "C1",
+        "Q2",
+        "J3",
+        "C123",
+        "F2",
+        "C127",
+        "Q1"
+      ],
+      "missing_model_refs": [
+        "C132",
+        "C30",
+        "C31",
+        "F1",
+        "H1",
+        "H2",
+        "H3",
+        "H4",
+        "L1",
+        "L2",
+        "NTC1",
+        "NTC2",
+        "R120",
+        "R121",
+        "R122",
+        "R123",
+        "R124",
+        "R125",
+        "R126",
+        "R127",
+        "R128",
+        "R129",
+        "RSH1",
+        "RSH2",
+        "RSH3",
+        "RSH4",
+        "TP1",
+        "TP2",
+        "TP3",
+        "TP4",
+        "TP5",
+        "U12",
+        "U13",
+        "U25"
+      ],
+      "connector_review": {
+        "J3": {
+          "max_engineering_envelope_bounds_mm": [
+            95.47,
+            2.849999999999998,
+            115.01,
+            15.850000000000001
+          ],
+          "height_mm": 22.0,
+          "minimum_envelope_to_board_edge_mm": 0.8499999999999979,
+          "nearest_body_envelopes_or_nominal_FFab_AABBs": [
+            {
+              "ref": "C18",
+              "distance_mm": 1.4749999999999994
+            },
+            {
+              "ref": "U18",
+              "distance_mm": 1.6499999999999995
+            },
+            {
+              "ref": "C19",
+              "distance_mm": 2.974999999999998
+            },
+            {
+              "ref": "F1",
+              "distance_mm": 3.9399999999999977
+            },
+            {
+              "ref": "Q7",
+              "distance_mm": 6.375000000000001
+            }
+          ],
+          "same_side_body_AABB_intersections": [],
+          "board_cover_exact": true
+        },
+        "J4": {
+          "max_engineering_envelope_bounds_mm": [
+            115.4,
+            33.75,
+            129.0,
+            63.25
+          ],
+          "height_mm": 21.95,
+          "minimum_envelope_to_board_edge_mm": 3.0,
+          "nearest_body_envelopes_or_nominal_FFab_AABBs": [
+            {
+              "ref": "R1",
+              "distance_mm": 2.274999999999999
+            },
+            {
+              "ref": "R2",
+              "distance_mm": 2.274999999999999
+            },
+            {
+              "ref": "C122",
+              "distance_mm": 2.2936685185304384
+            },
+            {
+              "ref": "R3",
+              "distance_mm": 2.487500000000001
+            },
+            {
+              "ref": "U2",
+              "distance_mm": 2.9000000000000057
+            }
+          ],
+          "same_side_body_AABB_intersections": [],
+          "board_cover_exact": true
+        },
+        "J7": {
+          "max_engineering_envelope_bounds_mm": [
+            50.19,
+            82.35,
+            69.73,
+            95.35
+          ],
+          "height_mm": 22.0,
+          "minimum_envelope_to_board_edge_mm": 1.6500000000000057,
+          "nearest_body_envelopes_or_nominal_FFab_AABBs": [
+            {
+              "ref": "C123",
+              "distance_mm": 1.21366851853044
+            },
+            {
+              "ref": "R54",
+              "distance_mm": 1.3874999999999889
+            },
+            {
+              "ref": "R125",
+              "distance_mm": 3.117999999999995
+            },
+            {
+              "ref": "U6",
+              "distance_mm": 3.299999999999997
+            },
+            {
+              "ref": "C85",
+              "distance_mm": 3.5999999999999943
+            }
+          ],
+          "same_side_body_AABB_intersections": [],
+          "board_cover_exact": true
+        }
+      }
+    }
+  },
+  "envelope_manifest": {
+    "path": "artifacts\\dual-servo\\assembly-envelope\\envelopes-v1\\envelope_manifest.json",
+    "sha256": "80c4e2535b96ab927f050ca992cbf5c663fa87c1512483b400ea945f66d942f6",
+    "files": [
+      {
+        "file": "CLEARANCE_Q_PG_TDSON8_NOT_OEM.step",
+        "sha256": "a9b66d07904e27f9b00c68631ad389cc6f9653c6f7f0bdcbbbd41a5a12f809a2",
+        "refs": [
+          "Q1",
+          "Q2",
+          "Q3",
+          "Q4",
+          "Q5",
+          "Q6",
+          "Q7",
+          "Q8"
+        ],
+        "bounds_mm": [
+          -3.21,
+          3.21,
+          -2.775,
+          2.775,
+          1.2
+        ],
+        "basis": "Infineon BSC040N10NS5 Rev2.4 p10 E1max6.42,Dmax5.35+2*.1 mold flash,Amax1.20; local pad1(-X,-Y) orientation preserved; no lead geometry implied"
+      },
+      {
+        "file": "CLEARANCE_F2_JDT1812_NOT_OEM.step",
+        "sha256": "819d1592465f99e06bcc60fd64763cbf80d54598d850bb4def4805f128dc5cec",
+        "refs": [
+          "F2"
+        ],
+        "bounds_mm": [
+          -2.365,
+          2.365,
+          -1.705,
+          1.705,
+          1.0
+        ],
+        "basis": "Exact selected JDT ASMD1812-050 primary_body_mm in f2_selected_evidence_2026-10-10.json; body max4.73x3.41x1.0; no substitute-brand identity"
+      },
+      {
+        "file": "CLEARANCE_J3_PHOENIX_NOT_OEM.step",
+        "sha256": "6dbd53b21030a64e3ef37d1c7e27b3a155397cdc1254a14cb356722cc2d4022b",
+        "refs": [
+          "J3"
+        ],
+        "bounds_mm": [
+          -5.01,
+          14.53,
+          -8.15,
+          4.85,
+          22.0
+        ],
+        "basis": "Existing qualified Fab bbox19.04x12.5, plus.25per XY edge engineering reserve; installed21.5+.5Z engineering reserve. Current official product geometry12.05 nominaldepth; no exact pin-to-body offset/mating qualification claimed"
+      },
+      {
+        "file": "CLEARANCE_J4_KEFA_NOT_OEM.step",
+        "sha256": "073be1d25e29c69625729a7b83cac714524e72c81a3424cc88cdaef1f9427c6f",
+        "refs": [
+          "J4"
+        ],
+        "bounds_mm": [
+          -5.25,
+          24.25,
+          -7.6,
+          6.0,
+          21.95
+        ],
+        "basis": "Native nominalbody28.5x12.6 plus general\u00b1.5 dimensional bound peredge conservatively; Z21.45+.5 engineering/general tolerance reserve. Wire/screw access unbounded/OPEN"
+      },
+      {
+        "file": "CLEARANCE_J7_PHOENIX_NOT_OEM.step",
+        "sha256": "12927ea8b144f3a05d24dfea44618546876477e0190b5d0202eaa51988bdbf66",
+        "refs": [
+          "J7"
+        ],
+        "bounds_mm": [
+          -5.01,
+          14.53,
+          -8.15,
+          4.85,
+          22.0
+        ],
+        "basis": "Existing qualified Fab bbox19.04x12.5, plus.25per XY edge engineering reserve; installed21.5+.5Z engineering reserve. Current official product geometry12.05 nominaldepth; no exact pin-to-body offset/mating qualification claimed"
+      },
+      {
+        "file": "CLEARANCE_NCC_D10p5_H21p5_NOT_OEM.step",
+        "sha256": "5c939fbaf74a48596b8db7fe35b77a204db0c1c5f5d331cd7a326e37bf892902",
+        "refs": [
+          "C1",
+          "C2",
+          "C120",
+          "C121",
+          "C122",
+          "C123",
+          "C124",
+          "C125",
+          "C126",
+          "C127"
+        ],
+        "basis": "NCC exact selected maxdiameter10.5,height21.5; centerlocal(2.5,0),64-sided circumscribed prism conservatively encloses cylinder. Bottom0 assumes body seated at board; real seating/standoff allowance still OPEN.",
+        "circumscribed_max_diameter_mm": 10.512662962939123,
+        "height_mm": 21.5
+      }
+    ]
+  },
+  "scope": "Final actual native board render and geometry-equivalent selected body envelopes. Not an independent solid-kernel inspection of every final STEP solid.",
+  "observations": [
+    "Six distinct orange STEP files cover22instances: Q1..8,F2,J3,J4,J7,tenbulk caps. All marked clearance-only NOT_OEM.",
+    "Q localX is row-to-drain6.42mm; localY pin-row extent5.55mm, independently based on native physical pad1..4 geometry and OEM drawing. No axis inferred merely from a filename.",
+    "No same-side body-envelope or nominalFFab-AABB intersection was found for J3/J4/J7 in the preserved geometry review. Connector envelope-to-edge gaps .85/3/1.65mm remain exactly applicable.",
+    "Orange capacitor height21.5mm explicitly corrects the previous10mm generic visual placeholder. Circumscribed64-sided D10.5 envelope has10.5127mm conservative span.",
+    "Original generic model geometries and transforms are unchanged bytes, not promoted to exact manufacturer models. Both boards retain34refs with no model, including intentionally model-less mechanical/test features and components needing separate review."
+  ],
+  "OPEN": [
+    "Not all components have exact OEM maximum-dimensional 3D models.",
+    "No complete mating connector, ribbon/strain relief, wire bend or screw/tool swept volume.",
+    "No AX7010 module, enclosure, mounting/seating/lead-forming or wholeassembly maximum-height acceptance.",
+    "Bottom-side component handling/seating clearance requires mechanical review.",
+    "No tolerance-stack assembly validation or manufacturer acceptance.",
+    "No thermal/OCP/regeneration/EMC/physical bring-up qualification implied."
+  ]
+}

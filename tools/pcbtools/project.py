@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import json
 
-KNOWN_RULES = frozenset({"repository", "servo", "adc_serial", "adc_fast", "ad7606c", "protection", "power_layout", "archived_pcb", "aux_power"})
+KNOWN_RULES = frozenset({"repository", "servo", "adc_serial", "adc_fast", "ad7606c", "protection", "power_layout", "archived_pcb", "aux_power", "dc_link"})
 class ProjectError(ValueError):
     pass
 
@@ -107,6 +107,8 @@ def local_dependencies(project: Project) -> set[Path]:
             uri=head_string(form.text,"uri") or ""
             if uri.startswith("${KIPRJMOD}"):
                 target=(home/uri.replace("${KIPRJMOD}/","",1)).resolve()
+            elif "$" not in uri and Path(uri).is_absolute() and Path(uri).resolve().is_relative_to(project.root):
+                target=Path(uri).resolve()
             elif "$" not in uri and not Path(uri).is_absolute():target=(home/uri).resolve()
             else:continue
             if not target.is_relative_to(project.root):raise ProjectError("Project-local library outside root")

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "source_commit": "b0172a2f65902c7281cf4a8454f192dc791a9ef9",
+  "purpose": "Immutable unsynchronized legacy PCB regression only; not current CAD or fabrication approval. Original expected blockers unchanged.",
+  "source_sha256": {
+    "ax7010_servo_reva.kicad_pcb": "d13af37991cc22f871cc9628bb0e218fe9dcf33abd05d61852db3a6e053b1346",
+    "ax7010_servo_reva.kicad_pro": "6f0df511b8badec38806a88a09ac2f12782fee905358862e991195e018c75139",
+    "ax7010_servo_reva.kicad_dru": "936e2412a61d4dab1cde2f4bc5a82c183fb847c0b57e7cdff62ab1c8388f04cb",
+    "pcb_ci_baseline.json": "9086bfe6b6a0011f47f8f77ab418aa460ea14938daf07cad0fc0c0ce1bb87070",
+    "board.net": "6d1e6685c5f7a63e892eedbd88a341a18e2c434e03f2274f6562db931e23f46c"
+  }
+}

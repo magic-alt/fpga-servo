@@ -1356,7 +1356,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:TI_SO-PowerPAD-8"
+		(property "Footprint" "fpga-servo:TI_DDA0008B_LM5164"
 			(at 86.36 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -2737,7 +2737,7 @@
 				)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "22uF"
 			(at 67.31 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2747,7 +2747,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "fpga-servo:Murata_GRM32_1210"
 			(at 64.77 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -2758,7 +2758,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf"
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM32ER71E226KE15L"
 			(at 64.77 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2768,7 +2768,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "10uF_25V_X7R"
+		(property "Description" "22uF_25V_X7R_10pct"
 			(at 64.77 134.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2793,19 +2793,19 @@
 			)
 		)
 
-	(property "Manufacturer" "Chinocera(华瓷)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Murata" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "MPN" "HGC0805R7106K250NSLJ" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "GRM32ER71E226KE15L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "LCSC" "C33546010" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C21397" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Sourcing_Status" "Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Alternative_MPN" "FCC0805B106K250FT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Alternative_MPN" "UNQUALIFIED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Alternative_LCSC" "C54619707" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Alternative_LCSC" "UNVERIFIED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Alternative_Status" "UNQUALIFIED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:L")
@@ -2957,7 +2957,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "fpga-servo:Murata_GRM32_1210"
 			(at 165.1 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -2968,7 +2968,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20240628/CF49925013D2B6594E99B01DE9E3F720.pdf"
+		(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM32ER71E226KE15L"
 			(at 165.1 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2978,7 +2978,7 @@
 				)
 			 (hide yes))
 		)
-		(property "Description" "22uF_10V_X7R"
+		(property "Description" "22uF_25V_X7R_10pct"
 			(at 165.1 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3003,19 +3003,19 @@
 			)
 		)
 
-	(property "Manufacturer" "HRE(芯声)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Manufacturer" "Murata" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "MPN" "CGA0805X7R226M100MT" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "MPN" "GRM32ER71E226KE15L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "LCSC" "C23692981" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "LCSC" "C21397" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Sourcing_Status" "Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Alternative_MPN" "GRM21BZ71A226ME15L" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Alternative_MPN" "UNQUALIFIED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Alternative_LCSC" "C907991" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Alternative_LCSC" "UNVERIFIED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+	(property "Alternative_Status" "UNQUALIFIED" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 (symbol
 		(lib_id "ax7010_servo_reva:R")
@@ -3368,14 +3368,16 @@
 (wire (pts (xy 71.12 129.54) (xy 71.12 124.46)) (stroke (width 0.1524) (type default)) (uuid "17b930bc-cb8b-4630-a181-a83eb347588d"))
 (label "VDRV_12V" (at 64.77 120.65 0) (effects (font (size 1 1)) (justify right bottom)) (uuid "0fb4fb3d-083b-40c2-aea8-b8be1b49c7fa"))
 (wire (pts (xy 119.38 128.27) (xy 139.7 128.27)) (stroke (width 0.1524) (type default)) (uuid "87211758-78e2-472d-9118-dd694c355396"))
-(wire (pts (xy 157.48 128.27) (xy 201.93 128.27)) (stroke (width 0.1524) (type default)) (uuid "8add0a60-6048-4789-a817-54d579b93b0e"))
+(wire (pts (xy 157.48 128.27) (xy 180.34 128.27)) (stroke (width .1524) (type default)) (uuid "a6bd3956-eb1f-4c70-98cf-204fb77df1bf"))
+(wire (pts (xy 180.34 128.27) (xy 201.93 128.27)) (stroke (width .1524) (type default)) (uuid "b7082d55-d51f-4628-b1f8-960203ac2968"))
 (wire (pts (xy 165.1 134.62) (xy 165.1 128.27)) (stroke (width 0.1524) (type default)) (uuid "959174c9-0443-4cdf-9e6c-0f1cf2e33448"))
 (wire (pts (xy 119.38 133.35) (xy 133.35 133.35)) (stroke (width 0.1524) (type default)) (uuid "535d6485-8b12-4d0c-9ae8-8f43b661e0fe"))
 (wire (pts (xy 133.35 133.35) (xy 133.35 151.13)) (stroke (width 0.1524) (type default)) (uuid "de25d313-2c62-45ec-a068-1abb55b7e850"))
 (wire (pts (xy 133.35 151.13) (xy 201.93 151.13)) (stroke (width 0.1524) (type default)) (uuid "c21d688a-c866-4470-9832-352e24766777"))
 (wire (pts (xy 201.93 151.13) (xy 201.93 128.27)) (stroke (width 0.1524) (type default)) (uuid "6cce9659-96a0-49c3-bf8c-67406f92450e"))
 (wire (pts (xy 64.77 140.97) (xy 64.77 157.48)) (stroke (width 0.1524) (type default)) (uuid "0b3ee077-d12e-4c71-940c-24935b0a3199"))
-(wire (pts (xy 64.77 157.48) (xy 165.1 157.48)) (stroke (width 0.1524) (type default)) (uuid "b2fdca57-0fd0-4810-b318-646073e98763"))
+(wire (pts (xy 64.77 157.48) (xy 82.55 157.48)) (stroke (width .1524) (type default)) (uuid "cf482366-30ff-489a-b18c-5ea4c521c303"))
+(wire (pts (xy 82.55 157.48) (xy 165.1 157.48)) (stroke (width .1524) (type default)) (uuid "94e8a57f-3468-4f51-ac67-4a135468a0e2"))
 (wire (pts (xy 165.1 157.48) (xy 165.1 147.32)) (stroke (width 0.1524) (type default)) (uuid "7536e0d6-20d0-4832-ac84-14bb7bdf018e"))
 
 (wire (pts (xy 104.14 148.59) (xy 104.14 157.48)) (stroke (width 0.1524) (type default)) (uuid "e6050bf7-6b24-4147-8706-b66a87656403"))
@@ -3537,7 +3539,7 @@
 (property "Value" "/VA_5V" (at 165.1 125.73 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "cbe3408b-838a-49a4-804a-6c0d210a8515")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/c1adb95f-d617-59aa-ad68-92336ff2ba27" (reference "#PWR29003") (unit 1)))))
 
-(no_connect (at 96.52 148.59) (uuid "e75ecb33-5265-4e12-803a-87b23c8baef6"))
+
 (wire (pts (xy 81.28 137.16) (xy 71.12 137.16)) (stroke (width 0.1524) (type default)) (uuid "1e2f6293-80fe-4096-b53d-17c15194ab42"))
 (wire (pts (xy 71.12 137.16) (xy 71.12 129.54)) (stroke (width 0.1524) (type default)) (uuid "93282920-4e0a-45ea-b72a-3a74ca9069f4"))
 (wire (pts (xy 119.38 137.16) (xy 124.46 137.16)) (stroke (width 0.1524) (type default)) (uuid "61a9e298-d940-45eb-96d4-d3f9bd86e399"))
@@ -3565,4 +3567,50 @@
 (wire (pts (xy 226.06 156.21) (xy 226.06 158.75)) (stroke (width 0.1524) (type default)) (uuid "d1da63b6-c3bd-4c20-b509-5d7bbb79094a"))
 (label "GND" (at 226.06 158.75 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "287dc79b-f9c6-48ea-9bda-c2f8ba8f98bc"))
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 226.06 158.75 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "70aeea03-cdf3-43a2-a0c8-4f0dfc62803e")(property "Reference" "#PWR29102" (at 229.87 156.21 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Value" "/GND" (at 229.87 158.75 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (hide yes))(property "Footprint" "" (at 226.06 158.75 0) (hide yes) (effects (font (size 1.016 1.016)) (justify left bottom)))(pin "1" (uuid "75320eea-6985-42e0-955a-d293b6567256"))(instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/c1adb95f-d617-59aa-ad68-92336ff2ba27" (reference "#PWR29102") (unit 1)))))
+
+(symbol (lib_id "ax7010_servo_reva:C") (at 180.34 140.97 0) (unit 1) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "3c8c4193-84c1-4eac-a8dc-ae8cb98b46d1")
+(property "Reference" "C132" (at 184.15 138.43 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "22uF" (at 184.15 143.51 0) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "fpga-servo:Murata_GRM32_1210" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Manufacturer" "Murata" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "MPN" "GRM32ER71E226KE15L" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "LCSC" "C21397" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Datasheet" "https://www.murata.com/en-us/products/productdetail?partno=GRM32ER71E226KE15L" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Description" "22uF_25V_X7R_10pct" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Sourcing_Status" "Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_MPN" "UNQUALIFIED" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_LCSC" "UNVERIFIED" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_Status" "UNQUALIFIED" (at 180.34 140.97 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))(pin "1" (uuid "1226eef4-de4c-4ae4-9ba7-7746d994e271")) (pin "2" (uuid "176ba0be-ea50-4677-8494-314d16f628a7"))(instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/c1adb95f-d617-59aa-ad68-92336ff2ba27" (reference "C132") (unit 1)))))
+
+(wire (pts (xy 180.34 128.27) (xy 180.34 134.62)) (stroke (width .1524) (type default)) (uuid "89d21f71-3746-439c-9573-fbbd54458c94"))
+
+(junction (at 180.34 128.27) (diameter .635) (color 0 0 0 0) (uuid "61a43bb4-d98d-484f-b8ed-04ef525b80a5"))
+
+(wire (pts (xy 180.34 147.32) (xy 180.34 157.48)) (stroke (width .1524) (type default)) (uuid "83494722-cb60-4718-a51d-35a04016c1d8"))
+
+(wire (pts (xy 165.1 157.48) (xy 180.34 157.48)) (stroke (width .1524) (type default)) (uuid "959ac4b5-f375-4835-b4d1-a930a9351b3e"))
+
+(symbol (lib_id "ax7010_servo_reva:C") (at 88.9 151.13 270) (unit 1) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "450ce08d-f973-49bf-83a1-bda9204a7525")
+(property "Reference" "C133" (at 88.9 147.32 90) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Value" "10nF" (at 88.9 154.94 90) (effects (font (size 1.016 1.016)) (justify left)))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Manufacturer" "FH(风华)" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "MPN" "0603B103K101NT" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "LCSC" "C43253" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Description" "10nF_100V_X7R_10pct_SOFT_START" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Sourcing_Status" "Primary reused from C5; full-reserve Tss budget minimum1.0901ms; startup bench OPEN" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_MPN" "UNQUALIFIED" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_LCSC" "UNVERIFIED" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_Status" "UNQUALIFIED" (at 88.9 151.13 90) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))(pin "1" (uuid "740afa03-1369-4638-ad25-c3ee6130ebc0")) (pin "2" (uuid "57af2172-cf2b-401f-9a09-50375570a684"))(instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/c1adb95f-d617-59aa-ad68-92336ff2ba27" (reference "C133") (unit 1)))))
+
+(wire (pts (xy 96.52 148.59) (xy 96.52 151.13)) (stroke (width .1524) (type default)) (uuid "ece0ee28-59e6-4a47-beb7-1fc4e95b0b50"))
+
+(wire (pts (xy 96.52 151.13) (xy 95.25 151.13)) (stroke (width .1524) (type default)) (uuid "719d7ce7-73b9-423f-b7ad-f527f2e5492b"))
+
+(wire (pts (xy 82.55 151.13) (xy 82.55 157.48)) (stroke (width .1524) (type default)) (uuid "60bc2eba-d75a-4786-8464-e4feb242bb61"))
+
+(junction (at 82.55 157.48) (diameter .635) (color 0 0 0 0) (uuid "e38a9900-0ff3-4ad7-a49d-7a8cab72552d"))
+
+(junction (at 165.1 157.48) (diameter .635) (color 0 0 0 0) (uuid "a0d7b5f5-23b5-485b-b8f8-7351568c5e19"))
 )

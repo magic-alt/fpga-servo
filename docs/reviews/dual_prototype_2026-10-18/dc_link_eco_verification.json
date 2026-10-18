@@ -1,0 +1,120 @@
+{
+  "ads8588s": {
+    "components": 178,
+    "nets": 145,
+    "physical_pin_memberships": 630,
+    "only_changed_existing_pins": {
+      "C1.1": [
+        "/VBUS_PROT",
+        "/DC Input & Protection/DC Link Bank/DC_LINK_C1_P"
+      ],
+      "C2.1": [
+        "/VBUS_PROT",
+        "/DC Input & Protection/DC Link Bank/DC_LINK_C2_P"
+      ]
+    },
+    "added_refs": [
+      "C120",
+      "C121",
+      "C122",
+      "C123",
+      "C124",
+      "C125",
+      "C126",
+      "C127",
+      "J7",
+      "R120",
+      "R121",
+      "R122",
+      "R123",
+      "R124",
+      "R125",
+      "R126",
+      "R127",
+      "R128",
+      "R129"
+    ],
+    "other_pins_and_primary_identities_exact": true,
+    "native_erc": "0 errors / 0 warnings / 0 exclusions",
+    "static_budget": {
+      "continuous_capacitor_bank_arms_bound": 7.071067811865475,
+      "peak_phase_arms": 14.14213562373095,
+      "peak_capacitor_bank_arms_bound": 10.0,
+      "allocated_ripple_arms": 11.304000000000002,
+      "demand_with_waveform_allowance_arms": 11.0,
+      "worst_allocated_branch_arms": 1.375,
+      "worst_branch_resistor_w": 0.6301453125,
+      "nominal_bank_uf": 1000,
+      "nominal_energy_48v_j": 1.1520000000000001
+    },
+    "physical_qualification": "NOT_RUN",
+    "files": {
+      "dc_link.kicad_sch": "5f06de67b64b9eadaaaacf1078f7bce9517b689aad6ee44cdf02ea39d318e237",
+      "power_input.kicad_sch": "8e87ef809f3a0243e6e2c64a9fe3590cd614d3e43b96d4a993c12f7fbf699f27",
+      "ax7010_servo_reva.kicad_sym": "8a1b525f726acfa84650eff1aae838087420c7a92b6990ad518754056d9c24b6",
+      "bom.csv": "d6f5742c7368eea3c3b6486807921df0d4ed5464c8effcdd3e65d649538cd683",
+      "dc_link_profile.json": "b415af14c97afddcf57bcdbcf76f9c42881431c35f18df3ed4088cd07042d635",
+      "fpga-servo.pretty/Vishay_WSL2512_0R33.kicad_mod": "612e61886267a6d565b4ccea8c26a827adfa57d638b8a6534ead9447e66dd8b9"
+    },
+    "sheet_raise_connectivity": "Exact native fields and every physical pin/net unchanged"
+  },
+  "ad7606c": {
+    "components": 200,
+    "nets": 172,
+    "physical_pin_memberships": 710,
+    "only_changed_existing_pins": {
+      "C1.1": [
+        "/VBUS_PROT",
+        "/power_input/DC Link Bank/DC_LINK_C1_P"
+      ],
+      "C2.1": [
+        "/VBUS_PROT",
+        "/power_input/DC Link Bank/DC_LINK_C2_P"
+      ]
+    },
+    "added_refs": [
+      "C120",
+      "C121",
+      "C122",
+      "C123",
+      "C124",
+      "C125",
+      "C126",
+      "C127",
+      "J7",
+      "R120",
+      "R121",
+      "R122",
+      "R123",
+      "R124",
+      "R125",
+      "R126",
+      "R127",
+      "R128",
+      "R129"
+    ],
+    "other_pins_and_primary_identities_exact": true,
+    "native_erc": "0 errors / 0 warnings / 0 exclusions",
+    "static_budget": {
+      "continuous_capacitor_bank_arms_bound": 7.071067811865475,
+      "peak_phase_arms": 14.14213562373095,
+      "peak_capacitor_bank_arms_bound": 10.0,
+      "allocated_ripple_arms": 11.304000000000002,
+      "demand_with_waveform_allowance_arms": 11.0,
+      "worst_allocated_branch_arms": 1.375,
+      "worst_branch_resistor_w": 0.6301453125,
+      "nominal_bank_uf": 1000,
+      "nominal_energy_48v_j": 1.1520000000000001
+    },
+    "physical_qualification": "NOT_RUN",
+    "files": {
+      "dc_link.kicad_sch": "60e24ab16a803acbdf52c4f8943cd80b01394dff14f54170b1157023157aefd4",
+      "power_input.kicad_sch": "0f0f2afc1fc68a8b2a13951110c752816a17704856270badf6ac2ed5af632c5d",
+      "ax7010_servo_reva.kicad_sym": "e81ef465403a92777ef4ad6eb0efd96078fef4d2014eadab3742d088f8f1da43",
+      "bom.csv": "37d36a63d6c84785f63320b7cf369a8bf3fc7d65d55b6a2bf64867d5cb299b08",
+      "dc_link_profile.json": "b415af14c97afddcf57bcdbcf76f9c42881431c35f18df3ed4088cd07042d635",
+      "fpga-servo.pretty/Vishay_WSL2512_0R33.kicad_mod": "612e61886267a6d565b4ccea8c26a827adfa57d638b8a6534ead9447e66dd8b9"
+    },
+    "sheet_raise_connectivity": "Exact native fields and every physical pin/net unchanged"
+  }
+}

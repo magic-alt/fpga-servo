@@ -6,7 +6,7 @@ import json
 import math
 from collections import Counter
 from .schematic import discover_sheets
-from .kicad import extract_forms, property_value, strip_form, run_native, portable_netlist
+from .kicad import extract_forms, head_string, property_value, strip_form, run_native, portable_netlist
 from .report import Finding, RunReport
 from .project import ProjectError
 
@@ -30,6 +30,11 @@ def export_bom(project, output, cli="kicad-cli"):
             note="External; NOT fitted to PCB"
             if fields.get("Holder_MPN"):note+="; required holder "+fields["Holder_MPN"]
         if mpn=="TBD":note+="; exact MPN / rating qualification open"
+        geometry = project.parameters.get("copper_only_refs", {})
+        if ref in geometry:
+            if comp.findtext("footprint", "") != geometry[ref] or mpn.upper() not in {"TBD", "UNVERIFIED", "UNQUALIFIED"}:
+                raise ProjectError(f"{ref}: copper-only identity disagrees with native BOM")
+            note = "PCB copper geometry; do not procure or place"
         rows.append({"Ref":ref,"Qty":1,"Value / Part":comp.findtext("value", ""),
                      "Manufacturer":fields.get("Manufacturer") or "TBD","MPN":mpn,
                      "Package":comp.findtext("footprint", ""),"LCSC":fields.get("LCSC") or "UNVERIFIED",
@@ -43,6 +48,144 @@ def export_bom(project, output, cli="kicad-cli"):
         writer=csv.DictWriter(handle,fieldnames=list(rows[0]))
         writer.writeheader();writer.writerows(rows)
     return len(rows)
+
+
+def export_assembly(project, output, cli=None):
+    """Validate fresh native positions/XML, then exclude declared bare copper.
+
+    This consumes native outputs from one frozen design; it never invents a
+    centroid or substitutes a library origin. The complete inventory BOM stays
+    separate from the list of purchased, fitted assembly components.
+    """
+    import hashlib
+    import shutil
+    import xml.etree.ElementTree as ET
+
+    output = Path(output)
+    geometry = project.parameters.get("copper_only_refs", {})
+    if not isinstance(geometry, dict) or any(
+            not isinstance(r, str) or not r or not isinstance(f, str) or not f
+            for r, f in geometry.items()):
+        raise ProjectError("copper_only_refs must map explicit references to full footprint IDs")
+    native_xml = output / "bom-source.xml"
+    components = {}
+    for comp in ET.parse(native_xml).getroot().findall("components/comp"):
+        ref = comp.get("ref")
+        if not ref or ref in components:
+            raise ProjectError("Duplicate or missing native BOM reference")
+        components[ref] = {
+            "value": comp.findtext("value", ""),
+            "footprint": comp.findtext("footprint", ""),
+            "mpn": comp.findtext("fields/field[@name='MPN']", ""),
+            "flags": {p.get("name") for p in comp.findall("property")},
+        }
+    board = project.require_board()
+    footprints = {}
+    for form in extract_forms(board.read_text(encoding="utf-8"), "footprint"):
+        ref = property_value(form.text, "Reference")
+        if not ref or ref in footprints:
+            raise ProjectError("Duplicate or missing PCB reference")
+        flat = form.text
+        for head in ("property", "pad", "fp_text", "fp_text_box", "fp_line", "fp_rect",
+                     "fp_circle", "fp_arc", "fp_poly", "fp_curve", "zone", "group", "model"):
+            flat = strip_form(flat, head)
+        positions = extract_forms(flat, "at")
+        layers = extract_forms(flat, "layer")
+        if len(positions) != 1 or len(layers) != 1:
+            raise ProjectError(f"{ref}: ambiguous native footprint pose")
+        match = re.fullmatch(r"\(at\s+([-+\d.eE]+)\s+([-+\d.eE]+)(?:\s+([-+\d.eE]+))?\)", positions[0].text)
+        layer = head_string(layers[0].text, "layer")
+        if not match or layer not in {"F.Cu", "B.Cu"}:
+            raise ProjectError(f"{ref}: unsupported native footprint pose")
+        pose = [float(match[1]), -float(match[2]), float(match[3] or 0)]
+        if not all(math.isfinite(v) for v in pose):
+            raise ProjectError(f"{ref}: nonfinite native footprint pose")
+        footprints[ref] = {"footprint": head_string(form.text, "footprint"),
+                           "value": property_value(form.text, "Value"), "pose": pose,
+                           "side": "top" if layer == "F.Cu" else "bottom"}
+    unpurchased = {"", "TBD", "UNVERIFIED", "UNQUALIFIED"}
+    for ref, fpid in geometry.items():
+        if (ref not in components or ref not in footprints
+                or components[ref]["footprint"] != fpid
+                or footprints[ref]["footprint"] != fpid
+                or components[ref]["mpn"].upper() not in unpurchased):
+            raise ProjectError(f"{ref}: explicit copper-only identity is not proven")
+    expected = {ref for ref, part in components.items() if ref not in geometry
+                and not part["flags"] & {"dnp", "exclude_from_board", "exclude_from_bom"}}
+    if not expected:
+        raise ProjectError("Assembly contains no fitted purchased components")
+    for ref in expected:
+        part = components[ref]
+        if part["mpn"].upper() in unpurchased:
+            raise ProjectError(f"{ref}: fitted assembly MPN unqualified")
+        if ref not in footprints or any(footprints[ref][k] != part[k] for k in ["value", "footprint"]):
+            raise ProjectError(f"{ref}: native assembly identity mismatch")
+
+    def read_csv(path, required):
+        with path.open(newline="", encoding="utf-8-sig") as stream:
+            reader = csv.DictReader(stream)
+            if not reader.fieldnames or not set(required) <= set(reader.fieldnames):
+                raise ProjectError("Incomplete native assembly CSV header")
+            columns = reader.fieldnames
+            rows = list(reader)
+        refs = [r.get("Ref") for r in rows]
+        if any(not ref for ref in refs) or len(set(refs)) != len(refs):
+            raise ProjectError("Duplicate or missing assembly CSV reference")
+        return columns, rows
+
+    pos_path = output / "assembly.csv"
+    pos_columns, positions = read_csv(pos_path, ["Ref", "Val", "Package", "PosX", "PosY", "Rot", "Side"])
+    if {r["Ref"] for r in positions} - set(geometry) != expected:
+        raise ProjectError("Native placement references disagree with fitted purchased BOM")
+    for row in positions:
+        ref = row["Ref"]
+        if ref not in footprints:
+            raise ProjectError(f"{ref}: placement has no actual footprint")
+        fp = footprints[ref]
+        if (row["Val"] != fp["value"] or row["Package"] != fp["footprint"].split(":")[-1]
+                or row["Side"] != fp["side"]):
+            raise ProjectError(f"{ref}: placement value/package/side mismatch")
+        actual = [float(row[k]) for k in ["PosX", "PosY", "Rot"]]
+        if (not all(math.isfinite(v) for v in actual)
+                or any(abs(actual[i] - fp["pose"][i]) > 0.000002 for i in [0, 1])
+                or abs((actual[2] - fp["pose"][2] + 180) % 360 - 180) > 0.0001):
+            raise ProjectError(f"{ref}: placement centroid/orientation disagrees with native board")
+    bom_path = output / "bom.csv"
+    bom_columns, inventory = read_csv(bom_path, ["Ref", "Qty", "Value / Part", "MPN", "Package", "Status / note"])
+    indexed = {r["Ref"]: r for r in inventory}
+    if indexed.keys() != components.keys():
+        raise ProjectError("Inventory BOM references disagree with complete fresh native XML")
+    for ref in components:
+        row, part = indexed[ref], components[ref]
+        if (row["Value / Part"] != part["value"] or row["MPN"] != (part["mpn"] or "TBD")
+                or row["Package"] != part["footprint"] or row["Qty"] != "1"):
+            raise ProjectError(f"{ref}: inventory/native purchased identity mismatch")
+    assembly_bom = [row for row in inventory if row["Ref"] in expected]
+    assembly_positions = [row for row in positions if row["Ref"] in expected]
+    for row in inventory:
+        if row["Ref"] in geometry:
+            row["Status / note"] = "PCB copper geometry; do not procure or place"
+    raw = output / "assembly-native.csv"
+    if raw.exists():
+        raise ProjectError("Native placement evidence already exists; use a fresh export directory")
+    shutil.copyfile(pos_path, raw)
+    for path, columns, rows in [(pos_path, pos_columns, assembly_positions),
+                                 (output / "assembly-bom.csv", bom_columns, assembly_bom),
+                                 (bom_path, bom_columns, inventory)]:
+        with path.open("w", newline="", encoding="utf-8") as stream:
+            writer = csv.DictWriter(stream, fieldnames=columns)
+            writer.writeheader()
+            writer.writerows(rows)
+    proof = {"status": "PASS_AUTOMATED_ONLY", "purchased_fitted_refs": sorted(expected),
+             "purchased_fitted_count": len(expected), "copper_only_refs": geometry,
+             "native_pose_convention": "Native absolute PCB origin; X=x, Y=-y; native rotation modulo360; original side",
+             "actual_board_sha256": hashlib.sha256(board.read_bytes()).hexdigest(),
+             "native_xml_sha256": hashlib.sha256(native_xml.read_bytes()).hexdigest(),
+             "unfiltered_native_positions_sha256": hashlib.sha256(raw.read_bytes()).hexdigest(),
+             "BOM_CPL_reference_sets_exact": True, "all_native_poses_and_identities_checked": True,
+             "physical_orientation_and_assembly_process_review": "OPEN"}
+    (output / "assembly-consistency.json").write_text(json.dumps(proof, indent=2)+"\n", encoding="utf-8")
+    return proof
 
 
 def export_procurement(root, source, bom_path, output):
@@ -147,6 +290,11 @@ def export_procurement(root, source, bom_path, output):
 def export_project(project, kind, output, tools):
     import tempfile
     from .verification import new_run_directory, save_run
+    if kind == "fabrication":
+        from .manufacturing import export_fabrication
+        report = export_fabrication(project, output, tools)
+        save_run(report, Path(report.evidence["output"]))
+        return report
     output = project.safe_output(output or project.output)
     out = new_run_directory(output)
     report = RunReport(project.id, [], {"output":str(out), "pcb_release":"BLOCKED"})

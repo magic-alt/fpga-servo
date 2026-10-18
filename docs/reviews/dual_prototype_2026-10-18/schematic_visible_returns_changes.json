@@ -1,0 +1,304 @@
+[
+  {
+    "path": "hardware/ad7606c_servo/current_adc.kicad_sch",
+    "before_sha256": "1a11c1c03a5c8466202c0261ead929e76f1f4e109637cc0513095426019dc2a6",
+    "after_sha256": "951fb354e72bb21da0683bce9c84fc702c86f416198237e021786d45d454cda1",
+    "operations": [
+      {
+        "remove_wire": [
+          [
+            46.99,
+            66.04
+          ],
+          [
+            71.12,
+            66.04
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            71.12,
+            66.04
+          ],
+          [
+            91.44,
+            66.04
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            46.99,
+            66.04
+          ],
+          [
+            46.99,
+            68.58
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            91.44,
+            66.04
+          ],
+          [
+            91.44,
+            67.31
+          ]
+        ]
+      },
+      {
+        "extend_C43_44_45_GND_return": [
+          [
+            71.12,
+            43.18
+          ],
+          [
+            71.12,
+            71.12
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            46.99,
+            107.95
+          ],
+          [
+            71.12,
+            107.95
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            71.12,
+            107.95
+          ],
+          [
+            91.44,
+            107.95
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            46.99,
+            107.95
+          ],
+          [
+            46.99,
+            110.49
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            91.44,
+            107.95
+          ],
+          [
+            91.44,
+            109.22
+          ]
+        ]
+      },
+      {
+        "extend_C43_44_45_GND_return": [
+          [
+            71.12,
+            85.09
+          ],
+          [
+            71.12,
+            113.03
+          ]
+        ]
+      }
+    ],
+    "initial_after_sha256": "430287b0733ae591e3678fae3d17fddd2b5dc79210481df2f955f5fe8953b14e",
+    "native_XML_physical_graph_exact": true,
+    "scope": "Visible-wire drawing only; local U3 GND graphic/label and adjacent pin wire, no purchased-component identity or electrical change"
+  },
+  {
+    "path": "hardware/ad7606c_servo/ocp_latch.kicad_sch",
+    "before_sha256": "a9325bd4b09c1bc6f9f8ce582960486c1c67ac1de0c1d3bac720fe0d93eceb8f",
+    "after_sha256": "0f4fb138aee8b4dc47f057847c82aa4b91461ba09f06037ee1d801815442dadd",
+    "operations": [
+      {
+        "move_C94_ground_symbol_and_label_from": [
+          160.02,
+          129.54
+        ],
+        "to": [
+          157.48,
+          127
+        ],
+        "wire": "2.54mm horizontal at capacitor pin2; no overlap with POR_N at y130.81"
+      }
+    ],
+    "initial_after_sha256": "0f4fb138aee8b4dc47f057847c82aa4b91461ba09f06037ee1d801815442dadd",
+    "native_XML_physical_graph_exact": true,
+    "scope": "Visible-wire drawing only; local U3 GND graphic/label and adjacent pin wire, no purchased-component identity or electrical change"
+  },
+  {
+    "path": "hardware/ads8588s_servo/current_adc.kicad_sch",
+    "before_sha256": "a6fc9416db9746cdb5425a5fd619ac3e9c88db8fc76e8074a407d23c9fd3b185",
+    "after_sha256": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
+    "operations": [
+      {
+        "remove_wire": [
+          [
+            46.99,
+            66.04
+          ],
+          [
+            71.12,
+            66.04
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            71.12,
+            66.04
+          ],
+          [
+            91.44,
+            66.04
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            46.99,
+            66.04
+          ],
+          [
+            46.99,
+            68.58
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            91.44,
+            66.04
+          ],
+          [
+            91.44,
+            67.31
+          ]
+        ]
+      },
+      {
+        "extend_C43_44_45_GND_return": [
+          [
+            71.12,
+            43.18
+          ],
+          [
+            71.12,
+            71.12
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            46.99,
+            107.95
+          ],
+          [
+            71.12,
+            107.95
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            71.12,
+            107.95
+          ],
+          [
+            91.44,
+            107.95
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            46.99,
+            107.95
+          ],
+          [
+            46.99,
+            110.49
+          ]
+        ]
+      },
+      {
+        "remove_wire": [
+          [
+            91.44,
+            107.95
+          ],
+          [
+            91.44,
+            109.22
+          ]
+        ]
+      },
+      {
+        "extend_C43_44_45_GND_return": [
+          [
+            71.12,
+            85.09
+          ],
+          [
+            71.12,
+            113.03
+          ]
+        ]
+      }
+    ],
+    "initial_after_sha256": "5b33faceba4963bc84ff358434abf9646b89e606a16963af3866f25cfbbef12f",
+    "native_XML_physical_graph_exact": true,
+    "scope": "Visible-wire drawing only; local U3 GND graphic/label and adjacent pin wire, no purchased-component identity or electrical change"
+  },
+  {
+    "path": "hardware/ads8588s_servo/ocp_latch.kicad_sch",
+    "before_sha256": "84d461322faabbf72155b7f5def9c8d6ebe3b88234bf2a84765b1995ead4b6af",
+    "after_sha256": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+    "operations": [
+      {
+        "move_C94_ground_symbol_and_label_from": [
+          160.02,
+          129.54
+        ],
+        "to": [
+          157.48,
+          127
+        ],
+        "wire": "2.54mm horizontal at capacitor pin2; no overlap with POR_N at y130.81"
+      }
+    ],
+    "initial_after_sha256": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+    "native_XML_physical_graph_exact": true,
+    "scope": "Visible-wire drawing only; local U3 GND graphic/label and adjacent pin wire, no purchased-component identity or electrical change"
+  }
+]
