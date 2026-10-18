@@ -1,0 +1,38 @@
+{
+  "status": "REVIEW_ONLY_NOT_FOR_FABRICATION_OR_ORDER",
+  "input_commit": "9f9b70cfb622c29919243b8b49e4078a175a1bf9",
+  "projects": {
+    "ad7606c": {
+      "directory": "artifacts/dual-servo/final-review-v3/ad7606c",
+      "archive": "artifacts/dual-servo/final-review-v3/ad7606c-engineering-review-only.zip",
+      "archive_sha256": "29f6f7fc327cad24e474cc5c0ec4e0507aab447b04ac0eb2db5715d71f9b220b",
+      "archive_bytes": 14153815,
+      "sha256_manifest_sha256": "80ebc63905bcefab14f6a70dd2bf8cadef9bb3687788719dc5d7590fc7cce801",
+      "hashed_file_count": 345,
+      "zip_contents_individually_rehashed": true,
+      "native_outputs": 21,
+      "frozen_inputs": 208,
+      "controlled_finished_holes": 53,
+      "fitted_purchase_count": 191,
+      "canonical_board_sha256": "dc0fb0a39529daa627db700bc2f53dd435f776633b9bd93aa8b1f0053b5f2134"
+    },
+    "ads8588s": {
+      "directory": "artifacts/dual-servo/final-review-v3/ads8588s",
+      "archive": "artifacts/dual-servo/final-review-v3/ads8588s-engineering-review-only.zip",
+      "archive_sha256": "52da63f812b529308400c8f76db5b47f1284627e909552ff1ccb002468aee4bc",
+      "archive_bytes": 11341159,
+      "sha256_manifest_sha256": "a35be7f286e480ebac0f14b311c2fa5d70af76178eecd90fb71b4c716357b41b",
+      "hashed_file_count": 240,
+      "zip_contents_individually_rehashed": true,
+      "native_outputs": 21,
+      "frozen_inputs": 100,
+      "controlled_finished_holes": 53,
+      "fitted_purchase_count": 169,
+      "canonical_board_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226"
+    }
+  },
+  "human_reviews": "SEVEN_UNSIGNED_NOT_RUN_PER_PROJECT",
+  "vendor_material_process_acceptance": "OPEN",
+  "all_physical_qualification": "NOT_RUN",
+  "upload_order_push_performed": false
+}

@@ -32,3 +32,5 @@ ADS 的最终 [VA5 供电桥 ECO](ads8588s_in1_supply_bridge_eco.json)移除旧 
 最终冻结源的[自动验收总表](final_cad_validation.json)记录两工程各自的新鲜原理图、原型及完整发布验证；两板所有自动项通过，原型门禁仅缺七项真实人工签核，完整发布仍受 Gate A/B 资格阻断。主回归 315 项中 272 通过、43 明确跳过；另一次使用 KiCad Python 的原生回归 81 项全部通过，这两个运行的计数不作为不重复用例求和。
 
 [页码及全物理网表等价证明](page_metadata_native_verification.json)和[局部电源/地可见连线修复](schematic_visible_returns_verification.json)记录原理图最终消歧；[最终模型与工程包络](final_model_envelope_review.md)、[独立 CAM](final_cam_review.md)及[最终功率/孔位图](final_power_review.md)各有明确适用哈希。原生 ERC/DRC 均无忽略项或排除项。审阅包的工程师签核、板厂实际工艺接受及所有物理资格继续开放。
+
+两套最终本地 ZIP 及逐文件 SHA256 清单见[工程审阅包与剩余接受项](manufacturing_review_packet.md)。归档已逐条读取复算，仍标记仅供审阅，未制造放行。

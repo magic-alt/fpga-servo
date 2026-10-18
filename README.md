@@ -2,13 +2,13 @@
 
 FPGA-based single-axis PMSM/BLDC servo-drive daughterboard for the ALINX AX7010 / Zynq-7000 (2022 board, active PL connector J10).
 
-> **Four-layer engineering CAD — 2026-10-19; manufacturing hold.** Both ADC variants now have synchronized schematics and four-layer PCBs, independent BOMs and portable local libraries/models. Current candidates have zero native ERC/DRC violations, unconnected items and schematic-parity differences; eight Kelvin paths, bounded package escapes, free-corner checks and maximum ADC-body digital-copper exclusion pass. These are CAD results. Human engineering reviews and exact material/manufacturing-process acceptance remain open; neither board is approved for fabrication or full-power operation. See the [dual-board review](docs/reviews/dual_prototype_2026-10-18/README.md) and [release gates](docs/release_gates.md).
+> **Four-layer engineering CAD — 2026-10-19; manufacturing hold.** Both ADC variants now have synchronized schematics and four-layer PCBs, independent BOMs and portable local libraries/models. Current candidates have zero native ERC/DRC violations, unconnected items and schematic-parity differences; eight Kelvin paths, bounded package escapes, free-corner checks, whole-board reserved-ground-layer checks and maximum ADC-body digital-copper exclusion pass. These are CAD results. Human engineering reviews and exact material/manufacturing-process acceptance remain open; neither board is approved for fabrication or full-power operation. See the [dual-board review](docs/reviews/dual_prototype_2026-10-18/README.md) and [release gates](docs/release_gates.md).
 
 ## 两种 ADC 方案
 
 原方案使用 **ADS8588SIPM**；新方案使用 **AD7606C-16BSTZ**，采用四路 DOUT、电平转换和独立 XDC。AD7606C 的 1 MSPS、0–5 V 高速模式典型相位延迟及读取预算见[选型与迁移规格](docs/adc_high_performance_reselection_2026-10-12.md)和[FPGA 接口草案](hardware/ad7606c_servo/ad7606c_fast_candidate_profile_2026-10-12.json)。这些是器件及接口设计依据，实际闭环带宽仍须由 RTL、时序和整机测量验证。
 
-**当前双方案：** [ADS8588S 原方案](hardware/ads8588s_servo/README.md) 与 [AD7606C 新方案](hardware/ad7606c_servo/README.md) 分目录维护，各有原理图、BOM、XDC 和 PCB。两方案新增独立 DC-link 子页，并修正编码器接收器引脚、栅极电阻和辅助电源；本轮电气 ECO 后的 PCB 同步及整板布线验收尚未闭合。通过[硬件入口](hardware/README.md)选择工程。
+**当前双方案：** [ADS8588S 原方案](hardware/ads8588s_servo/README.md) 与 [AD7606C 新方案](hardware/ad7606c_servo/README.md) 分目录维护，各有原理图、BOM、XDC 和 PCB。两方案新增独立 DC-link 子页，并修正编码器接收器引脚、栅极电阻和辅助电源；本轮电气 ECO 后两板已完成同步、整板布线及原生 DRC/图板一致性验收；工程签核与材料/特殊工艺接受仍开放。[最终工程审阅包](docs/reviews/dual_prototype_2026-10-18/manufacturing_review_packet.md)记录实际导出、校验和剩余门禁。通过[硬件入口](hardware/README.md)选择工程。
 
 ## Rev.A-P prototype design basis
 
