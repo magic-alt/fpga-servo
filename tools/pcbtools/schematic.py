@@ -35,6 +35,37 @@ def discover_sheets(project):
     return found
 
 
+def missing_wire_junctions(text):
+    """Find wire-end T taps; an unjoined interior/interior crossing stays unjoined."""
+    segments = [tuple(parse_xy(f.text)) for f in extract_forms(text, "wire")]
+    endpoints = {node for pair in segments for node in pair}
+    existing = {parse_at(f.text) for f in extract_forms(text, "junction")}
+    missing = []
+    for node in sorted(endpoints - existing):
+        rays = set()
+        for a, b in segments:
+            if not on_segment(node, a, b):
+                continue
+            for x, y in (a, b):
+                dx, dy = round(x - node[0], 6), round(y - node[1], 6)
+                if dx or dy:
+                    rays.add((0 if not dx else 1 if dx > 0 else -1,
+                              0 if not dy else 1 if dy > 0 else -1))
+        if len(rays) >= 3:
+            missing.append(node)
+    return missing
+
+
+def implicit_wire_widths(text):
+    """Locate wires using a missing, zero or invalid explicit stroke width."""
+    bad = []
+    for wire in extract_forms(text, "wire"):
+        widths = re.findall(r"\(width\s+([-+\d.eE]+)\)", wire.text)
+        if len(widths) != 1 or not math.isfinite(float(widths[0])) or float(widths[0]) <= 0:
+            bad.append(wire.line)
+    return bad
+
+
 def check_schematic(project):
     issues = {key: [] for key in ("native", "grid", "layout", "connectivity", "power")}
     try:
@@ -60,6 +91,12 @@ def check_schematic(project):
             text = strip_form(raw, "lib_symbols")
             if extract_forms(text, "global_label") and project.parameters.get("forbid_global_labels", False):
                 issues["layout"].append(f"{path.name}: Global Labels are forbidden by project")
+            if project.parameters.get("require_explicit_wire_junctions", False):
+                for node in missing_wire_junctions(text):
+                    issues["connectivity"].append(f"{path.name}: wire T tap at {node} lacks explicit junction")
+            if project.parameters.get("require_explicit_wire_widths", False):
+                for line in implicit_wire_widths(text):
+                    issues["native"].append(f"{path.name}:{line}: wire needs a positive explicit width for GUI save stability")
             local_points = {}
             hnames = set()
             segments = [pair for f in extract_forms(text, "wire") for pair in zip(parse_xy(f.text), parse_xy(f.text)[1:])]

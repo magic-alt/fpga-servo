@@ -4,6 +4,8 @@
 
 ## 连接和供电
 
+12 V 辅助电源按用户确认的**总连续负载 1 A**设计；包括门驱及 5.1 V 下游折算输入。L1、精密反馈和纹波网络 ECO、误差预算、测试边界见 [1 A 电源审查](evidence/aux_power_review_2026-10-18.md)。
+
 ```mermaid
 flowchart LR
     INPUT[24–48 V 输入] --> POWER[原保护及辅助电源]

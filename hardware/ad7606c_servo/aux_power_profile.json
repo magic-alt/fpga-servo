@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "requirement": {
+    "vin_min_v": 24.0,
+    "vin_max_v": 48.0,
+    "vout_nominal_v": 12.0,
+    "vout_max_v": 12.6,
+    "continuous_total_a": 1.0,
+    "ambient_c": 40.0,
+    "maximum_rise_k": 50.0,
+    "vout_min_v": 11.4
+  },
+  "controller": {
+    "ref": "U12",
+    "value": "LM5164DDAR",
+    "peak_limit_min_a": 1.25,
+    "peak_limit_max_a": 1.75,
+    "propagation_delay_ns": 100.0,
+    "frequency_nominal_khz": 300.0,
+    "frequency_design_min_khz": 240.0,
+    "frequency_design_max_khz": 360.0,
+    "ron_ref": "R20",
+    "ron_resistance_ohm": 100000.0
+  },
+  "inductor": {
+    "ref": "L1",
+    "value": "150uH",
+    "Manufacturer": "Wurth Elektronik",
+    "MPN": "7447709151",
+    "LCSC": "",
+    "footprint": "fpga-servo:Wurth_WE_PD_1210_7447709151",
+    "nominal_uh": 150.0,
+    "tolerance_fraction": 0.2,
+    "bias_allowance_fraction": 0.1,
+    "temperature_allowance_fraction": 0.1,
+    "rated_rms_a": 2.1,
+    "saturation_10pct_typical_a": 2.7,
+    "rms_derating_factor": 0.7,
+    "saturation_derating_factor": 0.8,
+    "dcr_max_ohm_20c": 0.2
+  },
+  "minimum_peak_margin_a": 0.05,
+  "sources": [
+    {
+      "url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+      "revision": "SNVSAU4D",
+      "pages": "5-6, 12-13, 17-21"
+    },
+    {
+      "url": "https://www.we-online.com/components/products/datasheet/7447709151.pdf",
+      "revision": "003.001",
+      "pages": "1-2"
+    },
+    {
+      "url": "https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum/1568691/lm5164-lm5164ddar-schematics-review",
+      "note": "TI recommends increasing L for approximately 1 A loads"
+    },
+    {
+      "url": "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L",
+      "note": "RT B=0.1 percent; D=25ppm/C; 0603 dimensions and range"
+    },
+    {
+      "url": "https://yageogroup.com/component-documentation/download/specsheet/RT0603BRD0749K9L",
+      "note": "exact 49.9k primary"
+    },
+    {
+      "url": "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM1885C1H332JA01-01A.pdf",
+      "note": "3300pF, C0G, 50V, 0603; OEM document indexed, direct access returned403"
+    }
+  ],
+  "engineering_allowances_not_guaranteed_datasheet_limits": [
+    "240 kHz switching-frequency floor",
+    "10 percent DC-bias and 10 percent temperature inductance allowances",
+    "0.7 RMS-current and 0.8 typical-saturation-current factors",
+    "360 kHz frequency ceiling",
+    "feedback resistors 0.1 percent initial + 0.25 percent TCR + 0.5 percent drift budget",
+    "ripple RA 2.5 percent total budget; CA C0G 6.5 percent total budget; minimum coupling gain 0.95",
+    "output bounds use triangular injected-ripple valley approximation; verify loaded output, ripple and transient response"
+  ],
+  "qualification_status": "DESIGN_CALCULATION_ONLY_BENCH_OPEN",
+  "required_bench": [
+    "24 V and 48 V continuous total 1 A at 40 C ambient; verify frequency, L bias and thermal envelope",
+    "full-load startup, load steps and output ripple",
+    "short-circuit peak, inductor temperature and regulator junction temperature",
+    "PCB power-loop, exposed-pad copper and thermal-via review"
+  ],
+  "feedback": {
+    "upper_ohm": 442000.0,
+    "lower_ohm": 49900.0,
+    "resistance_total_fraction": 0.0085,
+    "vref_min_v": 1.181,
+    "vref_max_v": 1.218,
+    "ripple_resistance_ohm": 200000.0,
+    "ripple_resistance_total_fraction": 0.025,
+    "ripple_capacitance_nf": 3.3,
+    "ripple_capacitance_total_fraction": 0.065,
+    "coupling_gain_min": 0.95,
+    "required_ripple_v": 0.02,
+    "upper_ref": "R21",
+    "lower_ref": "R22",
+    "ripple_resistor_ref": "R23",
+    "ripple_capacitor_ref": "C25"
+  },
+  "support_components": [
+    {
+      "ref": "R21",
+      "value": "442k",
+      "Manufacturer": "YAGEO",
+      "MPN": "RT0603BRD07442KL",
+      "LCSC": "",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "description": "442k_0.1pct_25ppm_12V_FB"
+    },
+    {
+      "ref": "R22",
+      "value": "49.9k",
+      "Manufacturer": "YAGEO",
+      "MPN": "RT0603BRD0749K9L",
+      "LCSC": "C705780",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "description": "49.9k_0.1pct_25ppm_12V_FB"
+    },
+    {
+      "ref": "R23",
+      "value": "200k",
+      "Manufacturer": "YAGEO",
+      "MPN": "RC0603FR-07200KL",
+      "LCSC": "C105574",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "description": "200k_1pct_12V_RIPPLE_RA"
+    },
+    {
+      "ref": "C25",
+      "value": "3.3nF",
+      "Manufacturer": "Murata",
+      "MPN": "GRM1885C1H332JA01D",
+      "LCSC": "C77036",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "description": "3.3nF_C0G_50V_5pct_12V_RIPPLE_CA"
+    }
+  ]
+}

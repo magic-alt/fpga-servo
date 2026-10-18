@@ -1,0 +1,116 @@
+{
+  "schema": "schematic-visual-audit-v1",
+  "status": "PASS_SCHEMATIC_DRAWING_ONLY",
+  "source_type": "KiCad 10 native",
+  "adapter": "Native KiCad XML exact comparator; explicit original-default wire width; rigid phase-W translation",
+  "authoritative_sources": [
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch",
+    "hardware/ad7606c_servo/power_input.kicad_sch",
+    "hardware/ad7606c_servo/aux_power.kicad_sch",
+    "hardware/ad7606c_servo/gate_inverter.kicad_sch",
+    "hardware/ad7606c_servo/current_adc.kicad_sch",
+    "hardware/ad7606c_servo/adc_core.kicad_sch",
+    "hardware/ad7606c_servo/adc_power.kicad_sch",
+    "hardware/ad7606c_servo/ax7010_interface.kicad_sch",
+    "hardware/ad7606c_servo/ocp_latch.kicad_sch",
+    "hardware/ad7606c_servo/encoder.kicad_sch",
+    "hardware/ad7606c_servo/adc_levelshift.kicad_sch"
+  ],
+  "baseline_connectivity": "local pre-junction power-eco.xml",
+  "final_connectivity": "evidence/gui_stable_before_2026-10-18.json",
+  "connectivity_result": "PASS",
+  "connectivity_detail": "181 components /162 exact named nets /672 pin memberships; five separately authorized identity ECOs",
+  "erc_or_lint": {
+    "before": "native ERC0/0/0",
+    "after": "native ERC0/0/0; both configured source checks PASS"
+  },
+  "protected_artifacts_unchanged": false,
+  "protected_detail": "Original ADS8588S files unchanged; AD PCB only authorized L1 geometry/fields, support-part fields, C30 reference position; no pad nets/copper changed",
+  "sheets": [
+    {
+      "name": "root",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-01.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "power_input",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-02.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "aux_power",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-03.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "gate_inverter",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-04.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "current_adc",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-05.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "adc_core",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-06.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "adc_power",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-07.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "ax7010_interface",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-08.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "ocp_latch",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-09.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "encoder",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-10.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    },
+    {
+      "name": "adc_levelshift",
+      "full_page_render": "artifacts/pcb/ad7606c/one-amp-visual/page-final-11.png",
+      "status": "PASS",
+      "note": "Whole-page overview reviewed; changed power/input/gate areas viewed at readable scale"
+    }
+  ],
+  "dense_crops": [
+    {
+      "region": "12 V auxiliary loop",
+      "render": "hardware/ad7606c_servo/evidence/aux_12v_dense_2026-10-18.png",
+      "status": "PASS"
+    },
+    {
+      "region": "input capacitor bank",
+      "render": "hardware/ad7606c_servo/evidence/input_bank_dense_2026-10-18.png",
+      "status": "PASS"
+    }
+  ],
+  "remaining_limitations": [
+    "499 PCB unconnected items",
+    "physical full-load startup, thermal and transient qualification open",
+    "Component procurement and final manufacturing release remain open"
+  ],
+  "final_snapshot": "hardware/ad7606c_servo/evidence/aux_power_native_2026-10-18.json",
+  "gui_roundtrip": "PASS: final 11-page native GUI save, 181 components/162 nets/672 pin memberships exact"
+}

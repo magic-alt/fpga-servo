@@ -1,0 +1,31 @@
+{
+  "profile": "../aux_power_profile.json",
+  "status": "CALCULATION_ONLY_BENCH_OPEN",
+  "errors": [],
+  "result": {
+    "effective_l_min_uh": 97.2,
+    "peak_a": 1.199170524691358,
+    "rms_a": 1.0065897704470328,
+    "minimum_peak_margin_a": 0.050829475308642014,
+    "estimated_fault_peak_a": 1.7993827160493827,
+    "injected_ripple_min_v": 0.0219213779845865,
+    "injected_ripple_max_v": 0.0643518691647034,
+    "output_calculated_min_v": 11.465624439757056,
+    "output_calculated_max_v": 12.513745414876784,
+    "corners": [
+      {
+        "vin_v": 24.0,
+        "ripple_pp_a": 0.25655864197530864,
+        "peak_a": 1.1282793209876543,
+        "rms_a": 1.002738846724818
+      },
+      {
+        "vin_v": 48.0,
+        "ripple_pp_a": 0.3983410493827161,
+        "peak_a": 1.199170524691358,
+        "rms_a": 1.0065897704470328
+      }
+    ],
+    "status": "CALCULATION_ONLY_BENCH_OPEN"
+  }
+}

@@ -1613,10 +1613,11 @@
 			)
 		)
 	)
-	(footprint "fpga-servo:SOREDE_SDRH1209_68uH"
+	(footprint "fpga-servo:Wurth_WE_PD_1210_7447709151"
 		(layer "F.Cu")
 		(uuid "0726177f-1d64-4980-8a5d-c10f469a0b14")
 		(at 46.5 12)
+		(descr "Wurth 7447709151 Rev003.001 p1; land rotated 90 degrees; 5.4x2.9mm pads, 7.0mm inner gap; body12+/-0.5mm, H10max")
 		(property "Reference" "L1"
 			(at 0 -7.225 0)
 			(layer "F.SilkS")
@@ -1628,7 +1629,7 @@
 				)
 			)
 		)
-		(property "Value" "68uH"
+		(property "Value" "150uH"
 			(at 0 7.15 0)
 			(layer "F.Fab")
 			(uuid "f29217bd-ad62-49c6-9855-6311172e9815")
@@ -1638,7 +1639,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20220302/4A650F7FE54659FA437276B7237D1CB9.pdf"
+		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/7447709151.pdf"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1649,7 +1650,7 @@
 				)
 			)
 		)
-		(property "Description" "68uH_LM5164_L1_QUALIFICATION_OPEN"
+		(property "Description" "150uH_12V_1A_WE_PD_CALC_REVIEW_BENCH_OPEN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1660,7 +1661,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "SOREDE"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1673,7 +1674,7 @@
 				)
 			)
 		)
-		(property "MPN" "SDRH.1209.LF680MT00"
+		(property "MPN" "7447709151"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1686,7 +1687,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C2942326"
+		(property "LCSC" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1699,7 +1700,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Stock55; prototype only; Irms/guaranteed1A/thermal OPEN; critical power single-source exception"
+		(property "Sourcing_Status" "OEM data reviewed 2026-10-18; 12V total 1A design; procurement and bench OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1724,88 +1725,108 @@
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -6.4 -6.4)
-			(end 6.4 -6.4)
+			(start -6.38 -6.38)
+			(end 6.38 -6.38)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "91c0927e-2c85-4f10-a455-a81d33ca7949")
+		)
+		(fp_line
+			(start -6.38 6.38)
+			(end 6.38 6.38)
+			(stroke
+				(width 0.12)
+				(type default)
+			)
+			(layer "F.SilkS")
+			(uuid "43b20453-f418-4aef-9df9-bfca46eafcf1")
+		)
+		(fp_line
+			(start -6.65 -6.65)
+			(end 6.65 -6.65)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "8cb42a1c-649a-4b2d-9732-760cbacb0fd1")
+			(uuid "96e532b1-55b4-47ef-aeb6-911d6f7b4bea")
 		)
 		(fp_line
-			(start -6.4 6.4)
-			(end -6.4 -6.4)
+			(start -6.65 6.65)
+			(end -6.65 -6.65)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "9ce52f52-308a-4195-9816-ad53fc89d9a4")
+			(uuid "ff540461-e7d7-450b-b1a1-8471a677a0b2")
 		)
 		(fp_line
-			(start 6.4 -6.4)
-			(end 6.4 6.4)
+			(start 6.65 -6.65)
+			(end 6.65 6.65)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "5fd7782c-175e-4a11-87b0-ac009cb32186")
+			(uuid "917461b0-3775-422d-b895-b0bd48d7bb29")
 		)
 		(fp_line
-			(start 6.4 6.4)
-			(end -6.4 6.4)
+			(start 6.65 6.65)
+			(end -6.65 6.65)
 			(stroke
 				(width 0.05)
 				(type default)
 			)
 			(layer "F.CrtYd")
-			(uuid "d331d519-3a46-4079-92bf-8df6a92569f4")
+			(uuid "43378575-6484-4be2-a9b8-2b37ba9f7cca")
 		)
 		(fp_line
-			(start -6.15 -6.15)
-			(end 6.15 -6.15)
+			(start -6 -6)
+			(end 6 -6)
 			(stroke
-				(width 0.05)
+				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "7f78e35e-89cc-488f-a9ce-a18ab5ac9dbe")
+			(uuid "0d19e9a9-7b5f-4498-8847-2a7af1363aa1")
 		)
 		(fp_line
-			(start -6.15 6.15)
-			(end -6.15 -6.15)
+			(start -6 6)
+			(end -6 -6)
 			(stroke
-				(width 0.05)
+				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "85695ff1-1e42-42cb-9abc-93af619a3f1f")
+			(uuid "07d371c9-c858-48a6-85db-b17f720c5e62")
 		)
 		(fp_line
-			(start 6.15 -6.15)
-			(end 6.15 6.15)
+			(start 6 -6)
+			(end 6 6)
 			(stroke
-				(width 0.05)
+				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "b5fb1387-da24-4827-aeda-f0cbedd6848d")
+			(uuid "919aeb48-7866-41f2-aa8f-5b06eaa17a15")
 		)
 		(fp_line
-			(start 6.15 6.15)
-			(end -6.15 6.15)
+			(start 6 6)
+			(end -6 6)
 			(stroke
-				(width 0.05)
+				(width 0.1)
 				(type default)
 			)
 			(layer "F.Fab")
-			(uuid "63a4cdbc-a01b-42fe-86cc-2635e4041de6")
+			(uuid "a6cbeb2c-9224-4abe-abee-88b7b0286a92")
 		)
 		(pad "1" smd rect
-			(at -4.9 0)
-			(size 2.8 5.4)
+			(at -4.95 0)
+			(size 2.9 5.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/aux_power/SW_12V")
 			(pinfunction "1_1")
@@ -1814,14 +1835,45 @@
 			(uuid "3b5556bc-e300-41f4-8fb9-7ac2f271a8db")
 		)
 		(pad "2" smd rect
-			(at 4.9 0)
-			(size 2.8 5.4)
+			(at 4.95 0)
+			(size 2.9 5.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/VDRV_12V")
 			(pinfunction "2_2")
 			(pintype "passive")
 			(thermal_bridge_angle 45)
 			(uuid "542979b0-6f91-4d55-9f97-77ad3c73a874")
+		)
+		(zone
+			(layers "F.Cu" "B.Cu" "In1.Cu" "In2.Cu")
+			(uuid "b15910d7-1a28-4f94-9c0c-08fbd902f071")
+			(name "L1 manufacturer: no vias or sensitive traces under core")
+			(hatch edge 0.5)
+			(connect_pads
+				(clearance 0)
+			)
+			(min_thickness 0.25)
+			(keepout
+				(tracks not_allowed)
+				(vias not_allowed)
+				(pads allowed)
+				(copperpour not_allowed)
+				(footprints allowed)
+			)
+			(placement
+				(enabled no)
+				(sheetname "")
+			)
+			(fill
+				(thermal_gap 0.5)
+				(thermal_bridge_width 0.5)
+				(island_removal_mode 0)
+			)
+			(polygon
+				(pts
+					(xy 43 5.75) (xy 50 5.75) (xy 50 18.25) (xy 43 18.25)
+				)
+			)
 		)
 		(embedded_fonts no)
 	)
@@ -7110,7 +7162,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7121,7 +7173,7 @@
 				)
 			)
 		)
-		(property "Description" "49.9k_RFB2_1%"
+		(property "Description" "49.9k_0.1pct_25ppm_12V_FB"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -7144,7 +7196,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "UNI-ROYAL(厚声)"
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7157,7 +7209,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603WAF4992T5E"
+		(property "MPN" "RT0603BRD0749K9L"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7170,7 +7222,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23184"
+		(property "LCSC" "C705780"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7183,7 +7235,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "12V total 1A ECO 2026-10-18; exact primary required; procurement and bench OPEN"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7196,7 +7248,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "RT0603BRD0749K9L"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7209,7 +7261,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C705780"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -7222,7 +7274,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_PROTOTYPE"
+		(property "Alternative_Status" "No alternate qualified for 12V total 1A ECO"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35882,7 +35934,7 @@
 				)
 			)
 		)
-		(property "Value" "453k"
+		(property "Value" "442k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "2dfeb68a-269d-48ad-b9b4-ae41f1e69981")
@@ -35893,7 +35945,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf"
+		(property "Datasheet" "https://yageogroup.com/content/datasheet/asset/file/PYU-RT_1-TO-0-01_ROHS_L"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35904,7 +35956,7 @@
 				)
 			)
 		)
-		(property "Description" "453k_RFB1_1%"
+		(property "Description" "442k_0.1pct_25ppm_12V_FB"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35927,7 +35979,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO(国巨)"
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35940,7 +35992,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07453KL"
+		(property "MPN" "RT0603BRD07442KL"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35953,7 +36005,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C273765"
+		(property "LCSC" ""
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35966,7 +36018,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "12V total 1A ECO 2026-10-18; exact primary required; procurement and bench OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35979,7 +36031,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "RTT034533FTP"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35992,7 +36044,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C103651"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36005,7 +36057,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "BLOCKED_NOT_SOURCED_OR_NO_STOCK"
+		(property "Alternative_Status" "No alternate qualified for 12V total 1A ECO"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37003,7 +37055,7 @@
 				)
 			)
 		)
-		(property "Value" "453k"
+		(property "Value" "200k"
 			(at 0 1.43 90)
 			(layer "F.Fab")
 			(uuid "21ccfc7f-37da-4ac1-8748-04afe791e724")
@@ -37025,7 +37077,7 @@
 				)
 			)
 		)
-		(property "Description" "453k_RA_1%"
+		(property "Description" "200k_1pct_12V_RIPPLE_RA"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -37048,7 +37100,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO(国巨)"
+		(property "Manufacturer" "YAGEO"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37061,7 +37113,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0603FR-07453KL"
+		(property "MPN" "RC0603FR-07200KL"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37074,7 +37126,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C273765"
+		(property "LCSC" "C105574"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37087,7 +37139,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "12V total 1A ECO 2026-10-18; exact primary required; procurement and bench OPEN"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37100,7 +37152,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "RTT034533FTP"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37113,7 +37165,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C103651"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37126,7 +37178,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "BLOCKED_NOT_SOURCED_OR_NO_STOCK"
+		(property "Alternative_Status" "No alternate qualified for 12V total 1A ECO"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47663,7 +47715,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf"
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM1885C1H332JA01-01A.pdf"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -47674,7 +47726,7 @@
 				)
 			)
 		)
-		(property "Description" "3.3nF_CA_X7R"
+		(property "Description" "3.3nF_C0G_50V_5pct_12V_RIPPLE_CA"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -47697,7 +47749,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "FH(风华)"
+		(property "Manufacturer" "Murata"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47710,7 +47762,7 @@
 				)
 			)
 		)
-		(property "MPN" "0603B332J500NT"
+		(property "MPN" "GRM1885C1H332JA01D"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47723,7 +47775,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C20616243"
+		(property "LCSC" "C77036"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47736,7 +47788,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified"
+		(property "Sourcing_Status" "12V total 1A ECO 2026-10-18; exact primary required; procurement and bench OPEN"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47749,7 +47801,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "CC0603JRX7R9BB332"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47762,7 +47814,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C519530"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -47775,7 +47827,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_PROTOTYPE; OEM same nominal/tolerance/voltage/X7R/package reviewed; application and first-article checks OPEN"
+		(property "Alternative_Status" "No alternate qualified for 12V total 1A ECO"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -51626,7 +51678,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "capacitor")
 		(property "Reference" "C30"
-			(at 0 1.805 0)
+			(at 2 1.805 0)
 			(layer "F.SilkS")
 			(uuid "51373357-e14c-438b-8659-804cf0578989")
 			(effects

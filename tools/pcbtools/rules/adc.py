@@ -490,12 +490,12 @@ def ad7606c_api(project):
                 errors.append(f"Retained component removed: {ref}")
                 continue
             for field in ["value","footprint"]:
-                if oldc[ref].findtext(field)!=newc[ref].findtext(field):
+                if project.parameters.get("component_ecos", {}).get(ref, {}).get(field, oldc[ref].findtext(field)) != newc[ref].findtext(field):
                     errors.append(f"Unexpected retained {field} change: {ref}")
             a={f.get("name"):f.text for f in oldc[ref].findall("fields/field")}
             b={f.get("name"):f.text for f in newc[ref].findall("fields/field")}
             for field in ["Manufacturer","MPN","LCSC"]:
-                if a.get(field)!=b.get(field):
+                if project.parameters.get("component_ecos", {}).get(ref, {}).get(field, a.get(field) or "") != (b.get(field) or ""):
                     errors.append(f"Unexpected retained {field} change: {ref}")
         projected={p for p in oldp if p[0] in retained and p not in {("J1","29"),("J1","30"),("J1","31")}}
         missing=projected-set(newp)

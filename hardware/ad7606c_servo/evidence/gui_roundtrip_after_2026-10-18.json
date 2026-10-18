@@ -1,0 +1,74 @@
+{
+  "schema": "schematic-connectivity-v1",
+  "components": [
+    {
+      "ref": "C1",
+      "value": "100uF",
+      "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+      "device": "ax7010_servo_reva:C"
+    },
+    {
+      "ref": "C2",
+      "value": "100uF",
+      "footprint": "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm",
+      "device": "ax7010_servo_reva:C"
+    },
+    {
+      "ref": "C3",
+      "value": "1uF",
+      "footprint": "Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3",
+      "device": "ax7010_servo_reva:C"
+    }
+  ],
+  "nets": [
+    {
+      "name": "/power_input/GND",
+      "pins": [
+        {
+          "ref": "C3",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "Net-(C1-Pad1)",
+      "pins": [
+        {
+          "ref": "C1",
+          "pin": "1"
+        },
+        {
+          "ref": "C3",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "unconnected-(C1-Pad2)",
+      "pins": [
+        {
+          "ref": "C1",
+          "pin": "2"
+        }
+      ]
+    },
+    {
+      "name": "unconnected-(C2-Pad1)",
+      "pins": [
+        {
+          "ref": "C2",
+          "pin": "1"
+        }
+      ]
+    },
+    {
+      "name": "unconnected-(C2-Pad2)",
+      "pins": [
+        {
+          "ref": "C2",
+          "pin": "2"
+        }
+      ]
+    }
+  ]
+}

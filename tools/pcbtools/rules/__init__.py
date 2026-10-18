@@ -16,6 +16,9 @@ def run_rules(project, scope, inputs):
     if "repository" in project.rule_sets:
         from .repository import check_repository
         check("repository.public_paths", lambda: check_repository(project))
+    if "aux_power" in project.rule_sets:
+        from .aux_power import check_project
+        check("power.auxiliary_1a", lambda: check_project(project, inputs.get("xml")))
     if "servo" in project.rule_sets:
         from .servo import check_design, native_contract
         check("servo.native_contract", lambda: native_contract(project))

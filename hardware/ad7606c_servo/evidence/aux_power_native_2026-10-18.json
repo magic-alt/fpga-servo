@@ -1,0 +1,160 @@
+{
+  "date": "2026-10-18",
+  "status": "BLOCKED_UNROUTED_BENCH_OPEN",
+  "requirement": {
+    "vin_min_v": 24.0,
+    "vin_max_v": 48.0,
+    "vout_nominal_v": 12.0,
+    "vout_max_v": 12.6,
+    "continuous_total_a": 1.0,
+    "ambient_c": 40.0,
+    "maximum_rise_k": 50.0,
+    "vout_min_v": 11.4
+  },
+  "native_run": "artifacts/pcb/ad7606c/20261018T092031Z-evswjw2q",
+  "tools": {
+    "python": "3.12.4",
+    "kicad": "10.0.3"
+  },
+  "netlist": {
+    "components": 181,
+    "nets": 162,
+    "physical_pins": 672
+  },
+  "baseline_netlist": {
+    "components": 159,
+    "nets": 135,
+    "physical_pins": 592
+  },
+  "exact_named_net_and_physical_pin_graph_preserved": true,
+  "authorized_identity_changes": [
+    "C25",
+    "L1",
+    "R21",
+    "R22",
+    "R23"
+  ],
+  "erc": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0
+  },
+  "baseline_erc": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0
+  },
+  "pcb_parity": "PASS",
+  "drc": {
+    "status": "FAIL",
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0,
+    "unconnected": 499,
+    "schematic_parity": 0
+  },
+  "source_unchanged_during_native_run": true,
+  "calculation": {
+    "effective_l_min_uh": 97.2,
+    "peak_a": 1.199170524691358,
+    "rms_a": 1.0065897704470328,
+    "minimum_peak_margin_a": 0.050829475308642014,
+    "estimated_fault_peak_a": 1.7993827160493827,
+    "injected_ripple_min_v": 0.0219213779845865,
+    "injected_ripple_max_v": 0.0643518691647034,
+    "output_calculated_min_v": 11.465624439757056,
+    "output_calculated_max_v": 12.513745414876784,
+    "corners": [
+      {
+        "vin_v": 24.0,
+        "ripple_pp_a": 0.25655864197530864,
+        "peak_a": 1.1282793209876543,
+        "rms_a": 1.002738846724818
+      },
+      {
+        "vin_v": 48.0,
+        "ripple_pp_a": 0.3983410493827161,
+        "peak_a": 1.199170524691358,
+        "rms_a": 1.0065897704470328
+      }
+    ],
+    "status": "CALCULATION_ONLY_BENCH_OPEN"
+  },
+  "software_regression": {
+    "main": {
+      "tests": 180,
+      "passed": 166,
+      "skipped": 14,
+      "exit_code": 0
+    },
+    "native_geometry": {
+      "tests": 39,
+      "passed": 39,
+      "exit_code": 0,
+      "scope": "tool fixtures and retained board; not new-board copper acceptance"
+    }
+  },
+  "gui_roundtrip": {
+    "status": "PASS",
+    "components": 181,
+    "nets_before": 162,
+    "nets_after": 162,
+    "physical_pin_memberships": 672,
+    "exact_component_net_pin_comparison": "PASS",
+    "repair": "All 1068 implicit-zero wire strokes now explicitly retain the prior 6 mil (0.1524 mm) default width. All object UUIDs and connectivity preserved.",
+    "evidence": [
+      "gui_stable_before_2026-10-18.json",
+      "gui_stable_after_2026-10-18.json"
+    ],
+    "historical_failure": {
+      "original_full_project_nets": [
+        162,
+        307
+      ],
+      "actual_three_capacitor_nets": [
+        2,
+        5
+      ],
+      "same_capacitor_trial_with_explicit_width": [
+        2,
+        2
+      ]
+    },
+    "failed_gui_results_promoted": false,
+    "visible_junctions": {
+      "count": 252,
+      "diameter_mm": 0.635,
+      "UUIDs_and_positions_preserved": true
+    }
+  },
+  "not_run": [
+    "copper routing",
+    "bench full-load startup and thermal/transient qualification",
+    "manufacturing qualification"
+  ],
+  "current_reviewed_source_sha256": {
+    "hardware/ad7606c_servo/aux_power.kicad_sch": "5ee22b20f542b20f1296bd7a118f9dea3ce05ea52d5bf06a5088c608998e9e9f",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb": "78856387d037b4e7321febedbe4bb9d761f0a6dcbd8d48202031517ddc93bea7",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pro": "8dc8fa86f074ed897e1e943df79d5a3d34a84c0a7a27302927eed407e5ed51a2",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_dru": "ab756cf874a0fa1575a939bcfe3ac0d60115414d5a10fccdd5f01741ea989403",
+    "hardware/ad7606c_servo/aux_power_profile.json": "58d7588f6c38ebc0f7ffb8b9acb23e57157b189f8569395c2eba810ada1e7be5",
+    "hardware/ad7606c_servo/bom.csv": "c116b6535bae15c56c28c40f14927a210c72020a8d0e15160012465d67c08ba9",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod": "b4054b6b92a639c4400e81c3762957ff225a7c196165316e3f994d4fbef4a73e",
+    "tools/projects/ad7606c.json": "bf901da985a3b7589ebb31f9286c9b64320f66815b9c544621b718fe10c1f676",
+    "tools/pcbtools/rules/aux_power.py": "0adbc1ffeee6376f0116b7838e52736076140fbc8f6fd1c07233433e22f3d12a",
+    "tools/pcbtools/rules/adc.py": "8d85be7a93a527f894ee1cd15c6f64e368d069c8bb5f48a20cf4f7dfe2bd396b",
+    "tools/pcbtools/schematic.py": "23e3329663770e8cc60bcbe168698eb4284e88007b6df239ce25b780ba1c257a",
+    "hardware/ad7606c_servo/adc_core.kicad_sch": "889c1dcbb2434f1b5d963e69673fdc421d2ba37aa6394992d6c3307a2dfff23f",
+    "hardware/ad7606c_servo/adc_levelshift.kicad_sch": "4452afb8df6b84b0c64c7d7fc1ac92e6c011f51b2d1b4249f91cd411479b1afc",
+    "hardware/ad7606c_servo/adc_power.kicad_sch": "64bdf4e29370be728e6c5f478550480c64c25e3ca137021a8d5456529ef12447",
+    "hardware/ad7606c_servo/ax7010_interface.kicad_sch": "2cd75822729d49182fd21d996006d394c637d6677e1570ed9674424e93028841",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch": "b674cbff45c38d93d94807ec3cf3a80aafcc9a7080ced032bf03301a12f29347",
+    "hardware/ad7606c_servo/current_adc.kicad_sch": "7ffe2bdcf63c003aa494bddd8db3d4fbf2cc2167ae0af8d3ab8290ea06995648",
+    "hardware/ad7606c_servo/encoder.kicad_sch": "e7fa629be5773f6a0758dc25d0da83ccf95bdc188c94bd6bfa582dfe7eea6677",
+    "hardware/ad7606c_servo/gate_inverter.kicad_sch": "d02b1c3c3d77d22e8107d33e979e19be4691ec49337c90cc7fabff2e8a48173c",
+    "hardware/ad7606c_servo/ocp_latch.kicad_sch": "b4f2716e0ca6e6c26f85106da5609ac9d18210a47ffab26c2932b4f3e1dff1fe",
+    "hardware/ad7606c_servo/power_input.kicad_sch": "8b8b25f87433edaf49789e75897f5b2b9f222c5e795e4de5ac9d1bf29c5a24b4"
+  }
+}
