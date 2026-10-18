@@ -1,6 +1,6 @@
 # Rev.A bring-up sequence
 
-Current operating target: **24-48V, 10A continuous phase current, 20kHz PWM** (2026-10-09). Lower voltages below are diagnostic conditions only. The [layout-entry repair](layout_entry_repair_2026-10-09.md) closes diode polarity and ADC serial straps, but PCB routing/DRC and other release gates remain open before assembly/energization. No stage below is recorded as completed bench evidence.
+Current operating target: **24-48V, 10A continuous phase current, 20kHz PWM** (2026-10-09). Lower voltages below are diagnostic conditions only. The [layout-entry repair](archive/reviews/layout_entry_repair_2026-10-09.md) closes diode polarity and ADC serial straps, but PCB routing/DRC and other release gates remain open before assembly/energization. No stage below is recorded as completed bench evidence.
 
 ## Stage 0 - unpowered inspection
 

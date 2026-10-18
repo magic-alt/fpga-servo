@@ -41,7 +41,7 @@ rules and the [project repair skill](../fpga-servo-kicad-repair/SKILL.md#visible
 Power, ground and PWR_FLAG graphics and child hierarchy ports must have a
 visible native-wire path to real component pins. A separate power legend or
 port-to-symbol stub is not an acceptable substitute. Run
-`python tools/check_power_wiring.py` alongside exact native-netlist comparison
+`python tools/pcb.py check --project ads8588s --scope schematic` alongside exact native-netlist comparison
 and ERC; inspect supply/return paths and every moved endpoint in the renders.
 
 For motor-driver sheets, repeated channels, crowded hierarchy labels, title-block

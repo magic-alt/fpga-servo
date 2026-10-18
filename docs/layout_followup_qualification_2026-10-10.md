@@ -1,5 +1,7 @@
 # Layout 后续修复与动态资格
 
+> 适用边界：保留本页技术规则、协议或未关闭资格条件；当时器件与板级计数属于历史。执行前核对 [当前工程与门禁](release_gates.md)，不得沿用旧 PCB 完成结论。
+
 日期：2026-10-10。当前分支 `fix/adc-undervoltage-inhibit-20261010`。
 本记录承接 ADC 欠压修复，不能替代实体板、仪器或厂商保证值。
 
@@ -15,7 +17,7 @@
 
 历史 21 项审计 CSV 保留为修复前证据，不覆盖原始数值。S01 静态设计已修复、动态资格 OPEN；S09 OPEN。S02..S14、S19..S21 未因本记录关闭。S18 当前工具已正确写 REF1=VA5、REF2=GND，本次未再次改动。
 
-最新PCB候选修复及独立DRC见[铜线修复记录](pcb_legacy_route_repair_2026-10-10.md)，用户随后明确批准将候选作为未通过发布验收的开发基线写回；当前工作板97间距错误/447未连接/0一致性问题，见该记录的采用核验。
+最新PCB候选修复及独立DRC见[铜线修复记录](archive/reviews/pcb_legacy_route_repair_2026-10-10.md)，用户随后明确批准将候选作为未通过发布验收的开发基线写回；当前工作板97间距错误/447未连接/0一致性问题，见该记录的采用核验。
 
 ## 前一轮检查结果（PCB修改前）
 
@@ -86,4 +88,4 @@ C94 准确 MPN、有效容量、污染/湿热漏电和目标最短恢复时间�
 
 每组实测保存板序列号/版本、源文件提交及工作区哈希、BOM批次、固件/位流、仪器校准、探头方式、温度/输入/负载/边沿条件、原始波形和判定。尚无这些证据，本记录不是实测结果。
 
-依据：[TI TPS3890 SLVSD65A](https://www.ti.com/lit/ds/symlink/tps3890.pdf)、[TI TPS62901 SLVSFS7A](https://www.ti.com/lit/ds/symlink/tps62901.pdf)、[静态修复记录](adc_undervoltage_repair_2026-10-10.md)。
+依据：[TI TPS3890 SLVSD65A](https://www.ti.com/lit/ds/symlink/tps3890.pdf)、[TI TPS62901 SLVSFS7A](https://www.ti.com/lit/ds/symlink/tps62901.pdf)、[静态修复记录](archive/reviews/adc_undervoltage_repair_2026-10-10.md)。

@@ -4,7 +4,7 @@
 
 This board is a lab/engineering servo-drive daughter board for the ALINX AX7010. It deliberately keeps the hard real-time PWM, ADC timing and encoder counting in the Zynq PL while leaving high-power switching, signal conditioning and encoder line reception on the daughter board.
 
-> **2026-10-12高速ADC设计决策已更新（待ECO，尚未应用）**：当前源原理图继续以ADS8588SIPM为实际硬件，但面向FPGA 3–5kHz电流环目标，下一高速版首选[AD7606C-16BSTZ四路DOUT方案](adc_high_performance_reselection_2026-10-12.md)。下方ADC=8ch/200kSPS的数据仍描述**现有KiCad**，不应作为新芯片交付规格。新芯片还需要真实J10三根新增信号及原理图/PCB/FPGA电路改版，F1/F2冻结不因选型报告而通过。
+> **2026-10-17 工程状态**：本页 Rev.A 指 ADS8588S 原工程。AD7606C 已有独立 11 页原理图、BOM 和四路接口，见 [新工程](../hardware/ad7606c_servo/README.md)；其 PCB、RTL/STA 和实物资格未完成。两工程分别验证，不共用 ADC 引脚合同。
 
 ## Electrical target
 
@@ -97,4 +97,4 @@ U20 implements hardware ARM latching, with supervised VIO/VA5 reset and raw OCP/
 
 U26 SN74LVC3G17 applies Schmitt conditioning to the open-drain supervisor reset, raw OCP_N and raw PWR_GOOD before ordinary CMOS logic. The conditioned PWR_READY feeds U11/U23; raw diagnostic nets and their original pull-ups remain intact.
 
-U25 is now TPS389001DSER, independently powered by VIO and sensing VA5 through R92=3.24k/R93=1k. Undervoltage asynchronously clears ARM; recovery alone cannot re-arm. See [2026-10-10 repair](adc_undervoltage_repair_2026-10-10.md) for physical pin maps, static margins and open dynamic qualification. R92 uses the reviewed +/-0.702% static budget; the minimum falling threshold is 4.791889 V, maximum recovery 5.001931 V, and static VA5 range 5.026621..5.173923 V. These values do not qualify rapid droop or gate-off latency. ADC current-zero calibration and encoder supply acceptance must use the 5.1 V nominal rail.
+U25 is now TPS389001DSER, independently powered by VIO and sensing VA5 through R92=3.24k/R93=1k. Undervoltage asynchronously clears ARM; recovery alone cannot re-arm. See [2026-10-10 repair](archive/reviews/adc_undervoltage_repair_2026-10-10.md) for physical pin maps, static margins and open dynamic qualification. R92 uses the reviewed +/-0.702% static budget; the minimum falling threshold is 4.791889 V, maximum recovery 5.001931 V, and static VA5 range 5.026621..5.173923 V. These values do not qualify rapid droop or gate-off latency. ADC current-zero calibration and encoder supply acceptance must use the 5.1 V nominal rail.
