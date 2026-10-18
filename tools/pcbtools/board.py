@@ -171,6 +171,36 @@ def corners_api():
     return SimpleNamespace(**locals())
 
 
+def audit_netclasses(project_text, netlist_text, contract):
+    """Require configured real-net assignments and preserve class minima."""
+    import json
+    import math
+    from .kicad import extract_forms, head_string
+
+    errors = []
+    data = json.loads(project_text)["net_settings"]
+    classes = {item["name"]: item for item in data["classes"]}
+    if len(classes) != len(data["classes"]):
+        errors.append("duplicate native netclass names")
+    nets = set()
+    for net in extract_forms(netlist_text, "net"):
+        names = extract_forms(net.text, "name")
+        if names:
+            nets.add(head_string(names[0].text, "name"))
+    for name, expected in contract["required"].items():
+        if name not in nets:
+            errors.append(f"required net absent from fresh export: {name}")
+        assigned = [item["netclass"] for item in data["netclass_patterns"] if item["pattern"] == name]
+        if assigned != [expected] or expected not in classes:
+            errors.append(f"require exact {expected} assignment for {name}; found {assigned}")
+    for name, limits in contract["minimums"].items():
+        for field, minimum in limits.items():
+            actual = classes.get(name, {}).get(field)
+            if (type(actual) not in (int, float) or not math.isfinite(actual) or actual < minimum):
+                errors.append(f"{name}.{field}: require >= {minimum}, got {actual}")
+    return errors
+
+
 def check_board(project, netlist=None):
     from .report import Finding
     project.require_board()
@@ -184,4 +214,11 @@ def check_board(project, netlist=None):
     report = parity_api().audit_text(Path(netlist).read_text(encoding="utf-8"), project.board.read_text(encoding="utf-8"), set(project.parameters.get("mechanical_refs", [])))
     # Empty exports cannot prove parity, even for a deliberately empty board.
     valid = report["passed"] and report["schematic_components"] > 0 and report["schematic_nets"] > 0
-    return [Finding("pcb.parity", "PASS" if valid else "FAIL", "Physical pin/net/footprint/value/DNP parity", report)]
+    findings = [Finding("pcb.parity", "PASS" if valid else "FAIL", "Physical pin/net/footprint/value/DNP parity", report)]
+    if "pcb_netclasses" in project.parameters:
+        try:
+            errors = audit_netclasses(project.board.with_suffix(".kicad_pro").read_text(encoding="utf-8"), Path(netlist).read_text(encoding="utf-8"), project.parameters["pcb_netclasses"])
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            errors = [f"invalid netclass evidence: {exc}"]
+        findings.append(Finding("pcb.netclasses", "FAIL" if errors else "PASS", "; ".join(errors) if errors else "Fresh net assignments and original class minima", {"errors": errors}))
+    return findings

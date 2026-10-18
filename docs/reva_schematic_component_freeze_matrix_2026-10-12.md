@@ -63,7 +63,7 @@ Vin = 48 V, Vout = 12 V, fsw = 300 kHz illustrative
 - `hardware/ads8588s_servo/power_input.kicad_sch`：C3 Description `1uF_100V_FILM`→`1uF_250V_FILM`，保持1µF和原厂选中的实际250V订货号。
 - `hardware/ads8588s_servo/aux_power.kicad_sch`：L1 Description从过期Coilcraft描述改成当前资格开放提示；不偷偷换MPN或改变焊盘。
 - `hardware/ads8588s_servo/bom.csv`：C3、L1、NTC2 Function三项与现行选型/硬件安装位置相符，159个对象结构未改变。
-- `fpga/ax7010_servo_reva.xdc`：J11不存在的30项并行/辅助pin assignment仅注释，J10 active 26条真实物理映射保持。
+- `hardware/ads8588s_servo/ax7010_servo_reva.xdc`：J11不存在的30项并行/辅助pin assignment仅注释，J10 active 26条真实物理映射保持。
 - `tools/pcbtools/rules/adc.py`及`tools/tests/test_adc_serial_contract.py`：接口/源语义和负向变异回归；已接入两个硬件CI工作流。**此类静态检查无法证明真实功率关断或替代KiCad ERC**。
 
 ## E. 五级冻结Gate

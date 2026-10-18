@@ -114,7 +114,7 @@
 
 1. **独立原理图子页ECO**：新建AD7606C-16本地可审计原生KiCad符号，逐芯片物理脚对厂商Rev.A PDF，封装LQFP-64 10×10mm/0.5mm；虽与现用U6机械封装类似，绝不假设引脚完全兼容。
 2. **模拟电路**：新增各通道正确VIN+/VIN−接法和输入保护/滤波；按OEM建议布置REFIN/REFOUT、REFCAPx及多AVCC/GND旁路，切勿直接套用ADS8588S的REGCAP、REFCAP器件及管脚；评估现有5.1V TPS62901负载、电容与U25欠压联锁（ADI AVCC最低4.75V，当前仅静态裕量）。
-3. **数字电路**：软件模式OS0/1/2=111、PAR/SER=1、SDI、DOUTC/D；更新AX7010 J10连接器物理pin29/30/31、`fpga/ax7010_servo_reva.xdc`真实信号和板端J1铜、`docs/ax7010_interface.md`映射，确保新IOSTA/LVCMOS33 IO bank与Vivado实际冲突检查。
+3. **数字电路**：软件模式OS0/1/2=111、PAR/SER=1、SDI、DOUTC/D；更新AX7010 J10连接器物理pin29/30/31、`hardware/ads8588s_servo/ax7010_servo_reva.xdc`真实信号和板端J1铜、`docs/ax7010_interface.md`映射，确保新IOSTA/LVCMOS33 IO bank与Vivado实际冲突检查。
 4. **BOM及成本**：新U6准确厂商、MPN、LCSC C5371769，C5240947仅作为包装备选；根据实际器件重新整理所需去耦/稳压/参考器件与DNP，更新分组采购和五板价额。实际采购前刷新单价/币种/现货/发票/进口。
 5. **FPGA RTL**：独立ADC驱动状态机、初始化寄存器读回、BUSY超时、采样触发调度、4个并行16bit移位器/帧对齐、固定时间戳/有效标记和CRC/模式回归；记录Vivado STA实际 SCLK IO delay和J10端波形，不得依赖不存在的J11。
 6. **资格分层**：新鲜KiCad全严重度ERC0、物理脚/节点网表检查、真实PCB全部端点一致且DRC0/未连接0/DFM通过；逻辑/有源电路仿真与实际硬件低能量PWM噪声、ADC线性/频响、FPGA 20MHz/40MHz校验；维持独立硬件OCP及VA5动态关断门禁BLOCKED直到实测。

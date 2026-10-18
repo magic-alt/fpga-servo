@@ -71,7 +71,7 @@ def serial_api(project):
         errors: list[str] = []
         sch = (root / "hardware/ads8588s_servo/current_adc.kicad_sch").read_text(encoding="utf-8")
         interface = (root / "hardware/ads8588s_servo/ax7010_interface.kicad_sch").read_text(encoding="utf-8")
-        xdc = (root / "fpga/ax7010_servo_reva.xdc").read_text(encoding="utf-8")
+        xdc = (root / "hardware/ads8588s_servo/ax7010_servo_reva.xdc").read_text(encoding="utf-8")
         with (root / "hardware/ads8588s_servo/bom.csv").open(encoding="utf-8", newline="") as fd:
             bom = {r["Ref"]: r for r in csv.DictReader(fd)}
 
@@ -140,10 +140,10 @@ def fast_api(project):
     from pathlib import Path
 
     ROOT = project.root
-    PROFILE = Path("fpga/ad7606c_fast_candidate_profile_2026-10-12.json")
+    PROFILE = Path("hardware/ad7606c_servo/ad7606c_fast_candidate_profile_2026-10-12.json")
     CANDIDATES = Path("hardware/ad7606c_servo/adc_fast_candidates_2026-10-12.csv")
     SOURCE_BOM = Path("hardware/ads8588s_servo/bom.csv")
-    XDC = Path("fpga/ax7010_servo_reva.xdc")
+    XDC = Path("hardware/ads8588s_servo/ax7010_servo_reva.xdc")
     SCHEMATIC = Path("hardware/ads8588s_servo/current_adc.kicad_sch")
 
     LEGACY = {
@@ -490,12 +490,12 @@ def ad7606c_api(project):
                 errors.append(f"Retained component removed: {ref}")
                 continue
             for field in ["value","footprint"]:
-                if oldc[ref].findtext(field)!=newc[ref].findtext(field):
+                if project.parameters.get("component_ecos", {}).get(ref, {}).get(field, oldc[ref].findtext(field)) != newc[ref].findtext(field):
                     errors.append(f"Unexpected retained {field} change: {ref}")
             a={f.get("name"):f.text for f in oldc[ref].findall("fields/field")}
             b={f.get("name"):f.text for f in newc[ref].findall("fields/field")}
             for field in ["Manufacturer","MPN","LCSC"]:
-                if a.get(field)!=b.get(field):
+                if project.parameters.get("component_ecos", {}).get(ref, {}).get(field, a.get(field) or "") != (b.get(field) or ""):
                     errors.append(f"Unexpected retained {field} change: {ref}")
         projected={p for p in oldp if p[0] in retained and p not in {("J1","29"),("J1","30"),("J1","31")}}
         missing=projected-set(newp)

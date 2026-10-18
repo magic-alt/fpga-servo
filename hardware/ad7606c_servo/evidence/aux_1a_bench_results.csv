@@ -1,0 +1,9 @@
+test_id,status,pcb_revision,source_commit,bom_revision,operator,timestamp,instruments,vin_v,total_iout_a,external_load_a,ambient_c,airflow,local_vout_v,remote_vout_v,vout_min_v,vout_max_v,ripple_mv_pp,frequency_khz,fb_ripple_mv_pp,u12_case_c,l1_hotspot_c,capacitor_hotspot_c,elapsed_min,raw_artifact_sha256,notes
+baseline,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+cold_start,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+hot_restart,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+thermal,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+load_step,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+line_step,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+model_assumptions,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,
+fault_recovery,NOT_RUN,,,,,,,,,,,,,,,,,,,,,,,,

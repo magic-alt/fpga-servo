@@ -1,0 +1,23 @@
+{
+  "method": "native pcbnew library footprint replacement",
+  "reference": "L1",
+  "position_mm": [
+    46.5,
+    12.0
+  ],
+  "angle_degrees": 0.0,
+  "exact_physical_pad_net_graph_equal": true,
+  "pads_mm": {
+    "1": [
+      2.9,
+      5.4
+    ],
+    "2": [
+      2.9,
+      5.4
+    ]
+  },
+  "footprint": "Wurth_WE_PD_1210_7447709151",
+  "manufacturer_land_rotation_degrees": 90,
+  "inner_pad_gap_mm": 7.0
+}

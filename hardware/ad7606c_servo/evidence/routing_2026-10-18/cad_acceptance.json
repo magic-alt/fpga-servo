@@ -1,0 +1,658 @@
+{
+  "project": "ad7606c",
+  "native_run": "20261018T142207Z-sdwni7ya",
+  "started_utc": "2026-10-18T14:22:07.743737+00:00",
+  "finished_utc": "2026-10-18T14:25:16.560812+00:00",
+  "tools": {
+    "python": "3.11.5",
+    "kicad": "10.0.3"
+  },
+  "scope": "pcb",
+  "cad_status": "PASS",
+  "physical_and_fabrication_release": "BLOCKED",
+  "native_release_status": "NOT_EVALUATED",
+  "source_unchanged": true,
+  "source_sha256": {
+    ".github/workflows/gate-ab-electrical.yml": "9e1f77dcca97649ade170823637a3db20b61702970d7f134fd7d93798a0c1d58",
+    ".github/workflows/hardware-sanity.yml": "a72ac97f406a3d5f008120dc3763a92bbc8a5ac05ea907fe0de4b1aac2b94605",
+    ".github/workflows/kicad-erc.yml": "e9d9ef99c14784a4bebd771404d1dc0efc341546aacd72d4bc7e6f186983be18",
+    "hardware/ad7606c_servo/.gitignore": "08977f430b5471cdaa334d58a2dad13001bee4570218465986e6f4e35e968676",
+    "hardware/ad7606c_servo/.pcba-workflow/schematic-visual-audit.json": "3ae382f9d0d5bb89b8f6c4be1bd1f36a4a52654bdcc677ba8071eaf35ea40351",
+    "hardware/ad7606c_servo/ad7606c_fast_candidate_profile_2026-10-12.json": "5f2d22b36d69c17af8c81de3df00fd85f5b6d2b6da890abd8bbc61bdde5ed24a",
+    "hardware/ad7606c_servo/adc_core.kicad_sch": "889c1dcbb2434f1b5d963e69673fdc421d2ba37aa6394992d6c3307a2dfff23f",
+    "hardware/ad7606c_servo/adc_fast_candidates_2026-10-12.csv": "8af34ab1002b4e12afc9cf0ade12d63801905d9d30fbf9eef500520838c8243c",
+    "hardware/ad7606c_servo/adc_levelshift.kicad_sch": "4452afb8df6b84b0c64c7d7fc1ac92e6c011f51b2d1b4249f91cd411479b1afc",
+    "hardware/ad7606c_servo/adc_pin_map.json": "147edc04ce558ec9baf6bd3a63e15523d3aac9f9b91a86c9567fba6a54cdfe71",
+    "hardware/ad7606c_servo/adc_power.kicad_sch": "64bdf4e29370be728e6c5f478550480c64c25e3ca137021a8d5456529ef12447",
+    "hardware/ad7606c_servo/adc_profile.json": "5ef1e145c1cfff76b363cf654ae7b639581cd7df09b2376fa46f09576d0df73c",
+    "hardware/ad7606c_servo/aux_power.kicad_sch": "1dffd247048efe2352f67b790363eaac3bcdc27887fedcef692c0b34d885b1b1",
+    "hardware/ad7606c_servo/aux_power_profile.json": "58d7588f6c38ebc0f7ffb8b9acb23e57157b189f8569395c2eba810ada1e7be5",
+    "hardware/ad7606c_servo/ax7010_interface.kicad_sch": "2cd75822729d49182fd21d996006d394c637d6677e1570ed9674424e93028841",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_dru": "3ae44daadfb40146b0c376fcb8a7717411bf4282f4428b95f701d03728c832f7",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb": "2fb28bcdbd44b9d58f70ce6ef6b18b56fc4e33a1f07d336488d2c7b8b3584b68",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pro": "fb891a0d306d4ba561d290d97057b79372e4053c0a4fc3f5d938ce417d9aedc2",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch": "b674cbff45c38d93d94807ec3cf3a80aafcc9a7080ced032bf03301a12f29347",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc": "076706a79cfdd9771b0e6ae8e09e76ba1c02933d869a8c4bc7dbd068df15a284",
+    "hardware/ad7606c_servo/ax7010_servo_reva.kicad_sym": "57e9b23591187790eebe1dd9d254b3856a765055c94f5462a7a8f1d7ad672e09",
+    "hardware/ad7606c_servo/bom.csv": "c116b6535bae15c56c28c40f14927a210c72020a8d0e15160012465d67c08ba9",
+    "hardware/ad7606c_servo/current_adc.kicad_sch": "1a11c1c03a5c8466202c0261ead929e76f1f4e109637cc0513095426019dc2a6",
+    "hardware/ad7606c_servo/development_board.md": "d4870c0358a5d1658dc508fed4db4356266bc8a58b8aaaef864ecddc2277952d",
+    "hardware/ad7606c_servo/encoder.kicad_sch": "ef22a586c04ce1ee2f8cc789e3faea13304cac774711776288867cffba9858d9",
+    "hardware/ad7606c_servo/evidence/ad7606c.net": "c168454402dbc7fa103a4fabb315d256ba253ed0a72351ac6c8d1ad898024ad5",
+    "hardware/ad7606c_servo/evidence/ad7606c.xml": "aebccd7577f972fb31ba82057a00f4c7214622c5531018857ccba01abb1a51d9",
+    "hardware/ad7606c_servo/evidence/adc-physical-pins.csv": "d69e5dd2b7d4606c6481fbe5b42faf7f8a1409e90b828d2728832512d0ad663a",
+    "hardware/ad7606c_servo/evidence/adc-power-detail.png": "3c21484066a221765d9ffe7ae31a234d4c28004c4afda5096113c130f2c4d51c",
+    "hardware/ad7606c_servo/evidence/adc-supply-validity.json": "2d39cfe9f81b4a5a511a4304e8d8ea76cca9b522c88152278617729eb8c1e3a1",
+    "hardware/ad7606c_servo/evidence/aux_12v_dense_2026-10-18.png": "e9a8a2742811a30be19fd54244d5a7c760d1ac41252fd1094f86be76e7be0b54",
+    "hardware/ad7606c_servo/evidence/aux_power_calculation_2026-10-18.json": "c5d1c913d66f389c482a46d8cc74151ee622b4d8b8952748fbf6ed49c0c43d48",
+    "hardware/ad7606c_servo/evidence/aux_power_native_2026-10-18.json": "a69690d13acef792acc15fd5bd5c9706d755706e50b1b28a07fd4894d145ec78",
+    "hardware/ad7606c_servo/evidence/aux_power_review_2026-10-18.md": "862dbcaccdb56ea7a2d699e9ebec6234980cf5e1d2ad1d4abf720795d0307757",
+    "hardware/ad7606c_servo/evidence/component_pad_audit_2026-10-18.json": "9d91f32ef0c45eac3ab9a39c4158701a5b38ed3259a0fbe68e81c5a4bfda95a2",
+    "hardware/ad7606c_servo/evidence/continuation_review_2026-10-18.md": "39e965fd8fc6762980f704123d356bbf9677ebccc64d0394f537e6c8a73fd283",
+    "hardware/ad7606c_servo/evidence/continuation_status_2026-10-18.md": "f2d2e72223c6c5a88cb55de4d0ec3f47c1fe6569adef83c043ef3964e156b8a8",
+    "hardware/ad7606c_servo/evidence/erc.json": "1ffcda86231849a5cc24acdb1862e5867c5a0f18e3711889e1104722e9a5528a",
+    "hardware/ad7606c_servo/evidence/gate_margin_2026-10-18.png": "55c8fbbfdc8f5d1827c360347656f91df2dbbecdc3756888bfb05eb850ffe8bb",
+    "hardware/ad7606c_servo/evidence/gui_roundtrip_after_2026-10-18.json": "62528cb91ac335a9f415e13780c2c043ac16f7b0bb635af457b231a12af4e4c9",
+    "hardware/ad7606c_servo/evidence/gui_roundtrip_before_2026-10-18.json": "7f91bb0e304fb4a5fddd94d080170785e091908de620d940c3ec46baf38eb4db",
+    "hardware/ad7606c_servo/evidence/gui_stable_after_2026-10-18.json": "c8be90e8d0f0a1f532526768f2b696f25eccd4a917f865256bc328902a41cb05",
+    "hardware/ad7606c_servo/evidence/gui_stable_before_2026-10-18.json": "c8be90e8d0f0a1f532526768f2b696f25eccd4a917f865256bc328902a41cb05",
+    "hardware/ad7606c_servo/evidence/input_bank_dense_2026-10-18.png": "9957571799a845497e235558eb7ab10416a41354702bd933f7e74f6993376bd6",
+    "hardware/ad7606c_servo/evidence/junction_hygiene_2026-10-18.json": "3189b724f65697770edf84b7eeaaf4d1b702870f20ad6a16ba902abfb2a4d621",
+    "hardware/ad7606c_servo/evidence/l1_footprint_review_2026-10-18.json": "7a939ff368a4f0c12a1915bd2898af0819117a48098b5637f7d90f7b7379e498",
+    "hardware/ad7606c_servo/evidence/legacy-baseline.xml": "6137c4cceffb58ac0cd044c3825a727f404901a7ea47ecc91018db38c9c46a6d",
+    "hardware/ad7606c_servo/evidence/legacy-erc.json": "647e03d99eda8764670d5780d650daba0a1d66eb632af0a826bc5543f2d5fd53",
+    "hardware/ad7606c_servo/evidence/native_1a_drc_2026-10-18.json": "70323941416b5eb03846fd0c5d0721b57c5ed2bad1af99ba6e438d6601aa290c",
+    "hardware/ad7606c_servo/evidence/native_1a_erc_2026-10-18.json": "86ab48e7054ac73774c3e59bb1b410eb299b949e8429176d016a548b8ca9334f",
+    "hardware/ad7606c_servo/evidence/native_drc_2026-10-18.json": "91ab96c15afef5e88a4689bfb117334aca6eb15ea0865ddc94182fddf3ec7241",
+    "hardware/ad7606c_servo/evidence/native_erc_2026-10-18.json": "2598f5e6a8a298239c596cf914cb1051770de8bd790b03ce24af7adefb076ffa",
+    "hardware/ad7606c_servo/evidence/native_f8_sync_2026-10-18.txt": "33b0421f0e94ef7491aa9d34a6df22522c8aab508f889f3eb8d32c0c033f22e9",
+    "hardware/ad7606c_servo/evidence/pcb_acceptance_2026-10-18.json": "dff1e0c687e6320bc7a69f6ecd7ed103a9b64569287cc33be4151a5e6a1e0e77",
+    "hardware/ad7606c_servo/evidence/pcb_mechanical_constraints_2026-10-18.json": "d26b480808148afe4c590a776f2fa5d8cdb5db7f611d1cd5a48c5992e4faf3a9",
+    "hardware/ad7606c_servo/evidence/pcb_placement_2026-10-18.json": "3cf1fba70d903735d526224f8402f6caac1d4891a8a22df5e1f5df52cf3e8617",
+    "hardware/ad7606c_servo/evidence/pcb_placement_2026-10-18.png": "cd3cdf2fc9d025a4e4d7b271be752281e0875e6a9d4f3b642e712a714b2a5432",
+    "hardware/ad7606c_servo/evidence/pcb_power_eco_2026-10-18.png": "c097fc5298d16de0783eb270caf3c233f281f38864f025dff04d97f4f54e3a31",
+    "hardware/ad7606c_servo/evidence/pcb_review_2026-10-18.md": "980f00855050a6a0ac131cde257312ad484f1049a7afdc1ffe44b3b4ed2575e4",
+    "hardware/ad7606c_servo/evidence/review.md": "7fb48d2b4d60c9386a144b921e0fa5ad19b9385472b1970bc91d2c0561ce1277",
+    "hardware/ad7606c_servo/evidence/schematic.pdf": "59171a5061d18e6f11e8c4df0e47dfb4c9a785bd36c4abc68d4ceb0d336b241b",
+    "hardware/ad7606c_servo/evidence/static-checks.json": "0d7b107fe896cb69690a8476dbaa504df5af2019207b61f46b31c6c0e4d2d224",
+    "hardware/ad7606c_servo/evidence/translator-power-detail.png": "129cf4093e5101332ae768aaaa035b01a28453b7f6722ab0d6185fa8eed34e02",
+    "hardware/ad7606c_servo/evidence/verification.json": "e1e1ba234cc1b840ac366d0425bf41262a725bf03e36cf6f3b6973d0a94cc68e",
+    "hardware/ad7606c_servo/fp-lib-table": "b62c2da429e080fb3980770dae027a1bd4405039df34c55ebea928c748fa9768",
+    "hardware/ad7606c_servo/fpga-servo.pretty/HoYLR2512_Kelvin.kicad_mod": "fe3e68311bfdce7bd70dc6aeb14bad3963fdfb6d8cb33bda447208f1b49ad827",
+    "hardware/ad7606c_servo/fpga-servo.pretty/JILN_3210_2x05_P2.54mm_D1.02.kicad_mod": "cbb23b34bf06f2846a6241a21e5903fac18beda1b61829179880330a6c79a8e4",
+    "hardware/ad7606c_servo/fpga-servo.pretty/JILN_3210_2x20_P2.54mm_D1.02.kicad_mod": "a557de35d96add771f8890583b8df438a244ddf56ba4231938552c7718f3edcc",
+    "hardware/ad7606c_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm.kicad_mod": "ee9e6912ef4adc5bb80bf214b9c59c8ac94d24fefbb0c667e6fe8aefbb8eba95",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Littelfuse_456_25A_SMD.kicad_mod": "076edd6e9b21eb8fab19a8651cf95cafa34b2a1b93aa61a686a0a2c8acb8ec5d",
+    "hardware/ad7606c_servo/fpga-servo.pretty/MountingHole_M3_3.2mm_PTH_Pad5mm.kicad_mod": "cd0fcca462458509ecf6b1c7029459381bfd007a375c5712bd45a0dfd44edbb3",
+    "hardware/ad7606c_servo/fpga-servo.pretty/NTC_0603_Shiheng_KUU.kicad_mod": "29b6492136dbd7af465e92fe8a5b098a7b6ab26f1d145308a0daffea6f4996b1",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod": "c916e893cc4c0e42466488054cd4278ccb4953e046671689d251c64f75ac47c8",
+    "hardware/ad7606c_servo/fpga-servo.pretty/PhoenixContact_MKDS_5_2_9.52mm.kicad_mod": "682e244f50838f4fb5bbcfb583e89e2e7fa6f17d6668cd8512b926f4b5fcc126",
+    "hardware/ad7606c_servo/fpga-servo.pretty/PhoenixContact_MKDS_5_3_9.52mm.kicad_mod": "8fddb23814fa295aa2186f99f305efca67092e6d1d0934ad976f3ded95f676b1",
+    "hardware/ad7606c_servo/fpga-servo.pretty/SOREDE_SDRH1209_68uH.kicad_mod": "f2a51362a122d2c65fc13dd33c046ba440f2a58e646c6ec8b6267d8f625627b7",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Sunlord_SWPA4020S.kicad_mod": "e392d4c5c7cad7840d52b684ecc7f9677262a2b6d7512d02ba4b6ba306f165f5",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod": "4963801380b585d2a2c8cea3f80d727aa071ea7d35fa76f0fb6728b93ab4dab2",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "de16bf633d8280196b776a76654d93ab2c6ff0452dfa42b6cb8a15abf32568cb",
+    "hardware/ad7606c_servo/fpga-servo.pretty/TI_D0008A_SOIC8_P1.27mm.kicad_mod": "81f70711953e2fe886873c3ec6356e657945c749386e2a551c75408b3fdfe692",
+    "hardware/ad7606c_servo/fpga-servo.pretty/TI_DCU0008A_VSSOP8_P0.5mm.kicad_mod": "3166969a6e29fcfb237f932f339afb9b37c4c293fb20e445d6e8b0202d269a58",
+    "hardware/ad7606c_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod": "1a56ab5dfd377eaac50c379d71c9774b105cf6ebc6ab8c4e14c7f5755cf64bb6",
+    "hardware/ad7606c_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod": "82af96f53701bb74ec4f7ff27cce0a915563f62068787ec7c961dc25a334bdb2",
+    "hardware/ad7606c_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod": "b4054b6b92a639c4400e81c3762957ff225a7c196165316e3f994d4fbef4a73e",
+    "hardware/ad7606c_servo/gate_inverter.kicad_sch": "ba36a697e409cbc0236be804ea1882a19b6623f84e46cd7c591fc79c4f01cc45",
+    "hardware/ad7606c_servo/ocp_latch.kicad_sch": "a9325bd4b09c1bc6f9f8ce582960486c1c67ac1de0c1d3bac720fe0d93eceb8f",
+    "hardware/ad7606c_servo/power_input.kicad_sch": "69bc15b3489e5a52f2fea8349176f5896c3b582ae5fd64669868bdf3b113e9eb",
+    "hardware/ad7606c_servo/README.md": "7b17c63bbe49b8ca2d60af5085858a2f69e449f9679842b20e7d4bd0f303095c",
+    "hardware/ad7606c_servo/source_manifest.json": "59d69def6f4f096faeb0ece0929c4515ec26c0b6b8cca9a41cc4a42eec97ab57",
+    "hardware/ad7606c_servo/sym-lib-table": "afcba65a80eea67cfcb51c00cd291651eeaa4b2683b719e6db675a7bbe6ecc5f",
+    "hardware/ads8588s_servo/.gitignore": "9e7f1e3901867bbde65074c149c5014660192e4e631f57f5425924a56d7afc8c",
+    "hardware/ads8588s_servo/aux_power.kicad_sch": "6397834ae7408e6d30b9e0fd07d0310d03a1e48de4a75039d3e80eaffb66f09c",
+    "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "b4b5cc495e4dc9077824bcec4fb1625d1db0f65e880146077b252d02a6d51fb7",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "936e2412a61d4dab1cde2f4bc5a82c183fb847c0b57e7cdff62ab1c8388f04cb",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "d13af37991cc22f871cc9628bb0e218fe9dcf33abd05d61852db3a6e053b1346",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "6f0df511b8badec38806a88a09ac2f12782fee905358862e991195e018c75139",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "8e26f3c60571c118791440863df296a553ef58304dcec36cf39ee94903914bea",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "9e28f0aca1814aea51df5d1a06eb00f5af3a520ba08b74ed518b17c18a3dc15d",
+    "hardware/ads8588s_servo/ax7010_servo_reva.xdc": "c64c9a7f8363719a63bfd4b70e8627369b867258978c48f70b9953ed0c1b666d",
+    "hardware/ads8588s_servo/bom.csv": "e9a9a2a9c2231ffb19001c7018655d404cc21020fada8a680d12a34f6629164a",
+    "hardware/ads8588s_servo/current_adc.kicad_sch": "d1e4b20379a473ef30f869ae851721f1bc2013a0bade9ef39678b44b81b9426a",
+    "hardware/ads8588s_servo/encoder.kicad_sch": "5d1d7d8a7aacf7db6850a38873c156f24f1a01f8e067e15e273211d08631d7f9",
+    "hardware/ads8588s_servo/evidence/directory_migration.json": "38eccd62e9ae064a5fe847a0d78656aff3babb988c5e8acddfbbb17fa564e0ec",
+    "hardware/ads8588s_servo/evidence/directory_verification.json": "e4b13215c50369a8d4146bf6899b85a00f20275a917d7aaead87a6b2cc51544b",
+    "hardware/ads8588s_servo/evidence/pcb_ci_baseline.json": "9086bfe6b6a0011f47f8f77ab418aa460ea14938daf07cad0fc0c0ce1bb87070",
+    "hardware/ads8588s_servo/fp-lib-table": "b62c2da429e080fb3980770dae027a1bd4405039df34c55ebea928c748fa9768",
+    "hardware/ads8588s_servo/fpga-servo.pretty/HoYLR2512_Kelvin.kicad_mod": "fe3e68311bfdce7bd70dc6aeb14bad3963fdfb6d8cb33bda447208f1b49ad827",
+    "hardware/ads8588s_servo/fpga-servo.pretty/JILN_3210_2x05_P2.54mm_D1.02.kicad_mod": "cbb23b34bf06f2846a6241a21e5903fac18beda1b61829179880330a6c79a8e4",
+    "hardware/ads8588s_servo/fpga-servo.pretty/JILN_3210_2x20_P2.54mm_D1.02.kicad_mod": "a557de35d96add771f8890583b8df438a244ddf56ba4231938552c7718f3edcc",
+    "hardware/ads8588s_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm.kicad_mod": "ee9e6912ef4adc5bb80bf214b9c59c8ac94d24fefbb0c667e6fe8aefbb8eba95",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Littelfuse_456_25A_SMD.kicad_mod": "076edd6e9b21eb8fab19a8651cf95cafa34b2a1b93aa61a686a0a2c8acb8ec5d",
+    "hardware/ads8588s_servo/fpga-servo.pretty/MountingHole_M3_3.2mm_PTH_Pad5mm.kicad_mod": "33b92e369d7f553b611dcf12846713dd1994630b12bbc010a66f38c1be936832",
+    "hardware/ads8588s_servo/fpga-servo.pretty/NTC_0603_Shiheng_KUU.kicad_mod": "29b6492136dbd7af465e92fe8a5b098a7b6ab26f1d145308a0daffea6f4996b1",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Ohmite_650_4T_P25.40x6.35mm.kicad_mod": "c916e893cc4c0e42466488054cd4278ccb4953e046671689d251c64f75ac47c8",
+    "hardware/ads8588s_servo/fpga-servo.pretty/PhoenixContact_MKDS_5_2_9.52mm.kicad_mod": "682e244f50838f4fb5bbcfb583e89e2e7fa6f17d6668cd8512b926f4b5fcc126",
+    "hardware/ads8588s_servo/fpga-servo.pretty/PhoenixContact_MKDS_5_3_9.52mm.kicad_mod": "8fddb23814fa295aa2186f99f305efca67092e6d1d0934ad976f3ded95f676b1",
+    "hardware/ads8588s_servo/fpga-servo.pretty/SOREDE_SDRH1209_68uH.kicad_mod": "f2a51362a122d2c65fc13dd33c046ba440f2a58e646c6ec8b6267d8f625627b7",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Sunlord_SWPA4020S.kicad_mod": "e392d4c5c7cad7840d52b684ecc7f9677262a2b6d7512d02ba4b6ba306f165f5",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod": "4963801380b585d2a2c8cea3f80d727aa071ea7d35fa76f0fb6728b93ab4dab2",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "de16bf633d8280196b776a76654d93ab2c6ff0452dfa42b6cb8a15abf32568cb",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_D0008A_SOIC8_P1.27mm.kicad_mod": "81f70711953e2fe886873c3ec6356e657945c749386e2a551c75408b3fdfe692",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_DCU0008A_VSSOP8_P0.5mm.kicad_mod": "3166969a6e29fcfb237f932f339afb9b37c4c293fb20e445d6e8b0202d269a58",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod": "1a56ab5dfd377eaac50c379d71c9774b105cf6ebc6ab8c4e14c7f5755cf64bb6",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod": "82af96f53701bb74ec4f7ff27cce0a915563f62068787ec7c961dc25a334bdb2",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "9ce8bbc5cd9b200c3a27ea50851324701aacaf24bb2129cea4413901643f82a8",
+    "hardware/ads8588s_servo/lcsc_sourcing_candidates.csv": "391d200cb246d2d809c6e391009ec62ecf8caa21afea34b9e5634c42b8f4e816",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "24cac69d662a4b953d3bcbc31d29388ee31c915ebaf772d9825f5240007730cc",
+    "hardware/ads8588s_servo/power_input.kicad_sch": "3051c8c6eb2cab4adc4978b8a7c1e697c50c96cc7d1a37fc5cf0804b26b28cfe",
+    "hardware/ads8588s_servo/procurement_candidates.csv": "5bc5e6d81c3ec8b3712b1ae329fe8417d4abde4fa69c1d2baee484e89111dd9c",
+    "hardware/ads8588s_servo/README.md": "0b7c79a389bc623852748c82bbc0d5b82626f826c60ea83f3dad790a35f9aead",
+    "hardware/ads8588s_servo/reva_cost_eco_2026-10-11.csv": "f4c65cec4c540f568414b2b91aa037cd0f250fb7990213aa15c1f6ea88acb376",
+    "hardware/ads8588s_servo/sym-lib-table": "afcba65a80eea67cfcb51c00cd291651eeaa4b2683b719e6db675a7bbe6ecc5f",
+    "hardware/README.md": "6163d35fca9ce30c4d3961ab9807e1ba6b96ef6f0c017d3ff034a8a0d6bf43f5",
+    "tools/ai_pcb_guide/.gitignore": "6252093f8103b25bf77e3171bfc9952ba9c964480ae8f326dc9c4bb12e6aea28",
+    "tools/ai_pcb_guide/scripts/board_parity_audit.py": "c057b477eb504c2c294fdbdc683dbf9124e26801ed05d77760cf633672ca3aa7",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.ps1": "53acbf6448fa997b28cf469ae72430fddc0ebb16e5891241994064bc69f0ffcb",
+    "tools/ai_pcb_guide/scripts/run_kicad_qa.sh": "660f2659371aebe94279ef58a7c9ab0c95382b147f4ddafd7068eea7d5d67c68",
+    "tools/ai_pcb_guide/source_manifest.json": "525a1305e430d58dac280860e27bd2b568718bb9ae64e5ad14ea3973f530fc93",
+    "tools/ai_pcb_guide/templates/review_matrix.md": "a7080aec0b9a75c5d3dd12fc6a9eef65d3cef9382f49188748c68c25d9bf0e60",
+    "tools/ai_pcb_guide/tests/test_board_parity_audit.py": "43f270b36390dde04c4952303ad7cf97ea81b33ff4f259aa0ca9db13c7105d51",
+    "tools/archive/ad7606c_2026_10/build_levelshift.py": "43673925c64743325645ff3ad44b38edc219d55900f5b952093a2ac0b64270bf",
+    "tools/archive/ad7606c_2026_10/build_project.py": "b939973ba2add13d3620985db3e31f3aed2bebbaaf811169d7154ae94c2ca8c2",
+    "tools/archive/layout_2026_10/complete_pcb_connections.py": "ce479ab5628ec74f141790a5b9108b993ffa5f852d062dc07b3fecf410668dfc",
+    "tools/archive/layout_2026_10/repair_layout_entry_pcb.py": "4bcecc5b5139a3f7338f94dc1d6f8800e75807abc7a9ba54edb707034125fd94",
+    "tools/archive/layout_2026_10/repair_legacy_pcb_routes.py": "58e05273082f2cf0bb0ca4aa4f6e44406869c27c5cdcf66c867e5ff319fe4225",
+    "tools/archive/layout_2026_10/route_residual_pcb.py": "1bec7647a498853475900c9a95b4f3e264355a0f7b543cf7accd8800035d5712",
+    "tools/archive/layout_2026_10/simulate_layout_entry.py": "c8a6c39cb2b785718baa75bbc8df8b24f00671979ae9b17013419f2d11f26ca7",
+    "tools/archive/README.md": "814b4ad3ea08442bbfd27a7a3c7cc11fcb843845ee33be300571d5e957e9560c",
+    "tools/pcb.py": "ab9ac0f4ff026499ae6fbc6a8b253f0b5af3b4fc3d1740b643dc3c6c3d33192c",
+    "tools/pcbtools/__init__.py": "88f09e571e16505e49093e72c30db0334cdec5f017241783293f569403e24775",
+    "tools/pcbtools/board.py": "b130fffde47914aaff8c67a8c8cbd6f46f6217ac5fd5131301df511456830c5b",
+    "tools/pcbtools/cli.py": "8d2040607ba83240f96cc3545492d13085e3bfeea61956bd2d9149b2601c350a",
+    "tools/pcbtools/development.py": "dada0200759f51dcabae0176c5fae09635fb7613055a1359904289b82b6b7603",
+    "tools/pcbtools/export.py": "aaec61efd6d8db0c90fadd18a3cf80c6507939b203ad23c2b122c8b4eed3cda4",
+    "tools/pcbtools/kicad.py": "ec9d173a7ecde8e462b5bfb771756c4a817cb51d45845e3a1bb25a7cd7facc3a",
+    "tools/pcbtools/project.py": "5dbdb16463c535a00734558bec1b0c6bf14b3a11ad7d6d24f113e9014632b6f8",
+    "tools/pcbtools/report.py": "fbdaa325633c0d9cab7fcb12cfcb2d9c8474e3cc603675a7da0895d58613fbf0",
+    "tools/pcbtools/rules/__init__.py": "8a4ce0c971ad4483a6a34a59309d5f4f74142573cab0ad19f60eec8d0988c821",
+    "tools/pcbtools/rules/adc.py": "8d85be7a93a527f894ee1cd15c6f64e368d069c8bb5f48a20cf4f7dfe2bd396b",
+    "tools/pcbtools/rules/aux_power.py": "0adbc1ffeee6376f0116b7838e52736076140fbc8f6fd1c07233433e22f3d12a",
+    "tools/pcbtools/rules/power_layout.py": "30d116a0036c341544ceb49c898c2d7516a4cc0c7c94e13cd74f8f759bd4aca9",
+    "tools/pcbtools/rules/protection.py": "1d4f8ceb6665fb536d6184d375dce79dafa6388d401a6aa33539e7fa7ee5e514",
+    "tools/pcbtools/rules/repository.py": "1c1b1bbe23ecdb90b3b914a8500e2094862e5f8092706355428d92e6ad614309",
+    "tools/pcbtools/rules/servo.py": "f329010a181656acc841ef2560daf48b716f31bd134051354eab91d6261b40ca",
+    "tools/pcbtools/schematic.py": "23e3329663770e8cc60bcbe168698eb4284e88007b6df239ce25b780ba1c257a",
+    "tools/pcbtools/testing.py": "fdfcbcde4c5add20edc92c0e214fd99abbf68951690fcc2de0ceba085f72ee61",
+    "tools/pcbtools/verification.py": "7436b9be6ca9f7f4022c82cf57800a123213a7b987099742601c423219471ad8",
+    "tools/projects/ad7606c.json": "efe91209bfe82eba707fcdcc548a6dd1724956ada502c52934a9364b5e0fc2ca",
+    "tools/projects/ads8588s.json": "490f6473517e6f16f4ee7ede3a663c824772bf9d3fdbcae3a30487a6fd6e8b4b",
+    "tools/projects/template.json": "4cbf8bfb64ea3b0536a753760c15f477730d4e721589e3ae4e82b268dc1b46ec",
+    "tools/tests/test_ad7606c_fast_profile.py": "18c47b107abab3dea5a7431d7d94ca722161f9d5fa79450a61b04726fb62f69c",
+    "tools/tests/test_adc_serial_contract.py": "4f8dc269e80ebcd9f4134b2743cc7c188ae6032f9b6dbf47b7faae545ca79132",
+    "tools/tests/test_adc_validity.py": "5eb15fe647e650542fe5530cec42f315b2984a500f9ecf364ca9697fe2476605",
+    "tools/tests/test_aux_power_contract.py": "6d33b5247abc69ca66aa345103b36c0632ab3ddb2279fb892094c02ea37ea5db",
+    "tools/tests/test_ci_scope.py": "5dc69edafac32cb56f4179f47dcd9eebcef4d8c957983b240599619b1110b221",
+    "tools/tests/test_gate_ab_verify.py": "b049e7606b740d1156382bffbbe7cf5a4f4ef4066b93c0fb4574f6b79292b4dd",
+    "tools/tests/test_pcb_checks.py": "2967ef9263072edbd888955b61696cd782b35c33f80bf6c05db6c41ed74698d3",
+    "tools/tests/test_pcb_corners.py": "97d449a986c656fff593e55c0874fd89c38dde6179099effc7e63f532ce27be4",
+    "tools/tests/test_pcb_escape.py": "59ab28efdcb5bb1e9056f609934d25f503eaaad059f1e75e660563e68144cb3e",
+    "tools/tests/test_pcb_kelvin.py": "cc6edcfd280efa333037045026c7ff601cacb88c149971a232efd8ced04e888f",
+    "tools/tests/test_pcb_kelvin_review.py": "290125c79fcfbeef6c181b27c0287a0b2b72a15cd3a30913fe97b375a83f780f",
+    "tools/tests/test_pcb_netclasses.py": "122b1b8328853beb4f782c8a3986ccb136d870d1ad127a58848d8b0a181511f1",
+    "tools/tests/test_public_paths.py": "2a106b37eba050109a0cc5a19a085917fa6600e63508785beac072cdbdd1ba1a",
+    "tools/tests/test_run_gate_ab.py": "aacbbc20795633157b511e3173cbfaa4ed2ea2afd543165ffe875bb2458af3bf",
+    "tools/tests/test_schematic_junctions.py": "af1b58c0868b387bc9e9cc90aaef7ad99495b80c514a2ce6417657e8980bf5e3",
+    "tools/tests/test_schematic_wire_widths.py": "6e777fe0b8c21729d2ed680b08044b04c7b3403af5a3eb626b32fbd2af4a0855",
+    "tools/tests/test_toolkit_core.py": "0944898c01ba544cc7524484e09db82ffe506897c1df5cdf8d9142e69683e74a",
+    "tools/tests/test_toolkit_development.py": "a78f8e13e3983ed5b5f77b227d2e49f0a75b76f73142e876dba66453cd6a200b",
+    "tools/tests/test_toolkit_integration.py": "cc2cc70b25c49e13854de3d7addf1898f6449ebcf7e190d4b8dc21a2f4488c42",
+    "tools/tests/test_toolkit_rules.py": "17ce82627183b4f09432c104ddccb611d188d5ebff57746b45ddb61fbd01bd16",
+    "tools/tests/test_toolkit_schematic.py": "f27c9eba5e32676cedb6691d57913a23d9fba82f4317435ea4b3168ed3b30f4f",
+    "tools/tests/test_toolkit_workflows.py": "bb0e33768c2c646cfb45c068230c84f1da8c21f509b36dc4a9b9e718362221e7",
+    "tools/tests/test_vendor_lands.py": "509b06503a9915bf30cc0c96d072f833744f6537b3b840367d33d15cd834448a"
+  },
+  "netlist": {
+    "components": 181,
+    "nets": 162,
+    "physical_pins": 672
+  },
+  "erc": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0
+  },
+  "drc": {
+    "status": "PASS",
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0,
+    "unconnected": 0,
+    "schematic_parity": 0
+  },
+  "ignored_erc_checks": [],
+  "ignored_drc_checks": [],
+  "findings": [
+    {
+      "rule_id": "native.export_xml",
+      "status": "PASS",
+      "message": "Fresh native export",
+      "details": {}
+    },
+    {
+      "rule_id": "native.export_netlist",
+      "status": "PASS",
+      "message": "Fresh native export",
+      "details": {}
+    },
+    {
+      "rule_id": "native.erc",
+      "status": "PASS",
+      "message": "Native all-severity report",
+      "details": {
+        "errors": 0,
+        "warnings": 0,
+        "exclusions": 0
+      }
+    },
+    {
+      "rule_id": "baseline-native.export_xml",
+      "status": "PASS",
+      "message": "Fresh native export",
+      "details": {}
+    },
+    {
+      "rule_id": "baseline-native.export_netlist",
+      "status": "PASS",
+      "message": "Fresh native export",
+      "details": {}
+    },
+    {
+      "rule_id": "baseline-native.erc",
+      "status": "PASS",
+      "message": "Native all-severity report",
+      "details": {
+        "errors": 0,
+        "warnings": 0,
+        "exclusions": 0
+      }
+    },
+    {
+      "rule_id": "baseline.schematic.native",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 8
+      }
+    },
+    {
+      "rule_id": "baseline.schematic.grid",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 8
+      }
+    },
+    {
+      "rule_id": "baseline.schematic.layout",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 8
+      }
+    },
+    {
+      "rule_id": "baseline.schematic.connectivity",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 8
+      }
+    },
+    {
+      "rule_id": "baseline.schematic.power",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 8
+      }
+    },
+    {
+      "rule_id": "baseline.repository.public_paths",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.servo.native_contract",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.servo.design",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.adc.serial",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.adc.fast_candidate",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.pcb.archived_regression",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.adc.supply_validity",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.servo.selection",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.protection.physical",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.protection.safety",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "baseline.protection.ocp_behavior",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "schematic.native",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 11
+      }
+    },
+    {
+      "rule_id": "schematic.grid",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 11
+      }
+    },
+    {
+      "rule_id": "schematic.layout",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 11
+      }
+    },
+    {
+      "rule_id": "schematic.connectivity",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 11
+      }
+    },
+    {
+      "rule_id": "schematic.power",
+      "status": "PASS",
+      "message": "Check passed",
+      "details": {
+        "errors": [],
+        "files": 11
+      }
+    },
+    {
+      "rule_id": "repository.public_paths",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "power.auxiliary_1a",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "adc.ad7606c",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "adc.profile",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "adc.ad7606c_electrical",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "adc.supply_validity",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "pcb.vendor_lands",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "pcb.internal_pad_rules",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "pcb.constraints",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "pcb.kelvin",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "pcb.escape",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "pcb.corners",
+      "status": "PASS",
+      "message": "Contract passed",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "native.pdf",
+      "status": "PASS",
+      "message": "Native schematic export",
+      "details": {}
+    },
+    {
+      "rule_id": "pcb.parity",
+      "status": "PASS",
+      "message": "Physical pin/net/footprint/value/DNP parity",
+      "details": {
+        "schematic_components": 180,
+        "schematic_nets": 162,
+        "pcb_footprints": 184,
+        "duplicate_references": [],
+        "missing_on_pcb": [],
+        "extra_on_pcb": [],
+        "mechanical_preserved": [
+          "H1",
+          "H2",
+          "H3",
+          "H4"
+        ],
+        "unassigned_footprints": [],
+        "footprint_mismatches": [],
+        "pin_mismatches": [],
+        "net_mismatches": [],
+        "value_mismatches": [],
+        "dnp_mismatches": [],
+        "passed": true
+      }
+    },
+    {
+      "rule_id": "pcb.netclasses",
+      "status": "PASS",
+      "message": "Fresh net assignments and original class minima",
+      "details": {
+        "errors": []
+      }
+    },
+    {
+      "rule_id": "native.drc",
+      "status": "PASS",
+      "message": "Native all-severity report",
+      "details": {
+        "errors": 0,
+        "warnings": 0,
+        "exclusions": 0,
+        "unconnected": 0,
+        "schematic_parity": 0
+      }
+    },
+    {
+      "rule_id": "source.unchanged",
+      "status": "PASS",
+      "message": "Sources unchanged",
+      "details": {}
+    }
+  ],
+  "regression": {
+    "default_python": "3.12.4",
+    "tests": 185,
+    "passed": 171,
+    "skipped": 14,
+    "native_pcb_python": "3.11.5",
+    "native_geometry_tests": 44,
+    "native_geometry_passed": 44,
+    "default_python_native_skips_covered_by_native_lane": 11,
+    "ngspice_posix_tests_not_run": 3,
+    "skipped_tests": [
+      "test_ngspice_regen_and_ideal_rc_crossing (test_gate_ab_verify.RealNetlistMutationTests.test_ngspice_regen_and_ideal_rc_crossing) ... skipped 'ngspice CLI not available'",
+      "test_stale_waveforms_cannot_pass_noop_simulator (test_gate_ab_verify.RealNetlistMutationTests.test_stale_waveforms_cannot_pass_noop_simulator) ... skipped 'Needs ngspice and POSIX true'",
+      "test_pcb_corners (unittest.loader.ModuleSkipped.test_pcb_corners) ... skipped 'pcbnew unavailable in this interpreter; run native geometry lane'",
+      "test_actual_pad_connected_escape (test_pcb_escape.NativeEscapeTests.test_actual_pad_connected_escape) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_detached_local_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_detached_local_via_is_rejected) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_foreign_net_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_foreign_net_via_is_rejected) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_oversized_local_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_oversized_local_via_is_rejected) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_u18_back_track_is_rejected (test_pcb_escape.NativeEscapeTests.test_u18_back_track_is_rejected) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_u1_back_escape_has_physical_via_path (test_pcb_escape.NativeEscapeTests.test_u1_back_escape_has_physical_via_path) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_undersized_drill_is_rejected (test_pcb_escape.NativeEscapeTests.test_undersized_drill_is_rejected) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_via_outside_package_is_rejected (test_pcb_escape.NativeEscapeTests.test_via_outside_package_is_rejected) ... skipped 'native pcbnew required for physical escape audits'",
+      "test_pcb_kelvin (unittest.loader.ModuleSkipped.test_pcb_kelvin) ... skipped 'pcbnew unavailable in this interpreter; run native geometry lane'",
+      "test_pcb_kelvin_review (unittest.loader.ModuleSkipped.test_pcb_kelvin_review) ... skipped 'pcbnew unavailable in this interpreter; run native geometry lane'",
+      "test_incomplete_native_erc_report_cannot_claim_pass (test_run_gate_ab.RunnerTests.test_incomplete_native_erc_report_cannot_claim_pass) ... skipped 'Requires ngspice and POSIX executable script'"
+    ]
+  },
+  "physical_1a": {
+    "requirement": "12 V continuous 1 A TOTAL including onboard loads",
+    "loaded_start": "NOT_RUN",
+    "thermal": "NOT_RUN",
+    "load_transient": "NOT_RUN",
+    "line_transient": "NOT_RUN"
+  },
+  "artifact_sha256": {
+    "ax7010_servo_ad7606c-B_Cu.png": "eeda5ee61ded55497606e49a1a9329ded057b7d326e95ea79c471dff87ede4c2",
+    "ax7010_servo_ad7606c-B_Cu.svg": "c14076b4f04b34d1774d50452ec186db6cf337057cbd91771fd8cf10392774af",
+    "ax7010_servo_ad7606c-F_Cu.png": "73eb3e884923cbec360058e41eb2f4d5046fb48da389ae79c97b4bd82e1332d8",
+    "ax7010_servo_ad7606c-F_Cu.svg": "b06612681e0442b4095db906139285cd5f94903ed5c8efc37c4b85220c3d4e04",
+    "ax7010_servo_ad7606c-In1_Cu.png": "3104d0ee86433ddf547246e784fb653096ee4df6b5e0a03389b618d249a40c6d",
+    "ax7010_servo_ad7606c-In1_Cu.svg": "bd1898ca4e02dc23607f9bee8596e6a1ec60f7ae890911d45f95035803107cf9",
+    "ax7010_servo_ad7606c-In2_Cu.png": "61f55feafa0e21e3a20ad11bbb530af02f4c80c187068d7a684da8038d5dfb1e",
+    "ax7010_servo_ad7606c-In2_Cu.svg": "fd5178a1019e3586b95d1beb66ef108eff91372937f4b850b64649496b9770d4",
+    "drc.json": "dfa0caa87d99bc7067ef5f95253b4aa184b2d267ff3ddc34b31df64b294850fc",
+    "erc.json": "679daff398d2b6a41d08edfc0c6e5db414db5ae2b797a6f1559f91829805eda9",
+    "regression.txt": "2c66ff9bf223eefe4df0e3d6339465a462cec1d521ff67d4aba0a2b67bea4d1d",
+    "schematic.pdf": "cbdab5168ca12e0d8a161ed8430b9ebaea05b9ed817a8bf5906a8bcf5c1d085c"
+  },
+  "svg_presentation_note": "Native SVG plots have trailing whitespace removed; copper geometry is unchanged."
+}

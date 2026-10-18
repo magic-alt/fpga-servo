@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import json
 
-KNOWN_RULES = frozenset({"repository", "servo", "adc_serial", "adc_fast", "ad7606c", "protection", "power_layout", "archived_pcb"})
+KNOWN_RULES = frozenset({"repository", "servo", "adc_serial", "adc_fast", "ad7606c", "protection", "power_layout", "archived_pcb", "aux_power"})
 class ProjectError(ValueError):
     pass
 

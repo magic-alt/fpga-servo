@@ -39,8 +39,13 @@ class IntegrationTests(unittest.TestCase):
                 if not target.exists():failures.append(f"{path.relative_to(ROOT)}: {link}")
         self.assertEqual(failures,[])
     def test_check_fails_for_missing_board(self):
-        r=subprocess.run([sys.executable,str(ROOT/"tools/pcb.py"),"check","--project","ad7606c","--scope","pcb"],capture_output=True,text=True)
-        self.assertEqual(r.returncode,64)
+        with tempfile.TemporaryDirectory(prefix="missing board ") as folder:
+            path = Path(folder)
+            (path/"top.kicad_sch").write_text('(kicad_sch (version 20250114) (uuid "root") (paper "A4") (lib_symbols))')
+            config = path/"project.json"
+            config.write_text(json.dumps({"schema_version": 1, "id": "missing-board", "root": ".", "schematic": "top.kicad_sch", "output": "evidence", "rule_sets": []}))
+            r=subprocess.run([sys.executable,str(ROOT/"tools/pcb.py"),"check","--config",str(config),"--scope","pcb"],capture_output=True,text=True)
+            self.assertEqual(r.returncode,64,r.stdout+r.stderr)
     def test_static_lane_needs_no_native_tool(self):
         r=subprocess.run([sys.executable,str(ROOT/"tools/pcb.py"),"test","--lane","static","--pattern","test_toolkit_core.py","--kicad-cli","absent-kicad"],capture_output=True,text=True)
         self.assertEqual(r.returncode,0,r.stdout+r.stderr)

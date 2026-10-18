@@ -11,7 +11,7 @@ C21,1,2.2uF,FH(风华),1210B225K101NT,Capacitor_SMD:C_1210_3225Metric,C42400139,
 C22,1,22uF,FH(风华),1210B226K250NT,Capacitor_SMD:C_1210_3225Metric,C5204920,CS3225X7R226K250NRL,C2918511,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C23,1,22uF,FH(风华),1210B226K250NT,Capacitor_SMD:C_1210_3225Metric,C5204920,CS3225X7R226K250NRL,C2918511,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C24,1,2.2nF,FH(风华),0603B222J500NT,Capacitor_SMD:C_0603_1608Metric,C60328,CL10B222KB8NNNC,C16033,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-C25,1,3.3nF,FH(风华),0603B332J500NT,Capacitor_SMD:C_0603_1608Metric,C20616243,CC0603JRX7R9BB332,C519530,Stocked prototype primary and cross-manufacturer alternate; China stock checked2026-10-10; OEM package reviewed; not production-qualified,True,False
+C25,1,3.3nF,Murata,GRM1885C1H332JA01D,Capacitor_SMD:C_0603_1608Metric,C77036,UNQUALIFIED,UNVERIFIED,12V total 1A ECO; exact primary required; procurement and bench OPEN,True,False
 C26,1,56pF,FH(风华),0603CG560J500NT,Capacitor_SMD:C_0603_1608Metric,C1676,CL10C560JB81PNC,C472797,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C30,1,10uF,Chinocera(华瓷),HGC0805R7106K250NSLJ,Capacitor_SMD:C_0805_2012Metric,C33546010,FCC0805B106K250FT,C54619707,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C31,1,22uF,HRE(芯声),CGA0805X7R226M100MT,Capacitor_SMD:C_0805_2012Metric,C23692981,GRM21BZ71A226ME15L,C907991,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
@@ -67,7 +67,7 @@ J3,1,DC_IN_48V,Phoenix Contact(菲尼克斯),1714971,fpga-servo:PhoenixContact_M
 J4,1,MOTOR_UVW,KEFA,KF950-9.5-3P,fpga-servo:KEFA_KF950_3_9.50mm,C475107,UNQUALIFIED,UNVERIFIED,China stock200 checked2026-10-10; OEM land reviewed; 32A IEC rating; mechanical/current/thermal qualification OPEN; critical power connector single-source exception,True,False
 J5,1,ABZ_DIFF_ENCODER,JILN(锦凌),321010SG0ABK00A01,fpga-servo:JILN_3210_2x05_P2.54mm_D1.02,C429962,2.54-2*5P简牛,C5665,China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm,True,False
 J6,1,PSU_EXT,System interface,TBD,,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,False,False
-L1,1,68uH,SOREDE,SDRH.1209.LF680MT00,fpga-servo:SOREDE_SDRH1209_68uH,C2942326,UNQUALIFIED,UNVERIFIED,Stock55; prototype only; Irms/guaranteed1A/thermal OPEN; critical power single-source exception,True,False
+L1,1,150uH,Wurth Elektronik,7447709151,fpga-servo:Wurth_WE_PD_1210_7447709151,,UNQUALIFIED,UNVERIFIED,OEM data reviewed 2026-10-18; 12V total 1A design; procurement and bench OPEN,True,False
 L2,1,2.2uH,Sunlord,SWPA4020S2R2MT,fpga-servo:Sunlord_SWPA4020S,C83423,FHD4020S-2R2MT,C602029,OPEN,True,False
 NTC1,1,10k,Shiheng,CMFA 103F3950,fpga-servo:NTC_0603_Shiheng_KUU,C2889049,KNTC0603/10KF3950,C2892547,OPEN,True,False
 NTC2,1,10k,Shiheng,CMFA 103F3950,fpga-servo:NTC_0603_Shiheng_KUU,C2889049,KNTC0603/10KF3950,C2892547,OPEN,True,False
@@ -83,9 +83,9 @@ R1,1,280k,RESI(开步睿思),PTFR0805B280KP9,Resistor_SMD:R_0805_2012Metric,C284
 R2,1,280k,RESI(开步睿思),PTFR0805B280KP9,Resistor_SMD:R_0805_2012Metric,C2849140,RT0805BRD07280KL,C865351,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R3,1,39k,UNI-ROYAL(厚声),TC0325B3902T5F,Resistor_SMD:R_0603_1608Metric,C2988897,RT0603BRD0739KL,C309652,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R20,1,100k,UNI-ROYAL(厚声),0603WAF1003T5E,Resistor_SMD:R_0603_1608Metric,C25803,RS-03K1003FT,C115320,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R21,1,453k,YAGEO(国巨),RC0603FR-07453KL,Resistor_SMD:R_0603_1608Metric,C273765,RTT034533FTP,C103651,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R22,1,49.9k,UNI-ROYAL(厚声),0603WAF4992T5E,Resistor_SMD:R_0603_1608Metric,C23184,RT0603BRD0749K9L,C705780,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R23,1,453k,YAGEO(国巨),RC0603FR-07453KL,Resistor_SMD:R_0603_1608Metric,C273765,RTT034533FTP,C103651,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R21,1,442k,YAGEO,RT0603BRD07442KL,Resistor_SMD:R_0603_1608Metric,,UNQUALIFIED,UNVERIFIED,12V total 1A ECO; exact primary required; procurement and bench OPEN,True,False
+R22,1,49.9k,YAGEO,RT0603BRD0749K9L,Resistor_SMD:R_0603_1608Metric,C705780,UNQUALIFIED,UNVERIFIED,12V total 1A ECO; exact primary required; procurement and bench OPEN,True,False
+R23,1,200k,YAGEO,RC0603FR-07200KL,Resistor_SMD:R_0603_1608Metric,C105574,UNQUALIFIED,UNVERIFIED,12V total 1A ECO; exact primary required; procurement and bench OPEN,True,False
 R32,1,100k,UNVERIFIED,UNVERIFIED,Resistor_SMD:R_0603_1608Metric,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
 R40,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R41,1,47R,FH(风华),RS-03K47R0FT,Resistor_SMD:R_0603_1608Metric,C140087,0603WAF470JT5E,C23182,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False

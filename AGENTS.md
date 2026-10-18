@@ -17,7 +17,7 @@
 
 ## Project Structure & Module Organization
 
-`hardware/` contains separate `ads8588s_servo/` (Rev.A original) and `ad7606c_servo/` (new ADC development) projects, each with its own schematic hierarchy, local libraries and BOM; only the original has a PCB baseline. `fpga/ax7010_servo_reva.xdc` defines AX7010 PL pin constraints. `docs/` holds architecture, interface, bring-up, calculations, and release-gate notes. `tools/` contains a unified Python CLI and reusable domain modules; `.github/workflows/` runs them in CI. There is no firmware or HDL implementation in this repository yet.
+`hardware/` contains separate `ads8588s_servo/` (Rev.A original) and `ad7606c_servo/` (new ADC development) projects, each with its own schematic hierarchy, local libraries and BOM; only the original has a PCB baseline. `hardware/ads8588s_servo/ax7010_servo_reva.xdc` defines AX7010 PL pin constraints. `docs/` holds architecture, interface, bring-up, calculations, and release-gate notes. `tools/` contains a unified Python CLI and reusable domain modules; `.github/workflows/` runs them in CI. There is no firmware or HDL implementation in this repository yet.
 
 ## Build, Test, and Development Commands
 

@@ -85,7 +85,7 @@ TI ADS8588S的每路集成三级Butterworth反混叠LPF，在 **±5V RANGE=0时�
 | BUSY | P16 | ADC_BUSY |
 | 第一字 | P15 | ADC_FRSTDATA |
 
-当前KiCad层级图中存在这8条信号，J10导线可追踪；**J11 PL_B根本没有装配**，`fpga/ax7010_servo_reva.xdc`中的J11参考分配现仅保留为注释。以后若需要硬件16bit并行接口，必须增加真实线束/连接器和引脚/模式重布，不能只取消XDC注释。
+当前KiCad层级图中存在这8条信号，J10导线可追踪；**J11 PL_B根本没有装配**，`hardware/ads8588s_servo/ax7010_servo_reva.xdc`中的J11参考分配现仅保留为注释。以后若需要硬件16bit并行接口，必须增加真实线束/连接器和引脚/模式重布，不能只取消XDC注释。
 
 ## 6. 源文件检查、验收及冻结结论
 
