@@ -5,7 +5,7 @@
 | 方案 | 工程入口 | 说明 |
 |---|---|---|
 | ADS8588S 原方案 | [ads8588s_servo/ax7010_servo_reva.kicad_pro](ads8588s_servo/ax7010_servo_reva.kicad_pro) | [原方案说明](ads8588s_servo/README.md)；保留旧 PCB、采购表和成本快照 |
-| AD7606C-16 新方案 | [ad7606c_servo/ax7010_servo_ad7606c.kicad_pro](ad7606c_servo/ax7010_servo_ad7606c.kicad_pro) | [新方案说明](ad7606c_servo/README.md)、[开发板方案](ad7606c_servo/development_board.md)、[原理图 PDF](ad7606c_servo/evidence/schematic.pdf) |
+| AD7606C-16 新方案 | [ad7606c_servo/ax7010_servo_ad7606c.kicad_pro](ad7606c_servo/ax7010_servo_ad7606c.kicad_pro) | [新方案说明](ad7606c_servo/README.md)、[四层 PCB 布局](ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb)、[开发板方案](ad7606c_servo/development_board.md)、[原理图 PDF](ad7606c_servo/evidence/schematic.pdf) |
 
 原 ADS8588S 工程文件名保持不变，目录内部相对路径和 `${KIPRJMOD}` 库引用仍然有效。原方案的接口 XDC 已迁入 `ads8588s_servo/ax7010_servo_reva.xdc`；新方案的独立 XDC 位于 `ad7606c_servo/`。
 

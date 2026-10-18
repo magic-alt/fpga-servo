@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-18",
+  "status": "PLACEMENT_CANDIDATE_UNROUTED_PCB_RELEASE_BLOCKED",
+  "native_run": "artifacts/pcb/ad7606c/20261018T024233Z-5b7osei3",
+  "tools": {
+    "python": "3.12.4",
+    "kicad": "10.0.3"
+  },
+  "schematic": {
+    "components": 181,
+    "nets": 162,
+    "physical_pins": 672
+  },
+  "baseline_schematic": {
+    "components": 159,
+    "nets": 135,
+    "physical_pins": 592
+  },
+  "erc": {
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0
+  },
+  "baseline_erc": {
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0
+  },
+  "pcb_parity": "PASS",
+  "drc": {
+    "status": "FAIL",
+    "errors": 0,
+    "warnings": 0,
+    "exclusions": 0,
+    "unconnected": 499,
+    "schematic_parity": 0
+  },
+  "current_core_source_sha256": {
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb": "042e91b7adfaa6b5960e0af692174a28206b771fab6dce92fc41ab3e28d7714c",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_dru": "ab756cf874a0fa1575a939bcfe3ac0d60115414d5a10fccdd5f01741ea989403",
+    "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pro": "0b8ec2c328f5fd0f81c816f4561b30761342924e721a808adaecaad762fc4786",
+    "tools/projects/ad7606c.json": "bd8262c73a87f807f7aae4db6f8e74d9131b7ec7243341af3a4360d0efa70ab1"
+  },
+  "regression": {
+    "main": {
+      "tests": 158,
+      "passed": 144,
+      "skipped": 14,
+      "exit_code": 0
+    },
+    "native_geometry": {
+      "tests": 39,
+      "passed": 39,
+      "exit_code": 0,
+      "scope": "tool fixtures and retained board; not new-board routing acceptance"
+    }
+  },
+  "not_run": [
+    "copper routing",
+    "bench timing/power/thermal qualification",
+    "manufacturing qualification"
+  ],
+  "required_design_input": "12 V total continuous/peak auxiliary load: limited to 0.5 A or guaranteed 1 A",
+  "source_integrity_note": "Core hashes describe the current CAD/configuration files; the completed native run independently reported source.unchanged PASS."
+}

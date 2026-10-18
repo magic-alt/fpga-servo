@@ -1,0 +1,2491 @@
+Info: Processing symbol 'C1:Capacitor_THT:CP_Radial_D10.0mm_P5.00mm'.
+Info: Processing symbol 'C104:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C66:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C80:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R55:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C40:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C60:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C100:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'NTC2:fpga-servo:NTC_0603_Shiheng_KUU'.
+Info: Processing symbol 'C22:Capacitor_SMD:C_1210_3225Metric'.
+Info: Processing symbol 'R20:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'J5:fpga-servo:JILN_3210_2x05_P2.54mm_D1.02'.
+Info: Processing symbol 'C86:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C2:Capacitor_THT:CP_Radial_D10.0mm_P5.00mm'.
+Info: Processing symbol 'C91:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'CBOOT2:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'F1:fpga-servo:Littelfuse_456_25A_SMD'.
+Info: Processing symbol 'C67:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'Q3:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'C41:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C81:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C61:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C23:Capacitor_SMD:C_1210_3225Metric'.
+Info: Processing symbol 'R56:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C3:Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3'.
+Info: Processing symbol 'R54:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R50:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C105:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C101:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'L2:fpga-servo:Sunlord_SWPA4020S'.
+Info: Processing symbol 'C87:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'J3:fpga-servo:PhoenixContact_MKDS_5_2_9.52mm'.
+Info: Processing symbol 'C68:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C42:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C24:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C4:Capacitor_SMD:C_1812_4532Metric'.
+Info: Processing symbol 'C92:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R3:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C62:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C82:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'Q2:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'R40:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'F2:Fuse:Fuse_1812_4532Metric'.
+Info: Processing symbol 'R42:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'CBOOT3:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'R57:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C5:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R53:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C43:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C25:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C69:Capacitor_SMD:C_1206_3216Metric'.
+Info: Processing symbol 'C88:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C102:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C63:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C106:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C83:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'Q1:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'C93:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C18:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'R2:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R41:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C44:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C26:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'NTC1:fpga-servo:NTC_0603_Shiheng_KUU'.
+Info: Processing symbol 'J4:fpga-servo:KEFA_KF950_3_9.50mm'.
+Info: Processing symbol 'C70:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R23:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R22:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'C64:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C89:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'Q7:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'C19:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C84:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'J1:fpga-servo:JILN_3210_2x20_P2.54mm_D1.02'.
+Info: Processing symbol 'C45:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C30:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C103:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'Q6:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'C94:Capacitor_SMD:C_1206_3216Metric'.
+Info: Processing symbol 'CBOOT1:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'D1:Diode_SMD:D_SMC'.
+Info: Processing symbol 'C71:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C20:Capacitor_SMD:C_1210_3225Metric'.
+Info: Processing symbol 'C65:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R32:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'Q5:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'Q8:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'C31:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'C46:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C90:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C85:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R1:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Q4:Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm'.
+Info: Processing symbol 'C21:Capacitor_SMD:C_1210_3225Metric'.
+Info: Processing symbol 'L1:fpga-servo:SOREDE_SDRH1209_68uH'.
+Info: Processing symbol 'R21:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R58:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R59:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R60:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R61:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R70:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R71:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R80:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R81:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R82:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R83:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R84:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R85:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R86:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R87:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R88:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R89:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R90:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R91:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R92:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R93:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R94:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R95:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R100:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R101:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R102:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R103:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R104:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R105:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R106:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R107:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R108:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R109:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R110:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R111:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RG1:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RG2:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RG3:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RG4:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RG5:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RG6:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RGS1:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RGS2:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RGS3:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RGS4:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RGS5:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RGS6:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RSH1:fpga-servo:HoYLR2512_Kelvin'.
+Info: Processing symbol 'RSH2:fpga-servo:HoYLR2512_Kelvin'.
+Info: Processing symbol 'RSH3:fpga-servo:HoYLR2512_Kelvin'.
+Info: Processing symbol 'RSH4:fpga-servo:HoYLR2512_Kelvin'.
+Info: Processing symbol 'RT1:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RT2:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'RT3:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'TP1:TestPoint:TestPoint_Pad_D2.0mm'.
+Info: Processing symbol 'U11:Package_TO_SOT_SMD:SOT-363_SC-70-6'.
+Info: Processing symbol 'TP2:TestPoint:TestPoint_Pad_D2.0mm'.
+Info: Processing symbol 'TP3:TestPoint:TestPoint_Pad_D2.0mm'.
+Info: Processing symbol 'TP4:TestPoint:TestPoint_Pad_D2.0mm'.
+Info: Processing symbol 'TP5:TestPoint:TestPoint_Pad_D1.5mm'.
+Info: Processing symbol 'U1:Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm'.
+Info: Processing symbol 'U2:fpga-servo:TI_D0008A_SOIC8_P1.27mm'.
+Info: Processing symbol 'U3:fpga-servo:TI_D0008A_SOIC8_P1.27mm'.
+Info: Processing symbol 'U4:fpga-servo:TI_D0008A_SOIC8_P1.27mm'.
+Info: Processing symbol 'U5:fpga-servo:TI_D0008A_SOIC8_P1.27mm'.
+Info: Processing symbol 'U6:Package_QFP:LQFP-64_10x10mm_P0.5mm'.
+Info: Processing symbol 'U7:Package_SO:TSSOP-16_4.4x5mm_P0.65mm'.
+Info: Processing symbol 'U8:fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm'.
+Info: Processing symbol 'U9:fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm'.
+Info: Processing symbol 'U10:fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm'.
+Info: Processing symbol 'U12:Package_SO:TI_SO-PowerPAD-8'.
+Info: Processing symbol 'U13:fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm'.
+Info: Processing symbol 'U15:fpga-servo:TI_DDF0008A'.
+Info: Processing symbol 'U18:fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm'.
+Info: Processing symbol 'U19:Package_SON:Texas_R-PUSON-N14'.
+Info: Processing symbol 'U20:fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm'.
+Info: Processing symbol 'U21:Package_TO_SOT_SMD:SOT-23-5'.
+Info: Processing symbol 'U22:Package_TO_SOT_SMD:SOT-23-5'.
+Info: Processing symbol 'U23:Package_TO_SOT_SMD:SOT-363_SC-70-6'.
+Info: Processing symbol 'U24:Package_TO_SOT_SMD:SOT-23-6'.
+Info: Processing symbol 'U25:fpga-servo:Texas_DSE0006A_WSON-6_1.5x1.5mm'.
+Info: Processing symbol 'U26:fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm'.
+Info: Processing symbol 'U27:Package_SO:TSSOP-14_4.4x5mm_P0.65mm'.
+Info: Processing symbol 'U28:Package_SO:TSSOP-14_4.4x5mm_P0.65mm'.
+Info: Processing symbol 'U29:Package_SO:TSSOP-14_4.4x5mm_P0.65mm'.
+Updated C20 unit metadata.
+Added C21 (footprint 'Capacitor_SMD:C_1210_3225Metric').
+Changed REF** reference designator to C21.
+Changed C21 value from C_1210_3225Metric to 2.2uF.
+Updated C21 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000003.
+Updated C21 fields.
+Updated C21 sheetname to '/aux_power/'.
+Updated C21 sheetfile to 'aux_power.kicad_sch'.
+Connected C21 pin 1 to /VBUS_PROT.
+Connected C21 pin 2 to /GND.
+Updated C21 unit metadata.
+Added C22 (footprint 'Capacitor_SMD:C_1210_3225Metric').
+Changed REF** reference designator to C22.
+Changed C22 value from C_1210_3225Metric to 22uF.
+Updated C22 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000007.
+Updated C22 fields.
+Updated C22 sheetname to '/aux_power/'.
+Updated C22 sheetfile to 'aux_power.kicad_sch'.
+Add net /VDRV_12V.
+Connected C22 pin 1 to /VDRV_12V.
+Connected C22 pin 2 to /GND.
+Updated C22 unit metadata.
+Added C23 (footprint 'Capacitor_SMD:C_1210_3225Metric').
+Changed REF** reference designator to C23.
+Changed C23 value from C_1210_3225Metric to 22uF.
+Updated C23 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000008.
+Updated C23 fields.
+Updated C23 sheetname to '/aux_power/'.
+Updated C23 sheetfile to 'aux_power.kicad_sch'.
+Connected C23 pin 1 to /VDRV_12V.
+Connected C23 pin 2 to /GND.
+Updated C23 unit metadata.
+Added C24 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C24.
+Changed C24 value from C_0603_1608Metric to 2.2nF.
+Updated C24 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000005.
+Updated C24 fields.
+Updated C24 sheetname to '/aux_power/'.
+Updated C24 sheetfile to 'aux_power.kicad_sch'.
+Add net /aux_power/SW_12V.
+Connected C24 pin 2 to /aux_power/SW_12V.
+Add net /aux_power/BST_12V.
+Connected C24 pin 1 to /aux_power/BST_12V.
+Updated C24 unit metadata.
+Added C25 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C25.
+Changed C25 value from C_0603_1608Metric to 3.3nF.
+Updated C25 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a00000c.
+Updated C25 fields.
+Updated C25 sheetname to '/aux_power/'.
+Updated C25 sheetfile to 'aux_power.kicad_sch'.
+Add net /aux_power/RIPPLE_A.
+Connected C25 pin 1 to /aux_power/RIPPLE_A.
+Connected C25 pin 2 to /VDRV_12V.
+Updated C25 unit metadata.
+Added C26 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C26.
+Changed C26 value from C_0603_1608Metric to 56pF.
+Updated C26 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a00000d.
+Updated C26 fields.
+Updated C26 sheetname to '/aux_power/'.
+Updated C26 sheetfile to 'aux_power.kicad_sch'.
+Connected C26 pin 1 to /aux_power/RIPPLE_A.
+Add net /aux_power/FB_12V.
+Connected C26 pin 2 to /aux_power/FB_12V.
+Updated C26 unit metadata.
+Added C30 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C30.
+Changed C30 value from C_0805_2012Metric to 10uF.
+Updated C30 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000010.
+Updated C30 fields.
+Updated C30 sheetname to '/aux_power/'.
+Updated C30 sheetfile to 'aux_power.kicad_sch'.
+Connected C30 pin 2 to /GND.
+Connected C30 pin 1 to /VDRV_12V.
+Updated C30 unit metadata.
+Added C31 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C31.
+Changed C31 value from C_0805_2012Metric to 22uF.
+Updated C31 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000012.
+Updated C31 fields.
+Updated C31 sheetname to '/aux_power/'.
+Updated C31 sheetfile to 'aux_power.kicad_sch'.
+Add net /VA_5V.
+Connected C31 pin 1 to /VA_5V.
+Connected C31 pin 2 to /GND.
+Updated C31 unit metadata.
+Added C40 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C40.
+Changed C40 value from C_0603_1608Metric to 1nF.
+Updated C40 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a000017.
+Updated C40 fields.
+Updated C40 sheetname to '/current_adc/'.
+Updated C40 sheetfile to 'current_adc.kicad_sch'.
+Connected C40 pin 2 to /GND.
+Add net /IU_ADC.
+Connected C40 pin 1 to /IU_ADC.
+Updated C40 unit metadata.
+Added C41 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C41.
+Changed C41 value from C_0603_1608Metric to 1nF.
+Updated C41 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a00001b.
+Updated C41 fields.
+Updated C41 sheetname to '/current_adc/'.
+Updated C41 sheetfile to 'current_adc.kicad_sch'.
+Connected C41 pin 2 to /GND.
+Add net /IV_ADC.
+Connected C41 pin 1 to /IV_ADC.
+Updated C41 unit metadata.
+Added C42 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C42.
+Changed C42 value from C_0603_1608Metric to 1nF.
+Updated C42 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a00001f.
+Updated C42 fields.
+Updated C42 sheetname to '/current_adc/'.
+Updated C42 sheetfile to 'current_adc.kicad_sch'.
+Connected C42 pin 2 to /GND.
+Add net /IW_ADC.
+Connected C42 pin 1 to /IW_ADC.
+Updated C42 unit metadata.
+Added C43 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C43.
+Changed C43 value from C_0603_1608Metric to 100nF.
+Updated C43 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a000018.
+Updated C43 fields.
+Updated C43 sheetname to '/current_adc/'.
+Updated C43 sheetfile to 'current_adc.kicad_sch'.
+Connected C43 pin 1 to /VA_5V.
+Connected C43 pin 2 to /GND.
+Updated C43 unit metadata.
+Added C44 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C44.
+Changed C44 value from C_0603_1608Metric to 100nF.
+Updated C44 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a00001c.
+Updated C44 fields.
+Updated C44 sheetname to '/current_adc/'.
+Updated C44 sheetfile to 'current_adc.kicad_sch'.
+Connected C44 pin 2 to /GND.
+Connected C44 pin 1 to /VA_5V.
+Updated C44 unit metadata.
+Added C45 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C45.
+Changed C45 value from C_0603_1608Metric to 100nF.
+Updated C45 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a000020.
+Updated C45 fields.
+Updated C45 sheetname to '/current_adc/'.
+Updated C45 sheetfile to 'current_adc.kicad_sch'.
+Connected C45 pin 2 to /GND.
+Connected C45 pin 1 to /VA_5V.
+Updated C45 unit metadata.
+Added C46 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C46.
+Changed C46 value from C_0603_1608Metric to 100nF.
+Updated C46 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf009.
+Updated C46 fields.
+Updated C46 sheetname to '/gate_inverter/'.
+Updated C46 sheetfile to 'gate_inverter.kicad_sch'.
+Connected C46 pin 1 to /VDRV_12V.
+Connected C46 pin 2 to /GND.
+Updated C46 unit metadata.
+Added C60 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C60.
+Changed C60 value from C_0805_2012Metric to 10uF.
+Updated C60 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/5ce073b8-ab5f-528a-8247-230ad4414b55.
+Updated C60 fields.
+Updated C60 sheetname to '/adc_power/'.
+Updated C60 sheetfile to 'adc_power.kicad_sch'.
+Add net Net-(U6E-REFCAPA).
+Connected C60 pin 1 to Net-(U6E-REFCAPA).
+Connected C60 pin 2 to /GND.
+Updated C60 unit metadata.
+Added C61 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C61.
+Changed C61 value from C_0603_1608Metric to 100nF.
+Updated C61 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/fc731e33-1b41-59da-9f17-6438885bdb88.
+Updated C61 fields.
+Updated C61 sheetname to '/adc_power/'.
+Updated C61 sheetfile to 'adc_power.kicad_sch'.
+Connected C61 pin 2 to /GND.
+Add net Net-(U6E-REFIN_REFOUT).
+Connected C61 pin 1 to Net-(U6E-REFIN_REFOUT).
+Updated C61 unit metadata.
+Added C62 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C62.
+Changed C62 value from C_0603_1608Metric to 1uF.
+Updated C62 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/0e972552-b799-5d89-a5c2-71a4d792d87a.
+Updated C62 fields.
+Updated C62 sheetname to '/adc_power/'.
+Updated C62 sheetfile to 'adc_power.kicad_sch'.
+Add net Net-(U6E-REGCAP_A).
+Connected C62 pin 1 to Net-(U6E-REGCAP_A).
+Connected C62 pin 2 to /GND.
+Updated C62 unit metadata.
+Added C63 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C63.
+Changed C63 value from C_0603_1608Metric to 1uF.
+Updated C63 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/98d15b30-86d8-5a69-9eb4-a5f7b8080d1f.
+Updated C63 fields.
+Updated C63 sheetname to '/adc_power/'.
+Updated C63 sheetfile to 'adc_power.kicad_sch'.
+Add net Net-(U6E-REGCAP_D).
+Connected C63 pin 1 to Net-(U6E-REGCAP_D).
+Connected C63 pin 2 to /GND.
+Updated C63 unit metadata.
+Added C64 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C64.
+Changed C64 value from C_0603_1608Metric to 100nF.
+Updated C64 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/58ec75ca-3728-56d2-8ce9-ed5f496b3178.
+Updated C64 fields.
+Updated C64 sheetname to '/adc_power/'.
+Updated C64 sheetfile to 'adc_power.kicad_sch'.
+Connected C64 pin 1 to /VA_5V.
+Connected C64 pin 2 to /GND.
+Updated C64 unit metadata.
+Added C65 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C65.
+Changed C65 value from C_0603_1608Metric to 100nF.
+Updated C65 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/9f343a5b-90e8-5787-8802-fdddb39ba4a2.
+Updated C65 fields.
+Updated C65 sheetname to '/adc_power/'.
+Updated C65 sheetfile to 'adc_power.kicad_sch'.
+Connected C65 pin 2 to /GND.
+Connected C65 pin 1 to /VA_5V.
+Updated C65 unit metadata.
+Added C66 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C66.
+Changed C66 value from C_0603_1608Metric to 100nF.
+Updated C66 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/789818ff-0151-5717-afc2-fc53bd131b3a.
+Updated C66 fields.
+Updated C66 sheetname to '/adc_power/'.
+Updated C66 sheetfile to 'adc_power.kicad_sch'.
+Connected C66 pin 2 to /GND.
+Connected C66 pin 1 to /VA_5V.
+Updated C66 unit metadata.
+Added C67 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C67.
+Changed C67 value from C_0603_1608Metric to 100nF.
+Updated C67 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/1030c37d-837e-5e4a-aa07-7340dafd4e92.
+Updated C67 fields.
+Updated C67 sheetname to '/adc_power/'.
+Updated C67 sheetfile to 'adc_power.kicad_sch'.
+Connected C67 pin 1 to /VA_5V.
+Connected C67 pin 2 to /GND.
+Updated C67 unit metadata.
+Added C68 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C68.
+Changed C68 value from C_0603_1608Metric to 100nF.
+Updated C68 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/7ed2bd02-008e-52e5-849e-cfe8af5a441e.
+Updated C68 fields.
+Updated C68 sheetname to '/adc_power/'.
+Updated C68 sheetfile to 'adc_power.kicad_sch'.
+Connected C68 pin 1 to /VA_5V.
+Connected C68 pin 2 to /GND.
+Updated C68 unit metadata.
+Added C69 (footprint 'Capacitor_SMD:C_1206_3216Metric').
+Changed REF** reference designator to C69.
+Changed C69 value from C_1206_3216Metric to 10uF.
+Updated C69 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000029.
+Updated C69 fields.
+Updated C69 sheetname to '/gate_inverter/'.
+Updated C69 sheetfile to 'gate_inverter.kicad_sch'.
+Connected C69 pin 1 to /VDRV_12V.
+Connected C69 pin 2 to /GND.
+Updated C69 unit metadata.
+Added C70 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C70.
+Changed C70 value from C_0603_1608Metric to 100nF.
+Updated C70 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-000066000061.
+Updated C70 fields.
+Updated C70 sheetname to '/encoder/'.
+Updated C70 sheetfile to 'encoder.kicad_sch'.
+Connected C70 pin 2 to /GND.
+Add net /VIO_3V3.
+Connected C70 pin 1 to /VIO_3V3.
+Updated C70 unit metadata.
+Added C71 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C71.
+Changed C71 value from C_0805_2012Metric to 4.7uF.
+Updated C71 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-000066000062.
+Updated C71 fields.
+Updated C71 sheetname to '/encoder/'.
+Updated C71 sheetfile to 'encoder.kicad_sch'.
+Connected C71 pin 1 to /VIO_3V3.
+Connected C71 pin 2 to /GND.
+Updated C71 unit metadata.
+Added C80 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C80.
+Changed C80 value from C_0603_1608Metric to 100nF.
+Updated C80 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/4f4bed9d-f058-4d9e-8bba-5e29c70a9b96.
+Updated C80 fields.
+Updated C80 sheetname to '/gate_inverter/'.
+Updated C80 sheetfile to 'gate_inverter.kicad_sch'.
+Connected C80 pin 2 to /GND.
+Connected C80 pin 1 to /VIO_3V3.
+Updated C80 unit metadata.
+Added C81 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C81.
+Changed C81 value from C_0603_1608Metric to 100nF.
+Updated C81 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/74fb5248-5976-4ed6-8b8d-99a3cdfc3c93.
+Updated C81 fields.
+Updated C81 sheetname to '/gate_inverter/'.
+Updated C81 sheetfile to 'gate_inverter.kicad_sch'.
+Connected C81 pin 2 to /GND.
+Connected C81 pin 1 to /VIO_3V3.
+Updated C81 unit metadata.
+Added C82 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C82.
+Changed C82 value from C_0603_1608Metric to 100nF.
+Updated C82 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/92ce5ee6-045c-4e51-994e-5f5bc482dafd.
+Updated C82 fields.
+Updated C82 sheetname to '/gate_inverter/'.
+Updated C82 sheetfile to 'gate_inverter.kicad_sch'.
+Connected C82 pin 1 to /VIO_3V3.
+Connected C82 pin 2 to /GND.
+Updated C82 unit metadata.
+Added C83 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C83.
+Changed C83 value from C_0603_1608Metric to 100nF.
+Updated C83 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/13c6aa37-4630-460a-91e1-55f492b796d3.
+Updated C83 fields.
+Updated C83 sheetname to '/gate_inverter/'.
+Updated C83 sheetfile to 'gate_inverter.kicad_sch'.
+Connected C83 pin 2 to /GND.
+Connected C83 pin 1 to /VIO_3V3.
+Updated C83 unit metadata.
+Added C84 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C84.
+Changed C84 value from C_0603_1608Metric to 100nF.
+Updated C84 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/fecfa02c-f69e-4061-b321-306091936762.
+Updated C84 fields.
+Updated C84 sheetname to '/current_adc/'.
+Updated C84 sheetfile to 'current_adc.kicad_sch'.
+Connected C84 pin 2 to /GND.
+Connected C84 pin 1 to /VA_5V.
+Updated C84 unit metadata.
+Added C85 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C85.
+Changed C85 value from C_0603_1608Metric to 100nF.
+Updated C85 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/3494182d-06f1-4be3-bf8d-17464820aae2.
+Updated C85 fields.
+Updated C85 sheetname to '/current_adc/'.
+Updated C85 sheetfile to 'current_adc.kicad_sch'.
+Connected C85 pin 2 to /GND.
+Connected C85 pin 1 to /VA_5V.
+Updated C85 unit metadata.
+Added C86 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C86.
+Changed C86 value from C_0603_1608Metric to 100nF.
+Updated C86 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/9226e738-6378-4eae-92c5-8096cdc5678d.
+Updated C86 fields.
+Updated C86 sheetname to '/ocp_latch/'.
+Updated C86 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C86 pin 2 to /GND.
+Connected C86 pin 1 to /VIO_3V3.
+Updated C86 unit metadata.
+Added C87 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C87.
+Changed C87 value from C_0603_1608Metric to 100nF.
+Updated C87 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/69d2b617-bd14-44b8-84ee-467ed59f7375.
+Updated C87 fields.
+Updated C87 sheetname to '/ocp_latch/'.
+Updated C87 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C87 pin 2 to /GND.
+Connected C87 pin 1 to /VIO_3V3.
+Updated C87 unit metadata.
+Added C88 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C88.
+Changed C88 value from C_0603_1608Metric to 100nF.
+Updated C88 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/6896bf7d-5d65-4de3-b1c4-d94e6569a95a.
+Updated C88 fields.
+Updated C88 sheetname to '/ocp_latch/'.
+Updated C88 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C88 pin 2 to /GND.
+Connected C88 pin 1 to /VIO_3V3.
+Updated C88 unit metadata.
+Added C89 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C89.
+Changed C89 value from C_0603_1608Metric to 100nF.
+Updated C89 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/fb15f6fc-8f6e-4e5b-9aac-436f4228a2ec.
+Updated C89 fields.
+Updated C89 sheetname to '/ocp_latch/'.
+Updated C89 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C89 pin 2 to /GND.
+Connected C89 pin 1 to /VIO_3V3.
+Updated C89 unit metadata.
+Added C90 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C90.
+Changed C90 value from C_0603_1608Metric to 100nF.
+Updated C90 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/67f5f9ef-888a-458e-a4ec-30e57ef8f99f.
+Updated C90 fields.
+Updated C90 sheetname to '/ocp_latch/'.
+Updated C90 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C90 pin 1 to /VIO_3V3.
+Connected C90 pin 2 to /GND.
+Updated C90 unit metadata.
+Added C91 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C91.
+Changed C91 value from C_0603_1608Metric to 100nF.
+Updated C91 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/8ee4764e-f043-452b-801a-4e40c59a7872.
+Updated C91 fields.
+Updated C91 sheetname to '/ocp_latch/'.
+Updated C91 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C91 pin 1 to /VIO_3V3.
+Connected C91 pin 2 to /GND.
+Updated C91 unit metadata.
+Added C92 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C92.
+Changed C92 value from C_0603_1608Metric to 1nF.
+Updated C92 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/6aa97615-045a-4ea5-aa60-cbb5a78f5b82.
+Updated C92 fields.
+Updated C92 sheetname to '/ocp_latch/'.
+Updated C92 sheetfile to 'ocp_latch.kicad_sch'.
+Add net /ocp_latch/CLEAR_FILT.
+Connected C92 pin 1 to /ocp_latch/CLEAR_FILT.
+Connected C92 pin 2 to /GND.
+Updated C92 unit metadata.
+Added C93 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C93.
+Changed C93 value from C_0603_1608Metric to 100nF.
+Updated C93 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/1fd4873c-2c6b-4e70-a8a0-edfcbe50acb8.
+Updated C93 fields.
+Updated C93 sheetname to '/ocp_latch/'.
+Updated C93 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C93 pin 1 to /VIO_3V3.
+Connected C93 pin 2 to /GND.
+Updated C93 unit metadata.
+Added C94 (footprint 'Capacitor_SMD:C_1206_3216Metric').
+Changed REF** reference designator to C94.
+Changed C94 value from C_1206_3216Metric to 100nF.
+Updated C94 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/d103231d-05b8-432b-9e77-2087d34e6941.
+Updated C94 fields.
+Updated C94 sheetname to '/ocp_latch/'.
+Updated C94 sheetfile to 'ocp_latch.kicad_sch'.
+Connected C94 pin 2 to /GND.
+Add net Net-(U25-CT).
+Connected C94 pin 1 to Net-(U25-CT).
+Updated C94 unit metadata.
+Added C100 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to C100.
+Changed C100 value from C_0805_2012Metric to 10uF.
+Updated C100 symbol association from  to /e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a/01d6419a-faad-5935-8214-77cb84deffa1.
+Updated C100 fields.
+Updated C100 sheetname to '/adc_power/'.
+Updated C100 sheetfile to 'adc_power.kicad_sch'.
+Connected C100 pin 2 to /GND.
+Connected C100 pin 1 to /VA_5V.
+Updated C100 unit metadata.
+Added C101 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C101.
+Changed C101 value from C_0603_1608Metric to 100nF.
+Updated C101 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/f9706094-3f45-5132-986f-d46e68de13d7.
+Updated C101 fields.
+Updated C101 sheetname to '/adc_levelshift/'.
+Updated C101 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected C101 pin 2 to /GND.
+Connected C101 pin 1 to /VIO_3V3.
+Updated C101 unit metadata.
+Added C102 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C102.
+Changed C102 value from C_0603_1608Metric to 100nF.
+Updated C102 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/9fd9f241-9ca2-5f7c-871c-7e25bdf6dbc7.
+Updated C102 fields.
+Updated C102 sheetname to '/adc_levelshift/'.
+Updated C102 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected C102 pin 1 to /VA_5V.
+Connected C102 pin 2 to /GND.
+Updated C102 unit metadata.
+Added C103 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C103.
+Changed C103 value from C_0603_1608Metric to 100nF.
+Updated C103 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/ff1968f5-d03c-52e2-8fbc-81c281af2942.
+Updated C103 fields.
+Updated C103 sheetname to '/adc_levelshift/'.
+Updated C103 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected C103 pin 2 to /GND.
+Connected C103 pin 1 to /VIO_3V3.
+Updated C103 unit metadata.
+Added C104 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C104.
+Changed C104 value from C_0603_1608Metric to 100nF.
+Updated C104 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/84211163-de82-5ac1-b5a1-50ddb489f530.
+Updated C104 fields.
+Updated C104 sheetname to '/adc_levelshift/'.
+Updated C104 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected C104 pin 1 to /VA_5V.
+Connected C104 pin 2 to /GND.
+Updated C104 unit metadata.
+Added C105 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C105.
+Changed C105 value from C_0603_1608Metric to 100nF.
+Updated C105 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/429f2170-f647-5850-94a7-998ef9341dfc.
+Updated C105 fields.
+Updated C105 sheetname to '/adc_levelshift/'.
+Updated C105 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected C105 pin 2 to /GND.
+Connected C105 pin 1 to /VIO_3V3.
+Updated C105 unit metadata.
+Added C106 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Changed REF** reference designator to C106.
+Changed C106 value from C_0603_1608Metric to 100nF.
+Updated C106 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/2a25e61a-7e54-5153-8020-20e77d5eee1c.
+Updated C106 fields.
+Updated C106 sheetname to '/adc_levelshift/'.
+Updated C106 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected C106 pin 1 to /VA_5V.
+Connected C106 pin 2 to /GND.
+Updated C106 unit metadata.
+Added CBOOT1 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to CBOOT1.
+Changed CBOOT1 value from C_0805_2012Metric to 470nF.
+Updated CBOOT1 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600002b.
+Updated CBOOT1 fields.
+Updated CBOOT1 sheetname to '/gate_inverter/'.
+Updated CBOOT1 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/BST_U.
+Connected CBOOT1 pin 1 to /gate_inverter/BST_U.
+Add net /SW_U.
+Connected CBOOT1 pin 2 to /SW_U.
+Updated CBOOT1 unit metadata.
+Added CBOOT2 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to CBOOT2.
+Changed CBOOT2 value from C_0805_2012Metric to 470nF.
+Updated CBOOT2 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000034.
+Updated CBOOT2 fields.
+Updated CBOOT2 sheetname to '/gate_inverter/'.
+Updated CBOOT2 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/BST_V.
+Connected CBOOT2 pin 1 to /gate_inverter/BST_V.
+Add net /SW_V.
+Connected CBOOT2 pin 2 to /SW_V.
+Updated CBOOT2 unit metadata.
+Added CBOOT3 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Changed REF** reference designator to CBOOT3.
+Changed CBOOT3 value from C_0805_2012Metric to 470nF.
+Updated CBOOT3 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600003d.
+Updated CBOOT3 fields.
+Updated CBOOT3 sheetname to '/gate_inverter/'.
+Updated CBOOT3 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/BST_W.
+Connected CBOOT3 pin 1 to /gate_inverter/BST_W.
+Add net /SW_W.
+Connected CBOOT3 pin 2 to /SW_W.
+Updated CBOOT3 unit metadata.
+Added D1 (footprint 'Diode_SMD:D_SMC').
+Changed REF** reference designator to D1.
+Changed D1 value from D_SMC to SMCJ54A.
+Updated D1 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000006.
+Updated D1 fields.
+Updated D1 sheetname to '/power_input/'.
+Updated D1 sheetfile to 'power_input.kicad_sch'.
+Added D1 'Do not place' fabrication attribute.
+Connected D1 pin 1 to /VBUS_PROT.
+Connected D1 pin 2 to /GND.
+Updated D1 unit metadata.
+Added F1 (footprint 'fpga-servo:Littelfuse_456_25A_SMD').
+Updated F1 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000002.
+Updated F1 fields.
+Updated F1 sheetname to '/power_input/'.
+Updated F1 sheetfile to 'power_input.kicad_sch'.
+Add net /power_input/VIN_RAW.
+Connected F1 pin 1 to /power_input/VIN_RAW.
+Connected F1 pin 2 to /power_input/VIN_FUSED.
+Updated F1 unit metadata.
+Added F2 (footprint 'Fuse:Fuse_1812_4532Metric').
+Changed REF** reference designator to F2.
+Changed F2 value from Fuse_1812_4532Metric to 0.5A_PTC_ENCODER_5V.
+Updated F2 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-000066000060.
+Updated F2 fields.
+Updated F2 sheetname to '/encoder/'.
+Updated F2 sheetfile to 'encoder.kicad_sch'.
+Connected F2 pin 1 to /VA_5V.
+Add net /encoder/ENC_5V.
+Connected F2 pin 2 to /encoder/ENC_5V.
+Updated F2 unit metadata.
+Added J1 (footprint 'fpga-servo:JILN_3210_2x20_P2.54mm_D1.02').
+Updated J1 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/00000000-0000-0000-0000-000066000063.
+Updated J1 fields.
+Updated J1 sheetname to '/ax7010_interface/'.
+Updated J1 sheetfile to 'ax7010_interface.kicad_sch'.
+Add net /GATE_EN.
+Connected J1 pin 9 to /GATE_EN.
+Add net unconnected-(J1-P35-Pad35).
+Connected J1 pin 35 to unconnected-(J1-P35-Pad35).
+Add net /PWM_UH.
+Connected J1 pin 3 to /PWM_UH.
+Add net unconnected-(J1-P32-Pad32).
+Connected J1 pin 32 to unconnected-(J1-P32-Pad32).
+Connected J1 pin 39 to /VIO_3V3.
+Add net /ADC_FRSTDATA.
+Connected J1 pin 18 to /ADC_FRSTDATA.
+Add net /ADC_CS_N.
+Connected J1 pin 13 to /ADC_CS_N.
+Add net /ENC_Z.
+Connected J1 pin 21 to /ENC_Z.
+Add net /ADC_SCLK.
+Connected J1 pin 12 to /ADC_SCLK.
+Add net /FAULT_CLEAR.
+Connected J1 pin 10 to /FAULT_CLEAR.
+Add net /ADC_CONVST.
+Connected J1 pin 11 to /ADC_CONVST.
+Add net unconnected-(J1-P22-Pad22).
+Connected J1 pin 22 to unconnected-(J1-P22-Pad22).
+Add net /PWM_VH.
+Connected J1 pin 5 to /PWM_VH.
+Add net /OCP_N.
+Connected J1 pin 23 to /OCP_N.
+Connected J1 pin 37 to /GND.
+Add net /PWM_VL.
+Connected J1 pin 6 to /PWM_VL.
+Add net /ADC_DOUTD.
+Connected J1 pin 30 to /ADC_DOUTD.
+Add net /ENC_B.
+Connected J1 pin 20 to /ENC_B.
+Add net /ADC_DOUTC.
+Connected J1 pin 29 to /ADC_DOUTC.
+Add net unconnected-(J1-P25-Pad25).
+Connected J1 pin 25 to unconnected-(J1-P25-Pad25).
+Add net unconnected-(J1-P28-Pad28).
+Connected J1 pin 28 to unconnected-(J1-P28-Pad28).
+Add net unconnected-(J1-P27-Pad27).
+Connected J1 pin 27 to unconnected-(J1-P27-Pad27).
+Add net unconnected-(J1-P33-Pad33).
+Connected J1 pin 33 to unconnected-(J1-P33-Pad33).
+Connected J1 pin 1 to /GND.
+Add net /PWM_WH.
+Connected J1 pin 7 to /PWM_WH.
+Add net unconnected-(J1-P36-Pad36).
+Connected J1 pin 36 to unconnected-(J1-P36-Pad36).
+Add net /PWM_WL.
+Connected J1 pin 8 to /PWM_WL.
+Add net unconnected-(J1-P34-Pad34).
+Connected J1 pin 34 to unconnected-(J1-P34-Pad34).
+Add net unconnected-(J1-P26-Pad26).
+Connected J1 pin 26 to unconnected-(J1-P26-Pad26).
+Add net unconnected-(J1-P2-Pad2).
+Connected J1 pin 2 to unconnected-(J1-P2-Pad2).
+Connected J1 pin 38 to /GND.
+Add net /PWM_UL.
+Connected J1 pin 4 to /PWM_UL.
+Add net /ADC_BUSY.
+Connected J1 pin 17 to /ADC_BUSY.
+Add net /ADC_RESET.
+Connected J1 pin 14 to /ADC_RESET.
+Add net /ADC_SDI.
+Connected J1 pin 31 to /ADC_SDI.
+Add net /ADC_DOUTB.
+Connected J1 pin 16 to /ADC_DOUTB.
+Connected J1 pin 40 to /VIO_3V3.
+Add net /ADC_DOUTA.
+Connected J1 pin 15 to /ADC_DOUTA.
+Add net /ENC_A.
+Connected J1 pin 19 to /ENC_A.
+Add net /PWR_GOOD.
+Connected J1 pin 24 to /PWR_GOOD.
+Updated J1 unit metadata.
+Added J3 (footprint 'fpga-servo:PhoenixContact_MKDS_5_2_9.52mm').
+Changed REF** reference designator to J3.
+Changed J3 value from PhoenixContact_MKDS_5_2_9.52mm to DC_IN_48V.
+Updated J3 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000001.
+Updated J3 fields.
+Updated J3 sheetname to '/power_input/'.
+Updated J3 sheetfile to 'power_input.kicad_sch'.
+Connected J3 pin 2 to /GND.
+Connected J3 pin 1 to /power_input/VIN_RAW.
+Updated J3 unit metadata.
+Added J4 (footprint 'fpga-servo:KEFA_KF950_3_9.50mm').
+Changed J** reference designator to J4.
+Changed J4 value from KF950-9.5-3P to MOTOR_UVW.
+Updated J4 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000045.
+Updated J4 fields.
+Updated J4 sheetname to '/gate_inverter/'.
+Updated J4 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /PH_V.
+Connected J4 pin 2 to /PH_V.
+Add net /PH_W.
+Connected J4 pin 3 to /PH_W.
+Add net /PH_U.
+Connected J4 pin 1 to /PH_U.
+Updated J4 unit metadata.
+Added J5 (footprint 'fpga-servo:JILN_3210_2x05_P2.54mm_D1.02').
+Updated J5 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-00006600005b.
+Updated J5 fields.
+Updated J5 sheetname to '/encoder/'.
+Updated J5 sheetfile to 'encoder.kicad_sch'.
+Add net unconnected-(J5-NC-Pad10).
+Connected J5 pin 10 to unconnected-(J5-NC-Pad10).
+Add net /encoder/ENC_B_N.
+Connected J5 pin 4 to /encoder/ENC_B_N.
+Add net /encoder/ENC_A_N.
+Connected J5 pin 2 to /encoder/ENC_A_N.
+Add net /encoder/ENC_Z_N.
+Connected J5 pin 6 to /encoder/ENC_Z_N.
+Connected J5 pin 8 to /GND.
+Add net /encoder/ENC_Z_P.
+Connected J5 pin 5 to /encoder/ENC_Z_P.
+Connected J5 pin 7 to /encoder/ENC_5V.
+Add net unconnected-(J5-SHIELD-Pad9).
+Connected J5 pin 9 to unconnected-(J5-SHIELD-Pad9).
+Add net /encoder/ENC_B_P.
+Connected J5 pin 3 to /encoder/ENC_B_P.
+Add net /encoder/ENC_A_P.
+Connected J5 pin 1 to /encoder/ENC_A_P.
+Updated J5 unit metadata.
+Added L1 (footprint 'fpga-servo:SOREDE_SDRH1209_68uH').
+Updated L1 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000006.
+Updated L1 fields.
+Updated L1 sheetname to '/aux_power/'.
+Updated L1 sheetfile to 'aux_power.kicad_sch'.
+Connected L1 pin 1 to /aux_power/SW_12V.
+Connected L1 pin 2 to /VDRV_12V.
+Updated L1 unit metadata.
+Added L2 (footprint 'fpga-servo:Sunlord_SWPA4020S').
+Updated L2 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000011.
+Updated L2 fields.
+Updated L2 sheetname to '/aux_power/'.
+Updated L2 sheetfile to 'aux_power.kicad_sch'.
+Connected L2 pin 2 to /VA_5V.
+Add net /aux_power/SW_5V.
+Connected L2 pin 1 to /aux_power/SW_5V.
+Updated L2 unit metadata.
+Added NTC1 (footprint 'fpga-servo:NTC_0603_Shiheng_KUU').
+Changed NTC** reference designator to NTC1.
+Changed NTC1 value from 10k_B3950 to 10k.
+Updated NTC1 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006abaf010.
+Updated NTC1 fields.
+Updated NTC1 sheetname to '/current_adc/'.
+Updated NTC1 sheetfile to 'current_adc.kicad_sch'.
+Add net /NTC_BOARD.
+Connected NTC1 pin 1 to /NTC_BOARD.
+Connected NTC1 pin 2 to /GND.
+Updated NTC1 unit metadata.
+Added NTC2 (footprint 'fpga-servo:NTC_0603_Shiheng_KUU').
+Changed NTC** reference designator to NTC2.
+Changed NTC2 value from 10k_B3950 to 10k.
+Updated NTC2 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006abaf012.
+Updated NTC2 fields.
+Updated NTC2 sheetname to '/current_adc/'.
+Updated NTC2 sheetfile to 'current_adc.kicad_sch'.
+Connected NTC2 pin 2 to /GND.
+Add net /NTC_BOARD_AUX.
+Connected NTC2 pin 1 to /NTC_BOARD_AUX.
+Updated NTC2 unit metadata.
+Added Q1 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q1.
+Changed Q1 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q1 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000030.
+Updated Q1 fields.
+Updated Q1 sheetname to '/gate_inverter/'.
+Updated Q1 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /VBUS_BRIDGE.
+Connected Q1 pin 5 to /VBUS_BRIDGE.
+Connected Q1 pin 5 to /VBUS_BRIDGE.
+Add net Net-(Q1-G).
+Connected Q1 pin 4 to Net-(Q1-G).
+Connected Q1 pin 5 to /VBUS_BRIDGE.
+Connected Q1 pin 1 to /SW_U.
+Connected Q1 pin 2 to /SW_U.
+Connected Q1 pin 3 to /SW_U.
+Connected Q1 pin 5 to /VBUS_BRIDGE.
+Connected Q1 pin 5 to /VBUS_BRIDGE.
+Updated Q1 unit metadata.
+Added Q2 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q2.
+Changed Q2 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q2 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000031.
+Updated Q2 fields.
+Updated Q2 sheetname to '/gate_inverter/'.
+Updated Q2 sheetfile to 'gate_inverter.kicad_sch'.
+Connected Q2 pin 5 to /SW_U.
+Connected Q2 pin 3 to /GND.
+Connected Q2 pin 5 to /SW_U.
+Connected Q2 pin 5 to /SW_U.
+Connected Q2 pin 5 to /SW_U.
+Connected Q2 pin 2 to /GND.
+Add net Net-(Q2-G).
+Connected Q2 pin 4 to Net-(Q2-G).
+Connected Q2 pin 1 to /GND.
+Connected Q2 pin 5 to /SW_U.
+Updated Q2 unit metadata.
+Added Q3 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q3.
+Changed Q3 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q3 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000039.
+Updated Q3 fields.
+Updated Q3 sheetname to '/gate_inverter/'.
+Updated Q3 sheetfile to 'gate_inverter.kicad_sch'.
+Connected Q3 pin 3 to /SW_V.
+Connected Q3 pin 1 to /SW_V.
+Connected Q3 pin 5 to /VBUS_BRIDGE.
+Connected Q3 pin 5 to /VBUS_BRIDGE.
+Add net Net-(Q3-G).
+Connected Q3 pin 4 to Net-(Q3-G).
+Connected Q3 pin 5 to /VBUS_BRIDGE.
+Connected Q3 pin 2 to /SW_V.
+Connected Q3 pin 5 to /VBUS_BRIDGE.
+Connected Q3 pin 5 to /VBUS_BRIDGE.
+Updated Q3 unit metadata.
+Added Q4 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q4.
+Changed Q4 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q4 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600003a.
+Updated Q4 fields.
+Updated Q4 sheetname to '/gate_inverter/'.
+Updated Q4 sheetfile to 'gate_inverter.kicad_sch'.
+Connected Q4 pin 5 to /SW_V.
+Connected Q4 pin 1 to /GND.
+Connected Q4 pin 3 to /GND.
+Add net Net-(Q4-G).
+Connected Q4 pin 4 to Net-(Q4-G).
+Connected Q4 pin 5 to /SW_V.
+Connected Q4 pin 5 to /SW_V.
+Connected Q4 pin 5 to /SW_V.
+Connected Q4 pin 5 to /SW_V.
+Connected Q4 pin 2 to /GND.
+Updated Q4 unit metadata.
+Added Q5 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q5.
+Changed Q5 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q5 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000042.
+Updated Q5 fields.
+Updated Q5 sheetname to '/gate_inverter/'.
+Updated Q5 sheetfile to 'gate_inverter.kicad_sch'.
+Connected Q5 pin 3 to /SW_W.
+Connected Q5 pin 5 to /VBUS_BRIDGE.
+Connected Q5 pin 1 to /SW_W.
+Connected Q5 pin 5 to /VBUS_BRIDGE.
+Connected Q5 pin 5 to /VBUS_BRIDGE.
+Add net Net-(Q5-G).
+Connected Q5 pin 4 to Net-(Q5-G).
+Connected Q5 pin 2 to /SW_W.
+Connected Q5 pin 5 to /VBUS_BRIDGE.
+Connected Q5 pin 5 to /VBUS_BRIDGE.
+Updated Q5 unit metadata.
+Added Q6 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q6.
+Changed Q6 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q6 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000043.
+Updated Q6 fields.
+Updated Q6 sheetname to '/gate_inverter/'.
+Updated Q6 sheetfile to 'gate_inverter.kicad_sch'.
+Connected Q6 pin 1 to /GND.
+Connected Q6 pin 2 to /GND.
+Connected Q6 pin 5 to /SW_W.
+Add net Net-(Q6-G).
+Connected Q6 pin 4 to Net-(Q6-G).
+Connected Q6 pin 5 to /SW_W.
+Connected Q6 pin 5 to /SW_W.
+Connected Q6 pin 5 to /SW_W.
+Connected Q6 pin 5 to /SW_W.
+Connected Q6 pin 3 to /GND.
+Updated Q6 unit metadata.
+Added Q7 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q7.
+Changed Q7 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q7 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000003.
+Updated Q7 fields.
+Updated Q7 sheetname to '/power_input/'.
+Updated Q7 sheetfile to 'power_input.kicad_sch'.
+Add net /power_input/RPP_SRC.
+Connected Q7 pin 2 to /power_input/RPP_SRC.
+Connected Q7 pin 1 to /power_input/RPP_SRC.
+Connected Q7 pin 5 to /power_input/VIN_FUSED.
+Add net /power_input/RPP_GATE.
+Connected Q7 pin 4 to /power_input/RPP_GATE.
+Connected Q7 pin 5 to /power_input/VIN_FUSED.
+Connected Q7 pin 3 to /power_input/RPP_SRC.
+Connected Q7 pin 5 to /power_input/VIN_FUSED.
+Connected Q7 pin 5 to /power_input/VIN_FUSED.
+Connected Q7 pin 5 to /power_input/VIN_FUSED.
+Updated Q7 unit metadata.
+Added Q8 (footprint 'Package_SON:Infineon_PG-TDSON-8_6.15x5.15mm').
+Changed REF** reference designator to Q8.
+Changed Q8 value from Infineon_PG-TDSON-8_6.15x5.15mm to BSC040N10NS5.
+Updated Q8 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006abaf000.
+Updated Q8 fields.
+Updated Q8 sheetname to '/power_input/'.
+Updated Q8 sheetfile to 'power_input.kicad_sch'.
+Connected Q8 pin 5 to /VBUS_PROT.
+Connected Q8 pin 2 to /power_input/RPP_SRC.
+Connected Q8 pin 3 to /power_input/RPP_SRC.
+Connected Q8 pin 5 to /VBUS_PROT.
+Connected Q8 pin 5 to /VBUS_PROT.
+Connected Q8 pin 4 to /power_input/RPP_GATE.
+Connected Q8 pin 5 to /VBUS_PROT.
+Connected Q8 pin 1 to /power_input/RPP_SRC.
+Connected Q8 pin 5 to /VBUS_PROT.
+Updated Q8 unit metadata.
+Added R1 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R1.
+Changed R1 value from R_0805_2012Metric to 280k.
+Updated R1 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006600000b.
+Updated R1 fields.
+Updated R1 sheetname to '/power_input/'.
+Updated R1 sheetfile to 'power_input.kicad_sch'.
+Connected R1 pin 1 to /VBUS_PROT.
+Add net /power_input/VBUS_DIV_MID.
+Connected R1 pin 2 to /power_input/VBUS_DIV_MID.
+Updated R1 unit metadata.
+Added R2 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R2.
+Changed R2 value from R_0805_2012Metric to 280k.
+Updated R2 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006600000c.
+Updated R2 fields.
+Updated R2 sheetname to '/power_input/'.
+Updated R2 sheetfile to 'power_input.kicad_sch'.
+Connected R2 pin 1 to /power_input/VBUS_DIV_MID.
+Connected R2 pin 2 to /VBUS_ADC.
+Updated R2 unit metadata.
+Added R3 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R3.
+Changed R3 value from R_0603_1608Metric to 39k.
+Updated R3 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006600000d.
+Updated R3 fields.
+Updated R3 sheetname to '/power_input/'.
+Updated R3 sheetfile to 'power_input.kicad_sch'.
+Connected R3 pin 2 to /GND.
+Connected R3 pin 1 to /VBUS_ADC.
+Updated R3 unit metadata.
+Added R20 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R20.
+Changed R20 value from R_0603_1608Metric to 100k.
+Updated R20 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000004.
+Updated R20 fields.
+Updated R20 sheetname to '/aux_power/'.
+Updated R20 sheetfile to 'aux_power.kicad_sch'.
+Connected R20 pin 1 to /GND.
+Add net /aux_power/RON_SET.
+Connected R20 pin 2 to /aux_power/RON_SET.
+Updated R20 unit metadata.
+Added R21 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R21.
+Changed R21 value from R_0603_1608Metric to 453k.
+Updated R21 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000009.
+Updated R21 fields.
+Updated R21 sheetname to '/aux_power/'.
+Updated R21 sheetfile to 'aux_power.kicad_sch'.
+Connected R21 pin 2 to /aux_power/FB_12V.
+Connected R21 pin 1 to /VDRV_12V.
+Updated R21 unit metadata.
+Added R22 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R22.
+Changed R22 value from R_0603_1608Metric to 49.9k.
+Updated R22 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a00000a.
+Updated R22 fields.
+Updated R22 sheetname to '/aux_power/'.
+Updated R22 sheetfile to 'aux_power.kicad_sch'.
+Connected R22 pin 1 to /aux_power/FB_12V.
+Connected R22 pin 2 to /GND.
+Updated R22 unit metadata.
+Added R23 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R23.
+Changed R23 value from R_0603_1608Metric to 453k.
+Updated R23 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a00000b.
+Updated R23 fields.
+Updated R23 sheetname to '/aux_power/'.
+Updated R23 sheetfile to 'aux_power.kicad_sch'.
+Connected R23 pin 1 to /aux_power/SW_12V.
+Connected R23 pin 2 to /aux_power/RIPPLE_A.
+Updated R23 unit metadata.
+Added R32 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R32.
+Changed R32 value from R_0603_1608Metric to 100k.
+Updated R32 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000013.
+Updated R32 fields.
+Updated R32 sheetname to '/aux_power/'.
+Updated R32 sheetfile to 'aux_power.kicad_sch'.
+Added R32 'Do not place' fabrication attribute.
+Add net unconnected-(R32-Pad2).
+Connected R32 pin 2 to unconnected-(R32-Pad2).
+Add net unconnected-(R32-Pad1).
+Connected R32 pin 1 to unconnected-(R32-Pad1).
+Updated R32 unit metadata.
+Added R40 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R40.
+Changed R40 value from R_0603_1608Metric to 47R.
+Updated R40 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a000016.
+Updated R40 fields.
+Updated R40 sheetname to '/current_adc/'.
+Updated R40 sheetfile to 'current_adc.kicad_sch'.
+Connected R40 pin 2 to /IU_ADC.
+Add net Net-(U2-OUT).
+Connected R40 pin 1 to Net-(U2-OUT).
+Updated R40 unit metadata.
+Added R41 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R41.
+Changed R41 value from R_0603_1608Metric to 47R.
+Updated R41 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a00001a.
+Updated R41 fields.
+Updated R41 sheetname to '/current_adc/'.
+Updated R41 sheetfile to 'current_adc.kicad_sch'.
+Connected R41 pin 2 to /IV_ADC.
+Add net Net-(U3-OUT).
+Connected R41 pin 1 to Net-(U3-OUT).
+Updated R41 unit metadata.
+Added R42 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R42.
+Changed R42 value from R_0603_1608Metric to 47R.
+Updated R42 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a00001e.
+Updated R42 fields.
+Updated R42 sheetname to '/current_adc/'.
+Updated R42 sheetfile to 'current_adc.kicad_sch'.
+Add net Net-(U4-OUT).
+Connected R42 pin 1 to Net-(U4-OUT).
+Connected R42 pin 2 to /IW_ADC.
+Updated R42 unit metadata.
+Added R50 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R50.
+Changed R50 value from R_0603_1608Metric to 8.2k.
+Updated R50 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/1874ef16-93b9-43d5-8d67-e2663596d153.
+Updated R50 fields.
+Updated R50 sheetname to '/current_adc/'.
+Updated R50 sheetfile to 'current_adc.kicad_sch'.
+Add net /current_adc/BUS_OCP_REF.
+Connected R50 pin 2 to /current_adc/BUS_OCP_REF.
+Connected R50 pin 1 to /VA_5V.
+Updated R50 unit metadata.
+Added R53 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R53.
+Changed R53 value from R_0603_1608Metric to 2k.
+Updated R53 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/7f5da5c1-f789-4f4d-882b-5ce5ce9470d1.
+Updated R53 fields.
+Updated R53 sheetname to '/current_adc/'.
+Updated R53 sheetfile to 'current_adc.kicad_sch'.
+Connected R53 pin 2 to /GND.
+Connected R53 pin 1 to /current_adc/BUS_OCP_REF.
+Updated R53 unit metadata.
+Added R54 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R54.
+Changed R54 value from R_0603_1608Metric to 4.7k.
+Updated R54 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/3a43314c-483c-439d-a9bb-28bed3167f45.
+Updated R54 fields.
+Updated R54 sheetname to '/current_adc/'.
+Updated R54 sheetfile to 'current_adc.kicad_sch'.
+Connected R54 pin 1 to /OCP_N.
+Connected R54 pin 2 to /VIO_3V3.
+Updated R54 unit metadata.
+Added R55 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R55.
+Changed R55 value from R_0603_1608Metric to 10k.
+Updated R55 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf008.
+Updated R55 fields.
+Updated R55 sheetname to '/gate_inverter/'.
+Updated R55 sheetfile to 'gate_inverter.kicad_sch'.
+Connected R55 pin 2 to /VIO_3V3.
+Connected R55 pin 1 to /PWR_GOOD.
+Updated R55 unit metadata.
+Added R56 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R56.
+Changed R56 value from R_0603_1608Metric to 100k.
+Updated R56 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf002.
+Updated R56 fields.
+Updated R56 sheetname to '/gate_inverter/'.
+Updated R56 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/HIN_U_SAFE.
+Connected R56 pin 1 to /gate_inverter/HIN_U_SAFE.
+Connected R56 pin 2 to /GND.
+Updated R56 unit metadata.
+Added R57 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R57.
+Changed R57 value from R_0603_1608Metric to 100k.
+Updated R57 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf003.
+Updated R57 fields.
+Updated R57 sheetname to '/gate_inverter/'.
+Updated R57 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/LIN_U_SAFE.
+Connected R57 pin 1 to /gate_inverter/LIN_U_SAFE.
+Connected R57 pin 2 to /GND.
+Updated R57 unit metadata.
+Added C1 (footprint 'Capacitor_THT:CP_Radial_D10.0mm_P5.00mm').
+Added R58 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R58.
+Changed R58 value from R_0603_1608Metric to 100k.
+Updated R58 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf004.
+Updated R58 fields.
+Updated R58 sheetname to '/gate_inverter/'.
+Updated R58 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/HIN_V_SAFE.
+Connected R58 pin 1 to /gate_inverter/HIN_V_SAFE.
+Connected R58 pin 2 to /GND.
+Updated R58 unit metadata.
+Changed REF** reference designator to C1.
+Added R59 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R59.
+Changed R59 value from R_0603_1608Metric to 100k.
+Updated R59 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf005.
+Updated R59 fields.
+Updated R59 sheetname to '/gate_inverter/'.
+Updated R59 sheetfile to 'gate_inverter.kicad_sch'.
+Connected R59 pin 2 to /GND.
+Add net /gate_inverter/LIN_V_SAFE.
+Connected R59 pin 1 to /gate_inverter/LIN_V_SAFE.
+Updated R59 unit metadata.
+Changed C1 value from CP_Radial_D10.0mm_P5.00mm to 100uF.
+Added R60 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R60.
+Changed R60 value from R_0603_1608Metric to 100k.
+Updated R60 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf006.
+Updated R60 fields.
+Updated R60 sheetname to '/gate_inverter/'.
+Updated R60 sheetfile to 'gate_inverter.kicad_sch'.
+Connected R60 pin 2 to /GND.
+Add net /gate_inverter/HIN_W_SAFE.
+Connected R60 pin 1 to /gate_inverter/HIN_W_SAFE.
+Updated R60 unit metadata.
+Updated C1 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000007.
+Added R61 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R61.
+Changed R61 value from R_0603_1608Metric to 100k.
+Updated R61 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006abaf007.
+Updated R61 fields.
+Updated R61 sheetname to '/gate_inverter/'.
+Updated R61 sheetfile to 'gate_inverter.kicad_sch'.
+Connected R61 pin 2 to /GND.
+Add net /gate_inverter/LIN_W_SAFE.
+Connected R61 pin 1 to /gate_inverter/LIN_W_SAFE.
+Updated R61 unit metadata.
+Updated C1 fields.
+Added R70 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R70.
+Changed R70 value from R_0603_1608Metric to 10k.
+Updated R70 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006abaf00f.
+Updated R70 fields.
+Updated R70 sheetname to '/current_adc/'.
+Updated R70 sheetfile to 'current_adc.kicad_sch'.
+Connected R70 pin 2 to /NTC_BOARD.
+Connected R70 pin 1 to /VA_5V.
+Updated R70 unit metadata.
+Updated C1 sheetname to '/power_input/'.
+Added R71 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R71.
+Changed R71 value from R_0603_1608Metric to 10k.
+Updated R71 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006abaf011.
+Updated R71 fields.
+Updated R71 sheetname to '/current_adc/'.
+Updated R71 sheetfile to 'current_adc.kicad_sch'.
+Connected R71 pin 2 to /NTC_BOARD_AUX.
+Connected R71 pin 1 to /VA_5V.
+Updated R71 unit metadata.
+Updated C1 sheetfile to 'power_input.kicad_sch'.
+Added R80 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R80.
+Changed R80 value from R_0603_1608Metric to 10k.
+Updated R80 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/cc5a9d97-4d15-4051-9890-25b287f08684.
+Updated R80 fields.
+Updated R80 sheetname to '/ax7010_interface/'.
+Updated R80 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R80 pin 1 to /PWM_UH.
+Connected R80 pin 2 to /GND.
+Updated R80 unit metadata.
+Add net /GND.
+Added R81 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R81.
+Changed R81 value from R_0603_1608Metric to 10k.
+Updated R81 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/8bd230ab-cb0d-4d9f-9340-95d2b41d7e1b.
+Updated R81 fields.
+Updated R81 sheetname to '/ax7010_interface/'.
+Updated R81 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R81 pin 2 to /GND.
+Connected R81 pin 1 to /PWM_UL.
+Updated R81 unit metadata.
+Connected C1 pin 2 to /GND.
+Added R82 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R82.
+Changed R82 value from R_0603_1608Metric to 10k.
+Updated R82 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/1b028352-5d4e-4954-a495-0503fe7d2a11.
+Updated R82 fields.
+Updated R82 sheetname to '/ax7010_interface/'.
+Updated R82 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R82 pin 2 to /GND.
+Connected R82 pin 1 to /PWM_VH.
+Updated R82 unit metadata.
+Add net /VBUS_PROT.
+Added R83 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R83.
+Changed R83 value from R_0603_1608Metric to 10k.
+Updated R83 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/07eaab2c-4e1e-4c21-a4d4-473d355383d2.
+Updated R83 fields.
+Updated R83 sheetname to '/ax7010_interface/'.
+Updated R83 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R83 pin 2 to /GND.
+Connected R83 pin 1 to /PWM_VL.
+Updated R83 unit metadata.
+Connected C1 pin 1 to /VBUS_PROT.
+Added R84 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R84.
+Changed R84 value from R_0603_1608Metric to 10k.
+Updated R84 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/ddc36424-1aa9-4559-ae41-b0abf2ce8e89.
+Updated R84 fields.
+Updated R84 sheetname to '/ax7010_interface/'.
+Updated R84 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R84 pin 2 to /GND.
+Connected R84 pin 1 to /PWM_WH.
+Updated R84 unit metadata.
+Updated C1 unit metadata.
+Added R85 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R85.
+Changed R85 value from R_0603_1608Metric to 10k.
+Updated R85 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/a47192f9-e347-4963-87b8-915b703b1c18.
+Updated R85 fields.
+Updated R85 sheetname to '/ax7010_interface/'.
+Updated R85 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R85 pin 1 to /PWM_WL.
+Connected R85 pin 2 to /GND.
+Updated R85 unit metadata.
+Added C2 (footprint 'Capacitor_THT:CP_Radial_D10.0mm_P5.00mm').
+Added R86 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R86.
+Changed R86 value from R_0603_1608Metric to 10k.
+Updated R86 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/6d947cad-15e5-46d3-90e8-3e25b9f42585.
+Updated R86 fields.
+Updated R86 sheetname to '/ax7010_interface/'.
+Updated R86 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R86 pin 1 to /GATE_EN.
+Connected R86 pin 2 to /GND.
+Updated R86 unit metadata.
+Changed REF** reference designator to C2.
+Added R87 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R87.
+Changed R87 value from R_0603_1608Metric to 10k.
+Updated R87 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/7e4754dc-7c84-4898-b135-0d9f72fcc06c.
+Updated R87 fields.
+Updated R87 sheetname to '/ocp_latch/'.
+Updated R87 sheetfile to 'ocp_latch.kicad_sch'.
+Connected R87 pin 1 to /FAULT_CLEAR.
+Connected R87 pin 2 to /GND.
+Updated R87 unit metadata.
+Changed C2 value from CP_Radial_D10.0mm_P5.00mm to 100uF.
+Added R88 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R88.
+Changed R88 value from R_0603_1608Metric to 1k.
+Updated R88 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/ff5e1014-8204-46fe-a63e-5c11d8e114e1.
+Updated R88 fields.
+Updated R88 sheetname to '/ocp_latch/'.
+Updated R88 sheetfile to 'ocp_latch.kicad_sch'.
+Connected R88 pin 1 to /FAULT_CLEAR.
+Connected R88 pin 2 to /ocp_latch/CLEAR_FILT.
+Updated R88 unit metadata.
+Updated C2 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000008.
+Added R89 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R89.
+Changed R89 value from R_0603_1608Metric to 100k.
+Updated R89 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/6e471afd-8b95-4e70-9980-f824b4a83887.
+Updated R89 fields.
+Updated R89 sheetname to '/ocp_latch/'.
+Updated R89 sheetfile to 'ocp_latch.kicad_sch'.
+Add net /ocp_latch/POR_N.
+Connected R89 pin 2 to /ocp_latch/POR_N.
+Connected R89 pin 1 to /VIO_3V3.
+Updated R89 unit metadata.
+Updated C2 fields.
+Added R90 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R90.
+Changed R90 value from R_0603_1608Metric to 10k.
+Updated R90 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/b39d09b3-02d9-4081-bd6a-c33056154c9f.
+Updated R90 fields.
+Updated R90 sheetname to '/ocp_latch/'.
+Updated R90 sheetfile to 'ocp_latch.kicad_sch'.
+Connected R90 pin 2 to /GND.
+Add net /ARMED.
+Connected R90 pin 1 to /ARMED.
+Updated R90 unit metadata.
+Updated C2 sheetname to '/power_input/'.
+Added R91 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R91.
+Changed R91 value from R_0603_1608Metric to 10k.
+Updated R91 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/cb24b094-1e49-4568-966e-067e0ef4af89.
+Updated R91 fields.
+Updated R91 sheetname to '/ocp_latch/'.
+Updated R91 sheetfile to 'ocp_latch.kicad_sch'.
+Connected R91 pin 2 to /GND.
+Add net /ocp_latch/HEALTHY_N.
+Connected R91 pin 1 to /ocp_latch/HEALTHY_N.
+Updated R91 unit metadata.
+Updated C2 sheetfile to 'power_input.kicad_sch'.
+Added R92 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R92.
+Changed R92 value from R_0603_1608Metric to 3.24k.
+Updated R92 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/6b100771-013a-4404-accd-625267c9a66c.
+Updated R92 fields.
+Updated R92 sheetname to '/ocp_latch/'.
+Updated R92 sheetfile to 'ocp_latch.kicad_sch'.
+Add net Net-(U25-SENSE).
+Connected R92 pin 2 to Net-(U25-SENSE).
+Connected R92 pin 1 to /VA_5V.
+Updated R92 unit metadata.
+Connected C2 pin 2 to /GND.
+Added R93 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R93.
+Changed R93 value from R_0603_1608Metric to 1k.
+Updated R93 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/541e2a05-b239-4a1c-ad21-15019ec0bfb2.
+Updated R93 fields.
+Updated R93 sheetname to '/ocp_latch/'.
+Updated R93 sheetfile to 'ocp_latch.kicad_sch'.
+Connected R93 pin 2 to /GND.
+Connected R93 pin 1 to Net-(U25-SENSE).
+Updated R93 unit metadata.
+Connected C2 pin 1 to /VBUS_PROT.
+Added R94 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R94.
+Changed R94 value from R_0603_1608Metric to 75k.
+Updated R94 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/6f4e0c99-e5e4-4131-bece-e2265b295b65.
+Updated R94 fields.
+Updated R94 sheetname to '/aux_power/'.
+Updated R94 sheetfile to 'aux_power.kicad_sch'.
+Add net /aux_power/FB_5V.
+Connected R94 pin 2 to /aux_power/FB_5V.
+Connected R94 pin 1 to /VA_5V.
+Updated R94 unit metadata.
+Updated C2 unit metadata.
+Added R95 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R95.
+Changed R95 value from R_0603_1608Metric to 10k.
+Updated R95 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/75f371ba-7fb5-4f92-b018-7045c4f85027.
+Updated R95 fields.
+Updated R95 sheetname to '/aux_power/'.
+Updated R95 sheetfile to 'aux_power.kicad_sch'.
+Connected R95 pin 2 to /GND.
+Connected R95 pin 1 to /aux_power/FB_5V.
+Updated R95 unit metadata.
+Added C3 (footprint 'Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3').
+Added R100 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R100.
+Changed R100 value from R_0603_1608Metric to 47R.
+Updated R100 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/cbe8b780-ab58-5e7c-8ef9-e27e5ac32cf2.
+Updated R100 fields.
+Updated R100 sheetname to '/adc_levelshift/'.
+Updated R100 sheetfile to 'adc_levelshift.kicad_sch'.
+Add net Net-(U27-A3Y).
+Connected R100 pin 2 to Net-(U27-A3Y).
+Connected R100 pin 1 to /ADC_DOUTA.
+Updated R100 unit metadata.
+Changed REF** reference designator to C3.
+Added R101 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R101.
+Changed R101 value from R_0603_1608Metric to 47R.
+Updated R101 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/5b65fafb-5c11-5c84-9a60-a682d6a5e435.
+Updated R101 fields.
+Updated R101 sheetname to '/adc_levelshift/'.
+Updated R101 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected R101 pin 1 to /ADC_DOUTB.
+Add net Net-(U27-A4Y).
+Connected R101 pin 2 to Net-(U27-A4Y).
+Updated R101 unit metadata.
+Changed C3 value from C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3 to 1uF.
+Added R102 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R102.
+Changed R102 value from R_0603_1608Metric to 47R.
+Updated R102 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/b38991cc-1f17-5aae-b7a7-24826813ac3c.
+Updated R102 fields.
+Updated R102 sheetname to '/adc_levelshift/'.
+Updated R102 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected R102 pin 1 to /ADC_DOUTC.
+Add net Net-(U28-A3Y).
+Connected R102 pin 2 to Net-(U28-A3Y).
+Updated R102 unit metadata.
+Updated C3 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000009.
+Added R103 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R103.
+Changed R103 value from R_0603_1608Metric to 47R.
+Updated R103 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/92c312ac-f6e4-5669-a369-a2d07e685db4.
+Updated R103 fields.
+Updated R103 sheetname to '/adc_levelshift/'.
+Updated R103 sheetfile to 'adc_levelshift.kicad_sch'.
+Add net Net-(U28-A4Y).
+Connected R103 pin 2 to Net-(U28-A4Y).
+Connected R103 pin 1 to /ADC_DOUTD.
+Updated R103 unit metadata.
+Updated C3 fields.
+Added R104 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R104.
+Changed R104 value from R_0603_1608Metric to 47R.
+Updated R104 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/da72f8e5-32c0-582a-aa4b-76150ed5cc87.
+Updated R104 fields.
+Updated R104 sheetname to '/adc_core/'.
+Updated R104 sheetfile to 'adc_core.kicad_sch'.
+Add net /ADC5_SCLK.
+Connected R104 pin 1 to /ADC5_SCLK.
+Add net Net-(U6B-SCLK).
+Connected R104 pin 2 to Net-(U6B-SCLK).
+Updated R104 unit metadata.
+Updated C3 sheetname to '/power_input/'.
+Added R105 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R105.
+Changed R105 value from R_0603_1608Metric to 10k.
+Updated R105 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/478d3e45-7c46-518a-b501-cf9bd41facea.
+Updated R105 fields.
+Updated R105 sheetname to '/adc_core/'.
+Updated R105 sheetfile to 'adc_core.kicad_sch'.
+Connected R105 pin 1 to /GND.
+Add net /ADC5_CONVST.
+Connected R105 pin 2 to /ADC5_CONVST.
+Updated R105 unit metadata.
+Updated C3 sheetfile to 'power_input.kicad_sch'.
+Added R106 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R106.
+Changed R106 value from R_0603_1608Metric to 10k.
+Updated R106 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/c09e35fc-67e4-5823-bbd1-4993be58681b.
+Updated R106 fields.
+Updated R106 sheetname to '/adc_core/'.
+Updated R106 sheetfile to 'adc_core.kicad_sch'.
+Add net /ADC5_RESET.
+Connected R106 pin 1 to /ADC5_RESET.
+Connected R106 pin 2 to /VA_5V.
+Updated R106 unit metadata.
+Connected C3 pin 2 to /GND.
+Added R107 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R107.
+Changed R107 value from R_0603_1608Metric to 10k.
+Updated R107 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/2435d02f-3ed4-5907-b762-184671815b42.
+Updated R107 fields.
+Updated R107 sheetname to '/adc_core/'.
+Updated R107 sheetfile to 'adc_core.kicad_sch'.
+Connected R107 pin 2 to /ADC5_SCLK.
+Connected R107 pin 1 to /GND.
+Updated R107 unit metadata.
+Connected C3 pin 1 to /VBUS_PROT.
+Added R108 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R108.
+Changed R108 value from R_0603_1608Metric to 10k.
+Updated R108 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/30d3cc83-df03-533a-b536-5490662c8bb8.
+Updated R108 fields.
+Updated R108 sheetname to '/adc_core/'.
+Updated R108 sheetfile to 'adc_core.kicad_sch'.
+Add net /ADC5_CS_N.
+Connected R108 pin 1 to /ADC5_CS_N.
+Connected R108 pin 2 to /VA_5V.
+Updated R108 unit metadata.
+Updated C3 unit metadata.
+Added R109 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R109.
+Changed R109 value from R_0603_1608Metric to 10k.
+Updated R109 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/67a2a5d9-a13e-5da7-99e3-fb3cc7b3e458.
+Updated R109 fields.
+Updated R109 sheetname to '/adc_core/'.
+Updated R109 sheetfile to 'adc_core.kicad_sch'.
+Add net /ADC5_SDI.
+Connected R109 pin 2 to /ADC5_SDI.
+Connected R109 pin 1 to /GND.
+Updated R109 unit metadata.
+Added C4 (footprint 'Capacitor_SMD:C_1812_4532Metric').
+Added R110 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R110.
+Changed R110 value from R_0603_1608Metric to 10k.
+Updated R110 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/59fd2bda-c8b9-52cf-b4e2-2215b5dcb70f.
+Updated R110 fields.
+Updated R110 sheetname to '/ax7010_interface/'.
+Updated R110 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R110 pin 1 to /ADC_RESET.
+Connected R110 pin 2 to /VIO_3V3.
+Updated R110 unit metadata.
+Changed REF** reference designator to C4.
+Added R111 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to R111.
+Changed R111 value from R_0603_1608Metric to 10k.
+Updated R111 symbol association from  to /690099d4-5edd-5668-82f6-b873861398aa/ab36016f-8b36-5f39-b9e4-e625debe2c7b.
+Updated R111 fields.
+Updated R111 sheetname to '/ax7010_interface/'.
+Updated R111 sheetfile to 'ax7010_interface.kicad_sch'.
+Connected R111 pin 1 to /ADC_CS_N.
+Connected R111 pin 2 to /VIO_3V3.
+Updated R111 unit metadata.
+Changed C4 value from C_1812_4532Metric to 100nF.
+Added RG1 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RG1.
+Changed RG1 value from R_0603_1608Metric to 33R.
+Updated RG1 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600002c.
+Updated RG1 fields.
+Updated RG1 sheetname to '/gate_inverter/'.
+Updated RG1 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RG1 pin 2 to Net-(Q1-G).
+Add net /gate_inverter/GH_U.
+Connected RG1 pin 1 to /gate_inverter/GH_U.
+Updated RG1 unit metadata.
+Updated C4 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006600000a.
+Added RG2 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RG2.
+Changed RG2 value from R_0603_1608Metric to 33R.
+Updated RG2 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600002d.
+Updated RG2 fields.
+Updated RG2 sheetname to '/gate_inverter/'.
+Updated RG2 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/GL_U.
+Connected RG2 pin 1 to /gate_inverter/GL_U.
+Connected RG2 pin 2 to Net-(Q2-G).
+Updated RG2 unit metadata.
+Updated C4 fields.
+Added RG3 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RG3.
+Changed RG3 value from R_0603_1608Metric to 33R.
+Updated RG3 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000035.
+Updated RG3 fields.
+Updated RG3 sheetname to '/gate_inverter/'.
+Updated RG3 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/GH_V.
+Connected RG3 pin 1 to /gate_inverter/GH_V.
+Connected RG3 pin 2 to Net-(Q3-G).
+Updated RG3 unit metadata.
+Updated C4 sheetname to '/power_input/'.
+Added RG4 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RG4.
+Changed RG4 value from R_0603_1608Metric to 33R.
+Updated RG4 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000036.
+Updated RG4 fields.
+Updated RG4 sheetname to '/gate_inverter/'.
+Updated RG4 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/GL_V.
+Connected RG4 pin 1 to /gate_inverter/GL_V.
+Connected RG4 pin 2 to Net-(Q4-G).
+Updated RG4 unit metadata.
+Updated C4 sheetfile to 'power_input.kicad_sch'.
+Added RG5 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RG5.
+Changed RG5 value from R_0603_1608Metric to 33R.
+Updated RG5 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600003e.
+Updated RG5 fields.
+Updated RG5 sheetname to '/gate_inverter/'.
+Updated RG5 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RG5 pin 2 to Net-(Q5-G).
+Add net /gate_inverter/GH_W.
+Connected RG5 pin 1 to /gate_inverter/GH_W.
+Updated RG5 unit metadata.
+Connected C4 pin 1 to /VBUS_PROT.
+Added RG6 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RG6.
+Changed RG6 value from R_0603_1608Metric to 33R.
+Updated RG6 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600003f.
+Updated RG6 fields.
+Updated RG6 sheetname to '/gate_inverter/'.
+Updated RG6 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RG6 pin 2 to Net-(Q6-G).
+Add net /gate_inverter/GL_W.
+Connected RG6 pin 1 to /gate_inverter/GL_W.
+Updated RG6 unit metadata.
+Connected C4 pin 2 to /GND.
+Added RGS1 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RGS1.
+Changed RGS1 value from R_0603_1608Metric to 10k.
+Updated RGS1 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600002e.
+Updated RGS1 fields.
+Updated RGS1 sheetname to '/gate_inverter/'.
+Updated RGS1 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RGS1 pin 1 to Net-(Q1-G).
+Connected RGS1 pin 2 to /SW_U.
+Updated RGS1 unit metadata.
+Updated C4 unit metadata.
+Added RGS2 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RGS2.
+Changed RGS2 value from R_0603_1608Metric to 10k.
+Updated RGS2 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-00006600002f.
+Updated RGS2 fields.
+Updated RGS2 sheetname to '/gate_inverter/'.
+Updated RGS2 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RGS2 pin 1 to Net-(Q2-G).
+Connected RGS2 pin 2 to /GND.
+Updated RGS2 unit metadata.
+Added C5 (footprint 'Capacitor_SMD:C_0603_1608Metric').
+Added RGS3 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RGS3.
+Changed RGS3 value from R_0603_1608Metric to 10k.
+Updated RGS3 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000037.
+Updated RGS3 fields.
+Updated RGS3 sheetname to '/gate_inverter/'.
+Updated RGS3 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RGS3 pin 1 to Net-(Q3-G).
+Connected RGS3 pin 2 to /SW_V.
+Updated RGS3 unit metadata.
+Changed REF** reference designator to C5.
+Added RGS4 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RGS4.
+Changed RGS4 value from R_0603_1608Metric to 10k.
+Updated RGS4 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000038.
+Updated RGS4 fields.
+Updated RGS4 sheetname to '/gate_inverter/'.
+Updated RGS4 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RGS4 pin 1 to Net-(Q4-G).
+Connected RGS4 pin 2 to /GND.
+Updated RGS4 unit metadata.
+Changed C5 value from C_0603_1608Metric to 10nF.
+Added RGS5 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RGS5.
+Changed RGS5 value from R_0603_1608Metric to 10k.
+Updated RGS5 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000040.
+Updated RGS5 fields.
+Updated RGS5 sheetname to '/gate_inverter/'.
+Updated RGS5 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RGS5 pin 2 to /SW_W.
+Connected RGS5 pin 1 to Net-(Q5-G).
+Updated RGS5 unit metadata.
+Updated C5 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006600000e.
+Added RGS6 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RGS6.
+Changed RGS6 value from R_0603_1608Metric to 10k.
+Updated RGS6 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000041.
+Updated RGS6 fields.
+Updated RGS6 sheetname to '/gate_inverter/'.
+Updated RGS6 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RGS6 pin 1 to Net-(Q6-G).
+Connected RGS6 pin 2 to /GND.
+Updated RGS6 unit metadata.
+Updated C5 fields.
+Added RSH1 (footprint 'fpga-servo:HoYLR2512_Kelvin').
+Changed RSH** reference designator to RSH1.
+Changed RSH1 value from HoYLR2512-3W-5mR-1% to 5mR.
+Updated RSH1 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/3bd12426-b9e5-41d8-9124-46554d6e3142.
+Updated RSH1 fields.
+Updated RSH1 sheetname to '/gate_inverter/'.
+Updated RSH1 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RSH1 pin 2 to /PH_U.
+Connected RSH1 pin 1 to /SW_U.
+Updated RSH1 unit metadata.
+Updated C5 sheetname to '/power_input/'.
+Added RSH2 (footprint 'fpga-servo:HoYLR2512_Kelvin').
+Changed RSH** reference designator to RSH2.
+Changed RSH2 value from HoYLR2512-3W-5mR-1% to 5mR.
+Updated RSH2 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/3ee0b657-d909-449d-81fe-ee7e4c326bd3.
+Updated RSH2 fields.
+Updated RSH2 sheetname to '/gate_inverter/'.
+Updated RSH2 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RSH2 pin 1 to /SW_V.
+Connected RSH2 pin 2 to /PH_V.
+Updated RSH2 unit metadata.
+Updated C5 sheetfile to 'power_input.kicad_sch'.
+Added RSH3 (footprint 'fpga-servo:HoYLR2512_Kelvin').
+Changed RSH** reference designator to RSH3.
+Changed RSH3 value from HoYLR2512-3W-5mR-1% to 5mR.
+Updated RSH3 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/dcba5898-f807-44bc-b2b9-3cd0471c9fcc.
+Updated RSH3 fields.
+Updated RSH3 sheetname to '/gate_inverter/'.
+Updated RSH3 sheetfile to 'gate_inverter.kicad_sch'.
+Connected RSH3 pin 1 to /SW_W.
+Connected RSH3 pin 2 to /PH_W.
+Updated RSH3 unit metadata.
+Add net /VBUS_ADC.
+Added RSH4 (footprint 'fpga-servo:HoYLR2512_Kelvin').
+Changed RSH** reference designator to RSH4.
+Changed RSH4 value from HoYLR2512-3W-5mR-1% to 2mR.
+Updated RSH4 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/7bd92da5-bb2d-411b-ace3-cabe66385ac7.
+Updated RSH4 fields.
+Updated RSH4 sheetname to '/current_adc/'.
+Updated RSH4 sheetfile to 'current_adc.kicad_sch'.
+Connected RSH4 pin 1 to /VBUS_PROT.
+Connected RSH4 pin 2 to /VBUS_BRIDGE.
+Updated RSH4 unit metadata.
+Connected C5 pin 1 to /VBUS_ADC.
+Added RT1 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RT1.
+Changed RT1 value from R_0603_1608Metric to 120R.
+Updated RT1 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-00006600005c.
+Updated RT1 fields.
+Updated RT1 sheetname to '/encoder/'.
+Updated RT1 sheetfile to 'encoder.kicad_sch'.
+Added RT1 'Do not place' fabrication attribute.
+Connected RT1 pin 2 to /encoder/ENC_A_N.
+Connected RT1 pin 1 to /encoder/ENC_A_P.
+Updated RT1 unit metadata.
+Connected C5 pin 2 to /GND.
+Added RT2 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RT2.
+Changed RT2 value from R_0603_1608Metric to 120R.
+Updated RT2 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-00006600005d.
+Updated RT2 fields.
+Updated RT2 sheetname to '/encoder/'.
+Updated RT2 sheetfile to 'encoder.kicad_sch'.
+Added RT2 'Do not place' fabrication attribute.
+Connected RT2 pin 1 to /encoder/ENC_B_P.
+Connected RT2 pin 2 to /encoder/ENC_B_N.
+Updated RT2 unit metadata.
+Updated C5 unit metadata.
+Added RT3 (footprint 'Resistor_SMD:R_0603_1608Metric').
+Changed REF** reference designator to RT3.
+Changed RT3 value from R_0603_1608Metric to 120R.
+Updated RT3 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-00006600005e.
+Updated RT3 fields.
+Updated RT3 sheetname to '/encoder/'.
+Updated RT3 sheetfile to 'encoder.kicad_sch'.
+Added RT3 'Do not place' fabrication attribute.
+Connected RT3 pin 2 to /encoder/ENC_Z_N.
+Connected RT3 pin 1 to /encoder/ENC_Z_P.
+Updated RT3 unit metadata.
+Added C18 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added TP1 (footprint 'TestPoint:TestPoint_Pad_D2.0mm').
+Changed REF** reference designator to TP1.
+Changed TP1 value from TestPoint_Pad_D2.0mm to TP_VBUS_PROT.
+Updated TP1 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006600000f.
+Updated TP1 sheetname to '/power_input/'.
+Changed REF** reference designator to C18.
+Removed TP1 'exclude from BOM' fabrication attribute.
+Removed TP1 'exclude from position files' fabrication attribute.
+Connected TP1 pin 1 to /VBUS_PROT.
+Updated TP1 unit metadata.
+Changed C18 value from C_0805_2012Metric to 220nF.
+Added TP2 (footprint 'TestPoint:TestPoint_Pad_D2.0mm').
+Changed REF** reference designator to TP2.
+Changed TP2 value from TestPoint_Pad_D2.0mm to TP_GND.
+Updated TP2 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000010.
+Updated TP2 sheetname to '/power_input/'.
+Updated TP2 sheetfile to 'power_input.kicad_sch'.
+Removed TP2 'exclude from BOM' fabrication attribute.
+Removed TP2 'exclude from position files' fabrication attribute.
+Connected TP2 pin 1 to /GND.
+Updated TP2 unit metadata.
+Updated C18 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000005.
+Added TP3 (footprint 'TestPoint:TestPoint_Pad_D2.0mm').
+Changed REF** reference designator to TP3.
+Changed TP3 value from TestPoint_Pad_D2.0mm to TP_12V.
+Updated TP3 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a00000e.
+Updated TP3 sheetname to '/aux_power/'.
+Updated TP3 sheetfile to 'aux_power.kicad_sch'.
+Removed TP3 'exclude from BOM' fabrication attribute.
+Removed TP3 'exclude from position files' fabrication attribute.
+Connected TP3 pin 1 to /VDRV_12V.
+Updated TP3 unit metadata.
+Updated C18 fields.
+Added TP4 (footprint 'TestPoint:TestPoint_Pad_D2.0mm').
+Changed REF** reference designator to TP4.
+Changed TP4 value from TestPoint_Pad_D2.0mm to TP_5V.
+Updated TP4 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000014.
+Updated TP4 sheetname to '/aux_power/'.
+Updated TP4 sheetfile to 'aux_power.kicad_sch'.
+Removed TP4 'exclude from BOM' fabrication attribute.
+Removed TP4 'exclude from position files' fabrication attribute.
+Connected TP4 pin 1 to /VA_5V.
+Updated TP4 unit metadata.
+Updated C18 sheetname to '/power_input/'.
+Added TP5 (footprint 'TestPoint:TestPoint_Pad_D1.5mm').
+Changed REF** reference designator to TP5.
+Changed TP5 value from TestPoint_Pad_D1.5mm to ARMED.
+Updated TP5 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/cae2754d-a765-4157-81b7-4ec3d4204a63.
+Updated TP5 sheetname to '/ocp_latch/'.
+Updated TP5 sheetfile to 'ocp_latch.kicad_sch'.
+Removed TP5 'exclude from BOM' fabrication attribute.
+Removed TP5 'exclude from position files' fabrication attribute.
+Connected TP5 pin 1 to /ARMED.
+Updated TP5 unit metadata.
+Updated C18 sheetfile to 'power_input.kicad_sch'.
+Added U1 (footprint 'Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm').
+Changed REF** reference designator to U1.
+Changed U1 value from TSSOP-20_4.4x6.5mm_P0.65mm to DRV8300DPWR.
+Updated U1 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000028.
+Updated U1 fields.
+Updated U1 sheetname to '/gate_inverter/'.
+Updated U1 sheetfile to 'gate_inverter.kicad_sch'.
+Connected U1 pin 15 to /SW_V.
+Connected U1 pin 7 to /VDRV_12V.
+Connected U1 pin 20 to /gate_inverter/BST_U.
+Connected U1 pin 17 to /gate_inverter/BST_V.
+Connected U1 pin 3 to /gate_inverter/HIN_W_SAFE.
+Connected U1 pin 4 to /gate_inverter/LIN_U_SAFE.
+Connected U1 pin 18 to /SW_U.
+Connected U1 pin 1 to /gate_inverter/HIN_U_SAFE.
+Connected U1 pin 6 to /gate_inverter/LIN_W_SAFE.
+Connected U1 pin 13 to /gate_inverter/GH_W.
+Connected U1 pin 11 to /gate_inverter/GL_U.
+Connected U1 pin 8 to /GND.
+Connected U1 pin 19 to /gate_inverter/GH_U.
+Connected U1 pin 9 to /gate_inverter/GL_W.
+Connected U1 pin 2 to /gate_inverter/HIN_V_SAFE.
+Connected U1 pin 12 to /SW_W.
+Connected U1 pin 14 to /gate_inverter/BST_W.
+Connected U1 pin 5 to /gate_inverter/LIN_V_SAFE.
+Connected U1 pin 10 to /gate_inverter/GL_V.
+Connected U1 pin 16 to /gate_inverter/GH_V.
+Updated U1 unit metadata.
+Add net /power_input/VCAP_RPP.
+Added U2 (footprint 'fpga-servo:TI_D0008A_SOIC8_P1.27mm').
+Changed REF** reference designator to U2.
+Changed U2 value from INA241A2ID to INA240A1DR.
+Updated U2 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a000015.
+Updated U2 fields.
+Updated U2 sheetname to '/current_adc/'.
+Updated U2 sheetfile to 'current_adc.kicad_sch'.
+Connected U2 pin 2 to /GND.
+Connected U2 pin 8 to /SW_U.
+Connected U2 pin 1 to /PH_U.
+Connected U2 pin 3 to /GND.
+Connected U2 pin 4 to /GND.
+Connected U2 pin 6 to /VA_5V.
+Connected U2 pin 7 to /VA_5V.
+Connected U2 pin 5 to Net-(U2-OUT).
+Updated U2 unit metadata.
+Connected C18 pin 1 to /power_input/VCAP_RPP.
+Added U3 (footprint 'fpga-servo:TI_D0008A_SOIC8_P1.27mm').
+Changed REF** reference designator to U3.
+Changed U3 value from INA241A2ID to INA240A1DR.
+Updated U3 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a000019.
+Updated U3 fields.
+Updated U3 sheetname to '/current_adc/'.
+Updated U3 sheetfile to 'current_adc.kicad_sch'.
+Connected U3 pin 3 to /GND.
+Connected U3 pin 5 to Net-(U3-OUT).
+Connected U3 pin 2 to /GND.
+Connected U3 pin 7 to /VA_5V.
+Connected U3 pin 1 to /PH_V.
+Connected U3 pin 4 to /GND.
+Connected U3 pin 8 to /SW_V.
+Connected U3 pin 6 to /VA_5V.
+Updated U3 unit metadata.
+Add net /power_input/VIN_FUSED.
+Added U4 (footprint 'fpga-servo:TI_D0008A_SOIC8_P1.27mm').
+Changed REF** reference designator to U4.
+Changed U4 value from INA241A2ID to INA240A1DR.
+Updated U4 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/00000000-0000-0000-0000-00006a00001d.
+Updated U4 fields.
+Updated U4 sheetname to '/current_adc/'.
+Updated U4 sheetfile to 'current_adc.kicad_sch'.
+Connected U4 pin 4 to /GND.
+Connected U4 pin 2 to /GND.
+Connected U4 pin 6 to /VA_5V.
+Connected U4 pin 1 to /PH_W.
+Connected U4 pin 5 to Net-(U4-OUT).
+Connected U4 pin 7 to /VA_5V.
+Connected U4 pin 8 to /SW_W.
+Connected U4 pin 3 to /GND.
+Updated U4 unit metadata.
+Connected C18 pin 2 to /power_input/VIN_FUSED.
+Added U5 (footprint 'fpga-servo:TI_D0008A_SOIC8_P1.27mm').
+Changed REF** reference designator to U5.
+Changed U5 value from INA241A2ID to INA240A1DR.
+Updated U5 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/3b7b8023-15a1-41af-9905-dd94b1c460e1.
+Updated U5 fields.
+Updated U5 sheetname to '/current_adc/'.
+Updated U5 sheetfile to 'current_adc.kicad_sch'.
+Add net Net-(U5-GND).
+Connected U5 pin 2 to Net-(U5-GND).
+Connected U5 pin 6 to /VA_5V.
+Connected U5 pin 1 to /VBUS_BRIDGE.
+Add net /current_adc/BUS_CURRENT.
+Connected U5 pin 5 to /current_adc/BUS_CURRENT.
+Connected U5 pin 7 to /GND.
+Connected U5 pin 3 to /GND.
+Connected U5 pin 8 to /VBUS_PROT.
+Connected U5 pin 4 to Net-(U5-GND).
+Updated U5 unit metadata.
+Updated C18 unit metadata.
+Added U6 (footprint 'Package_QFP:LQFP-64_10x10mm_P0.5mm').
+Changed REF** reference designator to U6.
+Changed U6 value from LQFP-64_10x10mm_P0.5mm to AD7606C-16BSTZ.
+Updated U6 symbol association from  to /6d2ea255-46b6-5fa1-9cff-0932c5a52113/c1f821c8-82e5-5d6d-985c-44eb9e9d4bef.
+Updated U6 fields.
+Updated U6 sheetname to '/adc_core/'.
+Updated U6 sheetfile to 'adc_core.kicad_sch'.
+Connected U6 pin 43 to /GND.
+Connected U6 pin 52 to /GND.
+Add net /ADC5_DOUTD.
+Connected U6 pin 28 to /ADC5_DOUTD.
+Add net /ADC5_BUSY.
+Connected U6 pin 14 to /ADC5_BUSY.
+Connected U6 pin 7 to /VA_5V.
+Connected U6 pin 4 to /VA_5V.
+Connected U6 pin 46 to /GND.
+Connected U6 pin 31 to /GND.
+Connected U6 pin 51 to /IV_ADC.
+Connected U6 pin 2 to /GND.
+Connected U6 pin 53 to /IW_ADC.
+Connected U6 pin 57 to /NTC_BOARD.
+Connected U6 pin 44 to Net-(U6E-REFCAPA).
+Connected U6 pin 63 to /GND.
+Connected U6 pin 47 to /GND.
+Connected U6 pin 61 to /GND.
+Connected U6 pin 34 to /VA_5V.
+Connected U6 pin 32 to /GND.
+Connected U6 pin 30 to /GND.
+Add net /ADC5_DOUTA.
+Connected U6 pin 24 to /ADC5_DOUTA.
+Connected U6 pin 29 to /ADC5_SDI.
+Connected U6 pin 54 to /GND.
+Connected U6 pin 6 to /VA_5V.
+Connected U6 pin 10 to /VA_5V.
+Connected U6 pin 12 to Net-(U6B-SCLK).
+Connected U6 pin 58 to /GND.
+Connected U6 pin 18 to /GND.
+Add net unconnected-(U6B-DOUTE-Pad19).
+Connected U6 pin 19 to unconnected-(U6B-DOUTE-Pad19).
+Connected U6 pin 55 to /VBUS_ADC.
+Connected U6 pin 26 to /GND.
+Connected U6 pin 13 to /ADC5_CS_N.
+Connected U6 pin 50 to /GND.
+Connected U6 pin 56 to /GND.
+Connected U6 pin 60 to /GND.
+Connected U6 pin 48 to /VA_5V.
+Add net /ADC5_DOUTB.
+Connected U6 pin 25 to /ADC5_DOUTB.
+Connected U6 pin 64 to /GND.
+Connected U6 pin 11 to /ADC5_RESET.
+Connected U6 pin 41 to /GND.
+Connected U6 pin 5 to /VA_5V.
+Connected U6 pin 23 to /VA_5V.
+Connected U6 pin 33 to /GND.
+Connected U6 pin 38 to /VA_5V.
+Connected U6 pin 36 to Net-(U6E-REGCAP_A).
+Connected U6 pin 45 to Net-(U6E-REFCAPA).
+Connected U6 pin 37 to /VA_5V.
+Connected U6 pin 8 to /GND.
+Add net /ADC5_DOUTC.
+Connected U6 pin 27 to /ADC5_DOUTC.
+Connected U6 pin 40 to /GND.
+Connected U6 pin 3 to /VA_5V.
+Add net /ADC5_FRSTDATA.
+Connected U6 pin 15 to /ADC5_FRSTDATA.
+Connected U6 pin 16 to /GND.
+Connected U6 pin 39 to Net-(U6E-REGCAP_D).
+Connected U6 pin 9 to /ADC5_CONVST.
+Connected U6 pin 1 to /VA_5V.
+Add net unconnected-(U6B-DOUTG-Pad21).
+Connected U6 pin 21 to unconnected-(U6B-DOUTG-Pad21).
+Connected U6 pin 62 to /GND.
+Connected U6 pin 35 to /GND.
+Connected U6 pin 59 to /NTC_BOARD_AUX.
+Add net unconnected-(U6B-DOUTH-Pad22).
+Connected U6 pin 22 to unconnected-(U6B-DOUTH-Pad22).
+Connected U6 pin 17 to /GND.
+Connected U6 pin 49 to /IU_ADC.
+Connected U6 pin 42 to Net-(U6E-REFIN_REFOUT).
+Add net unconnected-(U6B-DOUTF-Pad20).
+Connected U6 pin 20 to unconnected-(U6B-DOUTF-Pad20).
+Updated U6 unit metadata.
+Added C19 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added U7 (footprint 'Package_SO:TSSOP-16_4.4x5mm_P0.65mm').
+Changed REF** reference designator to U7.
+Changed U7 value from TSSOP-16_4.4x5mm_P0.65mm to AM26LV32EIPWR.
+Updated U7 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-00006600005f.
+Updated U7 fields.
+Updated U7 sheetname to '/encoder/'.
+Updated U7 sheetfile to 'encoder.kicad_sch'.
+Connected U7 pin 1 to /encoder/ENC_A_P.
+Add net unconnected-(U7-4A--Pad14).
+Connected U7 pin 14 to unconnected-(U7-4A--Pad14).
+Connected U7 pin 5 to /encoder/ENC_B_N.
+Connected U7 pin 2 to /encoder/ENC_A_N.
+Add net unconnected-(U7-4A+-Pad13).
+Connected U7 pin 13 to unconnected-(U7-4A+-Pad13).
+Connected U7 pin 11 to /encoder/ENC_Z_N.
+Connected U7 pin 6 to /ENC_B.
+Connected U7 pin 16 to /VIO_3V3.
+Connected U7 pin 8 to /GND.
+Connected U7 pin 10 to /encoder/ENC_Z_P.
+Connected U7 pin 3 to /ENC_A.
+Connected U7 pin 4 to /encoder/ENC_B_P.
+Add net unconnected-(U7-4Y-Pad12).
+Connected U7 pin 12 to unconnected-(U7-4Y-Pad12).
+Connected U7 pin 15 to /GND.
+Connected U7 pin 9 to /ENC_Z.
+Connected U7 pin 7 to /VIO_3V3.
+Updated U7 unit metadata.
+Changed REF** reference designator to C19.
+Added U8 (footprint 'fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm').
+Changed REF** reference designator to U8.
+Changed U8 value from VSSOP-8_2.3x2mm_P0.5mm to SN74LVC2G08DCUR.
+Updated U8 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000025.
+Updated U8 fields.
+Updated U8 sheetname to '/gate_inverter/'.
+Updated U8 sheetfile to 'gate_inverter.kicad_sch'.
+Add net /gate_inverter/RUN_OK.
+Connected U8 pin 6 to /gate_inverter/RUN_OK.
+Connected U8 pin 1 to /PWM_UH.
+Connected U8 pin 5 to /PWM_UL.
+Connected U8 pin 4 to /GND.
+Connected U8 pin 7 to /gate_inverter/HIN_U_SAFE.
+Connected U8 pin 3 to /gate_inverter/LIN_U_SAFE.
+Connected U8 pin 2 to /gate_inverter/RUN_OK.
+Connected U8 pin 8 to /VIO_3V3.
+Updated U8 unit metadata.
+Changed C19 value from C_0805_2012Metric to 100nF.
+Added U9 (footprint 'fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm').
+Changed REF** reference designator to U9.
+Changed U9 value from VSSOP-8_2.3x2mm_P0.5mm to SN74LVC2G08DCUR.
+Updated U9 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000026.
+Updated U9 fields.
+Updated U9 sheetname to '/gate_inverter/'.
+Updated U9 sheetfile to 'gate_inverter.kicad_sch'.
+Connected U9 pin 8 to /VIO_3V3.
+Connected U9 pin 6 to /gate_inverter/RUN_OK.
+Connected U9 pin 2 to /gate_inverter/RUN_OK.
+Connected U9 pin 7 to /gate_inverter/HIN_V_SAFE.
+Connected U9 pin 3 to /gate_inverter/LIN_V_SAFE.
+Connected U9 pin 1 to /PWM_VH.
+Connected U9 pin 5 to /PWM_VL.
+Connected U9 pin 4 to /GND.
+Updated U9 unit metadata.
+Updated C19 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-00006abaf001.
+Added U10 (footprint 'fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm').
+Changed REF** reference designator to U10.
+Changed U10 value from VSSOP-8_2.3x2mm_P0.5mm to SN74LVC2G08DCUR.
+Updated U10 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000066000027.
+Updated U10 fields.
+Updated U10 sheetname to '/gate_inverter/'.
+Updated U10 sheetfile to 'gate_inverter.kicad_sch'.
+Connected U10 pin 4 to /GND.
+Connected U10 pin 6 to /gate_inverter/RUN_OK.
+Connected U10 pin 2 to /gate_inverter/RUN_OK.
+Connected U10 pin 8 to /VIO_3V3.
+Connected U10 pin 3 to /gate_inverter/LIN_W_SAFE.
+Connected U10 pin 1 to /PWM_WH.
+Connected U10 pin 7 to /gate_inverter/HIN_W_SAFE.
+Connected U10 pin 5 to /PWM_WL.
+Updated U10 unit metadata.
+Updated TP1 sheetfile to 'power_input.kicad_sch'.
+Added U11 (footprint 'Package_TO_SOT_SMD:SOT-363_SC-70-6').
+Changed REF** reference designator to U11.
+Changed U11 value from SOT-363_SC-70-6 to SN74LVC1G11DCKR.
+Updated U11 symbol association from  to /91fd78c0-db14-5f53-b838-b455f43fc153/00000000-0000-0000-0000-000068000001.
+Updated U11 fields.
+Updated U11 sheetname to '/gate_inverter/'.
+Updated U11 sheetfile to 'gate_inverter.kicad_sch'.
+Connected U11 pin 4 to /gate_inverter/RUN_OK.
+Connected U11 pin 1 to /GATE_EN.
+Connected U11 pin 2 to /GND.
+Connected U11 pin 6 to /ARMED.
+Connected U11 pin 5 to /VIO_3V3.
+Add net /PWR_READY.
+Connected U11 pin 3 to /PWR_READY.
+Updated U11 unit metadata.
+Updated C19 fields.
+Added U12 (footprint 'Package_SO:TI_SO-PowerPAD-8').
+Changed REF** reference designator to U12.
+Changed U12 value from TI_SO-PowerPAD-8 to LM5164DDAR.
+Updated U12 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000001.
+Updated U12 fields.
+Updated U12 sheetname to '/aux_power/'.
+Updated U12 sheetfile to 'aux_power.kicad_sch'.
+Connected U12 pin 4 to /aux_power/RON_SET.
+Connected U12 pin 5 to /aux_power/FB_12V.
+Connected U12 pin 8 to /aux_power/SW_12V.
+Connected U12 pin 2 to /VBUS_PROT.
+Connected U12 pin 1 to /GND.
+Connected U12 pin 9 to /GND.
+Connected U12 pin 9 to /GND.
+Connected U12 pin 9 to /GND.
+Connected U12 pin 3 to /VBUS_PROT.
+Connected U12 pin 9 to /GND.
+Connected U12 pin 7 to /aux_power/BST_12V.
+Add net Net-(U12-PGOOD).
+Connected U12 pin 6 to Net-(U12-PGOOD).
+Updated U12 unit metadata.
+Updated C19 sheetname to '/power_input/'.
+Added U13 (footprint 'fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm').
+Changed REF** reference designator to U13.
+Changed U13 value from Texas_RPJ0009A_VQFN-HR-9_1.5x2mm to TPS62901RPJR.
+Updated U13 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a00000f.
+Updated U13 fields.
+Updated U13 sheetname to '/aux_power/'.
+Updated U13 sheetfile to 'aux_power.kicad_sch'.
+Connected U13 pin 2 to /aux_power/SW_5V.
+Add net unconnected-(U13-SS/TR-Pad8).
+Connected U13 pin 8 to unconnected-(U13-SS/TR-Pad8).
+Connected U13 pin 6 to /VDRV_12V.
+Connected U13 pin 1 to Net-(U12-PGOOD).
+Connected U13 pin 4 to /GND.
+Connected U13 pin 7 to /VDRV_12V.
+Connected U13 pin 9 to /aux_power/FB_5V.
+Connected U13 pin 3 to /VA_5V.
+Connected U13 pin 5 to /VDRV_12V.
+Updated U13 unit metadata.
+Updated C19 sheetfile to 'power_input.kicad_sch'.
+Added U15 (footprint 'fpga-servo:TI_DDF0008A').
+Changed REF** reference designator to U15.
+Changed U15 value from TI_DDF0008A to LM393LVDDFR.
+Updated U15 symbol association from  to /4028fa08-74d3-5a38-a6e2-af39e130b904/2fc92833-992b-42be-965a-be77e00f5ffb.
+Updated U15 fields.
+Updated U15 sheetname to '/current_adc/'.
+Updated U15 sheetfile to 'current_adc.kicad_sch'.
+Connected U15 pin 3 to /current_adc/BUS_OCP_REF.
+Connected U15 pin 5 to /GND.
+Connected U15 pin 6 to /current_adc/BUS_OCP_REF.
+Connected U15 pin 4 to /GND.
+Connected U15 pin 1 to /OCP_N.
+Add net unconnected-(U15-OUT2-Pad7).
+Connected U15 pin 7 to unconnected-(U15-OUT2-Pad7).
+Connected U15 pin 8 to /VA_5V.
+Connected U15 pin 2 to /current_adc/BUS_CURRENT.
+Updated U15 unit metadata.
+Connected C19 pin 2 to /GND.
+Added U18 (footprint 'fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm').
+Changed REF** reference designator to U18.
+Updated U18 symbol association from  to /312376f1-e243-5e66-be43-7ab9172814c4/00000000-0000-0000-0000-000066000004.
+Updated U18 fields.
+Updated U18 sheetname to '/power_input/'.
+Updated U18 sheetfile to 'power_input.kicad_sch'.
+Connected U18 pin 1 to /power_input/VIN_FUSED.
+Connected U18 pin 4 to /power_input/VCAP_RPP.
+Connected U18 pin 2 to /GND.
+Connected U18 pin 8 to /power_input/RPP_SRC.
+Connected U18 pin 5 to /power_input/VIN_FUSED.
+Connected U18 pin 7 to /GND.
+Add net unconnected-(U18-NC-Pad3).
+Connected U18 pin 3 to unconnected-(U18-NC-Pad3).
+Connected U18 pin 6 to /power_input/RPP_GATE.
+Updated U18 unit metadata.
+Connected C19 pin 1 to /power_input/VIN_FUSED.
+Added U19 (footprint 'Package_SON:Texas_R-PUSON-N14').
+Changed REF** reference designator to U19.
+Changed U19 value from Texas_R-PUSON-N14 to TPD6E05U06RVZR.
+Updated U19 symbol association from  to /cd27cb8e-7869-573a-9522-31ead099674a/00000000-0000-0000-0000-00006abaf013.
+Updated U19 fields.
+Updated U19 sheetname to '/encoder/'.
+Updated U19 sheetfile to 'encoder.kicad_sch'.
+Connected U19 pin 10 to /GND.
+Connected U19 pin 11 to /encoder/ENC_B_N.
+Connected U19 pin 12 to /encoder/ENC_B_P.
+Connected U19 pin 9 to /encoder/ENC_Z_P.
+Add net unconnected-(U19-NC-Pad1).
+Connected U19 pin 1 to unconnected-(U19-NC-Pad1).
+Add net unconnected-(U19-NC-Pad4).
+Connected U19 pin 4 to unconnected-(U19-NC-Pad4).
+Connected U19 pin 14 to /encoder/ENC_A_P.
+Add net unconnected-(U19-NC-Pad6).
+Connected U19 pin 6 to unconnected-(U19-NC-Pad6).
+Add net unconnected-(U19-NC-Pad7).
+Connected U19 pin 7 to unconnected-(U19-NC-Pad7).
+Add net unconnected-(U19-NC-Pad2).
+Connected U19 pin 2 to unconnected-(U19-NC-Pad2).
+Connected U19 pin 8 to /encoder/ENC_Z_N.
+Connected U19 pin 5 to /GND.
+Add net unconnected-(U19-NC-Pad3).
+Connected U19 pin 3 to unconnected-(U19-NC-Pad3).
+Connected U19 pin 13 to /encoder/ENC_A_N.
+Updated U19 unit metadata.
+Updated C19 unit metadata.
+Added U20 (footprint 'fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm').
+Changed REF** reference designator to U20.
+Changed U20 value from VSSOP-8_2.3x2mm_P0.5mm to SN74LVC1G74.
+Updated U20 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/206835a1-56c8-41b6-8670-c8ee0b703065.
+Updated U20 fields.
+Updated U20 sheetname to '/ocp_latch/'.
+Updated U20 sheetfile to 'ocp_latch.kicad_sch'.
+Add net /ocp_latch/DISABLED.
+Connected U20 pin 2 to /ocp_latch/DISABLED.
+Connected U20 pin 5 to /ARMED.
+Connected U20 pin 4 to /GND.
+Add net /ocp_latch/CLEAR_CLK.
+Connected U20 pin 1 to /ocp_latch/CLEAR_CLK.
+Connected U20 pin 6 to /ocp_latch/HEALTHY_N.
+Connected U20 pin 8 to /VIO_3V3.
+Add net unconnected-(U20-~{Q}-Pad3).
+Connected U20 pin 3 to unconnected-(U20-~{Q}-Pad3).
+Connected U20 pin 7 to /VIO_3V3.
+Updated U20 unit metadata.
+Added C20 (footprint 'Capacitor_SMD:C_1210_3225Metric').
+Added U21 (footprint 'Package_TO_SOT_SMD:SOT-23-5').
+Changed REF** reference designator to U21.
+Changed U21 value from SOT-23-5 to SN74LVC1G17.
+Updated U21 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/2f3f0609-4460-48b4-9af8-a6eea3c6a569.
+Updated U21 fields.
+Updated U21 sheetname to '/ocp_latch/'.
+Updated U21 sheetfile to 'ocp_latch.kicad_sch'.
+Add net unconnected-(U21-NC-Pad1).
+Connected U21 pin 1 to unconnected-(U21-NC-Pad1).
+Connected U21 pin 3 to /GND.
+Connected U21 pin 4 to /ocp_latch/CLEAR_CLK.
+Connected U21 pin 5 to /VIO_3V3.
+Connected U21 pin 2 to /ocp_latch/CLEAR_FILT.
+Updated U21 unit metadata.
+Changed REF** reference designator to C20.
+Added U22 (footprint 'Package_TO_SOT_SMD:SOT-23-5').
+Changed REF** reference designator to U22.
+Changed U22 value from SOT-23-5 to SN74LVC1G14.
+Updated U22 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/09c76cf9-45dd-4cbf-a8e7-feb76b7a3283.
+Updated U22 fields.
+Updated U22 sheetname to '/ocp_latch/'.
+Updated U22 sheetfile to 'ocp_latch.kicad_sch'.
+Connected U22 pin 4 to /ocp_latch/DISABLED.
+Connected U22 pin 5 to /VIO_3V3.
+Add net unconnected-(U22-NC-Pad1).
+Connected U22 pin 1 to unconnected-(U22-NC-Pad1).
+Connected U22 pin 3 to /GND.
+Connected U22 pin 2 to /GATE_EN.
+Updated U22 unit metadata.
+Changed C20 value from C_1210_3225Metric to 2.2uF.
+Added U23 (footprint 'Package_TO_SOT_SMD:SOT-363_SC-70-6').
+Changed REF** reference designator to U23.
+Changed U23 value from SOT-363_SC-70-6 to SN74LVC1G11.
+Updated U23 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/67b9e371-67ed-4c52-9250-42b8001d0639.
+Updated U23 fields.
+Updated U23 sheetname to '/ocp_latch/'.
+Updated U23 sheetfile to 'ocp_latch.kicad_sch'.
+Connected U23 pin 5 to /VIO_3V3.
+Add net /ocp_latch/OCP_OK.
+Connected U23 pin 1 to /ocp_latch/OCP_OK.
+Connected U23 pin 2 to /GND.
+Connected U23 pin 4 to /ocp_latch/HEALTHY_N.
+Connected U23 pin 3 to /PWR_READY.
+Add net /ocp_latch/POR_OK.
+Connected U23 pin 6 to /ocp_latch/POR_OK.
+Updated U23 unit metadata.
+Updated C20 symbol association from  to /c1adb95f-d617-59aa-ad68-92336ff2ba27/00000000-0000-0000-0000-00006a000002.
+Added U24 (footprint 'Package_TO_SOT_SMD:SOT-23-6').
+Changed REF** reference designator to U24.
+Changed U24 value from SOT-23-6 to TPS3808G33.
+Updated U24 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/3fe36c8c-edd1-4eac-94d9-709df28c3122.
+Updated U24 fields.
+Updated U24 sheetname to '/ocp_latch/'.
+Updated U24 sheetfile to 'ocp_latch.kicad_sch'.
+Add net unconnected-(U24-CT-Pad4).
+Connected U24 pin 4 to unconnected-(U24-CT-Pad4).
+Connected U24 pin 6 to /VIO_3V3.
+Connected U24 pin 5 to /VIO_3V3.
+Connected U24 pin 1 to /ocp_latch/POR_N.
+Connected U24 pin 2 to /GND.
+Connected U24 pin 3 to /VIO_3V3.
+Updated U24 unit metadata.
+Updated C20 fields.
+Added U25 (footprint 'fpga-servo:Texas_DSE0006A_WSON-6_1.5x1.5mm').
+Changed REF** reference designator to U25.
+Changed U25 value from Texas_DSE0006A_WSON-6_1.5x1.5mm to TPS389001DSER.
+Updated U25 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/5f1de505-5726-4e2d-978d-20fe31590ee8.
+Updated U25 fields.
+Updated U25 sheetname to '/ocp_latch/'.
+Updated U25 sheetfile to 'ocp_latch.kicad_sch'.
+Connected U25 pin 4 to /VIO_3V3.
+Connected U25 pin 6 to /ocp_latch/POR_N.
+Connected U25 pin 3 to /VIO_3V3.
+Connected U25 pin 2 to /GND.
+Connected U25 pin 5 to Net-(U25-CT).
+Connected U25 pin 1 to Net-(U25-SENSE).
+Updated U25 unit metadata.
+Updated C20 sheetname to '/aux_power/'.
+Added U26 (footprint 'fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm').
+Changed REF** reference designator to U26.
+Changed U26 value from VSSOP-8_2.3x2mm_P0.5mm to SN74LVC3G17.
+Updated U26 symbol association from  to /2fe2658b-e76d-566d-af2c-acacca996e8f/275e6841-a738-4b0a-a70e-5c72a997e443.
+Updated U26 fields.
+Updated U26 sheetname to '/ocp_latch/'.
+Updated U26 sheetfile to 'ocp_latch.kicad_sch'.
+Connected U26 pin 6 to /PWR_GOOD.
+Connected U26 pin 8 to /VIO_3V3.
+Connected U26 pin 7 to /ocp_latch/POR_OK.
+Connected U26 pin 3 to /OCP_N.
+Connected U26 pin 1 to /ocp_latch/POR_N.
+Connected U26 pin 5 to /ocp_latch/OCP_OK.
+Connected U26 pin 4 to /GND.
+Connected U26 pin 2 to /PWR_READY.
+Updated U26 unit metadata.
+Updated C20 sheetfile to 'aux_power.kicad_sch'.
+Added U27 (footprint 'Package_SO:TSSOP-14_4.4x5mm_P0.65mm').
+Changed REF** reference designator to U27.
+Changed U27 value from TSSOP-14_4.4x5mm_P0.65mm to TXU0204PWR.
+Updated U27 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/d958de11-0768-536f-8fa4-71715ac8ca92.
+Updated U27 fields.
+Updated U27 sheetname to '/adc_levelshift/'.
+Updated U27 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected U27 pin 14 to /VA_5V.
+Connected U27 pin 2 to /ADC_CONVST.
+Add net unconnected-(U27-NC-Pad9).
+Connected U27 pin 9 to unconnected-(U27-NC-Pad9).
+Connected U27 pin 5 to Net-(U27-A4Y).
+Connected U27 pin 1 to /VIO_3V3.
+Connected U27 pin 8 to /PWR_READY.
+Connected U27 pin 11 to /ADC5_DOUTA.
+Connected U27 pin 10 to /ADC5_DOUTB.
+Connected U27 pin 12 to /ADC5_RESET.
+Connected U27 pin 7 to /GND.
+Connected U27 pin 13 to /ADC5_CONVST.
+Connected U27 pin 4 to Net-(U27-A3Y).
+Connected U27 pin 3 to /ADC_RESET.
+Add net unconnected-(U27-NC-Pad6).
+Connected U27 pin 6 to unconnected-(U27-NC-Pad6).
+Updated U27 unit metadata.
+Connected C20 pin 2 to /GND.
+Added U28 (footprint 'Package_SO:TSSOP-14_4.4x5mm_P0.65mm').
+Changed REF** reference designator to U28.
+Changed U28 value from TSSOP-14_4.4x5mm_P0.65mm to TXU0204PWR.
+Updated U28 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/91e46257-99e7-5b84-93e1-35afc3fd4a6e.
+Updated U28 fields.
+Updated U28 sheetname to '/adc_levelshift/'.
+Updated U28 sheetfile to 'adc_levelshift.kicad_sch'.
+Add net unconnected-(U28-NC-Pad6).
+Connected U28 pin 6 to unconnected-(U28-NC-Pad6).
+Connected U28 pin 11 to /ADC5_DOUTC.
+Connected U28 pin 5 to Net-(U28-A4Y).
+Connected U28 pin 3 to /ADC_CS_N.
+Connected U28 pin 13 to /ADC5_SCLK.
+Connected U28 pin 14 to /VA_5V.
+Connected U28 pin 2 to /ADC_SCLK.
+Connected U28 pin 7 to /GND.
+Connected U28 pin 8 to /PWR_READY.
+Add net unconnected-(U28-NC-Pad9).
+Connected U28 pin 9 to unconnected-(U28-NC-Pad9).
+Connected U28 pin 4 to Net-(U28-A3Y).
+Connected U28 pin 10 to /ADC5_DOUTD.
+Connected U28 pin 1 to /VIO_3V3.
+Connected U28 pin 12 to /ADC5_CS_N.
+Updated U28 unit metadata.
+Connected C20 pin 1 to /VBUS_PROT.
+Added U29 (footprint 'Package_SO:TSSOP-14_4.4x5mm_P0.65mm').
+Changed REF** reference designator to U29.
+Changed U29 value from TSSOP-14_4.4x5mm_P0.65mm to TXU0204PWR.
+Updated U29 symbol association from  to /d61b170c-0fd5-5f9a-a308-dea111910f4c/99cb66cd-ba99-52b9-9b17-80dbd7dbb9a5.
+Updated U29 fields.
+Updated U29 sheetname to '/adc_levelshift/'.
+Updated U29 sheetfile to 'adc_levelshift.kicad_sch'.
+Connected U29 pin 7 to /GND.
+Add net unconnected-(U29-NC-Pad9).
+Connected U29 pin 9 to unconnected-(U29-NC-Pad9).
+Connected U29 pin 11 to /ADC5_BUSY.
+Connected U29 pin 8 to /PWR_READY.
+Connected U29 pin 2 to /ADC_SDI.
+Add net unconnected-(U29-NC-Pad6).
+Connected U29 pin 6 to unconnected-(U29-NC-Pad6).
+Connected U29 pin 13 to /ADC5_SDI.
+Connected U29 pin 4 to /ADC_BUSY.
+Connected U29 pin 1 to /VIO_3V3.
+Connected U29 pin 14 to /VA_5V.
+Connected U29 pin 10 to /ADC5_FRSTDATA.
+Add net unconnected-(U29-B2Y-Pad12).
+Connected U29 pin 12 to unconnected-(U29-B2Y-Pad12).
+Connected U29 pin 3 to /GND.
+Connected U29 pin 5 to /ADC_FRSTDATA.
+Updated U29 unit metadata.
+
+
+Info: Total warnings: 0, errors: 0.

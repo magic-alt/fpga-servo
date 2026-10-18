@@ -654,7 +654,7 @@
       },
       {
         "netclass": "POWER",
-        "pattern": "/DC Input & Protection/RPP_SRC"
+        "pattern": "/power_input/RPP_SRC"
       },
       {
         "netclass": "Default",
@@ -666,11 +666,11 @@
       },
       {
         "netclass": "POWER",
-        "pattern": "/DC Input & Protection/VIN_FUSED"
+        "pattern": "/power_input/VIN_FUSED"
       },
       {
         "netclass": "POWER",
-        "pattern": "/DC Input & Protection/VIN_RAW"
+        "pattern": "/power_input/VIN_RAW"
       },
       {
         "netclass": "Default",
@@ -1263,6 +1263,10 @@
       {
         "netclass": "Default",
         "pattern": "unconnected-(U25-CT-Pad4)"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/VBUS_BRIDGE"
       }
     ]
   },
@@ -1389,9 +1393,9 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "ax7010_servo_reva.kicad_sch",
-        "name": "ax7010_servo_reva",
-        "uuid": "642e2bda-71a0-5b96-b593-56dd8de6839e"
+        "filename": "ax7010_servo_ad7606c.kicad_sch",
+        "name": "ax7010_servo_ad7606c",
+        "uuid": "f437a074-aea8-5ad8-9911-5f989e0a0caf"
       }
     ],
     "used_designators": "",
@@ -1399,8 +1403,8 @@
   },
   "sheets": [],
   "text_variables": {
-    "DESIGN_STATUS": "DEVELOPMENT - NOT FOR FABRICATION",
-    "ADC": "AD7606C-16BSTZ"
+    "ADC": "AD7606C-16BSTZ",
+    "DESIGN_STATUS": "DEVELOPMENT - NOT FOR FABRICATION"
   },
   "tuning_profiles": {
     "meta": {

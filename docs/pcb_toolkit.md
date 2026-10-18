@@ -8,6 +8,7 @@
 python tools/pcb.py check --project ads8588s --scope schematic
 python tools/pcb.py check --project ad7606c --scope schematic
 python tools/pcb.py verify --project ad7606c --scope schematic
+python tools/pcb.py verify --project ad7606c --scope pcb
 python tools/pcb.py verify --project ads8588s --scope schematic
 python tools/pcb.py verify --project ads8588s --scope release
 ```

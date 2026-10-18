@@ -1,13 +1,15 @@
 # 当前硬件发布门禁
 
-状态：**SCHEMATIC/BOM DEVELOPMENT ONLY / PCB RELEASE BLOCKED / NOT FOR FABRICATION**。本页整理当前适用条件，不把历史勾选或零 DRC 结论沿用到当前设计。
+状态：**SCHEMATIC/BOM DEVELOPMENT / PCB PLACEMENT CANDIDATE / PCB RELEASE BLOCKED / NOT FOR FABRICATION**。本页整理当前适用条件，不把历史勾选或零 DRC 结论沿用到当前设计。
 
 | 工程 | 当前交付 | PCB 状态 |
 | --- | --- | --- |
 | ADS8588S Rev.A | 独立原理图、BOM、原 FPGA 接口 | 保留未同步的旧开发板，严格一致性/设计检查仍有已知阻断 |
-| AD7606C 开发版 | 独立 11 页原理图、BOM、四路接口与电平转换 | 尚无 PCB；RTL/STA 和实物资格未完成 |
+| AD7606C 开发版 | 独立 11 页原理图、BOM、四路接口与电平转换 | 已建立原生同步的四层 PCB 布局候选；未布线，实物资格未完成 |
 
 当前流程见 [工具使用](pcb_toolkit.md) 与 [CI 范围](ci_schematic_scope.md)。完整旧门禁勾选及过程计数保存在 [历史快照](archive/release_gates_before_toolkit_2026-10-17.md)，不作为当前完成项。
+
+2026-10-18：AD7606C 已按确认的原板框/孔/接口建立四层 PCB；见 [当前 PCB 审查](../hardware/ad7606c_servo/evidence/pcb_review_2026-10-18.md)。布局候选不关闭未连接、器件定版、关键回路、热和实物门禁。
 
 ## 当前选型和边界
 

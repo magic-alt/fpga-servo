@@ -1,5 +1,6 @@
 """Public configuration and failure semantics for reusable PCB projects."""
 import json
+import re
 from pathlib import Path
 import sys
 import tempfile
@@ -47,7 +48,17 @@ class CoreTests(unittest.TestCase):
         with self.assertRaises(ProjectError): self.load()
     def test_config_profiles(self):
         self.assertIsNotNone(resolve_project("ads8588s").board)
-        self.assertIsNone(resolve_project("ad7606c").board)
+        target = resolve_project("ad7606c")
+        self.assertTrue(target.require_board().is_file())
+        self.assertNotEqual(target.board, resolve_project("ads8588s").board)
+        self.assertEqual(set(target.parameters["mechanical_refs"]), {"H1", "H2", "H3", "H4"})
+    def test_ad7606c_project_metadata_matches_native_root(self):
+        target = resolve_project("ad7606c")
+        data = json.loads(target.schematic.with_suffix(".kicad_pro").read_text(encoding="utf-8"))
+        root_uuid = re.search(r'\(uuid "([^"]+)"', target.schematic.read_text(encoding="utf-8"))[1]
+        self.assertEqual(data["schematic"]["top_level_sheets"], [{
+            "filename": target.schematic.name, "name": target.schematic.stem, "uuid": root_uuid,
+        }])
     def test_unknown_rules_fail(self):
         self.data["rule_sets"] = ["execute-shell"]
         with self.assertRaises(ProjectError): self.load()

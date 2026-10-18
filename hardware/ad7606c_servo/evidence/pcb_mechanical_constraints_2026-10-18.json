@@ -1,0 +1,95 @@
+{
+  "approved_by_user": "2026-10-18 confirmation",
+  "outline_mm": {
+    "xmin": 2,
+    "ymin": 2,
+    "xmax": 132,
+    "ymax": 97,
+    "width": 130,
+    "height": 95
+  },
+  "copper_layers": 4,
+  "layer_roles": [
+    "F.Cu: components and signal/power routing",
+    "In1.Cu: continuous GND reference",
+    "In2.Cu: power distribution, preserve return reference",
+    "B.Cu: low speed/support routing"
+  ],
+  "fabricator_stack_thickness_and_copper": "NOT_QUALIFIED",
+  "anchors": [
+    {
+      "reference": "J5",
+      "x_mm": 16.0,
+      "y_mm": 79.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "IDC-Header_2x05_P2.54mm_Vertical",
+      "retained": true
+    },
+    {
+      "reference": "H4",
+      "x_mm": 129.0,
+      "y_mm": 94.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "retained": true
+    },
+    {
+      "reference": "J1",
+      "x_mm": 11.0,
+      "y_mm": 17.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "IDC-Header_2x20_P2.54mm_Vertical",
+      "retained": true
+    },
+    {
+      "reference": "J3",
+      "x_mm": 110.0,
+      "y_mm": 11.0,
+      "rotation_deg": 180.0,
+      "old_footprint": "PhoenixContact_MKDS_5_2_9.52mm",
+      "retained": true
+    },
+    {
+      "reference": "J2",
+      "x_mm": 24.0,
+      "y_mm": 17.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "IDC-Header_2x20_P2.54mm_Vertical",
+      "retained": false
+    },
+    {
+      "reference": "H3",
+      "x_mm": 5.0,
+      "y_mm": 94.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "retained": true
+    },
+    {
+      "reference": "H1",
+      "x_mm": 5.0,
+      "y_mm": 5.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "retained": true
+    },
+    {
+      "reference": "H2",
+      "x_mm": 129.0,
+      "y_mm": 5.0,
+      "rotation_deg": 0.0,
+      "old_footprint": "MountingHole_M3_3.2mm_PTH_Pad5mm",
+      "retained": true
+    },
+    {
+      "reference": "J4",
+      "x_mm": 123.0,
+      "y_mm": 39.0,
+      "rotation_deg": -90.0,
+      "old_footprint": "PhoenixContact_MKDS_5_3_9.52mm",
+      "retained": true
+    }
+  ],
+  "old_board_sha256": "d13af37991cc22f871cc9628bb0e218fe9dcf33abd05d61852db3a6e053b1346",
+  "status": "CONSTRAINTS_PRESERVED_IN_SYNCHRONIZED_UNROUTED_BOARD"
+}

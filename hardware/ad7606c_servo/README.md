@@ -1,61 +1,44 @@
-# AX7010 + AD7606C-16 独立开发工程
+# AX7010 + AD7606C-16 独立硬件工程
 
-本工程把已有高速 ADC 迁移规格落实为新的 KiCad 10 原理图，保留原 `hardware/ads8588s_servo/ax7010_servo_reva.*` / ADS8588S 方案。源基线为 `17166bc`，开发分支为 `feat/ad7606c-independent-project`。所有新增文件均在本目录；未把旧 PCB 复制成新版 PCB。
+当前状态：11 页原理图、BOM、原生同步的四层 PCB 布局候选。**尚未布线，不可制造放行。**
 
-用 KiCad 打开 [ax7010_servo_ad7606c.kicad_pro](ax7010_servo_ad7606c.kicad_pro)。直接查看完整图纸可打开 [11 页原理图 PDF](evidence/schematic.pdf)。[开发板方案与调试流程](development_board.md) 说明接口、启动、配置、时序和后续 PCB 工作。
+打开 [KiCad 工程](ax7010_servo_ad7606c.kicad_pro) 或 [PCB](ax7010_servo_ad7606c.kicad_pcb)。
+[布局图](evidence/pcb_placement_2026-10-18.png)、
+[本轮审查](evidence/pcb_review_2026-10-18.md) 和 [开发板电气方案](development_board.md) 提供当前入口。
 
-## 已实现
+## 本轮进展
 
-- 独立顶层和 10 个功能子页；从旧工程复制电源、逆变器、编码器和 OCP 保护，保留已有位号及元件身份。复用页保留 Rev.A 标题以便追溯，新增/修改页标为 B-DEV。
-- U6 使用新建的、完整 64 物理脚的 `AD7606C_16_SERIAL` 本地符号，拆为输入、串行、模式、供电及参考五个单元。
-- AD7606C-16BSTZ，软件模式 OS[2:0]=111，四路 DOUT；CH1–3 为 0–5 V，CH4–8 为 0–10 V，CH1–4 高带宽。CH7/8 输入及所有负输入接地。
-- 两个 REGCAP 分别 1 µF；REFCAPA/B 短接并接 10 µF；REFIN/REFOUT 接 100 nF；四个 AVCC 引脚各有 100 nF，本地另加 C100 10 µF。
-- **AVCC 与 VDRIVE 在图上直接接同一 VA_5V。** U27–U29 为 TXU0204PWR，隔开 ADC 5.1 V 和 AX7010 3.3 V；OE 接 `PWR_READY`。这修复了直接把独立 FPGA 电源接到 VDRIVE 时的绝对最大额定风险。它不是电气隔离器，也没有替代原 OCP。
-- J1/J10.29、.30、.31 分别接 DOUTC、DOUTD、SDI；独立 XDC 包含 U12、T12、T10，原 XDC 不变。
-- ADC 端 RESET/CS 上拉、CONVST/SCLK/SDI 下拉；R110/R111 在转换器 A 端另设 3.3 V 上拉，FPGA 高阻且 OE 已启用时仍保持 RESET/CS 高。转换器启用后由 FPGA 经过转换器驱动，必须执行完整复位和配置。
+- 保留旧板 130 × 95 mm 板框、H1-H4 安装孔和 J1/J3/J4/J5 的原点/角度，建立独立四层板。
+- 通过 KiCad 项目 F8 和新鲜 CLI 网表的原生导入完成同步；独立检查逐物理焊盘、完整封装 ID、值、DNP，保留四个机械孔。J6 是原理图明确排除于 PCB 的外部电源参考。
+- 181 个原理图系统对象、162 网络；180 个电气封装与四个机械封装。原 ADS8588S 电气源和旧 PCB 保持原样。
+- ADC 去耦/参考及 TXU 电平转换器按实际新 ADC 引脚布置，串联和偏置电阻靠近服务端。原理图连接、阻容值、MPN、DNP 和保护拓扑未改变。
+- 修复复制工程的顶层文件名/UUID 元数据，统一工具已登记实际 PCB。
+- 原生检查始终包含未连接和图板一致性；当前未连接仍开放，不能把几何零违规当成完整 DRC 通过。
 
-器件引脚/模式依据 [ADI AD7606C-16 Rev.A，Table6/9、Figures106/124/125](https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf)；转换器依据 [TI TXU0204 SCES936A，Table6-1、§9.3、§11](https://www.ti.com/lit/ds/symlink/txu0204.pdf)。封装分别选用标准 KiCad LQFP-64 10×10/P0.5 和 TSSOP-14 4.4×5/P0.65；装配/制造资格仍需审核。
+## 电气与器件边界
 
-## 文件入口
+U6 是 AD7606C-16BSTZ；AVCC/VDRIVE 同源 VA_5V，U27-U29 是 TXU0204PWR，OE 跟随 PWR_READY。
+四路 DOUT、OS=111 软件模式、输入量程、配置镜像、启动/欠压/帧有效合同见开发板方案和 `adc_profile.json`。
+独立 XDC 仅记录外部 AX7010 接口约束；本仓库为硬件工程，没有 HDL 实现。
 
-| 文件 | 用途 |
-|---|---|
-| `ax7010_servo_ad7606c.kicad_pro/.kicad_sch` | 新工程与顶层 |
-| `current_adc.kicad_sch` | 保留的三相 INA240、NTC、母线 OCP |
-| `adc_core.kicad_sch` | ADC 输入、串行和启动偏置 |
-| `adc_power.kicad_sch` | 同源 AVCC/VDRIVE、参考和去耦 |
-| `adc_levelshift.kicad_sch` | 三颗 TXU0204 与本地旁路 |
-| `ax7010_interface.kicad_sch` | J10 四路接口 |
-| `bom.csv` | 从真实 KiCad XML 导出的每位号 BOM，包含 DNP |
-| `adc_profile.json` / `*.xdc` | 本工程独立配置和 FPGA 引脚约束；尚无驱动 RTL/STA |
-| `evidence/adc-physical-pins.csv` | 64 脚与实际网表所有相连端点 |
-| `source_manifest.json` | 原方案基线和原文件 SHA-256，防止意外覆盖 |
-| `../../tools/pcb.py` | 配置驱动的统一开发与验收入口 |
-
-`sym-lib-table` 和 `fp-lib-table` 都使用 `${KIPRJMOD}`；项目本地符号和 `fpga-servo.pretty` 已复制。标准 KiCad 元件封装库仍需随 KiCad 安装。
-
-## 实际验证与边界
-
-本机 KiCad 10.0.3，`python` 3.12.4。最终执行记录见 [verification.json](evidence/verification.json) 和 [静态结果](evidence/static-checks.json)。新旧 XML 均为本轮原生导出，不使用历史计数代替。
-
-新工程验证包括：完整物理脚和模式检查、层次一致性、50 mil 网格/A4 布局、可见电源连线、18 项错误注入、531 项 OCP 稳态数字场景、ADC 供电静态阈值和原生全严重度 ERC。最新网表为 **181 个系统元件对象 / 162 个网络**，其中板载元件对象 180 个，另 1 个为外部 J6；DNP 另列于 BOM。原工程保留为 159 元件/135 网络。
-
-原理图交付模式已完整通过新旧工程检查、旧 ADC 串行/候选规格/选型/供电/安全/OCP 回归、两工程 ERC 及旧板精确差异回归。严格 `check --project ads8588s --scope pcb` 仍因旧 PCB 中 J2、旧驱动器/分流器/封装及规则不一致而失败。旧板没有修改，也没有获得 parity/DRC/制造批准；记录中明确区分交付范围和 PCB 发布状态。
-
-沿用原项目四类 ERC ignore 设置：`footprint_filter`、`four_way_junction`、`simulation_model_issue`、`single_global_label`；未增加忽略项或 ERC exclusions。ERC0 不代表动态供电、环路性能或制造验收完成。
-
-本次没有新 PCB、DRC、布线、Vivado STA、FPGA 实机测试、闭环性能或高功率试验。原 [release_gates.md](../../docs/release_gates.md) 中 OCP、母线再生、热与连接器等门禁继续适用。
+所有板载符号脚号均可匹配指定封装的焊盘号；这不等于厂商尺寸、额定功率、热和动态验收全部完成。
+L1 额定/饱和电流资料、12 V 实际负载上限及整板发布门禁仍待关闭。
+现有 68 µH 在最差条件下不能据此保证 12 V/1 A。0.5 A 开发限制与保证 1 A 必须分别评审。
 
 ## 复现
 
-在仓库根目录执行：
+在仓库根目录执行，原生工具路径使用本机参数指定：
 
 ```sh
 python tools/pcb.py check --project ad7606c --scope schematic
 python tools/pcb.py verify --project ad7606c --scope schematic
-python tools/pcb.py test --kicad-cli kicad-cli
+python tools/pcb.py verify --project ad7606c --scope pcb
+python tools/pcb.py test --kicad-cli kicad-cli --pcb-python <KiCad-python>
 ```
 
-使用 `--kicad-cli <executable>` 指定本机工具。完整新鲜输出写入 artifacts 下独立目录；本目录 evidence 保留先前交付证据，不覆盖。原理图通过不表示 PCB、RTL/STA 或实物资格通过；本工程没有 PCB，请求 PCB/release 会明确失败。
+PCB/release 不再因为缺板而退出；会运行实际图板一致性和 DRC。未布线时其非零退出码必须保留。
+不能添加排除项、降低严重级别、删除必要连接或改成 NC 来获得通过。
 
-一次性生成源码已移至 [历史工具归档](../../tools/archive/README.md)，不属于日常工作流。更多命令和接入方式见 [工具说明](../../docs/pcb_toolkit.md) 与 [CI 范围](../../docs/ci_schematic_scope.md)。
+原理图与最初独立工程交付的历史证据保留于 [2026-10-17 审查](evidence/review.md)；
+[2026-10-18 初步器件审查](evidence/continuation_review_2026-10-18.md) 描述建板前状态。
+当前制造/热/动态条件以 [发布门禁](../../docs/release_gates.md) 为准。

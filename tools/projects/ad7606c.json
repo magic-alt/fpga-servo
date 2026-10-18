@@ -21,6 +21,13 @@
       "hardware/ad7606c_servo/adc_pin_map.json",
       "hardware/ad7606c_servo/source_manifest.json",
       "hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc"
+    ],
+    "mechanical_refs": [
+      "H1",
+      "H2",
+      "H3",
+      "H4"
     ]
-  }
+  },
+  "board": "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb"
 }
