@@ -12,6 +12,7 @@
     "repository",
     "ad7606c",
     "protection",
+    "power_layout",
     "aux_power"
   ],
   "parameters": {
@@ -69,7 +70,61 @@
       }
     },
     "require_explicit_wire_junctions": true,
-    "require_explicit_wire_widths": true
+    "require_explicit_wire_widths": true,
+    "pcb_netclasses": {
+      "required": {
+        "/power_input/VIN_RAW": "POWER",
+        "/power_input/VIN_FUSED": "POWER",
+        "/power_input/RPP_SRC": "POWER",
+        "/VBUS_PROT": "POWER",
+        "/VBUS_BRIDGE": "POWER",
+        "/SW_U": "POWER",
+        "/SW_V": "POWER",
+        "/SW_W": "POWER",
+        "/PH_U": "POWER",
+        "/PH_V": "POWER",
+        "/PH_W": "POWER",
+        "/VDRV_12V": "GATE",
+        "/gate_inverter/GH_U": "GATE",
+        "/gate_inverter/GH_V": "GATE",
+        "/gate_inverter/GH_W": "GATE",
+        "/gate_inverter/GL_U": "GATE",
+        "/gate_inverter/GL_V": "GATE",
+        "/gate_inverter/GL_W": "GATE",
+        "/gate_inverter/BST_U": "GATE",
+        "/gate_inverter/BST_V": "GATE",
+        "/gate_inverter/BST_W": "GATE",
+        "Net-(Q1-G)": "GATE",
+        "Net-(Q2-G)": "GATE",
+        "Net-(Q3-G)": "GATE",
+        "Net-(Q4-G)": "GATE",
+        "Net-(Q5-G)": "GATE",
+        "Net-(Q6-G)": "GATE",
+        "/VA_5V": "ANALOG",
+        "/VBUS_ADC": "ANALOG",
+        "/IU_ADC": "ANALOG",
+        "/IV_ADC": "ANALOG",
+        "/IW_ADC": "ANALOG"
+      },
+      "minimums": {
+        "Default": {
+          "clearance": 0.2,
+          "track_width": 0.25
+        },
+        "ANALOG": {
+          "clearance": 0.25,
+          "track_width": 0.25
+        },
+        "GATE": {
+          "clearance": 0.25,
+          "track_width": 0.4
+        },
+        "POWER": {
+          "clearance": 0.8,
+          "track_width": 3.0
+        }
+      }
+    }
   },
   "board": "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb"
 }
