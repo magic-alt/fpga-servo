@@ -34,3 +34,5 @@ ADS 的最终 [VA5 供电桥 ECO](ads8588s_in1_supply_bridge_eco.json)移除旧 
 [页码及全物理网表等价证明](page_metadata_native_verification.json)和[局部电源/地可见连线修复](schematic_visible_returns_verification.json)记录原理图最终消歧；[最终模型与工程包络](final_model_envelope_review.md)、[独立 CAM](final_cam_review.md)及[最终功率/孔位图](final_power_review.md)各有明确适用哈希。原生 ERC/DRC 均无忽略项或排除项。审阅包的工程师签核、板厂实际工艺接受及所有物理资格继续开放。
 
 两套最终本地 ZIP 及逐文件 SHA256 清单见[工程审阅包与剩余接受项](manufacturing_review_packet.md)。归档已逐条读取复算，仍标记仅供审阅，未制造放行。
+
+可直接在远端审阅的[最终 PCB 总览图](visuals/README.md)包含两板原生 3D 与独立四层铜图；橙色工程包络不代表 OEM 模型或机械批准。

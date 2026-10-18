@@ -1,0 +1,33 @@
+{
+  "status": "STATIC_AGENT_REVIEW_VISUALS_NOT_MANUFACTURING_APPROVAL",
+  "images": [
+    {
+      "project": "ads8588s",
+      "kind": "3d",
+      "path": "docs/reviews/dual_prototype_2026-10-18/visuals/ads8588s-3d.png",
+      "sha256": "6c609ba82a5556229ee58a4c0dcd560f4116cfbc49e9db3ff84452f83cd20e4b",
+      "source": "artifacts/dual-servo/final-visual/model-render-ads8588s/native-final-3d.png"
+    },
+    {
+      "project": "ads8588s",
+      "kind": "copper",
+      "path": "docs/reviews/dual_prototype_2026-10-18/visuals/ads8588s-copper.png",
+      "sha256": "24fdc4faf11842cd76b070bb26f7d5c4af319cf88b0356eab70ce6675235837b",
+      "source": "artifacts/dual-servo/final-cam-independent-v3/ads8588s/copper-sheet.png"
+    },
+    {
+      "project": "ad7606c",
+      "kind": "3d",
+      "path": "docs/reviews/dual_prototype_2026-10-18/visuals/ad7606c-3d.png",
+      "sha256": "21713a4a77c77c8584e47f935d8b9556d9ecde7eff73ec629e86a7d92efde9df",
+      "source": "artifacts/dual-servo/final-visual/model-render-ad7606c/native-final-3d.png"
+    },
+    {
+      "project": "ad7606c",
+      "kind": "copper",
+      "path": "docs/reviews/dual_prototype_2026-10-18/visuals/ad7606c-copper.png",
+      "sha256": "9c8baa581f4022391056a8ee9fa5ecde8383573015a7f8cacec70859e124eb4d",
+      "source": "artifacts/dual-servo/final-cam-independent-v3/ad7606c/copper-sheet.png"
+    }
+  ]
+}
