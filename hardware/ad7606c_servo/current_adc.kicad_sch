@@ -2444,7 +2444,7 @@
 (wire (pts (xy 46.99 153.67) (xy 71.12 153.67)) (stroke (width 0.1524) (type default)) (uuid "9342b22a-9087-4523-b35e-5558aa0a8bf5"))
 (wire (pts (xy 39.37 154.94) (xy 43.18 154.94)) (stroke (width 0.1524) (type default)) (uuid "6e98fbc3-cae2-46fa-b9d0-58b697b04f05"))
 (wire (pts (xy 43.18 152.4) (xy 43.18 154.94)) (stroke (width 0.1524) (type default)) (uuid "1c7143a2-21d1-4410-9f2d-43e5c8266223"))
-(wire (pts (xy 91.44 151.13) (xy 91.44 153.67)) (stroke (width 0.1524) (type default)) (uuid "24581e81-86c4-441d-a475-de0237bbe0f0"))
+
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 91.44 153.67 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "6d44ae74-32e1-46b3-ac5f-4c116f3f618b")
 (property "Reference" "#PWR1208" (at 91.44 153.67 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/GND" (at 91.44 153.67 0) (effects (font (size 1 1)) (hide yes)))
@@ -2682,16 +2682,7 @@
 	)
 	(uuid "095084c6-9eff-4799-be03-51b6313fd283")
 )
-(wire
-	(pts
-		(xy 135.89 83.82) (xy 139.7 83.82)
-	)
-	(stroke
-		(width 0.1524)
-		(type default)
-	)
-	(uuid "cbe28134-a4ed-42bb-81a4-8f425933f73e")
-)
+(wire (pts (xy 135.89 83.82) (xy 138.43 83.82)) (stroke (width 0.1524) (type default)) (uuid "56c54eef-7131-4b50-9fbe-8b43ed73f92b"))(wire (pts (xy 138.43 83.82) (xy 139.7 83.82)) (stroke (width 0.1524) (type default)) (uuid "ef63777d-d755-4508-beb2-2c045ba68aa2"))(junction (at 138.43 83.82) (diameter 0.635) (color 0 0 0 0) (uuid "6728734d-cc53-4ac3-b5aa-427c8b2f0c6b"))
 (wire
 	(pts
 		(xy 139.7 83.82) (xy 143.51 83.82)
@@ -2712,16 +2703,7 @@
 	)
 	(uuid "21045466-da08-426b-bf6a-234ed1ba547a")
 )
-(wire
-	(pts
-		(xy 139.7 81.28) (xy 139.7 83.82)
-	)
-	(stroke
-		(width 0.1524)
-		(type default)
-	)
-	(uuid "ee4b3ed7-4991-48d8-8a96-84597c47087b")
-)
+(wire (pts (xy 139.7 81.28) (xy 138.43 81.28)) (stroke (width 0.1524) (type default)) (uuid "155151e9-9c2f-4b88-9bf0-ba1e12110259"))(wire (pts (xy 138.43 81.28) (xy 138.43 83.82)) (stroke (width 0.1524) (type default)) (uuid "11ad3873-4126-4b4b-ba13-5f451702a8ba"))
 (wire
 	(pts
 		(xy 139.7 83.82) (xy 139.7 86.36)

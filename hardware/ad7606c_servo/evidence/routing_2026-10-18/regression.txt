@@ -1,0 +1,330 @@
+test_bandwidth_of_unipolar_range_is_not_220khz (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_bandwidth_of_unipolar_range_is_not_220khz) ... ok
+test_candidate_is_valid_but_not_implemented (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_candidate_is_valid_but_not_implemented) ... ok
+test_lane_configuration_must_match_four_douts (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_lane_configuration_must_match_four_douts) ... ok
+test_new_adc_not_falsely_wired_into_old_xdc (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_new_adc_not_falsely_wired_into_old_xdc) ... ok
+test_no_undocumented_mode_strap (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_no_undocumented_mode_strap) ... ok
+test_parallel_pin_collision_rejected (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_parallel_pin_collision_rejected) ... ok
+test_source_status_cannot_be_marked_production_released (test_ad7606c_fast_profile.AD7606CFastCandidateTests.test_source_status_cannot_be_marked_production_released) ... ok
+test_frame_size_and_throughput (test_adc_serial_contract.ADCSerialContractTests.test_frame_size_and_throughput) ... ok
+test_lost_second_dout_pin_rejected (test_adc_serial_contract.ADCSerialContractTests.test_lost_second_dout_pin_rejected) ... ok
+test_motor_ntc_mislabel_rejected (test_adc_serial_contract.ADCSerialContractTests.test_motor_ntc_mislabel_rejected) ... ok
+test_source_contract (test_adc_serial_contract.ADCSerialContractTests.test_source_contract) ... ok
+test_stale_250v_film_metadata_rejected (test_adc_serial_contract.ADCSerialContractTests.test_stale_250v_film_metadata_rejected) ... ok
+test_unfitted_parallel_port_rejected (test_adc_serial_contract.ADCSerialContractTests.test_unfitted_parallel_port_rejected) ... ok
+test_low_trip_resistor_substitution_rejected (test_adc_validity.AdcValidityTests.test_low_trip_resistor_substitution_rejected) ... ok
+test_replacing_precision_divider_with_loose_resistors_rejected (test_adc_validity.AdcValidityTests.test_replacing_precision_divider_with_loose_resistors_rejected) ... ok
+test_reset_disconnected_from_latch_rejected (test_adc_validity.AdcValidityTests.test_reset_disconnected_from_latch_rejected) ... ok
+test_restoring_old_supervisor_rejected (test_adc_validity.AdcValidityTests.test_restoring_old_supervisor_rejected) ... ok
+test_transient_qualification_never_inferred_from_static_pass (test_adc_validity.AdcValidityTests.test_transient_qualification_never_inferred_from_static_pass) ... ok
+test_unbudgeted_r92_temperature_coefficient_rejected (test_adc_validity.AdcValidityTests.test_unbudgeted_r92_temperature_coefficient_rejected) ... ok
+test_authored_source_and_bom_match_candidate (test_aux_power_contract.AuxiliaryPowerTests.test_authored_source_and_bom_match_candidate) ... ok
+test_authorized_eco_does_not_allow_another_mpn (test_aux_power_contract.AuxiliaryPowerTests.test_authorized_eco_does_not_allow_another_mpn) ... ok
+test_authorized_identity_eco_does_not_allow_rewire (test_aux_power_contract.AuxiliaryPowerTests.test_authorized_identity_eco_does_not_allow_rewire) ... ok
+test_calculated_l_must_match_installed_value (test_aux_power_contract.AuxiliaryPowerTests.test_calculated_l_must_match_installed_value) ... ok
+test_calculation_cannot_claim_bench_pass (test_aux_power_contract.AuxiliaryPowerTests.test_calculation_cannot_claim_bench_pass) ... ok
+test_fault_peak_not_compared_to_typical_load_current (test_aux_power_contract.AuxiliaryPowerTests.test_fault_peak_not_compared_to_typical_load_current) ... ok
+test_inadequate_rms_rating_rejected (test_aux_power_contract.AuxiliaryPowerTests.test_inadequate_rms_rating_rejected) ... ok
+test_one_amp_design_has_current_margin (test_aux_power_contract.AuxiliaryPowerTests.test_one_amp_design_has_current_margin) ... ok
+test_original_feedback_precision_not_accepted (test_aux_power_contract.AuxiliaryPowerTests.test_original_feedback_precision_not_accepted) ... ok
+test_original_ripple_network_rejected_at_24v (test_aux_power_contract.AuxiliaryPowerTests.test_original_ripple_network_rejected_at_24v) ... ok
+test_previous_68uh_cannot_meet_worst_corner (test_aux_power_contract.AuxiliaryPowerTests.test_previous_68uh_cannot_meet_worst_corner) ... ok
+test_requirement_cannot_drop_to_half_amp (test_aux_power_contract.AuxiliaryPowerTests.test_requirement_cannot_drop_to_half_amp) ... ok
+test_ron_programmed_frequency_cannot_be_invented (test_aux_power_contract.AuxiliaryPowerTests.test_ron_programmed_frequency_cannot_be_invented) ... ok
+test_additional_failure_is_not_waived (test_ci_scope.CIScopeTests.test_additional_failure_is_not_waived) ... ok
+test_changed_board_cannot_reuse_known_failures (test_ci_scope.CIScopeTests.test_changed_board_cannot_reuse_known_failures) ... ok
+test_empty_fresh_netlist_is_rejected (test_ci_scope.CIScopeTests.test_empty_fresh_netlist_is_rejected) ... ok
+test_explicit_schematic_scope_passes (test_ci_scope.CIScopeTests.test_explicit_schematic_scope_passes) ... ok
+test_original_source_contract_accepts_lf_but_rejects_content_changes (test_ci_scope.CIScopeTests.test_original_source_contract_accepts_lf_but_rejects_content_changes) ... ok
+test_parity_details_are_compared_not_only_counts (test_ci_scope.CIScopeTests.test_parity_details_are_compared_not_only_counts) ... ok
+test_preserved_board_matches_recorded_blockers (test_ci_scope.CIScopeTests.test_preserved_board_matches_recorded_blockers) ... ok
+test_requested_native_parity_cannot_be_omitted (test_ci_scope.CIScopeTests.test_requested_native_parity_cannot_be_omitted) ... ok
+test_schematic_scope_still_validates_shunt_symbol_pins (test_ci_scope.CIScopeTests.test_schematic_scope_still_validates_shunt_symbol_pins) ... ok
+test_strict_design_default_still_blocks_archived_board (test_ci_scope.CIScopeTests.test_strict_design_default_still_blocks_archived_board) ... ok
+test_malformed_xml_replaces_previous_success_with_failure (test_gate_ab_verify.EvidenceIntegrityTests.test_malformed_xml_replaces_previous_success_with_failure) ... ok
+test_missing_input_replaces_previous_success_with_failure (test_gate_ab_verify.EvidenceIntegrityTests.test_missing_input_replaces_previous_success_with_failure) ... ok
+test_waveform_nonfinite_and_nonmonotonic_rejected (test_gate_ab_verify.EvidenceIntegrityTests.test_waveform_nonfinite_and_nonmonotonic_rejected) ... ok
+test_bad_value_is_rejected (test_gate_ab_verify.PassiveTests.test_bad_value_is_rejected) ... ok
+test_bus_active_temperature_budget_expands_passive_interval (test_gate_ab_verify.PassiveTests.test_bus_active_temperature_budget_expands_passive_interval) ... ok
+test_bus_corner_sweep_is_positive_only_and_rail_dependent (test_gate_ab_verify.PassiveTests.test_bus_corner_sweep_is_positive_only_and_rail_dependent) ... ok
+test_charge_time_is_only_an_illustrative_ratio (test_gate_ab_verify.PassiveTests.test_charge_time_is_only_an_illustrative_ratio) ... ok
+test_exact_unit_parser (test_gate_ab_verify.PassiveTests.test_exact_unit_parser) ... ok
+test_historical_g50_threshold_cannot_guarantee_adc_min (test_gate_ab_verify.PassiveTests.test_historical_g50_threshold_cannot_guarantee_adc_min) ... ok
+test_phase_filter_deck_has_no_bus_ocp_threshold (test_gate_ab_verify.PassiveTests.test_phase_filter_deck_has_no_bus_ocp_threshold) ... ok
+test_adc_strap_mutation_detected (test_gate_ab_verify.RealNetlistMutationTests.test_adc_strap_mutation_detected) ... ok
+test_bus_ina_swapped_polarity_rejected (test_gate_ab_verify.RealNetlistMutationTests.test_bus_ina_swapped_polarity_rejected) ... ok
+test_bus_threshold_value_rejected (test_gate_ab_verify.RealNetlistMutationTests.test_bus_threshold_value_rejected) ... ok
+test_comparator_reference_fault_detected (test_gate_ab_verify.RealNetlistMutationTests.test_comparator_reference_fault_detected) ... ok
+test_inverted_driver_variant_rejected (test_gate_ab_verify.RealNetlistMutationTests.test_inverted_driver_variant_rejected) ... ok
+test_netlist_only_report_does_not_claim_erc_pass (test_gate_ab_verify.RealNetlistMutationTests.test_netlist_only_report_does_not_claim_erc_pass) ... ok
+test_ngspice_regen_and_ideal_rc_crossing (test_gate_ab_verify.RealNetlistMutationTests.test_ngspice_regen_and_ideal_rc_crossing) ... skipped 'ngspice CLI not available'
+test_obsolete_bootstrap_diode_detected (test_gate_ab_verify.RealNetlistMutationTests.test_obsolete_bootstrap_diode_detected) ... ok
+test_obsolete_phase_comparator_rejected (test_gate_ab_verify.RealNetlistMutationTests.test_obsolete_phase_comparator_rejected) ... ok
+test_onboard_fuse_bypass_rejected (test_gate_ab_verify.RealNetlistMutationTests.test_onboard_fuse_bypass_rejected) ... ok
+test_phase_ocp_tap_resurrection_rejected (test_gate_ab_verify.RealNetlistMutationTests.test_phase_ocp_tap_resurrection_rejected) ... ok
+test_real_graph_and_evidence (test_gate_ab_verify.RealNetlistMutationTests.test_real_graph_and_evidence) ... ok
+test_regeneration_model_matches_capacitor_law (test_gate_ab_verify.RealNetlistMutationTests.test_regeneration_model_matches_capacitor_law) ... ok
+test_shunt_value_mutation_detected (test_gate_ab_verify.RealNetlistMutationTests.test_shunt_value_mutation_detected) ... ok
+test_stale_waveforms_cannot_pass_noop_simulator (test_gate_ab_verify.RealNetlistMutationTests.test_stale_waveforms_cannot_pass_noop_simulator) ... skipped 'Needs ngspice and POSIX true'
+test_strict_gates_remain_blocked (test_gate_ab_verify.RealNetlistMutationTests.test_strict_gates_remain_blocked) ... ok
+test_supervisor_input_fault_detected (test_gate_ab_verify.RealNetlistMutationTests.test_supervisor_input_fault_detected) ... ok
+test_actual_power_and_bootstrap_nets_require_classes (test_pcb_checks.PCBParityTests.test_actual_power_and_bootstrap_nets_require_classes) ... ok
+test_checker_exists (test_pcb_checks.PCBParityTests.test_checker_exists) ... ok
+test_dnp_mismatch_is_rejected (test_pcb_checks.PCBParityTests.test_dnp_mismatch_is_rejected) ... ok
+test_extra_unconnected_numbered_pad_is_rejected (test_pcb_checks.PCBParityTests.test_extra_unconnected_numbered_pad_is_rejected) ... ok
+test_full_footprint_id_and_each_duplicate_pad_are_checked (test_pcb_checks.PCBParityTests.test_full_footprint_id_and_each_duplicate_pad_are_checked) ... ok
+test_kicad10_name_only_net_encoding_is_supported (test_pcb_checks.PCBParityTests.test_kicad10_name_only_net_encoding_is_supported) ... ok
+test_mechanical_reference_cannot_hide_an_electrical_pad (test_pcb_checks.PCBParityTests.test_mechanical_reference_cannot_hide_an_electrical_pad) ... ok
+test_missing_value_is_rejected (test_pcb_checks.PCBParityTests.test_missing_value_is_rejected) ... ok
+test_only_registered_mechanical_parts_are_allowed (test_pcb_checks.PCBParityTests.test_only_registered_mechanical_parts_are_allowed) ... ok
+test_renamed_ground_and_missing_pad_are_not_normalized (test_pcb_checks.PCBParityTests.test_renamed_ground_and_missing_pad_are_not_normalized) ... ok
+test_wrong_pad_net_and_missing_part_are_rejected (test_pcb_checks.PCBParityTests.test_wrong_pad_net_and_missing_part_are_rejected) ... ok
+test_pcb_corners (unittest.loader.ModuleSkipped.test_pcb_corners) ... skipped 'pcbnew unavailable in this interpreter; run native geometry lane'
+test_clearance_reduction_is_rejected (test_pcb_escape.EscapeRuleTests.test_clearance_reduction_is_rejected) ... ok
+test_duplicate_exception_is_rejected (test_pcb_escape.EscapeRuleTests.test_duplicate_exception_is_rejected) ... ok
+test_exact_scoped_rules (test_pcb_escape.EscapeRuleTests.test_exact_scoped_rules) ... ok
+test_foreign_package_scope_is_rejected (test_pcb_escape.EscapeRuleTests.test_foreign_package_scope_is_rejected) ... ok
+test_missing_exception_partner_is_rejected (test_pcb_escape.EscapeRuleTests.test_missing_exception_partner_is_rejected) ... ok
+test_no_exception_is_optional_for_old_baselines (test_pcb_escape.EscapeRuleTests.test_no_exception_is_optional_for_old_baselines) ... ok
+test_severity_override_is_rejected (test_pcb_escape.EscapeRuleTests.test_severity_override_is_rejected) ... ok
+test_actual_pad_connected_escape (test_pcb_escape.NativeEscapeTests.test_actual_pad_connected_escape) ... skipped 'native pcbnew required for physical escape audits'
+test_detached_local_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_detached_local_via_is_rejected) ... skipped 'native pcbnew required for physical escape audits'
+test_foreign_net_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_foreign_net_via_is_rejected) ... skipped 'native pcbnew required for physical escape audits'
+test_oversized_local_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_oversized_local_via_is_rejected) ... skipped 'native pcbnew required for physical escape audits'
+test_u18_back_track_is_rejected (test_pcb_escape.NativeEscapeTests.test_u18_back_track_is_rejected) ... skipped 'native pcbnew required for physical escape audits'
+test_u1_back_escape_has_physical_via_path (test_pcb_escape.NativeEscapeTests.test_u1_back_escape_has_physical_via_path) ... skipped 'native pcbnew required for physical escape audits'
+test_undersized_drill_is_rejected (test_pcb_escape.NativeEscapeTests.test_undersized_drill_is_rejected) ... skipped 'native pcbnew required for physical escape audits'
+test_via_outside_package_is_rejected (test_pcb_escape.NativeEscapeTests.test_via_outside_package_is_rejected) ... skipped 'native pcbnew required for physical escape audits'
+test_pcb_kelvin (unittest.loader.ModuleSkipped.test_pcb_kelvin) ... skipped 'pcbnew unavailable in this interpreter; run native geometry lane'
+test_pcb_kelvin_review (unittest.loader.ModuleSkipped.test_pcb_kelvin_review) ... skipped 'pcbnew unavailable in this interpreter; run native geometry lane'
+test_actual_name_and_original_limits_pass (test_pcb_netclasses.NetclassContractTests.test_actual_name_and_original_limits_pass) ... ok
+test_conflicting_exact_assignment_fails (test_pcb_netclasses.NetclassContractTests.test_conflicting_exact_assignment_fails) ... ok
+test_missing_fresh_net_fails (test_pcb_netclasses.NetclassContractTests.test_missing_fresh_net_fails) ... ok
+test_stale_sheet_name_fails (test_pcb_netclasses.NetclassContractTests.test_stale_sheet_name_fails) ... ok
+test_weakened_clearance_fails (test_pcb_netclasses.NetclassContractTests.test_weakened_clearance_fails) ... ok
+test_export_metadata_requires_relative_source_and_known_format (test_public_paths.PublicPathsTests.test_export_metadata_requires_relative_source_and_known_format) ... ok
+test_library_source_metadata_is_preserved (test_public_paths.PublicPathsTests.test_library_source_metadata_is_preserved) ... ok
+test_native_export_metadata_is_portable_without_changing_graph (test_public_paths.PublicPathsTests.test_native_export_metadata_is_portable_without_changing_graph) ... ok
+test_only_line_numbers_are_reported (test_public_paths.PublicPathsTests.test_only_line_numbers_are_reported) ... ok
+test_sensitive_environment_files_are_never_read (test_public_paths.PublicPathsTests.test_sensitive_environment_files_are_never_read) ... ok
+test_urls_and_portable_paths_are_allowed (test_public_paths.PublicPathsTests.test_urls_and_portable_paths_are_allowed) ... ok
+test_user_posix_paths_are_rejected (test_public_paths.PublicPathsTests.test_user_posix_paths_are_rejected) ... ok
+test_windows_paths_and_json_escapes_are_rejected (test_public_paths.PublicPathsTests.test_windows_paths_and_json_escapes_are_rejected) ... ok
+test_incomplete_native_erc_report_cannot_claim_pass (test_run_gate_ab.RunnerTests.test_incomplete_native_erc_report_cannot_claim_pass) ... skipped 'Requires ngspice and POSIX executable script'
+test_missing_cli_writes_failure_and_does_not_reuse_old_netlist (test_run_gate_ab.RunnerTests.test_missing_cli_writes_failure_and_does_not_reuse_old_netlist) ... ok
+test_schematic_scope_cannot_request_pcb_release_drc (test_run_gate_ab.RunnerTests.test_schematic_scope_cannot_request_pcb_release_drc) ... ok
+test_schematic_scope_does_not_turn_missing_tools_into_pass (test_run_gate_ab.RunnerTests.test_schematic_scope_does_not_turn_missing_tools_into_pass) ... ok
+test_corner_does_not_require_dot (test_schematic_junctions.ExplicitJunctionTests.test_corner_does_not_require_dot) ... ok
+test_junction_at_t_passes (test_schematic_junctions.ExplicitJunctionTests.test_junction_at_t_passes) ... ok
+test_split_t_without_dot_is_rejected (test_schematic_junctions.ExplicitJunctionTests.test_split_t_without_dot_is_rejected) ... ok
+test_unconnected_four_way_crossing_not_joined (test_schematic_junctions.ExplicitJunctionTests.test_unconnected_four_way_crossing_not_joined) ... ok
+test_unsplit_wire_t_still_requires_dot (test_schematic_junctions.ExplicitJunctionTests.test_unsplit_wire_t_still_requires_dot) ... ok
+test_default_zero_width_rejected (test_schematic_wire_widths.WireWidthTests.test_default_zero_width_rejected) ... ok
+test_explicit_old_default_width_accepted (test_schematic_wire_widths.WireWidthTests.test_explicit_old_default_width_accepted) ... ok
+test_missing_width_rejected (test_schematic_wire_widths.WireWidthTests.test_missing_width_rejected) ... ok
+test_only_wire_strokes_checked (test_schematic_wire_widths.WireWidthTests.test_only_wire_strokes_checked) ... ok
+test_ad7606c_project_metadata_matches_native_root (test_toolkit_core.CoreTests.test_ad7606c_project_metadata_matches_native_root) ... ok
+test_blocked_and_failed_precedence (test_toolkit_core.CoreTests.test_blocked_and_failed_precedence) ... ok
+test_config_profiles (test_toolkit_core.CoreTests.test_config_profiles) ... ok
+test_config_relative_to_file (test_toolkit_core.CoreTests.test_config_relative_to_file) ... ok
+test_missing_board_requested (test_toolkit_core.CoreTests.test_missing_board_requested) ... ok
+test_missing_schematic_rejected (test_toolkit_core.CoreTests.test_missing_schematic_rejected) ... ok
+test_output_cannot_overlap_source (test_toolkit_core.CoreTests.test_output_cannot_overlap_source) ... ok
+test_required_not_run_is_failure (test_toolkit_core.CoreTests.test_required_not_run_is_failure) ... ok
+test_space_and_external_root (test_toolkit_core.CoreTests.test_space_and_external_root) ... ok
+test_unknown_key_rejected (test_toolkit_core.CoreTests.test_unknown_key_rejected) ... ok
+test_unknown_rules_fail (test_toolkit_core.CoreTests.test_unknown_rules_fail) ... ok
+test_check_does_not_import_pcbnew_or_archive (test_toolkit_development.DevelopmentTests.test_check_does_not_import_pcbnew_or_archive) ... ok
+test_preview_changes_no_source_bytes (test_toolkit_development.DevelopmentTests.test_preview_changes_no_source_bytes) ... ok
+test_snapshot_includes_local_library_dependencies (test_toolkit_development.DevelopmentTests.test_snapshot_includes_local_library_dependencies) ... ok
+test_snapshot_is_non_overwriting (test_toolkit_development.DevelopmentTests.test_snapshot_is_non_overwriting) ... ok
+test_sync_apply_rejected (test_toolkit_development.DevelopmentTests.test_sync_apply_rejected) ... ok
+test_active_docs_local_links (test_toolkit_integration.IntegrationTests.test_active_docs_local_links) ... ok
+test_check_fails_for_missing_board (test_toolkit_integration.IntegrationTests.test_check_fails_for_missing_board) ... ok
+test_ci_uses_shared_entry (test_toolkit_integration.IntegrationTests.test_ci_uses_shared_entry) ... ok
+test_docs_have_current_and_archive_indexes (test_toolkit_integration.IntegrationTests.test_docs_have_current_and_archive_indexes) ... ok
+test_explicit_native_interpreter_missing_pcbnew_fails (test_toolkit_integration.IntegrationTests.test_explicit_native_interpreter_missing_pcbnew_fails) ... ok
+test_external_project_cli_without_servo_rules (test_toolkit_integration.IntegrationTests.test_external_project_cli_without_servo_rules) ... ok
+test_profiles_distinct (test_toolkit_integration.IntegrationTests.test_profiles_distinct) ... ok
+test_single_daily_entry (test_toolkit_integration.IntegrationTests.test_single_daily_entry) ... ok
+test_static_lane_needs_no_native_tool (test_toolkit_integration.IntegrationTests.test_static_lane_needs_no_native_tool) ... ok
+test_configured_board_with_netlist_returns_findings (test_toolkit_rules.RuleTests.test_configured_board_with_netlist_returns_findings) ... ok
+test_explicit_adc_profiles_do_not_leak (test_toolkit_rules.RuleTests.test_explicit_adc_profiles_do_not_leak) ... ok
+test_generic_project_has_no_servo_rules (test_toolkit_rules.RuleTests.test_generic_project_has_no_servo_rules) ... ok
+test_missing_netlist_not_pass (test_toolkit_rules.RuleTests.test_missing_netlist_not_pass) ... ok
+test_pinless_native_netlist_cannot_prove_parity (test_toolkit_rules.RuleTests.test_pinless_native_netlist_cannot_prove_parity) ... ok
+test_bad_parentheses (test_toolkit_schematic.SchematicTests.test_bad_parentheses) ... ok
+test_cycle_fails (test_toolkit_schematic.SchematicTests.test_cycle_fails) ... ok
+test_duplicate_instance_path_fails (test_toolkit_schematic.SchematicTests.test_duplicate_instance_path_fails) ... ok
+test_floating_power_port (test_toolkit_schematic.SchematicTests.test_floating_power_port) ... ok
+test_generic_project_has_no_servo_rules (test_toolkit_schematic.SchematicTests.test_generic_project_has_no_servo_rules) ... ok
+test_missing_child_fails (test_toolkit_schematic.SchematicTests.test_missing_child_fails) ... ok
+test_nested_hierarchy (test_toolkit_schematic.SchematicTests.test_nested_hierarchy) ... ok
+test_off_grid (test_toolkit_schematic.SchematicTests.test_off_grid) ... ok
+test_repeated_source_instance_allowed (test_toolkit_schematic.SchematicTests.test_repeated_source_instance_allowed) ... ok
+test_bom_repeated_child_uses_annotated_instances (test_toolkit_workflows.WorkflowTests.test_bom_repeated_child_uses_annotated_instances) ... ok
+test_complete_empty_erc_passes (test_toolkit_workflows.WorkflowTests.test_complete_empty_erc_passes) ... ok
+test_erc_exclusion_is_visible (test_toolkit_workflows.WorkflowTests.test_erc_exclusion_is_visible) ... ok
+test_export_cannot_overwrite_sources (test_toolkit_workflows.WorkflowTests.test_export_cannot_overwrite_sources) ... ok
+test_incomplete_erc_cannot_pass (test_toolkit_workflows.WorkflowTests.test_incomplete_erc_cannot_pass) ... ok
+test_missing_executable (test_toolkit_workflows.WorkflowTests.test_missing_executable) ... ok
+test_repeat_isolation_and_stale_netlist (test_toolkit_workflows.WorkflowTests.test_repeat_isolation_and_stale_netlist) ... ok
+test_space_in_executable_path (test_toolkit_workflows.WorkflowTests.test_space_in_executable_path) ... ok
+test_timeout (test_toolkit_workflows.WorkflowTests.test_timeout) ... ok
+test_archived_land_blockers_are_exact (test_vendor_lands.VendorLandsTests.test_archived_land_blockers_are_exact) ... ok
+test_archived_rule_blockers_are_exact (test_vendor_lands.VendorLandsTests.test_archived_rule_blockers_are_exact) ... ok
+test_minimum_cannot_be_reduced (test_vendor_lands.VendorLandsTests.test_minimum_cannot_be_reduced) ... ok
+test_missing_rules_are_rejected (test_vendor_lands.VendorLandsTests.test_missing_rules_are_rejected) ... ok
+test_scope_cannot_cross_component_instances (test_vendor_lands.VendorLandsTests.test_scope_cannot_cross_component_instances) ... ok
+test_scope_cannot_include_tracks (test_vendor_lands.VendorLandsTests.test_scope_cannot_include_tracks) ... ok
+test_valid_reviewed_rule_fixture (test_vendor_lands.VendorLandsTests.test_valid_reviewed_rule_fixture) ... ok
+test_difference_counts (test_board_parity_audit.StaticBoardAuditTest.test_difference_counts) ... ok
+test_external_parts_do_not_require_board_footprints (test_board_parity_audit.StaticBoardAuditTest.test_external_parts_do_not_require_board_footprints) ... ok
+test_kicad10_embedded_nets_without_top_level_table (test_board_parity_audit.StaticBoardAuditTest.test_kicad10_embedded_nets_without_top_level_table) ... ok
+test_kicad_escaped_hierarchy_slash_matches_xml (test_board_parity_audit.StaticBoardAuditTest.test_kicad_escaped_hierarchy_slash_matches_xml) ... ok
+test_only_external_nets_are_excluded_from_board_comparison (test_board_parity_audit.StaticBoardAuditTest.test_only_external_nets_are_excluded_from_board_comparison) ... ok
+test_quoted_parentheses_are_safe (test_board_parity_audit.StaticBoardAuditTest.test_quoted_parentheses_are_safe) ... ok
+
+----------------------------------------------------------------------
+Ran 185 tests in 48.124s
+
+OK (skipped=14)
+test_actual_power_and_bootstrap_nets_require_classes (test_pcb_checks.PCBParityTests.test_actual_power_and_bootstrap_nets_require_classes) ... ok
+test_checker_exists (test_pcb_checks.PCBParityTests.test_checker_exists) ... ok
+test_dnp_mismatch_is_rejected (test_pcb_checks.PCBParityTests.test_dnp_mismatch_is_rejected) ... ok
+test_extra_unconnected_numbered_pad_is_rejected (test_pcb_checks.PCBParityTests.test_extra_unconnected_numbered_pad_is_rejected) ... ok
+test_full_footprint_id_and_each_duplicate_pad_are_checked (test_pcb_checks.PCBParityTests.test_full_footprint_id_and_each_duplicate_pad_are_checked) ... ok
+test_kicad10_name_only_net_encoding_is_supported (test_pcb_checks.PCBParityTests.test_kicad10_name_only_net_encoding_is_supported) ... ok
+test_mechanical_reference_cannot_hide_an_electrical_pad (test_pcb_checks.PCBParityTests.test_mechanical_reference_cannot_hide_an_electrical_pad) ... ok
+test_missing_value_is_rejected (test_pcb_checks.PCBParityTests.test_missing_value_is_rejected) ... ok
+test_only_registered_mechanical_parts_are_allowed (test_pcb_checks.PCBParityTests.test_only_registered_mechanical_parts_are_allowed) ... ok
+test_renamed_ground_and_missing_pad_are_not_normalized (test_pcb_checks.PCBParityTests.test_renamed_ground_and_missing_pad_are_not_normalized) ... ok
+test_wrong_pad_net_and_missing_part_are_rejected (test_pcb_checks.PCBParityTests.test_wrong_pad_net_and_missing_part_are_rejected) ... ok
+test_bevel_and_straight_tracks_pass (test_pcb_corners.CornerTests.test_bevel_and_straight_tracks_pass) ... ok
+test_exposed_right_angle (test_pcb_corners.CornerTests.test_exposed_right_angle) ... ok
+test_quantization_stub_is_reported (test_pcb_corners.CornerTests.test_quantization_stub_is_reported) ... ok
+test_t_junction_is_not_a_bend (test_pcb_corners.CornerTests.test_t_junction_is_not_a_bend) ... ok
+test_via_anchor_is_reported (test_pcb_corners.CornerTests.test_via_anchor_is_reported) ... ok
+test_clearance_reduction_is_rejected (test_pcb_escape.EscapeRuleTests.test_clearance_reduction_is_rejected) ... ok
+test_duplicate_exception_is_rejected (test_pcb_escape.EscapeRuleTests.test_duplicate_exception_is_rejected) ... ok
+test_exact_scoped_rules (test_pcb_escape.EscapeRuleTests.test_exact_scoped_rules) ... ok
+test_foreign_package_scope_is_rejected (test_pcb_escape.EscapeRuleTests.test_foreign_package_scope_is_rejected) ... ok
+test_missing_exception_partner_is_rejected (test_pcb_escape.EscapeRuleTests.test_missing_exception_partner_is_rejected) ... ok
+test_no_exception_is_optional_for_old_baselines (test_pcb_escape.EscapeRuleTests.test_no_exception_is_optional_for_old_baselines) ... ok
+test_severity_override_is_rejected (test_pcb_escape.EscapeRuleTests.test_severity_override_is_rejected) ... ok
+test_actual_pad_connected_escape (test_pcb_escape.NativeEscapeTests.test_actual_pad_connected_escape) ... ok
+test_detached_local_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_detached_local_via_is_rejected) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_foreign_net_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_foreign_net_via_is_rejected) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_oversized_local_via_is_rejected (test_pcb_escape.NativeEscapeTests.test_oversized_local_via_is_rejected) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_u18_back_track_is_rejected (test_pcb_escape.NativeEscapeTests.test_u18_back_track_is_rejected) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_u1_back_escape_has_physical_via_path (test_pcb_escape.NativeEscapeTests.test_u1_back_escape_has_physical_via_path) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_undersized_drill_is_rejected (test_pcb_escape.NativeEscapeTests.test_undersized_drill_is_rejected) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_via_outside_package_is_rejected (test_pcb_escape.NativeEscapeTests.test_via_outside_package_is_rejected) ... Adding duplicate image handler for 'PNG file'
+Adding duplicate image handler for 'JPEG file'
+Adding duplicate image handler for 'TIFF file'
+Adding duplicate image handler for 'GIF file'
+Adding duplicate image handler for 'PNM file'
+Adding duplicate image handler for 'PCX file'
+Adding duplicate image handler for 'IFF file'
+Adding duplicate image handler for 'Windows icon file'
+Adding duplicate image handler for 'Windows cursor file'
+Adding duplicate image handler for 'Windows animated cursor file'
+Adding duplicate image handler for 'TGA file'
+Adding duplicate image handler for 'XPM file'
+Adding duplicate image handler for 'WebP file'
+ok
+test_external_bridge_rejected (test_pcb_kelvin.KelvinTwoTerminal.test_external_bridge_rejected) ... ok
+test_force_side_pickup_rejected (test_pcb_kelvin.KelvinTwoTerminal.test_force_side_pickup_rejected) ... ok
+test_independent_pad_pickups (test_pcb_kelvin.KelvinTwoTerminal.test_independent_pad_pickups) ... ok
+test_missing_pickup_rejected (test_pcb_kelvin.KelvinTwoTerminal.test_missing_pickup_rejected) ... ok
+test_arc_outer_exit_rejected (test_pcb_kelvin_review.ReviewKelvinRegressions.test_arc_outer_exit_rejected) ... ok
+test_full_contact_must_stay_in_inner_half (test_pcb_kelvin_review.ReviewKelvinRegressions.test_full_contact_must_stay_in_inner_half) ... ok
+test_inner_layer_bridge_rejected (test_pcb_kelvin_review.ReviewKelvinRegressions.test_inner_layer_bridge_rejected) ... ok
+test_outer_exit_rejected (test_pcb_kelvin_review.ReviewKelvinRegressions.test_outer_exit_rejected) ... ok
+test_actual_name_and_original_limits_pass (test_pcb_netclasses.NetclassContractTests.test_actual_name_and_original_limits_pass) ... ok
+test_conflicting_exact_assignment_fails (test_pcb_netclasses.NetclassContractTests.test_conflicting_exact_assignment_fails) ... ok
+test_missing_fresh_net_fails (test_pcb_netclasses.NetclassContractTests.test_missing_fresh_net_fails) ... ok
+test_stale_sheet_name_fails (test_pcb_netclasses.NetclassContractTests.test_stale_sheet_name_fails) ... ok
+test_weakened_clearance_fails (test_pcb_netclasses.NetclassContractTests.test_weakened_clearance_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 44 tests in 3.991s
+
+OK

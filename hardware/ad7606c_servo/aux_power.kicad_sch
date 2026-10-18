@@ -3420,7 +3420,7 @@
 		)
 		(uuid "71c03d65-1577-4173-bdb5-5370e750aba0")
 	)
-(wire (pts (xy 29.21 83.82) (xy 34.29 83.82)) (stroke (width 0.1524) (type default)) (uuid "afe05ddb-4d8b-4fa3-9cee-820f82fe381c"))
+(wire (pts (xy 29.21 83.82) (xy 33.02 83.82)) (stroke (width 0.1524) (type default)) (uuid "ce786e2d-7d7f-4c07-b2d7-c274c756cd87"))(wire (pts (xy 33.02 83.82) (xy 34.29 83.82)) (stroke (width 0.1524) (type default)) (uuid "9ec89722-16fc-445a-85d6-66ec070c4199"))(junction (at 33.02 83.82) (diameter 0.635) (color 0 0 0 0) (uuid "12405f5c-0e37-4441-9dc3-14115547899e"))
 
 (hierarchical_label "VA_5V"
 		(shape output)
@@ -3446,7 +3446,7 @@
 		)
 		(uuid "88c48b66-f3e2-495f-9ec1-5b3f40391fd7")
 	)
-(wire (pts (xy 29.21 48.26) (xy 34.29 48.26)) (stroke (width 0.1524) (type default)) (uuid "00852b57-a3fa-4497-b028-f6b5ef86677f"))
+(wire (pts (xy 29.21 48.26) (xy 33.02 48.26)) (stroke (width 0.1524) (type default)) (uuid "22f45ebd-f056-4342-a293-f599f1a6c634"))(wire (pts (xy 33.02 48.26) (xy 34.29 48.26)) (stroke (width 0.1524) (type default)) (uuid "b3b81ebb-8693-4771-ba4a-d7baaad37dbe"))(junction (at 33.02 48.26) (diameter 0.635) (color 0 0 0 0) (uuid "789ce40c-e9a0-49d0-8d3a-c49b5243ff35"))
 
 (hierarchical_label "VDRV_12V"
 		(shape output)
@@ -3520,9 +3520,9 @@
 (property "Value" "/GND" (at 64.77 157.48 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "41592702-8d6a-40be-beba-09f19b3566d6")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/c1adb95f-d617-59aa-ad68-92336ff2ba27" (reference "#PWR2106") (unit 1)))))
 
-(wire (pts (xy 34.29 83.82) (xy 34.29 86.36)) (stroke (width 0.1524) (type default)) (uuid "f7cce7ed-06ab-4475-832f-c1e6a265926c"))
+(wire (pts (xy 34.29 86.36) (xy 33.02 86.36)) (stroke (width 0.1524) (type default)) (uuid "50b64271-cec9-48ea-b37f-cf779b4522bb"))(wire (pts (xy 33.02 86.36) (xy 33.02 83.82)) (stroke (width 0.1524) (type default)) (uuid "9591994d-f548-4f5e-a6e0-cb42794b8208"))
 (label "GND" (at 34.29 86.36 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "9601439c-4cff-4a2b-b0b3-0c6db51b3622"))
-(wire (pts (xy 34.29 45.72) (xy 34.29 48.26)) (stroke (width 0.1524) (type default)) (uuid "a5f52906-14ef-4f5c-ac35-90864070c40c"))
+(wire (pts (xy 34.29 45.72) (xy 33.02 45.72)) (stroke (width 0.1524) (type default)) (uuid "a307b188-d3f4-4302-ac25-c51bac9bab14"))(wire (pts (xy 33.02 45.72) (xy 33.02 48.26)) (stroke (width 0.1524) (type default)) (uuid "ab5688a0-ecbe-4438-9574-b810131f7dd5"))
 (wire (pts (xy 165.1 125.73) (xy 165.1 128.27)) (stroke (width 0.1524) (type default)) (uuid "d08318a9-a04a-4c14-bef9-343df93363b5"))
 (symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 34.29 86.36 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "3d682b1d-6ae4-4966-a226-56e1122894c6")
 (property "Reference" "#PWR29001" (at 34.29 86.36 0) (effects (font (size 1 1)) (hide yes)))

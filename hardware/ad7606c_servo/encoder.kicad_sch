@@ -2359,7 +2359,7 @@
 (no_connect (at 121.92 137.16) (uuid "6d9cc26c-b825-428a-ac23-c4755914f4ff"))
 (no_connect (at 116.84 137.16) (uuid "07949365-8a5c-4f96-b187-27b5c16f3382"))
 (no_connect (at 111.76 137.16) (uuid "c00d6259-3025-4296-a663-b5b1052b06eb"))
-(wire (pts (xy 101.6 119.38) (xy 99.06 119.38)) (stroke (width 0.1524) (type default)) (uuid "8cacc4bb-1063-410f-9d98-c2910c7375c3"))
+
 (hierarchical_label "ENC_Z"
 		(shape output)
 		(at 228.6 91.44 0)

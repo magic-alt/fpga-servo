@@ -69,4 +69,6 @@
 		(uuid "32c216f0-9c27-4db7-b3b9-936d6ba34d88")
 	)
 	(embedded_fonts no)
+
+ (fp_circle (center 0 0) (end 3 0) (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd"))
 )
