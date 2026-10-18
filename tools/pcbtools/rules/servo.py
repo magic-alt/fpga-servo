@@ -30,7 +30,7 @@ def check_design(project, schematic_only=False):
         HW / "ax7010_servo_reva.kicad_pro",
         HW / "ax7010_servo_reva.kicad_pcb",
         HW / "bom.csv",
-        ROOT / "fpga/ax7010_servo_reva.xdc",
+        ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.xdc",
     ]
     for path in required:
         if not path.exists() or path.stat().st_size == 0:
@@ -163,7 +163,7 @@ def check_design(project, schematic_only=False):
             if token not in pcb:
                 errors.append(f"PCB baseline missing token: {token}")
 
-    xdc_path = ROOT / "fpga/ax7010_servo_reva.xdc"
+    xdc_path = ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.xdc"
     if xdc_path.exists():
         xdc = xdc_path.read_text(errors="ignore")
         for port in [

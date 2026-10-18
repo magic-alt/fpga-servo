@@ -20,7 +20,7 @@ class ADCSerialContractTests(unittest.TestCase):
             "hardware/ads8588s_servo/current_adc.kicad_sch",
             "hardware/ads8588s_servo/ax7010_interface.kicad_sch",
             "hardware/ads8588s_servo/bom.csv",
-            "fpga/ax7010_servo_reva.xdc",
+            "hardware/ads8588s_servo/ax7010_servo_reva.xdc",
         ):
             dst = self.root / source
             dst.parent.mkdir(parents=True, exist_ok=True)
@@ -46,14 +46,14 @@ class ADCSerialContractTests(unittest.TestCase):
         self.assertGreater(t["dual_10mhz_us"], contract.SAMPLE_CYCLE_MIN_US)
 
     def test_unfitted_parallel_port_rejected(self):
-        self.mutate("fpga/ax7010_servo_reva.xdc",
+        self.mutate("hardware/ads8588s_servo/ax7010_servo_reva.xdc",
                     "# set_property PACKAGE_PIN F17",
                     "set_property PACKAGE_PIN F17")
         errs = contract.check(self.root)
         self.assertTrue(any("unfitted J11" in e for e in errs), errs)
 
     def test_lost_second_dout_pin_rejected(self):
-        self.mutate("fpga/ax7010_servo_reva.xdc",
+        self.mutate("hardware/ads8588s_servo/ax7010_servo_reva.xdc",
                     "PACKAGE_PIN U14 [get_ports ADC_DOUTB]",
                     "PACKAGE_PIN U14 [get_ports TEST_ONLY]")
         errs = contract.check(self.root)

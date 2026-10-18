@@ -33,7 +33,7 @@ def source_hashes(project):
     if proc["exit_code"]==0:
         for name in proc["stdout"].split("\0"):
             path=project.root/name
-            if name.startswith(("hardware/","fpga/","tools/",".github/")) and path.is_file():
+            if name.startswith(("hardware/","tools/",".github/")) and path.is_file():
                 if any(part==".env" or part.startswith(".env.") or part in {".history","__pycache__"} for part in path.parts): continue
                 if path.suffix in {".pyc",".kicad_prl",".lck"} or path.is_relative_to(project.output): continue
                 paths.add(path)
