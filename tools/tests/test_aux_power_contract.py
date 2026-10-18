@@ -22,6 +22,13 @@ class AuxiliaryPowerTests(unittest.TestCase):
     def test_authored_source_and_bom_match_candidate(self):
         self.assertEqual(check_project(self.project), [])
 
+    def test_both_prototypes_require_reviewed_one_amp_supply(self):
+        for name in ('ads8588s', 'ad7606c'):
+            with self.subTest(project=name):
+                project = resolve_project(name)
+                self.assertIn('aux_power', project.rule_sets)
+                self.assertEqual(check_project(project), [])
+
     def retained_fixture(self):
         import xml.etree.ElementTree as ET
         from pcbtools.rules.adc import ad7606c_api

@@ -1,0 +1,82 @@
+{
+  "retained_common_physical_graph_mapping": {
+    "/power_input/VIN_RAW": "/DC Input & Protection/VIN_RAW",
+    "/power_input/VIN_FUSED": "/DC Input & Protection/VIN_FUSED",
+    "/power_input/RPP_SRC": "/DC Input & Protection/RPP_SRC",
+    "/VBUS_PROT": "/VBUS_PROT",
+    "/VBUS_BRIDGE": "/VBUS_BRIDGE",
+    "/SW_U": "/SW_U",
+    "/SW_V": "/SW_V",
+    "/SW_W": "/SW_W",
+    "/PH_U": "/PH_U",
+    "/PH_V": "/PH_V",
+    "/PH_W": "/PH_W",
+    "/VDRV_12V": "/VDRV_12V",
+    "/gate_inverter/GH_U": "/Gate Driver / Inverter/GH_U",
+    "/gate_inverter/GH_V": "/Gate Driver / Inverter/GH_V",
+    "/gate_inverter/GH_W": "/Gate Driver / Inverter/GH_W",
+    "/gate_inverter/GL_U": "/Gate Driver / Inverter/GL_U",
+    "/gate_inverter/GL_V": "/Gate Driver / Inverter/GL_V",
+    "/gate_inverter/GL_W": "/Gate Driver / Inverter/GL_W",
+    "/gate_inverter/BST_U": "/Gate Driver / Inverter/BST_U",
+    "/gate_inverter/BST_V": "/Gate Driver / Inverter/BST_V",
+    "/gate_inverter/BST_W": "/Gate Driver / Inverter/BST_W",
+    "Net-(Q1-G)": "Net-(Q1-G)",
+    "Net-(Q2-G)": "Net-(Q2-G)",
+    "Net-(Q3-G)": "Net-(Q3-G)",
+    "Net-(Q4-G)": "Net-(Q4-G)",
+    "Net-(Q5-G)": "Net-(Q5-G)",
+    "Net-(Q6-G)": "Net-(Q6-G)",
+    "/VA_5V": "/VA_5V",
+    "/VBUS_ADC": "/VBUS_ADC",
+    "/IU_ADC": "/Current Sense / OCP / ADC/IU_ADC",
+    "/IV_ADC": "/Current Sense / OCP / ADC/IV_ADC",
+    "/IW_ADC": "/Current Sense / OCP / ADC/IW_ADC"
+  },
+  "existing_minimums_unchanged": true,
+  "bank": "10 explicit POWER nets per project",
+  "ads_stale_hierarchical_patterns": "Correction: original {slash} GATE/ANALOG patterns were valid native escaped names. XML display names decode slashes; physical-node proof and native .net audit now retain exact native names. Obsolete Default entries removed; all10 bank nets explicitly POWER.",
+  "native_export_names": {
+    "ads8588s": {
+      "xml_display_to_native_name": {
+        "/Gate Driver / Inverter/GL_V": "/Gate Driver {slash} Inverter/GL_V",
+        "/Current Sense / OCP / ADC/REGCAP1": "/Current Sense {slash} OCP {slash} ADC/REGCAP1",
+        "/Current Sense / OCP / ADC/IU_ADC": "/Current Sense {slash} OCP {slash} ADC/IU_ADC",
+        "/Current Sense / OCP / ADC/BUS_OCP_REF": "/Current Sense {slash} OCP {slash} ADC/BUS_OCP_REF",
+        "/Current Sense / OCP / ADC/NTC_BOARD": "/Current Sense {slash} OCP {slash} ADC/NTC_BOARD",
+        "/Gate Driver / Inverter/GL_U": "/Gate Driver {slash} Inverter/GL_U",
+        "unconnected-(U13-SS/TR-Pad8)": "unconnected-(U13-SS{slash}TR-Pad8)",
+        "/Gate Driver / Inverter/BST_V": "/Gate Driver {slash} Inverter/BST_V",
+        "/Current Sense / OCP / ADC/REFCAP_4V": "/Current Sense {slash} OCP {slash} ADC/REFCAP_4V",
+        "/Gate Driver / Inverter/BST_U": "/Gate Driver {slash} Inverter/BST_U",
+        "/Gate Driver / Inverter/HIN_W_SAFE": "/Gate Driver {slash} Inverter/HIN_W_SAFE",
+        "/Gate Driver / Inverter/LIN_W_SAFE": "/Gate Driver {slash} Inverter/LIN_W_SAFE",
+        "/Current Sense / OCP / ADC/REFIO_2V5": "/Current Sense {slash} OCP {slash} ADC/REFIO_2V5",
+        "/Gate Driver / Inverter/GH_W": "/Gate Driver {slash} Inverter/GH_W",
+        "/Current Sense / OCP / ADC/BUS_CURRENT": "/Current Sense {slash} OCP {slash} ADC/BUS_CURRENT",
+        "/Gate Driver / Inverter/LIN_U_SAFE": "/Gate Driver {slash} Inverter/LIN_U_SAFE",
+        "/Gate Driver / Inverter/RUN_OK": "/Gate Driver {slash} Inverter/RUN_OK",
+        "/Gate Driver / Inverter/LIN_V_SAFE": "/Gate Driver {slash} Inverter/LIN_V_SAFE",
+        "/Current Sense / OCP / ADC/IV_ADC": "/Current Sense {slash} OCP {slash} ADC/IV_ADC",
+        "/Gate Driver / Inverter/GL_W": "/Gate Driver {slash} Inverter/GL_W",
+        "/Current Sense / OCP / ADC/IW_ADC": "/Current Sense {slash} OCP {slash} ADC/IW_ADC",
+        "/Gate Driver / Inverter/GH_V": "/Gate Driver {slash} Inverter/GH_V",
+        "/Gate Driver / Inverter/BST_W": "/Gate Driver {slash} Inverter/BST_W",
+        "/Gate Driver / Inverter/GH_U": "/Gate Driver {slash} Inverter/GH_U",
+        "/Gate Driver / Inverter/HIN_V_SAFE": "/Gate Driver {slash} Inverter/HIN_V_SAFE",
+        "/Current Sense / OCP / ADC/REGCAP2": "/Current Sense {slash} OCP {slash} ADC/REGCAP2",
+        "/Gate Driver / Inverter/HIN_U_SAFE": "/Gate Driver {slash} Inverter/HIN_U_SAFE",
+        "/Current Sense / OCP / ADC/NTC_BOARD_AUX": "/Current Sense {slash} OCP {slash} ADC/NTC_BOARD_AUX"
+      },
+      "native_node_graph_exact": true,
+      "actual_native_netclass_audit": "PASS"
+    },
+    "ad7606c": {
+      "xml_display_to_native_name": {
+        "unconnected-(U13-SS/TR-Pad8)": "unconnected-(U13-SS{slash}TR-Pad8)"
+      },
+      "native_node_graph_exact": true,
+      "actual_native_netclass_audit": "PASS"
+    }
+  }
+}

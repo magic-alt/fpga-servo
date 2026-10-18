@@ -11,8 +11,8 @@
 		(uuid "5f9b1fcc-29ae-4093-acaa-5099ed8be529")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.12)
+				(size 1.0 1.0)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -57,7 +57,7 @@
 		(uuid "2781ce59-4056-4deb-8aef-bd4f260ce181")
 		(effects
 			(font
-				(size 1 1)
+				(size 1.0 1.0)
 				(thickness 0.15)
 			)
 		)
@@ -68,7 +68,7 @@
 		(start -4.68 -0.5)
 		(end -4.68 0.5)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -78,7 +78,7 @@
 		(start -4.68 0.5)
 		(end -3.68 0)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -88,7 +88,7 @@
 		(start -3.68 0)
 		(end -4.68 -0.5)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -98,7 +98,7 @@
 		(start -3.29 -5.21)
 		(end 5.83 -5.21)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -108,7 +108,7 @@
 		(start -3.29 3.03)
 		(end -1.98 3.03)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -118,7 +118,7 @@
 		(start -3.29 15.37)
 		(end -3.29 -5.21)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -128,7 +128,7 @@
 		(start -1.98 -3.91)
 		(end 4.52 -3.91)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -138,7 +138,7 @@
 		(start -1.98 3.03)
 		(end -1.98 -3.91)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -148,7 +148,7 @@
 		(start -1.98 7.13)
 		(end -3.29 7.13)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -158,7 +158,7 @@
 		(start -1.98 14.07)
 		(end -1.98 7.13)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -168,7 +168,7 @@
 		(start 4.52 -3.91)
 		(end 4.52 14.07)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -178,7 +178,7 @@
 		(start 4.52 14.07)
 		(end -1.98 14.07)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -188,7 +188,7 @@
 		(start 5.83 -5.21)
 		(end 5.83 15.37)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -198,7 +198,7 @@
 		(start 5.83 15.37)
 		(end -3.29 15.37)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type solid)
 		)
 		(layer "F.SilkS")
@@ -429,7 +429,7 @@
 		(uuid "ccbbb109-545f-4c35-8118-0010fc36cde8")
 	)
 	(embedded_fonts no)
-	(model "${KICAD10_3DMODEL_DIR}/Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.step"
+	(model "${KIPRJMOD}/mechanical/frozen-system-models-v1/Connector_IDC.3dshapes/IDC-Header_2x05_P2.54mm_Vertical.step"
 		(offset
 			(xyz 0 0 0)
 		)

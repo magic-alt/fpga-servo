@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "pcb_release": "BLOCKED",
+  "origin_commit": "17166bc",
+  "policy": "Schematic/BOM delivery only. Exact preserved PCB hashes and blockers; strict release tools still fail. No automatic baseline update.",
+  "snapshot": {
+    "source_sha256": {
+      "board": "6c92243b051071892cbbd347c35e9e79499ce2a72e876ef01e37df815e2fd169",
+      "project": "afe1395bb634f7c9225f7e59cead82905a03f28f7ee1399479bd3e82a97eec4e",
+      "rules": "1337aae80c538c8ca87922a66b530c5ae50224b92513cc30630637922d5cbedd"
+    },
+    "vendor_lands": [
+      "U15: expected manufacturer land-pattern identifier",
+      "U15: expected physical pads 1..8 exactly once",
+      "U5: missing footprint"
+    ],
+    "internal_pad_rules": [
+      "internal pad rules: expected exactly the reviewed sixteen rules"
+    ],
+    "parity": {
+      "schematic_components": 158,
+      "schematic_nets": 135,
+      "pcb_footprints": 166,
+      "duplicate_references": [],
+      "missing_on_pcb": [
+        "F1",
+        "RSH4",
+        "U5"
+      ],
+      "extra_on_pcb": [
+        "D2",
+        "D3",
+        "D4",
+        "J2",
+        "R51",
+        "R52",
+        "U16"
+      ],
+      "mechanical_preserved": [
+        "H1",
+        "H2",
+        "H3",
+        "H4"
+      ],
+      "unassigned_footprints": [],
+      "footprint_mismatches": [
+        {
+          "ref": "C94",
+          "schematic": "Capacitor_SMD:C_1206_3216Metric",
+          "pcb": "Capacitor_SMD:C_0603_1608Metric"
+        },
+        {
+          "ref": "C3",
+          "schematic": "Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3",
+          "pcb": "Capacitor_SMD:C_1210_3225Metric"
+        },
+        {
+          "ref": "C4",
+          "schematic": "Capacitor_SMD:C_1812_4532Metric",
+          "pcb": "Capacitor_SMD:C_1210_3225Metric"
+        },
+        {
+          "ref": "J5",
+          "schematic": "fpga-servo:JILN_3210_2x05_P2.54mm_D1.02",
+          "pcb": "Connector_IDC:IDC-Header_2x05_P2.54mm_Vertical"
+        },
+        {
+          "ref": "J1",
+          "schematic": "fpga-servo:JILN_3210_2x20_P2.54mm_D1.02",
+          "pcb": "Connector_IDC:IDC-Header_2x20_P2.54mm_Vertical"
+        },
+        {
+          "ref": "L1",
+          "schematic": "fpga-servo:SOREDE_SDRH1209_68uH",
+          "pcb": "Inductor_SMD:L_Coilcraft_MSS1246T-XXX"
+        },
+        {
+          "ref": "L2",
+          "schematic": "fpga-servo:Sunlord_SWPA4020S",
+          "pcb": "Inductor_SMD:L_Wuerth_MAPI-4020"
+        },
+        {
+          "ref": "U15",
+          "schematic": "fpga-servo:TI_DDF0008A",
+          "pcb": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm"
+        },
+        {
+          "ref": "NTC1",
+          "schematic": "fpga-servo:NTC_0603_Shiheng_KUU",
+          "pcb": "Resistor_SMD:R_0603_1608Metric"
+        },
+        {
+          "ref": "NTC2",
+          "schematic": "fpga-servo:NTC_0603_Shiheng_KUU",
+          "pcb": "Resistor_SMD:R_0603_1608Metric"
+        },
+        {
+          "ref": "RSH1",
+          "schematic": "fpga-servo:HoYLR2512_Kelvin",
+          "pcb": "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
+        },
+        {
+          "ref": "RSH2",
+          "schematic": "fpga-servo:HoYLR2512_Kelvin",
+          "pcb": "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
+        },
+        {
+          "ref": "RSH3",
+          "schematic": "fpga-servo:HoYLR2512_Kelvin",
+          "pcb": "fpga-servo:Ohmite_650_4T_P25.40x6.35mm"
+        },
+        {
+          "ref": "J4",
+          "schematic": "fpga-servo:KEFA_KF950_3_9.50mm",
+          "pcb": "fpga-servo:PhoenixContact_MKDS_5_3_9.52mm"
+        }
+      ],
+      "pin_mismatches": [
+        {
+          "ref": "U15",
+          "missing_pads": [],
+          "extra_pads": [
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "9"
+          ]
+        },
+        {
+          "ref": "RSH1",
+          "missing_pads": [],
+          "extra_pads": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "ref": "RSH2",
+          "missing_pads": [],
+          "extra_pads": [
+            "3",
+            "4"
+          ]
+        },
+        {
+          "ref": "RSH3",
+          "missing_pads": [],
+          "extra_pads": [
+            "3",
+            "4"
+          ]
+        }
+      ],
+      "net_mismatches": [
+        {
+          "ref": "U15",
+          "pin": "4",
+          "schematic_net": "/GND",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/IU_ADC"
+          ]
+        },
+        {
+          "ref": "U15",
+          "pin": "6",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/BUS_OCP_REF",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/IV_ADC"
+          ]
+        },
+        {
+          "ref": "U15",
+          "pin": "8",
+          "schematic_net": "/VA_5V",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/IW_ADC"
+          ]
+        },
+        {
+          "ref": "NTC2",
+          "pin": "1",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/NTC_BOARD_AUX",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/NTC_MOTOR"
+          ]
+        },
+        {
+          "ref": "R71",
+          "pin": "2",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/NTC_BOARD_AUX",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/NTC_MOTOR"
+          ]
+        },
+        {
+          "ref": "U6",
+          "pin": "59",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/NTC_BOARD_AUX",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/NTC_MOTOR"
+          ]
+        },
+        {
+          "ref": "R50",
+          "pin": "2",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/BUS_OCP_REF",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/OCP_HI_REF"
+          ]
+        },
+        {
+          "ref": "U15",
+          "pin": "5",
+          "schematic_net": "/GND",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/OCP_HI_REF"
+          ]
+        },
+        {
+          "ref": "U15",
+          "pin": "7",
+          "schematic_net": "unconnected-(U15-OUT2-Pad7)",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/OCP_HI_REF"
+          ]
+        },
+        {
+          "ref": "R53",
+          "pin": "1",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/BUS_OCP_REF",
+          "pcb_nets": [
+            "/Current Sense {slash} OCP {slash} ADC/OCP_LO_REF"
+          ]
+        },
+        {
+          "ref": "J3",
+          "pin": "1",
+          "schematic_net": "/DC Input & Protection/VIN_RAW",
+          "pcb_nets": [
+            "/DC Input & Protection/VIN_FUSED"
+          ]
+        },
+        {
+          "ref": "U15",
+          "pin": "2",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/BUS_CURRENT",
+          "pcb_nets": [
+            "/OCP_N"
+          ]
+        },
+        {
+          "ref": "U15",
+          "pin": "3",
+          "schematic_net": "/Current Sense {slash} OCP {slash} ADC/BUS_OCP_REF",
+          "pcb_nets": [
+            "/VA_5V"
+          ]
+        },
+        {
+          "ref": "Q1",
+          "pin": "5",
+          "schematic_net": "/VBUS_BRIDGE",
+          "pcb_nets": [
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT"
+          ]
+        },
+        {
+          "ref": "Q3",
+          "pin": "5",
+          "schematic_net": "/VBUS_BRIDGE",
+          "pcb_nets": [
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT"
+          ]
+        },
+        {
+          "ref": "Q5",
+          "pin": "5",
+          "schematic_net": "/VBUS_BRIDGE",
+          "pcb_nets": [
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT",
+            "/VBUS_PROT"
+          ]
+        }
+      ],
+      "value_mismatches": [
+        {
+          "ref": "RG1",
+          "schematic": "33R",
+          "pcb": "10R"
+        },
+        {
+          "ref": "RG2",
+          "schematic": "33R",
+          "pcb": "10R"
+        },
+        {
+          "ref": "RG3",
+          "schematic": "33R",
+          "pcb": "10R"
+        },
+        {
+          "ref": "RG4",
+          "schematic": "33R",
+          "pcb": "10R"
+        },
+        {
+          "ref": "RG5",
+          "schematic": "33R",
+          "pcb": "10R"
+        },
+        {
+          "ref": "RG6",
+          "schematic": "33R",
+          "pcb": "10R"
+        },
+        {
+          "ref": "R50",
+          "schematic": "8.2k",
+          "pcb": "10k"
+        },
+        {
+          "ref": "R53",
+          "schematic": "2k",
+          "pcb": "10k"
+        },
+        {
+          "ref": "CBOOT1",
+          "schematic": "470nF",
+          "pcb": "1uF"
+        },
+        {
+          "ref": "CBOOT2",
+          "schematic": "470nF",
+          "pcb": "1uF"
+        },
+        {
+          "ref": "CBOOT3",
+          "schematic": "470nF",
+          "pcb": "1uF"
+        },
+        {
+          "ref": "U1",
+          "schematic": "DRV8300DPWR",
+          "pcb": "FD6288T"
+        },
+        {
+          "ref": "U15",
+          "schematic": "LM393LVDDFR",
+          "pcb": "LM339LVPWR"
+        }
+      ],
+      "dnp_mismatches": [],
+      "passed": false
+    },
+    "constraints": [
+      "/VBUS_BRIDGE: missing exact POWER netclass assignment"
+    ],
+    "design_errors": [
+      "All four two-terminal SMD shunts required",
+      "PCB baseline missing token: DRV8300DPWR",
+      "RSH1: exactly physical terminals 1/2, no internal jumper groups",
+      "RSH1: manufacturer SMD land required",
+      "RSH2: exactly physical terminals 1/2, no internal jumper groups",
+      "RSH2: manufacturer SMD land required",
+      "RSH3: exactly physical terminals 1/2, no internal jumper groups",
+      "RSH3: manufacturer SMD land required",
+      "U15: expected manufacturer land-pattern identifier",
+      "U15: expected physical pads 1..8 exactly once",
+      "U5: missing footprint",
+      "Unused J2 must not be fitted on PCB",
+      "internal pad rules: expected exactly the reviewed sixteen rules"
+    ]
+  }
+}

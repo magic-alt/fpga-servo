@@ -49,6 +49,19 @@ def save_run(report,out):
 def native_summary(kind,path,code):
     try:
         d=json.loads(path.read_text(encoding="utf-8"))
+        # Counts cannot override the actual native violation arrays. Reject
+        # additional exclusion records/counts instead of trusting a zero summary.
+        def reject_exclusions(value):
+            if isinstance(value,dict):
+                for key, child in value.items():
+                    if "exclusion" in key.lower() and child:
+                        raise ValueError("Native report contains exclusions")
+                    if key.lower() in {"errors","warnings","error_count","warning_count","excluded_count"} and child:
+                        raise ValueError("Native summary contains nonzero violation counts")
+                    reject_exclusions(child)
+            elif isinstance(value,list):
+                for child in value: reject_exclusions(child)
+        reject_exclusions(d)
         if kind=="erc":
             sheets=d.get("sheets")
             if not isinstance(sheets,list) or not sheets or any(not isinstance(s,dict) or not isinstance(s.get("violations"),list) for s in sheets):
@@ -94,14 +107,32 @@ def verify(project, scope, output=None, tools=None):
     from .board import check_board
     from .rules import run_rules
     tools=tools or {}
-    if scope not in {"schematic","pcb","release"}: raise ProjectError("Unknown verification scope")
-    if scope in {"pcb","release"}: project.require_board()
+    if scope not in {"schematic","pcb","prototype","release"}: raise ProjectError("Unknown verification scope")
+    if scope in {"pcb","prototype","release"}: project.require_board()
     out=new_run_directory(project.safe_output(output or project.output))
     evidence={"schema_version":1,"output":str(out),"started_utc":datetime.now(timezone.utc).isoformat(),"steps":[],"tools":{"python":__import__("sys").version.split()[0]},"erc":{"status":"NOT_RUN"},"drc":{"status":"NOT_RUN"},"gate_a":{"status":"BLOCKED"},"gate_b":{"status":"BLOCKED"},"pcb_release":"BLOCKED","delivery_scope":"SCHEMATIC_BOM" if scope=="schematic" else "FULL_DESIGN"}
     report=RunReport(project.id,[],evidence,"BLOCKED" if scope=="release" else "NOT_EVALUATED")
-    before=source_hashes(project);evidence["source_hashes_before"]=before
+    hash_inputs=source_hashes
+    prototype_evidence=None
+    if scope=="prototype":
+        from .manufacturing import check_prototype_inputs, design_source_hashes
+        hash_inputs=design_source_hashes
+        findings,prototype_evidence=check_prototype_inputs(project)
+        report.findings+=findings;evidence.update(prototype_evidence)
+        evidence["delivery_scope"]="ENGINEERING_PROTOTYPE_ONLY"
+    before=None
+    native_root=None
+    audit_project=project
     cli=tools.get("kicad-cli","kicad-cli")
     def run(name,command,timeout=180):
+        if native_root is not None and command[0]==cli:
+            mapped=[]
+            for arg in command:
+                candidate=Path(str(arg))
+                if candidate.is_absolute() and candidate.is_relative_to(project.root) and candidate.relative_to(project.root).as_posix() in before:
+                    arg=str(native_root/candidate.relative_to(project.root))
+                mapped.append(arg)
+            command=mapped
         r=run_native(command,project.root,timeout)
         # Portable logs contain no inherited environment and no local installation prefix.
         log=r.get("stdout","")+r.get("stderr","")+r.get("error","")
@@ -135,10 +166,22 @@ def verify(project, scope, output=None, tools=None):
         f.rule_id=prefix+f.rule_id;report.findings.append(f)
         return inputs
     try:
+        before=hash_inputs(project);evidence["source_hashes_before"]=before
+        if scope=="prototype":
+            from .manufacturing import freeze_design
+            if before!=prototype_evidence.get("design_source_hashes"):
+                raise ProjectError("Design changed after prototype input review")
+            audit_project, frozen=freeze_design(project,out/"frozen-design",before)
+            native_root=Path(frozen["root"])
+            evidence["frozen_design"]=frozen
+        commit=run("source_commit",["git","rev-parse","HEAD"],30)
+        evidence["source_commit"]=commit.get("stdout","").strip() if commit["exit_code"]==0 else "UNAVAILABLE"
+        if scope=="prototype":
+            evidence["tool_sources_sha256"]={p.relative_to(project.root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path(__file__).parent.rglob("*.py")) if p.is_relative_to(project.root)}
         version=run("kicad_version",[cli,"--version"],30)
         if version["exit_code"] or not version["stdout"].strip().startswith("10."):
             report.findings.append(Finding("native.version",version["status"] if version["status"]!="PASS" else "FAIL","KiCad 10 required"))
-            report.findings += check_schematic(project)+run_rules(project,"schematic",{})
+            report.findings += check_schematic(audit_project)+run_rules(audit_project,"schematic",{})
             return report
         evidence["tools"]["kicad"]=version["stdout"].strip()
         inputs=export_inputs(project)
@@ -147,17 +190,27 @@ def verify(project, scope, output=None, tools=None):
             config=(project.root/reference).resolve()
             if not config.is_relative_to(project.root): raise ProjectError("Baseline configuration outside root")
             baseline=load_project(config)
+            if scope=="prototype":
+                from .manufacturing import relocated_project
+                baseline=relocated_project(baseline,native_root)
+            if scope=="prototype":
+                from .manufacturing import check_native_settings
+                try:
+                    check_native_settings(baseline)
+                    report.findings.append(Finding("baseline.prototype.native_settings","PASS","Baseline native checks enabled"))
+                except (OSError,ValueError,KeyError,TypeError) as exc:
+                    report.findings.append(Finding("baseline.prototype.native_settings","FAIL",str(exc)))
             baseline_inputs=export_inputs(baseline,"baseline-")
             inputs["baseline_xml"]=baseline_inputs.get("xml")
             for f in check_schematic(baseline)+run_rules(baseline,"schematic",baseline_inputs):
                 f.rule_id="baseline."+f.rule_id;report.findings.append(f)
-        report.findings += check_schematic(project)+run_rules(project,"schematic" if scope=="schematic" else "pcb",inputs)
+        report.findings += check_schematic(audit_project)+run_rules(audit_project,"schematic" if scope=="schematic" else "pcb",inputs)
         pdf=out/"schematic.pdf"
         r=run("pdf",[cli,"sch","export","pdf","--output",str(pdf),str(project.schematic)])
         valid=r["exit_code"]==0 and pdf.is_file() and pdf.stat().st_size>0
         report.findings.append(Finding("native.pdf","PASS" if valid else "FAIL","Native schematic export"))
-        if scope in {"pcb","release"}:
-            report.findings += check_board(project,inputs.get("netlist"))
+        if scope in {"pcb","prototype","release"}:
+            report.findings += check_board(audit_project,inputs.get("netlist"))
             target=out/"drc.json"
             r=run("drc",[cli,"pcb","drc","--schematic-parity","--refill-zones","--severity-all","--exit-code-violations","--format","json","--output",str(target),str(project.board)],300)
             f=native_summary("drc",target,r["exit_code"])
@@ -169,8 +222,23 @@ def verify(project, scope, output=None, tools=None):
     except Exception as exc:
         report.findings.append(Finding("workflow","FAIL",f"{type(exc).__name__}: {exc}"))
     finally:
-        after=source_hashes(project);evidence["source_hashes_after"]=after
-        if before!=after:report.findings.append(Finding("source.unchanged","FAIL","Source files changed during verification"))
-        else:report.findings.append(Finding("source.unchanged","PASS","Sources unchanged"))
+        try:
+            after=hash_inputs(project);evidence["source_hashes_after"]=after
+            if before is None or before!=after:report.findings.append(Finding("source.unchanged","FAIL","Source files changed or unavailable during verification"))
+            else:report.findings.append(Finding("source.unchanged","PASS","Sources unchanged"))
+            if native_root is not None:
+                from .manufacturing import check_frozen_design
+                check_frozen_design(evidence["frozen_design"])
+        except (OSError,ValueError,KeyError,TypeError) as exc:
+            report.findings.append(Finding("source.unchanged","FAIL",str(exc)))
+        if scope=="prototype":
+            findings,current=check_prototype_inputs(project)
+            if current!=prototype_evidence:
+                report.findings.append(Finding("prototype.evidence_unchanged","FAIL","Engineering evidence changed during verification"))
+            required={"native.export_xml","native.export_netlist","native.erc","native.drc","native.pdf","source.unchanged"}
+            passes={f.rule_id for f in report.findings if f.status=="PASS"}
+            if not required.issubset(passes):
+                report.findings.append(Finding("prototype.native_complete","FAIL","Fresh complete native evidence required"))
+            evidence["prototype_ready"]="PASS" if report.findings and all(f.status in {"PASS","NOT_APPLICABLE"} for f in report.findings) else "BLOCKED"
         save_run(report,out)
     return report

@@ -1,0 +1,192 @@
+{
+  "base_commit": "b0172a2f65902c7281cf4a8454f192dc791a9ef9",
+  "files": {
+    "hardware/ads8588s_servo/aux_power.kicad_sch": "d8414cdb391859ebda7352f1f1197547a80a47e4911d96313be48df39d20e81e",
+    "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "833d71a0c1409f707eba8008cd57db6878fb499850c4270dc5434cc7fa9b8ca9",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "0329a8f75183dcc83986dec46c9fcedddd7acb844e29bceaa0138b66badbf360",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "d13af37991cc22f871cc9628bb0e218fe9dcf33abd05d61852db3a6e053b1346",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "507a5d393dcf5499b8782184c8804cfbd13ca422df9b1316dafc16f1a4a4b4b2",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "644f58951b229ecdbbbe696aa49632e7e2ca5e817a00b95cbb088fa73497e1d9",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "8a1b525f726acfa84650eff1aae838087420c7a92b6990ad518754056d9c24b6",
+    "hardware/ads8588s_servo/bom.csv": "0e0d52d3a7cc66640eb9e5c3719d3f84d2b124943c2db946f91113cc0c49724a",
+    "hardware/ads8588s_servo/current_adc.kicad_sch": "a6fc9416db9746cdb5425a5fd619ac3e9c88db8fc76e8074a407d23c9fd3b185",
+    "hardware/ads8588s_servo/encoder.kicad_sch": "286d0ab7ebb4272242ecab6fab39e2bba9f303e2369ce1e5603fa1a99a30f6ac",
+    "hardware/ads8588s_servo/fp-lib-table": "b62c2da429e080fb3980770dae027a1bd4405039df34c55ebea928c748fa9768",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "2389005048bb7d71e4adf9cb86ff247a5af4073b2b78a610226d5194fd315062",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "84d461322faabbf72155b7f5def9c8d6ebe3b88234bf2a84765b1995ead4b6af",
+    "hardware/ads8588s_servo/power_input.kicad_sch": "8e87ef809f3a0243e6e2c64a9fe3590cd614d3e43b96d4a993c12f7fbf699f27",
+    "hardware/ads8588s_servo/sym-lib-table": "afcba65a80eea67cfcb51c00cd291651eeaa4b2683b719e6db675a7bbe6ecc5f",
+    "hardware/ads8588s_servo/dc_link.kicad_sch": "043dad16678da170d280c5a2fa02b450ecdcd413cf7903f3742fb03adfd795cc",
+    "hardware/ads8588s_servo/dc_link_profile.json": "b415af14c97afddcf57bcdbcf76f9c42881431c35f18df3ed4088cd07042d635",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Vishay_WSL2512_0R33.kicad_mod": "612e61886267a6d565b4ccea8c26a827adfa57d638b8a6534ead9447e66dd8b9",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Vishay_CRCW0603_HP.kicad_mod": "924a2581e12c32070cf1273d8c9b03094ff68b42dcb4150e311af48a9a2eeb80",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Murata_GRM32_1210.kicad_mod": "3e2fb3dd5100b9a4b775085e61b430485cc04dc63ec96c3e507e2db908efb55c",
+    "hardware/ads8588s_servo/aux_power_profile.json": "f2b03fb56c0afb7fc3dd5ba0ded4f58bdcbef7754f835e30e12781a06c0e18d4",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDA0008B_LM5164.kicad_mod": "f0a4da14d3ffae6de3cd99702886d15b2e7e97c955f3f1f5e6731555c5032bc2",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_RVZ0014A_W025.kicad_mod": "22e5459936e49206529f663d8faecf4e7439482fd5008565df6ec1f141325dbd",
+    "hardware/ads8588s_servo/fpga-servo.pretty/NCC_KZN_D10_P5_Courtyard11.kicad_mod": "c655c716ff356eead1bb03c7f866497b6affc6820c2d4c89f6bba9cb7e7f9ee8",
+    "hardware/ads8588s_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm_D1.85.kicad_mod": "454f7a4feba1ac0f85452902e8c19cff36d531b8751db76a78d3738ea2337cb3"
+  },
+  "original_paths": {
+    "hardware/ads8588s_servo/aux_power.kicad_sch": "hardware/aux_power.kicad_sch",
+    "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "hardware/ax7010_interface.kicad_sch",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "hardware/ax7010_servo_reva.kicad_dru",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "hardware/ax7010_servo_reva.kicad_pcb",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "hardware/ax7010_servo_reva.kicad_pro",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "hardware/ax7010_servo_reva.kicad_sch",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "hardware/ax7010_servo_reva.kicad_sym",
+    "hardware/ads8588s_servo/bom.csv": "hardware/bom.csv",
+    "hardware/ads8588s_servo/current_adc.kicad_sch": "hardware/current_adc.kicad_sch",
+    "hardware/ads8588s_servo/encoder.kicad_sch": "hardware/encoder.kicad_sch",
+    "hardware/ads8588s_servo/fp-lib-table": "hardware/fp-lib-table",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "hardware/gate_inverter.kicad_sch",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "hardware/ocp_latch.kicad_sch",
+    "hardware/ads8588s_servo/power_input.kicad_sch": "hardware/power_input.kicad_sch",
+    "hardware/ads8588s_servo/sym-lib-table": "hardware/sym-lib-table"
+  },
+  "text_sha256_lf": {
+    "hardware/ads8588s_servo/aux_power.kicad_sch": "f60a5c73245cb84af2bc586594b8d60dc803711acfb0f093aa2616b3b8bceff7",
+    "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "bc656f3a16278f51bb5136687888490803ef6c9e4459ec863057053b8de38c1c",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "07d7be523c284c53f522c304e89012aa7733e60abaa4c82856d36c1399499ba6",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "6c92243b051071892cbbd347c35e9e79499ce2a72e876ef01e37df815e2fd169",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "4440def0728d9c7c29d28ca95af08a475746a76341c8b8139f2f97f3542bd571",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "644f58951b229ecdbbbe696aa49632e7e2ca5e817a00b95cbb088fa73497e1d9",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "51a7b7ccb37a85d261458a6f617a5a70f454be6c5a8f28cfbd42f9f98e6f552d",
+    "hardware/ads8588s_servo/bom.csv": "7fd7974b7cad77dce8cacbd3280888074fe6239b40f7bc840f6b20469b923420",
+    "hardware/ads8588s_servo/current_adc.kicad_sch": "a6fc9416db9746cdb5425a5fd619ac3e9c88db8fc76e8074a407d23c9fd3b185",
+    "hardware/ads8588s_servo/encoder.kicad_sch": "484da673b6ba3a7bdcf6745ddf8cb73eb9dea6d43e749b4719def85248caa6fa",
+    "hardware/ads8588s_servo/fp-lib-table": "9adf1e09e2691c07ac791c2c6a49e02a6a07f04e4ff2f1aa7a04299a93884cf7",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "197034a1ccbbbc3a3eb30530587a47a608f567bd42af6d82d3e8853243beae2d",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "84d461322faabbf72155b7f5def9c8d6ebe3b88234bf2a84765b1995ead4b6af",
+    "hardware/ads8588s_servo/power_input.kicad_sch": "8d4cafe22b1a3ffd1f077004a6e796913d2b95880fbf5df1152236d37af0de35",
+    "hardware/ads8588s_servo/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e",
+    "hardware/ads8588s_servo/dc_link.kicad_sch": "24c20da55bed08a36a4119addef3d219d02cc35ab56bf7f5b1b9160e4c04d845",
+    "hardware/ads8588s_servo/dc_link_profile.json": "affec372a3eb14e37acfe92b4d846cf82d4b97d5a779a3f44fb7b350c5919d59",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Vishay_WSL2512_0R33.kicad_mod": "d73dd1956659779bdc81a7851cf0cde16ac78a7f891db7e9647715b0bbf1270a",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Vishay_CRCW0603_HP.kicad_mod": "e79547607e6fbef156c74413a4368c2287e8d36f36230985e382a02bd39dafa7",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Murata_GRM32_1210.kicad_mod": "ab521294732b44d4ec273d70dc1593c04441c99f4dadbfdcdf4ee0ba93d18d1c",
+    "hardware/ads8588s_servo/aux_power_profile.json": "bac1c54350742ead52355b57d86e73d0f6ba31b847a0e8cd8b20ac7e7fc87d87",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDA0008B_LM5164.kicad_mod": "6de98668f0a1dda6781ae34d77af88c8fba6d5a9ed9277d052e86d55d36284d5",
+    "hardware/ads8588s_servo/fpga-servo.pretty/TI_RVZ0014A_W025.kicad_mod": "5412f0f2dbca4fd3e550a7f2e2678f8bf92277c760b0d78f89b3f781907aea0f",
+    "hardware/ads8588s_servo/fpga-servo.pretty/NCC_KZN_D10_P5_Courtyard11.kicad_mod": "08624a1c2745278275f46ba71536fb4ed010d11bbfb4d3d0f68ca3efe1a08e32",
+    "hardware/ads8588s_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm_D1.85.kicad_mod": "f084b4598bb9715e2f1c80275fa8b09be420de7c3e7003d1a6404d6db30e916e"
+  },
+  "text_hash_policy": "UTF-8 with LF line endings; files retains original byte hashes",
+  "previous_manifest": "hardware/ad7606c_servo/evidence/source_manifest_before_dual_prototype_2026-10-18.json",
+  "previous_manifest_sha256": "59d69def6f4f096faeb0ece0929c4515ec26c0b6b8cca9a41cc4a42eec97ab57",
+  "authorized_ecos": {
+    "plan": "docs/superpowers/plans/2026-10-18-dual-servo-fabrication.md",
+    "references": [
+      "L1",
+      "R21",
+      "R22",
+      "R23",
+      "C25",
+      "U7"
+    ],
+    "connectivity": "159 components / 592 physical pins: exact before-after net membership; native ERC 0",
+    "encoder_evidence": "docs/reviews/dual_prototype_2026-10-18/u7_post_eco_verification.json",
+    "schematic_hygiene": {
+      "electrical_change": false,
+      "ads_components": 159,
+      "ads_nets": 135,
+      "ads_pin_memberships": 592,
+      "ad_components": 181,
+      "ad_nets": 162,
+      "ad_pin_memberships": 672,
+      "exact_native_connectivity_comparison": "PASS both; libraries/physical pins/net names/component identity preserved",
+      "erc": "all enabled: 0 errors / 0 warnings / 0 exclusions both",
+      "evidence": "docs/reviews/dual_prototype_2026-10-18/schematic_hygiene.md"
+    },
+    "dc_link": {
+      "evidence": "docs/reviews/dual_prototype_2026-10-18/dc_link_eco_verification.json",
+      "existing_changed_pins": [
+        "C1.1",
+        "C2.1"
+      ],
+      "added_references": [
+        "J7",
+        "C120",
+        "C121",
+        "C122",
+        "C123",
+        "C124",
+        "C125",
+        "C126",
+        "C127",
+        "R120",
+        "R121",
+        "R122",
+        "R123",
+        "R124",
+        "R125",
+        "R126",
+        "R127",
+        "R128",
+        "R129"
+      ],
+      "native_erc": "both 0 errors / 0 warnings / 0 exclusions",
+      "physical_qualification": "NOT_RUN"
+    },
+    "gate_resistor": {
+      "references": [
+        "RG1",
+        "RG2",
+        "RG3",
+        "RG4",
+        "RG5",
+        "RG6"
+      ],
+      "connectivity_change": false,
+      "evidence": "docs/reviews/dual_prototype_2026-10-18/gate_resistor_eco_verification.json"
+    },
+    "5v_capacitance_soft_start": {
+      "evidence": "docs/reviews/dual_prototype_2026-10-18/5v_eco_verification.json",
+      "existing_changed_pins": [
+        "U13.8"
+      ],
+      "added_references": [
+        "C132",
+        "C133"
+      ],
+      "identity_changed_references": [
+        "C30",
+        "C31"
+      ],
+      "native_erc": "both 0 errors / 0 warnings / 0 exclusions",
+      "physical_qualification": "NOT_RUN"
+    },
+    "assembly_lands": {
+      "evidence": "docs/reviews/dual_prototype_2026-10-18/assembly_land_eco_verification.json",
+      "footprint_changed_references": [
+        "U12",
+        "U19",
+        "J4",
+        "C1",
+        "C2",
+        "C120",
+        "C121",
+        "C122",
+        "C123",
+        "C124",
+        "C125",
+        "C126",
+        "C127"
+      ],
+      "existing_changed_pins": [],
+      "metadata_update": "C133 full reserve SS budget1.0901ms",
+      "qualification_status": "EXACT_NATIVE_GRAPH_AND_ERC_VALIDATED_PHYSICAL_QUALIFICATION_OPEN",
+      "manufacturing_process": "Controlled special finished holes; TypeVII POFV four-layer candidate; no order or supplier approval claimed",
+      "internal_rule": "U12 same-instance Pad-Pad only .45mm OEMland spacing; native broad footprint .2mm clearance removed"
+    },
+    "native_legend_minima": {
+      "evidence": "docs/reviews/dual_prototype_2026-10-18/legend_minimum_transition.json",
+      "rules": {
+        "min_silk_clearance": 0.15,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.15
+      },
+      "purpose": "Enforce manufacturer .15mm legend clearance/stroke and1mm text height; only stronger native minima, no electrical change"
+    }
+  }
+}

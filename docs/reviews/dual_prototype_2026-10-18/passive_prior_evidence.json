@@ -1,0 +1,670 @@
+{
+  "status": "HISTORICAL_EVIDENCE_RECONCILED_BY_EXACT_MPN_NOT_FRESH_OEM_APPROVAL",
+  "source": "docs/sourcing/passive_selected_evidence_2026-10-10.json",
+  "rows": [
+    {
+      "mpn": "EKZN101ELL101MJ20S",
+      "parameters": {
+        "容值": "100uF",
+        "精度": "±20%",
+        "额定电压": "100V",
+        "纹波电流": "1.43A@100kHz",
+        "等效串联电阻(ESR)": "68mΩ@100kHz",
+        "脚间距": "5mm",
+        "电容体直径": "10mm",
+        "电容体长度": "20mm",
+        "工作寿命": "10000hrs@105℃",
+        "极性类型": "有极性"
+      },
+      "requirements": [
+        "100uF_100V",
+        "100uF_100V"
+      ],
+      "qualification_notes": "NCC EKZN101ELL101MJ20S C337258 stock2865 selected;100uF20%100V,D10xL20,P5mm,lead0.6mm. OEM KZN page3 exact EKZN101E[LL]101MJ20S rowconfirmsD10x20,1.43Arms@105C100kHz,0.068ohm impedance@20C100kHz (not universalESR);page1diameterD+.5max,heightL+1.5max,pitch5±.5mm. Rubycon100ZLH100MEFC10X20 C330940 stock4270 alternate same100uF20%100V,D10x20,P5mm with1.04Arms@105C100kHz and0.12ohm impedance;OEMpages1/3visuallyverified. ExistingD10P5footprint nominalgeometry retained butheight20mm(max~22) differsfromearlierAishi16mmcandidate;assemblyheightenvelope mustallowit. 100Vrated affords48Vbusmargin. Systeminverterripple,regenenergy,temperature/lifetime qualification remainsOPEN;loweralternate1.04Arating mustnotinheritprimary1.43Alimit. DomesticcandidatesretainedunderexplicitOEMdrawinghold.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "C212E105J6BC000",
+      "parameters": {
+        "容值": "1uF",
+        "精度": "±5%",
+        "额定电压": "250V",
+        "介电材料": "金属化聚酯",
+        "工作温度": "-55℃~+105℃"
+      },
+      "requirements": [
+        "1uF_100V_FILM"
+      ],
+      "qualification_notes": "Resolved exact6B body: Faratronic C212E105J6BC0001uF5%250V metallized polyester,mainland stock940. OEM scanned pages1-3 visually reviewed:code2E250V,1051uF,J5%,6P15,Bsmall,C000straight20..30mm leads; W17.5/H12.9/T7.2mm max,P15±.8mm,d.60±.05mm. Replace invalid1210 film placeholder with verified P15 THT footprint. Rated85C,derate1.25%/C to105C;234.4V@90C remains large margin over48V bus. OEM typical application includes DC bypass/filter/low pulse;dynamic bus ripple and pulse stress remains release gate (table250V/P15 PatternIII12V/us,applicability to small-bodyB must be confirmed before relying on that pulse rating). Appropriate for low-energy prototype after footprint/layout checks;not full-power film qualification. No different-manufacturer same-body alternate verified.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20190717/C404859_EF21AC612EDD98432EE9D266CBC8B364.pdf",
+      "historical_status": "READY_FOR_LIMITED_ENERGY_PROTOTYPE_AFTER_FOOTPRINT_UPDATE"
+    },
+    {
+      "mpn": "C4532C0G2A104JT000N",
+      "parameters": {
+        "容值": "100nF",
+        "精度": "±5%",
+        "额定电压": "100V",
+        "温度系数": "C0G"
+      },
+      "requirements": [
+        "100nF_100V_C0G"
+      ],
+      "qualification_notes": "Retain100nF,100V,C0G; change1210 placeholder to1812. TDK catalogC4532C0G2A104J320KA maps labelC4532C0G2A104JT000N;4.5±0.4x3.2±0.4mm,height3.2±0.3. OEM dimensional/electrical compatibility for1812 verified. PSA FM43N104J101EGG1812 different manufacturer with same nominal voltage/value/dielectric; OEM catalog reviewed. Local bus bypass routing loop must be replanned after footprint update.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20191028/C441477_722A9436F63B689BB01D466E49BFBC99.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE"
+    },
+    {
+      "mpn": "0603B103K101NT",
+      "parameters": {
+        "容值": "10nF",
+        "精度": "±10%",
+        "额定电压": "100V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "10nF_VBUS_SENSE"
+      ],
+      "qualification_notes": "10nF100V10%X7R0603 meets low-voltage bus-sense filter nominal;FH OEM B/X7R103/K/101 code and0603 outline confirmed. Sampling/filter settling remains ordinary system validation.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0805B224K500NT",
+      "parameters": {
+        "容值": "220nF",
+        "精度": "±10%",
+        "额定电压": "50V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "220nF_25V_VCAP"
+      ],
+      "qualification_notes": "220nF50V10%X7R0805 exceeds original25VVCAP requirement;FH OEM224=220nF,K10%,50050V and0805outline confirmed. RegulatorVCAP effective capacitance/stability to verify during bring-up;no rating reduction.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0805B104K101NT",
+      "parameters": {
+        "容值": "100nF",
+        "精度": "±10%",
+        "额定电压": "100V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "100nF_VS_BYPASS"
+      ],
+      "qualification_notes": "100nF100V10%X7R0805 forVS bypass;100Vrating retained for bus-related48Vpower-input service. FH OEM104,K,101,B and0805outline confirmed. Transient bus limit remains a system gate.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "1210B225K101NT",
+      "parameters": {
+        "容值": "2.2uF",
+        "精度": "±10%",
+        "额定电压": "100V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "2.2uF_100V_X7R",
+        "2.2uF_100V_X7R"
+      ],
+      "qualification_notes": "2.2uF100V10%X7R1210 each;FH OEM225,K,101 and1210outline confirmed. Nominal/rating/footprint source-qualified. Do not equate2.2uF nominal with guaranteed2.2uF at48VDC;effective capacitance,input ripple and buck operation remain application gates.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "1210B226K250NT",
+      "parameters": {
+        "容值": "22uF",
+        "精度": "±10%",
+        "额定电压": "25V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "22uF_25V_X7R",
+        "22uF_25V_X7R"
+      ],
+      "qualification_notes": "22uF25V10%X7R1210 each;FH OEM226,K,250,B and1210outline confirmed.12Voutput duty has nominalvoltage margin;effective capacitance and control-loop stability remain application gates.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603B222J500NT",
+      "parameters": {
+        "容值": "2.2nF",
+        "精度": "±5%",
+        "额定电压": "50V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "2.2nF_BST_50V"
+      ],
+      "qualification_notes": "2.2nF50V5%X7R0603;FH OEM222,J,500,B and0603outline confirmed;BST bootstrap voltage rating is acrossBST-SW differential,notabsolute switched-node voltage. TI regulator topology/recommendednominal unchanged.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603B332J500NT",
+      "parameters": {
+        "容值": "3.3nF",
+        "精度": "±5%",
+        "额定电压": "50V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "3.3nF_CA_X7R"
+      ],
+      "qualification_notes": "3.3nF50V5%X7R0603;FH OEM332,J,500,B and0603outline confirmed;CA compensation nominal unchanged. Control-loop tuning remains system application test.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603CG560J500NT",
+      "parameters": {
+        "容值": "56pF",
+        "精度": "±5%",
+        "额定电压": "50V",
+        "温度系数": "C0G"
+      },
+      "requirements": [
+        "56pF_CB_C0G"
+      ],
+      "qualification_notes": "56pF50V5%C0G0603;FH OEM560,J,500,CG and0603outline confirmed. Stable compensationCB dielectric retained. Samsung same-value alternative iszero stock.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "HGC0805R7106K250NSLJ",
+      "parameters": {
+        "容值": "10uF",
+        "精度": "±10%",
+        "额定电压": "25V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "10uF_25V_X7R",
+        "10uF_REFIO_X7R",
+        "10uF_REFCAP_X7R"
+      ],
+      "qualification_notes": "ChinoceraHGC0805R7106K250NSLJ10uF25V10%X7R0805. OEM pages2/3/6 decodeR7X7R10610uF,K10%,25025V,Ntermination,Sembossed,L1.25mm,J7inch;outline2.0±.2x1.25±.2mm. Fits C30/60/61 input/reference decoupling nominal requirements;reference settling and guaranteed effectivecap at bias remain applicationvalidation.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260723/7EB3BDFEECF66494B0D077AF4F87288B.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "CGA0805X7R226M100MT",
+      "parameters": {
+        "容值": "22uF",
+        "精度": "±20%",
+        "额定电压": "10V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "22uF_10V_X7R"
+      ],
+      "qualification_notes": "HRE exactOEM CGA0805X7R226M100MT page1:22uF20%10VX7R0805,2.0±.2x1.25±.2x1.25±.2mm,-55..125C±15%. Meets BOM sourcingparameters. Its5.1V effectivecap and ADCUVdynamic hold-up gate S01 remain OPEN;source-ready does not claim gate-off timing. Murata alternative exactOEM page2 confirms22uF20%10VX7R(Murata),not an inferred dielectric code;same0805outline.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20240628/CF49925013D2B6594E99B01DE9E3F720.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603CG102J101NT",
+      "parameters": {
+        "容值": "1nF",
+        "精度": "±5%",
+        "额定电压": "100V",
+        "温度系数": "C0G"
+      },
+      "requirements": [
+        "1nF_C0G_ADC",
+        "1nF_C0G_ADC",
+        "1nF_C0G_ADC",
+        "See schematic"
+      ],
+      "qualification_notes": "1nF100V5%C0G0603 fits ADC RCfilter andC92 stable filtering. OEMCG102J101 confirms stable0±30ppm/Cdielectric and1608outline. Samsung1nF50V5%C0G samefootprint meets low-voltage duty;100Vupgrade not a required alternate criterion.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603B104K500NT",
+      "parameters": {
+        "容值": "100nF",
+        "精度": "±10%",
+        "额定电压": "50V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "100nF_INA_DECOUPLE",
+        "100nF_INA_DECOUPLE",
+        "100nF_INA_DECOUPLE",
+        "100nF_DRV",
+        "100nF_VIO",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic"
+      ],
+      "qualification_notes": "100nF50V10%X7R0603 ordinary local bypasses;FH OEMB104K500 and1608outline confirmed.50Vrating exceeds all listed logic/analog/driver localrails. C94timing deliberately separate.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603B105K250NT",
+      "parameters": {
+        "容值": "1uF",
+        "精度": "±10%",
+        "额定电压": "25V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "1uF_REGCAP1",
+        "1uF_REGCAP2",
+        "1uF_AVDD1",
+        "1uF_AVDD2",
+        "1uF_AVDD3",
+        "1uF_AVDD4",
+        "1uF_DVDD"
+      ],
+      "qualification_notes": "1uF25V10%X7R0603 forADCregcap,AVDD/DVDD localdecoupling;FH OEMB105K250 and1608outline confirmed. Actual railbias effectivecap/ADCregulator behavior remains bring-up qualification;Samsung matchingalternate currentlyzero stock.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "CGA1206X7R106K250NT",
+      "parameters": {
+        "容值": "10uF",
+        "精度": "±10%",
+        "额定电压": "25V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "10uF_25V_DRV"
+      ],
+      "qualification_notes": "HRE exactOEM CGA1206X7R106K250NT page1:10uF10%25VX7R1206,3.2±.2x1.6±.2x1.6±.2mm,-55..125C±15%.12Vdriver localbulk duty;source-compatible withoutfootprintchange. Effectivecap anddriver transient operation remain applicationchecks.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250915/7997FE7A91CE9142B98B1A231623FA45.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "CGA0805X7R475K250MT",
+      "parameters": {
+        "容值": "4.7uF",
+        "精度": "±10%",
+        "额定电压": "25V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "4.7uF_VIO"
+      ],
+      "qualification_notes": "Domestic stocked HRE CGA0805X7R475K250MT C6119942 selected,notzero-stockFH. ExactOEM page1:4.7uF10%25VX7R0805,2.0±.2x1.25±.2x1.25±.2mm,-55..125C±15%;appropriate3.3VIO bypass. SamsungCL21B475KOFNNNE alternate4.7uF10%16VX7R same0805;16V remainsample for3.3VIO,OEMSamsungcode/outline confirmed.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260717/7FA3951AEFD121FDE352DC2C40859DA4.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "GRT31C5C1H104FA02L",
+      "parameters": {
+        "容值": "100nF",
+        "精度": "±1%",
+        "额定电压": "50V",
+        "温度系数": "C0G"
+      },
+      "requirements": [
+        "TPS3890 reset recovery; CT 100nF; C0G or qualified stable effective capacitance"
+      ],
+      "qualification_notes": "100nF stable TPS3890 timing capacitor. Replace0603 placeholder with1206 C0G50V; Murata exact GRT31C5C1H104FA02L100nF±1%,3.2±0.2x1.6±0.2x1.6±0.2mm,-55..125C,0±30ppm/C. TDK alternate same1206,100nF±5%,50VC0G; does not meet1% but meets original100nF stable requirement; timing budget must use selected tolerance. OEM TDK catalogC3216C0G1H104J160AA corresponds labelC3216C0G1H104JT000N. Nominal timing unchanged; no proposed dielectric downgrade.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20230811/BB9CDD2B0AFC2108EC4F7AFDADD4823B.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE_AFTER_FOOTPRINT_UPDATE"
+    },
+    {
+      "mpn": "0805B105K250NT",
+      "parameters": {
+        "容值": "1uF",
+        "精度": "±10%",
+        "额定电压": "25V",
+        "温度系数": "X7R"
+      },
+      "requirements": [
+        "1uF_25V_X7R",
+        "1uF_25V_X7R",
+        "1uF_25V_X7R"
+      ],
+      "qualification_notes": "1uF25V10%X7R0805 bootstrap;FH OEMB105K250 and2012outline confirmed.25V applies acrossbootstrapHB-HS differential(~12Vdrive),not48VHS common-mode. Gatecharge,bias-effectivecap,maxon-time,droop,UVLO andrefreshremain S07applicationgate;sourcequalification complete.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260730/02F3503A6D76391150EDFB346112EFA5.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "PTFR0805B280KP9",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "280kΩ",
+        "精度": "±0.1%",
+        "功率": "130mW",
+        "工作电压": "150V",
+        "温度系数": "±25ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "280k_0.1%",
+        "280k_0.1%"
+      ],
+      "qualification_notes": "RESI primary mainland China;280k0.1%25ppm0805,standard0.13W@70C150V,OEM visual review confirms B/P/9 ordering,2.0±.2x1.25±.2mm. Each resistor in560k bus divider dissipates about2mW@48V bus,voltage<25V. YAGEO alternative0.125W150V,same0805 and0.1%25ppm; RT OEM ordering and outline verified. Original netlist/value retained.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "TC0325B3902T5F",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "39kΩ",
+        "精度": "±0.1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±25ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "39k_0.1%"
+      ],
+      "qualification_notes": "UNI-ROYAL TC0325B3902T5F OEM TC03=0603,25=25ppm,B=.1%,3902=39k,F=.1W;75V. Bus-sense lower leg has only a few volts,well below derated power;1.6x.8mm standard0603. YAGEO RT0603 alternate covered by RT OEM.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250704/E55D4B940A787305EBFEE524BD083243.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603WAF1003T5E",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "100kΩ",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "100k_RON_1%",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "100k_PWM_INPUT_PULLDOWN",
+        "See schematic"
+      ],
+      "qualification_notes": "Select UNI-ROYAL0603WAF1003T5E75V100mW1% as group primary because R20 is the bus-side RON element. At60V,100k dissipates36mW,below0.1W derated to~76mW@90C; voltage below75V. FH RS-03K1003FT alternate distributor50V conflicts with family75V; acceptable only for low-voltage R56..61/R89,not whole-group substitution on R20 without exact rating confirmation.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "RC0603FR-07453KL",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "453kΩ",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "453k_RFB1_1%",
+        "453k_RA_1%"
+      ],
+      "qualification_notes": "YAGEO RC0603FR-07453KL:453k1%,0603 1.6±.1x.8±.1mm,0.1W75V per OEM RC catalog;low-power feedback divider. RALEC matching alternate remains zero stock.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250610/89E4D743C004A82A45145C7A2CC3A578.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "0603WAF4992T5E",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "49.9kΩ",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "49.9k_RFB2_1%"
+      ],
+      "qualification_notes": "UNI-ROYAL0603WAF4992T5E49.9k1%100mW75V0603 per OEM standard thick-film catalog. YAGEORT0603BRD0749K9L49.9k0.1%25ppm100mW75V meets original1% in same footprint,RT OEM reviewed.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20200306/C422600_1E6D84923E4A46A82E41ADD87F860B5C.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "RS-03K47R0FT",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "47Ω",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "50V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "47R_ADC_ISOLATION",
+        "47R_ADC_ISOLATION",
+        "47R_ADC_ISOLATION"
+      ],
+      "qualification_notes": "FH RS-03K47R0FT47ohm1%100mW0603; OEM series dimensions1.6x.8mm,100ppm,50V conservative item limit. Low-energy analog filtering duty; UNI-ROYAL same value1%0603 alternative OEM verified. Actual current/settling remains system ADC test.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "TD03G1002BT",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "10kΩ",
+        "精度": "±0.1%",
+        "功率": "100mW",
+        "工作电压": "50V",
+        "温度系数": "±25ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "10k_0.1%_OCP_HI_TOP",
+        "10k_0.1%_OCP_LO_BOT",
+        "10k_0.1%_NTC_PULLUP",
+        "10k_0.1%_NTC_PULLUP"
+      ],
+      "qualification_notes": "FH TD03G1002BT10k0.1%25ppm0603; use conservative generic TD0603 rating62.5mW50V despite distributor100mW. Low-voltage OCP threshold/NTC divider load is well below62.5mW. RESI PTFR0603B10K0P9 alternate OEM visual review confirms.1%,25ppm,0.1W100V,1.6x.8mm; may use as domestic different-manufacturer alternative.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20181211/C347100_9EFE94D77969634609276CBD120ED731.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "ERA3AEB164V",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "160kΩ",
+        "精度": "±0.1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±25ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "160k_0.1%_OCP_HI_BOT",
+        "160k_0.1%_OCP_LO_TOP"
+      ],
+      "qualification_notes": "Panasonic ERA3AEB164V foreign critical-value exception; OEM ERA3A=.1W75V0603,EB=.1%25ppm,160k within47ohm..330k allowed range;1.6x.8mm. Low-power OCP ratio divider load;prototype-ready. No stocked domestic exact alternate verified.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20200515/C543414_D3FB4A44C151AC19BA141503575FC797.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "RS-03K4701FT",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "4.7kΩ",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "50V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "4.7k_OCP_PULLUP_TO_VIO"
+      ],
+      "qualification_notes": "FH RS-03K4701FT4.7k1%100mW0603. VIO3.3V pull-up worst2.32mW vs~76mW at90C. UNI-ROYAL75V same0603/tolerance alternate OEM verified.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "ABD03K1002FT",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "10kΩ",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "10k_PWR_GOOD_PULLUP",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic",
+        "See schematic"
+      ],
+      "qualification_notes": "FH ABD03K1002FT10k1%100mW75V0603; OEM AB-series dimensions1.6±.1x.8±.1mm,K100ppm,F1%,derating above70C. Even12V gate-source pull-down dissipation14.4mW is below~76mW at90C. UNI-ROYAL identical value/size/tolerance75V alternative OEM verified.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "ABD03K1001FT",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "1kΩ",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "75V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "See schematic"
+      ],
+      "qualification_notes": "FH ABD03K1001FT1k1%100mW75V0603 with AB OEM qualification;3.3V load10.9mW below~76mW derated at90C. Vishay alternate listing parameters match,exact OEM review remains pending.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20220825/CB6AD4F3A68E21A294284F8D65B5AAD9.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "TD03G3241BT",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "3.24kΩ",
+        "精度": "±0.1%",
+        "功率": "100mW",
+        "工作电压": "50V",
+        "温度系数": "±25ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "3.24k 0603 0.1% maximum initial tolerance,25ppm/C maximum TCR; parent-approved revised prototype static bound0.00702 on R92; other precision divider resistors retain0.0025 budget."
+      ],
+      "qualification_notes": "Parent approved revised prototype design specification and0.00702 common R92 bound on2026-10-10;3.24k value and0603 footprint unchanged. FH primary mainland China; Yageo alternate Taiwan. OEM TD T-2.0 pp4-7 ordering/dimensions/rating; RT V16 pp2/5/6 confirm1.6x.8mm,0.1%,10ppm alternate. Parent static corner result falling~4.792V/risingmax~5.002V with>14mV margin after10mVripple. OEM qualification-test limits used for a prototype engineering budget are not guaranteed lifetime bounds; lifetime qualification remains open.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "PTFR0603Q1K00N9",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "1kΩ",
+        "精度": "±0.02%",
+        "功率": "100mW",
+        "工作电压": "100V",
+        "温度系数": "±10ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement"
+      ],
+      "qualification_notes": "Mainland RESI PTFR0603Q1K00N9,1k0.02%10ppm0603,improves original0.05% without value or TCR change. OEM PTFR pages2/3 visually verifies1k in100..5.1k range,.02%10ppm,0.1W100V1.6x.8mm. Panasonic ERA-3ARW102V alternate1k0.05%10ppm0603 .1W75V from OEM exact series ordering/specifications;stock7252. Low-power divider source qualification complete. Whole-application0.1%lifetime drift remains an engineering allocation.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "PTFR0603Q75K0N9",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "75kΩ",
+        "精度": "±0.02%",
+        "功率": "100mW",
+        "工作电压": "100V",
+        "温度系数": "±10ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement"
+      ],
+      "qualification_notes": "Mainland RESI PTFR0603Q75K0N9,75k0.02%10ppm0603,stock3465;improves tolerance from0.05% while retaining same value andTCR. OEM PTFR permits5.1k..270k10ppm/.02%,0603 0.1W100V,1.6x.8mm. Whole-application lifetime drift allocation remains open;no Chinese-stock different-manufacturer precision-equivalent alternate verified.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "PTFR0603Q10K0N9",
+      "parameters": {
+        "电阻类型": "薄膜电阻",
+        "阻值": "10kΩ",
+        "精度": "±0.02%",
+        "功率": "100mW",
+        "工作电压": "100V",
+        "温度系数": "±10ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "Precision 0603; 0.05%; 10ppm/C; 0.1% application drift allocation; qualify life and procurement"
+      ],
+      "qualification_notes": "Domestic critical precision exception resolved: RESIPTFR0603Q10K0N9 improves tolerance0.05%->0.02% and preserves10ppm/C,10k,0603. OEM visual pages2/3 supports0603,10kQ.02%N10ppm,0.1W100V and1.6x.8mm. Prototype qualification does not close whole-circuit0.1%lifetime drift budget;OEM rated-power2000h max drift±.1% plus other drift cannot be silently treated as application guarantee. Different-manufacturer Chinese-stock alternate still unresolved.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf",
+      "historical_status": "READY_FOR_PROTOTYPE"
+    },
+    {
+      "mpn": "RS-03K10R0FT",
+      "parameters": {
+        "电阻类型": "厚膜电阻",
+        "阻值": "10Ω",
+        "精度": "±1%",
+        "功率": "100mW",
+        "工作电压": "50V",
+        "温度系数": "±100ppm/℃",
+        "工作温度": "-55℃~+155℃"
+      },
+      "requirements": [
+        "10R_HS_START",
+        "10R_LS_START",
+        "10R_HS_START",
+        "10R_LS_START",
+        "10R_HS_START",
+        "10R_LS_START"
+      ],
+      "qualification_notes": "FH RS-03K10R0FT and UNI-ROYAL0603WAF100JT5E both10ohm1%0603. OEM nominal dimensions/power/tolerance verified. High-frequency gate pulse energy,average thermal duty and switching ringing require actual gate-charge/frequency/driver validation before full-power operation; nominal0.1W alone is not pulse qualification.",
+      "primary_source": "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf",
+      "historical_status": "READY_FOR_LIMITED_ENERGY_PROTOTYPE_PULSE_GATE_OPEN"
+    }
+  ]
+}

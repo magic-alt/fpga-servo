@@ -1701,16 +1701,8 @@
 		)
 		(uuid "7a000000-0000-0000-0000-000000000021")
 	)
-	(wire
-		(pts
-			(xy 142.24 60.96) (xy 142.24 115.57)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000022")
-	)
+	(wire (pts (xy 142.24 60.96) (xy 142.24 93.98)) (stroke (width 0.1524) (type default)) (uuid "6d7c2923-02aa-480d-a59b-f9486a5b6b11"))
+(wire (pts (xy 142.24 93.98) (xy 142.24 115.57)) (stroke (width 0.1524) (type default)) (uuid "38b98bc0-4a36-4173-842c-69bebb8166b9"))
 	(wire
 		(pts
 			(xy 142.24 60.96) (xy 146.05 60.96)
@@ -1781,46 +1773,11 @@
 		)
 		(uuid "7a000000-0000-0000-0000-000000000029")
 	)
-	(wire
-		(pts
-			(xy 167.64 60.96) (xy 167.64 62.23)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000030")
-	)
-	(wire
-		(pts
-			(xy 167.64 62.23) (xy 167.64 66.04)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000031")
-	)
-	(wire
-		(pts
-			(xy 184.15 60.96) (xy 184.15 66.04)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000032")
-	)
-	(wire
-		(pts
-			(xy 200.66 60.96) (xy 200.66 66.04)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000033")
-	)
+
+
+
+	(wire (pts (xy 200.66 66.04) (xy 200.66 63.5)) (stroke (width 0.1524) (type default)) (uuid "79d19605-fc73-45df-a80d-46768e9b28a8"))
+(wire (pts (xy 200.66 63.5) (xy 200.66 60.96)) (stroke (width 0.1524) (type default)) (uuid "efbc73b6-14d1-43a4-a35d-130b189304d1"))
 	(wire
 		(pts
 			(xy 217.17 60.96) (xy 217.17 66.04)
@@ -1951,37 +1908,11 @@
 		)
 		(uuid "7a000000-0000-0000-0000-000000000046")
 	)
-	(wire
-		(pts
-			(xy 167.64 78.74) (xy 167.64 82.55)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000047")
-	)
-	(wire
-		(pts
-			(xy 167.64 82.55) (xy 167.64 83.82)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000048")
-	)
-	(wire
-		(pts
-			(xy 184.15 78.74) (xy 184.15 83.82)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000049")
-	)
-	(wire (pts (xy 200.66 78.74) (xy 199.39 78.74)) (stroke (width 0.1524) (type default)) (uuid "d3b4f741-f629-4f43-92cf-c7a13546ef66"))(wire (pts (xy 199.39 78.74) (xy 199.39 83.82)) (stroke (width 0.1524) (type default)) (uuid "56dd4e39-e318-42ee-848d-3d2e3fc52c4d"))
+
+
+
+	(wire (pts (xy 200.66 78.74) (xy 199.39 78.74)) (stroke (width 0.1524) (type default)) (uuid "d3b4f741-f629-4f43-92cf-c7a13546ef66"))(wire (pts (xy 199.39 78.74) (xy 199.39 81.28)) (stroke (width 0.1524) (type default)) (uuid "1286301a-de07-44bf-9d2e-9f9b08d71a29"))
+(wire (pts (xy 199.39 81.28) (xy 199.39 83.82)) (stroke (width 0.1524) (type default)) (uuid "e553f568-ce08-40a7-aa5b-5d2e2e4f0aeb"))
 	(wire
 		(pts
 			(xy 217.17 78.74) (xy 217.17 83.82)
@@ -2033,16 +1964,8 @@
 		)
 		(uuid "7a000000-0000-0000-0000-000000000056")
 	)
-	(wire
-		(pts
-			(xy 231.14 83.82) (xy 231.14 138.43)
-		)
-		(stroke
-			(width 0.1524)
-			(type default)
-		)
-		(uuid "7a000000-0000-0000-0000-000000000057")
-	)
+	(wire (pts (xy 231.14 83.82) (xy 231.14 97.79)) (stroke (width 0.1524) (type default)) (uuid "a489bfb7-c4e4-4b63-998a-e57bd6b8fba5"))
+(wire (pts (xy 231.14 97.79) (xy 231.14 138.43)) (stroke (width 0.1524) (type default)) (uuid "2e7d9e30-0dc2-4cba-8128-e21d6942fd8e"))
 	(wire
 		(pts
 			(xy 69.85 83.82) (xy 59.69 83.82)
@@ -2922,188 +2845,8 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "ax7010_servo_reva:C")
-		(at 167.64 72.39 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000066000007")
-		(property "Reference" "C1"
-			(at 170.18 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100uF"
-			(at 170.18 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
-			(at 167.64 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf"
-			(at 167.64 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			 (hide yes))
-		)
-		(property "Description" "100uF_100V"
-			(at 167.64 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		 (hide yes))
-		(pin "1"
-			(uuid "f0656353-f69f-41f1-8b87-5434511c59af")
-		)
-		(pin "2"
-			(uuid "f203d0ad-8077-4f59-b83a-609ca5e79117")
-		)
-		(instances
-			(project "ax7010_servo_ad7606c"
-				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
 
-	(property "Manufacturer" "NCC(日本贵弥功)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 
-	(property "MPN" "EKZN101ELL101MJ20S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "LCSC" "C337258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Alternative_MPN" "100ZLH100MEFC10X20" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Alternative_LCSC" "C330940" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-)
-	(symbol
-		(lib_id "ax7010_servo_reva:C")
-		(at 184.15 72.39 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-000066000008")
-		(property "Reference" "C2"
-			(at 186.69 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100uF"
-			(at 186.69 74.93 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D10.0mm_P5.00mm"
-			(at 184.15 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20191031/C438448_563864FB75F1471974F641286D93AA2B.pdf"
-			(at 184.15 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			 (hide yes))
-		)
-		(property "Description" "100uF_100V"
-			(at 184.15 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		 (hide yes))
-		(pin "1"
-			(uuid "65e399c2-3e08-496f-a268-f5f31070fd4c")
-		)
-		(pin "2"
-			(uuid "28e2d961-a568-4123-bc3b-0fce41a75794")
-		)
-		(instances
-			(project "ax7010_servo_ad7606c"
-				(path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
-
-	(property "Manufacturer" "NCC(日本贵弥功)" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "MPN" "EKZN101ELL101MJ20S" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "LCSC" "C337258" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Alternative_MPN" "100ZLH100MEFC10X20" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Alternative_LCSC" "C330940" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-
-	(property "Alternative_Status" "READY_FOR_PROTOTYPE" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
-)
 	(symbol
 		(lib_id "ax7010_servo_reva:C")
 		(at 200.66 72.39 0)
@@ -4146,7 +3889,7 @@
 	)
 	(symbol
 		(lib_id "ax7010_servo_reva:PWR_FLAG")
-		(at 167.64 62.23 0)
+		(at 193.04 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4156,7 +3899,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006ac00002")
 		(property "Reference" "#FLG0102"
-			(at 167.64 60.325 0)
+			(at 193.04 61.595 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4167,7 +3910,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 167.64 57.785 0)
+			(at 193.04 59.055 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4177,7 +3920,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 62.23 0)
+			(at 193.04 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4187,7 +3930,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 62.23 0)
+			(at 193.04 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4197,7 +3940,7 @@
 			 (hide yes))
 		)
 		(property "Description" ""
-			(at 167.64 62.23 0)
+			(at 193.04 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4220,7 +3963,7 @@
 	)
 	(symbol
 		(lib_id "ax7010_servo_reva:PWR_FLAG")
-		(at 167.64 82.55 0)
+		(at 193.04 81.28 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4230,7 +3973,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00006ac00003")
 		(property "Reference" "#FLG0103"
-			(at 167.64 80.645 0)
+			(at 193.04 79.375 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4241,7 +3984,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 167.64 78.105 0)
+			(at 193.04 76.835 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4251,7 +3994,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 82.55 0)
+			(at 193.04 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4261,7 +4004,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 82.55 0)
+			(at 193.04 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4271,7 +4014,7 @@
 			 (hide yes))
 		)
 		(property "Description" ""
-			(at 167.64 82.55 0)
+			(at 193.04 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4419,4 +4162,27 @@
 (property "Reference" "#PWR28002" (at 142.24 36.83 0) (effects (font (size 1 1)) (hide yes)))
 (property "Value" "/VBUS_PROT" (at 142.24 36.83 0) (effects (font (size 1 1)) (hide yes)))
 (pin "1" (uuid "d1d0dae8-3da4-48a7-86e8-03bb7420f59f")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (reference "#PWR28002") (unit 1)))))
+
+(wire (pts (xy 193.04 63.5) (xy 200.66 63.5)) (stroke (width 0.1524) (type default)) (uuid "1c52a720-0533-4568-9659-533b19aaff97"))
+
+(junction (at 200.66 63.5) (diameter 0.635) (color 0 0 0 0) (uuid "3923141b-771f-4b1d-a248-8d08fa0fd902"))
+
+(wire (pts (xy 193.04 81.28) (xy 199.39 81.28)) (stroke (width 0.1524) (type default)) (uuid "e5778ce8-0bf1-4a16-86f0-0f36e00c20b7"))
+
+(junction (at 199.39 81.28) (diameter 0.635) (color 0 0 0 0) (uuid "7ca953d2-0a5e-45a9-a760-6623635f176c"))
+
+(sheet (at 179.07 90.17) (size 45.72 12.7) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid "a752146c-1df6-48f2-b11c-d2ae65ddbc28")
+(property "Sheetname" "DC Link Bank" (at 179.07 88.265 0) (effects (font (size 1.016 1.016)) (justify left bottom)))
+(property "Sheetfile" "dc_link.kicad_sch" (at 204.47 104.775 0) (effects (font (size 1.016 1.016)) (justify left top)))
+(pin "VBUS_PROT" input (at 179.07 93.98 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "266ffaf2-1d1e-4c22-a16b-11588136286f"))
+(pin "GND" bidirectional (at 224.79 97.79 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7e1250c5-9d1c-49a3-9e3f-d41d868b1920"))
+(instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (page "3")))))
+
+(junction (at 142.24 93.98) (diameter 0.635) (color 0 0 0 0) (uuid "927576bd-dee9-4288-9eb7-dc8a4ed3e1ca"))
+
+(junction (at 231.14 97.79) (diameter 0.635) (color 0 0 0 0) (uuid "526d7f92-056c-4c56-a035-2133fdeaa33f"))
+
+(wire (pts (xy 142.24 93.98) (xy 179.07 93.98)) (stroke (width 0.1524) (type default)) (uuid "90b34bdc-c79e-4d58-a9d8-4e1b3c81a1dc"))
+
+(wire (pts (xy 224.79 97.79) (xy 231.14 97.79)) (stroke (width 0.1524) (type default)) (uuid "678e63fd-53fc-43f9-ad70-764790fa470f"))
 )

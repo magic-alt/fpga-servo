@@ -1,0 +1,36 @@
+{
+  "ads8588s": {
+    "source": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro",
+    "before_sha256": "986d29ff81d1b150000f8f2bc8ceb885894583f25f7bc790385c29ef90529ed8",
+    "after_sha256": "507a5d393dcf5499b8782184c8804cfbd13ca422df9b1316dafc16f1a4a4b4b2",
+    "before_rules": {
+      "min_silk_clearance": 0.0,
+      "min_text_height": 0.8,
+      "min_text_thickness": 0.08
+    },
+    "after_rules": {
+      "min_silk_clearance": 0.15,
+      "min_text_height": 1.0,
+      "min_text_thickness": 0.15
+    },
+    "all_netclasses_patterns_severities_and_other_settings_exact": true,
+    "native_candidate_DRC_required": true
+  },
+  "ad7606c": {
+    "source": "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pro",
+    "before_sha256": "c356918c1a95d0dc688e7a6c7f82568d931f70e4fea758d709179ac8a79e224c",
+    "after_sha256": "47da7105b5ad8124cf048f134957ebdd044d667eaf934329388fde2fe8728f23",
+    "before_rules": {
+      "min_silk_clearance": 0.0,
+      "min_text_height": 0.8,
+      "min_text_thickness": 0.08
+    },
+    "after_rules": {
+      "min_silk_clearance": 0.15,
+      "min_text_height": 1.0,
+      "min_text_thickness": 0.15
+    },
+    "all_netclasses_patterns_severities_and_other_settings_exact": true,
+    "native_candidate_DRC_required": true
+  }
+}

@@ -1319,7 +1319,7 @@
 								)
 							)
 						)
-						(number "1"
+						(number "2"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1337,7 +1337,7 @@
 								)
 							)
 						)
-						(number "2"
+						(number "1"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1373,7 +1373,7 @@
 								)
 							)
 						)
-						(number "4"
+						(number "6"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1391,7 +1391,7 @@
 								)
 							)
 						)
-						(number "5"
+						(number "7"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1409,7 +1409,7 @@
 								)
 							)
 						)
-						(number "6"
+						(number "5"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1427,7 +1427,7 @@
 								)
 							)
 						)
-						(number "7"
+						(number "4"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1463,7 +1463,7 @@
 								)
 							)
 						)
-						(number "9"
+						(number "11"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1499,7 +1499,7 @@
 								)
 							)
 						)
-						(number "11"
+						(number "9"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1517,7 +1517,7 @@
 								)
 							)
 						)
-						(number "12"
+						(number "13"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1535,7 +1535,7 @@
 								)
 							)
 						)
-						(number "13"
+						(number "14"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1553,7 +1553,7 @@
 								)
 							)
 						)
-						(number "14"
+						(number "15"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1571,7 +1571,7 @@
 								)
 							)
 						)
-						(number "15"
+						(number "12"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -8559,4 +8559,141 @@
 
 (symbol "AD7606C_16_SERIAL" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 0 0) (effects (font (size 1.016 1.016)) (hide yes)))(property "Value" "AD7606C_16_SERIAL" (at 0 0 0) (effects (font (size 1.016 1.016)) (hide yes)))(property "Footprint" "Package_QFP:LQFP-64_10x10mm_P0.5mm" (at 0 0 0) (effects (font (size 1.016 1.016)) (hide yes)))(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf" (at 0 0 0) (effects (font (size 1.016 1.016)) (hide yes)))(symbol "AD7606C_16_SERIAL_1_1" (rectangle (start -17.78 40.64) (end 17.78 -27.94) (stroke (width .254) (type default)) (fill (type background)))(pin input line (at -25.4 33.02 0) (length 7.62) (name "V1+" (effects (font (size 0.85 0.85)) )) (number "49" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 33.02 180) (length 7.62) (name "V1-" (effects (font (size 0.85 0.85)) )) (number "50" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 25.4 0) (length 7.62) (name "V2+" (effects (font (size 0.85 0.85)) )) (number "51" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 25.4 180) (length 7.62) (name "V2-" (effects (font (size 0.85 0.85)) )) (number "52" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 17.78 0) (length 7.62) (name "V3+" (effects (font (size 0.85 0.85)) )) (number "53" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 17.78 180) (length 7.62) (name "V3-" (effects (font (size 0.85 0.85)) )) (number "54" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 10.16 0) (length 7.62) (name "V4+" (effects (font (size 0.85 0.85)) )) (number "55" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 10.16 180) (length 7.62) (name "V4-" (effects (font (size 0.85 0.85)) )) (number "56" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 2.54 0) (length 7.62) (name "V5+" (effects (font (size 0.85 0.85)) )) (number "57" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 2.54 180) (length 7.62) (name "V5-" (effects (font (size 0.85 0.85)) )) (number "58" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -5.08 0) (length 7.62) (name "V6+" (effects (font (size 0.85 0.85)) )) (number "59" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 -5.08 180) (length 7.62) (name "V6-" (effects (font (size 0.85 0.85)) )) (number "60" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -12.7 0) (length 7.62) (name "V7+" (effects (font (size 0.85 0.85)) )) (number "61" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 -12.7 180) (length 7.62) (name "V7-" (effects (font (size 0.85 0.85)) )) (number "62" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -20.32 0) (length 7.62) (name "V8+" (effects (font (size 0.85 0.85)) )) (number "63" (effects (font (size 0.85 0.85)) )))(pin input line (at 25.4 -20.32 180) (length 7.62) (name "V8-" (effects (font (size 0.85 0.85)) )) (number "64" (effects (font (size 0.85 0.85)) ))))(symbol "AD7606C_16_SERIAL_2_1" (rectangle (start -17.78 43.18) (end 17.78 -40.64) (stroke (width .254) (type default)) (fill (type background)))(pin input line (at -25.4 35.56 0) (length 7.62) (name "CONVST" (effects (font (size 0.85 0.85)) )) (number "9" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 27.94 0) (length 7.62) (name "RESET" (effects (font (size 0.85 0.85)) )) (number "11" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 20.32 0) (length 7.62) (name "SCLK" (effects (font (size 0.85 0.85)) )) (number "12" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 12.7 0) (length 7.62) (name "CS_N" (effects (font (size 0.85 0.85)) )) (number "13" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 5.08 0) (length 7.62) (name "SDI" (effects (font (size 0.85 0.85)) )) (number "29" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 35.56 180) (length 7.62) (name "DOUTA" (effects (font (size 0.85 0.85)) )) (number "24" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 27.94 180) (length 7.62) (name "DOUTB" (effects (font (size 0.85 0.85)) )) (number "25" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 20.32 180) (length 7.62) (name "DOUTC" (effects (font (size 0.85 0.85)) )) (number "27" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 12.7 180) (length 7.62) (name "DOUTD" (effects (font (size 0.85 0.85)) )) (number "28" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 5.08 180) (length 7.62) (name "BUSY" (effects (font (size 0.85 0.85)) )) (number "14" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 -2.54 180) (length 7.62) (name "FRSTDATA" (effects (font (size 0.85 0.85)) )) (number "15" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 -10.16 180) (length 7.62) (name "DOUTE" (effects (font (size 0.85 0.85)) )) (number "19" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 -17.78 180) (length 7.62) (name "DOUTF" (effects (font (size 0.85 0.85)) )) (number "20" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 -25.4 180) (length 7.62) (name "DOUTG" (effects (font (size 0.85 0.85)) )) (number "21" (effects (font (size 0.85 0.85)) )))(pin output line (at 25.4 -33.02 180) (length 7.62) (name "DOUTH" (effects (font (size 0.85 0.85)) )) (number "22" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -10.16 0) (length 7.62) (name "DB0_SER_GND" (effects (font (size 0.85 0.85)) )) (number "16" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -12.7 0) (length 7.62) (name "DB1_SER_GND" (effects (font (size 0.85 0.85)) )) (number "17" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -15.24 0) (length 7.62) (name "DB2_SER_GND" (effects (font (size 0.85 0.85)) )) (number "18" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -17.78 0) (length 7.62) (name "DB12_SER_GND" (effects (font (size 0.85 0.85)) )) (number "30" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -20.32 0) (length 7.62) (name "DB13_SER_GND" (effects (font (size 0.85 0.85)) )) (number "31" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -22.86 0) (length 7.62) (name "DB14_SER_GND" (effects (font (size 0.85 0.85)) )) (number "32" (effects (font (size 0.85 0.85)) )))(pin input line (at -25.4 -25.4 0) (length 7.62) (name "DB15_SER_GND" (effects (font (size 0.85 0.85)) )) (number "33" (effects (font (size 0.85 0.85)) ))))(symbol "AD7606C_16_SERIAL_3_1" (rectangle (start -15.24 27.94) (end 15.24 -17.78) (stroke (width .254) (type default)) (fill (type background)))(pin input line (at -22.86 20.32 0) (length 7.62) (name "OS0" (effects (font (size 0.85 0.85)) )) (number "3" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 15.24 0) (length 7.62) (name "OS1" (effects (font (size 0.85 0.85)) )) (number "4" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 10.16 0) (length 7.62) (name "OS2" (effects (font (size 0.85 0.85)) )) (number "5" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 5.08 0) (length 7.62) (name "PAR_SER_SEL" (effects (font (size 0.85 0.85)) )) (number "6" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 0 0) (length 7.62) (name "STBY" (effects (font (size 0.85 0.85)) )) (number "7" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 -5.08 0) (length 7.62) (name "WR_N" (effects (font (size 0.85 0.85)) )) (number "10" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 -10.16 0) (length 7.62) (name "REF_SELECT" (effects (font (size 0.85 0.85)) )) (number "34" (effects (font (size 0.85 0.85)) )))(pin input line (at 22.86 -10.16 180) (length 7.62) (name "RANGE" (effects (font (size 0.85 0.85)) )) (number "8" (effects (font (size 0.85 0.85)) ))))(symbol "AD7606C_16_SERIAL_4_1" (rectangle (start -68.58 5.08) (end 78.74 -25.4) (stroke (width .254) (type default)) (fill (type background)))(pin power_in line (at -50.8 12.7 270) (length 7.62) (name "AVCC" (effects (font (size 0.85 0.85)) )) (number "1" (effects (font (size 0.85 0.85)) )))(pin power_in line (at -20.32 12.7 270) (length 7.62) (name "AVCC" (effects (font (size 0.85 0.85)) )) (number "37" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 10.16 12.7 270) (length 7.62) (name "AVCC" (effects (font (size 0.85 0.85)) )) (number "38" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 40.64 12.7 270) (length 7.62) (name "AVCC" (effects (font (size 0.85 0.85)) )) (number "48" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 71.12 12.7 270) (length 7.62) (name "VDRIVE" (effects (font (size 0.85 0.85)) )) (number "23" (effects (font (size 0.85 0.85)) )))(pin power_in line (at -57.15 -33.02 90) (length 7.62) (name "AGND" (effects (font (size 0.85 0.85)) )) (number "2" (effects (font (size 0.85 0.85)) )))(pin power_in line (at -39.37 -33.02 90) (length 7.62) (name "AGND" (effects (font (size 0.85 0.85)) )) (number "26" (effects (font (size 0.85 0.85)) )))(pin power_in line (at -21.59 -33.02 90) (length 7.62) (name "AGND" (effects (font (size 0.85 0.85)) )) (number "35" (effects (font (size 0.85 0.85)) )))(pin power_in line (at -3.81 -33.02 90) (length 7.62) (name "AGND" (effects (font (size 0.85 0.85)) )) (number "40" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 13.97 -33.02 90) (length 7.62) (name "AGND" (effects (font (size 0.85 0.85)) )) (number "41" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 31.75 -33.02 90) (length 7.62) (name "AGND" (effects (font (size 0.85 0.85)) )) (number "47" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 49.53 -33.02 90) (length 7.62) (name "REFGND" (effects (font (size 0.85 0.85)) )) (number "43" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 67.31 -33.02 90) (length 7.62) (name "REFGND" (effects (font (size 0.85 0.85)) )) (number "46" (effects (font (size 0.85 0.85)) ))))(symbol "AD7606C_16_SERIAL_5_1" (rectangle (start -30.48 20.32) (end 30.48 -27.94) (stroke (width .254) (type default)) (fill (type background)))(pin passive line (at -38.1 12.7 0) (length 7.62) (name "REGCAP_A" (effects (font (size 0.85 0.85)) )) (number "36" (effects (font (size 0.85 0.85)) )))(pin passive line (at -38.1 -12.7 0) (length 7.62) (name "REGCAP_D" (effects (font (size 0.85 0.85)) )) (number "39" (effects (font (size 0.85 0.85)) )))(pin passive line (at 38.1 12.7 180) (length 7.62) (name "REFIN_REFOUT" (effects (font (size 0.85 0.85)) )) (number "42" (effects (font (size 0.85 0.85)) )))(pin passive line (at 38.1 -12.7 180) (length 7.62) (name "REFCAPA" (effects (font (size 0.85 0.85)) )) (number "44" (effects (font (size 0.85 0.85)) )))(pin passive line (at 38.1 -20.32 180) (length 7.62) (name "REFCAPB" (effects (font (size 0.85 0.85)) )) (number "45" (effects (font (size 0.85 0.85)) )))))
 (symbol "TXU0204PW" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)(property "Reference" "U" (at 0 0 0) (effects (font (size 1.016 1.016)) (hide yes)))(property "Value" "TXU0204PW" (at 0 0 0) (effects (font (size 1.016 1.016)) (hide yes)))(symbol "TXU0204PW_0_1" (rectangle (start -15.24 22.86) (end 15.24 -35.56) (stroke (width .254) (type default)) (fill (type background))))(symbol "TXU0204PW_1_1"(pin power_in line (at -7.62 30.48 270) (length 7.62) (name "VCCA" (effects (font (size 0.85 0.85)) )) (number "1" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 7.62 30.48 270) (length 7.62) (name "VCCB" (effects (font (size 0.85 0.85)) )) (number "14" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 12.7 0) (length 7.62) (name "A1" (effects (font (size 0.85 0.85)) )) (number "2" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 5.08 0) (length 7.62) (name "A2" (effects (font (size 0.85 0.85)) )) (number "3" (effects (font (size 0.85 0.85)) )))(pin output line (at -22.86 -10.16 0) (length 7.62) (name "A3Y" (effects (font (size 0.85 0.85)) )) (number "4" (effects (font (size 0.85 0.85)) )))(pin output line (at -22.86 -17.78 0) (length 7.62) (name "A4Y" (effects (font (size 0.85 0.85)) )) (number "5" (effects (font (size 0.85 0.85)) )))(pin output line (at 22.86 12.7 180) (length 7.62) (name "B1Y" (effects (font (size 0.85 0.85)) )) (number "13" (effects (font (size 0.85 0.85)) )))(pin output line (at 22.86 5.08 180) (length 7.62) (name "B2Y" (effects (font (size 0.85 0.85)) )) (number "12" (effects (font (size 0.85 0.85)) )))(pin input line (at 22.86 -10.16 180) (length 7.62) (name "B3" (effects (font (size 0.85 0.85)) )) (number "11" (effects (font (size 0.85 0.85)) )))(pin input line (at 22.86 -17.78 180) (length 7.62) (name "B4" (effects (font (size 0.85 0.85)) )) (number "10" (effects (font (size 0.85 0.85)) )))(pin input line (at -22.86 -30.48 0) (length 7.62) (name "OE" (effects (font (size 0.85 0.85)) )) (number "8" (effects (font (size 0.85 0.85)) )))(pin power_in line (at 0 -43.18 90) (length 7.62) (name "GND" (effects (font (size 0.85 0.85)) )) (number "7" (effects (font (size 0.85 0.85)) )))(pin no_connect line (at -7.62 -43.18 90) (length 7.62) (name "NC" (effects (font (size 0.85 0.85)) )) (number "6" (effects (font (size 0.85 0.85)) )))(pin no_connect line (at 7.62 -43.18 90) (length 7.62) (name "NC" (effects (font (size 0.85 0.85)) )) (number "9" (effects (font (size 0.85 0.85)) )))))
+
+(symbol "CP_DCLINK"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CP_DCLINK_0_1"
+				(polyline
+					(pts
+						(xy -3.048 1.016) (xy 3.048 1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -1.016) (xy 3.048 -1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+
+(text "+" (at 4.318 3.302 0) (effects (font (size 1.778 1.778))))
+)
+
+			(symbol "CP_DCLINK_1_1"
+				(pin passive line
+					(at 0 6.35 270)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 )

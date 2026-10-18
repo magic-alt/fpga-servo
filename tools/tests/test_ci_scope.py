@@ -9,6 +9,7 @@ from pathlib import Path
 import subprocess
 import sys
 import unittest
+from unittest.mock import patch
 
 from pcbtools.rules.servo import baseline_api
 _family = baseline_api(resolve_project("ads8588s"))
@@ -25,6 +26,33 @@ class CIScopeTests(unittest.TestCase):
 
     def test_preserved_board_matches_recorded_blockers(self):
         self.assertEqual(compare_snapshot(collect_snapshot(), self.expected), [])
+
+    def test_historical_regression_reads_immutable_archive_only(self):
+        archive = ROOT / "hardware/ads8588s_servo/evidence/legacy_pcb_before_dual_prototype_2026-10-18"
+        self.assertEqual(BASELINE.parent, archive)
+        current_board = ROOT / "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb"
+        original_read = Path.read_text
+        def read(path, *args, **kwargs):
+            if path == current_board:
+                raise AssertionError("Historical regression read mutable active board")
+            return original_read(path, *args, **kwargs)
+        with patch.object(Path, "read_text", read):
+            self.assertEqual(compare_snapshot(collect_snapshot(), self.expected), [])
+
+    def test_active_profile_cannot_accept_known_archived_blockers(self):
+        from pcbtools.rules import run_rules
+        project = resolve_project("ads8588s")
+        self.assertNotIn("archived_pcb", project.rule_sets)
+        self.assertTrue({"servo", "protection", "power_layout"}.issubset(project.rule_sets))
+        board = project.board
+        archived_text = (BASELINE.parent / board.name).read_text(encoding="utf-8")
+        original_read = Path.read_text
+        def read(path, *args, **kwargs):
+            return archived_text if path == board else original_read(path, *args, **kwargs)
+        with patch.object(Path, "read_text", read):
+            findings = run_rules(project, "pcb", {})
+        self.assertFalse(any(f.rule_id == "pcb.archived_regression" for f in findings))
+        self.assertTrue(any(f.rule_id == "servo.design" and f.status == "FAIL" for f in findings))
 
     def test_changed_board_cannot_reuse_known_failures(self):
         changed = copy.deepcopy(self.expected)
@@ -57,7 +85,7 @@ class CIScopeTests(unittest.TestCase):
 
     def test_strict_design_default_still_blocks_archived_board(self):
         from pcbtools.rules.servo import check_design
-        errors = check_design(resolve_project("ads8588s"), schematic_only=False)
+        errors = check_design(resolve_project("ads8588s"), schematic_only=False, board_root=BASELINE.parent)
         self.assertTrue(any("Unused J2 must not be fitted on PCB" in e for e in errors))
 
     def test_original_source_contract_accepts_lf_but_rejects_content_changes(self):

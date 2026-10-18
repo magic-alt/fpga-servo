@@ -110,6 +110,6 @@ VA_5V is nominally 5.1V after the ADC-validity repair. J1 pin assignments and XD
 
 ## Selection update (2026-10-10)
 
-J1 uses JILN 321040SG0ABK00A01 (C601944); J5 uses JILN 321010SG0ABK00A01 (C429962). Local lands retain the original pin map and key orientation; finished plated holes require 1.02 ±0.03 mm. BOOMELE alternatives are conditional on manufacturer confirmation and <=1 A per pin; they are not 3 A substitutes.
+J1 uses JILN 321040SG0ABK00A01 (C601944); J5 uses JILN 321010SG0ABK00A01 (C429962). Local lands retain the original pin map and key orientation; the recovered original JILN drawing requires finished plated holes 1.02 ±0.05 mm. Regular JLC PTH tolerance does not meet this window. Primary-only use requires controlled multilayer ENIG hole-process acceptance and inspection; BOOMELE interchangeability remains unqualified. See [current first-board evidence](reviews/dual_prototype_2026-10-18/first_board_boundary.md).
 
 J1.23 OCP_N now reports only positive bus overcurrent, nominal +25 A. Phase INA240 measurements remain available through the ADC. The hardware latch/FAULT_CLEAR protocol is unchanged. No reverse-current trip is implemented. F2 uses JDT ASMD1812-050; 0.5 A hold rating is at 25°C, 0.45 A at 40°C, and local ambient must remain <=85°C. Verify encoder running/startup current against the derated limit.

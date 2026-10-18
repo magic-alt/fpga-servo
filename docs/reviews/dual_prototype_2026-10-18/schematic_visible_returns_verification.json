@@ -1,0 +1,26 @@
+[
+  {
+    "project": "ad",
+    "component_count": 202,
+    "net_count": 172,
+    "physical_pin_memberships": 714,
+    "component_identity_exact": true,
+    "net_names_and_every_physical_pin_exact": true,
+    "native_ERC_violations": 0,
+    "native_ERC_exclusions": [],
+    "before_XML_sha256": "954a24812043dfacf6639e6a0ad255e98c84cd70c90c0b48cf3484c3ca28cd55",
+    "after_XML_sha256": "76e4ebb14e19f38645543f564ddb631abdfb20337561eb809fad07369b11ec3d"
+  },
+  {
+    "project": "ads",
+    "component_count": 180,
+    "net_count": 145,
+    "physical_pin_memberships": 634,
+    "component_identity_exact": true,
+    "net_names_and_every_physical_pin_exact": true,
+    "native_ERC_violations": 0,
+    "native_ERC_exclusions": [],
+    "before_XML_sha256": "9dd8582f129ea83aa74cd4105742c651c936168fbea39752af18c0420e9b5b1f",
+    "after_XML_sha256": "6113eceb1da23421189a26cc891f16bd026b49239fb48afdfd6fa75d7b99ea4d"
+  }
+]

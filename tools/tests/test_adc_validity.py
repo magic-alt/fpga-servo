@@ -71,6 +71,19 @@ class AdcValidityTests(unittest.TestCase):
         self.assertGreater(numeric['falling_threshold_V'][0], numeric['adc_min_V'])
         self.assertLess(numeric['rising_threshold_max_V'], numeric['regulated_static_V'][0] - .01)
 
+    def test_reverting_to_floating_soft_start_rejected(self):
+        def change(root):
+            for net in root.findall('./nets/net'):
+                node = net.find("node[@ref='U13'][@pin='8']")
+                if node is not None:
+                    net.remove(node)
+                    floating = ET.SubElement(root.find('nets'), 'net',
+                                             {'code': '99999', 'name': 'unconnected-U13-SS'})
+                    floating.append(node)
+                    break
+        errors, _ = self.mutate(change)
+        self.assertTrue(any('soft-start' in e or 'C133' in e for e in errors))
+
 
 if __name__ == '__main__':
     if '--netlist' in sys.argv:

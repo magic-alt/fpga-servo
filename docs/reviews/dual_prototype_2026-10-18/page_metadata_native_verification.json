@@ -1,0 +1,284 @@
+{
+  "status": "EXECUTED_PAGE_METADATA_ECO_NATIVE_EQUIVALENT",
+  "source_files": [
+    {
+      "path": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch",
+      "before_raw_sha256": "644f58951b229ecdbbbe696aa49632e7e2ca5e817a00b95cbb088fa73497e1d9",
+      "after_raw_sha256": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
+      "before_text_LF_sha256": "644f58951b229ecdbbbe696aa49632e7e2ca5e817a00b95cbb088fa73497e1d9",
+      "after_text_LF_sha256": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
+      "authorized_only_page_metadata_and_existing_callouts": true
+    },
+    {
+      "path": "hardware/ads8588s_servo/power_input.kicad_sch",
+      "before_raw_sha256": "93aea42032b34005b2f259d1c4d0531ea163fdb902e683b4962633ddebe1871e",
+      "after_raw_sha256": "5beb8557c45773470c0e7ad8e8a235c614186fc7266a8d97e3d93703bc9ed30b",
+      "before_text_LF_sha256": "8f7779c26576557df53e705365084d5302bd1607d41f87bbd9c923c044c4d587",
+      "after_text_LF_sha256": "14cebe67eb3de36e542153b2920c609060a701cfda47fab7ff8c9325c2268fc7",
+      "authorized_only_page_metadata_and_existing_callouts": true
+    },
+    {
+      "path": "hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_sch",
+      "before_raw_sha256": "b674cbff45c38d93d94807ec3cf3a80aafcc9a7080ced032bf03301a12f29347",
+      "after_raw_sha256": "70c2993671f8b0bb17fc07b16b42cc24a5cd1cfad8d8990f5542d9e1f8586aef",
+      "before_text_LF_sha256": "25c7edc4f65867b368b099522ff3d98b073eece20ccbcad20657d13555b18cfc",
+      "after_text_LF_sha256": "7c15d3c8762229ab2bd3fb4af86e4ce0493460dc0e6a1d727a25427b32c47a5a",
+      "authorized_only_page_metadata_and_existing_callouts": true
+    },
+    {
+      "path": "hardware/ad7606c_servo/power_input.kicad_sch",
+      "before_raw_sha256": "474bb06ace4e441f6a3fe0aa5f3bd033b1cdcf9aefe181734135bd94ba99b644",
+      "after_raw_sha256": "dfc2c1fcfb42364bf50281cac65f787980ec4dc23d9cb152ecd3b0b6ddef3bd1",
+      "before_text_LF_sha256": "ce5b701564b7564bcb6e26cf4cc5e5536ac92a8f67609428434b9b9a000275ae",
+      "after_text_LF_sha256": "1d8eb13840671cb9e9e5876e30540f6f30720984febe24ee767daf3976685f31",
+      "authorized_only_page_metadata_and_existing_callouts": true
+    }
+  ],
+  "native_XML_equivalence": {
+    "ads8588s": {
+      "before_XML_sha256": "d778c00d69955c0972a9d82ecc5a56848f67fb1bbc6848ee536cbc883e7f9053",
+      "after_XML_sha256": "202eb7d03c94dceadd1d77170fe17ce17016ef4e1c05f8f936f0a225691319e6",
+      "complete_component_identity_metadata_exact": true,
+      "all_net_names_and_all_physical_pin_membership_attributes_exact": true,
+      "components": 180,
+      "nets": 145
+    },
+    "ad7606c": {
+      "before_XML_sha256": "a00f7f552470ae9806e3a1c3ffada82de4055d48e6246ec620e46bca5d0ea518",
+      "after_XML_sha256": "36c91464c9302920747b6bc86692e1aae78e0e1d05d5e17a40a1cc8ebdf0465b",
+      "complete_component_identity_metadata_exact": true,
+      "all_net_names_and_all_physical_pin_membership_attributes_exact": true,
+      "components": 202,
+      "nets": 172
+    }
+  },
+  "native_ERC": {
+    "ads8588s": {
+      "violations": 0,
+      "source_file": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s-erc.json",
+      "sha256": "bc8de712c0d09b27a84c2ca890fc7bf6987ec4216305aea9d9d9a04c3e1d8517"
+    },
+    "ad7606c": {
+      "violations": 0,
+      "source_file": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c-erc.json",
+      "sha256": "6e9a22de1e0516be703ef88309ba7b3b690df0151ff05cb607ac235be8e2a06c"
+    }
+  },
+  "PDF_title_numbering": {
+    "ads8588s": {
+      "pdf_sha256": "bcc5a185fbd5d90d46f314aa6f58d70537e5a9f196c80e024def54a49c071bdb",
+      "page_count": 9,
+      "all_native_title_IDs_exact_actual_ordinal": true,
+      "pages": [
+        {
+          "actual_pdf_page": 1,
+          "Id": [
+            "1",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-01.png",
+          "image_sha256": "165708f41acf7008dac7e07eafc98430e5c3755de44a58835a17150f9bdb1210"
+        },
+        {
+          "actual_pdf_page": 2,
+          "Id": [
+            "2",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-02.png",
+          "image_sha256": "6432181d3218542f3a7ae0d2e9415f5e1dfa98dae362ed49f8ce3cc7edd75cb6"
+        },
+        {
+          "actual_pdf_page": 3,
+          "Id": [
+            "3",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-03.png",
+          "image_sha256": "dd23c30746adf08a12874dc0412de4ca25c9fccf48bf428b73484cfd23a7d36a"
+        },
+        {
+          "actual_pdf_page": 4,
+          "Id": [
+            "4",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-04.png",
+          "image_sha256": "91b68d3240182e6bffce78e09cff0fa8dcc66a5f447e816123c5e16dda7ce7ff"
+        },
+        {
+          "actual_pdf_page": 5,
+          "Id": [
+            "5",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-05.png",
+          "image_sha256": "d9394e448bf8f671d2aab4fa203d22c782b5109a20a93f45db2b542129afdad5"
+        },
+        {
+          "actual_pdf_page": 6,
+          "Id": [
+            "6",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-06.png",
+          "image_sha256": "57061b494a135f8e522b94fb161060565c22c9203d7d0b0c6fc635e022a2b855"
+        },
+        {
+          "actual_pdf_page": 7,
+          "Id": [
+            "7",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-07.png",
+          "image_sha256": "05b3deeebe92f7a05ca7fd016ebdd5e5f9ad2ee37d1e254a3d379666bd511e8c"
+        },
+        {
+          "actual_pdf_page": 8,
+          "Id": [
+            "8",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-08.png",
+          "image_sha256": "d8832a78d23770661b39699c65462d520aaedf28899914ab91293bca513607d9"
+        },
+        {
+          "actual_pdf_page": 9,
+          "Id": [
+            "9",
+            "9"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ads8588s\\page-09.png",
+          "image_sha256": "5144686b63caca44aaca93b3f9bee2f31bb22d9407e663a5406df04e4ec1dafc"
+        }
+      ]
+    },
+    "ad7606c": {
+      "pdf_sha256": "e64c8f7012ac2becb2b6eaa019e7b3d614f6f0180b97164a1ffc3dd57faa08a3",
+      "page_count": 12,
+      "all_native_title_IDs_exact_actual_ordinal": true,
+      "pages": [
+        {
+          "actual_pdf_page": 1,
+          "Id": [
+            "1",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-01.png",
+          "image_sha256": "eb899f15d521918051fbd8e94470dc68f517f8d0fb8513ffe5319bef93ad0ca4"
+        },
+        {
+          "actual_pdf_page": 2,
+          "Id": [
+            "2",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-02.png",
+          "image_sha256": "80ce2b7033efaeb9a43450fac7adb10b91769a9c9acad80cd9e3406b1104a8bb"
+        },
+        {
+          "actual_pdf_page": 3,
+          "Id": [
+            "3",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-03.png",
+          "image_sha256": "72bc60cbeb6c9be7d69160574f60da6c82d6dfde046532e673ce18fb7edf42fd"
+        },
+        {
+          "actual_pdf_page": 4,
+          "Id": [
+            "4",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-04.png",
+          "image_sha256": "1e329d0ffb4b0c388c65b55aa92db15dbd55d331e2b0fe90ed440a5add33f372"
+        },
+        {
+          "actual_pdf_page": 5,
+          "Id": [
+            "5",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-05.png",
+          "image_sha256": "ea25b85df485623e6bf63c0f17a4ea70d8f667023ae547a2b63efc86bb288f68"
+        },
+        {
+          "actual_pdf_page": 6,
+          "Id": [
+            "6",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-06.png",
+          "image_sha256": "cf8e66534640caebd63d657b02c21f901ccd54ac2d549bf65bc8a2b5c140a196"
+        },
+        {
+          "actual_pdf_page": 7,
+          "Id": [
+            "7",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-07.png",
+          "image_sha256": "2c85c7caed69e410806e44ad8414e0950726556f44679cbef46a6d436a39dcd1"
+        },
+        {
+          "actual_pdf_page": 8,
+          "Id": [
+            "8",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-08.png",
+          "image_sha256": "166e771d989fcbe086d60f19a2fc7c4873d88bb262e5acd95abc66e7289cbf0b"
+        },
+        {
+          "actual_pdf_page": 9,
+          "Id": [
+            "9",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-09.png",
+          "image_sha256": "690c25a124d7d76ee0d3cbc8901201ff6e8f99a9f6b9b5f0a3897b8d4a03fe80"
+        },
+        {
+          "actual_pdf_page": 10,
+          "Id": [
+            "10",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-10.png",
+          "image_sha256": "d4aa228ed2b8b04af6b76639c571a72bda3c76c96729a2021fe51a9dcf033fdc"
+        },
+        {
+          "actual_pdf_page": 11,
+          "Id": [
+            "11",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-11.png",
+          "image_sha256": "8bdf573ba34bc8bb1227bef432860b91c273330258d18fa8a27cc5b90889212c"
+        },
+        {
+          "actual_pdf_page": 12,
+          "Id": [
+            "12",
+            "12"
+          ],
+          "image": "artifacts\\dual-servo\\final-visual\\page-metadata-application\\after\\ad7606c\\page-12.png",
+          "image_sha256": "0e64d9133a82c2a3bafca40c103508bf029b42fceb916709e7191518ea5180e5"
+        }
+      ]
+    }
+  },
+  "visual_observation": {
+    "all21_title_IDs_contact_sheets_actually_viewed": true,
+    "new_ADS_root_callouts_actually_viewed": true,
+    "newly_clarified_current_ADC_and_OCP_pages_actually_viewed": [
+      "ads8588s6",
+      "ads8588s9",
+      "ad7606c6",
+      "ad7606c10"
+    ],
+    "all_other_page_bodies_inherited_from_prior_actual21page_review_via_metadata_only_AST_equivalence": true
+  },
+  "manifest_updates_owned_by_root_not_written": true
+}

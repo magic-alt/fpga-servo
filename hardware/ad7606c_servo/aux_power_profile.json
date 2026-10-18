@@ -20,7 +20,8 @@
     "frequency_design_min_khz": 240.0,
     "frequency_design_max_khz": 360.0,
     "ron_ref": "R20",
-    "ron_resistance_ohm": 100000.0
+    "ron_resistance_ohm": 100000.0,
+    "footprint": "fpga-servo:TI_DDA0008B_LM5164"
   },
   "inductor": {
     "ref": "L1",
@@ -137,6 +138,86 @@
       "LCSC": "C77036",
       "footprint": "Capacitor_SMD:C_0603_1608Metric",
       "description": "3.3nF_C0G_50V_5pct_12V_RIPPLE_CA"
+    },
+    {
+      "ref": "C30",
+      "value": "22uF",
+      "footprint": "fpga-servo:Murata_GRM32_1210",
+      "Manufacturer": "Murata",
+      "MPN": "GRM32ER71E226KE15L",
+      "LCSC": "C21397"
+    },
+    {
+      "ref": "C31",
+      "value": "22uF",
+      "footprint": "fpga-servo:Murata_GRM32_1210",
+      "Manufacturer": "Murata",
+      "MPN": "GRM32ER71E226KE15L",
+      "LCSC": "C21397"
+    },
+    {
+      "ref": "C132",
+      "value": "22uF",
+      "footprint": "fpga-servo:Murata_GRM32_1210",
+      "Manufacturer": "Murata",
+      "MPN": "GRM32ER71E226KE15L",
+      "LCSC": "C21397"
+    },
+    {
+      "ref": "C133",
+      "value": "10nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "Manufacturer": "FH(风华)",
+      "MPN": "0603B103K101NT",
+      "LCSC": "C43253"
     }
-  ]
+  ],
+  "downstream_5v": {
+    "input_effective_uf": 5.99111955,
+    "output_effective_uf": 21.11346366,
+    "output_nominal_max_uf": 71.254,
+    "soft_start_min_ms": 1.0901,
+    "qualification_status": "TYPICAL_MODEL_WITH_RESERVES_BENCH_OPEN",
+    "review": "docs/reviews/dual_prototype_2026-10-18/tps62901_capacitor_review.md",
+    "required_bench": [
+      "incoming effective capacitance under DC bias and low ripple",
+      "startup slope/inrush and output monotonicity",
+      "load transient and stability at voltage/temperature corners"
+    ],
+    "soft_start_reserves": {
+      "tolerance": 0.9,
+      "temperature": 0.85,
+      "aging": 0.9,
+      "dc_bias_engineering_reserve": 0.9,
+      "capacitance_min_nf": 6.1965,
+      "Iss_max_ua": 2.7,
+      "Vref_min_v": 0.78,
+      "K_bound_us": 700,
+      "not_guaranteed_manufacturer_minimum": true
+    },
+    "output_capacitor_population": {
+      "C31": "22uF",
+      "C132": "22uF",
+      "C43": "100nF",
+      "C44": "100nF",
+      "C45": "100nF",
+      "C84": "100nF",
+      "C85": "100nF",
+      "C64": "100nF",
+      "C65": "100nF",
+      "C66": "100nF",
+      "C67": "100nF",
+      "C68": "100nF",
+      "C100": "10uF",
+      "C102": "100nF",
+      "C104": "100nF",
+      "C106": "100nF"
+    },
+    "output_extra_capacitor_reserve": {
+      "other_nominal_uf": 11.3,
+      "tolerance_factor": 1.2,
+      "temperature_factor": 1.15,
+      "DC_bias_increase_credit": false
+    }
+  }
 }

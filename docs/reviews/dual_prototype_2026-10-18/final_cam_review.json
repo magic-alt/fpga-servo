@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "AGENT_CAM_REVIEW_COMPLETE_NO_ADDITIONAL_REPRODUCIBLE_DEFECT_IDENTIFIED",
+  "human_reviews": "NOT_RUN_UNSIGNED",
+  "manufacturer_process_acceptance": "OPEN",
+  "prototype_ready": "BLOCKED",
+  "pcb_release": "BLOCKED",
+  "order_or_upload_performed": false,
+  "input_commit": "9f9b70cfb622c29919243b8b49e4078a175a1bf9",
+  "projects": [
+    {
+      "project": "ad7606c",
+      "input_commit": "9f9b70cfb622c29919243b8b49e4078a175a1bf9",
+      "canonical_board_sha256": "dc0fb0a39529daa627db700bc2f53dd435f776633b9bd93aa8b1f0053b5f2134",
+      "frozen_board_sha256": "5a5ce9b9b855640d52b362402146a2f2bfa12b43b12cfa359e4064ea617d2188",
+      "package": "artifacts/dual-servo/final-review-v3/ad7606c",
+      "layer_count": 11,
+      "closed_outline_mm": [
+        130,
+        95
+      ],
+      "pth_holes": 594,
+      "npth_holes": 0,
+      "electrical_vias": 511,
+      "component_holes": 83,
+      "every_drill_xy_diameter_matches_native": true,
+      "source_snapshot_and_native_output_hashes_match": true,
+      "below_0_45mm_via_component_hole_separations": 0,
+      "u12_min_hole_to_mask_or_paste_opening_mm": 0.25,
+      "u12_min_annulus_to_mask_or_paste_opening_mm": 0.1,
+      "agent_visual_review": "AD exact pixel inheritance of 11 layers and drill",
+      "parser_warnings": [
+        "artifacts\\dual-servo\\final-review-v3\\ad7606c\\drill\\ax7010_servo_ad7606c-NPTH.drl:10 \"G90\": G90 header statement found after end of header",
+        "artifacts\\dual-servo\\final-review-v3\\ad7606c\\drill\\ax7010_servo_ad7606c-PTH.drl:28 \"G90\": G90 header statement found after end of header"
+      ],
+      "evidence": {
+        "artifacts/dual-servo/final-cam-independent-v3/ad7606c/independent_cam_manifest.json": "ffc07e4f031379f3d0d899a1a8cc42ce8fce7540022d35e51897d04993aea2a6",
+        "artifacts/dual-servo/final-cam-independent-v3/ad7606c-package-binding.json": "2e6bb44817fa84305d5215b711f22073dd9d8e51ec96978e2442dd30cae175f6",
+        "artifacts/dual-servo/final-cam-independent-v3/ad-hole-separation.json": "ac48de721ba4cfcbdc007996199b9d50b308e4dc6b9e12e756414bf0121d1790",
+        "artifacts/dual-servo/final-cam-independent-v3/ad-u12/u12_mask_paste_union_review.json": "96efc3ac427c019d82a8469f8638e3c16678aa70e9b6e6bb1a84a8132a8c32a3",
+        "artifacts/dual-servo/final-cam-independent-v3/ad-u12/actual_native_input_provenance.json": "cb23ecb62d0851277a1e7e3173aac0cbb3375aa7444d6b1929477931ef0923d0"
+      }
+    },
+    {
+      "project": "ads8588s",
+      "input_commit": "9f9b70cfb622c29919243b8b49e4078a175a1bf9",
+      "canonical_board_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+      "frozen_board_sha256": "5e5219ffba7c0c782a54f8f3ed9fd28e1a7aad6cb5f73d667bce068dbc38ff3b",
+      "package": "artifacts/dual-servo/final-review-v3/ads8588s",
+      "layer_count": 11,
+      "closed_outline_mm": [
+        130,
+        95
+      ],
+      "pth_holes": 551,
+      "npth_holes": 0,
+      "electrical_vias": 468,
+      "component_holes": 83,
+      "every_drill_xy_diameter_matches_native": true,
+      "source_snapshot_and_native_output_hashes_match": true,
+      "below_0_45mm_via_component_hole_separations": 0,
+      "u12_min_hole_to_mask_or_paste_opening_mm": 0.25,
+      "u12_min_annulus_to_mask_or_paste_opening_mm": 0.1,
+      "agent_visual_review": "Fresh all-layer and drill view plus ADC, driver-power, input, auxiliary, VA5-bridge detail views",
+      "parser_warnings": [
+        "artifacts\\dual-servo\\final-review-v3\\ads8588s\\drill\\ax7010_servo_reva-NPTH.drl:10 \"G90\": G90 header statement found after end of header",
+        "artifacts\\dual-servo\\final-review-v3\\ads8588s\\drill\\ax7010_servo_reva-PTH.drl:28 \"G90\": G90 header statement found after end of header"
+      ],
+      "evidence": {
+        "artifacts/dual-servo/final-cam-independent-v3/ads8588s/independent_cam_manifest.json": "a69c37147c8398407176102d348a3e06f272f9a970d5c5b7cfcd475a533742cd",
+        "artifacts/dual-servo/final-cam-independent-v3/ads8588s-package-binding.json": "2faf1e17aec473431b8e6fcb9ec73d1ebd02b1d6f822c818d141bf51368b5f46",
+        "artifacts/dual-servo/final-cam-independent-v3/ads-hole-separation.json": "ff37bbe2c2439e33ac9e8c15014ded0b44fe0c093bfb259e59909730e5f3ef4c",
+        "artifacts/dual-servo/final-cam-independent-v3/ads-u12/u12_mask_paste_union_review.json": "654f04cec87d9962aa5a5e823f2f5862cfd1403e6d56f64652d94dfd76bbcd62",
+        "artifacts/dual-servo/final-cam-independent-v3/ads-u12/actual_native_input_provenance.json": "180fd17192d056b57694e31d8a2f7b904ac79c848430a599bfb0d5560374c2d3"
+      }
+    }
+  ],
+  "shared_evidence": {
+    "artifacts/dual-servo/final-cam-independent-v3/ad-pixel-equality.json": "44a64382bd9525062f1872efd4f3ef34f5caf1a4b431d2b2bc753be37531bb6b",
+    "artifacts/dual-servo/final-cam-independent-v3/wholeboard-ground-proof.json": "919597f62ad805718bd51b793ce3dc5525d43fe6bde6aa8ff45822e6da1b2436"
+  },
+  "superseded_ADS_board_sha256": "a4b8158240253f0aefcf333f37987b9d69afbe30419be8a3440ff2483388c666",
+  "dynamic_electrical_thermal_EMC_ESD": "NOT_RUN",
+  "limits": "Independent local geometry/export review only; no human signature, no vendor acceptance, no dynamic measurement."
+}

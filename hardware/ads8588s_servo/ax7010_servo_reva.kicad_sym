@@ -1319,7 +1319,7 @@
 								)
 							)
 						)
-						(number "1"
+						(number "2"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1337,7 +1337,7 @@
 								)
 							)
 						)
-						(number "2"
+						(number "1"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1373,7 +1373,7 @@
 								)
 							)
 						)
-						(number "4"
+						(number "6"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1391,7 +1391,7 @@
 								)
 							)
 						)
-						(number "5"
+						(number "7"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1409,7 +1409,7 @@
 								)
 							)
 						)
-						(number "6"
+						(number "5"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1427,7 +1427,7 @@
 								)
 							)
 						)
-						(number "7"
+						(number "4"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1463,7 +1463,7 @@
 								)
 							)
 						)
-						(number "9"
+						(number "11"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1499,7 +1499,7 @@
 								)
 							)
 						)
-						(number "11"
+						(number "9"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1517,7 +1517,7 @@
 								)
 							)
 						)
-						(number "12"
+						(number "13"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1535,7 +1535,7 @@
 								)
 							)
 						)
-						(number "13"
+						(number "14"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1553,7 +1553,7 @@
 								)
 							)
 						)
-						(number "14"
+						(number "15"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -1571,7 +1571,7 @@
 								)
 							)
 						)
-						(number "15"
+						(number "12"
 							(effects
 								(font
 									(size 1.016 1.016)
@@ -8556,4 +8556,141 @@
 (symbol "PWR_VBUS_BRIDGE_0_1" (polyline (pts (xy 0 0) (xy 0 2.54) (xy -1.27 1.27) (xy 0 2.54) (xy 1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
 )
 (symbol "PWR_VBUS_BRIDGE_1_1" (pin passive line (at 0 0 90) (length 0) (name "VBUS_BRIDGE" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))))
+
+(symbol "CP_DCLINK"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 2.54 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CP_DCLINK_0_1"
+				(polyline
+					(pts
+						(xy -3.048 1.016) (xy 3.048 1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -1.016) (xy 3.048 -1.016)
+					)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+
+(text "+" (at 4.318 3.302 0) (effects (font (size 1.778 1.778))))
+)
+
+			(symbol "CP_DCLINK_1_1"
+				(pin passive line
+					(at 0 6.35 270)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -6.35 90)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 )

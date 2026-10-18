@@ -90,8 +90,14 @@ def serial_api(project):
             errors.append("NTC2 BOM must not claim motor-winding temperature")
         if bom.get("C3", {}).get("Function") != "1uF_250V_FILM":
             errors.append("C3 selected 250V film capacitor BOM metadata is stale")
-        if bom.get("L1", {}).get("Function") != "68uH_12V_BUCK_L1_IRMS_ISAT_OPEN":
-            errors.append("L1 qualification state must remain explicit until Irms/Isat sign-off")
+        if 'aux_power' in project.rule_sets:
+            import json
+            profile = json.loads((project.root / project.parameters['aux_power_profile']).read_text(encoding='utf-8'))
+            expected_l1 = profile['inductor']['value'] + '_12V_BUCK_1A_BENCH_OPEN'
+        else:
+            expected_l1 = "68uH_12V_BUCK_L1_IRMS_ISAT_OPEN"
+        if bom.get("L1", {}).get("Function") != expected_l1:
+            errors.append("L1 qualification state must match the reviewed design and retain the open bench gate")
 
         # Vivado indexed buses use [get_ports {ADC_DB[0]}], not a scalar.
         # Reject accidental live J11 constraints in both syntaxes.
@@ -287,7 +293,7 @@ def validity_api():
         errors = []
         for ref, value in {'U13': 'TPS62901RPJR', 'U25': 'TPS389001DSER',
                            'R92': '3.24k', 'R93': '1k', 'R94': '75k',
-                           'R95': '10k', 'C94': '100nF'}.items():
+                           'R95': '10k', 'C94': '100nF', 'C133': '10nF'}.items():
             if ref not in comps or comps[ref].findtext('value') != value:
                 errors.append(f'{ref}: ADC validity requires {value}')
 
@@ -315,7 +321,7 @@ def validity_api():
         same(('U25', 1), ('R92', 2), ('R93', 1))
         same(('U25', 5), ('C94', 1))
         rail('R92', 1, 'VA_5V')
-        # External FB, forced PWM, 2.5 MHz with discharge; SS/TR deliberately open.
+        # External FB, forced PWM, 2.5 MHz; external 10nF soft-start capacitor.
         for pin, name in ((6, 'VDRV_12V'), (5, 'VDRV_12V'), (7, 'VDRV_12V'),
                           (4, 'GND'), (1, 'PWR_GOOD'), (3, 'VA_5V')):
             rail('U13', pin, name)
@@ -323,8 +329,10 @@ def validity_api():
         same(('U13', 9), ('R94', 2), ('R95', 1))
         rail('R94', 1, 'VA_5V')
         rail('R95', 2, 'GND')
-        if not pins.get(('U13', '8'), '').startswith('unconnected-'):
-            errors.append('U13.SS/TR must be open for documented internal soft start')
+        same(('U13', 8), ('C133', 1))
+        rail('C133', 2, 'GND')
+        if pins.get(('U13', '8')) in ('/GND', '/VA_5V', '/VDRV_12V'):
+            errors.append('U13.SS/TR requires a dedicated soft-start capacitor node')
         same(('U26', 7), ('U23', 6))
         same(('U23', 4), ('U20', 6))
         same(('U20', 5), ('U11', 6))

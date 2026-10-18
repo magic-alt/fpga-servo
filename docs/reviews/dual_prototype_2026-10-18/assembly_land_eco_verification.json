@@ -1,0 +1,92 @@
+{
+  "ads8588s": {
+    "components": 180,
+    "nets": 145,
+    "physical_pin_memberships": 634,
+    "all_net_names_and_physical_pin_memberships_exact": true,
+    "only_footprint_references_changed": {
+      "U12": "fpga-servo:TI_DDA0008B_LM5164",
+      "U19": "fpga-servo:TI_RVZ0014A_W025",
+      "J4": "fpga-servo:KEFA_KF950_3_9.50mm_D1.85",
+      "C1": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C2": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C120": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C121": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C122": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C123": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C124": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C125": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C126": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C127": "fpga-servo:NCC_KZN_D10_P5_Courtyard11"
+    },
+    "only_metadata_change": "C133 Sourcing_Status full reserve1.0901ms",
+    "all_other_component_values_fields_paths_UUIDs_exact": true,
+    "native_erc_errors_warnings_exclusions": [
+      0,
+      0,
+      0
+    ],
+    "before_xml_sha256": "28c35278447ea22f3f2eaaec6a32360dd117b5e2a52e866143aecdcc3528126f",
+    "after_xml_sha256": "6931601f131ccdd2c6b46d7e286db3f118e10d7a9acb1e2b6dffc9c3c7800aef",
+    "erc_sha256": "5e8946af93cc739ff0f7e3161ddad036c72f6364ccc4197408dcd677378153c1",
+    "source_hashes": {
+      "hardware/ads8588s_servo/aux_power.kicad_sch": "d8414cdb391859ebda7352f1f1197547a80a47e4911d96313be48df39d20e81e",
+      "hardware/ads8588s_servo/encoder.kicad_sch": "286d0ab7ebb4272242ecab6fab39e2bba9f303e2369ce1e5603fa1a99a30f6ac",
+      "hardware/ads8588s_servo/dc_link.kicad_sch": "043dad16678da170d280c5a2fa02b450ecdcd413cf7903f3742fb03adfd795cc",
+      "hardware/ads8588s_servo/gate_inverter.kicad_sch": "2389005048bb7d71e4adf9cb86ff247a5af4073b2b78a610226d5194fd315062",
+      "hardware/ads8588s_servo/bom.csv": "0e0d52d3a7cc66640eb9e5c3719d3f84d2b124943c2db946f91113cc0c49724a",
+      "hardware/ads8588s_servo/aux_power_profile.json": "f2b03fb56c0afb7fc3dd5ba0ded4f58bdcbef7754f835e30e12781a06c0e18d4",
+      "hardware/ads8588s_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm_D1.85.kicad_mod": "454f7a4feba1ac0f85452902e8c19cff36d531b8751db76a78d3738ea2337cb3",
+      "hardware/ads8588s_servo/fpga-servo.pretty/TI_RVZ0014A_W025.kicad_mod": "22e5459936e49206529f663d8faecf4e7439482fd5008565df6ec1f141325dbd",
+      "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDA0008B_LM5164.kicad_mod": "f0a4da14d3ffae6de3cd99702886d15b2e7e97c955f3f1f5e6731555c5032bc2",
+      "hardware/ads8588s_servo/fpga-servo.pretty/NCC_KZN_D10_P5_Courtyard11.kicad_mod": "c655c716ff356eead1bb03c7f866497b6affc6820c2d4c89f6bba9cb7e7f9ee8"
+    },
+    "physical_qualification": "NOT_RUN",
+    "PCB_native_forward_annotation_and_global_DRC": "IN_PROGRESS_SEPARATE_EVIDENCE"
+  },
+  "ad7606c": {
+    "components": 202,
+    "nets": 172,
+    "physical_pin_memberships": 714,
+    "all_net_names_and_physical_pin_memberships_exact": true,
+    "only_footprint_references_changed": {
+      "U12": "fpga-servo:TI_DDA0008B_LM5164",
+      "U19": "fpga-servo:TI_RVZ0014A_W025",
+      "J4": "fpga-servo:KEFA_KF950_3_9.50mm_D1.85",
+      "C1": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C2": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C120": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C121": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C122": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C123": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C124": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C125": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C126": "fpga-servo:NCC_KZN_D10_P5_Courtyard11",
+      "C127": "fpga-servo:NCC_KZN_D10_P5_Courtyard11"
+    },
+    "only_metadata_change": "C133 Sourcing_Status full reserve1.0901ms",
+    "all_other_component_values_fields_paths_UUIDs_exact": true,
+    "native_erc_errors_warnings_exclusions": [
+      0,
+      0,
+      0
+    ],
+    "before_xml_sha256": "758cf35a3416e308bf50cd347fc6214502028cb24b9d3972f79c954e45c02fc9",
+    "after_xml_sha256": "821a65686fe3e246a01668f334dfdafec2820996abde7734f43381d2c6281ab6",
+    "erc_sha256": "40e1d0fd60da2d2e0579e73ca84ea8baeb48688aee7b50528c55c5e4bb3bff2f",
+    "source_hashes": {
+      "hardware/ad7606c_servo/aux_power.kicad_sch": "1f378595375fb55dc500a482b9a5dbcdc1c2a44610b0272b1527bc349ac5e82c",
+      "hardware/ad7606c_servo/encoder.kicad_sch": "04a0101333eabd2d0a5867aceaf1af25ab0bd9f3d5822963eb6c38a8142a9847",
+      "hardware/ad7606c_servo/dc_link.kicad_sch": "c89b91d892e86d0246084cf4f9fa09bd547871eb928d46dc45212b3fe95e1b04",
+      "hardware/ad7606c_servo/gate_inverter.kicad_sch": "aad6e73fb2371de33f11c9270db373021b41b457f332355b2e616c1798e63b18",
+      "hardware/ad7606c_servo/bom.csv": "9e8d6cd89911e9a9acbf74fcd14b825e5088c4e09aee0a73813675843d5e5824",
+      "hardware/ad7606c_servo/aux_power_profile.json": "7bfcc45468b4e25c494cc0957cdcade0722c5c11b433c0a5ac17600a27543160",
+      "hardware/ad7606c_servo/fpga-servo.pretty/KEFA_KF950_3_9.50mm_D1.85.kicad_mod": "454f7a4feba1ac0f85452902e8c19cff36d531b8751db76a78d3738ea2337cb3",
+      "hardware/ad7606c_servo/fpga-servo.pretty/TI_RVZ0014A_W025.kicad_mod": "22e5459936e49206529f663d8faecf4e7439482fd5008565df6ec1f141325dbd",
+      "hardware/ad7606c_servo/fpga-servo.pretty/TI_DDA0008B_LM5164.kicad_mod": "f0a4da14d3ffae6de3cd99702886d15b2e7e97c955f3f1f5e6731555c5032bc2",
+      "hardware/ad7606c_servo/fpga-servo.pretty/NCC_KZN_D10_P5_Courtyard11.kicad_mod": "c655c716ff356eead1bb03c7f866497b6affc6820c2d4c89f6bba9cb7e7f9ee8"
+    },
+    "physical_qualification": "NOT_RUN",
+    "PCB_native_forward_annotation_and_global_DRC": "IN_PROGRESS_SEPARATE_EVIDENCE"
+  }
+}

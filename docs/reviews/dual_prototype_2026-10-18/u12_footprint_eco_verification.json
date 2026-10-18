@@ -1,0 +1,99 @@
+{
+  "ads": {
+    "components": 180,
+    "nets": 145,
+    "physical_pin_memberships": 634,
+    "exact_net_names_and_physical_pin_memberships": true,
+    "component_values_and_unapproved_fields_exact": true,
+    "parent_authorized_metadata_changes": {
+      "C133": {
+        "Sourcing_Status": {
+          "before": "Primary reused from C5; conservative Tss minimum1.51ms; startup bench OPEN",
+          "after": "Primary reused from C5; full-reserve Tss budget minimum1.0901ms; startup bench OPEN"
+        }
+      }
+    },
+    "changed_footprints": {
+      "U12": {
+        "before": "Package_SO:TI_SO-PowerPAD-8",
+        "after": "fpga-servo:TI_DDA0008B_LM5164"
+      },
+      "U19": {
+        "before": "Package_SON:Texas_R-PUSON-N14",
+        "after": "fpga-servo:TI_RVZ0014A_W025"
+      }
+    },
+    "before_xml_sha256": "7e25a009212fd4ed14a0dac40abdc691ad9d27d22a01b8f2465e11b2b2a74a08",
+    "after_xml_sha256": "1d938c8d113b3568f3e2ee83bed3bd322c2dfa39ab2bdc20d434605d3d3efa00",
+    "erc_report_sha256": "e9efb2ba2d6ad9a0fa65b73a44d849ad9a98262a68a8c23f9961856946fe1308",
+    "native_erc_errors": 0,
+    "native_erc_warnings": 0,
+    "native_erc_exclusions": 0
+  },
+  "ad": {
+    "components": 202,
+    "nets": 172,
+    "physical_pin_memberships": 714,
+    "exact_net_names_and_physical_pin_memberships": true,
+    "component_values_and_unapproved_fields_exact": true,
+    "parent_authorized_metadata_changes": {
+      "C133": {
+        "Sourcing_Status": {
+          "before": "Primary reused from C5; conservative Tss minimum1.51ms; startup bench OPEN",
+          "after": "Primary reused from C5; full-reserve Tss budget minimum1.0901ms; startup bench OPEN"
+        }
+      }
+    },
+    "changed_footprints": {
+      "U12": {
+        "before": "Package_SO:TI_SO-PowerPAD-8",
+        "after": "fpga-servo:TI_DDA0008B_LM5164"
+      },
+      "U19": {
+        "before": "Package_SON:Texas_R-PUSON-N14",
+        "after": "fpga-servo:TI_RVZ0014A_W025"
+      }
+    },
+    "before_xml_sha256": "a27a2768a0ba341b14c82509f031d5b3fbc11cf8cedc8b5abb6c8ad0c883ec96",
+    "after_xml_sha256": "0ea4d749e3a4da9a75c200acd82396b578d914027f1c6e28d31086e76cb2041c",
+    "erc_report_sha256": "3515397aea58af0f61613616bda45276aa80f23098f7d075c89809c0af7dc506",
+    "native_erc_errors": 0,
+    "native_erc_warnings": 0,
+    "native_erc_exclusions": 0
+  },
+  "scope": "U12 footprint only; no electrical connectivity ECO; parent independently owns U19 footprint, BOM and global manifest",
+  "footprint_id": "fpga-servo:TI_DDA0008B_LM5164",
+  "oem_pdf": "artifacts/dual-servo/footprint-qa/oem/ti-lm5164.pdf",
+  "oem_pdf_sha256": "cce03619fbe13951eea47458cd45e140361637d8fef32ae143b82b16d597e32d",
+  "oem_drawing": "DDA0008B 4214849/B 09/2025, TI February 2026 datasheet pages28-30",
+  "source_changes": {
+    "ads8588s_servo": {
+      "source_before_sha256": "cc4332709cc50f793f425f00468d7df2b26a999a75a3ef5c9a7dc0b6c786d438",
+      "source_after_sha256": "d98091eedac7e2a9377670b05b9f2ce4172396dfc91b05e1f7a8a0b916e9880a",
+      "footprint_sha256": "f0a4da14d3ffae6de3cd99702886d15b2e7e97c955f3f1f5e6731555c5032bc2",
+      "only_placed_U12_footprint_changed": true
+    },
+    "ad7606c_servo": {
+      "source_before_sha256": "c2b32aac1180c007f13ef5533cb6d06574d63cc6add25350309f917b03b20f8f",
+      "source_after_sha256": "844e1a0609de1fa61a2705b7494a99127efaaefd6251c7c7b8d1a17f8903255c",
+      "footprint_sha256": "f0a4da14d3ffae6de3cd99702886d15b2e7e97c955f3f1f5e6731555c5032bc2",
+      "only_placed_U12_footprint_changed": true
+    }
+  },
+  "physical_pad_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "extra_unnumbered_aperture_has_no_copper": true,
+  "native_pcb_annotation": "PENDING_PARENT_GUI",
+  "pcb_sources_modified": false,
+  "physical_qualification": "NOT_RUN",
+  "assembly_stencil_process": "0.125mm nominal stencil; final assembly approval OPEN; thermal vias must be outside mask/paste union or explicitly filled/capped"
+}

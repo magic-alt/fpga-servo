@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-19",
+  "projects": {
+    "ads8588s": {
+      "scope": "schematic",
+      "result": "PASS_AUTOMATED_ONLY",
+      "evidence_directory": "artifacts/pcb/ads8588s/20261018T183239Z-_l60zx0o",
+      "components": 180,
+      "nets": 145,
+      "physical_pin_memberships": 634,
+      "erc_errors_warnings_exclusions": [
+        0,
+        0,
+        0
+      ],
+      "native_export_sha256": {
+        "netlist.xml": "ee07c654813ecdc488b94140341953ed281b20ecb57b26875126f970658b7ef2",
+        "board.net": "d3d306554b4ac164d05cec945e749dfd036f9aace27c37d946cebfdce1ee6668",
+        "erc.json": "636e62270696a1d4278b779063495c526cc8d08c92d46adc57ee0462d2113e2d",
+        "schematic.pdf": "7cc7969ff110d1b1bfccf9a49e136969a9d080b8429cb4f275afabc007c83591",
+        "manifest.json": "b7022a0c1aae98eab7124bf59c658a2ab7b020e63fe150d7692ff573371d7761"
+      }
+    },
+    "ad7606c": {
+      "scope": "schematic",
+      "result": "PASS_AUTOMATED_ONLY",
+      "evidence_directory": "artifacts/pcb/ad7606c/20261018T183239Z-6a87sgjf",
+      "components": 202,
+      "nets": 172,
+      "physical_pin_memberships": 714,
+      "erc_errors_warnings_exclusions": [
+        0,
+        0,
+        0
+      ],
+      "native_export_sha256": {
+        "netlist.xml": "8c6c70f13e08f053ee44f6d288741a22094098e72c3c2038492eea9826f39853",
+        "board.net": "2663a6d36ce6950111ad0de9dd94d6e425caec5371632c60ef7890507f0e9167",
+        "erc.json": "bac0704fe1deda95bfa60125d40f4bb63279c3a2f2cd93c585651b6c416657b6",
+        "schematic.pdf": "62f467eff350d8e207097ead880068bd4d53c12d62f8ff7569db52080cee9bae",
+        "manifest.json": "447d1656741c9ace06a9e71e1e3853b6bcdabad3e45fe80fc059dc4604b19f22"
+      }
+    }
+  },
+  "regression": {
+    "total": 245,
+    "passed": 231,
+    "explicit_skips": 14,
+    "native_geometry_total": 44,
+    "native_geometry_passed": 44,
+    "log": "artifacts/dual-servo/full-regression-after-assembly.log",
+    "log_sha256": "c7c837b36dc065fc21551f167893914feb0afa5c71f6a41e01956b43cc05ef6a"
+  },
+  "visual_review": {
+    "method": "Rendered fresh PDF all pages, with earlier detailed power/ground crops",
+    "ads8588s_pages": 9,
+    "ad7606c_pages": 12,
+    "renders": "artifacts/dual-servo/latest-schematic-visual/"
+  },
+  "limits": [
+    "Schematic scope does not validate PCB candidates.",
+    "Candidate final DRC, adoption, manufacturing CAM and human reviews remain OPEN.",
+    "Hardware measurements NOT_RUN; no manufacturing approval or order."
+  ]
+}

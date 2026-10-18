@@ -1,0 +1,59 @@
+{
+  "retrieved_utc": "2026-10-18T15:15:04.696593+00:00",
+  "requests": [
+    {
+      "method": "POST",
+      "url": "https://tools.jlc.com/api/jlcTools/impedance/selectPageImpedanceDefaultTemplate",
+      "payload": {
+        "pageNum": 1,
+        "pageSize": 100,
+        "boardType": 1,
+        "plateLayerNumber": 4,
+        "plateThickness": 1.6,
+        "innerCopperThickness": 1,
+        "cuprumThickness": 2,
+        "structureType": ""
+      },
+      "response_file": "jlc_stackup_api_response.json",
+      "sha256": "11cce47bc1097ed4563f2b7710ef77d4b22fcaab6698dce10e22e143090941f5"
+    },
+    {
+      "method": "POST",
+      "url": "https://tools.jlc.com/api/jlcTools/impedance/selectTopNumImpedanceStructure",
+      "payload": {
+        "pageNum": 1,
+        "pageSize": 100,
+        "plateLayerPageNum": 99999,
+        "boardType": 1,
+        "plateLayerNumber": 4,
+        "plateThickness": 1.6,
+        "innerCopperThickness": 1,
+        "cuprumThickness": 2,
+        "structureType": "",
+        "usePurpose": 1
+      },
+      "response_file": "jlc_stackup_public_form_response.json",
+      "sha256": "b95a24c73bd9b25855ddcd814b073ddc6f9ae813269c8e3704abb752d6c72477"
+    }
+  ],
+  "chosen_published_candidate": {
+    "template": "JLC041621-3313",
+    "template_access_id": "f6262bc20b4a4c49a64d3ea2a26b638e",
+    "nominal_order_thickness_mm": 1.6,
+    "displayed_finished_thickness_mm": 1.61,
+    "displayed_tolerance_percent": 10,
+    "calculated_layer_total_mm": 1.614,
+    "outer_copper_mm": 0.07,
+    "inner_copper_mm": 0.03,
+    "pp_material": "3313 RC57% 4.2mil",
+    "pp_effective_dielectric_mm": 0.092,
+    "pp_raw_thickness_mm": 0.107,
+    "pp_Dk": 4.1,
+    "core_dielectric_mm": 1.23,
+    "core_Dk": 4.42,
+    "manufacturer_laminate": "Nan Ya NP-155F",
+    "manufacturer_product_Tg_label": "TG-155",
+    "matches_requested_Tg170": false
+  },
+  "interpretation": "Effective PP thickness0.107-0.03*0.5=0.092; official frontend PPdielectricThick method uses50percent copper density by default. Do not mix raw PP and finished dielectric thickness or treat this published Tg155 variant as Tg170. No login, credentials or design upload used."
+}

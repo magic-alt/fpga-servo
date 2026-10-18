@@ -66,6 +66,16 @@ class PassiveTests(unittest.TestCase):
             self.assertNotIn("R50", text)
             self.assertNotIn("R51", text)
 
+    def test_regeneration_deck_uses_reviewed_bank_and_series_damping(self):
+        with tempfile.TemporaryDirectory() as folder:
+            decks = qa.generate_spice({"C1": 100e-6, "C2": 100e-6,
+                                       "DC_LINK_TOTAL_F": .001,
+                                       "DC_LINK_R_EQ_OHM": .033,
+                                       "R40": 47., "C40": 1e-9}, Path(folder))
+            deck = decks["regeneration"].read_text()
+            self.assertIn("Rbank bus capnode 0.033", deck)
+            self.assertIn("Cbulk capnode 0 0.001 IC=48", deck)
+
     def test_historical_g50_threshold_cannot_guarantee_adc_min(self):
         maximum_trip = 4.65 * 1.02  # Historical defective supervisor, not current U25.
         self.assertLess(maximum_trip, qa.ADC_AVDD_MIN_V)
@@ -128,6 +138,28 @@ class RealNetlistMutationTests(unittest.TestCase):
         self.assertGreater(out["numerics"]["adc_supply_vs_supervisor"]["static_shutdown_headroom_V"], 0)
         self.assertFalse(out["numerics"]["adc_supply_vs_supervisor"]["transient_gate_off_qualified"])
         self.assertEqual(len(out["source_netlist_sha256"]), 64)
+
+    def test_native_safety_parser_accepts_correct_encoder_and_rejects_swapped_pair(self):
+        from pcbtools.rules.protection import check_safety
+        # Exercise the second native-format parser with the same fresh physical
+        # graph; a schematic-only symbol check cannot detect a stale safety map.
+        def text(pins):
+            forms = ['(export']
+            forms += [f'(comp (ref {json.dumps(r)}) (value {json.dumps(v)}))'
+                      for r,v in self.components.items() if r != 'J6']
+            for net in sorted(set(pins.values())):
+                nodes = ''.join(f'(node (ref {json.dumps(r)}) (pin {json.dumps(p)}))'
+                                for (r,p),n in pins.items() if n == net)
+                forms.append(f'(net (name {json.dumps(net)}) {nodes})')
+            return '\n'.join(forms)+')'
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)/'board.net'
+            path.write_text(text(self.pins), encoding='utf-8')
+            self.assertEqual(check_safety(resolve_project('ads8588s'), path), [])
+            pins = dict(self.pins)
+            pins['U7','1'],pins['U7','2'] = pins['U7','2'],pins['U7','1']
+            path.write_text(text(pins), encoding='utf-8')
+            self.assertTrue(any('U19' in e for e in check_safety(resolve_project('ads8588s'), path)))
 
     def test_strict_gates_remain_blocked(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -212,18 +244,17 @@ class RealNetlistMutationTests(unittest.TestCase):
 
     def test_regeneration_model_matches_capacitor_law(self):
         self.assertAlmostEqual(qa.gate_report(self.netlist)["numerics"]["regeneration"]
-                               ["ideal_no_sink_1A_time_48_to_55_s"], .0014)
+                               ["ideal_no_sink_1A_time_48_to_55_s"], .006967)
         self.assertAlmostEqual(qa.gate_report(self.netlist)["numerics"]
                                ["shunt_loss_each_W_at_10A_RMS"][0], .5)
 
     @unittest.skipUnless(shutil.which(NGSPICE), "ngspice CLI not available")
     def test_ngspice_regen_and_ideal_rc_crossing(self):
-        vals = {ref: qa.passive(self.components[ref]) for ref in (
-            "C1", "C2", "R40", "C40")}
+        vals = qa.require_graph(self.components, self.pins)
         with tempfile.TemporaryDirectory() as folder:
             result = qa.run_spice(vals, Path(folder), NGSPICE)
             self.assertEqual(result["status"], "PASS_ONLY_IDEAL_PASSIVE")
-            self.assertAlmostEqual(result["regeneration_final_V"], 55, delta=.05)
+            self.assertAlmostEqual(result["regeneration_final_V"], 49.433, delta=.005)
 
 
 if __name__ == "__main__":

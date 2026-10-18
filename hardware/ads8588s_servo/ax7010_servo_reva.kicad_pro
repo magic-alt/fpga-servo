@@ -88,10 +88,10 @@
         "duplicate_footprints": "warning",
         "extra_footprint": "warning",
         "footprint": "error",
-        "footprint_filters_mismatch": "ignore",
+        "footprint_filters_mismatch": "warning",
         "footprint_symbol_field_mismatch": "warning",
         "footprint_symbol_mismatch": "warning",
-        "footprint_type_mismatch": "ignore",
+        "footprint_type_mismatch": "warning",
         "hole_clearance": "error",
         "hole_to_hole": "warning",
         "holes_co_located": "warning",
@@ -105,7 +105,7 @@
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
         "mirrored_text_on_front_layer": "warning",
-        "missing_courtyard": "ignore",
+        "missing_courtyard": "warning",
         "missing_footprint": "warning",
         "missing_tuning_profile": "warning",
         "net_conflict": "warning",
@@ -127,12 +127,12 @@
         "too_many_vias": "error",
         "track_angle": "error",
         "track_dangling": "warning",
-        "track_not_centered_on_via": "ignore",
+        "track_not_centered_on_via": "warning",
         "track_on_post_machined_layer": "error",
         "track_segment_length": "error",
         "track_width": "error",
         "tracks_crossing": "error",
-        "tuning_profile_track_geometries": "ignore",
+        "tuning_profile_track_geometries": "warning",
         "unconnected_items": "error",
         "unresolved_variable": "error",
         "via_dangling": "warning",
@@ -149,9 +149,9 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.0,
-        "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
+        "min_silk_clearance": 0.15,
+        "min_text_height": 1.0,
+        "min_text_thickness": 0.15,
         "min_through_hole_diameter": 0.3,
         "min_track_width": 0.2,
         "min_via_annular_width": 0.1,
@@ -446,9 +446,9 @@
       "endpoint_off_grid": "warning",
       "extra_units": "error",
       "field_name_whitespace": "warning",
-      "footprint_filter": "ignore",
+      "footprint_filter": "warning",
       "footprint_link_issues": "warning",
-      "four_way_junction": "ignore",
+      "four_way_junction": "warning",
       "ground_pin_not_ground": "warning",
       "hier_label_mismatch": "error",
       "isolated_pin_label": "warning",
@@ -472,8 +472,8 @@
       "similar_label_and_power": "warning",
       "similar_labels": "warning",
       "similar_power": "warning",
-      "simulation_model_issue": "ignore",
-      "single_global_label": "ignore",
+      "simulation_model_issue": "warning",
+      "single_global_label": "warning",
       "stacked_pin_name": "warning",
       "unannotated": "error",
       "unconnected_wire_endpoint": "warning",
@@ -598,11 +598,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/Auxiliary Power/SW_5V"
+        "pattern": "/Auxiliary Power/SW_12V"
       },
       {
         "netclass": "Default",
-        "pattern": "/Auxiliary Power/SW_12V"
+        "pattern": "/Auxiliary Power/SW_5V"
       },
       {
         "netclass": "ANALOG",
@@ -622,18 +622,6 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/Current Sense {slash} OCP {slash} ADC/NTC_MOTOR"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/Current Sense {slash} OCP {slash} ADC/OCP_HI_REF"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/Current Sense {slash} OCP {slash} ADC/OCP_LO_REF"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/Current Sense {slash} OCP {slash} ADC/REFCAP_4V"
       },
       {
@@ -647,6 +635,46 @@
       {
         "netclass": "Default",
         "pattern": "/Current Sense {slash} OCP {slash} ADC/REGCAP2"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C120_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C121_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C122_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C123_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C124_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C125_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C126_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C127_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C1_P"
+      },
+      {
+        "netclass": "POWER",
+        "pattern": "/DC Input & Protection/DC Link Bank/DC_LINK_C2_P"
       },
       {
         "netclass": "Default",
@@ -886,6 +914,10 @@
       },
       {
         "netclass": "POWER",
+        "pattern": "/VBUS_BRIDGE"
+      },
+      {
+        "netclass": "POWER",
         "pattern": "/VBUS_PROT"
       },
       {
@@ -990,146 +1022,6 @@
       },
       {
         "netclass": "Default",
-        "pattern": "unconnected-(J2-P2-Pad2)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P3-Pad3)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P4-Pad4)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P5-Pad5)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P6-Pad6)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P7-Pad7)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P8-Pad8)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P9-Pad9)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P10-Pad10)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P11-Pad11)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P12-Pad12)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P13-Pad13)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P14-Pad14)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P15-Pad15)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P16-Pad16)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P17-Pad17)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P18-Pad18)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P19-Pad19)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P20-Pad20)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P21-Pad21)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P22-Pad22)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P23-Pad23)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P24-Pad24)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P25-Pad25)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P26-Pad26)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P27-Pad27)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P28-Pad28)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P29-Pad29)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P30-Pad30)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P31-Pad31)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P32-Pad32)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P33-Pad33)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P34-Pad34)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P35-Pad35)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(J2-P36-Pad36)"
-      },
-      {
-        "netclass": "Default",
         "pattern": "unconnected-(J5-NC-Pad10)"
       },
       {
@@ -1143,78 +1035,6 @@
       {
         "netclass": "Default",
         "pattern": "unconnected-(R32-Pad2)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB0-Pad16)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB1-Pad17)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB2-Pad18)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB3-Pad19)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB4-Pad20)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB5-Pad21)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB6-Pad22)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB9-Pad27)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB10-Pad28)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB11-Pad29)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB12-Pad30)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB13-Pad31)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U6-DB14_HBEN-Pad32)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U7-4A+-Pad13)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U7-4A--Pad14)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U7-4Y-Pad12)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U15-OUT4-Pad13)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U16-OUT4-Pad13)"
       },
       {
         "netclass": "Default",
@@ -1259,10 +1079,6 @@
       {
         "netclass": "Default",
         "pattern": "unconnected-(U24-CT-Pad4)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "unconnected-(U25-CT-Pad4)"
       }
     ]
   },
@@ -1391,7 +1207,7 @@
       {
         "filename": "ax7010_servo_reva.kicad_sch",
         "name": "ax7010_servo_reva",
-        "uuid": "642e2bda-71a0-5b96-b593-56dd8de6839e"
+        "uuid": "05403145-af59-4aba-b68b-68be6600865e"
       }
     ],
     "used_designators": "",

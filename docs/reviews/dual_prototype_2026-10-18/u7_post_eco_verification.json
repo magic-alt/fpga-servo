@@ -1,0 +1,157 @@
+{
+  "scope": "POST_ECO_NATIVE_XML_PHYSICAL_PIN_COMPARISON_ONLY",
+  "rows": [
+    {
+      "project": "ads8588s",
+      "source": "artifacts/dual-servo/encoder-ads-after.xml",
+      "sha256": "492c2bcd002344cbc7e364a427be1d530b2ffb9fa1906cfdd83be74ba27945e9",
+      "oem_pin_function_map_match": true,
+      "changed_component_physical_maps": [
+        "U7"
+      ],
+      "pins": {
+        "1": {
+          "function": "1A-_1",
+          "net": "/Differential ABZ Encoder/ENC_A_N"
+        },
+        "2": {
+          "function": "1A+_2",
+          "net": "/Differential ABZ Encoder/ENC_A_P"
+        },
+        "7": {
+          "function": "2A-_7",
+          "net": "/Differential ABZ Encoder/ENC_B_N"
+        },
+        "6": {
+          "function": "2A+_6",
+          "net": "/Differential ABZ Encoder/ENC_B_P"
+        },
+        "9": {
+          "function": "3A-_9",
+          "net": "/Differential ABZ Encoder/ENC_Z_N"
+        },
+        "10": {
+          "function": "3A+_10",
+          "net": "/Differential ABZ Encoder/ENC_Z_P"
+        },
+        "3": {
+          "function": "1Y_3",
+          "net": "/ENC_A"
+        },
+        "5": {
+          "function": "2Y_5",
+          "net": "/ENC_B"
+        },
+        "11": {
+          "function": "3Y_11",
+          "net": "/ENC_Z"
+        },
+        "12": {
+          "function": "G_N_12",
+          "net": "/GND"
+        },
+        "8": {
+          "function": "GND_8",
+          "net": "/GND"
+        },
+        "16": {
+          "function": "VCC_16",
+          "net": "/VIO_3V3"
+        },
+        "4": {
+          "function": "G_4",
+          "net": "/VIO_3V3"
+        },
+        "14": {
+          "function": "4A+_14",
+          "net": "unconnected-(U7-4A+-Pad14)"
+        },
+        "15": {
+          "function": "4A-_15",
+          "net": "unconnected-(U7-4A--Pad15)"
+        },
+        "13": {
+          "function": "4Y_13",
+          "net": "unconnected-(U7-4Y-Pad13)"
+        }
+      },
+      "pcb_route_acceptance": "PENDING_PARENT_NATIVE_SYNC_ROUTING_DRC"
+    },
+    {
+      "project": "ad7606c",
+      "source": "artifacts/dual-servo/encoder-ad-after.xml",
+      "sha256": "d6e565c47fffde8a628342573f0b1638c4865401d183684c19f7a703bc5f353e",
+      "oem_pin_function_map_match": true,
+      "changed_component_physical_maps": [
+        "U7"
+      ],
+      "pins": {
+        "3": {
+          "function": "1Y_3",
+          "net": "/ENC_A"
+        },
+        "5": {
+          "function": "2Y_5",
+          "net": "/ENC_B"
+        },
+        "11": {
+          "function": "3Y_11",
+          "net": "/ENC_Z"
+        },
+        "12": {
+          "function": "G_N_12",
+          "net": "/GND"
+        },
+        "8": {
+          "function": "GND_8",
+          "net": "/GND"
+        },
+        "16": {
+          "function": "VCC_16",
+          "net": "/VIO_3V3"
+        },
+        "4": {
+          "function": "G_4",
+          "net": "/VIO_3V3"
+        },
+        "1": {
+          "function": "1A-_1",
+          "net": "/encoder/ENC_A_N"
+        },
+        "2": {
+          "function": "1A+_2",
+          "net": "/encoder/ENC_A_P"
+        },
+        "7": {
+          "function": "2A-_7",
+          "net": "/encoder/ENC_B_N"
+        },
+        "6": {
+          "function": "2A+_6",
+          "net": "/encoder/ENC_B_P"
+        },
+        "9": {
+          "function": "3A-_9",
+          "net": "/encoder/ENC_Z_N"
+        },
+        "10": {
+          "function": "3A+_10",
+          "net": "/encoder/ENC_Z_P"
+        },
+        "14": {
+          "function": "4A+_14",
+          "net": "unconnected-(U7-4A+-Pad14)"
+        },
+        "15": {
+          "function": "4A-_15",
+          "net": "unconnected-(U7-4A--Pad15)"
+        },
+        "13": {
+          "function": "4Y_13",
+          "net": "unconnected-(U7-4Y-Pad13)"
+        }
+      },
+      "pcb_route_acceptance": "PENDING_PARENT_NATIVE_SYNC_ROUTING_DRC"
+    }
+  ]
+}

@@ -1,22 +1,27 @@
 # 硬件工程入口
 
-两种 ADC 方案分别保存在独立目录中，各自包含 KiCad 工程、层次原理图、本地符号/封装库和 BOM。
+两种 ADC 方案各自包含 KiCad 10 工程、原理图、本地符号/封装/模型、BOM、接口约束及四层 PCB。当前修复板均已通过全严重级别原生 DRC、未连接和图板一致性检查，以及八路 Kelvin、局部逃线、自由直角和 ADC 最大本体数字铜路检查。**人工工程审核及材料/工艺接受尚未关闭，禁止直接投板。**
 
-| 方案 | 工程入口 | 说明 |
-|---|---|---|
-| ADS8588S 原方案 | [ads8588s_servo/ax7010_servo_reva.kicad_pro](ads8588s_servo/ax7010_servo_reva.kicad_pro) | [原方案说明](ads8588s_servo/README.md)；保留旧 PCB、采购表和成本快照 |
-| AD7606C-16 新方案 | [ad7606c_servo/ax7010_servo_ad7606c.kicad_pro](ad7606c_servo/ax7010_servo_ad7606c.kicad_pro) | [新方案说明](ad7606c_servo/README.md)、[四层 PCB 布局](ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb)、[开发板方案](ad7606c_servo/development_board.md)、[原理图 PDF](ad7606c_servo/evidence/schematic.pdf) |
+| 方案 | 当前工程 | 原生对象 / 网络 / 引脚归属 | 采购实装 |
+| --- | --- | --- | --- |
+| ADS8588SIPM | [工程与说明](ads8588s_servo/README.md)、[四层 PCB](ads8588s_servo/ax7010_servo_reva.kicad_pcb) | 180 / 145 / 634 | 169 |
+| AD7606C-16BSTZ | [工程与说明](ad7606c_servo/README.md)、[四层 PCB](ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb) | 202 / 172 / 714 | 191 |
 
-原 ADS8588S 工程文件名保持不变，目录内部相对路径和 `${KIPRJMOD}` 库引用仍然有效。原方案的接口 XDC 已迁入 `ads8588s_servo/ax7010_servo_reva.xdc`；新方案的独立 XDC 位于 `ad7606c_servo/`。
+对象计数包含 DNP 和板外 J6；五个测试点属于铜图形，不采购或装配。两板目标为 24–48 V、20 kHz、10 Arms 连续相电流、20 A 瞬时正弦相电流幅值持续 30 s（14.142 Arms）、40°C 强迫风冷；12 V 总连续负载 1 A，含下游电源输入。没有板载制动，电机操作前必须独立验证外部吸能/钳位，J7 支路自行保护。
 
-仓库根目录的检查脚本默认检查 `ads8588s_servo/`。两个方案的完整原生检查入口为：
+候选叠构为 JLC041621-3313 / NP-155F Tg155、外 70 µm / 内 30 µm 铜、ENIG。它与初始未证实的 Tg170 目标不同，材料接受仍开放；全部电气过孔要求付费四层 Type VII 填充/整平/铜帽工艺候选，J1/J5、J4 成品孔需要指定公差。所有实际台架、动态、温升及电机试验均为 NOT_RUN。
 
-```powershell
-python -X utf8 hardware/ad7606c_servo/tools/run_checks.py --schematic-only
+从仓库根目录运行：
+
+```sh
+python tools/pcb.py check --project ads8588s --scope schematic
+python tools/pcb.py check --project ad7606c --scope schematic
+python tools/pcb.py verify --project ads8588s --scope prototype
+python tools/pcb.py verify --project ad7606c --scope prototype
 ```
 
-目录整理不改变电气设计，也不解除发布门禁。原方案 PCB 的已知检查失败、新方案 PCB/RTL/STA/硬件实测的未完成状态保持不变，详见各方案说明和 [发布门禁](../docs/release_gates.md)。
+完整原生几何验收使用带 `pcbnew` 的 KiCad Python；普通 Python 缺失该能力时不得报通过。工具位置由参数指定，详见[工具使用](../docs/pcb_toolkit.md)。`prototype` 保留七项人工审核要求，缺少签核时应明确 BLOCKED；它不等于完整 `pcb_release`。
 
-`.history/` 与根目录原有 KiCad 锁文件是保留的本地状态；工程应通过上表中的新路径重新打开。
+最终源哈希、采用记录、逐器件覆盖和复核证据见[双方案审核](../docs/reviews/dual_prototype_2026-10-18/README.md)及[发布门禁](../docs/release_gates.md)。原 ADS 双层板保存在 `ads8588s_servo/evidence/legacy_pcb_before_dual_prototype_2026-10-18/`；来源清单的电气 ECO 前及布局采用前快照保存在 AD 工程的 `evidence/`。历史采购/成本日期不是当前库存报价。
 
-CI 范围与严格 PCB 发布入口见[检查说明](../docs/ci_schematic_scope.md)。原理图模式需显式指定；默认严格模式仍会报告旧 PCB 阻塞。
+接口 XDC 各自保存在工程目录中。本仓库尚无 HDL/固件实现；时序目标不是已测闭环带宽。原有 `.history/` 和本地锁文件保持保留，使用上表路径打开当前工程。

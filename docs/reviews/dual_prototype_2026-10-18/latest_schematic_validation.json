@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-19",
+  "projects": {
+    "ads8588s": {
+      "scope": "schematic",
+      "result": "PASS_AUTOMATED_ONLY",
+      "evidence_directory": "artifacts/pcb/ads8588s/20261018T205118Z-jmqdusiw",
+      "components": 180,
+      "nets": 145,
+      "physical_pins": 634,
+      "erc_errors_warnings_exclusions": [
+        0,
+        0,
+        0
+      ],
+      "native_export_sha256": {
+        "netlist.xml": "7bb76c0ef0f4e66dc8363ab18d8271d8688ef91a9e7fc034dbb5bcec121f474b",
+        "board.net": "b7fd5bacb9d1fd150a01b7c2fb1b31b0692d0b2f85b7c0d35ec44848e52e4b0a",
+        "erc.json": "8df590a50ee15e730c7d69d67a24c91a352a64628639e3bf9cd07d3e102c48a0",
+        "schematic.pdf": "09d22b026858c3b3fa6db8fa80193251563f942a54b73b5ee65680fcf1ff3a16",
+        "manifest.json": "6f0c69395696cbb2889f89b63dca3253c9f451993be5af071543bf0bf383d48a"
+      }
+    },
+    "ad7606c": {
+      "scope": "schematic",
+      "result": "PASS_AUTOMATED_ONLY",
+      "evidence_directory": "artifacts/pcb/ad7606c/20261018T205118Z-xts2x_kl",
+      "components": 202,
+      "nets": 172,
+      "physical_pins": 714,
+      "erc_errors_warnings_exclusions": [
+        0,
+        0,
+        0
+      ],
+      "native_export_sha256": {
+        "netlist.xml": "5ffe497562feaa86238b04e53799f2a43a526d36b1cb30806a17cfc8f1bf5bff",
+        "board.net": "121515620d782a95bf2dbac19f2d0b3920d43c7f333575054f04816da130b6ab",
+        "erc.json": "d7587b535908e040972716a01feaf88c9b3b4b8d52619c330214cfa6a0374b31",
+        "schematic.pdf": "a54978ff3738e5bacdf7fd85924d31f5c2d76175da60419be0206f57f003e6d7",
+        "manifest.json": "076c0bbe34982483d1584de81145827eb2630162206a406262e6ce29ebd432b3"
+      }
+    }
+  },
+  "regression": {
+    "total": 315,
+    "passed": 272,
+    "explicit_skips": 43,
+    "failures": 0,
+    "native_geometry_total": 81,
+    "native_geometry_passed": 81,
+    "native_geometry_skips": 0,
+    "log": "artifacts/dual-servo/final-source-all-regression.log",
+    "log_sha256": "4ce8b824233ec1872bfcaff3b752c9917010ce9fc25e1fd50e8d47edf7979efc",
+    "counts_are_separate_lanes_not_a_unique_test_sum": true
+  },
+  "visual_review": "See page_metadata_native_verification.json and schematic_visible_returns_verification.json; actual21page review followed by4changedpage review and metadata-only equivalence.",
+  "full_board_validation": "final_cad_validation.json",
+  "limits": [
+    "Seven real source-bound human engineering reviews remain unsigned.",
+    "Material Tg155, all-via TypeVII POFV and controlled finished-hole acceptance remain OPEN.",
+    "All physical/dynamic/thermal/EMC/motor qualification NOT_RUN.",
+    "No production release, upload, order or push."
+  ]
+}

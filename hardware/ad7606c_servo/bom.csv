@@ -1,6 +1,6 @@
-﻿Ref,Qty,Value / Part,Manufacturer,MPN,Package,LCSC,Alternative MPN,Alternative LCSC,Status,On_board,DNP
-C1,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C337258,100ZLH100MEFC10X20,C330940,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-C2,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,C337258,100ZLH100MEFC10X20,C330940,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+Ref,Qty,Value / Part,Manufacturer,MPN,Package,LCSC,Alternative MPN,Alternative LCSC,Status,On_board,DNP
+C1,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+C2,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
 C3,1,1uF,Faratronic,C212E105J6BC000,Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3,C604836,UNQUALIFIED,UNVERIFIED,OPEN,True,False
 C4,1,100nF,TDK,C4532C0G2A104JT000N,Capacitor_SMD:C_1812_4532Metric,C342611,FM43N104J101EGG,C42391415,OPEN,True,False
 C5,1,10nF,FH(风华),0603B103K101NT,Capacitor_SMD:C_0603_1608Metric,C43253,CL10B103KB8NNNC,C1589,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
@@ -13,8 +13,8 @@ C23,1,22uF,FH(风华),1210B226K250NT,Capacitor_SMD:C_1210_3225Metric,C5204920,CS
 C24,1,2.2nF,FH(风华),0603B222J500NT,Capacitor_SMD:C_0603_1608Metric,C60328,CL10B222KB8NNNC,C16033,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C25,1,3.3nF,Murata,GRM1885C1H332JA01D,Capacitor_SMD:C_0603_1608Metric,C77036,UNQUALIFIED,UNVERIFIED,12V total 1A ECO; exact primary required; procurement and bench OPEN,True,False
 C26,1,56pF,FH(风华),0603CG560J500NT,Capacitor_SMD:C_0603_1608Metric,C1676,CL10C560JB81PNC,C472797,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-C30,1,10uF,Chinocera(华瓷),HGC0805R7106K250NSLJ,Capacitor_SMD:C_0805_2012Metric,C33546010,FCC0805B106K250FT,C54619707,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-C31,1,22uF,HRE(芯声),CGA0805X7R226M100MT,Capacitor_SMD:C_0805_2012Metric,C23692981,GRM21BZ71A226ME15L,C907991,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+C30,1,22uF,Murata,GRM32ER71E226KE15L,fpga-servo:Murata_GRM32_1210,C21397,UNQUALIFIED,UNVERIFIED,Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification,True,False
+C31,1,22uF,Murata,GRM32ER71E226KE15L,fpga-servo:Murata_GRM32_1210,C21397,UNQUALIFIED,UNVERIFIED,Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification,True,False
 C40,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C41,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 C42,1,1nF,FH(风华),0603CG102J101NT,Capacitor_SMD:C_0603_1608Metric,C88489,CL10C102JB8NNNC,C163508,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
@@ -62,10 +62,10 @@ CBOOT3,1,470nF,FH(风华),0805B474K500NT,Capacitor_SMD:C_0805_2012Metric,C49955,
 D1,1,SMCJ54A,UNVERIFIED,UNVERIFIED,Diode_SMD:D_SMC,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,True,True
 F1,1,25A_0456025.ER,Littelfuse,0456025.ER,fpga-servo:Littelfuse_456_25A_SMD,C315877,UNQUALIFIED,UNVERIFIED,China stock2574 checked2026-10-10;critical protection single-source exception;coordinationOPEN,True,False
 F2,1,0.5A_PTC_ENCODER_5V,JDTfuse(集电通),ASMD1812-050,Fuse:Fuse_1812_4532Metric,C135358,MF-MSMF050-2,C17313,China stock2790 checked2026-10-10; local ambient<=85C; hold0.45A at40C; Bourns alternate land review required,True,False
-J1,1,AX7010_PL_A,JILN(锦凌),321040SG0ABK00A01,fpga-servo:JILN_3210_2x20_P2.54mm_D1.02,C601944,2.54-2*20P直简牛,C9138,China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm,True,False
+J1,1,AX7010_PL_A,JILN(锦凌),321040SG0ABK00A01,fpga-servo:JILN_3210_2x20_P2.54mm_D1.02,C601944,UNQUALIFIED,UNVERIFIED,Exact JILN primary only; original OEM drawing recovered; finished holes1.02+/-0.05mm; controlled JLC multilayer ENIG process acceptance OPEN; alternates UNQUALIFIED,True,False
 J3,1,DC_IN_48V,Phoenix Contact(菲尼克斯),1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,C92145,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
-J4,1,MOTOR_UVW,KEFA,KF950-9.5-3P,fpga-servo:KEFA_KF950_3_9.50mm,C475107,UNQUALIFIED,UNVERIFIED,China stock200 checked2026-10-10; OEM land reviewed; 32A IEC rating; mechanical/current/thermal qualification OPEN; critical power connector single-source exception,True,False
-J5,1,ABZ_DIFF_ENCODER,JILN(锦凌),321010SG0ABK00A01,fpga-servo:JILN_3210_2x05_P2.54mm_D1.02,C429962,2.54-2*5P简牛,C5665,China stock verified 2026-10-10; BOOMELE alternate conditional <=1A/pin and manufacturer drawing confirmation; finished holes 1.02+/-0.03mm,True,False
+J4,1,MOTOR_UVW,KEFA,KF950-9.5-3P,fpga-servo:KEFA_KF950_3_9.50mm_D1.85,C475107,UNQUALIFIED,UNVERIFIED,China stock200 checked2026-10-10; OEM land reviewed; 32A IEC rating; mechanical/current/thermal qualification OPEN; critical power connector single-source exception,True,False
+J5,1,ABZ_DIFF_ENCODER,JILN(锦凌),321010SG0ABK00A01,fpga-servo:JILN_3210_2x05_P2.54mm_D1.02,C429962,UNQUALIFIED,UNVERIFIED,Exact JILN primary only; original OEM drawing recovered; finished holes1.02+/-0.05mm; controlled JLC multilayer ENIG process acceptance OPEN; alternates UNQUALIFIED,True,False
 J6,1,PSU_EXT,System interface,TBD,,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OPEN,False,False
 L1,1,150uH,Wurth Elektronik,7447709151,fpga-servo:Wurth_WE_PD_1210_7447709151,,UNQUALIFIED,UNVERIFIED,OEM data reviewed 2026-10-18; 12V total 1A design; procurement and bench OPEN,True,False
 L2,1,2.2uH,Sunlord,SWPA4020S2R2MT,fpga-servo:Sunlord_SWPA4020S,C83423,FHD4020S-2R2MT,C602029,OPEN,True,False
@@ -130,12 +130,12 @@ R108,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603W
 R109,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R110,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R111,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-RG1,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
-RG2,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
-RG3,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
-RG4,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
-RG5,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
-RG6,1,33R,FH(风华),RS-03K33R0FT,Resistor_SMD:R_0603_1608Metric,C125766,0603WAF330JT5E,C23140,Prototype tuning value; stock checked 2026-10-10; gate-off and <=2V/ns qualification OPEN,True,False
+RG1,1,33R,Vishay,CRCW060333R0FKEAHP,fpga-servo:Vishay_CRCW0603_HP,UNVERIFIED,UNQUALIFIED,UNVERIFIED,Exact pulse-proof primary; OEM continuous-pulse curve reviewed; normal gate envelope and hot waveform bench OPEN; no alternate approval,True,False
+RG2,1,33R,Vishay,CRCW060333R0FKEAHP,fpga-servo:Vishay_CRCW0603_HP,UNVERIFIED,UNQUALIFIED,UNVERIFIED,Exact pulse-proof primary; OEM continuous-pulse curve reviewed; normal gate envelope and hot waveform bench OPEN; no alternate approval,True,False
+RG3,1,33R,Vishay,CRCW060333R0FKEAHP,fpga-servo:Vishay_CRCW0603_HP,UNVERIFIED,UNQUALIFIED,UNVERIFIED,Exact pulse-proof primary; OEM continuous-pulse curve reviewed; normal gate envelope and hot waveform bench OPEN; no alternate approval,True,False
+RG4,1,33R,Vishay,CRCW060333R0FKEAHP,fpga-servo:Vishay_CRCW0603_HP,UNVERIFIED,UNQUALIFIED,UNVERIFIED,Exact pulse-proof primary; OEM continuous-pulse curve reviewed; normal gate envelope and hot waveform bench OPEN; no alternate approval,True,False
+RG5,1,33R,Vishay,CRCW060333R0FKEAHP,fpga-servo:Vishay_CRCW0603_HP,UNVERIFIED,UNQUALIFIED,UNVERIFIED,Exact pulse-proof primary; OEM continuous-pulse curve reviewed; normal gate envelope and hot waveform bench OPEN; no alternate approval,True,False
+RG6,1,33R,Vishay,CRCW060333R0FKEAHP,fpga-servo:Vishay_CRCW0603_HP,UNVERIFIED,UNQUALIFIED,UNVERIFIED,Exact pulse-proof primary; OEM continuous-pulse curve reviewed; normal gate envelope and hot waveform bench OPEN; no alternate approval,True,False
 RGS1,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 RGS2,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 RGS3,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
@@ -165,11 +165,11 @@ U8,1,SN74LVC2G08DCUR,TI(德州仪器),SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSS
 U9,1,SN74LVC2G08DCUR,TI(德州仪器),SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C91875,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U10,1,SN74LVC2G08DCUR,TI(德州仪器),SN74LVC2G08DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C91875,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U11,1,SN74LVC1G11DCKR,TI(德州仪器),SN74LVC1G11DCKR,Package_TO_SOT_SMD:SOT-363_SC-70-6,C529281,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
-U12,1,LM5164DDAR,TI(德州仪器),LM5164DDAR,Package_SO:TI_SO-PowerPAD-8,C477928,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U12,1,LM5164DDAR,TI(德州仪器),LM5164DDAR,fpga-servo:TI_DDA0008B_LM5164,C477928,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U13,1,TPS62901RPJR,TI(德州仪器),TPS62901RPJR,fpga-servo:Texas_RPJ0009A_VQFN-HR-9_1.5x2mm,C2864847,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U15,1,LM393LVDDFR,Texas Instruments,LM393LVDDFR,fpga-servo:TI_DDF0008A,C5213974,UNQUALIFIED,UNVERIFIED,Prototype candidate; stock checked 2026-10-10; power-off I/O verified; transient qualification OPEN,True,False
 U18,1,LM74502DDFR,TI(德州仪器),LM74502DDFR,fpga-servo:TI_DDF0008A_SOT23_8_P0.65mm,C3236215,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
-U19,1,TPD6E05U06RVZR,TI(德州仪器),TPD6E05U06RVZR,Package_SON:Texas_R-PUSON-N14,C962978,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
+U19,1,TPD6E05U06RVZR,TI(德州仪器),TPD6E05U06RVZR,fpga-servo:TI_RVZ0014A_W025,C962978,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U20,1,SN74LVC1G74,TI(德州仪器),SN74LVC1G74DCUR,fpga-servo:TI_DCU0008A_VSSOP8_P0.5mm,C70285,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U21,1,SN74LVC1G17,TI(德州仪器),SN74LVC1G17DBVR,Package_TO_SOT_SMD:SOT-23-5,C7836,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
 U22,1,SN74LVC1G14,TI(德州仪器),SN74LVC1G14DBVR,Package_TO_SOT_SMD:SOT-23-5,C7835,UNQUALIFIED,UNVERIFIED,Existing critical part retained; single-source exception; stock checked 2026-10-10,True,False
@@ -180,3 +180,24 @@ U26,1,SN74LVC3G17,TI(德州仪器),SN74LVC3G17DCUR,fpga-servo:TI_DCU0008A_VSSOP8
 U27,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
 U28,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
 U29,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
+R120,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+R121,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C120,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R122,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C121,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R123,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C122,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R124,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C123,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R125,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C124,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R126,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C125,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R127,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C126,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R128,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+C127,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
+R129,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
+J7,1,EXT_SINK,Phoenix Contact(菲尼克斯),1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,C92145,UNVERIFIED,UNVERIFIED,Dedicated protected-bus sink; primary only; external clamp bench OPEN,True,False
+C132,1,22uF,Murata,GRM32ER71E226KE15L,fpga-servo:Murata_GRM32_1210,C21397,UNQUALIFIED,UNVERIFIED,Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification,True,False
+C133,1,10nF,FH(风华),0603B103K101NT,Capacitor_SMD:C_0603_1608Metric,C43253,UNQUALIFIED,UNVERIFIED,Primary reused from C5; full-reserve Tss budget minimum1.0901ms; startup bench OPEN,True,False

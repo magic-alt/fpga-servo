@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "classification": "ANALYTIC ENGINEERING CLEARANCE ENVELOPES - NOT OEM MODELS",
+  "physical_fit_or_mating_approved": false,
+  "files": [
+    {
+      "file": "CLEARANCE_Q_PG_TDSON8_NOT_OEM.step",
+      "sha256": "a9b66d07904e27f9b00c68631ad389cc6f9653c6f7f0bdcbbbd41a5a12f809a2",
+      "refs": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4",
+        "Q5",
+        "Q6",
+        "Q7",
+        "Q8"
+      ],
+      "bounds_mm": [
+        -3.21,
+        3.21,
+        -2.775,
+        2.775,
+        1.2
+      ],
+      "basis": "Infineon BSC040N10NS5 Rev2.4 p10 E1max6.42,Dmax5.35+2*.1 mold flash,Amax1.20; local pad1(-X,-Y) orientation preserved; no lead geometry implied"
+    },
+    {
+      "file": "CLEARANCE_F2_JDT1812_NOT_OEM.step",
+      "sha256": "819d1592465f99e06bcc60fd64763cbf80d54598d850bb4def4805f128dc5cec",
+      "refs": [
+        "F2"
+      ],
+      "bounds_mm": [
+        -2.365,
+        2.365,
+        -1.705,
+        1.705,
+        1.0
+      ],
+      "basis": "Exact selected JDT ASMD1812-050 primary_body_mm in f2_selected_evidence_2026-10-10.json; body max4.73x3.41x1.0; no substitute-brand identity"
+    },
+    {
+      "file": "CLEARANCE_J3_PHOENIX_NOT_OEM.step",
+      "sha256": "6dbd53b21030a64e3ef37d1c7e27b3a155397cdc1254a14cb356722cc2d4022b",
+      "refs": [
+        "J3"
+      ],
+      "bounds_mm": [
+        -5.01,
+        14.53,
+        -8.15,
+        4.85,
+        22.0
+      ],
+      "basis": "Existing qualified Fab bbox19.04x12.5, plus.25per XY edge engineering reserve; installed21.5+.5Z engineering reserve. Current official product geometry12.05 nominaldepth; no exact pin-to-body offset/mating qualification claimed"
+    },
+    {
+      "file": "CLEARANCE_J4_KEFA_NOT_OEM.step",
+      "sha256": "073be1d25e29c69625729a7b83cac714524e72c81a3424cc88cdaef1f9427c6f",
+      "refs": [
+        "J4"
+      ],
+      "bounds_mm": [
+        -5.25,
+        24.25,
+        -7.6,
+        6.0,
+        21.95
+      ],
+      "basis": "Native nominalbody28.5x12.6 plus general\u00b1.5 dimensional bound peredge conservatively; Z21.45+.5 engineering/general tolerance reserve. Wire/screw access unbounded/OPEN"
+    },
+    {
+      "file": "CLEARANCE_J7_PHOENIX_NOT_OEM.step",
+      "sha256": "12927ea8b144f3a05d24dfea44618546876477e0190b5d0202eaa51988bdbf66",
+      "refs": [
+        "J7"
+      ],
+      "bounds_mm": [
+        -5.01,
+        14.53,
+        -8.15,
+        4.85,
+        22.0
+      ],
+      "basis": "Existing qualified Fab bbox19.04x12.5, plus.25per XY edge engineering reserve; installed21.5+.5Z engineering reserve. Current official product geometry12.05 nominaldepth; no exact pin-to-body offset/mating qualification claimed"
+    },
+    {
+      "file": "CLEARANCE_NCC_D10p5_H21p5_NOT_OEM.step",
+      "sha256": "5c939fbaf74a48596b8db7fe35b77a204db0c1c5f5d331cd7a326e37bf892902",
+      "refs": [
+        "C1",
+        "C2",
+        "C120",
+        "C121",
+        "C122",
+        "C123",
+        "C124",
+        "C125",
+        "C126",
+        "C127"
+      ],
+      "basis": "NCC exact selected maxdiameter10.5,height21.5; centerlocal(2.5,0),64-sided circumscribed prism conservatively encloses cylinder. Bottom0 assumes body seated at board; real seating/standoff allowance still OPEN.",
+      "circumscribed_max_diameter_mm": 10.512662962939123,
+      "height_mm": 21.5
+    }
+  ],
+  "coordinate_convention": "STEP local X=KiCad footprint local X; STEP local Y=-KiCad footprint local Y; Z points away from fitted side. Example installed J1 model has Ynegative along native numbered pad row Ypositive; asymmetric terminal envelopes were explicitly flipped accordingly.",
+  "color": "orange; distinguish from package-realistic body models",
+  "unmodeled": "Actual solder joints/pin geometry, component seating, mating housings/cables/tool swept volumes, enclosure, screws/AX7010 assembly"
+}

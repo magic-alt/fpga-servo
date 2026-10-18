@@ -1,0 +1,218 @@
+{
+  "review_date": "2026-10-18",
+  "scope": "READ_ONLY_BASELINE_AUDIT",
+  "sources": [
+    {
+      "component": "AM26LV32E",
+      "url": "https://www.ti.com/lit/ds/symlink/am26lv32e.pdf",
+      "pages_or_section": "RevE pp3-9",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Pin-table conflict confirmed; open-circuit failsafe only;85C ambient"
+    },
+    {
+      "component": "BSC040N10NS5",
+      "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsc040n10ns5-datasheet-en.pdf",
+      "pages_or_section": "Rev2.4 pp1-4,11",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "100V,4mohm10V,150C; headline current requires case condition"
+    },
+    {
+      "component": "DRV8300",
+      "url": "https://www.ti.com/lit/ds/symlink/drv8300.pdf",
+      "pages_or_section": "RevD pp3-9,16,19",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "NoninvertingD PW mapping matches; bootstrap and slew constraints"
+    },
+    {
+      "component": "INA240",
+      "url": "https://www.ti.com/lit/ds/symlink/ina240.pdf",
+      "pages_or_section": "RevC pp3-6",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Physical map matches; gain20 and -4..80V common mode"
+    },
+    {
+      "component": "LM74502",
+      "url": "https://www.ti.com/lit/ds/symlink/lm74502.pdf",
+      "pages_or_section": "RevA p3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "DDF map matches;OV grounded in actual graph"
+    },
+    {
+      "component": "TPS62901",
+      "url": "https://www.ti.com/lit/ds/symlink/tps62901.pdf",
+      "pages_or_section": "RevA p3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "RPJ nine-pin map matches;SS floating permitted"
+    },
+    {
+      "component": "LM393LV",
+      "url": "https://www.ti.com/lit/ds/symlink/lm393lv.pdf",
+      "pages_or_section": "RevD pin configuration and electrical tables",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Comparator polarity current into IN- matches active-low OCP"
+    },
+    {
+      "component": "TPS3808",
+      "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "pages_or_section": "RevN p4",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "DBV map matches"
+    },
+    {
+      "component": "TPS3890",
+      "url": "https://www.ti.com/lit/ds/symlink/tps3890.pdf",
+      "pages_or_section": "RevA p3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "DSE map matches"
+    },
+    {
+      "component": "SN74LVC1G74",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf",
+      "pages_or_section": "RevG p4",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "DCU map matches"
+    },
+    {
+      "component": "SN74LVC2G08",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g08.pdf",
+      "pages_or_section": "RevN p3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "DCU map matches"
+    },
+    {
+      "component": "SN74LVC3G17",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc3g17.pdf",
+      "pages_or_section": "RevF p3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "DCU map matches"
+    },
+    {
+      "component": "TPD6E05U06",
+      "url": "https://www.ti.com/lit/ds/symlink/tpd6e05u06.pdf",
+      "pages_or_section": "RevO pp5-7",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "RVZ channel/ground mapping matches"
+    },
+    {
+      "component": "TXU0204",
+      "url": "https://www.ti.com/lit/ds/symlink/txu0204.pdf",
+      "pages_or_section": "RevA p4",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "PW directions/supplies/OE map matches"
+    },
+    {
+      "component": "ADS8588S",
+      "url": "https://www.ti.com/lit/ds/symlink/ads8588s.pdf",
+      "pages_or_section": "RevA pp5-9",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Analog/rail/config map and reference capacitors compared"
+    },
+    {
+      "component": "AD7606C-16",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf",
+      "pages_or_section": "RevA pp14-17; interface sections",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Analog/rail/config map,4.4V buffer and100nF reference compared"
+    },
+    {
+      "component": "7447709151",
+      "url": "https://www.we-online.com/components/products/datasheet/7447709151.pdf",
+      "pages_or_section": "003.001 pp1-2",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Land5.4x2.9mm,7mm inner gap;150uH20%;2.1A;2.7Atyp saturation"
+    },
+    {
+      "component": "0456025.ER",
+      "url": "https://www.littelfuse.com/assetdocs/littelfuse_fuse_456_datasheet.pdf?assetguid=d86b18f9-14fa-4764-87ff-8aec12e9a89d",
+      "pages_or_section": "2025-09-18 pp1-3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "500A72VDC;45A2s;thermal100um copper recommendation and continuous derating"
+    },
+    {
+      "component": "EKZN101ELL101MJ20S",
+      "url": "https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/KZNLL-e.PDF",
+      "pages_or_section": "NCC2026 KZN exact100V100uF10x20 row and56-180uF frequency group",
+      "verification": "FRESH_OEM_ROW_RECONCILED",
+      "observation": "Exact primary1570mArms100kHz; conservative10kHz factor0.90. Historical1430mArms was adjacent120uF row, not this exact MPN. Ten individually damped branches now selected; full waveform/thermal qualification OPEN"
+    },
+    {
+      "component": "JLC hole capability",
+      "url": "https://jlcpcb.com/capabilities/pcb-capabilities",
+      "pages_or_section": "Hole size Tolerance row",
+      "verification": "FRESH_FAB_CAPABILITY_REVIEW",
+      "observation": "Regular+.13/-.08mm;specialcircular+/-.05mm multilayerENIG remarks required"
+    },
+    {
+      "component": "JILN3210",
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20190920/C429963_F9492D44774B1CF9B8CD95C0C24EAA23.pdf",
+      "pages_or_section": "Manufacturer3210XXSXXXBK00X01 family drawing, A0,2015-01-28,1/1; visual review",
+      "verification": "FRESH_MANUFACTURER_DRAWING_VIA_DISTRIBUTOR",
+      "observation": "Original image PDF recovered; 2.54mm two-row pitch,0.64mm square pins, recommended PCB holes diameter1.02mm with PCB board tolerance+/-0.05mm; finished-hole process/order acceptance remains OPEN",
+      "sha256": "cc33060f70b21b6e0791e7bf46a9e4e7384c29e2d08b6dac34ffa207fe665ef9",
+      "bytes": 106876
+    },
+    {
+      "component": "SN74LVC1G11",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g11.pdf",
+      "pages_or_section": "RevI p3",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Selected-package physical pin assignment agrees with baseline XML"
+    },
+    {
+      "component": "SN74LVC1G17",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+      "pages_or_section": "RevY pin configuration",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Selected-package physical pin assignment agrees with baseline XML"
+    },
+    {
+      "component": "SN74LVC1G14",
+      "url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf",
+      "pages_or_section": "RevAA pin configuration",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Selected-package physical pin assignment agrees with baseline XML"
+    },
+    {
+      "component": "LM5164",
+      "url": "https://www.ti.com/lit/ds/symlink/lm5164.pdf",
+      "pages_or_section": "RevD pin configuration and current-limit sections",
+      "verification": "FRESH_OEM_REVIEW",
+      "observation": "Selected-package physical pin assignment agrees with baseline XML"
+    },
+    {
+      "component": "L2 SWPA4020S2R2MT",
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20210916/AC798BA7E846B7D0B6818F45CD84DB0B.pdf",
+      "pages_or_section": "Manufacturer revision2021/05/15 p2 lands,p7 exactMT row,p16 currentdefinitions; newer2025catalogNT comparison",
+      "verification": "FRESH_EXACT_MANUFACTURER_DRAWING_REVIEW_VIA_DISTRIBUTOR",
+      "observation": "ExactMT2.2uH+/-20%,DCRmax52mohm,Isat3.4/3.7Aat30%Ldrop,Irms1.85/2.8Aat40Krise,allreferenced20C; nativepads1.1x3.7mm,1.9mmgapmatch.2025catalogNTrowdoesnotauthorizeNTdropin. Hot/fault/thermalvalidationOPEN",
+      "sha256": "3d129aabda38ed58b092fe2efaf8e8a6458571da811caad8da6311f4a462a25a",
+      "bytes": 3326173
+    },
+    {
+      "component": "CRCW060333R0FKEAHP",
+      "url": "https://www.vishay.com/docs/20043/crcwhpe3.pdf",
+      "document": "20043 Rev17-Mar-2026",
+      "pages_or_section": "pp1,3,5,9; visually checked continuous-pulse curve and reflow lands",
+      "verification": "FRESH_OEM_REVIEW",
+      "sha256": "0f80613bc765f1266801a1afe1505d2ece7cb4125fd730294bc6a5167d02c25a",
+      "observation": "33ohm1percent0.33W70C pulse-proof part; conditional measured normal pulse envelope, not gate dynamic/SOA qualification"
+    }
+  ],
+  "limits": [
+    "No manufacturer approval invented",
+    "Source retrieval and table comparison do not certify every footprint land",
+    "Bench validation NOT_RUN",
+    "Parent owns ECO and final native acceptance"
+  ],
+  "post_eco_source_status": "U7 corrected in both native post-ECO XML exports; board routes/native PCB acceptance pending",
+  "post_eco_evidence": "u7_post_eco_verification.json",
+  "post_baseline_updates": {
+    "date": "2026-10-19",
+    "evidence": [
+      "dc_link_eco_verification.json",
+      "gate_resistor_eco_verification.json",
+      "netclass_transition.json"
+    ],
+    "note": "These controlled changes supersede baseline counts and corresponding primary selections; unrelated baseline observations remain historical evidence, not final fabrication approval."
+  }
+}

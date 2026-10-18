@@ -9,8 +9,8 @@
 		(uuid "5fea7906-7491-4214-99f8-cc74f95ca6d1")
 		(effects
 			(font
-				(size 0.8 0.8)
-				(thickness 0.12)
+				(size 1.0 1.0)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -53,7 +53,7 @@
 		(center 0 0)
 		(end 2.75 0)
 		(stroke
-			(width 0.12)
+			(width 0.15)
 			(type default)
 		)
 		(fill no)

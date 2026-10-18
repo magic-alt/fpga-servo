@@ -1,0 +1,672 @@
+{
+  "ECO_type": "PHYSICAL_VA5_SUPPLY_ISLAND_BRIDGE_REPLACES_OLD_TRANSLATOR_BRANCH_IN_RESERVED_GROUND_LAYER",
+  "input_board_sha256": "a4b8158240253f0aefcf333f37987b9d69afbe30419be8a3440ff2483388c666",
+  "output_board_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+  "removed": {
+    "14d4d436-823e-4e45-9ce3-ff0ceb2334a2": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        27750000,
+        28500000
+      ],
+      "end": [
+        29250000,
+        27000000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "1c5b6c0c-d5d3-4946-bd30-044dd54baad8": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        27887500,
+        51050000
+      ],
+      "end": [
+        27887500,
+        51050000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 600000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "21d0b4b4-f8d6-443e-aa76-f97cf0e48680": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        27750000,
+        33500000
+      ],
+      "end": [
+        27750000,
+        28500000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "3c9ae3de-3066-4a0c-8f97-3bd40ffd98f0": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29211000,
+        53201500
+      ],
+      "end": [
+        29250000,
+        53250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "45df160a-2b02-4374-b484-c93dc7d62a93": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29250000,
+        27000000
+      ],
+      "end": [
+        29250000,
+        25250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "85ac51c3-7629-42eb-88d0-4e0f2494a884": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29211000,
+        25201500
+      ],
+      "end": [
+        29250000,
+        25250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "88ac1839-c0ea-48cb-87d8-a4160ed72fe3": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29211000,
+        25201500
+      ],
+      "end": [
+        29250000,
+        25250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "8ce64565-bd5e-4dda-8c3f-110071aa6932": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        28362500,
+        38850000
+      ],
+      "end": [
+        28362500,
+        38850000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 600000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "9ae5e6f8-d97d-46cd-bb57-70e0c3a2a25c": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        29211000,
+        53201500
+      ],
+      "end": [
+        29211000,
+        53201500
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 600000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "a2366f59-bb55-4b63-b4cf-76fb4f2af464": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        28250000,
+        52250000
+      ],
+      "end": [
+        28250000,
+        34000000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "a3a8df81-89f4-490b-aee8-77a4562d1a2c": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        28239000,
+        36201500
+      ],
+      "end": [
+        28239000,
+        36201500
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 600000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "a62756bf-99e1-4232-a050-6d35652ccf22": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29250000,
+        27000000
+      ],
+      "end": [
+        29250000,
+        25250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "a94d8e54-dedb-42f9-a0af-1dd0829864ee": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29211000,
+        25201500
+      ],
+      "end": [
+        29250000,
+        25250000
+      ],
+      "layer": 2,
+      "locked": false,
+      "width": 300000
+    },
+    "b5c45cd0-2e4b-4b23-909c-9451032fe4e7": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        27750000,
+        28500000
+      ],
+      "end": [
+        29250000,
+        27000000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "b91b6c5d-1f3f-45e9-bd37-9b978021e4f7": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        29211000,
+        25201500
+      ],
+      "end": [
+        29211000,
+        25201500
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 600000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "d56af946-88dc-4dc7-8804-252cfe455f35": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29250000,
+        53250000
+      ],
+      "end": [
+        28250000,
+        52250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "e6c9e691-2032-4737-8a79-b2697098c92e": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        28239000,
+        36201500
+      ],
+      "end": [
+        28250000,
+        36250000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "ee3d1610-1242-4f68-ad30-a1e3142fdb71": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        28250000,
+        34000000
+      ],
+      "end": [
+        27750000,
+        33500000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "f337897c-de4a-4e7e-a5a8-7d4e97066d72": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        27750000,
+        35750000
+      ],
+      "end": [
+        27750000,
+        28500000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "f7ea53e2-f1ee-4148-bb59-1ed63524b43a": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        28250000,
+        36250000
+      ],
+      "end": [
+        27750000,
+        35750000
+      ],
+      "layer": 4,
+      "locked": false,
+      "width": 300000
+    },
+    "f8662f55-3d59-46e9-8243-64fe17c4f1f2": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29250000,
+        25250000
+      ],
+      "end": [
+        33750000,
+        20750000
+      ],
+      "layer": 2,
+      "locked": false,
+      "width": 300000
+    }
+  },
+  "added": {
+    "2f7cf265-a191-4402-81c6-145f20fa6db8": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29400000,
+        29400000
+      ],
+      "end": [
+        29350000,
+        29450000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "409fcaa3-af90-47f1-896d-42fe29d88b16": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        30200000,
+        28050000
+      ],
+      "end": [
+        29600000,
+        28650000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "6fa8b463-a8ff-4d7f-a07a-46552e6ffa92": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29600000,
+        29100000
+      ],
+      "end": [
+        29500000,
+        29200000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "786e9a49-9087-4ac0-a125-59668ef39bce": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29350000,
+        29450000
+      ],
+      "end": [
+        29350000,
+        29550000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "8c00d267-c3fa-4f3a-93c2-98c83d30778c": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29600000,
+        28650000
+      ],
+      "end": [
+        29600000,
+        29100000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "a5e979ac-e6f7-42c9-9dfe-ade8e3376328": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29350000,
+        29550000
+      ],
+      "end": [
+        27200000,
+        31700000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "ceda771a-2fd0-4a10-b9bc-dfd2703210eb": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        30200000,
+        28050000
+      ],
+      "end": [
+        30200000,
+        28050000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "e6d3160b-404e-4e89-afc2-d50af14b9fac": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29400000,
+        29350000
+      ],
+      "end": [
+        29400000,
+        29400000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "ed293f6c-035f-4cf4-b965-022f75fe4ac2": {
+      "net": "/VA_5V",
+      "kind": "PCB_VIA",
+      "start": [
+        27200000,
+        31700000
+      ],
+      "end": [
+        27200000,
+        31700000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000,
+      "drill": 300000,
+      "pair": [
+        0,
+        2
+      ],
+      "via_type": 4
+    },
+    "ee4d3378-1d97-4f2d-953c-07b6c89becb0": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29500000,
+        29200000
+      ],
+      "end": [
+        29500000,
+        29250000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    },
+    "f1af9a80-97c8-463e-8fb6-26af5562a173": {
+      "net": "/VA_5V",
+      "kind": "PCB_TRACK",
+      "start": [
+        29500000,
+        29250000
+      ],
+      "end": [
+        29400000,
+        29350000
+      ],
+      "layer": 0,
+      "locked": false,
+      "width": 500000
+    }
+  },
+  "deleted_count": 21,
+  "added_count": 11,
+  "all_surviving_copper_UUIDs_and_every_geometry_field_exact": true,
+  "all_actual_physical_pad_net_membership_footprint_identity_pose_ink_exact": true,
+  "all_zone_definitions_exact_native_fill_recomputed": true,
+  "B_VA5_island_connection": "Two through vias (30.2,28.05)/(27.2,31.7) and 0.5mm F copper bridge,4.8926mm, connect actual upper source/INA island to lower ADC/F2/safety island. Old21objects removal alone failed 1UC and is rejected, not an acceptable dead-branch deletion.",
+  "actual_connected_VA5_physical_pads_including_zone_consumers": [
+    [
+      "C132",
+      "1"
+    ],
+    [
+      "C31",
+      "1"
+    ],
+    [
+      "C43",
+      "1"
+    ],
+    [
+      "C44",
+      "1"
+    ],
+    [
+      "C45",
+      "1"
+    ],
+    [
+      "C64",
+      "1"
+    ],
+    [
+      "C65",
+      "1"
+    ],
+    [
+      "C66",
+      "1"
+    ],
+    [
+      "C67",
+      "1"
+    ],
+    [
+      "C84",
+      "1"
+    ],
+    [
+      "C85",
+      "1"
+    ],
+    [
+      "F2",
+      "1"
+    ],
+    [
+      "L2",
+      "2"
+    ],
+    [
+      "R50",
+      "1"
+    ],
+    [
+      "R70",
+      "1"
+    ],
+    [
+      "R71",
+      "1"
+    ],
+    [
+      "R92",
+      "1"
+    ],
+    [
+      "R94",
+      "1"
+    ],
+    [
+      "TP4",
+      "1"
+    ],
+    [
+      "U13",
+      "3"
+    ],
+    [
+      "U15",
+      "8"
+    ],
+    [
+      "U2",
+      "6"
+    ],
+    [
+      "U2",
+      "7"
+    ],
+    [
+      "U3",
+      "6"
+    ],
+    [
+      "U3",
+      "7"
+    ],
+    [
+      "U4",
+      "6"
+    ],
+    [
+      "U4",
+      "7"
+    ],
+    [
+      "U5",
+      "6"
+    ],
+    [
+      "U6",
+      "1"
+    ],
+    [
+      "U6",
+      "37"
+    ],
+    [
+      "U6",
+      "38"
+    ],
+    [
+      "U6",
+      "48"
+    ]
+  ],
+  "all_actual_VA5_pads_in_one_native_connected_component": true,
+  "reserved_In1_nonGND_tracks": [],
+  "reserved_In1_nonGND_zones": [],
+  "source_hardware_modified": false,
+  "no_dynamic_or_manufacturer_approval": true
+}
