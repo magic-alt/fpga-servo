@@ -1,0 +1,54 @@
+name: dual-manufacturing-review
+on:
+  pull_request:
+    paths:
+      - 'hardware/**'
+      - 'tools/**'
+      - 'docs/reviews/dual_audit_2026-10-19/**'
+      - '.github/workflows/dual-manufacturing-review.yml'
+permissions:
+  contents: read
+jobs:
+  frozen-review:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - name: Install KiCad and independent review parsers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common ngspice python3-venv
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
+          /usr/bin/python3 -m venv --system-site-packages "$RUNNER_TEMP/review-venv"
+          "$RUNNER_TEMP/review-venv/bin/pip" install 'gerbonara==1.6.3' 'pypdf>=6,<7'
+          echo "$RUNNER_TEMP/review-venv/bin" >> "$GITHUB_PATH"
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg" artifacts/review
+          printf '(sym_lib_table\n  (version 7)\n)\n' > "$cfg/sym-lib-table"
+          cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+      - name: Complete regression with native and independent parsers
+        run: |
+          set -euo pipefail
+          python tools/pcb.py test --pcb-python /usr/bin/python3 2>&1 | tee artifacts/review/regression.log
+      - name: Export both source-bound review packets, not order releases
+        run: |
+          set -euo pipefail
+          python tools/pcb.py export --project ads8588s --kind fabrication-review 2>&1 | tee artifacts/review/ads8588s-export.log
+          python tools/pcb.py export --project ad7606c --kind fabrication-review 2>&1 | tee artifacts/review/ad7606c-export.log
+          git diff --exit-code
+          git rev-parse HEAD > artifacts/review/source-revision.txt
+          git archive --format=zip --output=artifacts/review/complete-source.zip HEAD
+          sha256sum artifacts/review/complete-source.zip > artifacts/review/source-SHA256SUMS
+      - name: Archive complete outputs and failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dual-manufacturing-review-${{ github.event.pull_request.head.sha }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 90
