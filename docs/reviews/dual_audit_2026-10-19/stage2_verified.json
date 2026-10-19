@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "scope": "CAD_REPAIR_AND_NATIVE_VERIFICATION_NOT_FABRICATION_RELEASE",
+  "source_commit": "c7162a7de67c7124fe44d6968c9220fd3b738135",
+  "workflow_run": 39190967656,
+  "artifact_id": 12160191681,
+  "artifact_sha256": "1fe5671e82ed767ee02a25ef68587232ad2a49be74ad92690cc6e31758bad4ed",
+  "kicad_version": "10.0.7",
+  "regression": {"tests": 347, "skipped": 1, "failures": 0, "native_lane_tests": 96, "native_lane_failures": 0},
+  "skip_reason": "The current interpreter already has native bindings; the missing-native-interpreter negative scenario is conditional.",
+  "ads8588s": {"components": 180, "nets": 145, "physical_pin_memberships": 634, "erc_errors": 0, "erc_warnings": 0, "erc_exclusions": 0, "drc_errors": 0, "drc_warnings": 0, "drc_exclusions": 0, "unconnected": 0, "schematic_parity": 0, "before_after_native_connectivity_exact": true},
+  "ad7606c": {"components": 202, "nets": 172, "physical_pin_memberships": 714, "erc_errors": 0, "erc_warnings": 0, "erc_exclusions": 0, "drc_errors": 0, "drc_warnings": 0, "drc_exclusions": 0, "unconnected": 0, "schematic_parity": 0, "before_after_native_connectivity_exact": true},
+  "extra_route_repair": {"both_boards": true, "track_uuid": "34834ed3-1620-463c-9558-62f367a32011", "net": "/GND", "start_before_mm": [32.45,14.75], "start_after_mm": [32.45,14.8], "end_mm": [32.45,15.2], "width_mm": 0.3, "reason": "Widened U13 pad5 exposed a 0.225mm trace-endcap clearance. Start moved 0.05mm within pad4; no width/net/end change; final native DRC zero."},
+  "qualification": {"human_engineering_signatures": "OPEN", "supplier_process_and_assembly_acceptance": "OPEN", "prototype_order_authorized": false, "bench_thermal_dynamic_emc": "NOT_RUN", "rtl_sta": "NOT_RUN"}
+}
