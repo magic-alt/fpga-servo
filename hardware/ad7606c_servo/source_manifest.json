@@ -4,7 +4,7 @@
     "hardware/ads8588s_servo/aux_power.kicad_sch": "d8414cdb391859ebda7352f1f1197547a80a47e4911d96313be48df39d20e81e",
     "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "833d71a0c1409f707eba8008cd57db6878fb499850c4270dc5434cc7fa9b8ca9",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "6005aca1af5750c90a5de8f2e0df553deeffa6907d3bd64208fa939366e01129",
-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "1e1c3cb6bd8ab20bff919ced949aacd77a6dd731d11b0b3e95d82c8a1b06bbf1",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "507a5d393dcf5499b8782184c8804cfbd13ca422df9b1316dafc16f1a4a4b4b2",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "f715c6a6b005145e1d8cdf4318b60f9b05d154e45aab2cf62defc7b09f0ef09c",
@@ -12,7 +12,7 @@
     "hardware/ads8588s_servo/current_adc.kicad_sch": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
     "hardware/ads8588s_servo/encoder.kicad_sch": "286d0ab7ebb4272242ecab6fab39e2bba9f303e2369ce1e5603fa1a99a30f6ac",
     "hardware/ads8588s_servo/fp-lib-table": "4a788cf16d28753d9dc7f2e894c1f88410a686054738ba4be0ac84c11fcb30b2",
-    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "2389005048bb7d71e4adf9cb86ff247a5af4073b2b78a610226d5194fd315062",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "d56a7971b58f61bf5005da1f64484f8a34f387961992832121d3e2a331a53b7d",
     "hardware/ads8588s_servo/ocp_latch.kicad_sch": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
     "hardware/ads8588s_servo/power_input.kicad_sch": "5beb8557c45773470c0e7ad8e8a235c614186fc7266a8d97e3d93703bc9ed30b",
     "hardware/ads8588s_servo/sym-lib-table": "afcba65a80eea67cfcb51c00cd291651eeaa4b2683b719e6db675a7bbe6ecc5f",
@@ -40,7 +40,7 @@
     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod": "05ffe301f111503a1ef2d76b9640bea0d4b1dfdb387efee17c7f9144b88e3264",
     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod": "2bf68dab98a3fe724df076f0e1caf51f619ea67208e97a7cc5e56f571b95b954",
     "hardware/ads8588s_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod": "7e72c5d42fbe453af76a49f5f69b6072f41994e7027e2a283bb1b7c74513eff3",
-    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "fa8bc7763e3afb76ad226e3050793ce5004b9d402dba5971652957cb49cd9fe5",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "4a0ed2c718ba9fc820c5cd37c94b3c99e5db773c21c29956948d04a7cc793153",
     "hardware/ads8588s_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod": "1fd1324e956d2ef01cbdcf56ba91b7c8da910a25fb2c2bf240ade02c0eaf73b8",
     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod": "968d226af1efd722fdce5f7246e51edff33717b09e58dc343de4aee3430034cd",
     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod": "016857f42b216574d2ab43807c920fca321e86aec715fb22a2893606ea9a0201",
@@ -116,7 +116,7 @@
     "hardware/ads8588s_servo/aux_power.kicad_sch": "f60a5c73245cb84af2bc586594b8d60dc803711acfb0f093aa2616b3b8bceff7",
     "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "bc656f3a16278f51bb5136687888490803ef6c9e4459ec863057053b8de38c1c",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "be8b865809d2be1f9117b03cfab1249771d73c4a43924a989477b5eafac1b1d5",
-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "5e5219ffba7c0c782a54f8f3ed9fd28e1a7aad6cb5f73d667bce068dbc38ff3b",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "1e1c3cb6bd8ab20bff919ced949aacd77a6dd731d11b0b3e95d82c8a1b06bbf1",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "4440def0728d9c7c29d28ca95af08a475746a76341c8b8139f2f97f3542bd571",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "79976b7c1ad5eb4d81e3ae979b848322c182e54bc0fb7fbb9061ddc8f72b7815",
@@ -124,7 +124,7 @@
     "hardware/ads8588s_servo/current_adc.kicad_sch": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
     "hardware/ads8588s_servo/encoder.kicad_sch": "484da673b6ba3a7bdcf6745ddf8cb73eb9dea6d43e749b4719def85248caa6fa",
     "hardware/ads8588s_servo/fp-lib-table": "e3ac1d3705fdcc2ccc27134cebfae18ac8358802444f0f3950f1b09487f87f5b",
-    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "197034a1ccbbbc3a3eb30530587a47a608f567bd42af6d82d3e8853243beae2d",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "ad1560a9a3e2105b177c172cf762945765f377065e37d5ede9195851d90aed7f",
     "hardware/ads8588s_servo/ocp_latch.kicad_sch": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
     "hardware/ads8588s_servo/power_input.kicad_sch": "14cebe67eb3de36e542153b2920c609060a701cfda47fab7ff8c9325c2268fc7",
     "hardware/ads8588s_servo/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e",
@@ -152,7 +152,7 @@
     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod": "c4dceaf8f8dc349013e17512bf15743c8388a13e99ff66ee32f5f07eaf20ffa7",
     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod": "31f67693d9580de75c711c0a66b1da341d29104e8caf8fc745e40710e3d3ea6a",
     "hardware/ads8588s_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod": "ee52016876a611d6781b3ba2874a9deef889c5d89454baffc1d021b979307093",
-    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "95820f05ee8e1029499acc811b8dd2d6c47e44380968ddbcc9f17ca7dd490f48",
+    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "7ac1f7b26e5b3d6178db2e1c4fc46fee4886563d7e2edc3de14206365770c858",
     "hardware/ads8588s_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod": "c132fd4bc9012f79d038c6eeb3c4fd5b63807d52c72d0f4b64e82bb7b6848a55",
     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod": "c7dc40e536ddbc4683d36266837f26a651f8482ff1ba3e78907ee78f0e814f42",
     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod": "03c50ea329c0159e93f8472019d0995d155bc77d3cc6ee73d0fea16e7145ce0e",
@@ -335,5 +335,37 @@
     }
   },
   "layout_previous_manifest": "hardware/ad7606c_servo/evidence/source_manifest_before_layout_adoption_2026-10-19.json",
-  "layout_previous_manifest_sha256": "12332c67d2d4d0ede2f5e0de4ad3d3c20891ad6a59ec441a4abad9f8bde706ca"
+  "layout_previous_manifest_sha256": "12332c67d2d4d0ede2f5e0de4ad3d3c20891ad6a59ec441a4abad9f8bde706ca",
+  "native_dfm_transition": {
+    "base_commit": "b17c5c4a2cb81c58006e792a4abb4c21a761bfe7",
+    "previous_manifest": "hardware/ad7606c_servo/evidence/source_manifest_before_native_dfm_2026-10-19.json",
+    "previous_manifest_sha256": "efc800f0698b0ab10330161895b2b1ee1ccf3c238d4c1535524133b3f1b5b6c6",
+    "changes": [
+      {
+        "path": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb",
+        "before_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
+        "after_sha256": "1bfb6b1056e3c093f15f1e6d782dba7e7071b37d2bd7af2237170ab91c23bc3f",
+        "before_lf_sha256": "5e5219ffba7c0c782a54f8f3ed9fd28e1a7aad6cb5f73d667bce068dbc38ff3b",
+        "after_lf_sha256": "ad77a0bed64f7277721cfbc41dedd822feed319bd57c3f0f76da8b06e6dc5e7d",
+        "native_after_sha256": "1e1c3cb6bd8ab20bff919ced949aacd77a6dd731d11b0b3e95d82c8a1b06bbf1",
+        "native_after_lf_sha256": "1e1c3cb6bd8ab20bff919ced949aacd77a6dd731d11b0b3e95d82c8a1b06bbf1"
+      },
+      {
+        "path": "hardware/ads8588s_servo/gate_inverter.kicad_sch",
+        "before_sha256": "2389005048bb7d71e4adf9cb86ff247a5af4073b2b78a610226d5194fd315062",
+        "after_sha256": "d56a7971b58f61bf5005da1f64484f8a34f387961992832121d3e2a331a53b7d",
+        "before_lf_sha256": "197034a1ccbbbc3a3eb30530587a47a608f567bd42af6d82d3e8853243beae2d",
+        "after_lf_sha256": "ad1560a9a3e2105b177c172cf762945765f377065e37d5ede9195851d90aed7f"
+      },
+      {
+        "path": "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod",
+        "before_sha256": "fa8bc7763e3afb76ad226e3050793ce5004b9d402dba5971652957cb49cd9fe5",
+        "after_sha256": "4a0ed2c718ba9fc820c5cd37c94b3c99e5db773c21c29956948d04a7cc793153",
+        "before_lf_sha256": "95820f05ee8e1029499acc811b8dd2d6c47e44380968ddbcc9f17ca7dd490f48",
+        "after_lf_sha256": "7ac1f7b26e5b3d6178db2e1c4fc46fee4886563d7e2edc3de14206365770c858"
+      }
+    ],
+    "authorization": "User requested actual dual-board repair and prompt staged Git/PR submission",
+    "qualification": "Native refill/cache bytes recorded separately; no original source guard removed and no fabrication signoff implied"
+  }
 }

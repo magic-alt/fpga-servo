@@ -89,6 +89,8 @@ def run_rules(project, scope, inputs):
         from ..board import corners_api
         board_text=project.board.read_text(encoding="utf-8")
         check("pcb.vendor_lands",lambda:vendor_api().check(board_text))
+        from .fabrication_intent import check_project as check_fabrication_intent
+        check("pcb.manufacturing_intent", lambda: check_fabrication_intent(project))
         rules=project.board.with_suffix(".kicad_dru").read_text(encoding="utf-8")
         check("pcb.internal_pad_rules",lambda:vendor_api().check_internal_pad_rules(rules))
         if inputs.get("netlist"):

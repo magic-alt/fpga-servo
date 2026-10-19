@@ -222,3 +222,69 @@ def check_board(project, netlist=None):
             errors = [f"invalid netclass evidence: {exc}"]
         findings.append(Finding("pcb.netclasses", "FAIL" if errors else "PASS", "; ".join(errors) if errors else "Fresh net assignments and original class minima", {"errors": errors}))
     return findings
+
+
+def non_fill_design_signature(text):
+    """Strict design fingerprint for native zone-cache regeneration.
+
+    Only generated zone polygons and generator identity are excluded. Physical
+    zone outlines, routing, footprints, nets, pads, mechanics and rules remain
+    in the fingerprint. Refilling is not authorized to move or drop them.
+    """
+    import hashlib
+    import json
+    from decimal import Decimal, InvalidOperation
+    import re
+
+    tokens = re.findall(r'"(?:\\.|[^"\\])*"|[()]|[^\s()"]+', text)
+    cursor = 0
+
+    def parse():
+        nonlocal cursor
+        if cursor >= len(tokens) or tokens[cursor] != '(':
+            raise ValueError('Expected complete native PCB expression')
+        cursor += 1
+        node = []
+        while cursor < len(tokens) and tokens[cursor] != ')':
+            token = tokens[cursor]
+            if token == '(':
+                node.append(parse())
+            else:
+                cursor += 1
+                if not token.startswith('"'):
+                    try:
+                        value = Decimal(token)
+                        if not value.is_finite():
+                            raise ValueError('Nonfinite native PCB value')
+                        token = format(value.normalize(), 'f')
+                    except InvalidOperation:
+                        pass
+                node.append(token)
+        if cursor >= len(tokens) or not node:
+            raise ValueError('Truncated or empty PCB expression')
+        cursor += 1
+        return node
+
+    root = parse()
+    if cursor != len(tokens) or root[0] != 'kicad_pcb' or len(root) < 2:
+        raise ValueError('Incomplete native PCB root')
+
+    def stable(node):
+        if not isinstance(node, list):
+            return node
+        result = [stable(child) for child in node
+                  if not isinstance(child, list) or child[0] not in
+                  {'filled_polygon', 'generator', 'generator_version'}]
+        if node[0] == 'footprint':
+            # Native SaveBoard groups/sorts pads, including paste-only pads.
+            # Preserve every pad field; only sibling pad order is immaterial.
+            pads = [child for child in result if isinstance(child, list) and child[0] == 'pad']
+            result = [child for child in result if not isinstance(child, list) or child[0] != 'pad']
+            result.extend(sorted(pads, key=lambda child: json.dumps(child)))
+        return result
+
+    cleaned = stable(root)
+    # KiCad may reorder independent top-level objects when serializing. Do not
+    # sort inner polygons/points or layer-stack sequences, which are ordered.
+    cleaned[1:] = sorted(cleaned[1:], key=lambda node: json.dumps(node))
+    return hashlib.sha256(json.dumps(cleaned, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
