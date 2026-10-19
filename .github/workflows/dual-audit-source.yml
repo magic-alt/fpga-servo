@@ -1,0 +1,36 @@
+name: dual-audit-source
+on:
+  pull_request:
+    paths:
+      - 'hardware/**'
+      - 'tools/**'
+      - 'docs/reviews/dual_audit_2026-10-19/**'
+      - '.github/workflows/dual-audit-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Archive the exact tracked revision
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/source
+          git rev-parse HEAD > artifacts/source/revision.txt
+          git archive --format=zip --output=artifacts/source/source.zip HEAD
+          sha256sum artifacts/source/source.zip > artifacts/source/SHA256SUMS
+          unzip -t artifacts/source/source.zip > artifacts/source/archive-test.txt
+          git diff --exit-code
+      - name: Preserve recoverable source
+        uses: actions/upload-artifact@v4
+        with:
+          name: dual-servo-source-${{ github.event.pull_request.head.sha || github.sha }}
+          path: artifacts/source/
+          if-no-files-found: error
+          retention-days: 30
