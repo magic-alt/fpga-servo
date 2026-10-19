@@ -1,0 +1,43 @@
+diff --git a/tools/pcbtools/board.py b/tools/pcbtools/board.py
+--- a/tools/pcbtools/board.py
++++ b/tools/pcbtools/board.py
+@@ -272,9 +272,16 @@
+     def stable(node):
+         if not isinstance(node, list):
+             return node
+-        return [stable(child) for child in node
+-                if not isinstance(child, list) or child[0] not in
+-                {'filled_polygon', 'generator', 'generator_version'}]
++        result = [stable(child) for child in node
++                  if not isinstance(child, list) or child[0] not in
++                  {'filled_polygon', 'generator', 'generator_version'}]
++        if node[0] == 'footprint':
++            # Native SaveBoard groups/sorts pads, including paste-only pads.
++            # Preserve every pad field; only sibling pad order is immaterial.
++            pads = [child for child in result if isinstance(child, list) and child[0] == 'pad']
++            result = [child for child in result if not isinstance(child, list) or child[0] != 'pad']
++            result.extend(sorted(pads, key=lambda child: json.dumps(child)))
++        return result
+ 
+     cleaned = stable(root)
+     # KiCad may reorder independent top-level objects when serializing. Do not
+diff --git a/tools/tests/test_pcb_fabrication_intent.py b/tools/tests/test_pcb_fabrication_intent.py
+--- a/tools/tests/test_pcb_fabrication_intent.py
++++ b/tools/tests/test_pcb_fabrication_intent.py
+@@ -98,6 +98,16 @@
+         for bad in (after.replace('(width 0.25)', '(width 0.20)'), after.replace('(net 1)', '(net 2)'), after.replace('(polygon (pts (xy 0 0)', '(polygon (pts (xy 0.1 0)')):
+             self.assertNotEqual(non_fill_design_signature(before), non_fill_design_signature(bad))
+ 
++    def test_native_pad_serialization_order_is_not_a_design_change(self):
++        from pcbtools.board import non_fill_design_signature as signature
++        pad1 = '(pad "1" smd rect (at 1 2) (size .25 .65) (layers "F.Cu") (net "A"))'
++        pad2 = '(pad "" smd rect (at 1 2) (size .2 .65) (layers "F.Paste"))'
++        first = '(kicad_pcb (footprint "U13" ' + pad1 + ' (embedded_fonts no) ' + pad2 + '))'
++        saved = '(kicad_pcb (footprint "U13" ' + pad2 + ' ' + pad1 + ' (embedded_fonts no)))'
++        self.assertEqual(signature(first), signature(saved))
++        for bad in (saved.replace('(at 1 2)', '(at 1 3)', 1), saved.replace('(net "A")', '(net "B")'), saved.replace(pad2, '')):
++            self.assertNotEqual(signature(first), signature(bad))
++
+     def test_invalid_or_empty_board_is_not_equivalent(self):
+         from pcbtools.board import non_fill_design_signature
+         for value in ('', '(kicad_pcb', '(something_else)', '(kicad_pcb) garbage'):
