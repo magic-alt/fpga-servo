@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "stage": "stage-1-ad7606c-timing",
+  "patch": "docs/reviews/dual_audit_2026-10-19/eco/current.patch",
+  "patch_sha256": "d9337e15aed0bcbf356712818a5ecd2dbb9a71f85d1c75f0e0355ab0f3bfbdcf",
+  "files": [
+    {"path": "tools/pcbtools/rules/adc.py", "before_sha256": "663bbbb0923fffdcba2de9501031f7122ed9b410d97bd8166b8fec65ed3ff448", "after_sha256": "a6b4f35b50a4f41571a6abeb9b6e59cadf0d3d59eca61bacdde4c19973c4d922"},
+    {"path": "tools/tests/test_ad7606c_timing_contract.py", "before_sha256": null, "after_sha256": "717026a32188e9187fa45ac6a46775e1cee6b5143f542801d84d0e41e47f8589"},
+    {"path": "hardware/ad7606c_servo/adc_profile.json", "before_sha256": "5ef1e145c1cfff76b363cf654ae7b639581cd7df09b2376fa46f09576d0df73c", "after_sha256": "f63f32236f3d977f804142fdbedef02ec95497f0d049e31314c51937e58334ed"},
+    {"path": "hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc", "before_sha256": "076706a79cfdd9771b0e6ae8e09e76ba1c02933d869a8c4bc7dbd068df15a284", "after_sha256": "380fedc5e1c8f1f251dd86c99d28c4a5172fccce4fab41bbf86bea6427941446"}
+  ],
+  "normalize_crlf": ["hardware/ad7606c_servo/adc_profile.json", "hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc"]
+}

@@ -1,0 +1,108 @@
+name: dual-audit-eco
+on:
+  pull_request:
+    paths:
+      - 'docs/reviews/dual_audit_2026-10-19/eco/**'
+      - '.github/workflows/dual-audit-eco.yml'
+permissions:
+  contents: write
+concurrency:
+  group: dual-audit-eco-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  apply-and-verify:
+    if: github.event.pull_request.head.repo.full_name == 'magic-alt/fpga-servo' && github.event.pull_request.head.ref == 'fix/dual-servo-audit-20261019'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Install native verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends software-properties-common ngspice
+          sudo add-apt-repository --yes ppa:kicad/kicad-10.0-releases
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends kicad kicad-symbols kicad-footprints
+          cfg="$HOME/.config/kicad/10.0"
+          mkdir -p "$cfg" artifacts/eco
+          printf '(sym_lib_table\n  (version 7)\n)\n' > "$cfg/sym-lib-table"
+          cp /usr/share/kicad/template/fp-lib-table "$cfg/fp-lib-table"
+          kicad-cli --version
+          git rev-parse HEAD > artifacts/eco/controller-revision.txt
+          git archive --format=zip --output=artifacts/eco/before-source.zip HEAD
+      - name: Apply only the reviewed exact-byte ECO
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, subprocess
+          from pathlib import Path
+          root = Path.cwd().resolve()
+          spec = json.loads(Path('docs/reviews/dual_audit_2026-10-19/eco/current.json').read_text())
+          def digest(p):
+              return hashlib.sha256(p.read_bytes()).hexdigest() if p.is_file() else None
+          assert spec['schema'] == 1
+          patch = Path(spec['patch'])
+          assert patch.as_posix() == 'docs/reviews/dual_audit_2026-10-19/eco/current.patch'
+          assert digest(patch) == spec['patch_sha256'], 'Patch checksum mismatch'
+          paths = [r['path'] for r in spec['files']]
+          assert paths and len(paths) == len(set(paths))
+          for name in paths:
+              p = Path(name)
+              assert p.as_posix() == name and not p.is_absolute() and '..' not in p.parts
+              assert p.parts[0] in {'hardware', 'tools', 'docs'}
+              assert not any(x.startswith('.env') or x == '.git' for x in p.parts)
+              assert not p.is_symlink() and p.resolve().is_relative_to(root)
+          current = {n: digest(Path(n)) for n in paths}
+          before = all(current[r['path']] == r['before_sha256'] for r in spec['files'])
+          after = all(current[r['path']] == r['after_sha256'] for r in spec['files'])
+          assert before or after, 'Mixed/stale source; refusing to overwrite work'
+          if before and not after:
+              changed = subprocess.check_output(['git', 'apply', '--numstat', str(patch)], text=True)
+              assert sorted(line.split('\t')[2] for line in changed.splitlines()) == sorted(paths)
+              subprocess.run(['git', 'apply', '--check', '--ignore-whitespace', str(patch)], check=True)
+              subprocess.run(['git', 'apply', '--ignore-whitespace', str(patch)], check=True)
+              for name in spec.get('normalize_crlf', []):
+                  assert name in paths and name.startswith('hardware/')
+                  p = Path(name)
+                  p.write_bytes(p.read_bytes().replace(b'\r\n', b'\n').replace(b'\n', b'\r\n'))
+          assert all(digest(Path(r['path'])) == r['after_sha256'] for r in spec['files']), 'ECO output checksum mismatch'
+          subprocess.run(['git', 'add', '--', *paths], check=True)
+          staged = subprocess.check_output(['git', 'diff', '--cached', '--name-only'], text=True).splitlines()
+          assert set(staged).issubset(set(paths)), 'Unexpected staged source'
+          Path('artifacts/eco/applied-manifest.json').write_text(json.dumps(spec, indent=2)+'\n')
+          print('Exact reviewed ECO bytes present; native qualification follows.')
+          PY
+      - name: Complete regression and both-board native CAD checks
+        run: |
+          set -euo pipefail
+          python3 tools/pcb.py test --kicad-cli kicad-cli --ngspice ngspice --pcb-python /usr/bin/python3 2>&1 | tee artifacts/eco/regression.log
+          /usr/bin/python3 tools/pcb.py verify --project ads8588s --scope pcb 2>&1 | tee artifacts/eco/ads8588s-pcb.log
+          /usr/bin/python3 tools/pcb.py verify --project ad7606c --scope pcb 2>&1 | tee artifacts/eco/ad7606c-pcb.log
+          git diff --exit-code
+      - name: Commit verified source without replacing newer work
+        env:
+          EXPECTED_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          if ! git diff --cached --quiet; then
+            actual=$(git ls-remote origin refs/heads/fix/dual-servo-audit-20261019 | cut -f1)
+            test "$actual" = "$EXPECTED_HEAD"
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            stage=$(python3 -c "import json; print(json.load(open('docs/reviews/dual_audit_2026-10-19/eco/current.json'))['stage'])")
+            git commit -m "fix(hardware): apply verified $stage"
+            git push origin HEAD:refs/heads/fix/dual-servo-audit-20261019
+          fi
+          git rev-parse HEAD > artifacts/eco/verified-revision.txt
+          git archive --format=zip --output=artifacts/eco/verified-source.zip HEAD
+          sha256sum artifacts/eco/*source.zip > artifacts/eco/source-SHA256SUMS
+      - name: Preserve actual source and native evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dual-audit-eco-${{ github.run_id }}
+          path: artifacts/
+          if-no-files-found: error
+          retention-days: 30

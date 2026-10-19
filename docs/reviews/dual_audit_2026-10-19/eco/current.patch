@@ -1,0 +1,183 @@
+diff --git a/hardware/ad7606c_servo/adc_profile.json b/hardware/ad7606c_servo/adc_profile.json
+index 5036934..104a8e3 100644
+--- a/hardware/ad7606c_servo/adc_profile.json
++++ b/hardware/ad7606c_servo/adc_profile.json
+@@ -1,6 +1,6 @@
+ {
+   "schema": 1,
+-  "status": "IMPLEMENTED_IN_INDEPENDENT_SCHEMATIC_ONLY",
++  "status": "INDEPENDENT_SCHEMATIC_AND_ROUTED_CAD_IMPLEMENTED_MANUFACTURING_AND_TIMING_OPEN",
+   "decision_date": "2026-10-12",
+   "selection": {
+     "manufacturer": "Analog Devices",
+@@ -169,7 +169,43 @@
+     ],
+     "qualification_target_sclk_hz": 20000000,
+     "qualification_target_frame_time_us": 1.6,
+-    "translator_round_trip_timing": "OPEN: SCLK A->B + ADC tD_SCK_DO + DOUT B->A + cable + FPGA capture margin"
++    "translator_round_trip_timing": "OPEN: raw full-temperature 9+15.7+10=34.7ns before flight, RC/load, duty/skew and FPGA setup/hold; opposite-edge 20MHz has negative raw margin; 5MHz bring-up is NOT timing qualification.",
++    "board_timing": {
++      "implementation_status": "NOT_RUN",
++      "vcca_condition_v": [
++        3.0,
++        3.6
++      ],
++      "vccb_condition_v": [
++        4.5,
++        5.5
++      ],
++      "translator_temperature_c": [
++        -40,
++        125
++      ],
++      "sclk_translator_max_ns": 9.0,
++      "adc_data_access_max_ns": 15.7,
++      "dout_translator_max_ns": 10.0,
++      "raw_round_trip_max_ns": 34.7,
++      "translator_test_load_pf": 5.0,
++      "translator_test_load_ohm": 10000,
++      "adc_data_launch_edge": "SCLK_RISING",
++      "fpga_reference_capture_edge": "SCLK_FALLING",
++      "reference_clock_duty_ratio": 0.5,
++      "initial_raw_half_cycle_residual_ns": 65.3,
++      "target_raw_half_cycle_residual_ns": -9.7,
++      "opposite_edge_20mhz_qualified": false,
++      "board_flight_load_fpga_budget_ns": null,
++      "load_edge_duty_hold_sta_status": "OPEN",
++      "first_bit_note": "CS-to-DOUT, SDI setup, output hold and return capture need separate implemented timing checks.",
++      "sources": [
++        "TI SCES936A sections 7.11 and 8.1, VCCA=3.3+/-0.3 V, VCCB=5.0+/-0.5 V, full temperature",
++        "ADI AD7606C-16 Rev.A Table 5, VDRIVE>=3.1 V"
++      ],
++      "scope": "Raw datasheet arithmetic only. Loaded board/cable delays and FPGA setup/hold are NOT bounded. No implemented RTL or STA approval."
++    },
++    "digital_sclk_limit_note": "63.5MHz is the ADC-pin limit for VDRIVE>=3.1V, including the fitted VA_5V rail; it is not the FPGA round-trip board limit."
+   },
+   "blocking_gates": [
+     "ADC/connector footprint and new PCB placement, routing, parity, DRC/DFM closure",
+diff --git a/hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc b/hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc
+index 3336fd4..da10ff8 100644
+--- a/hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc
++++ b/hardware/ad7606c_servo/ax7010_servo_ad7606c.xdc
+@@ -69,3 +69,13 @@ set_property PACKAGE_PIN V12 [get_ports AUX_OUT1];      set_property IOSTANDARD
+ set_property PACKAGE_PIN U12 [get_ports ADC_DOUTC]; set_property IOSTANDARD LVCMOS33 [get_ports ADC_DOUTC]
+ set_property PACKAGE_PIN T12 [get_ports ADC_DOUTD]; set_property IOSTANDARD LVCMOS33 [get_ports ADC_DOUTD]
+ set_property PACKAGE_PIN T10 [get_ports ADC_SDI]; set_property IOSTANDARD LVCMOS33 [get_ports ADC_SDI]
++
++# FITTED AD7606C / TXU0204 timing review, 2026-10-19 (NOT implemented STA).
++# ADC DOUT changes after SCLK RISING; reference capture is the following FALLING edge.
++# Full-temp raw loop: SCLK TXU 9ns + ADC 15.7ns + DOUT TXU 10ns = 34.7ns.
++# At 20MHz/50% duty the 25ns half-cycle has -9.7ns BEFORE board/RC/load/FPGA.
++# Start at 5MHz: 100ns half-cycle leaves 65.3ns raw, not a qualified margin.
++# Datasheet translator load is 5pF/10kohm; actual loading must be bounded.
++# Future RTL must constrain generated-clock duty, return delay, setup AND hold,
++# first CS/MSB, SDI and BUSY/FRSTDATA. Do not copy pin-only XDC as timing signoff.
++# Faster operation needs deliberate capture phase/architecture and real STA/bench.
+diff --git a/tools/pcbtools/rules/adc.py b/tools/pcbtools/rules/adc.py
+index ea63d93..2f1f38b 100644
+--- a/tools/pcbtools/rules/adc.py
++++ b/tools/pcbtools/rules/adc.py
+@@ -603,6 +603,33 @@ def ad7606c_api(project):
+         timing=profile.get("timing",{})
+         if timing.get("initial_sclk_hz")!=5000000 or timing.get("initial_frame_time_us")!=6.4:
+             errors.append("Bring-up profile must start at 5MHz / 6.4us frame until timing qualification")
++        # Fitted path: TXU0204 A=3.3 V / B=5 V, not the bare ADC fSCLK limit.
++        # TI SCES936A 7.11 full-temperature bounds; ADI Rev.A Table 5.
++        expected_board_timing = {
++            "implementation_status": "NOT_RUN",
++            "vcca_condition_v": [3.0, 3.6], "vccb_condition_v": [4.5, 5.5],
++            "translator_temperature_c": [-40, 125],
++            "sclk_translator_max_ns": 9.0, "adc_data_access_max_ns": 15.7,
++            "dout_translator_max_ns": 10.0, "raw_round_trip_max_ns": 34.7,
++            "translator_test_load_pf": 5.0, "translator_test_load_ohm": 10000,
++            "adc_data_launch_edge": "SCLK_RISING",
++            "fpga_reference_capture_edge": "SCLK_FALLING",
++            "reference_clock_duty_ratio": 0.5,
++            "initial_raw_half_cycle_residual_ns": 65.3,
++            "target_raw_half_cycle_residual_ns": -9.7,
++            "opposite_edge_20mhz_qualified": False,
++            "board_flight_load_fpga_budget_ns": None,
++            "load_edge_duty_hold_sta_status": "OPEN",
++        }
++        board_timing = timing.get("board_timing")
++        if not isinstance(board_timing, dict) or any(
++                key not in board_timing or board_timing[key] != value
++                for key, value in expected_board_timing.items()):
++            errors.append("ADC board timing: fitted translator bounds and unqualified capture contract must be retained until RTL/STA evidence is reviewed")
++        if timing.get("conversion_time_max_us") != 0.65:
++            errors.append("AD7606C no-oversampling conversion maximum is 0.65us, not the typical value")
++        if timing.get("analog_3db_bandwidth_khz") != 150 or timing.get("analog_phase_delay_typ_us") != 1.7:
++            errors.append("AD7606C 0-5V high-BW uses typical 150kHz / 1.7us, not a worst-case loop guarantee")
+         active="\n".join(line for line in xdc.splitlines() if not line.lstrip().startswith("#"))
+         pairs=re.findall(r"set_property PACKAGE_PIN (\w+) \[get_ports (\w+)\]",active)
+         if len(pairs)!=len({pad for pad,sig in pairs}) or len(pairs)!=len({sig for pad,sig in pairs}):
+diff --git a/tools/tests/test_ad7606c_timing_contract.py b/tools/tests/test_ad7606c_timing_contract.py
+new file mode 100644
+index 0000000..6dbbb9c
+--- /dev/null
++++ b/tools/tests/test_ad7606c_timing_contract.py
+@@ -0,0 +1,64 @@
++"""Reject unqualified timing claims for the fitted 3.3 V/5 V translator path."""
++import copy
++import json
++from pathlib import Path
++import sys
++import unittest
++
++sys.path.append(str(Path(__file__).resolve().parents[1]))
++from pcbtools.project import resolve_project
++from pcbtools.rules.adc import ad7606c_api
++
++
++class FittedAD7606CTimingTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.project = resolve_project('ad7606c')
++        cls.api = ad7606c_api(cls.project)
++        cls.profile = json.loads((cls.project.schematic.parent / 'adc_profile.json').read_text())
++        cls.xdc = (cls.project.schematic.parent / 'ax7010_servo_ad7606c.xdc').read_text()
++
++    def errors(self, profile):
++        return self.api.profile_errors(profile, self.xdc)
++
++    def test_current_profile_has_explicit_unqualified_round_trip_contract(self):
++        self.assertIn('board_timing', self.profile['timing'])
++        self.assertEqual(self.errors(self.profile), [])
++
++    def test_absent_board_timing_is_rejected(self):
++        bad = copy.deepcopy(self.profile)
++        bad['timing'].pop('board_timing', None)
++        self.assertTrue(any('board timing' in e for e in self.errors(bad)))
++
++    def test_20mhz_cannot_be_authorized_by_chip_frequency_alone(self):
++        bad = copy.deepcopy(self.profile)
++        bad['timing']['board_timing'] = {'implementation_status': 'QUALIFIED',
++                                        'opposite_edge_20mhz_qualified': True}
++        self.assertTrue(any('board timing' in e for e in self.errors(bad)))
++
++    def test_undercounted_propagation_is_rejected(self):
++        for key in ('sclk_translator_max_ns', 'adc_data_access_max_ns', 'dout_translator_max_ns'):
++            bad = copy.deepcopy(self.profile)
++            bad['timing'].setdefault('board_timing', {})[key] = 0
++            with self.subTest(key=key):
++                self.assertTrue(any('board timing' in e for e in self.errors(bad)))
++
++    def test_conversion_bound_cannot_be_confused_with_analog_phase(self):
++        bad = copy.deepcopy(self.profile)
++        bad['timing']['conversion_time_max_us'] = 0.5
++        self.assertTrue(any('0.65' in e for e in self.errors(bad)))
++
++    def test_phase_delay_is_not_bandwidth_or_a_worst_case_guarantee(self):
++        bad = copy.deepcopy(self.profile)
++        bad['timing']['analog_3db_bandwidth_khz'] = 220
++        self.assertTrue(any('150' in e for e in self.errors(bad)))
++
++    def test_raw_half_cycle_margins_are_independent_calculations(self):
++        # TI SCES936A table 7.11, full temperature; ADI Rev.A table 5.
++        self.assertAlmostEqual(9 + 15.7 + 10, 34.7)
++        self.assertAlmostEqual(1e9 / 5e6 / 2 - 34.7, 65.3)
++        self.assertAlmostEqual(1e9 / 20e6 / 2 - 34.7, -9.7)
++
++
++if __name__ == '__main__':
++    unittest.main()
