@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "status": "IMPLEMENTED_IN_INDEPENDENT_SCHEMATIC_ONLY",
+  "status": "INDEPENDENT_SCHEMATIC_AND_ROUTED_CAD_IMPLEMENTED_MANUFACTURING_AND_TIMING_OPEN",
   "decision_date": "2026-10-12",
   "selection": {
     "manufacturer": "Analog Devices",
@@ -169,7 +169,43 @@
     ],
     "qualification_target_sclk_hz": 20000000,
     "qualification_target_frame_time_us": 1.6,
-    "translator_round_trip_timing": "OPEN: SCLK A->B + ADC tD_SCK_DO + DOUT B->A + cable + FPGA capture margin"
+    "translator_round_trip_timing": "OPEN: raw full-temperature 9+15.7+10=34.7ns before flight, RC/load, duty/skew and FPGA setup/hold; opposite-edge 20MHz has negative raw margin; 5MHz bring-up is NOT timing qualification.",
+    "board_timing": {
+      "implementation_status": "NOT_RUN",
+      "vcca_condition_v": [
+        3.0,
+        3.6
+      ],
+      "vccb_condition_v": [
+        4.5,
+        5.5
+      ],
+      "translator_temperature_c": [
+        -40,
+        125
+      ],
+      "sclk_translator_max_ns": 9.0,
+      "adc_data_access_max_ns": 15.7,
+      "dout_translator_max_ns": 10.0,
+      "raw_round_trip_max_ns": 34.7,
+      "translator_test_load_pf": 5.0,
+      "translator_test_load_ohm": 10000,
+      "adc_data_launch_edge": "SCLK_RISING",
+      "fpga_reference_capture_edge": "SCLK_FALLING",
+      "reference_clock_duty_ratio": 0.5,
+      "initial_raw_half_cycle_residual_ns": 65.3,
+      "target_raw_half_cycle_residual_ns": -9.7,
+      "opposite_edge_20mhz_qualified": false,
+      "board_flight_load_fpga_budget_ns": null,
+      "load_edge_duty_hold_sta_status": "OPEN",
+      "first_bit_note": "CS-to-DOUT, SDI setup, output hold and return capture need separate implemented timing checks.",
+      "sources": [
+        "TI SCES936A sections 7.11 and 8.1, VCCA=3.3+/-0.3 V, VCCB=5.0+/-0.5 V, full temperature",
+        "ADI AD7606C-16 Rev.A Table 5, VDRIVE>=3.1 V"
+      ],
+      "scope": "Raw datasheet arithmetic only. Loaded board/cable delays and FPGA setup/hold are NOT bounded. No implemented RTL or STA approval."
+    },
+    "digital_sclk_limit_note": "63.5MHz is the ADC-pin limit for VDRIVE>=3.1V, including the fitted VA_5V rail; it is not the FPGA round-trip board limit."
   },
   "blocking_gates": [
     "ADC/connector footprint and new PCB placement, routing, parity, DRC/DFM closure",

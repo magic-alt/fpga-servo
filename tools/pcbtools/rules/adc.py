@@ -603,6 +603,33 @@ def ad7606c_api(project):
         timing=profile.get("timing",{})
         if timing.get("initial_sclk_hz")!=5000000 or timing.get("initial_frame_time_us")!=6.4:
             errors.append("Bring-up profile must start at 5MHz / 6.4us frame until timing qualification")
+        # Fitted path: TXU0204 A=3.3 V / B=5 V, not the bare ADC fSCLK limit.
+        # TI SCES936A 7.11 full-temperature bounds; ADI Rev.A Table 5.
+        expected_board_timing = {
+            "implementation_status": "NOT_RUN",
+            "vcca_condition_v": [3.0, 3.6], "vccb_condition_v": [4.5, 5.5],
+            "translator_temperature_c": [-40, 125],
+            "sclk_translator_max_ns": 9.0, "adc_data_access_max_ns": 15.7,
+            "dout_translator_max_ns": 10.0, "raw_round_trip_max_ns": 34.7,
+            "translator_test_load_pf": 5.0, "translator_test_load_ohm": 10000,
+            "adc_data_launch_edge": "SCLK_RISING",
+            "fpga_reference_capture_edge": "SCLK_FALLING",
+            "reference_clock_duty_ratio": 0.5,
+            "initial_raw_half_cycle_residual_ns": 65.3,
+            "target_raw_half_cycle_residual_ns": -9.7,
+            "opposite_edge_20mhz_qualified": False,
+            "board_flight_load_fpga_budget_ns": None,
+            "load_edge_duty_hold_sta_status": "OPEN",
+        }
+        board_timing = timing.get("board_timing")
+        if not isinstance(board_timing, dict) or any(
+                key not in board_timing or board_timing[key] != value
+                for key, value in expected_board_timing.items()):
+            errors.append("ADC board timing: fitted translator bounds and unqualified capture contract must be retained until RTL/STA evidence is reviewed")
+        if timing.get("conversion_time_max_us") != 0.65:
+            errors.append("AD7606C no-oversampling conversion maximum is 0.65us, not the typical value")
+        if timing.get("analog_3db_bandwidth_khz") != 150 or timing.get("analog_phase_delay_typ_us") != 1.7:
+            errors.append("AD7606C 0-5V high-BW uses typical 150kHz / 1.7us, not a worst-case loop guarantee")
         active="\n".join(line for line in xdc.splitlines() if not line.lstrip().startswith("#"))
         pairs=re.findall(r"set_property PACKAGE_PIN (\w+) \[get_ports (\w+)\]",active)
         if len(pairs)!=len({pad for pad,sig in pairs}) or len(pairs)!=len({sig for pad,sig in pairs}):
