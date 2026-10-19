@@ -24,7 +24,17 @@ diff --git a/tools/pcbtools/board.py b/tools/pcbtools/board.py
 diff --git a/tools/tests/test_pcb_fabrication_intent.py b/tools/tests/test_pcb_fabrication_intent.py
 --- a/tools/tests/test_pcb_fabrication_intent.py
 +++ b/tools/tests/test_pcb_fabrication_intent.py
-@@ -98,6 +98,16 @@
+@@ -76,7 +76,8 @@
+         self.assertTrue(any('stencil' in e for e in rpj_errors(bad)))
+ 
+     def test_displacing_copper_from_oem_terminal_center_is_rejected(self):
+-        bad = self.rpj.replace('(at -0.625 -0.25)', '(at -0.525 -0.25)', 1)
++        copper = next(p.text for p in extract_forms(self.rpj, 'pad') if head_string(p.text, 'pad') == '1')
++        bad = self.rpj.replace(copper, copper.replace('(at -0.625 -0.25)', '(at -0.525 -0.25)', 1), 1)
+         self.assertTrue(any('centers' in e for e in rpj_errors(bad)))
+ 
+     def test_paste_apertures_cannot_acquire_electrical_pin_numbers(self):
+@@ -98,6 +99,16 @@
          for bad in (after.replace('(width 0.25)', '(width 0.20)'), after.replace('(net 1)', '(net 2)'), after.replace('(polygon (pts (xy 0 0)', '(polygon (pts (xy 0.1 0)')):
              self.assertNotEqual(non_fill_design_signature(before), non_fill_design_signature(bad))
  
