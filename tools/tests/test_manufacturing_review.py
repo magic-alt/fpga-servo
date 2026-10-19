@@ -58,6 +58,19 @@ class ReviewValidationTests(unittest.TestCase):
         for bad in (text.replace('M30',''),text.replace('METRIC','INCH'),text.replace('T1\nX','T2\nX'),text.replace('X12.500Y-8.250','G85X12.500Y-8.250')):
             with self.subTest(bad=bad),self.assertRaises(ValueError):self.api().parse_decimal_drill(bad, True)
 
+    def test_real_kicad_format2_header_and_empty_npth(self):
+        text = 'M48\n; #@! TF.FileFunction,Plated,1,4,PTH\nFMAT,2\nMETRIC\nT1C0.300\n%\nG90\nG05\nT1\nX12.5Y-8.25\nM30\n'
+        self.assertEqual(self.api().parse_decimal_drill(text, True), [(12.5, -8.25, .3, True)])
+        empty = 'M48\n; #@! TF.FileFunction,NonPlated,1,4,NPTH\nFMAT,2\nMETRIC\n%\nG90\nG05\nM30\n'
+        self.assertEqual(self.api().parse_decimal_drill(empty, False), [])
+        for bad in (text.replace('FMAT,2', 'FMAT,1'), text.replace('FMAT,2', 'FMAT,2\nFMAT,2'), text.replace('G05', 'G05\nFMAT,2')):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):
+                self.api().parse_decimal_drill(bad, True)
+
+    def test_drill_plating_attribute_cannot_contradict_requested_file(self):
+        text = 'M48\n; #@! TF.FileFunction,NonPlated,1,4,NPTH\nMETRIC\n%\nG90\nG05\nM30\n'
+        with self.assertRaises(ValueError):self.api().parse_decimal_drill(text, True)
+
     def test_cam_terminator_is_not_just_a_nonempty_file(self):
         p=self.root/'layer.gbr';p.write_text('G04 test*\nM02*\n')
         self.api().check_cam_terminator(p)

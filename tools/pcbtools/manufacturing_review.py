@@ -52,12 +52,19 @@ def parse_decimal_drill(text, plated):
     Reject slots/routing, units changes and undeclared tools rather than infer
     their geometry. Gerbonara independently parses/renders populated files too.
     """
-    lines = [x.strip() for x in text.splitlines() if x.strip() and not x.startswith(';')]
+    attributes = re.findall(r'^;\s*#@!\s+TF\.FileFunction,([^,\r\n]+)', text, re.M)
+    expected_plating = 'Plated' if plated else 'NonPlated'
+    if attributes and attributes != [expected_plating]:
+        raise ProjectError('Excellon plating attribute contradicts the selected drill file')
+    lines = [x.strip() for x in text.splitlines() if x.strip() and not x.lstrip().startswith(';')]
     if not lines or lines[0] != 'M48' or lines[-1] != 'M30':
         raise ProjectError('Incomplete Excellon header/termination')
     tools, current, x, y, metric, body = {}, None, None, None, False, False
-    holes = []
+    holes, format2 = [], False
     for line in lines[1:-1]:
+        if line == 'FMAT,2':
+            if body or format2: raise ProjectError('Duplicate or mid-body Excellon format declaration')
+            format2 = True; continue
         if line.startswith('METRIC'):
             if body: raise ProjectError('Mid-file drill unit change')
             metric = True; continue
