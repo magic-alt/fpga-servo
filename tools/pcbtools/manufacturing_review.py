@@ -1,5 +1,4 @@
 """Source-bound manufacturing review packets, explicitly NOT an order release."""
-from collections import Counter
 import csv
 import hashlib
 import json
@@ -93,6 +92,37 @@ def parse_decimal_drill(text, plated):
     return holes
 
 
+def compare_drill_holes(native, exported):
+    """Bijection at the actual 0.001 mm decimal output grid, not fab tolerance.
+
+    Native KiCad coordinates are in integer nanometers. Decimal Excellon emits
+    micrometers; at half-grid coordinates its serialization need not make the
+    same floating-point tie choice as Python round(). Reject extra, missing or
+    ambiguous holes, diameter/plating changes and errors over half a grid unit.
+    """
+    remaining = list(native)
+    if len(remaining) != len(exported):
+        raise ProjectError('Drill/native hole-count mismatch')
+    maximum = 0.0
+    for hole in [*native, *exported]:
+        if len(hole) != 4 or not all(math.isfinite(v) for v in hole[:3]) or type(hole[3]) is not bool:
+            raise ProjectError('Invalid drill identity/coordinate')
+    for x, y, diameter, plated in exported:
+        candidates = [(i, max(abs(x-nx), abs(y-ny)))
+                      for i, (nx, ny, nd, np) in enumerate(remaining)
+                      if plated == np and abs(diameter-nd) < 1e-9
+                      and max(abs(x-nx), abs(y-ny)) <= .0005 + 1e-12]
+        if len(candidates) != 1:
+            raise ProjectError('Missing or ambiguous drill match within half output grid: ' + str((x,y,diameter,plated)))
+        index, delta = candidates[0]
+        maximum = max(maximum, delta)
+        remaining.pop(index)
+    return {'matched_holes': len(exported), 'output_grid_mm': .001,
+            'maximum_xy_quantization_mm': maximum,
+            'diameter_and_plating_match': True, 'one_to_one_hole_mapping': True,
+            'note': 'Half-output-grid quantization only; not a relaxation of PCB geometry or supplier finished-hole tolerance.'}
+
+
 def native_hole_inventory(project, output):
     import pcbnew as p
     board = p.LoadBoard(str(project.board))
@@ -118,17 +148,15 @@ def native_hole_inventory(project, output):
     if not rows: raise ProjectError('Native drill inventory is empty')
     with (output/'hole-treatment.csv').open('w', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
-    expected = Counter((round(r['x_mm'],3), round(-r['y_mm'],3), round(r['drill_mm'],3), r['plated']) for r in rows)
+    expected = [(r['x_mm'], -r['y_mm'], r['drill_mm'], r['plated']) for r in rows]
     actual = []
     for file in (output/'drill').glob('*.drl'):
         plated = not file.stem.endswith('-NPTH')
         actual.extend(parse_decimal_drill(file.read_text(), plated))
-    exported = Counter((round(x,3), round(y,3), round(d,3), plated) for x,y,d,plated in actual)
-    if exported != expected:
-        raise ProjectError('Drill/native mismatch: '+str({'missing': list((expected-exported).items())[:5], 'extra':list((exported-expected).items())[:5]}))
+    matching = compare_drill_holes(expected, actual)
     return {'native_holes':len(rows), 'electrical_vias':sum(r['kind']=='electrical_via' for r in rows),
             'component_holes':sum(r['kind']=='component_hole' for r in rows),
-            'drill_xy_diameter_plating_exact_at_0p001mm':True,
+            'native_to_excellon': matching,
             'coordinate_convention':'Absolute PCB origin; Excellon X=x, Y=-y; millimeters',
             'supplier_treatment_acceptance':'OPEN'}
 

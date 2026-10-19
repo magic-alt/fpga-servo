@@ -71,6 +71,26 @@ class ReviewValidationTests(unittest.TestCase):
         text = 'M48\n; #@! TF.FileFunction,NonPlated,1,4,NPTH\nMETRIC\n%\nG90\nG05\nM30\n'
         with self.assertRaises(ValueError):self.api().parse_decimal_drill(text, True)
 
+    def test_native_half_grid_rounding_is_not_a_missing_hole(self):
+        compare = getattr(self.api(), 'compare_drill_holes', None)
+        self.assertTrue(callable(compare))
+        native = [(118.0875, -29., .4, True), (36.2886, -40.2015, .3, True)]
+        exported = [(118.087, -29., .4, True), (36.289, -40.201, .3, True)]
+        result = compare(native, exported)
+        self.assertEqual(result['matched_holes'], 2)
+        self.assertAlmostEqual(result['maximum_xy_quantization_mm'], .0005)
+        for bad in (exported[:1], exported + [exported[0]],
+                    [(118.0869, -29., .4, True), exported[1]],
+                    [(118.087, -29., .3, True), exported[1]],
+                    [(118.087, -29., .4, False), exported[1]]):
+            with self.subTest(bad=bad), self.assertRaises(ValueError):compare(native, bad)
+
+    def test_ambiguous_overlapping_drill_matches_fail(self):
+        compare = getattr(self.api(), 'compare_drill_holes', None)
+        self.assertTrue(callable(compare))
+        holes = [(1., 2., .3, True)] * 2
+        with self.assertRaises(ValueError):compare(holes, holes)
+
     def test_cam_terminator_is_not_just_a_nonempty_file(self):
         p=self.root/'layer.gbr';p.write_text('G04 test*\nM02*\n')
         self.api().check_cam_terminator(p)
