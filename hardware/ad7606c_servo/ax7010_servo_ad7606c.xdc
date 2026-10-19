@@ -69,3 +69,13 @@ set_property PACKAGE_PIN V12 [get_ports AUX_OUT1];      set_property IOSTANDARD 
 set_property PACKAGE_PIN U12 [get_ports ADC_DOUTC]; set_property IOSTANDARD LVCMOS33 [get_ports ADC_DOUTC]
 set_property PACKAGE_PIN T12 [get_ports ADC_DOUTD]; set_property IOSTANDARD LVCMOS33 [get_ports ADC_DOUTD]
 set_property PACKAGE_PIN T10 [get_ports ADC_SDI]; set_property IOSTANDARD LVCMOS33 [get_ports ADC_SDI]
+
+# FITTED AD7606C / TXU0204 timing review, 2026-10-19 (NOT implemented STA).
+# ADC DOUT changes after SCLK RISING; reference capture is the following FALLING edge.
+# Full-temp raw loop: SCLK TXU 9ns + ADC 15.7ns + DOUT TXU 10ns = 34.7ns.
+# At 20MHz/50% duty the 25ns half-cycle has -9.7ns BEFORE board/RC/load/FPGA.
+# Start at 5MHz: 100ns half-cycle leaves 65.3ns raw, not a qualified margin.
+# Datasheet translator load is 5pF/10kohm; actual loading must be bounded.
+# Future RTL must constrain generated-clock duty, return delay, setup AND hold,
+# first CS/MSB, SDI and BUSY/FRSTDATA. Do not copy pin-only XDC as timing signoff.
+# Faster operation needs deliberate capture phase/architecture and real STA/bench.

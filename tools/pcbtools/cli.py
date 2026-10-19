@@ -19,7 +19,7 @@ def parser():
         if name in {"check", "verify"}:
             c.add_argument("--scope", choices=("schematic", "pcb", "prototype", "release") if name == "verify" else ("schematic", "pcb"), required=True)
         if name == "check": c.add_argument("--netlist", type=Path)
-        if name == "export": c.add_argument("--kind", choices=("bom", "procurement", "netlist", "pdf", "fabrication"), required=True)
+        if name == "export": c.add_argument("--kind", choices=("bom", "procurement", "netlist", "pdf", "fabrication", "fabrication-review"), required=True)
         if name in {"verify", "export"}:
             c.add_argument("--kicad-cli", default="kicad-cli")
             c.add_argument("--ngspice", default="ngspice")
@@ -50,7 +50,13 @@ def main(argv=None):
             report=verify(project,args.scope,args.output,{"kicad-cli":args.kicad_cli,"ngspice":args.ngspice})
         elif args.command == "export":
             from .export import export_project
-            report=export_project(project,args.kind,args.output,{"kicad-cli":args.kicad_cli,"ngspice":args.ngspice})
+            if args.kind == "fabrication-review":
+                from .manufacturing_review import export_review
+                from .verification import save_run
+                report = export_review(project, args.output, {"kicad-cli":args.kicad_cli,"ngspice":args.ngspice})
+                save_run(report, Path(report.evidence["output"]))
+            else:
+                report=export_project(project,args.kind,args.output,{"kicad-cli":args.kicad_cli,"ngspice":args.ngspice})
         elif args.command == "develop":
             from .development import develop
             report=develop(project,args.operation,args.apply,args.output or project.output)

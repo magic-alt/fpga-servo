@@ -1,161 +1,71 @@
-# Rev.A design calculations
+# 双 ADC 四层板：当前设计计算
 
-Current confirmed baseline: **24-48 V, 10 A RMS continuous phase current, 20 kHz PWM; 20 A peak for 30 s; 40 degC maximum ambient; <=50 K temperature rise; forced-air cooling; 5 V ABZ encoder; brake circuit cancelled by latest user instruction; PSU absorption not assumed** (2026-10-10). Peak repetition interval, airflow/fan failure, encoder maximum/startup current remain pending. See [thermal and encoder design basis](brake_thermal_design_basis_2026-10-10.md) and [current qualification record](layout_followup_qualification_2026-10-10.md); these inputs do not close release gates.
+本页取代旧双层 Rev.A 的汇总描述。当前条件为 24–48 V、20 kHz PWM、10 Arms 连续相电流、20 A **正弦瞬时相电流幅值**持续 30 s、40°C 环境、一般温升目标≤50 K、强迫风冷、5 V ABZ 编码器及 12 V 总负载≤1 A。重复周期、最低风量、编码器启动负载仍需明确；电源吸能不作默认假定。完整电路覆盖、时序修复和功率复算见[阶段 1 审查](reviews/dual_audit_2026-10-19/stage1_electrical_thermal.md)。计算不是实测资格。
 
-## Current sensing
+## 相电流测量与分流器发热
 
-For each phase:
+每相 Rshunt=5 mΩ，INA240A1 增益20，电流灵敏度0.1 V/A。VA5标称5.1 V时参考电压2.55 V，因此 Iphase=−20/0/+20 A分别对应约0.55/2.55/4.55 V。需要校准偏置、增益并验证共模暂态恢复。
 
-- `Rshunt = 5 mOhm`
-- `Gain = 20 V/V`
-- `Vout_delta = Iphase * Rshunt * Gain`
+分流器按 **RMS** 发热：P=I_RMS²R。不能把瞬时峰值当作正弦平均损耗。
 
-Therefore:
+| 工况 | 相电流 RMS | 每颗5mΩ平均损耗 | 每颗30s能量 |
+|---|---:|---:|---:|
+| 连续规格 |10 A|0.5 W|15 J|
+| 20 A正弦幅值，30s |14.142 A|1.0 W|30 J|
+| 额外20 A直流/平顶或20 Arms包络，**未批准的额外条件** |20 A|2.0 W|60 J|
 
-`Vout_delta = Iphase * 0.005 * 20 = 0.1 * Iphase [V]`
+对于正弦峰值工况，d=30s/Trep时重复平均损耗为0.5+0.5d W；一阶首脉冲热筛查为0.5·Rθsteady+0.5·Zθ(30s)。旧0.5+1.5d、60 J及1.5·Zθ项只对应额外平顶/20 Arms包络，不能代表当前正弦规格。实际热阻、焊点、TCR、循环累积与最低风量必须测量。3 W目录额定值不证明本板满足温升。
 
-With VA5=5.1 V nominal and reference=VA5/2=2.55 V:
+HoYLR2512为二端器件，sense和force在同一物理端子焊盘会合，不虚构第三/第四物理针脚。三相分别为SW_U/PH_U、SW_V/PH_V、SW_W/PH_W，母线为VBUS_PROT/VBUS_BRIDGE。实际Kelvin铜路必须从内侧独立取样，并受原生几何检查约束。
 
-| Phase current | Amplifier output |
-|---:|---:|
-| -20 A | ~0.55 V |
-| -15 A | ~1.05 V |
-| -10 A | ~1.55 V |
-| 0 A | ~2.55 V |
-| +10 A | ~3.55 V |
-| +15 A | ~4.05 V |
-| +20 A | ~4.55 V |
+## 独立正向母线 OCP
 
-Software phase-current limits require calibration and dynamic validation. The approved phase peak is 20 A for 30 s. The latest authorized hardware OCP is a separate **positive bus-current** detector with nominal +25 A trip; U2..U4 remain phase ADC measurement channels and have no OCP comparator taps. Bus current and phase current are different quantities, so the difference between 20 A phase peak and 25 A bus trip is not a no-nuisance-trip margin.
+RSH4=2 mΩ在DC-link之后，U5 INA240A1的REF1/REF2接地，正向理想灵敏度0.04 V/A。R50=8.2k、R53=2k使阈值VA5·2/10.2，标称5.1 V时为1 V，故标称触发25 A。LM393LVDDFR实际IN− pin2接电流、IN+ pin3接阈值，过流时OCP_N低有效。未用比较器按现有电路固定偏置，输出NC；六路PWM经过硬件抑制及故障锁存。
 
-RSH4=2 mOhm lies between `VBUS_PROT` (terminal 1, U5.IN+ pin 8) and `VBUS_BRIDGE` (terminal 2, U5.IN- pin 1). U5 is INA240A1DR, gain 20 V/V, with both reference pins grounded. Its ideal positive transfer is `Vout = Ibus * 0.002 * 20 = 0.04 * Ibus`. R50=8.2k from VA5 and R53=2k to GND set `Vthreshold = VA5 * 2/10.2`, giving 1.000 V at VA5=5.1 V and `Itrip=1/0.04=25 A`. U15 LM393LVDDFR compares U5.OUT at IN- pin 2 with threshold at IN+ pin 3; positive overcurrent pulls OCP_N low. U15's unused comparator has IN+ pin 5 at GND, IN- pin 6 at threshold, and output pin 7 NC. U16/R51/R52 are removed. This circuit provides **no reverse-current OCP** and no phase-current window protection.
+这不是相电流±25 A限幅，也没有反向电流保护。正向母线电流与相电流不同，不能把25−20=5 A当抗误触发裕量。已有静态预算：[bus_ocp_static_budget](sourcing/bus_ocp_static_budget_2026-10-10.json)。被动容差预算约24.357–25.660 A；扩展静态误差分配约23.935–26.108 A，均不是最大故障电流或完整动态保护范围。INA共模恢复、比较器过驱动、逻辑延迟和VGS关断仍需测量。故障解除不得自动重新使能，必须显式re-arm。
 
-The fresh candidate XML (2026-10-10), `check_adc_validity.py` and `corner_current_limits()` give VA5=5.026621..5.173923 V. Combining this rail range, R50/R53 initial tolerance +/-0.1%, and RSH4 +/-1% yields **positive passive-only trip +24.357135..+25.659766 A**. This excludes divider/shunt temperature and lifetime drift, INA gain/offset/output swing and PWM common-mode recovery, LM393LV offset/overdrive/propagation, ripple, pull-up/logic/gate delay and fault-current overshoot. It is not a guaranteed trip interval or maximum fault current. The grounded-reference INA output near zero and negative current also requires bench characterization; no negative-current transfer or protection is claimed.
+## ADC 与串行接口
 
-The [versioned static-budget evidence](sourcing/bus_ocp_static_budget_2026-10-10.json) records the native XML hash, OEM sources and limits. The extended static engineering budget in `bus_static_error_budget()` gives **+23.935464..+26.107636 A**, while preserving nominal +25 A. Its conditional calculation envelope is local component temperatures +25..+125 degC and DC bus common-mode 24..48 V; this is not permission to exceed the board's 90 degC hotspot target or another component's lower limit. The shunt OEM only specifies its TCR test over +25..+125 degC, so no cold-temperature bound is claimed.
+ADS8588S的±5 V量程对应10 V/65536=152.59µV/LSB，即理想1.526 mA/LSB。AD7606C的相电流0–5 V量程对应76.29µV/LSB，即理想0.763 mA/LSB。这不是实际噪声、ENOB或控制精度保证。
 
-| Term | Maximum/allocated magnitude used |
-|---|---:|
-| R50 PTFR0603B8K20P9 | Initial 0.1% + 25 ppm/degC × 105 K = 0.3625% |
-| R53 TD03G2001BT | Initial 0.1% + 25 ppm/degC × 105 K = 0.3625% |
-| RSH4 HoYLR2512-3W-2mR-1% | Initial 1% + 50 ppm/degC × 100 K = 1.5% |
-| INA240 gain | 0.2% + 2.5 ppm/degC × 100 K = 0.225% |
-| INA240 input offset | 25 uV + 250 nV/degC × 100 K, plus DC CMRR and PSRR = 87.739 uV |
-| LM393LV input offset | Full-temperature 3 mV, plus DC CMRR and PSRR = 4.155 mV |
+八个模拟通道均为同步采样；串行线数影响读出，不把同时采样改成模拟扫描。ADS使用两路DOUT、64时钟/完整帧；20 MHz时读出3.2µs，但转换后再读、转换重叠读的tCYC条件不同，不能直接用200 kSPS铭牌代表所有时序方式。
 
-The [RESI PTFR ordering table](https://atta.szlcsc.com/upload/public/pdf/source/20250401/FF0B2EF5B31106388F28E532ECCD4B84.pdf) identifies code P as 25 ppm/degC; the [FH TD ordering table](https://atta.szlcsc.com/upload/public/pdf/source/20200616/C657321_2CFA27FA726BC0D0F6223AF922169515.pdf) identifies G as 25 ppm/degC. A conservative 105 K resistor span covers a +20 degC reference to +125 degC. [HoYLR's exact 2mOhm approval sheet](https://atta.szlcsc.com/upload/public/pdf/source/20260807/2744A3B9486B05923CE3C700940B3DAC.pdf) specifies 50 ppm/degC. These initial-plus-TCR bounds do not include mounting or qualification-test drift.
+AD四路DOUT、32时钟/完整帧，初始5 MHz、6.4µs。TXU0204正向9 ns、ADC访问15.7 ns、返回10 ns的完整温区原始环路合计34.7 ns。20 MHz/50%占空比的紧随下降沿采样仅有25 ns，原始余量−9.7 ns；5 MHz原始剩余65.3 ns，但仍未扣除板/线缆、RC负载、占空比、FPGA setup/hold。必须另外处理首位CS、SDI、BUSY和FRSTDATA。20 MHz保持待资格目标，不宣称pin-only XDC已经完成STA。
 
-The [INA240 electrical table](https://www.ti.com/lit/ds/symlink/ina240.pdf) supplies gain/offset limits and drift, minimum DC CMRR 120 dB and maximum PSRR 10 uV/V. The model allows common-mode change from the 12 V test point to 48 V and actual supply deviation from 5 V. The [LM393LV table](https://www.ti.com/lit/ds/symlink/lm393lv.pdf) supplies full-temperature +/-3 mV offset, 60 dB CMRR and 70 dB PSRR; drift is not added again. A 1.1 V comparator common-mode envelope bounds the threshold crossing.
+AD无过采样转换最大0.65µs；相通道高带宽典型150 kHz/1.7µs是模拟指标，不是可保证3–5 kHz闭环的充分条件。当前没有可用于证明带宽的RTL、Vivado实现或电机测试。
 
-The equation is `Itrip = ((Vthreshold + VOS_comparator) / G_actual - VOS_INA) / Rshunt_actual`, sweeping independent worst signs and both verified VA5 bounds. This remains **an engineering estimate, not a guaranteed trip interval**: LM393LV's quoted error-table conditions are at/up to 5 V, while actual VA5 is slightly higher; INA reference rejection and input-bias mismatch lack guaranteed maxima for this application. Grounded-reference transfer, Kelvin/thermoelectric errors, reflow, load-life/humidity drift, PWM transients and dynamic fault overshoot still need qualification. The OEM shunt's separate reliability-test allowances cannot be treated as zero drift or collapsed into a lifetime guarantee. The model checks the three exact MPNs before using their TCRs; an alternate needs its own reviewed budget.
+## 母线电压与再生
 
-RSH4 dissipates 1.25 W at a constant 25 A and 0.8 W at a constant 20 A. Its bus RMS current, pulse energy, mounted temperature and independent inner-land Kelvin pickups require separate qualification; phase RMS current cannot be substituted for bus RMS current.
+分压高侧280k+280k、低侧39k：Vadc=Vbus·39/599；24/48/60 V对应1.563/3.125/3.906 V。48 V以上只是算例，不扩展工作额定值。C5=10 nF与560k||39k形成τ=364.608µs、fc=436.51 Hz，不能承担快速硬件OV保护。
 
-Shunt dissipation is `P = I_RMS^2 * R`:
+母线电容为10个100µF/100 V支路，各串0.33Ω阻尼。额定容量不是再生能力；1 mF从48到60 V仅增加0.648 J标称储能，最小容量时更少。1 A未被上游吸收的电流，在孤立理想模型下约6.967 ms使48 V升至55 V；不包含线缆谐振、C3/C4与开关寄生。没有板载制动或U18正向OV闭环；实际系统必须提供被验证的外部吸能/钳位与断开方案。
 
-| RMS current | Shunt dissipation |
-|---:|---:|
-| 10 A | 0.50 W |
-| 15 A | 1.125 W |
-| 20 A | 2.00 W |
-| 25 A | 3.125 W |
+当前电容纹波分配为10×1.57×0.90×0.80=11.304 Arms，对比含波形分配的11 Arms。最坏支路11/(10×0.8)=1.375 Arms；含电阻+1%时P=1.375²×0.33×1.01=0.630145 W，90°C分配约0.708 W。不得用已被替代的0.589 W模型作为现行较小损耗结论。
 
-Select HoYLR2512-3W-5mR-1% (3 W, two-terminal SMD). Apply independent inner-land Kelvin pickup and verify its derating and assembled temperature. A 3920 >=5 W alternative is the fallback if the 2512 assembly cannot meet the thermal limit.
+## MOSFET、门极及总热预算
 
-At the confirmed 10 A RMS, each nominal shunt dissipates 0.5 W. A phase held at the 20 A magnitude bound dissipates 2 W; for 30 s this is 60 J per shunt, before resistance tolerance and temperature drift. A sinusoidal phase with 20 A instantaneous amplitude has a different RMS loss; use the 2 W value as a conservative per-shunt upper envelope until the actual peak waveform is specified. With baseline 10 A RMS and a conservative 20 A flat-current interval occupying fraction d, the illustrative average is `Pshunt=0.5+1.5d W`; for a start-to-start repetition period Trep, `d=30/Trep` with Trep>=30 s. No repetition period is assumed.
+桥导通合计为3·Iphase_RMS²·RDS(on)，不是把六管一直串入同一电流。BSC040N10NS5在指定10 V栅压/25°C条件下4 mΩ最大值给出连续/峰值工况1.2/2.4 W；按热态2倍电阻分配为2.4/4.8 W，2倍是假设不是全温保证。
 
-At 40 degC ambient, the general 50 K rise target corresponds to a 90 degC measured hotspot limit, subject to every component's lower qualified limit. A 50 K rise implies an effective shunt-to-ambient thermal resistance <=100 K/W at steady 0.5 W, or <=25 K/W at steady 2 W; these are assembly targets, not package ratings. For a first 30 s pulse from an established 10 A RMS thermal state, an illustrative linear thermal model requires `0.5*Rtheta_steady + 1.5*Ztheta(30s) <=50 K`; repeated pulses require accumulation, hot resistance and airflow validation. The shunt's nominal 3 W rating does not prove this condition. U26's current maximum-delay qualification is limited to 85 degC local free-air temperature, hence <=45 K local rise at the confirmed ambient. Forced air requires minimum airflow, blockage/fan-loss handling and assembled-board soak evidence.
+输入Q7/Q8与保险按母线RMS而非平均电流计算。保守开关RMS上界√2·Iphase_RMS，加24 V、12 W辅助负载按假定85%效率的0.588 A，得到14.730/20.588 A；串联两管冷态1.736/3.391 W、热态2倍分配3.472/6.782 W。输入RLC谐振和实际纹波仍需资格化。
 
-## ADC resolution
+DRV8300DPWR为非反相、集成bootstrap二极管版本，不能以DI反相版本替换。72 nC/0.75 A与/1.5 A得到的96/48 ns只是Q/I比值；33 Ω、Miller与寄生不能忽略。72 nC/470 nF理想bootstrap压降0.153 V也不含有效容量、静态电流、漏电与刷新。
 
-The ADS8588S is configured for ±5 V input range. The nominal LSB is:
+当前48 V开关损耗敏感性约6.58/9.31 W，死区项约0.24–1.19/0.34–1.68 W；不是实测或保证上界。已有总散热分配约16–18 W连续、28–30 W峰值，另有Coss、反向恢复、铜损和辅助转换热。详细输入及来源在[power_static_budget](reviews/dual_prototype_2026-10-18/power_static_budget.md)。必须测量最低风量、局部热点、相互热耦合和重复峰值；不得用冷态导通损耗代替热资格。
 
-`10 V / 65536 = 152.6 uV/LSB`
+## 保险与电源有效性
 
-Since current sensitivity is `0.1 V/A`, the ideal code resolution is:
+F1=0456025.ER，25 A行的72 V DC分断能力500 A；125 VAC标签不代表125 V DC。冷阻1.92 mΩ、标称熔断I²t=45 A²s均不单独证明故障配合。连续电流、环境降额、源电容、短路电流和引线必须符合实测边界；F1不把故障电流限制在25 A。厂商100µm铜热示例不等同本板70µm外铜。
 
-`152.6 uV / 0.1 V/A = 1.526 mA/LSB`
+U25由VIO独立供电，经3.24k/1k监测VA5。当前静态下降阈值4.791889–4.961002 V，恢复最大5.001931 V，正常VA5分配5.026621–5.173923 V。最低下降阈值只提供约41.889 mV头间距；18µs典型监控延迟不是保证最大值，完整快速掉电VGS关闭尚未资格化。
 
-Noise, PWM common-mode transients, reference error and layout dominate before quantization does.
+## 四层实现与温度边界
 
-## Bus-voltage divider
+两板实际候选叠构为四层2/1/1/2 oz、外70/内30µm、1.6 mm、JLC041621-3313、NP-155F/Tg155、ENIG。In1保留GND；外网过孔反焊盘不等于“回流完全无阻断”。非导电环氧不能计入导电截面积，真实铜皮瓶颈、电流分流、连接器与焊点发热需要验证。
 
-Rev.A nominal divider:
+U13铜地按0.25mm工艺下限修复，保留原0.20mm钢网开口和0.125mm厚度。电气过孔要求Type VII填孔/铜帽；元件孔和安装孔必须保持开孔。特殊成品孔公差、同一订单组合工艺与装配接受仍需板厂书面确认。
 
-- high side: 280 k + 280 k
-- low side: 39 k
-- total: 599 k
+一般40°C+50 K并不能覆盖U26/F2局部85°C限制。额定电流、死区、SOA、EMC、编码器负载和故障全链路都保留实物门禁。低能量限流首板调试和额定产品发布不是同一个结论。
 
-`Vadc = Vbus * 39 / 599 = 0.065108 * Vbus`
+## 一手资料及可执行检查
 
-| VBUS | ADC voltage |
-|---:|---:|
-| 24 V | 1.563 V |
-| 48 V | 3.125 V |
-| 55 V | 3.581 V |
-| 60 V | 3.906 V |
-| 75 V | 4.883 V |
-
-The board is not specified for 75 V continuous operation; this table only shows divider headroom.
-
-The operating range is 24-48 V; every table row above 48 V is calculation-only. C5=10nF and `(560k || 39k)` give tau=364.608us and fc=436.51Hz. This bus-monitor filter cannot be treated as fast hardware overvoltage protection.
-
-## MOSFET conduction sanity check
-
-For one current path through two BSC040N10NS5 devices, using 4 mOhm each at the datasheet test condition:
-
-`Ppath ~= I^2 * 8 mOhm`
-
-- 10 A -> 0.8 W instantaneous conduction path loss
-- 15 A -> 1.8 W (historical comparison)
-- 20 A -> 3.2 W
-- 25 A -> 5.0 W
-
-Actual inverter dissipation must be computed over PWM duty, device temperature, switching energy and dead-time diode conduction. These values are only a first-order check.
-
-## Gate-drive current sanity check
-
-U1 is the non-inverted **DRV8300DPWR**, with integrated bootstrap diodes. The DI variant is not interchangeable with the hardware all-low inhibit. D2..D4 are removed; CBOOT1..3 are 470 nF between BST and the corresponding switch node, and RG1..6 are 33 ohm. See the [TI DRV8300 datasheet](https://www.ti.com/lit/ds/symlink/drv8300.pdf) for the D/DI input distinction and PW20 pin map. All six input commands are gated; FPGA deadtime remains at least 500 ns, pending measured switching verification.
-
-Using BSC040N10NS5 Qg=72 nC as an illustrative charge and the driver's typical 0.75 A source/1.5 A sink capabilities gives Q/I=96 ns/48 ns. These are ratios, not guaranteed switching or fault turn-off times: 33 ohm resistance, Miller charge, gate voltage, driver impedance and board inductance dominate actual waveforms. One 72 nC charge from a nominal 470 nF bootstrap capacitor gives an ideal 0.153 V droop before effective-capacitance derating, quiescent/leakage charge, duty-cycle hold time and recharge losses. Bootstrap refresh, UVLO, effective capacitance and full shutdown latency remain unqualified.
-
-## Onboard input fuse
-
-F1 is **Littelfuse 0456025.ER**, a 25 A very-fast-acting SMD fuse on the PCB. J3.1 and F1.1 are VIN_RAW; F1.2, Q7 drain and the U18 LM74502 reverse-polarity controller input are VIN_FUSED. The LM5164 auxiliary regulator is supplied from VBUS_PROT, downstream of reverse-polarity protection. J6 is only the excluded external system interface; no external fuse or holder is required by this design revision.
-
-The [Littelfuse 456 datasheet](https://www.littelfuse.com/assetdocs/littelfuse_fuse_456_datasheet.pdf?assetguid=d86b18f9-14fa-4764-87ff-8aec12e9a89d) specifies the **25 A row** at 500 A interrupting capacity at 72 VDC, and 1000 A at 32 VDC. Its 125 VAC label does not establish a 125 VDC rating. The 72 VDC rating exceeds the 48 V operating maximum; regeneration/surge bus voltage <=72 V and prospective source fault current <=500 A remain open qualification requirements for this prototype selection. Catalog stock is not electrical qualification.
-
-Nominal cold resistance is 1.92 mOhm and nominal melting I²t is 45 A²s; neither alone proves fault coordination. Manufacturer time-current, continuous-current/ambient derating, inrush, source/cable energy and mounted-temperature limits must be met. OEM thermal conditions use broad 100 um copper; the present two-layer copper/via implementation does not independently prove 25 A operation. F1 does not replace fast bus OCP or limit fault current to 25 A. This is a documented critical single-source prototype exception.
-
-## VA5 validity and R92 tolerance
-
-U25 TPS389001DSER senses VA5 through R92=3.24k/R93=1k while powered independently by VIO. R92's selected 0.1%, 25 ppm/C primary and reviewed alternative use a common +/-0.702% static budget; R93/R94/R95 use +/-0.25% including their stated allocations. These are prototype budgets derived from separate qualification tests/allocations, not a combined-environment or lifetime guarantee.
-
-`check_adc_validity.py` calculates falling shutdown threshold 4.791889..4.961002 V, maximum recovery 5.001931 V, and regulated VA5 5.026621..5.173923 V. The minimum falling threshold is 41.889 mV above ADS8588S's 4.75 V minimum. The allocated 10 mV normal ripple still leaves static recovery headroom. This does not qualify fast droop: TPS3890's 18 us typical delay at 5% overdrive is not a guaranteed maximum, and the complete supervisor-to-MOSFET shutdown chain remains open.
-
-## Two-layer current routing
-
-The high-current path must not rely on a single narrow trace. Plan wide top-layer copper, bottom reinforcement and qualified stitching near terminals/MOSFETs/shunts. The prior routed PCB is a development baseline; SMD-shunt integration requires fresh routing, DRC and thermal review. Verify temperature rise on the actual stack-up and copper weight.
-
-## Local passive simulation (2026-10-10)
-
-`tools/archive/layout_2026_10/simulate_layout_entry.py` extracts actual passive values and checks their physical-pin topology in a fresh KiCad XML netlist before emitting six ngspice decks, CSV waveforms, JSON results and a plot. This is not a complete inverter/device simulation.
-
-- R40/C40: tau=47ns, fc=3.386MHz; 20kHz attenuation is only -0.0001515dB. The filter does not remove PWM ripple and serves only the phase ADC. Its ideal 2.5-to-4.9 V step crosses the 3.7 V midpoint at about 1.03358 us for a step beginning at 1.001 us; this is phase ADC settling, not bus OCP delay.
-- R88/C92: tau=1us with an ideal FPGA output. No Schmitt threshold, propagation, metastability or power-ramp model is included.
-- Current bank: C1/C2/C120–C127, ten 100 µF /100 V branches, each with its own 0.33 Ω WSL2512 damping resistor. The isolated ideal bank is 1 mF /0.033 Ω; an unsunk 1 A step reaches 55 V from 48 V in 6.967 ms. This model excludes C3/C4, distributed ESL, source/cable impedance and actual PWM spectrum. 55 V is an example, not a qualified allowance. See [bounded ECO proof](reviews/dual_prototype_2026-10-18/dc_link_eco_verification.json) and [conditional ripple/loss/fixture budget](reviews/dual_prototype_2026-10-18/power_static_budget.md).
-- Three 5mOhm shunts at 10A RMS dissipate 0.5W each, 1.5W total. Package rating alone does not qualify assembly temperature.
-
-Full current/thermal/switching qualification remains open; see [power-stage review](archive/reviews/power_stage_layout_review_2026-10-09.md) and [analog/safety review](archive/reviews/analog_safety_layout_review_2026-10-09.md).
-
-
-## Kelvin electrical-node modeling
-
-The selected two-terminal SMD shunt has one physical terminal per side. Independent sense and force traces meet within that terminal land and share its electrical node:
-
-- U phase: `SW_U` and `PH_U`
-- V phase: `SW_V` and `PH_V`
-- W phase: `SW_W` and `PH_W`
-- Bus: `VBUS_PROT` and `VBUS_BRIDGE`
-
-Kelvin behavior is enforced in PCB routing: each INA240 input trace must originate independently at the inner edge of the corresponding two-terminal SMD shunt pad. Force and sense copper may meet only within that terminal land. A two-terminal shunt must not be represented by invented physical sense pins or jumper groups. PCB integration and thermal qualification are separate gates.
+[TI INA240](https://www.ti.com/lit/ds/symlink/ina240.pdf)、[DRV8300](https://www.ti.com/lit/ds/symlink/drv8300.pdf)、[TXU0204](https://www.ti.com/lit/ds/symlink/txu0204.pdf)、[AD7606C-16](https://www.analog.com/media/en/technical-documentation/data-sheets/ad7606c-16.pdf)及[当前功率预算中的厂商出处](reviews/dual_prototype_2026-10-18/power_static_budget.md)。原理图、电气合同与原生检查统一使用`python tools/pcb.py`；旧单独脚本命令不作为现行入口。

@@ -1,0 +1,41 @@
+name: gerbonara-probe
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/gerbonara-probe.yml'
+permissions:
+  contents: read
+jobs:
+  parser-api:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install 'gerbonara==1.6.3'
+      - name: Record actual installed CLI and file API
+        run: |
+          mkdir -p diagnostic
+          python -m gerbonara --help > diagnostic/module-help.txt
+          gerbonara --help > diagnostic/entry-help.txt
+          python - <<'PY'
+          import gerbonara, inspect, json
+          from pathlib import Path
+          from importlib.metadata import version
+          from gerbonara.rs274x import GerberFile
+          from gerbonara.excellon import ExcellonFile
+          root = Path(gerbonara.__file__).parent
+          result = {'version': version('gerbonara'), 'GerberFile.open': str(inspect.signature(GerberFile.open)), 'GerberFile.bounding_box': str(inspect.signature(GerberFile.bounding_box)), 'GerberFile.to_svg': str(inspect.signature(GerberFile.to_svg)), 'ExcellonFile.open': str(inspect.signature(ExcellonFile.open))}
+          Path('diagnostic/api.json').write_text(json.dumps(result, indent=2))
+          for name in ['__main__.py', 'cli.py']:
+              p=root/name
+              if p.is_file():Path('diagnostic', name+'.txt').write_text(p.read_text())
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gerbonara-installed-api
+          path: diagnostic/
+          if-no-files-found: error
+          retention-days: 7

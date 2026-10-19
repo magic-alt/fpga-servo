@@ -58,6 +58,9 @@
     "motor_connector_process": "Controlled circular finished diameter1.80..1.90mm; special ENIG multilayer +/-0.05 process; explicit manufacturer acceptance before order",
     "via_covering": "Type VII epoxy filled and copper capped (POFV)",
     "via_process": "Paid four-layer POFV; all electrical through vias, including in-pad thermal vias; actual drill range and final UUID/XY map must be verified from frozen CAD. No assumption of ink plugging or simple tenting equivalence.",
-    "stencil_thickness_mm": 0.125
+    "stencil_thickness_mm": 0.125,
+    "min_smd_copper_pad_mm": 0.25,
+    "via_fill_material": "nonconductive_epoxy",
+    "rpj_land_note": "U13 copper pads 1-6 are 0.25mm; original 0.20mm paste apertures and TI 0.125mm stencil retained. No automatic supplier approval."
   }
 }

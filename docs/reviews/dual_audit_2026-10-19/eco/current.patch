@@ -1,0 +1,759 @@
+diff --git a/hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb b/hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb
+index e0b664c..54492c7 100644
+--- a/hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb
++++ b/hardware/ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb
+@@ -117,8 +117,8 @@
+ 			(front no)
+ 			(back no)
+ 		)
+-		(capping no)
+-		(filling no)
++		(capping yes)
++		(filling yes)
+ 		(pcbplotparams
+ 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+ 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+@@ -55495,7 +55495,7 @@
+ 		(layer "F.Cu")
+ 		(uuid "a942bda9-94d4-4e46-8d56-068344a6bf6a")
+ 		(at 32 14)
+-		(descr "TI RPJ0009A 4224505/A recommended land pattern; SLVSFS7A p46; assembly qualification open")
++		(descr "TI RPJ0009A 4224505/A centers; copper pads 1-6 widened to 0.25mm for JLC; original 0.125mm-stencil apertures retained; assembly approval open")
+ 		(property "Reference" "U13"
+ 			(at 0 2.5 0)
+ 			(layer "F.SilkS")
+@@ -55638,8 +55638,8 @@
+ 		)
+ 		(pad "1" smd roundrect
+ 			(at -0.625 -0.25)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/PWR_GOOD")
+ 			(pinfunction "PG_1")
+@@ -55648,8 +55648,8 @@
+ 		)
+ 		(pad "2" smd roundrect
+ 			(at -0.625 0.25)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/aux_power/SW_5V")
+ 			(pinfunction "SW_2")
+@@ -55658,8 +55658,8 @@
+ 		)
+ 		(pad "3" smd roundrect
+ 			(at -0.625 0.75)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/VA_5V")
+ 			(pinfunction "VOS_3")
+@@ -55668,8 +55668,8 @@
+ 		)
+ 		(pad "4" smd roundrect
+ 			(at 0.45 0.75)
+-			(size 1 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 1 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/GND")
+ 			(pinfunction "GND_4")
+@@ -55678,8 +55678,8 @@
+ 		)
+ 		(pad "5" smd roundrect
+ 			(at 0.625 0.25)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/VDRV_12V")
+ 			(pinfunction "EN_5")
+@@ -55688,8 +55688,8 @@
+ 		)
+ 		(pad "6" smd roundrect
+ 			(at 0.45 -0.25)
+-			(size 1 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 1 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/VDRV_12V")
+ 			(pinfunction "VIN_6")
+@@ -55727,7 +55727,14 @@
+ 			(uuid "b45ca1bd-2f5d-4151-a8a0-1e39683dd9a6")
+ 		)
+ 		(embedded_fonts no)
+-	)
++	
++	(pad "" smd roundrect (at -0.625 -0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "a2e562e6-9d1b-5e3a-a3fc-10e622bad362"))
++	(pad "" smd roundrect (at -0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "545b66af-fbb4-561b-99fd-94f2b8f70269"))
++	(pad "" smd roundrect (at -0.625 0.75) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "42c57e5c-e0c1-55d8-88de-30259ecc0532"))
++	(pad "" smd roundrect (at 0.45 0.75) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "c390e1ed-bba5-5c70-a64d-d0397f96daeb"))
++	(pad "" smd roundrect (at 0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "5dbaa0d7-8586-5949-b72d-7e860f2ea45a"))
++	(pad "" smd roundrect (at 0.45 -0.25) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "486771e9-0f0e-5660-bf81-e86566b47598"))
++)
+ 	(footprint "fpga-servo:Vishay_WSL2512_0R33"
+ 		(layer "F.Cu")
+ 		(uuid "aaa4e83a-d1f2-4a33-8edb-2ea62307a786")
+diff --git a/hardware/ad7606c_servo/fabrication_profile.json b/hardware/ad7606c_servo/fabrication_profile.json
+index 4e3131d..f444d6c 100644
+--- a/hardware/ad7606c_servo/fabrication_profile.json
++++ b/hardware/ad7606c_servo/fabrication_profile.json
+@@ -58,6 +58,9 @@
+     "motor_connector_process": "Controlled circular finished diameter1.80..1.90mm; special ENIG multilayer +/-0.05 process; explicit manufacturer acceptance before order",
+     "via_covering": "Type VII epoxy filled and copper capped (POFV)",
+     "via_process": "Paid four-layer POFV; all electrical through vias, including in-pad thermal vias; actual drill range and final UUID/XY map must be verified from frozen CAD. No assumption of ink plugging or simple tenting equivalence.",
+-    "stencil_thickness_mm": 0.125
++    "stencil_thickness_mm": 0.125,
++    "min_smd_copper_pad_mm": 0.25,
++    "via_fill_material": "nonconductive_epoxy",
++    "rpj_land_note": "U13 copper pads 1-6 are 0.25mm; original 0.20mm paste apertures and TI 0.125mm stencil retained. No automatic supplier approval."
+   }
+ }
+diff --git a/hardware/ad7606c_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod b/hardware/ad7606c_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod
+index 727cf6e..85dea7f 100644
+--- a/hardware/ad7606c_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod
++++ b/hardware/ad7606c_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod
+@@ -1,16 +1,23 @@
+-(footprint "Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (version 20260206) (generator "pcbnew") (layer "F.Cu") (descr "TI RPJ0009A 4224505/A recommended land pattern; SLVSFS7A p46; assembly qualification open") (attr smd)
++(footprint "Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (version 20260206) (generator "pcbnew") (layer "F.Cu") (descr "TI RPJ0009A 4224505/A centers; copper pads 1-6 widened to 0.25mm for JLC; original 0.125mm-stencil apertures retained; assembly approval open") (attr smd)
+ (property "Reference" "REF**" (at 0 -2 0) (layer "F.SilkS") (effects (font (size 1.0 1.0) (thickness 0.15))))
+ (property "Value" "Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (at 0 2 0) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.1))))
+ (fp_rect (start -0.75 -1.0) (end 0.75 1.0) (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab"))
+ (fp_rect (start -1.2 -1.45) (end 1.2 1.25) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+ (fp_circle (center -1.1 -1.15) (end -1.025 -1.15) (stroke (width 0.15) (type default)) (fill none) (layer "F.SilkS"))
+-(pad "1" smd roundrect (at -0.625 -0.25) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "2" smd roundrect (at -0.625 0.25) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "3" smd roundrect (at -0.625 0.75) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "4" smd roundrect (at 0.45 0.75) (size 1 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "5" smd roundrect (at 0.625 0.25) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "6" smd roundrect (at 0.45 -0.25) (size 1 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
++(pad "1" smd roundrect (at -0.625 -0.25) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "2" smd roundrect (at -0.625 0.25) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "3" smd roundrect (at -0.625 0.75) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "4" smd roundrect (at 0.45 0.75) (size 1 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "5" smd roundrect (at 0.625 0.25) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "6" smd roundrect (at 0.45 -0.25) (size 1 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
+ (pad "7" smd roundrect (at 0.5 -0.925) (size 0.25 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+ (pad "8" smd roundrect (at 0 -0.925) (size 0.25 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+ (pad "9" smd roundrect (at -0.5 -0.925) (size 0.25 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
++
++	(pad "" smd roundrect (at -0.625 -0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at -0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at -0.625 0.75) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at 0.45 0.75) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at 0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at 0.45 -0.25) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
+ )
+diff --git a/hardware/ad7606c_servo/gate_inverter.kicad_sch b/hardware/ad7606c_servo/gate_inverter.kicad_sch
+index 557bcca..2a19e78 100644
+--- a/hardware/ad7606c_servo/gate_inverter.kicad_sch
++++ b/hardware/ad7606c_servo/gate_inverter.kicad_sch
+@@ -6103,13 +6103,12 @@
+ 		(uuid "c6f391cb-5102-4755-a95e-5ca27476f06f")
+ 	)
+ (wire (pts (xy 73.66 179.07) (xy 73.66 194.31)) (stroke (width 0.1524) (type default)) (uuid "194650a1-18cd-41d5-aff0-1980435f54e3"))
+-(wire (pts (xy 43.18 194.31) (xy 43.18 196.85)) (stroke (width 0.1524) (type default)) (uuid "c922530a-3c3f-4ece-935a-b8851c143886"))
+ (wire (pts (xy 43.18 194.31) (xy 73.66 194.31)) (stroke (width 0.1524) (type default)) (uuid "3a36a75f-53d3-4b7e-a266-c5f286a0a9c8"))
+-(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 43.18 196.85 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "4d620b0c-a868-4114-9ba4-8721c79b2e55")
+-(property "Reference" "#PWR923" (at 43.18 196.85 0) (effects (font (size 1 1)) (hide yes)))
+-(property "Value" "/GND" (at 43.18 196.85 0) (effects (font (size 1 1)) (hide yes)))
++(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 43.18 194.31 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "4d620b0c-a868-4114-9ba4-8721c79b2e55")
++(property "Reference" "#PWR923" (at 43.18 194.31 0) (effects (font (size 1 1)) (hide yes)))
++(property "Value" "/GND" (at 43.18 194.31 0) (effects (font (size 1 1)) (hide yes)))
+ (pin "1" (uuid "148b4475-80ef-4c67-a9d2-43ee126a1749")) (instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/91fd78c0-db14-5f53-b838-b455f43fc153" (reference "#PWR923") (unit 1)))))
+-(label "GND" (at 43.18 196.85 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "40380b5f-5411-4269-853b-915629e2723a"))
++(label "GND" (at 43.18 194.31 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "40380b5f-5411-4269-853b-915629e2723a"))
+ (wire (pts (xy 22.86 177.8) (xy 25.4 177.8)) (stroke (width 0.1524) (type default)) (uuid "62971b51-a313-4f1c-81e8-aa1169b80014"))
+ (hierarchical_label "PWR_READY" (shape input) (at 22.86 177.8 0) (effects (font (size 1 1)) (justify right)) (uuid "21ba77bf-2afa-4b33-8968-6cb3b4a7e22a"))
+ (wire (pts (xy 60.96 177.8) (xy 63.5 177.8)) (stroke (width 0.1524) (type default)) (uuid "b0073f60-0f6c-4707-931f-a8043f65b7ee"))
+diff --git a/hardware/ad7606c_servo/source_manifest.json b/hardware/ad7606c_servo/source_manifest.json
+index f0154c0..f09872c 100644
+--- a/hardware/ad7606c_servo/source_manifest.json
++++ b/hardware/ad7606c_servo/source_manifest.json
+@@ -4,7 +4,7 @@
+     "hardware/ads8588s_servo/aux_power.kicad_sch": "d8414cdb391859ebda7352f1f1197547a80a47e4911d96313be48df39d20e81e",
+     "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "833d71a0c1409f707eba8008cd57db6878fb499850c4270dc5434cc7fa9b8ca9",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "6005aca1af5750c90a5de8f2e0df553deeffa6907d3bd64208fa939366e01129",
+-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
++    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "1bfb6b1056e3c093f15f1e6d782dba7e7071b37d2bd7af2237170ab91c23bc3f",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "507a5d393dcf5499b8782184c8804cfbd13ca422df9b1316dafc16f1a4a4b4b2",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "f715c6a6b005145e1d8cdf4318b60f9b05d154e45aab2cf62defc7b09f0ef09c",
+@@ -12,7 +12,7 @@
+     "hardware/ads8588s_servo/current_adc.kicad_sch": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
+     "hardware/ads8588s_servo/encoder.kicad_sch": "286d0ab7ebb4272242ecab6fab39e2bba9f303e2369ce1e5603fa1a99a30f6ac",
+     "hardware/ads8588s_servo/fp-lib-table": "4a788cf16d28753d9dc7f2e894c1f88410a686054738ba4be0ac84c11fcb30b2",
+-    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "2389005048bb7d71e4adf9cb86ff247a5af4073b2b78a610226d5194fd315062",
++    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "d56a7971b58f61bf5005da1f64484f8a34f387961992832121d3e2a331a53b7d",
+     "hardware/ads8588s_servo/ocp_latch.kicad_sch": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+     "hardware/ads8588s_servo/power_input.kicad_sch": "5beb8557c45773470c0e7ad8e8a235c614186fc7266a8d97e3d93703bc9ed30b",
+     "hardware/ads8588s_servo/sym-lib-table": "afcba65a80eea67cfcb51c00cd291651eeaa4b2683b719e6db675a7bbe6ecc5f",
+@@ -40,7 +40,7 @@
+     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod": "05ffe301f111503a1ef2d76b9640bea0d4b1dfdb387efee17c7f9144b88e3264",
+     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod": "2bf68dab98a3fe724df076f0e1caf51f619ea67208e97a7cc5e56f571b95b954",
+     "hardware/ads8588s_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod": "7e72c5d42fbe453af76a49f5f69b6072f41994e7027e2a283bb1b7c74513eff3",
+-    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "fa8bc7763e3afb76ad226e3050793ce5004b9d402dba5971652957cb49cd9fe5",
++    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "4a0ed2c718ba9fc820c5cd37c94b3c99e5db773c21c29956948d04a7cc793153",
+     "hardware/ads8588s_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod": "1fd1324e956d2ef01cbdcf56ba91b7c8da910a25fb2c2bf240ade02c0eaf73b8",
+     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod": "968d226af1efd722fdce5f7246e51edff33717b09e58dc343de4aee3430034cd",
+     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod": "016857f42b216574d2ab43807c920fca321e86aec715fb22a2893606ea9a0201",
+@@ -116,7 +116,7 @@
+     "hardware/ads8588s_servo/aux_power.kicad_sch": "f60a5c73245cb84af2bc586594b8d60dc803711acfb0f093aa2616b3b8bceff7",
+     "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "bc656f3a16278f51bb5136687888490803ef6c9e4459ec863057053b8de38c1c",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "be8b865809d2be1f9117b03cfab1249771d73c4a43924a989477b5eafac1b1d5",
+-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "5e5219ffba7c0c782a54f8f3ed9fd28e1a7aad6cb5f73d667bce068dbc38ff3b",
++    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "ad77a0bed64f7277721cfbc41dedd822feed319bd57c3f0f76da8b06e6dc5e7d",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "4440def0728d9c7c29d28ca95af08a475746a76341c8b8139f2f97f3542bd571",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
+     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "79976b7c1ad5eb4d81e3ae979b848322c182e54bc0fb7fbb9061ddc8f72b7815",
+@@ -124,7 +124,7 @@
+     "hardware/ads8588s_servo/current_adc.kicad_sch": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
+     "hardware/ads8588s_servo/encoder.kicad_sch": "484da673b6ba3a7bdcf6745ddf8cb73eb9dea6d43e749b4719def85248caa6fa",
+     "hardware/ads8588s_servo/fp-lib-table": "e3ac1d3705fdcc2ccc27134cebfae18ac8358802444f0f3950f1b09487f87f5b",
+-    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "197034a1ccbbbc3a3eb30530587a47a608f567bd42af6d82d3e8853243beae2d",
++    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "ad1560a9a3e2105b177c172cf762945765f377065e37d5ede9195851d90aed7f",
+     "hardware/ads8588s_servo/ocp_latch.kicad_sch": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+     "hardware/ads8588s_servo/power_input.kicad_sch": "14cebe67eb3de36e542153b2920c609060a701cfda47fab7ff8c9325c2268fc7",
+     "hardware/ads8588s_servo/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e",
+@@ -152,7 +152,7 @@
+     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A.kicad_mod": "c4dceaf8f8dc349013e17512bf15743c8388a13e99ff66ee32f5f07eaf20ffa7",
+     "hardware/ads8588s_servo/fpga-servo.pretty/TI_DDF0008A_SOT23_8_P0.65mm.kicad_mod": "31f67693d9580de75c711c0a66b1da341d29104e8caf8fc745e40710e3d3ea6a",
+     "hardware/ads8588s_servo/fpga-servo.pretty/Texas_DSE0006A_WSON-6_1.5x1.5mm.kicad_mod": "ee52016876a611d6781b3ba2874a9deef889c5d89454baffc1d021b979307093",
+-    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "95820f05ee8e1029499acc811b8dd2d6c47e44380968ddbcc9f17ca7dd490f48",
++    "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod": "7ac1f7b26e5b3d6178db2e1c4fc46fee4886563d7e2edc3de14206365770c858",
+     "hardware/ads8588s_servo/fpga-servo.pretty/Wurth_WE_PD_1210_7447709151.kicad_mod": "c132fd4bc9012f79d038c6eeb3c4fd5b63807d52c72d0f4b64e82bb7b6848a55",
+     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod": "c7dc40e536ddbc4683d36266837f26a651f8482ff1ba3e78907ee78f0e814f42",
+     "hardware/ads8588s_servo/manufacturing-ink-libs/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod": "03c50ea329c0159e93f8472019d0995d155bc77d3cc6ee73d0fea16e7145ce0e",
+@@ -335,5 +335,35 @@
+     }
+   },
+   "layout_previous_manifest": "hardware/ad7606c_servo/evidence/source_manifest_before_layout_adoption_2026-10-19.json",
+-  "layout_previous_manifest_sha256": "12332c67d2d4d0ede2f5e0de4ad3d3c20891ad6a59ec441a4abad9f8bde706ca"
++  "layout_previous_manifest_sha256": "12332c67d2d4d0ede2f5e0de4ad3d3c20891ad6a59ec441a4abad9f8bde706ca",
++  "native_dfm_transition": {
++    "base_commit": "b17c5c4a2cb81c58006e792a4abb4c21a761bfe7",
++    "previous_manifest": "hardware/ad7606c_servo/evidence/source_manifest_before_native_dfm_2026-10-19.json",
++    "previous_manifest_sha256": "efc800f0698b0ab10330161895b2b1ee1ccf3c238d4c1535524133b3f1b5b6c6",
++    "changes": [
++      {
++        "path": "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb",
++        "before_sha256": "e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226",
++        "after_sha256": "1bfb6b1056e3c093f15f1e6d782dba7e7071b37d2bd7af2237170ab91c23bc3f",
++        "before_lf_sha256": "5e5219ffba7c0c782a54f8f3ed9fd28e1a7aad6cb5f73d667bce068dbc38ff3b",
++        "after_lf_sha256": "ad77a0bed64f7277721cfbc41dedd822feed319bd57c3f0f76da8b06e6dc5e7d"
++      },
++      {
++        "path": "hardware/ads8588s_servo/gate_inverter.kicad_sch",
++        "before_sha256": "2389005048bb7d71e4adf9cb86ff247a5af4073b2b78a610226d5194fd315062",
++        "after_sha256": "d56a7971b58f61bf5005da1f64484f8a34f387961992832121d3e2a331a53b7d",
++        "before_lf_sha256": "197034a1ccbbbc3a3eb30530587a47a608f567bd42af6d82d3e8853243beae2d",
++        "after_lf_sha256": "ad1560a9a3e2105b177c172cf762945765f377065e37d5ede9195851d90aed7f"
++      },
++      {
++        "path": "hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod",
++        "before_sha256": "fa8bc7763e3afb76ad226e3050793ce5004b9d402dba5971652957cb49cd9fe5",
++        "after_sha256": "4a0ed2c718ba9fc820c5cd37c94b3c99e5db773c21c29956948d04a7cc793153",
++        "before_lf_sha256": "95820f05ee8e1029499acc811b8dd2d6c47e44380968ddbcc9f17ca7dd490f48",
++        "after_lf_sha256": "7ac1f7b26e5b3d6178db2e1c4fc46fee4886563d7e2edc3de14206365770c858"
++      }
++    ],
++    "authorization": "User requested actual dual-board repair and prompt staged Git/PR submission",
++    "qualification": "Native refill/cache bytes recorded separately; no original source guard removed and no fabrication signoff implied"
++  }
+ }
+diff --git a/hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb b/hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb
+index 8f1cf15..bbbbf06 100644
+--- a/hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb
++++ b/hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb
+@@ -117,8 +117,8 @@
+ 			(front no)
+ 			(back no)
+ 		)
+-		(capping no)
+-		(filling no)
++		(capping yes)
++		(filling yes)
+ 		(pcbplotparams
+ 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
+ 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
+@@ -45438,7 +45438,7 @@
+ 		(layer "F.Cu")
+ 		(uuid "a942bda9-94d4-4e46-8d56-068344a6bf6a")
+ 		(at 32 14)
+-		(descr "TI RPJ0009A 4224505/A recommended land pattern; SLVSFS7A p46; assembly qualification open")
++		(descr "TI RPJ0009A 4224505/A centers; copper pads 1-6 widened to 0.25mm for JLC; original 0.125mm-stencil apertures retained; assembly approval open")
+ 		(property "Reference" "U13"
+ 			(at -0.25 2.5 0)
+ 			(layer "F.SilkS")
+@@ -45581,8 +45581,8 @@
+ 		)
+ 		(pad "1" smd roundrect
+ 			(at -0.625 -0.25)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/PWR_GOOD")
+ 			(pinfunction "PG_1")
+@@ -45591,8 +45591,8 @@
+ 		)
+ 		(pad "2" smd roundrect
+ 			(at -0.625 0.25)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/Auxiliary Power/SW_5V")
+ 			(pinfunction "SW_2")
+@@ -45601,8 +45601,8 @@
+ 		)
+ 		(pad "3" smd roundrect
+ 			(at -0.625 0.75)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/VA_5V")
+ 			(pinfunction "VOS_3")
+@@ -45611,8 +45611,8 @@
+ 		)
+ 		(pad "4" smd roundrect
+ 			(at 0.45 0.75)
+-			(size 1 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 1 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/GND")
+ 			(pinfunction "GND_4")
+@@ -45621,8 +45621,8 @@
+ 		)
+ 		(pad "5" smd roundrect
+ 			(at 0.625 0.25)
+-			(size 0.65 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 0.65 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/VDRV_12V")
+ 			(pinfunction "EN_5")
+@@ -45631,8 +45631,8 @@
+ 		)
+ 		(pad "6" smd roundrect
+ 			(at 0.45 -0.25)
+-			(size 1 0.2)
+-			(layers "F.Cu" "F.Mask" "F.Paste")
++			(size 1 0.25)
++			(layers "F.Cu" "F.Mask")
+ 			(roundrect_rratio 0.2)
+ 			(net "/VDRV_12V")
+ 			(pinfunction "VIN_6")
+@@ -45670,7 +45670,14 @@
+ 			(uuid "b45ca1bd-2f5d-4151-a8a0-1e39683dd9a6")
+ 		)
+ 		(embedded_fonts no)
+-	)
++	
++	(pad "" smd roundrect (at -0.625 -0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "fd03aa02-c69e-589b-af59-b24b7f360c7e"))
++	(pad "" smd roundrect (at -0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "acf824a5-b404-5f51-830a-5f184034011a"))
++	(pad "" smd roundrect (at -0.625 0.75) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "abea1dd8-8cbc-5d5c-b344-478003a6c97d"))
++	(pad "" smd roundrect (at 0.45 0.75) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "d5d53aee-1bca-5ffb-8d1e-1a36e36def5f"))
++	(pad "" smd roundrect (at 0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "b647eb0a-f1a6-556a-8863-321d3a97ccc4"))
++	(pad "" smd roundrect (at 0.45 -0.25) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2) (uuid "7059d0b0-6a35-5b27-b3ee-e3e2bd493921"))
++)
+ 	(footprint "fpga-servo:TI_D0008A_SOIC8_P1.27mm"
+ 		(layer "F.Cu")
+ 		(uuid "acbe2b68-803a-458d-9760-b30a246f0211")
+diff --git a/hardware/ads8588s_servo/fabrication_profile.json b/hardware/ads8588s_servo/fabrication_profile.json
+index ccfa14a..8f706b6 100644
+--- a/hardware/ads8588s_servo/fabrication_profile.json
++++ b/hardware/ads8588s_servo/fabrication_profile.json
+@@ -58,6 +58,9 @@
+     "motor_connector_process": "Controlled circular finished diameter1.80..1.90mm; special ENIG multilayer +/-0.05 process; explicit manufacturer acceptance before order",
+     "via_covering": "Type VII epoxy filled and copper capped (POFV)",
+     "via_process": "Paid four-layer POFV; all electrical through vias, including in-pad thermal vias; actual drill range and final UUID/XY map must be verified from frozen CAD. No assumption of ink plugging or simple tenting equivalence.",
+-    "stencil_thickness_mm": 0.125
++    "stencil_thickness_mm": 0.125,
++    "min_smd_copper_pad_mm": 0.25,
++    "via_fill_material": "nonconductive_epoxy",
++    "rpj_land_note": "U13 copper pads 1-6 are 0.25mm; original 0.20mm paste apertures and TI 0.125mm stencil retained. No automatic supplier approval."
+   }
+ }
+diff --git a/hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod b/hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod
+index 727cf6e..85dea7f 100644
+--- a/hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod
++++ b/hardware/ads8588s_servo/fpga-servo.pretty/Texas_RPJ0009A_VQFN-HR-9_1.5x2mm.kicad_mod
+@@ -1,16 +1,23 @@
+-(footprint "Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (version 20260206) (generator "pcbnew") (layer "F.Cu") (descr "TI RPJ0009A 4224505/A recommended land pattern; SLVSFS7A p46; assembly qualification open") (attr smd)
++(footprint "Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (version 20260206) (generator "pcbnew") (layer "F.Cu") (descr "TI RPJ0009A 4224505/A centers; copper pads 1-6 widened to 0.25mm for JLC; original 0.125mm-stencil apertures retained; assembly approval open") (attr smd)
+ (property "Reference" "REF**" (at 0 -2 0) (layer "F.SilkS") (effects (font (size 1.0 1.0) (thickness 0.15))))
+ (property "Value" "Texas_RPJ0009A_VQFN-HR-9_1.5x2mm" (at 0 2 0) (layer "F.Fab") (effects (font (size 0.8 0.8) (thickness 0.1))))
+ (fp_rect (start -0.75 -1.0) (end 0.75 1.0) (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab"))
+ (fp_rect (start -1.2 -1.45) (end 1.2 1.25) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+ (fp_circle (center -1.1 -1.15) (end -1.025 -1.15) (stroke (width 0.15) (type default)) (fill none) (layer "F.SilkS"))
+-(pad "1" smd roundrect (at -0.625 -0.25) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "2" smd roundrect (at -0.625 0.25) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "3" smd roundrect (at -0.625 0.75) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "4" smd roundrect (at 0.45 0.75) (size 1 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "5" smd roundrect (at 0.625 0.25) (size 0.65 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+-(pad "6" smd roundrect (at 0.45 -0.25) (size 1 0.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
++(pad "1" smd roundrect (at -0.625 -0.25) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "2" smd roundrect (at -0.625 0.25) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "3" smd roundrect (at -0.625 0.75) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "4" smd roundrect (at 0.45 0.75) (size 1 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "5" smd roundrect (at 0.625 0.25) (size 0.65 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
++(pad "6" smd roundrect (at 0.45 -0.25) (size 1 0.25) (layers "F.Cu" "F.Mask") (roundrect_rratio 0.2))
+ (pad "7" smd roundrect (at 0.5 -0.925) (size 0.25 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+ (pad "8" smd roundrect (at 0 -0.925) (size 0.25 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+ (pad "9" smd roundrect (at -0.5 -0.925) (size 0.25 0.55) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
++
++	(pad "" smd roundrect (at -0.625 -0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at -0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at -0.625 0.75) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at 0.45 0.75) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at 0.625 0.25) (size 0.65 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
++	(pad "" smd roundrect (at 0.45 -0.25) (size 1 0.2) (layers "F.Paste") (roundrect_rratio 0.2))
+ )
+diff --git a/hardware/ads8588s_servo/gate_inverter.kicad_sch b/hardware/ads8588s_servo/gate_inverter.kicad_sch
+index f33d5f8..31b20a0 100644
+--- a/hardware/ads8588s_servo/gate_inverter.kicad_sch
++++ b/hardware/ads8588s_servo/gate_inverter.kicad_sch
+@@ -6103,13 +6103,12 @@
+ 		(uuid "c6f391cb-5102-4755-a95e-5ca27476f06f")
+ 	)
+ (wire (pts (xy 73.66 179.07) (xy 73.66 194.31)) (stroke (width 0.1524) (type default)) (uuid "194650a1-18cd-41d5-aff0-1980435f54e3"))
+-(wire (pts (xy 43.18 194.31) (xy 43.18 196.85)) (stroke (width 0.1524) (type default)) (uuid "c922530a-3c3f-4ece-935a-b8851c143886"))
+ (wire (pts (xy 43.18 194.31) (xy 73.66 194.31)) (stroke (width 0.1524) (type default)) (uuid "3a36a75f-53d3-4b7e-a266-c5f286a0a9c8"))
+-(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 43.18 196.85 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "4d620b0c-a868-4114-9ba4-8721c79b2e55")
+-(property "Reference" "#PWR923" (at 43.18 196.85 0) (effects (font (size 1 1)) (hide yes)))
+-(property "Value" "/GND" (at 43.18 196.85 0) (effects (font (size 1 1)) (hide yes)))
++(symbol (lib_id "ax7010_servo_reva:PWR_GND") (at 43.18 194.31 0) (unit 1) (in_bom no) (on_board no) (in_pos_files no) (uuid "4d620b0c-a868-4114-9ba4-8721c79b2e55")
++(property "Reference" "#PWR923" (at 43.18 194.31 0) (effects (font (size 1 1)) (hide yes)))
++(property "Value" "/GND" (at 43.18 194.31 0) (effects (font (size 1 1)) (hide yes)))
+ (pin "1" (uuid "148b4475-80ef-4c67-a9d2-43ee126a1749")) (instances (project "ax7010_servo_reva" (path "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003" (reference "#PWR923") (unit 1)))))
+-(label "GND" (at 43.18 196.85 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "40380b5f-5411-4269-853b-915629e2723a"))
++(label "GND" (at 43.18 194.31 0) (effects (font (size 1 1)) (justify left bottom)) (uuid "40380b5f-5411-4269-853b-915629e2723a"))
+ (wire (pts (xy 22.86 177.8) (xy 25.4 177.8)) (stroke (width 0.1524) (type default)) (uuid "62971b51-a313-4f1c-81e8-aa1169b80014"))
+ (hierarchical_label "PWR_READY" (shape input) (at 22.86 177.8 0) (effects (font (size 1 1)) (justify right)) (uuid "21ba77bf-2afa-4b33-8968-6cb3b4a7e22a"))
+ (wire (pts (xy 60.96 177.8) (xy 63.5 177.8)) (stroke (width 0.1524) (type default)) (uuid "b0073f60-0f6c-4707-931f-a8043f65b7ee"))
+diff --git a/tools/pcbtools/board.py b/tools/pcbtools/board.py
+index 84fdf69..5aa45b1 100644
+--- a/tools/pcbtools/board.py
++++ b/tools/pcbtools/board.py
+@@ -222,3 +222,62 @@ def check_board(project, netlist=None):
+             errors = [f"invalid netclass evidence: {exc}"]
+         findings.append(Finding("pcb.netclasses", "FAIL" if errors else "PASS", "; ".join(errors) if errors else "Fresh net assignments and original class minima", {"errors": errors}))
+     return findings
++
++
++def non_fill_design_signature(text):
++    """Strict design fingerprint for native zone-cache regeneration.
++
++    Only generated zone polygons and generator identity are excluded. Physical
++    zone outlines, routing, footprints, nets, pads, mechanics and rules remain
++    in the fingerprint. Refilling is not authorized to move or drop them.
++    """
++    import hashlib
++    import json
++    from decimal import Decimal, InvalidOperation
++    import re
++
++    tokens = re.findall(r'"(?:\\.|[^"\\])*"|[()]|[^\s()"]+', text)
++    cursor = 0
++
++    def parse():
++        nonlocal cursor
++        if cursor >= len(tokens) or tokens[cursor] != '(':
++            raise ValueError('Expected complete native PCB expression')
++        cursor += 1
++        node = []
++        while cursor < len(tokens) and tokens[cursor] != ')':
++            token = tokens[cursor]
++            if token == '(':
++                node.append(parse())
++            else:
++                cursor += 1
++                if not token.startswith('"'):
++                    try:
++                        value = Decimal(token)
++                        if not value.is_finite():
++                            raise ValueError('Nonfinite native PCB value')
++                        token = format(value.normalize(), 'f')
++                    except InvalidOperation:
++                        pass
++                node.append(token)
++        if cursor >= len(tokens) or not node:
++            raise ValueError('Truncated or empty PCB expression')
++        cursor += 1
++        return node
++
++    root = parse()
++    if cursor != len(tokens) or root[0] != 'kicad_pcb' or len(root) < 2:
++        raise ValueError('Incomplete native PCB root')
++
++    def stable(node):
++        if not isinstance(node, list):
++            return node
++        return [stable(child) for child in node
++                if not isinstance(child, list) or child[0] not in
++                {'filled_polygon', 'generator', 'generator_version'}]
++
++    cleaned = stable(root)
++    # KiCad may reorder independent top-level objects when serializing. Do not
++    # sort inner polygons/points or layer-stack sequences, which are ordered.
++    cleaned[1:] = sorted(cleaned[1:], key=lambda node: json.dumps(node))
++    return hashlib.sha256(json.dumps(cleaned, ensure_ascii=False, separators=(',', ':')).encode()).hexdigest()
+diff --git a/tools/pcbtools/rules/__init__.py b/tools/pcbtools/rules/__init__.py
+index 6b72390..c1dddd0 100644
+--- a/tools/pcbtools/rules/__init__.py
++++ b/tools/pcbtools/rules/__init__.py
+@@ -89,6 +89,8 @@ def run_rules(project, scope, inputs):
+         from ..board import corners_api
+         board_text=project.board.read_text(encoding="utf-8")
+         check("pcb.vendor_lands",lambda:vendor_api().check(board_text))
++        from .fabrication_intent import check_project as check_fabrication_intent
++        check("pcb.manufacturing_intent", lambda: check_fabrication_intent(project))
+         rules=project.board.with_suffix(".kicad_dru").read_text(encoding="utf-8")
+         check("pcb.internal_pad_rules",lambda:vendor_api().check_internal_pad_rules(rules))
+         if inputs.get("netlist"):
+diff --git a/tools/pcbtools/rules/fabrication_intent.py b/tools/pcbtools/rules/fabrication_intent.py
+new file mode 100644
+index 0000000..9eff4be
+--- /dev/null
++++ b/tools/pcbtools/rules/fabrication_intent.py
+@@ -0,0 +1,107 @@
++"""Validate real copper/paste and IPC-4761 intent, not supplier order acceptance."""
++import json
++import math
++import re
++from pathlib import Path
++from ..kicad import direct_child_forms, extract_forms, head_string, property_value
++
++RPJ = 'Texas_RPJ0009A_VQFN-HR-9_1.5x2mm'
++# TI 4224505/A centers, original stencil apertures. Copper-only ECO widens 1..6.
++RPJ_PADS = {
++    '1': (-.625, -.25, .65, .2), '2': (-.625, .25, .65, .2),
++    '3': (-.625, .75, .65, .2), '4': (.45, .75, 1., .2),
++    '5': (.625, .25, .65, .2), '6': (.45, -.25, 1., .2),
++    '7': (.5, -.925, .25, .55), '8': (0., -.925, .25, .55),
++    '9': (-.5, -.925, .25, .55),
++}
++
++
++def _geometry(pad):
++    a = direct_child_forms(pad, 'at')
++    s = direct_child_forms(pad, 'size')
++    if len(a) != 1 or len(s) != 1:
++        raise ValueError('Pad has ambiguous position/size')
++    xy = re.fullmatch(r'\(at\s+([-+\d.eE]+)\s+([-+\d.eE]+)(?:\s+(0(?:\.0+)?))?\)', a[0].text)
++    wh = re.fullmatch(r'\(size\s+([-+\d.eE]+)\s+([-+\d.eE]+)\)', s[0].text)
++    if not xy or not wh:
++        raise ValueError('Unsupported RPJ local pad geometry')
++    result = tuple(float(v) for v in (xy[1], xy[2], wh[1], wh[2]))
++    if not all(math.isfinite(v) for v in result) or min(result[2:]) <= 0:
++        raise ValueError('Invalid pad dimensions')
++    return result
++
++
++def rpj_errors(footprint):
++    pads = extract_forms(footprint, 'pad')
++    copper, paste = {}, []
++    errors = []
++    for pad in pads:
++        layers = direct_child_forms(pad.text, 'layers')
++        if len(layers) != 1:
++            errors.append('RPJ ambiguous pad layers'); continue
++        layers = re.findall(r'"([^"]+)"', layers[0].text)
++        geom = _geometry(pad.text)
++        pin = head_string(pad.text, 'pad')
++        if 'F.Cu' in layers:
++            if pin not in RPJ_PADS or pin in copper:
++                errors.append('RPJ duplicated or unexpected copper pad')
++            copper[pin] = geom
++            if 'F.Mask' not in layers:
++                errors.append('RPJ copper pad must retain mask opening')
++        elif pin or layers != ['F.Paste'] or direct_child_forms(pad.text, 'net'):
++            errors.append('RPJ paste-only apertures must be unnumbered and netless')
++        if 'F.Paste' in layers:
++            radius = direct_child_forms(pad.text, 'roundrect_rratio')
++            if len(radius) != 1 or radius[0].text != '(roundrect_rratio 0.2)':
++                errors.append('RPJ original paste corner radius changed')
++            paste.append(geom)
++    expected = {pin: (*g[:3], .25 if int(pin) <= 6 else g[3]) for pin, g in RPJ_PADS.items()}
++    if copper != expected:
++        errors.append('RPJ copper ECO must retain centers/pin identities and 0.25mm minimum')
++    if sorted(paste) != sorted(RPJ_PADS.values()):
++        errors.append('RPJ original stencil apertures must be preserved exactly')
++    return errors
++
++
++def board_errors(text, minimum=.25):
++    errors = []
++    setup = direct_child_forms(text, 'setup')
++    if len(setup) != 1:
++        return ['Missing or ambiguous native PCB setup']
++    for key in ('filling', 'capping'):
++        fields = direct_child_forms(setup[0].text, key)
++        if len(fields) != 1 or fields[0].text != f'({key} yes)':
++            errors.append(f'Type VII requires native {key}=yes, not mask tenting alone')
++    for via in extract_forms(text, 'via'):
++        for key in ('filling', 'capping'):
++            fields = direct_child_forms(via.text, key)
++            if len(fields) > 1 or fields and fields[0].text != f'({key} yes)':
++                errors.append(f'Via override disables Type VII {key}')
++    for footprint in extract_forms(text, 'footprint'):
++        ref = property_value(footprint.text, 'Reference')
++        for pad in extract_forms(footprint.text, 'pad'):
++            if not re.match(r'\(pad\s+"[^"]*"\s+smd\s', pad.text):
++                continue
++            layers = direct_child_forms(pad.text, 'layers')
++            if not layers or not any(x in layers[0].text for x in ('"F.Cu"', '"B.Cu"')):
++                continue
++            size = direct_child_forms(pad.text, 'size')
++            numbers = re.findall(r'[-+]?\d+(?:\.\d+)?', size[0].text) if len(size) == 1 else []
++            if len(numbers) != 2 or min(map(float, numbers)) + 1e-9 < minimum:
++                errors.append(f'{ref}.{head_string(pad.text, "pad")}: SMD copper below {minimum}mm fab minimum')
++        if ref == 'U13':
++            errors.extend(rpj_errors(footprint.text))
++    return errors
++
++
++def check_project(project):
++    profile = json.loads((project.schematic.parent / 'fabrication_profile.json').read_text())
++    requirements = profile.get('manufacturing_requirements', {})
++    if requirements.get('min_smd_copper_pad_mm') != .25:
++        return ['Selected JLC SMD copper minimum must remain explicit at 0.25mm']
++    if requirements.get('via_fill_material') != 'nonconductive_epoxy':
++        return ['Type VII fill material must be explicit; KiCad fill flag is not a material approval']
++    errors = board_errors(project.board.read_text(), .25)
++    library = project.schematic.parent / 'fpga-servo.pretty' / (RPJ + '.kicad_mod')
++    errors.extend(rpj_errors(library.read_text()))
++    return errors
+diff --git a/tools/tests/test_pcb_fabrication_intent.py b/tools/tests/test_pcb_fabrication_intent.py
+new file mode 100644
+index 0000000..a15702c
+--- /dev/null
++++ b/tools/tests/test_pcb_fabrication_intent.py
+@@ -0,0 +1,109 @@
++"""Manufactured copper and via treatments must match the actual selected process."""
++from pathlib import Path
++import re
++import sys
++import unittest
++sys.path.append(str(Path(__file__).resolve().parents[1]))
++from pcbtools.rules.fabrication_intent import board_errors, rpj_errors, check_project
++from pcbtools.project import resolve_project
++from pcbtools.kicad import extract_forms, direct_child_forms, head_string, property_value
++
++
++class FabricationIntentTests(unittest.TestCase):
++    def test_both_actual_boards_specify_full_fill_and_copper_cap(self):
++        for name in ('ads8588s', 'ad7606c'):
++            project = resolve_project(name)
++            setup = extract_forms(project.board.read_text(), 'setup')[0].text
++            with self.subTest(project=name):
++                self.assertEqual([f.text for f in direct_child_forms(setup, 'filling')], ['(filling yes)'])
++                self.assertEqual([f.text for f in direct_child_forms(setup, 'capping')], ['(capping yes)'])
++
++    def test_both_u13_lands_are_not_below_fab_minimum(self):
++        for name in ('ads8588s', 'ad7606c'):
++            project = resolve_project(name)
++            footprint = next(f.text for f in extract_forms(project.board.read_text(), 'footprint')
++                             if property_value(f.text, 'Reference') == 'U13')
++            for pad in extract_forms(footprint, 'pad'):
++                if head_string(pad.text, 'pad'):
++                    size = re.search(r'\(size ([\d.]+) ([\d.]+)\)', pad.text)
++                    with self.subTest(project=name, pad=head_string(pad.text, 'pad')):
++                        self.assertGreaterEqual(min(float(size[1]), float(size[2])), .25)
++
++    def test_original_stencil_is_separate_from_enlarged_copper(self):
++        for name in ('ads8588s', 'ad7606c'):
++            project = resolve_project(name)
++            footprint = next(f.text for f in extract_forms(project.board.read_text(), 'footprint')
++                             if property_value(f.text, 'Reference') == 'U13')
++            paste_only = [p for p in extract_forms(footprint, 'pad')
++                          if head_string(p.text, 'pad') == '' and '"F.Paste"' in p.text]
++            with self.subTest(project=name):
++                self.assertEqual(len(paste_only), 6)
++                self.assertTrue(all(re.search(r'\(size (?:0.65|1) 0.2\)', p.text) for p in paste_only))
++
++class FabricationIntentNegativeTests(unittest.TestCase):
++    @classmethod
++    def setUpClass(cls):
++        cls.project = resolve_project('ads8588s')
++        cls.board = cls.project.board.read_text()
++        cls.rpj = next(f.text for f in extract_forms(cls.board, 'footprint')
++                       if property_value(f.text, 'Reference') == 'U13')
++
++    def test_both_current_projects_pass_the_integrated_guard(self):
++        for name in ('ads8588s', 'ad7606c'):
++            with self.subTest(project=name):
++                self.assertEqual(check_project(resolve_project(name)), [])
++
++    def test_global_tenting_cannot_replace_filling_or_capping(self):
++        for key in ('filling', 'capping'):
++            bad = self.board.replace(f'({key} yes)', f'({key} no)', 1)
++            with self.subTest(key=key):
++                self.assertTrue(any(key in e for e in board_errors(bad)))
++
++    def test_per_via_no_override_cannot_hide_behind_global_yes(self):
++        via = extract_forms(self.board, 'via')[0].text
++        for key in ('filling', 'capping'):
++            replacement = via[:-1] + f'\n({key} no))'
++            bad = self.board.replace(via, replacement, 1)
++            with self.subTest(key=key):
++                self.assertTrue(any('override' in e for e in board_errors(bad)))
++
++    def test_small_generic_copper_is_not_exempted(self):
++        bad = self.board.replace('(size 0.65 0.25)', '(size 0.65 0.2)', 1)
++        self.assertTrue(any('below' in e for e in board_errors(bad)))
++
++    def test_enlarging_stencil_with_copper_is_rejected(self):
++        bad = self.rpj.replace('(size 0.65 0.2)', '(size 0.65 0.25)', 1)
++        self.assertTrue(any('stencil' in e for e in rpj_errors(bad)))
++
++    def test_displacing_copper_from_oem_terminal_center_is_rejected(self):
++        bad = self.rpj.replace('(at -0.625 -0.25)', '(at -0.525 -0.25)', 1)
++        self.assertTrue(any('centers' in e for e in rpj_errors(bad)))
++
++    def test_paste_apertures_cannot_acquire_electrical_pin_numbers(self):
++        bad = self.rpj.replace('(pad "" smd', '(pad "10" smd', 1)
++        self.assertTrue(any('unnumbered' in e for e in rpj_errors(bad)))
++
++    def test_missing_paste_aperture_is_rejected(self):
++        pad = next(p.text for p in extract_forms(self.rpj, 'pad')
++                   if head_string(p.text, 'pad') == '')
++        self.assertTrue(any('stencil' in e for e in rpj_errors(self.rpj.replace(pad, '', 1))))
++
++
++class ZoneCacheEquivalenceTests(unittest.TestCase):
++    def test_only_native_fill_cache_and_generator_can_change(self):
++        from pcbtools.board import non_fill_design_signature
++        before = '(kicad_pcb (generator pcbnew) (generator_version "10.0.3") (segment (start 1 2) (end 3 4) (width 0.25)) (zone (net 1) (polygon (pts (xy 0 0) (xy 1 0))) (filled_polygon (layer "F.Cu") (pts (xy 0 0) (xy 1 0)))))'
++        after = before.replace('10.0.3', '10.0.7').replace('(filled_polygon (layer "F.Cu") (pts (xy 0 0) (xy 1 0)))', '(filled_polygon (layer "F.Cu") (pts (xy .5 0) (xy 1 0)))')
++        self.assertEqual(non_fill_design_signature(before), non_fill_design_signature(after))
++        for bad in (after.replace('(width 0.25)', '(width 0.20)'), after.replace('(net 1)', '(net 2)'), after.replace('(polygon (pts (xy 0 0)', '(polygon (pts (xy 0.1 0)')):
++            self.assertNotEqual(non_fill_design_signature(before), non_fill_design_signature(bad))
++
++    def test_invalid_or_empty_board_is_not_equivalent(self):
++        from pcbtools.board import non_fill_design_signature
++        for value in ('', '(kicad_pcb', '(something_else)', '(kicad_pcb) garbage'):
++            with self.subTest(value=value), self.assertRaises(ValueError):
++                non_fill_design_signature(value)
++
++
++if __name__ == "__main__":
++    unittest.main()
