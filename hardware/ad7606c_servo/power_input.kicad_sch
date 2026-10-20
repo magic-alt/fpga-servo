@@ -4171,12 +4171,20 @@
 
 (junction (at 199.39 81.28) (diameter 0.635) (color 0 0 0 0) (uuid "7ca953d2-0a5e-45a9-a760-6623635f176c"))
 
-(sheet (at 179.07 90.17) (size 45.72 12.7) (stroke (width 0.1524) (type default)) (fill (color 0 0 0 0)) (uuid "a752146c-1df6-48f2-b11c-d2ae65ddbc28")
-(property "Sheetname" "DC Link Bank" (at 179.07 88.265 0) (effects (font (size 1.016 1.016)) (justify left bottom)))
-(property "Sheetfile" "dc_link.kicad_sch" (at 204.47 104.775 0) (effects (font (size 1.016 1.016)) (justify left top)))
-(pin "VBUS_PROT" input (at 179.07 93.98 180) (effects (font (size 1.016 1.016)) (justify left)) (uuid "266ffaf2-1d1e-4c22-a16b-11588136286f"))
-(pin "GND" bidirectional (at 224.79 97.79 0) (effects (font (size 1.016 1.016)) (justify right)) (uuid "7e1250c5-9d1c-49a3-9e3f-d41d868b1920"))
-(instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (page "3")))))
+(symbol (lib_id "ax7010_servo_reva:TERM2") (at 201.93 96.52 0) (unit 1) (in_bom yes) (on_board yes) (in_pos_files yes) (dnp no) (uuid "8b7a0103-0807-45ad-9d4b-a1982ff6a159")
+(property "Reference" "J7" (at 209.55 88.9 0) (effects (font (size 1.016 1.016))))
+(property "Value" "EXT_DC_LINK" (at 201.93 105.41 0) (effects (font (size 1.016 1.016))))
+(property "Footprint" "fpga-servo:PhoenixContact_MKDS_5_2_9.52mm" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Datasheet" "https://www.phoenixcontact.com/en-us/products/1714971" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Manufacturer" "Phoenix Contact(菲尼克斯)" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "MPN" "1714971" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "LCSC" "C92145" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Sourcing_Status" "External capacitor and bleeder interface; protected bus; independent branch protection required; hardware qualification OPEN" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_MPN" "UNQUALIFIED" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(property "Alternative_Status" "UNQUALIFIED" (at 201.93 96.52 0) (effects (font (size 1.016 1.016)) (hide yes) (justify left)))
+(pin "1" (uuid "d1a3b8f7-7e05-4681-b1b2-ac50c3093ebf"))
+(pin "2" (uuid "c3c376e5-e92c-45c6-876c-ea183cb37367"))
+(instances (project "ax7010_servo_ad7606c" (path "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4" (reference "J7") (unit 1)))))
 
 (junction (at 142.24 93.98) (diameter 0.635) (color 0 0 0 0) (uuid "927576bd-dee9-4288-9eb7-dc8a4ed3e1ca"))
 
@@ -4185,4 +4193,15 @@
 (wire (pts (xy 142.24 93.98) (xy 179.07 93.98)) (stroke (width 0.1524) (type default)) (uuid "90b34bdc-c79e-4d58-a9d8-4e1b3c81a1dc"))
 
 (wire (pts (xy 224.79 97.79) (xy 231.14 97.79)) (stroke (width 0.1524) (type default)) (uuid "678e63fd-53fc-43f9-ad70-764790fa470f"))
+
+(wire (pts (xy 179.07 93.98) (xy 179.07 96.52)) (stroke (width 0.1524) (type default)) (uuid "f77167b4-ceff-4e4f-9f8c-77fc50964ba8"))
+(wire (pts (xy 179.07 96.52) (xy 187.96 96.52)) (stroke (width 0.1524) (type default)) (uuid "cf541844-bbf3-4d75-a314-c7f5522817c6"))
+(wire (pts (xy 215.9 96.52) (xy 224.79 96.52)) (stroke (width 0.1524) (type default)) (uuid "3e2c1e24-edaf-4dc8-b59e-16ad8b742fb9"))
+(wire (pts (xy 224.79 96.52) (xy 224.79 97.79)) (stroke (width 0.1524) (type default)) (uuid "92a60942-6a63-4ce9-903c-de5262fac996"))
+
+(text "J7: + pin 1 / - pin 2" (at 248.92 97.79 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "e42ab5a7-047b-4405-919b-806d2e386819"))
+(text "J7 bypasses F1: external branch needs its own fuse, current limit and disconnect. Bleeder is NOT a regeneration sink." (at 15.24 176.53 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "5c3870f9-a6e8-4290-92cc-ee2f1a296cf4"))
+(text "External capacitor and bleeder stay connected until discharged; verify bus <5V before disconnecting." (at 15.24 181.61 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "86b20e97-3575-414b-8dc6-1390a89541ad"))
+
+(text "External CAP + BLEEDER" (at 248.92 101.6 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "c7b4068a-4242-4a0a-9b7b-fbd65ccd8fba"))
 )

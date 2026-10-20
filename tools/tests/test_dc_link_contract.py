@@ -32,6 +32,67 @@ def fixture():
 
 
 class DCLinkTests(unittest.TestCase):
+    def external_fixture(self):
+        profile = {'mode': 'EXTERNAL_CAPACITOR_BLEEDER',
+                   'continuous_phase_arms': 10.0, 'peak_phase_amplitude_a': 20.0,
+                   'peak_duration_s': 30, 'waveform': 'BALANCED_SINUSOIDAL',
+                   'branches': [], 'waveform_allowance': 1.1,
+                   'qualification_status': 'STATIC_DESIGN_ONLY_BENCH_OPEN',
+                   'external_requirements': {
+                       'nominal_capacitance_uf': 1000, 'minimum_effective_capacitance_uf': 800,
+                       'maximum_capacitance_uf': 1200, 'minimum_voltage_rating_v': 100,
+                       'minimum_ripple_current_arms': 11, 'maximum_bus_voltage_v': 60,
+                       'discharge_target_v': 5, 'maximum_discharge_time_s': 10,
+                       'bleeder_resistance_ohm': 2200, 'bleeder_tolerance': .05,
+                       'bleeder_minimum_hot_power_w': 3.5,
+                       'independent_branch_protection_required': True,
+                       'remain_connected_until_discharged': True,
+                       'bleeder_is_not_regeneration_sink': True}}
+        parts = {'J7': {'MPN': '1714971', 'Value': 'EXT_DC_LINK'},
+                 'C3': {'Value': '1uF'}, 'C4': {'Value': '100nF'}}
+        pins = {('J7', '1'): '/VBUS_PROT', ('J7', '2'): '/GND',
+                ('RSH4', '1'): '/VBUS_PROT', ('RSH4', '2'): '/VBUS_BRIDGE',
+                ('C3', '1'): '/VBUS_PROT', ('C3', '2'): '/GND',
+                ('C4', '1'): '/VBUS_PROT', ('C4', '2'): '/GND'}
+        return profile, parts, pins
+
+    def test_external_network_requires_one_protected_bus_interface_and_no_bank(self):
+        profile, parts, pins = self.external_fixture()
+        result, errors = evaluate(profile)
+        self.assertEqual(errors, [])
+        self.assertEqual(result['required_external_ripple_arms'], 11)
+        self.assertLess(result['bleeder_worst_discharge_time_s'], 10)
+        self.assertEqual(physical_errors(profile, parts, pins), [])
+        parts['C120'] = {'Value': '100uF'}
+        self.assertTrue(physical_errors(profile, parts, pins))
+
+    def test_external_interface_cannot_bypass_shunt_or_reverse_protection(self):
+        profile, parts, pins = self.external_fixture()
+        for net in ('/VBUS_BRIDGE', '/power_input/VIN_RAW'):
+            pins['J7', '1'] = net
+            self.assertTrue(physical_errors(profile, parts, pins))
+
+    def test_external_mode_cannot_remove_local_hf_bypass_or_add_second_interface(self):
+        profile, parts, pins = self.external_fixture()
+        del pins['C4', '1']
+        self.assertTrue(physical_errors(profile, parts, pins))
+        profile, parts, pins = self.external_fixture()
+        parts['J8'] = {'Value': 'EXT_DC_LINK'}
+        self.assertTrue(physical_errors(profile, parts, pins))
+
+    def test_external_budget_cannot_claim_qualified_or_omit_discharge_and_ripple(self):
+        for key, value in [('minimum_ripple_current_arms', 1),
+                           ('bleeder_resistance_ohm', 1e6),
+                           ('bleeder_minimum_hot_power_w', .25),
+                           ('independent_branch_protection_required', False),
+                           ('bleeder_is_not_regeneration_sink', False)]:
+            profile, _, _ = self.external_fixture()
+            profile['external_requirements'][key] = value
+            self.assertTrue(evaluate(profile)[1], key)
+        profile, _, _ = self.external_fixture()
+        profile['qualification_status'] = 'QUALIFIED'
+        self.assertTrue(evaluate(profile)[1])
+
     def test_damped_bank_has_stated_ripple_and_hot_resistor_margin(self):
         profile, parts, pins = fixture()
         result, errors = evaluate(profile)

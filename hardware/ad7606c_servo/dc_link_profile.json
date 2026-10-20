@@ -1,52 +1,26 @@
 {
+  "mode": "EXTERNAL_CAPACITOR_BLEEDER",
   "continuous_phase_arms": 10.0,
   "peak_phase_amplitude_a": 20.0,
   "peak_duration_s": 30,
   "waveform": "BALANCED_SINUSOIDAL",
-  "branches": [
-    {
-      "capacitor": "C1",
-      "resistor": "R120"
-    },
-    {
-      "capacitor": "C2",
-      "resistor": "R121"
-    },
-    {
-      "capacitor": "C120",
-      "resistor": "R122"
-    },
-    {
-      "capacitor": "C121",
-      "resistor": "R123"
-    },
-    {
-      "capacitor": "C122",
-      "resistor": "R124"
-    },
-    {
-      "capacitor": "C123",
-      "resistor": "R125"
-    },
-    {
-      "capacitor": "C124",
-      "resistor": "R126"
-    },
-    {
-      "capacitor": "C125",
-      "resistor": "R127"
-    },
-    {
-      "capacitor": "C126",
-      "resistor": "R128"
-    },
-    {
-      "capacitor": "C127",
-      "resistor": "R129"
-    }
-  ],
-  "sharing_factor": 0.8,
+  "branches": [],
   "waveform_allowance": 1.1,
-  "resistor_hot_power_limit_w": 0.708,
-  "qualification_status": "STATIC_DESIGN_ONLY_BENCH_OPEN"
+  "qualification_status": "STATIC_DESIGN_ONLY_BENCH_OPEN",
+  "external_requirements": {
+    "nominal_capacitance_uf": 1000,
+    "minimum_effective_capacitance_uf": 800,
+    "maximum_capacitance_uf": 1200,
+    "minimum_voltage_rating_v": 100,
+    "minimum_ripple_current_arms": 11,
+    "maximum_bus_voltage_v": 60,
+    "discharge_target_v": 5,
+    "maximum_discharge_time_s": 10,
+    "bleeder_resistance_ohm": 2200,
+    "bleeder_tolerance": 0.05,
+    "bleeder_minimum_hot_power_w": 3.5,
+    "independent_branch_protection_required": true,
+    "remain_connected_until_discharged": true,
+    "bleeder_is_not_regeneration_sink": true
+  }
 }

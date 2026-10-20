@@ -37,7 +37,7 @@ def source_hashes(project):
                 if any(part==".env" or part.startswith(".env.") or part in {".history","__pycache__"} for part in path.parts): continue
                 if path.suffix in {".pyc",".kicad_prl",".lck"} or path.is_relative_to(project.output): continue
                 paths.add(path)
-    return {str(p.relative_to(project.root)) if p.is_relative_to(project.root) else p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+    return {p.relative_to(project.root).as_posix() if p.is_relative_to(project.root) else p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
 
 
 def save_run(report,out):

@@ -1,0 +1,46 @@
+{
+  "removed_references": [
+    "C1",
+    "C120",
+    "C121",
+    "C122",
+    "C123",
+    "C124",
+    "C125",
+    "C126",
+    "C127",
+    "C2",
+    "R120",
+    "R121",
+    "R122",
+    "R123",
+    "R124",
+    "R125",
+    "R126",
+    "R127",
+    "R128",
+    "R129"
+  ],
+  "retained_pin_memberships_exactly_preserved": true,
+  "allowed_identity_changes": [
+    [
+      "J7",
+      "value",
+      "EXT_SINK",
+      "EXT_DC_LINK"
+    ],
+    [
+      "J7",
+      "Sourcing_Status",
+      "Dedicated protected-bus sink; no onboard brake; external clamp qualification OPEN",
+      "External capacitor and bleeder interface; protected bus; independent branch protection required; hardware qualification OPEN"
+    ]
+  ],
+  "external_static_budget": {
+    "required_external_ripple_arms": 11.0,
+    "bleeder_worst_discharge_time_s": 6.888161233212337,
+    "bleeder_worst_initial_power_w": 1.722488038277512,
+    "maximum_stored_energy_j": 2.1599999999999997
+  },
+  "source_scope": "AD7606C only; retained ADS8588S circuit unchanged"
+}

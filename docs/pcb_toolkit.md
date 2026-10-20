@@ -45,6 +45,8 @@ snapshot 默认预览；apply 只生成不覆盖的项目源副本和 SHA-256 �
 
 项目 `parameters.fabrication_profile` 声明仓库根目录相对的 JSON 文件；不把它或审阅文件加入 `source_files`，以免形成循环摘要。其结构为：
 
+冻结流程会将制造配置作为单独绑定的输入复制并校验，供快照中的制造意图检查使用；这不将审核注册表加入设计哈希。Windows 下运行测试建议明确使用 `python -X utf8`，并用带 `pcbnew` 的解释器执行原生几何通道。制造复审的 PDF/CAM 依赖也须在实际执行它们的解释器中可用，缺失依赖会明确失败。
+
 ```json
 {
   "schema_version": 1,

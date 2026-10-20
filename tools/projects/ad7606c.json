@@ -17,7 +17,12 @@
     "dc_link"
   ],
   "parameters": {
-    "reserved_ground_layers": [{"layer": "In1.Cu", "net": "/GND"}],
+    "reserved_ground_layers": [
+      {
+        "layer": "In1.Cu",
+        "net": "/GND"
+      }
+    ],
     "adc_body_digital_exclusion": {
       "reference": "U6",
       "mpn": "AD7606C-16BSTZ",
@@ -187,6 +192,9 @@
         "Manufacturer": "Murata",
         "MPN": "GRM1885C1H332JA01D",
         "LCSC": "C77036"
+      },
+      "J7": {
+        "value": "EXT_DC_LINK"
       }
     },
     "require_explicit_wire_junctions": true,
@@ -224,17 +232,7 @@
         "/VBUS_ADC": "ANALOG",
         "/IU_ADC": "ANALOG",
         "/IV_ADC": "ANALOG",
-        "/IW_ADC": "ANALOG",
-        "/power_input/DC Link Bank/DC_LINK_C1_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C2_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C120_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C121_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C122_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C123_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C124_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C125_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C126_P": "POWER",
-        "/power_input/DC Link Bank/DC_LINK_C127_P": "POWER"
+        "/IW_ADC": "ANALOG"
       },
       "minimums": {
         "Default": {
