@@ -1,6 +1,105 @@
 """Grouped rule families; explicit contexts and no import-time checks."""
 from types import SimpleNamespace
 
+PWM_CHANNELS = tuple(
+    (f'U{8+i}', raw, output, str(i+driver), f'/PWM_{phase}{side}', f'R{56+2*i+offset}')
+    for i, phase in enumerate('UVW')
+    for raw, output, driver, side, offset in [('1', '7', 1, 'H', 0), ('5', '3', 4, 'L', 1)]
+)
+
+
+def pwm_safety_errors(values, pins):
+    """Require independent six-channel inhibition; this does not generate deadtime."""
+    errors = []
+
+    def rail(ref, pin, name):
+        if pins.get((ref, pin)) != name:
+            errors.append(f'{ref}.{pin}: PWM safety gate requires {name}')
+
+    def same(*nodes):
+        nets = [pins.get(node) for node in nodes]
+        if (not all(nets) or len(set(nets)) != 1 or
+                nets[0].startswith('unconnected-') or nets[0] in {'/GND', '/VIO_3V3'}):
+            errors.append(f'PWM safety connection missing or tied to a rail: {nodes}')
+
+    for ref, expected in [('U1', 'DRV8300DPWR'), ('U11', 'SN74LVC1G11DCKR'),
+                          *[(f'U{i}', 'SN74LVC2G08DCUR') for i in (8, 9, 10)],
+                          *[(f'R{i}', '10k') for i in range(56, 62)]]:
+        if values.get(ref) != expected:
+            errors.append(f'{ref}: PWM safety gate requires {expected}')
+    for pin, net in [('1', '/GATE_EN'), ('3', '/PWR_READY'), ('6', '/ARMED'),
+                     ('5', '/VIO_3V3'), ('2', '/GND')]:
+        rail('U11', pin, net)
+    for gate in ('U8', 'U9', 'U10'):
+        rail(gate, '8', '/VIO_3V3')
+        rail(gate, '4', '/GND')
+        same(('U11', '4'), (gate, '2'), (gate, '6'))
+    for gate, raw, output, driver, net, pull in PWM_CHANNELS:
+        rail(gate, raw, net)
+        same((gate, output), ('U1', driver), (pull, '1'))
+        rail(pull, '2', '/GND')
+        if pins.get(('U1', driver)) in {f'/PWM_{p}{s}' for p in 'UVW' for s in 'HL'}:
+            errors.append(f'U1.{driver}: raw PWM bypasses independent inhibit')
+    outputs = [pins.get(('U1', str(i))) for i in range(1, 7)]
+    enable = pins.get(('U11', '4'))
+    if len(set(outputs)) != 6 or enable in outputs or enable in {
+            f'/PWM_{p}{s}' for p in 'UVW' for s in 'HL'}:
+        errors.append('PWM safety outputs and enable must be separate from each other and raw PWM')
+    return errors
+
+
+def pwm_gate_levels(pins, levels):
+    """Ideal AND gates with TI DCU8 physical mapping; no delay or driver model."""
+    for gate, raw, output, _, _, _ in PWM_CHANNELS:
+        enable = '2' if raw == '1' else '6'
+        levels[pins[(gate, output)]] = int(bool(levels[pins[(gate, raw)]] and
+                                               levels[pins[(gate, enable)]]))
+
+
+def pwm_pulldown_selection_errors(parts, bom):
+    errors = []
+    expected = {'Value': '10k', 'MPN': 'ABD03K1002FT', 'LCSC': 'C5139509',
+                'Footprint': 'Resistor_SMD:R_0603_1608Metric',
+                'Alternative_MPN': 'UNQUALIFIED', 'Alternative_LCSC': 'UNVERIFIED',
+                'Alternative_Status': 'UNQUALIFIED'}
+    for i in range(56, 62):
+        ref = f'R{i}'
+        if parts.get(ref) != expected:
+            errors.append(f'{ref}: require reviewed 10k 1% PWM pulldown identity; old alternatives forbidden')
+        row = bom.get(ref, {})
+        if any(row.get(key) != expected[field] for key, field in (
+                ('Value / Part', 'Value'), ('MPN', 'MPN'), ('LCSC', 'LCSC'), ('Package', 'Footprint'),
+                ('Alternative MPN', 'Alternative_MPN'), ('Alternative LCSC', 'Alternative_LCSC'))):
+            errors.append(f'{ref}: PWM pulldown BOM differs from reviewed selection')
+    return errors
+
+
+def check_pwm_safety(project, xml=None):
+    import csv
+    import xml.etree.ElementTree as ET
+    from pcbtools.schematic import discover_sheets
+    from pcbtools.kicad import direct_child_forms, property_value
+
+    parts = {}
+    for path in discover_sheets(project):
+        for form in direct_child_forms(path.read_text(encoding='utf-8'), 'symbol'):
+            if '(lib_id ' in form.text:
+                parts[property_value(form.text, 'Reference')] = {
+                    key: property_value(form.text, key) for key in (
+                        'Value', 'MPN', 'LCSC', 'Footprint', 'Alternative_MPN',
+                        'Alternative_LCSC', 'Alternative_Status')}
+    with project.bom.open(encoding='utf-8-sig', newline='') as stream:
+        bom = {row['Ref']: row for row in csv.DictReader(stream)}
+    errors = pwm_pulldown_selection_errors(parts, bom)
+    if xml:
+        root = ET.parse(xml).getroot()
+        values = {c.get('ref'): c.findtext('value') for c in root.findall('./components/comp')}
+        pins = {(n.get('ref'), n.get('pin')): net.get('name')
+                for net in root.findall('./nets/net') for n in net.findall('node')}
+        errors.extend(pwm_safety_errors(values, pins))
+    return errors
+
+
 def electrical_api():
     #!/usr/bin/env python3
     """Gate A/B netlist-backed electrical audit and deliberately bounded ngspice checks.
@@ -105,6 +204,9 @@ def electrical_api():
             if len(set(names)) != 1:
                 raise TopologyError(f"Disconnected physical topology {terminals}: {names}")
 
+        gate_errors = pwm_safety_errors(components, pins)
+        if gate_errors:
+            raise TopologyError('; '.join(gate_errors))
         for ref in ("U2", "U3", "U4"):
             value(ref, "INA240A1DR")
         value("U1", "DRV8300DPWR")  # D non-inverted; DI is unsafe with the all-low inhibit.
@@ -632,14 +734,12 @@ def ocp_behavior(pins):
         c.q = q
         armed, run, levels = c.step(GATE_EN=en, PWR_GOOD=pg)
         for mask in range(64):
-            for index, gate in enumerate(["U8", "U9", "U10"]):
-                for channel, (a, b, out) in enumerate([("1", "2", "3"), ("5", "6", "7")]):
-                    raw = (mask >> (index * 2 + channel)) & 1
-                    levels[pins[(gate, a)]] = raw
-                    output = pins[(gate, out)]
-                    levels[output] = int(levels[pins[(gate, a)]] and levels[pins[(gate, b)]])
-                    driver_pin = str(index + 4 if channel == 0 else index + 1)
-                    assert levels[pins[("U1", driver_pin)]] == (raw and run), (gate, out, mask)
+            for index, phase in enumerate('UVW'):
+                levels[f'/PWM_{phase}H'] = (mask >> (index*2)) & 1
+                levels[f'/PWM_{phase}L'] = (mask >> (index*2+1)) & 1
+            pwm_gate_levels(pins, levels)
+            for _, _, _, driver_pin, raw_net, _ in PWM_CHANNELS:
+                assert levels[pins[("U1", driver_pin)]] == (levels[raw_net] and run), (driver_pin, mask)
             checks += 1
     return checks
 

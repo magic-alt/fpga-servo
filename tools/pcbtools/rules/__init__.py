@@ -58,6 +58,8 @@ def run_rules(project, scope, inputs):
             return api.compare_snapshot(api.collect_snapshot(inputs.get("netlist")),expected,require_parity=bool(inputs.get("netlist")))
         check("pcb.archived_regression",archived)
     if "protection" in project.rule_sets:
+        from .protection import check_pwm_safety
+        check("protection.pwm_safety_gate", lambda: check_pwm_safety(project, inputs.get("xml")))
         if project.parameters.get("gate_resistor_selection"):
             from .protection import check_gate_resistors
             check("gate.pulse_resistor_selection", lambda: check_gate_resistors(project, inputs.get("xml")))

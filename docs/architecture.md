@@ -91,7 +91,7 @@ The PCB uses one continuous ground reference on the bottom layer. High-current b
 
 ## Configuration-time default and restart policy
 
-R80..R85 pull the six raw PWM inputs to GND through 10k. R86 pulls GATE_EN to GND through 10k. With VIO valid and FPGA outputs high impedance, the AND gates have defined low commands and RUN_OK remains low. R56..R61 are separate pull-downs on the already gated driver inputs. C80..C83 bypass the four safety logic supplies; C84 bypasses bus INA240 U5 and C85 bypasses LM393LV U15. C43..C45 bypass INA240 supply pins to GND.
+R80..R85 pull the six raw PWM inputs to GND through 10k. R86 pulls GATE_EN to GND through 10k. With VIO valid and FPGA outputs high impedance, the AND gates have defined low commands and RUN_OK remains low. R56..R61 are separate **10k** pull-downs on the already gated driver inputs. This block is **PWM_SAFETY_GATE**, an independent inhibit rather than a deadtime generator. See the [current review and controlled re-enable contract](pwm_safety_gate_review_2026-10-20.md); cycle-boundary release remains a required, unimplemented FPGA function. C80..C83 bypass the four safety logic supplies; C84 bypasses bus INA240 U5 and C85 bypasses LM393LV U15. C43..C45 bypass INA240 supply pins to GND.
 
 U20 implements hardware ARM latching, with supervised VIO/VA5 reset and raw OCP/PWR_GOOD asynchronous clear. Fault recovery alone cannot resume PWM. J1.10 FAULT_CLEAR re-arms on a rising edge with GATE_EN low. See `ocp_latch_review_2026-10-09.md` for the required clear protocol, timing conditions and bench gates. The bus detector has a nominal 1.000 V threshold (+25 A positive bus current). Response time, fault overshoot and complete error budget remain open.
 

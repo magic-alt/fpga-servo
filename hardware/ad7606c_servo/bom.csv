@@ -92,12 +92,12 @@ R50,1,8.2k,RESI(开步睿思),PTFR0603B8K20P9,Resistor_SMD:R_0603_1608Metric,C35
 R53,1,2k,FH(风华),TD03G2001BT,Resistor_SMD:R_0603_1608Metric,C666953,ERA3AEB202V,C193242,Prototype candidate; OEM reviewed; stock checked 2026-10-10; thermal and dynamic qualification OPEN,True,False
 R54,1,4.7k,FH(风华),RS-03K4701FT,Resistor_SMD:R_0603_1608Metric,C116693,0603WAF4701T5E,C23162,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R55,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R56,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R57,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R58,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R59,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R60,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
-R61,1,100k,FH(风华),RS-03K1003FT,Resistor_SMD:R_0603_1608Metric,C115320,0603WAF1003T5E,C25803,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
+R56,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+R57,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+R58,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+R59,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+R60,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,UNQUALIFIED,UNVERIFIED,OPEN,True,False
+R61,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,UNQUALIFIED,UNVERIFIED,OPEN,True,False
 R70,1,10k,FH(风华),TD03G1002BT,Resistor_SMD:R_0603_1608Metric,C667034,PTFR0603B10K0P9,C328421,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R71,1,10k,FH(风华),TD03G1002BT,Resistor_SMD:R_0603_1608Metric,C667034,PTFR0603B10K0P9,C328421,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
 R80,1,10k,FH(风华),ABD03K1002FT,Resistor_SMD:R_0603_1608Metric,C5139509,0603WAF1002T5E,C25804,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False

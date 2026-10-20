@@ -1,5 +1,9 @@
 # AD7606C 外置 DC-link 改版与验证
 
+## 后续 PWM ECO 提示
+
+本报告及其 ZIP 对应本日 PWM 下拉优化之前的源。后续两工程 R56–R61 已改为 10 kΩ；[当前 PWM_SAFETY_GATE 审查](../../pwm_safety_gate_review_2026-10-20.md)记录新鲜验证和当前源摘要。此处保留外部 DC-link 的拓扑/计算历史，旧 ZIP 不能作为新阻值版的制造交付。
+
 2026-10-20，分支 `fix/ad7606c-jlc-fabrication-review-20261020`。用户明确取消 dc-link 整页器件，改用外部母线电容和泄放电阻，只预留一个接口。本次仅修改 AD7606C 工程；ADS8588S 对照工程保持原电路。
 
 ## 已落实的电气与 PCB 变更

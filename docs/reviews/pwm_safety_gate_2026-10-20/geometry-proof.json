@@ -1,0 +1,70 @@
+{
+  "ads8588s": {
+    "native_geometry_exact": true,
+    "tracks_and_vias": 2391,
+    "footprints": 183,
+    "zone_outlines_and_drawings_exact": true,
+    "only_value_changes": {
+      "R61": [
+        "100k",
+        "10k"
+      ],
+      "R57": [
+        "100k",
+        "10k"
+      ],
+      "R60": [
+        "100k",
+        "10k"
+      ],
+      "R58": [
+        "100k",
+        "10k"
+      ],
+      "R56": [
+        "100k",
+        "10k"
+      ],
+      "R59": [
+        "100k",
+        "10k"
+      ]
+    },
+    "source_sha256": "cc3fb97b7e756f7d50da15dc77c1bfe5d01711db20bfa48eb0c4dd09579df4c1",
+    "before_sha256": "1e1c3cb6bd8ab20bff919ced949aacd77a6dd731d11b0b3e95d82c8a1b06bbf1"
+  },
+  "ad7606c": {
+    "native_geometry_exact": true,
+    "tracks_and_vias": 2421,
+    "footprints": 185,
+    "zone_outlines_and_drawings_exact": true,
+    "only_value_changes": {
+      "R61": [
+        "100k",
+        "10k"
+      ],
+      "R57": [
+        "100k",
+        "10k"
+      ],
+      "R60": [
+        "100k",
+        "10k"
+      ],
+      "R58": [
+        "100k",
+        "10k"
+      ],
+      "R56": [
+        "100k",
+        "10k"
+      ],
+      "R59": [
+        "100k",
+        "10k"
+      ]
+    },
+    "source_sha256": "421c4f21e8b1512d28c76484f8b4afc593c268bd3d8932932069a2361ac0ac86",
+    "before_sha256": "348607f0b5ac7b2ef2b5d9604188e74628dcc45367352c171515d4061342e03e"
+  }
+}

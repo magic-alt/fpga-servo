@@ -1,0 +1,70 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-20T13:28:15",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.3",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf",
+            "violations": []
+        },
+        {
+            "path": "/power_input/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/312376f1-e243-5e66-be43-7ab9172814c4",
+            "violations": []
+        },
+        {
+            "path": "/aux_power/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/c1adb95f-d617-59aa-ad68-92336ff2ba27",
+            "violations": []
+        },
+        {
+            "path": "/gate_inverter/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/91fd78c0-db14-5f53-b838-b455f43fc153",
+            "violations": []
+        },
+        {
+            "path": "/current_adc/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/4028fa08-74d3-5a38-a6e2-af39e130b904",
+            "violations": []
+        },
+        {
+            "path": "/adc_core/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/6d2ea255-46b6-5fa1-9cff-0932c5a52113",
+            "violations": []
+        },
+        {
+            "path": "/adc_power/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/e7a11f6f-93a3-5366-b9aa-2db79f1c4f9a",
+            "violations": []
+        },
+        {
+            "path": "/ax7010_interface/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/690099d4-5edd-5668-82f6-b873861398aa",
+            "violations": []
+        },
+        {
+            "path": "/ocp_latch/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/2fe2658b-e76d-566d-af2c-acacca996e8f",
+            "violations": []
+        },
+        {
+            "path": "/encoder/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/cd27cb8e-7869-573a-9522-31ead099674a",
+            "violations": []
+        },
+        {
+            "path": "/adc_levelshift/",
+            "uuid_path": "/f437a074-aea8-5ad8-9911-5f989e0a0caf/d61b170c-0fd5-5f9a-a308-dea111910f4c",
+            "violations": []
+        }
+    ],
+    "source": "ax7010_servo_ad7606c.kicad_sch"
+}

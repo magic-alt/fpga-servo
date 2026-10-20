@@ -1,5 +1,7 @@
 # Dual ADC engineering first-board bring-up
 
+Both boards now use **PWM_SAFETY_GATE**, retaining U8–U11 and the independent latched inhibit. R56–R61 are **10 kΩ**, separate from MOSFET gate-source bleeders. Follow the [controlled re-enable contract and fault matrix](pwm_safety_gate_review_2026-10-20.md): keep all raw PWM low during arming, raise GATE_EN at a PWM boundary, hold one complete 50 µs blank period before starting PWM; asynchronous fault inhibition never waits for that boundary. This is a commissioning/RTL requirement, not implemented FPGA logic or completed bench evidence.
+
 AD7606C revision 2026-10-20 has **no onboard bulk DC-link capacitor bank or its damping resistors**. Connect the qualified external capacitor and parallel bleeder to J7 (pin 1 positive, pin 2 GND) before any energization, and leave them connected until independent measurement confirms less than 5 V. Follow the [external-network requirements and reference discharge calculation](reviews/ad7606c_jlc_2026-10-20/external_dc_link.md). This passive bleeder does not replace regeneration containment. The ADS8588S board retains its existing onboard bank.
 
 **Procedure only: every physical test below is NOT_RUN.** Record board serial/revision, frozen source/manufacturing hashes, actual fitted BOM, instruments, fixture limits, conditions and raw traces separately for each ADC board. Zero ERC/DRC does not complete a physical stage. See [first-board boundaries](reviews/dual_prototype_2026-10-18/first_board_boundary.md) and [full release gates](release_gates.md).

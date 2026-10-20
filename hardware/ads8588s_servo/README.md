@@ -1,8 +1,12 @@
 # AX7010 + ADS8588S 四层工程板
 
+## PWM safety gate ECO — 2026-10-20
+
+U8–U11 retain independent hardware inhibition; the schematic block is now PWM_SAFETY_GATE and R56–R61 use 10 kΩ pulldowns. See the [current review and re-enable contract](../../docs/pwm_safety_gate_review_2026-10-20.md). Previous manufacturing packages bind the earlier resistor values and require regeneration/review before this ECO is fabricated.
+
 2026-10-19：当前源已采用修复后的四层 PCB，完成 U7 物理引脚、独立阻尼 DC-link/J7、12 V 总负载 1 A、5 V 有效容量/软启动、装配焊盘及关键布线修复。原生 ERC 为 0 错误 / 0 警告 / 0 排除，原生 DRC 为 0 违规 / 0 未连接 / 0 图板差异；八路 Kelvin、严格局部逃线、自由直角和 ADC 最大 10.2 mm 本体数字铜路检查通过。**制造放行仍为 BLOCKED，禁止直接投板。**
 
-打开 [KiCad 工程](ax7010_servo_reva.kicad_pro) 或 [PCB](ax7010_servo_reva.kicad_pcb)。当前 PCB SHA256：`e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226`。[采用与来源记录](../../docs/reviews/dual_prototype_2026-10-18/ads8588s_pcb_adoption.json)不构成人工批准。
+打开 [KiCad 工程](ax7010_servo_reva.kicad_pro) 或 [PCB](ax7010_servo_reva.kicad_pcb)。历史采用 PCB SHA256：`e68d2fb9d8196d84c968dab1cee8396ff281fe9f6e09dacda5a4bb312c63d226`（PWM ECO 前；当前摘要见门控审查）。[采用与来源记录](../../docs/reviews/dual_prototype_2026-10-18/ads8588s_pcb_adoption.json)不构成人工批准。
 
 - 原生源：9 页、180 元件 / 145 网络 / 634 引脚归属，包含 DNP 和板外 J6。
 - 采购实装：169 项；五个裸铜测试点不进入装配 BOM/CPL，DNP/板外件独立排除。
