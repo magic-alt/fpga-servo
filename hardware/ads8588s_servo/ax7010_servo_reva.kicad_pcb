@@ -10763,7 +10763,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "664ff99a-11c9-4f17-bdc0-3351dd3bd2cd")
@@ -10774,7 +10774,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(property "Datasheet" "https://www.fhcomp.com/zh-cn/product_info/?prod_code=ABD03K1002FT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10785,7 +10785,7 @@
 				)
 			)
 		)
-		(property "Description" "100k_PWM_INPUT_PULLDOWN"
+		(property "Description" "10k_PWM_SAFETY_GATE_INPUT_PULLDOWN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10821,7 +10821,7 @@
 				)
 			)
 		)
-		(property "MPN" "RS-03K1003FT"
+		(property "MPN" "ABD03K1002FT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10834,7 +10834,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C115320"
+		(property "LCSC" "C5139509"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10847,7 +10847,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "OEM identity reviewed 2026-10-20; reuse existing 10k candidate; no fresh stock check; assembly and dynamic qualification OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10860,7 +10860,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "0603WAF1003T5E"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10873,7 +10873,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C25803"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10886,7 +10886,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+		(property "Alternative_Status" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12276,7 +12276,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "f3a56775-a79a-4fc5-8b47-e6ab2943cbc8")
@@ -12287,7 +12287,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(property "Datasheet" "https://www.fhcomp.com/zh-cn/product_info/?prod_code=ABD03K1002FT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12298,7 +12298,7 @@
 				)
 			)
 		)
-		(property "Description" "100k_PWM_INPUT_PULLDOWN"
+		(property "Description" "10k_PWM_SAFETY_GATE_INPUT_PULLDOWN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -12334,7 +12334,7 @@
 				)
 			)
 		)
-		(property "MPN" "RS-03K1003FT"
+		(property "MPN" "ABD03K1002FT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12347,7 +12347,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C115320"
+		(property "LCSC" "C5139509"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12360,7 +12360,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "OEM identity reviewed 2026-10-20; reuse existing 10k candidate; no fresh stock check; assembly and dynamic qualification OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12373,7 +12373,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "0603WAF1003T5E"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12386,7 +12386,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C25803"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12399,7 +12399,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+		(property "Alternative_Status" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16160,7 +16160,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "b9646d2a-a29b-4630-af91-2d85b418cd83")
@@ -16171,7 +16171,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(property "Datasheet" "https://www.fhcomp.com/zh-cn/product_info/?prod_code=ABD03K1002FT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16182,7 +16182,7 @@
 				)
 			)
 		)
-		(property "Description" "100k_PWM_INPUT_PULLDOWN"
+		(property "Description" "10k_PWM_SAFETY_GATE_INPUT_PULLDOWN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -16218,7 +16218,7 @@
 				)
 			)
 		)
-		(property "MPN" "RS-03K1003FT"
+		(property "MPN" "ABD03K1002FT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16231,7 +16231,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C115320"
+		(property "LCSC" "C5139509"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16244,7 +16244,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "OEM identity reviewed 2026-10-20; reuse existing 10k candidate; no fresh stock check; assembly and dynamic qualification OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16257,7 +16257,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "0603WAF1003T5E"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16270,7 +16270,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C25803"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16283,7 +16283,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+		(property "Alternative_Status" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17631,7 +17631,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "bc8a8920-b11a-45af-85ab-aea523e3c410")
@@ -17642,7 +17642,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(property "Datasheet" "https://www.fhcomp.com/zh-cn/product_info/?prod_code=ABD03K1002FT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17653,7 +17653,7 @@
 				)
 			)
 		)
-		(property "Description" "100k_PWM_INPUT_PULLDOWN"
+		(property "Description" "10k_PWM_SAFETY_GATE_INPUT_PULLDOWN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17689,7 +17689,7 @@
 				)
 			)
 		)
-		(property "MPN" "RS-03K1003FT"
+		(property "MPN" "ABD03K1002FT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17702,7 +17702,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C115320"
+		(property "LCSC" "C5139509"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17715,7 +17715,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "OEM identity reviewed 2026-10-20; reuse existing 10k candidate; no fresh stock check; assembly and dynamic qualification OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17728,7 +17728,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "0603WAF1003T5E"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17741,7 +17741,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C25803"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17754,7 +17754,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+		(property "Alternative_Status" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20565,7 +20565,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "015635c3-2e3d-47a2-9b34-5e4793e1c1c2")
@@ -20576,7 +20576,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(property "Datasheet" "https://www.fhcomp.com/zh-cn/product_info/?prod_code=ABD03K1002FT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20587,7 +20587,7 @@
 				)
 			)
 		)
-		(property "Description" "100k_PWM_INPUT_PULLDOWN"
+		(property "Description" "10k_PWM_SAFETY_GATE_INPUT_PULLDOWN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -20623,7 +20623,7 @@
 				)
 			)
 		)
-		(property "MPN" "RS-03K1003FT"
+		(property "MPN" "ABD03K1002FT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20636,7 +20636,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C115320"
+		(property "LCSC" "C5139509"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20649,7 +20649,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "OEM identity reviewed 2026-10-20; reuse existing 10k candidate; no fresh stock check; assembly and dynamic qualification OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20662,7 +20662,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "0603WAF1003T5E"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20675,7 +20675,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C25803"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20688,7 +20688,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+		(property "Alternative_Status" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34040,7 +34040,7 @@
 				)
 			)
 		)
-		(property "Value" "100k"
+		(property "Value" "10k"
 			(at 0 1.43 0)
 			(layer "F.Fab")
 			(uuid "9cf15288-5c6c-4ff0-a4e5-5cd4af4c1529")
@@ -34051,7 +34051,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://atta.szlcsc.com/upload/public/pdf/source/20260525/1D8CDEB9F7F4208858E1F2F6F2BB4F43.pdf"
+		(property "Datasheet" "https://www.fhcomp.com/zh-cn/product_info/?prod_code=ABD03K1002FT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34062,7 +34062,7 @@
 				)
 			)
 		)
-		(property "Description" "100k_PWM_INPUT_PULLDOWN"
+		(property "Description" "10k_PWM_SAFETY_GATE_INPUT_PULLDOWN"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -34098,7 +34098,7 @@
 				)
 			)
 		)
-		(property "MPN" "RS-03K1003FT"
+		(property "MPN" "ABD03K1002FT"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34111,7 +34111,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C115320"
+		(property "LCSC" "C5139509"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34124,7 +34124,7 @@
 				)
 			)
 		)
-		(property "Sourcing_Status" "Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified"
+		(property "Sourcing_Status" "OEM identity reviewed 2026-10-20; reuse existing 10k candidate; no fresh stock check; assembly and dynamic qualification OPEN"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34137,7 +34137,7 @@
 				)
 			)
 		)
-		(property "Alternative_MPN" "0603WAF1003T5E"
+		(property "Alternative_MPN" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34150,7 +34150,7 @@
 				)
 			)
 		)
-		(property "Alternative_LCSC" "C25803"
+		(property "Alternative_LCSC" "UNVERIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34163,7 +34163,7 @@
 				)
 			)
 		)
-		(property "Alternative_Status" "READY_FOR_LOW_VOLTAGE_REFS_ONLY_R20_BLOCKED"
+		(property "Alternative_Status" "UNQUALIFIED"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")

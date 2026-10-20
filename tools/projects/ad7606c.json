@@ -148,7 +148,8 @@
       "hardware/ad7606c_servo/mechanical/model_sources.json",
       "hardware/ad7606c_servo/mechanical/README.md",
       "hardware/ad7606c_servo/evidence/source_manifest_before_dual_prototype_2026-10-18.json",
-      "hardware/ad7606c_servo/evidence/source_manifest_before_layout_adoption_2026-10-19.json"
+      "hardware/ad7606c_servo/evidence/source_manifest_before_layout_adoption_2026-10-19.json",
+      "hardware/ad7606c_servo/evidence/source_manifest_before_pwm_safety_gate_2026-10-20.json"
     ],
     "mechanical_refs": [
       "H1",

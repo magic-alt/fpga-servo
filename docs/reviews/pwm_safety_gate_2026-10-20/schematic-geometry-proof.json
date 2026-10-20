@@ -1,0 +1,30 @@
+{
+  "ads8588s": {
+    "all_wires_junctions_labels_hierarchy_and_embedded_library_exact": true,
+    "only_changed_symbol_refs": [
+      "R56",
+      "R57",
+      "R58",
+      "R59",
+      "R60",
+      "R61"
+    ],
+    "all_symbol_coordinates_uuids_pin_uuids_instances_and_assembly_flags_exact": true,
+    "block_title": "PWM_SAFETY_GATE",
+    "visible_power_and_ground_geometry": "UNCHANGED_NATIVE_RULES_PASS"
+  },
+  "ad7606c": {
+    "all_wires_junctions_labels_hierarchy_and_embedded_library_exact": true,
+    "only_changed_symbol_refs": [
+      "R56",
+      "R57",
+      "R58",
+      "R59",
+      "R60",
+      "R61"
+    ],
+    "all_symbol_coordinates_uuids_pin_uuids_instances_and_assembly_flags_exact": true,
+    "block_title": "PWM_SAFETY_GATE",
+    "visible_power_and_ground_geometry": "UNCHANGED_NATIVE_RULES_PASS"
+  }
+}

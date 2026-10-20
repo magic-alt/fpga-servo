@@ -1,10 +1,14 @@
 # AX7010 + AD7606C-16 四层工程板
 
-2026-10-20：按用户确认取消整页板载 DC-link 电容和阻尼器件，仅保留 J7 外部电容/泄放接口，已同步原理图、PCB、BOM 和验证合同。新鲜 ERC/DRC/未连接/图板差异均为 0；当前制造复审导出通过。见[外置 DC-link 改版及证据](../../docs/reviews/ad7606c_jlc_2026-10-20/external_dc_link.md)。材料/特殊工艺接受、工程签核与实物资格仍开放。
+## PWM safety gate ECO — 2026-10-20
+
+U8–U11 retain independent hardware inhibition; R56–R61 now use 10 kΩ. The current [PWM_SAFETY_GATE review](../../docs/pwm_safety_gate_review_2026-10-20.md) supersedes earlier resistor/source hashes. Regenerate and review manufacturing outputs before fabricating this ECO; controlled restart RTL and dynamic qualification remain OPEN.
+
+2026-10-20：按用户确认取消整页板载 DC-link 电容和阻尼器件，仅保留 J7 外部电容/泄放接口，已同步原理图、PCB、BOM 和验证合同。新鲜 ERC/DRC/未连接/图板差异均为 0；当时制造复审导出通过（PWM ECO 前，需重新生成/审核）。见[外置 DC-link 改版及证据](../../docs/reviews/ad7606c_jlc_2026-10-20/external_dc_link.md)。材料/特殊工艺接受、工程签核与实物资格仍开放。
 
 2026-10-19 历史修复：四层 PCB 完成 U7、当时的 DC-link/J7、12 V 总负载 1 A、5 V 有效容量/软启动、装配焊盘、ADC 本体旁扇出及关键回路修复。八路 Kelvin、严格局部逃线、自由直角和 ADC 最大 10.2 mm 本体数字铜路检查在本次改版后重新通过。**人工工程审核、材料/特殊工艺接受和制造放行仍开放，禁止直接投板。**
 
-打开 [KiCad 工程](ax7010_servo_ad7606c.kicad_pro) 或 [PCB](ax7010_servo_ad7606c.kicad_pcb)。当前源 SHA256、制造输出和实际变更见[本版摘要](../../docs/reviews/ad7606c_jlc_2026-10-20/external_summary.json)。[历史采用证明](../../docs/reviews/dual_prototype_2026-10-18/ad7606c_pcb_adoption_final.json)及[来源转换](../../docs/reviews/dual_prototype_2026-10-18/layout_adoption_transition.json)继续保留，没有取消 ADS8588S 原方案保存检查。
+打开 [KiCad 工程](ax7010_servo_ad7606c.kicad_pro) 或 [PCB](ax7010_servo_ad7606c.kicad_pcb)。当前源摘要见[门控 ECO 证据](../../docs/reviews/pwm_safety_gate_2026-10-20/summary.json)，外置 DC-link 的历史制造输出与变更见[当时摘要](../../docs/reviews/ad7606c_jlc_2026-10-20/external_summary.json)。[历史采用证明](../../docs/reviews/dual_prototype_2026-10-18/ad7606c_pcb_adoption_final.json)及[来源转换](../../docs/reviews/dual_prototype_2026-10-18/layout_adoption_transition.json)继续保留，没有取消 ADS8588S 原方案保存检查。
 
 - 原生源：11 页、182 元件 / 162 网络 / 674 引脚归属，包含 DNP 和板外 J6。
 - 采购实装：171 项；五个测试点为 PCB 裸铜，不进入装配 BOM/CPL。

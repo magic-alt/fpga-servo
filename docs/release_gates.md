@@ -1,5 +1,7 @@
 # 当前硬件发布门禁
 
+2026-10-20 PWM 门控 ECO：两套工程保留 U8–U11，图面更名 PWM_SAFETY_GATE，R56–R61 改为 10 kΩ，并修正数字模型的 DCU8 通道脚配对。[本轮说明与当前证据](pwm_safety_gate_review_2026-10-20.md)。此前制造包/摘要绑定旧阻值和源哈希，不能直接用于本轮 ECO；周期边界恢复的 RTL 与全部动态测试仍未完成，不关闭下述门禁。
+
 状态：**SCHEMATIC/BOM AND FOUR-LAYER CAD VALIDATED / ENGINEERING REVIEWS OPEN / PCB RELEASE BLOCKED / NOT FOR FABRICATION**。本页整理当前适用条件，不把历史勾选或零 DRC 结论沿用到当前设计。当前源哈希与审核资料见[双方案入口](reviews/dual_prototype_2026-10-18/README.md)。
 
 | 工程 | 当前交付 | PCB 状态 |
