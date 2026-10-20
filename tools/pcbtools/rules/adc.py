@@ -492,6 +492,14 @@ def ad7606c_api(project):
         oldc,oldp=old;newc,newp=new
         errors=[]
         changed={"U6",*(f"C{n}" for n in range(60,69))}
+        # This exact, user-authorized AD7606C ECO removes only the onboard bank.
+        # Its replacement interface and absence are independently checked by dc_link.
+        dc_profile = project.parameters.get("dc_link_profile")
+        if dc_profile:
+            profile = json.loads((project.root / dc_profile).read_text(encoding="utf-8"))
+            if profile.get("mode") == "EXTERNAL_CAPACITOR_BLEEDER":
+                from .dc_link import EXTERNAL_REMOVED_REFS
+                changed.update(EXTERNAL_REMOVED_REFS)
         retained=set(oldc)-changed
         for ref in sorted(retained):
             if ref not in newc:

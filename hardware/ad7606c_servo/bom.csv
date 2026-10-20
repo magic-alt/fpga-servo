@@ -1,6 +1,4 @@
 Ref,Qty,Value / Part,Manufacturer,MPN,Package,LCSC,Alternative MPN,Alternative LCSC,Status,On_board,DNP
-C1,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-C2,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
 C3,1,1uF,Faratronic,C212E105J6BC000,Capacitor_THT:C_Rect_L18.0mm_W8.0mm_P15.00mm_FKS3_FKP3,C604836,UNQUALIFIED,UNVERIFIED,OPEN,True,False
 C4,1,100nF,TDK,C4532C0G2A104JT000N,Capacitor_SMD:C_1812_4532Metric,C342611,FM43N104J101EGG,C42391415,OPEN,True,False
 C5,1,10nF,FH(风华),0603B103K101NT,Capacitor_SMD:C_0603_1608Metric,C43253,CL10B103KB8NNNC,C1589,Prototype candidate; OEM reviewed; stock checked 2026-10-10; not production-qualified,True,False
@@ -180,24 +178,6 @@ U26,1,SN74LVC3G17,TI(德州仪器),SN74LVC3G17DCUR,fpga-servo:TI_DCU0008A_VSSOP8
 U27,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
 U28,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
 U29,1,TXU0204PWR,Texas Instruments,TXU0204PWR,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,UNVERIFIED,UNQUALIFIED,UNVERIFIED,OEM pin/package reviewed; quote and procurement not verified,True,False
-R120,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-R121,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C120,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R122,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C121,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R123,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C122,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R124,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C123,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R125,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C124,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R126,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C125,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R127,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C126,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R128,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-C127,1,100uF,NCC(日本贵弥功),EKZN101ELL101MJ20S,fpga-servo:NCC_KZN_D10_P5_Courtyard11,C337258,UNVERIFIED,UNVERIFIED,Primary only; individually damped; alternate UNQUALIFIED; static review/bench OPEN,True,False
-R129,1,0.33R,Vishay,WSL2512R3300FEA,fpga-servo:Vishay_WSL2512_0R33,UNVERIFIED,UNVERIFIED,UNVERIFIED,Exact primary; alternate UNQUALIFIED; hot/pulse bench OPEN,True,False
-J7,1,EXT_SINK,Phoenix Contact(菲尼克斯),1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,C92145,UNVERIFIED,UNVERIFIED,Dedicated protected-bus sink; primary only; external clamp bench OPEN,True,False
+J7,1,EXT_DC_LINK,Phoenix Contact(菲尼克斯),1714971,fpga-servo:PhoenixContact_MKDS_5_2_9.52mm,C92145,UNVERIFIED,UNVERIFIED,Dedicated protected-bus sink; primary only; external clamp bench OPEN,True,False
 C132,1,22uF,Murata,GRM32ER71E226KE15L,fpga-servo:Murata_GRM32_1210,C21397,UNQUALIFIED,UNVERIFIED,Exact primary; OEM combined DC/AC typical model with engineering reserves; incoming effective-C and startup/loop bench OPEN; no alternate qualification,True,False
 C133,1,10nF,FH(风华),0603B103K101NT,Capacitor_SMD:C_0603_1608Metric,C43253,UNQUALIFIED,UNVERIFIED,Primary reused from C5; full-reserve Tss budget minimum1.0901ms; startup bench OPEN,True,False

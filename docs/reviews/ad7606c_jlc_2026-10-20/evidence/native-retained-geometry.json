@@ -1,0 +1,14 @@
+{
+  "method": "KiCad pcbnew native object inventory comparison",
+  "retained_tracks_and_vias_exact": true,
+  "removed_private_branch_copper_objects": 20,
+  "new_electrical_copper_objects": 0,
+  "retained_footprint_positions_rotations_layers_and_pad_geometry_nets_exact": true,
+  "zone_outlines_and_nets_exact_fill_recomputed": true,
+  "original_mechanical_drawings_preserved": true,
+  "new_silkscreen_texts": 3,
+  "footprints_before": 205,
+  "footprints_after": 185,
+  "electrical_vias": 511,
+  "component_drill_hits": 63
+}

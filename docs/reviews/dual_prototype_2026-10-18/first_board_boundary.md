@@ -1,5 +1,7 @@
 # Engineering first-board evidence boundaries
 
+**AD7606C update, 2026-10-20:** the user-authorized external DC-link revision removes the onboard bank and damping parts and retains J7 as the single external capacitor/bleeder interface. Its current CAD, source hashes and external-network conditions are in the [revision review](../ad7606c_jlc_2026-10-20/external_dc_link.md). The AD bank-specific inventories below are historical; other pre-fabrication and physical-evidence requirements remain applicable. ADS8588S retains its onboard bank.
+
 **Fabrication remains BLOCKED until the pre-fabrication design/manufacturing requirements below close.** Engineering prototypes may generate physical evidence after manufacture. This does not authorize known pin-map, footprint, unrouted-copper or fabrication-process defects, and does not weaken [strict release gates](../../release_gates.md).
 
 Both boards use 24–48 V, 20 kHz, 10 Arms continuous phase current / **20 A instantaneous sinusoidal phase amplitude for 30 s (14.142 Arms)**, 40°C forced air and 12 V total 1 A as design inputs, not qualified ratings. The separate conservative 20 Arms bus-envelope calculation does not redefine the phase peak. Both require four layers. Airflow, fan-failure response, peak repetition/cooldown and encoder startup load must be defined before rated-operation acceptance.

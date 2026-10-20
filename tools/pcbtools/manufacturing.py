@@ -88,7 +88,15 @@ def freeze_design(project, destination, expected_source_hashes=None):
     projects = [project]
     while projects[-1].parameters.get("baseline_config"):
         projects.append(load_project(input_path(projects[-1], projects[-1].parameters["baseline_config"])))
-    for name, expected in before.items():
+    # The review registry is intentionally outside design_source_hashes to
+    # avoid self-referential review hashes. Native fabrication-intent checks
+    # still consume the profile, so freeze it as a separately bound input.
+    inputs = dict(before)
+    for owner in projects:
+        if owner.parameters.get("fabrication_profile"):
+            profile = input_path(owner, owner.parameters["fabrication_profile"])
+            inputs[profile.relative_to(project.root).as_posix()] = sha256(profile)
+    for name, expected in inputs.items():
         source = project.root / name
         target = destination / name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -96,7 +104,7 @@ def freeze_design(project, destination, expected_source_hashes=None):
         if hashlib.sha256(data).hexdigest() != expected:
             raise ProjectError("Design changed while copying frozen inputs")
         target.write_bytes(data)
-    for name in before:
+    for name in inputs:
         source = project.root / name
         target = destination / name
         owner = max((p for p in projects if source.is_relative_to(p.schematic.parent)),
@@ -143,8 +151,10 @@ def freeze_design(project, destination, expected_source_hashes=None):
         target.write_text(text, encoding="utf-8", newline="")
     if design_source_hashes(project) != before:
         raise ProjectError("Design changed while freezing inputs")
+    if any(sha256(project.root / name) != digest for name, digest in inputs.items()):
+        raise ProjectError("Manufacturing inputs changed while freezing")
     files = {name: {"source_sha256": digest, "snapshot_sha256": sha256(destination / name)}
-             for name, digest in before.items()}
+             for name, digest in inputs.items()}
     for name in files:
         (destination / name).chmod(stat.S_IREAD)
     evidence = {"root": str(destination), "files": files}

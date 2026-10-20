@@ -15,6 +15,16 @@ portable_netlist_text = _family.portable_netlist_text
 
 
 class PublicPathsTests(unittest.TestCase):
+    def test_verification_hashes_use_the_same_portable_keys_as_design_freeze(self):
+        from pcbtools.verification import source_hashes
+        from pcbtools.manufacturing import design_source_hashes
+
+        project = resolve_project('ad7606c')
+        verified = source_hashes(project)
+        frozen = design_source_hashes(project)
+        self.assertTrue(all('\\' not in key for key in verified))
+        self.assertEqual({name: verified.get(name) for name in frozen}, frozen)
+
     def test_windows_paths_and_json_escapes_are_rejected(self):
         path = "Z:" + chr(92) + "private" + chr(92) + "python.exe"
         self.assertEqual(path_lines(path), [1])

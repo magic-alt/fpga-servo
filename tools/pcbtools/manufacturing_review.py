@@ -5,7 +5,6 @@ import json
 import math
 from pathlib import Path
 import re
-import sys
 import zipfile
 
 from .project import ProjectError
@@ -43,6 +42,38 @@ def check_cam_terminator(path):
     text = Path(path).read_text(encoding='utf-8-sig').strip()
     if not text.endswith('M02*'):
         raise ProjectError('Truncated Gerber: ' + Path(path).name)
+
+
+def independent_cam_file(path, svg, plated=None):
+    """Parse with Gerbonara's API, including versions without bounding-box CLI.
+
+    This runs in the same explicitly provisioned interpreter as PDF validation.
+    The parser is independent of KiCad; a second Python subprocess is unnecessary.
+    """
+    from gerbonara.rs274x import GerberFile
+    from gerbonara.excellon import ExcellonFile
+    from gerbonara.utils import MM
+
+    layer = GerberFile.open(path) if plated is None else ExcellonFile.open(path, plated=plated)
+    bounds = layer.bounding_box(MM)
+    result = {'object_count': len(layer.objects)}
+    if layer.objects:
+        values = [*bounds[0], *bounds[1]]
+        if len(values) != 4 or not all(math.isfinite(v) for v in values):
+            raise ProjectError('Independent CAM bounds are incomplete')
+        result['independent_bounds_mm'] = values
+        Path(svg).write_text(str(layer.to_svg()), encoding='utf-8')
+        if not Path(svg).is_file() or not Path(svg).stat().st_size:
+            raise ProjectError('Empty independent CAM render')
+    if plated is not None:
+        holes = []
+        for item in layer.objects:
+            if type(item).__name__ != 'Flash':
+                raise ProjectError('Independent drill review requires circular hits, not slots')
+            item = item.converted(MM)
+            holes.append((item.x, item.y, item.aperture.diameter, plated))
+        result['holes'] = holes
+    return result
 
 
 def parse_decimal_drill(text, plated):
@@ -225,20 +256,20 @@ def export_review(project, output, tools):
                 raise ProjectError('Required CAM layer is empty: '+layer)
             item = {'sha256':sha256(f),'populated':populated}
             if populated:
-                name='cam-'+GERBER_NATIVE_SUFFIXES[layer]
-                bounds=run(name+'-bounds',[sys.executable,'-m','gerbonara','bounding-box',str(f)])
-                values = [float(v) for v in bounds.split()]
-                if len(values) != 4 or not all(math.isfinite(v) for v in values):
-                    raise ProjectError('Independent CAM bounds are incomplete')
-                item['independent_bounds_mm']=values
                 svg=out/'cam'/(layer+'.svg')
-                run(name+'-render',[sys.executable,'-m','gerbonara','render',str(f),str(svg)])
-                if not svg.is_file() or not svg.stat().st_size:raise ProjectError('Empty independent CAM render')
+                item.update(independent_cam_file(f, svg))
+                if not item['object_count']:
+                    raise ProjectError('Populated Gerber parsed as empty')
             cam[layer]=item
+        drill_cam = {}
         for f in (out/'drill').glob('*.drl'):
-            if parse_decimal_drill(f.read_text(), not f.stem.endswith('-NPTH')):
-                run('cam-'+f.stem,[sys.executable,'-m','gerbonara','render',str(f),str(out/'cam'/(f.stem+'.svg'))])
+            plated = not f.stem.endswith('-NPTH')
+            expected = parse_decimal_drill(f.read_text(encoding='utf-8'), plated)
+            item = independent_cam_file(f, out/'cam'/(f.stem+'.svg'), plated=plated)
+            item['matching'] = compare_drill_holes(expected, item.pop('holes'))
+            drill_cam[f.name] = item
         report.evidence['independent_cam']=cam
+        report.evidence['independent_drill']=drill_cam
         check_frozen_design(frozen_evidence)
         if design_source_hashes(project)!=before:raise ProjectError('Sources changed during review export')
         report.evidence['design_source_hashes']=before

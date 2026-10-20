@@ -671,46 +671,6 @@
       {
         "netclass": "GATE",
         "pattern": "Net-(Q6-G)"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C1_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C2_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C120_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C121_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C122_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C123_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C124_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C125_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C126_P"
-      },
-      {
-        "netclass": "POWER",
-        "pattern": "/power_input/DC Link Bank/DC_LINK_C127_P"
       }
     ]
   },

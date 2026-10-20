@@ -1,0 +1,32 @@
+AD7606C external DC-link engineering prototype — manufacturing review only
+NOT AN ORDER OR MANUFACTURING RELEASE
+
+Candidate: JLC041621-3313, four layers, nominal 1.6 mm, outer 2 oz / inner 1 oz,
+actual copper 70/30/30/70 um, NP-155F Tg155, ENIG, green solder mask.
+Tg155 material and exact finished stackup require responsible acceptance;
+this is not a verified Tg170 substitution or supplier approval.
+Board outline: 130 x 95 mm. No panel or tooling-edge change authorized.
+
+Finished holes requiring explicit vendor capability/acceptance:
+J1/J5, all 50 holes: nominal 1.02 mm; guaranteed finished 0.97..1.07 mm.
+J4, all 3 holes: nominal 1.85 mm; guaranteed finished 1.80..1.90 mm.
+See controlled-finished-holes.csv for each physical pin and XY.
+Regular +0.13/-0.08 mm PTH tolerance cannot meet these windows.
+Special controlled circular-hole process applicability must be agreed in writing.
+These are soldered component holes, not instructions to press-fit the connectors.
+
+All 511 electrical through vias: IPC-4761 Type VII nonconductive epoxy filled,
+planarized and copper capped; 0.30/0.40/0.50 mm nominal drill distribution.
+Do not substitute ordinary tenting or solder-mask ink plugging.
+All 63 component/mounting holes remain OPEN, not filled. There are no NPTH hits.
+Use the actual per-hole role/UUID/net inventory in hole-treatment.csv.
+
+Assembly/stencil candidate: 0.125 mm. Retain the exported custom U13 copper
+lands and separate original paste apertures, and U12 separate EP mask/paste.
+Review soldering, forming, seating, actual connector bodies and received parts.
+BOM/CPL match 171 purchased fitted components; do not place copper testpoints
+or DNP parts as purchased fitted components. External capacitor/bleeder is not
+on this PCB BOM. J7.1 positive, J7.2 ground; no onboard bulk DC-link bank.
+
+No power/thermal/dynamic/FPGA qualification, human approval or supplier process
+acceptance is implied by native CAD/independent CAM checks.

@@ -9,6 +9,23 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 
 
 class ReviewValidationTests(unittest.TestCase):
+    @unittest.skipUnless(importlib.util.find_spec('gerbonara'), 'Independent CAM parser required')
+    def test_independent_parser_api_reads_copper_without_newer_cli_commands(self):
+        source = self.root / 'line.gbr'
+        source.write_text('%FSLAX46Y46*%\n%MOMM*%\n%ADD10C,0.100*%\nD10*\nX0Y0D02*\nX10000000Y0D01*\nM02*\n')
+        result = self.api().independent_cam_file(source, self.root / 'line.svg')
+        self.assertEqual(result['object_count'], 1)
+        self.assertAlmostEqual(result['independent_bounds_mm'][0], -.05)
+        self.assertAlmostEqual(result['independent_bounds_mm'][2], 10.05)
+        self.assertIn('<svg', (self.root / 'line.svg').read_text())
+
+    @unittest.skipUnless(importlib.util.find_spec('gerbonara'), 'Independent CAM parser required')
+    def test_independent_drill_parser_matches_metric_coordinates_and_diameter(self):
+        source = self.root / 'hole-PTH.drl'
+        source.write_text('M48\nMETRIC\nT1C0.300\n%\nG90\nG05\nT1\nX12.5Y-8.25\nM30\n')
+        result = self.api().independent_cam_file(source, self.root / 'hole.svg', plated=True)
+        self.assertEqual(result['holes'], [(12.5, -8.25, .3, True)])
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)

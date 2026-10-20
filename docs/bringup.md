@@ -1,5 +1,7 @@
 # Dual ADC engineering first-board bring-up
 
+AD7606C revision 2026-10-20 has **no onboard bulk DC-link capacitor bank or its damping resistors**. Connect the qualified external capacitor and parallel bleeder to J7 (pin 1 positive, pin 2 GND) before any energization, and leave them connected until independent measurement confirms less than 5 V. Follow the [external-network requirements and reference discharge calculation](reviews/ad7606c_jlc_2026-10-20/external_dc_link.md). This passive bleeder does not replace regeneration containment. The ADS8588S board retains its existing onboard bank.
+
 **Procedure only: every physical test below is NOT_RUN.** Record board serial/revision, frozen source/manufacturing hashes, actual fitted BOM, instruments, fixture limits, conditions and raw traces separately for each ADC board. Zero ERC/DRC does not complete a physical stage. See [first-board boundaries](reviews/dual_prototype_2026-10-18/first_board_boundary.md) and [full release gates](release_gates.md).
 
 Both boards target **24–48 V, 20 kHz PWM, 10 Arms continuous phase current, 20 A instantaneous phase amplitude for 30 s (14.142 Arms for a balanced sine), 40°C ambient with forced air**. The **12 V total continuous load is 1 A**, including the input power consumed by the downstream 5.1 V converter. Fix minimum airflow, fan-failure response and peak repetition/cooldown before rated operation. Respect each local component temperature limit; the overall 50 K temperature-rise target does not override it.

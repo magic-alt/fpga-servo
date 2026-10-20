@@ -95,13 +95,13 @@ def board_errors(text, minimum=.25):
 
 
 def check_project(project):
-    profile = json.loads((project.schematic.parent / 'fabrication_profile.json').read_text())
+    profile = json.loads((project.schematic.parent / 'fabrication_profile.json').read_text(encoding='utf-8'))
     requirements = profile.get('manufacturing_requirements', {})
     if requirements.get('min_smd_copper_pad_mm') != .25:
         return ['Selected JLC SMD copper minimum must remain explicit at 0.25mm']
     if requirements.get('via_fill_material') != 'nonconductive_epoxy':
         return ['Type VII fill material must be explicit; KiCad fill flag is not a material approval']
-    errors = board_errors(project.board.read_text(), .25)
+    errors = board_errors(project.board.read_text(encoding='utf-8'), .25)
     library = project.schematic.parent / 'fpga-servo.pretty' / (RPJ + '.kicad_mod')
-    errors.extend(rpj_errors(library.read_text()))
+    errors.extend(rpj_errors(library.read_text(encoding='utf-8')))
     return errors

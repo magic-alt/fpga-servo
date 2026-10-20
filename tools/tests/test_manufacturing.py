@@ -14,6 +14,26 @@ from pcbtools.verification import native_summary
 
 
 class ManufacturingTests(unittest.TestCase):
+    def test_actual_frozen_manufacturing_intent_has_its_required_profile(self):
+        from pcbtools.manufacturing import freeze_design, check_frozen_design
+        from pcbtools.rules.fabrication_intent import check_project
+
+        repo = Path(__file__).resolve().parents[2]
+        for project_id in ('ads8588s', 'ad7606c'):
+            with self.subTest(project=project_id):
+                project = load_project(repo / f'tools/projects/{project_id}.json')
+                frozen, evidence = freeze_design(project, self.root / project_id)
+                profile = project.parameters['fabrication_profile']
+                self.assertIn(profile, evidence['files'])
+                self.assertEqual((frozen.root / profile).read_bytes(),
+                                 (project.root / profile).read_bytes())
+                self.assertEqual(check_project(frozen), [])
+                check_frozen_design(evidence)
+                (frozen.root / profile).chmod(0o666)
+                (frozen.root / profile).unlink()
+                with self.assertRaises(ValueError):
+                    check_frozen_design(evidence)
+
     def test_actual_ads_frozen_fast_candidate_inputs_are_complete_and_required(self):
         from pcbtools.manufacturing import freeze_design, check_frozen_design
         from pcbtools.rules.adc import fast_api
@@ -331,6 +351,7 @@ class ManufacturingTests(unittest.TestCase):
         self.settings = {"board": {"design_settings": {"rule_severities": {"clearance": "error"}, "drc_exclusions": []}}, "erc": {"rule_severities": {"pin_not_connected": "warning"}, "erc_exclusions": []}}
         self.write("top.kicad_pro", self.settings)
         self.write("config.json", {"schema_version": 1, "id": "fixture", "root": ".", "schematic": "top.kicad_sch", "board": "top.kicad_pcb", "output": "artifacts", "parameters": {"fabrication_profile": "fab.json"}})
+        self.write("fab.json", {"schema_version": 1, "project_id": "fixture"})
         self.project = load_project(self.root / "config.json")
 
     def write(self, name, data):
