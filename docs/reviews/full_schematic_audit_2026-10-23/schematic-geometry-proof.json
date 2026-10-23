@@ -1,0 +1,26 @@
+{
+  "ads8588s": {
+    "aux_power.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "ax7010_interface.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "ax7010_servo_reva.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "current_adc.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "dc_link.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "encoder.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "gate_inverter.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "ocp_latch.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "power_input.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized."
+  },
+  "ad7606c": {
+    "adc_core.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "adc_levelshift.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "adc_power.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "aux_power.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "ax7010_interface.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "ax7010_servo_ad7606c.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "current_adc.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "encoder.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "gate_inverter.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "ocp_latch.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized.",
+    "power_input.kicad_sch": "Exact native wiring and instance geometry; only U1 lib_id and R92 Description normalized."
+  }
+}

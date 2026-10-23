@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-23T16:45:08",
+    "ignored_checks": [],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.3",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e",
+            "violations": []
+        },
+        {
+            "path": "/DC Input & Protection/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001",
+            "violations": []
+        },
+        {
+            "path": "/DC Input & Protection/DC Link Bank/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000001/e5cf0767-de9d-45f3-83a6-1fa7693b429c",
+            "violations": []
+        },
+        {
+            "path": "/AX7010 PL Interface/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000004",
+            "violations": []
+        },
+        {
+            "path": "/Auxiliary Power/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000002",
+            "violations": []
+        },
+        {
+            "path": "/Current Sense / OCP / ADC/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000005",
+            "violations": []
+        },
+        {
+            "path": "/Gate Driver / Inverter/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000003",
+            "violations": []
+        },
+        {
+            "path": "/Differential ABZ Encoder/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000006",
+            "violations": []
+        },
+        {
+            "path": "/OCP hardware latch/",
+            "uuid_path": "/05403145-af59-4aba-b68b-68be6600865e/00000000-0000-0000-0000-000069000007",
+            "violations": []
+        }
+    ],
+    "source": "ax7010_servo_reva.kicad_sch"
+}

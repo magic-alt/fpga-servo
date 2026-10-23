@@ -5,7 +5,7 @@
 | 方案 | 当前工程 | 原生对象 / 网络 / 引脚归属 | 采购实装 |
 | --- | --- | --- | --- |
 | ADS8588SIPM | [工程与说明](ads8588s_servo/README.md)、[四层 PCB](ads8588s_servo/ax7010_servo_reva.kicad_pcb) | 180 / 145 / 634 | 169 |
-| AD7606C-16BSTZ | [工程与说明](ad7606c_servo/README.md)、[四层 PCB](ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb) | 202 / 172 / 714 | 191 |
+| AD7606C-16BSTZ | [工程与说明](ad7606c_servo/README.md)、[四层 PCB](ad7606c_servo/ax7010_servo_ad7606c.kicad_pcb) | 182 / 162 / 674 | 171 |
 
 对象计数包含 DNP 和板外 J6；五个测试点属于铜图形，不采购或装配。两板目标为 24–48 V、20 kHz、10 Arms 连续相电流、20 A 瞬时正弦相电流幅值持续 30 s（14.142 Arms）、40°C 强迫风冷；12 V 总连续负载 1 A，含下游电源输入。没有板载制动，电机操作前必须独立验证外部吸能/钳位，J7 支路自行保护。
 

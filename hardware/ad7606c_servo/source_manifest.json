@@ -4,16 +4,16 @@
     "hardware/ads8588s_servo/aux_power.kicad_sch": "d8414cdb391859ebda7352f1f1197547a80a47e4911d96313be48df39d20e81e",
     "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "833d71a0c1409f707eba8008cd57db6878fb499850c4270dc5434cc7fa9b8ca9",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "6005aca1af5750c90a5de8f2e0df553deeffa6907d3bd64208fa939366e01129",
-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "cc3fb97b7e756f7d50da15dc77c1bfe5d01711db20bfa48eb0c4dd09579df4c1",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "9e769cbcee3977af6a99e20d93eccd1c9dcb0e8ebbe1d6deb172b0faef7a3bb9",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "507a5d393dcf5499b8782184c8804cfbd13ca422df9b1316dafc16f1a4a4b4b2",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "f715c6a6b005145e1d8cdf4318b60f9b05d154e45aab2cf62defc7b09f0ef09c",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "8b2f7b5f3dbb58a3da528eda7953e63efe0c998e028dc7be387580a601b986ea",
     "hardware/ads8588s_servo/bom.csv": "9457ea2bea44075a1af62f8aee8cf29dcbfdfcd0254238995f3c14ff2f46789e",
     "hardware/ads8588s_servo/current_adc.kicad_sch": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
     "hardware/ads8588s_servo/encoder.kicad_sch": "286d0ab7ebb4272242ecab6fab39e2bba9f303e2369ce1e5603fa1a99a30f6ac",
     "hardware/ads8588s_servo/fp-lib-table": "4a788cf16d28753d9dc7f2e894c1f88410a686054738ba4be0ac84c11fcb30b2",
-    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "ca534c8004632750a16e5694eaae05eab0736b06bd21374510c64387d4619841",
-    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "0b52989b0fe9999f00956e5bf2321ebc2547da8e3081703cd3761282199533be",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "fce673deb1d6519e45364fa6d6eb031b0b783a90169f766daada8f6671f91860",
     "hardware/ads8588s_servo/power_input.kicad_sch": "5beb8557c45773470c0e7ad8e8a235c614186fc7266a8d97e3d93703bc9ed30b",
     "hardware/ads8588s_servo/sym-lib-table": "afcba65a80eea67cfcb51c00cd291651eeaa4b2683b719e6db675a7bbe6ecc5f",
     "hardware/ads8588s_servo/dc_link.kicad_sch": "043dad16678da170d280c5a2fa02b450ecdcd413cf7903f3742fb03adfd795cc",
@@ -116,16 +116,16 @@
     "hardware/ads8588s_servo/aux_power.kicad_sch": "f60a5c73245cb84af2bc586594b8d60dc803711acfb0f093aa2616b3b8bceff7",
     "hardware/ads8588s_servo/ax7010_interface.kicad_sch": "bc656f3a16278f51bb5136687888490803ef6c9e4459ec863057053b8de38c1c",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_dru": "be8b865809d2be1f9117b03cfab1249771d73c4a43924a989477b5eafac1b1d5",
-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "0ccf7a05e85969332a39dadb93e2390dcd3ff62f28dd53b5bdc4e524a065c9ba",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": "5604b70dcb7742546753030ab80efa5344de31ad6239896141d0c4ea6a34cd7d",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pro": "4440def0728d9c7c29d28ca95af08a475746a76341c8b8139f2f97f3542bd571",
     "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sch": "b45ad1f8844986c7caa5166eb703071154177e402868ced1db1b644120cd2aed",
-    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "79976b7c1ad5eb4d81e3ae979b848322c182e54bc0fb7fbb9061ddc8f72b7815",
+    "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": "cf7544624d6a68fc67feb3f03036062949c5b1a80143cacb6f4566de13eadfa7",
     "hardware/ads8588s_servo/bom.csv": "15e4191c850394e458df44ada72fbb7337df3189c8e101655fd64de1a24e753f",
     "hardware/ads8588s_servo/current_adc.kicad_sch": "31f773f5cf8ee0f3a4ebd2d9300230b5159f460c27cb1553a161553396595877",
     "hardware/ads8588s_servo/encoder.kicad_sch": "484da673b6ba3a7bdcf6745ddf8cb73eb9dea6d43e749b4719def85248caa6fa",
     "hardware/ads8588s_servo/fp-lib-table": "e3ac1d3705fdcc2ccc27134cebfae18ac8358802444f0f3950f1b09487f87f5b",
-    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "9206c1f835501822a01ff89db54ca9fbc2d909ab66eb164c36622b795b6b0ab7",
-    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+    "hardware/ads8588s_servo/gate_inverter.kicad_sch": "08e71021e960fb5c8c1d3d8a79c8d372696c8ba4f819102ffb777dfe8d5bb8a0",
+    "hardware/ads8588s_servo/ocp_latch.kicad_sch": "fce673deb1d6519e45364fa6d6eb031b0b783a90169f766daada8f6671f91860",
     "hardware/ads8588s_servo/power_input.kicad_sch": "14cebe67eb3de36e542153b2920c609060a701cfda47fab7ff8c9325c2268fc7",
     "hardware/ads8588s_servo/sym-lib-table": "ed722f79d2d9890fd2d2c932dbca44062c4179b33f0bb56fbd64a0281f89b70e",
     "hardware/ads8588s_servo/dc_link.kicad_sch": "24c20da55bed08a36a4119addef3d219d02cc35ab56bf7f5b1b9160e4c04d845",
@@ -397,5 +397,27 @@
       }
     ],
     "qualification": "Only six pulldown values and sourcing fields, schematic title/annotation changed; net membership and native geometry must remain exact; no dynamic or manufacturing approval"
+  },
+  "full_schematic_audit_2026_10_23": {
+    "previous_manifest": "hardware/ad7606c_servo/evidence/source_manifest_before_full_schematic_audit_2026-10-23.json",
+    "reason": "User-authorized review of both variants: OEM driver identity and pin names; R92 description only. Physical networks, components, footprints and PCB geometry unchanged.",
+    "changed": {
+      "hardware/ads8588s_servo/ax7010_servo_reva.kicad_pcb": {
+        "before": "cc3fb97b7e756f7d50da15dc77c1bfe5d01711db20bfa48eb0c4dd09579df4c1",
+        "after": "9e769cbcee3977af6a99e20d93eccd1c9dcb0e8ebbe1d6deb172b0faef7a3bb9"
+      },
+      "hardware/ads8588s_servo/ax7010_servo_reva.kicad_sym": {
+        "before": "f715c6a6b005145e1d8cdf4318b60f9b05d154e45aab2cf62defc7b09f0ef09c",
+        "after": "8b2f7b5f3dbb58a3da528eda7953e63efe0c998e028dc7be387580a601b986ea"
+      },
+      "hardware/ads8588s_servo/gate_inverter.kicad_sch": {
+        "before": "ca534c8004632750a16e5694eaae05eab0736b06bd21374510c64387d4619841",
+        "after": "0b52989b0fe9999f00956e5bf2321ebc2547da8e3081703cd3761282199533be"
+      },
+      "hardware/ads8588s_servo/ocp_latch.kicad_sch": {
+        "before": "714fc1dd6b2e4949a2d5a9bef2f7ab7cf479fee0888551b993d229d32fde6d86",
+        "after": "fce673deb1d6519e45364fa6d6eb031b0b783a90169f766daada8f6671f91860"
+      }
+    }
   }
 }
