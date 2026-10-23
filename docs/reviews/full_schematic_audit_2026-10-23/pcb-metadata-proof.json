@@ -1,0 +1,10 @@
+{
+  "ads8588s_servo": {
+    "exact_geometry_connectivity_and_other_properties": true,
+    "changed_metadata": "U1 pad pinfunction names; R92 Description if stored"
+  },
+  "ad7606c_servo": {
+    "exact_geometry_connectivity_and_other_properties": true,
+    "changed_metadata": "U1 pad pinfunction names; R92 Description if stored"
+  }
+}

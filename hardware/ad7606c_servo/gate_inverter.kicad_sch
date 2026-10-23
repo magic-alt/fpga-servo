@@ -276,7 +276,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "ax7010_servo_reva:FD6288T"
+		(symbol "ax7010_servo_reva:DRV8300D"
 			(pin_names
 				(offset 1.016)
 			)
@@ -295,7 +295,7 @@
 					)
 				)
 			)
-			(property "Value" "FD6288T"
+			(property "Value" "DRV8300D"
 				(at 0 -27.432 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -305,7 +305,7 @@
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -316,7 +316,7 @@
 					)
 				)
 			)
-			(property "Datasheet" ""
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/drv8300.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -338,7 +338,7 @@
 					)
 				)
 			)
-			(symbol "FD6288T_0_1"
+			(symbol "DRV8300D_0_1"
 				(rectangle
 					(start -11.43 22.86)
 					(end 17.78 -22.86)
@@ -351,11 +351,11 @@
 					)
 				)
 			)
-			(symbol "FD6288T_1_1"
+			(symbol "DRV8300D_1_1"
 				(pin input line
 					(at -15.24 10.16 0)
 					(length 5.08)
-					(name "HIN1"
+					(name "INHA"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -373,7 +373,7 @@
 				(pin input line
 					(at -15.24 6.35 0)
 					(length 5.08)
-					(name "HIN2"
+					(name "INHB"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -391,7 +391,7 @@
 				(pin input line
 					(at -15.24 2.54 0)
 					(length 5.08)
-					(name "HIN3"
+					(name "INHC"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -409,7 +409,7 @@
 				(pin input line
 					(at -15.24 -2.54 0)
 					(length 5.08)
-					(name "LIN1"
+					(name "INLA"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -427,7 +427,7 @@
 				(pin input line
 					(at -15.24 -6.35 0)
 					(length 5.08)
-					(name "LIN2"
+					(name "INLB"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -445,7 +445,7 @@
 				(pin input line
 					(at -15.24 -10.16 0)
 					(length 5.08)
-					(name "LIN3"
+					(name "INLC"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -463,7 +463,7 @@
 				(pin power_in line
 					(at 0 27.94 270)
 					(length 5.08)
-					(name "VCC"
+					(name "GVDD"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -481,7 +481,7 @@
 				(pin power_in line
 					(at 0 -27.94 90)
 					(length 5.08)
-					(name "COM"
+					(name "GND"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -499,7 +499,7 @@
 				(pin output line
 					(at 22.86 20.32 180)
 					(length 5.08)
-					(name "LO3"
+					(name "GLC"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -517,7 +517,7 @@
 				(pin output line
 					(at 22.86 16.51 180)
 					(length 5.08)
-					(name "LO2"
+					(name "GLB"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -535,7 +535,7 @@
 				(pin output line
 					(at 22.86 12.7 180)
 					(length 5.08)
-					(name "LO1"
+					(name "GLA"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -553,7 +553,7 @@
 				(pin input line
 					(at 22.86 8.89 180)
 					(length 5.08)
-					(name "VS3"
+					(name "SHC"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -571,7 +571,7 @@
 				(pin output line
 					(at 22.86 5.08 180)
 					(length 5.08)
-					(name "HO3"
+					(name "GHC"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -589,7 +589,7 @@
 				(pin passive line
 					(at 22.86 1.27 180)
 					(length 5.08)
-					(name "VB3"
+					(name "BSTC"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -607,7 +607,7 @@
 				(pin input line
 					(at 22.86 -1.27 180)
 					(length 5.08)
-					(name "VS2"
+					(name "SHB"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -625,7 +625,7 @@
 				(pin output line
 					(at 22.86 -5.08 180)
 					(length 5.08)
-					(name "HO2"
+					(name "GHB"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -643,7 +643,7 @@
 				(pin passive line
 					(at 22.86 -8.89 180)
 					(length 5.08)
-					(name "VB2"
+					(name "BSTB"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -661,7 +661,7 @@
 				(pin input line
 					(at 22.86 -12.7 180)
 					(length 5.08)
-					(name "VS1"
+					(name "SHA"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -679,7 +679,7 @@
 				(pin output line
 					(at 22.86 -16.51 180)
 					(length 5.08)
-					(name "HO1"
+					(name "GHA"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -697,7 +697,7 @@
 				(pin passive line
 					(at 22.86 -20.32 180)
 					(length 5.08)
-					(name "VB1"
+					(name "BSTA"
 						(effects
 							(font
 								(size 1.016 1.016)
@@ -2129,7 +2129,7 @@
 	(property "Sourcing_Status" "Existing critical part retained; single-source exception; stock checked 2026-10-10" (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
 )
 (symbol
-		(lib_id "ax7010_servo_reva:FD6288T")
+		(lib_id "ax7010_servo_reva:DRV8300D")
 		(at 125.73 95.25 0.0)
 		(unit 1)
 		(body_style 1)
