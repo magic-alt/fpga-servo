@@ -4,7 +4,7 @@
 
 This board is a lab/engineering servo-drive daughter board for the ALINX AX7010. It deliberately keeps the hard real-time PWM, ADC timing and encoder counting in the Zynq PL while leaving high-power switching, signal conditioning and encoder line reception on the daughter board.
 
-> **2026-10-17 工程状态**：本页 Rev.A 指 ADS8588S 原工程。AD7606C 已有独立 11 页原理图、BOM 和四路接口，见 [新工程](../hardware/ad7606c_servo/README.md)；其 PCB、RTL/STA 和实物资格未完成。两工程分别验证，不共用 ADC 引脚合同。
+> **2026-10-23 工程状态**：本页 Rev.A 指 ADS8588S 工程。两方案均已有独立原理图、BOM 和已布线四层 PCB；AD7606C 使用四路接口与外置 DC-link，见 [新工程](../hardware/ad7606c_servo/README.md)。原生 CAD 检查与制造放行分开；工程审阅、RTL/STA 和实物资格仍未完成，见 [发布门禁](release_gates.md)。两工程分别验证，不共用 ADC 引脚合同。
 
 ## Electrical target
 
@@ -15,7 +15,7 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 | MOSFET VDS | 100 V |
 | PWM | 20 kHz |
 | Continuous phase current | 10 A RMS (confirmed 2026-10-10) |
-| Peak phase current | 20 A for 30 s (confirmed 2026-10-10); repetition interval pending |
+| Peak phase current | 20 A instantaneous sinusoidal amplitude for 30 s (14.142 Arms); repetition interval pending |
 | Maximum ambient | 40 degC (confirmed 2026-10-10) |
 | Temperature-rise target | <=50 K; measurement locations pending; does not override lower component qualification limits |
 | Cooling | Forced air (confirmed 2026-10-10); airflow and fan-fault behavior pending |
@@ -27,7 +27,7 @@ This board is a lab/engineering servo-drive daughter board for the ALINX AX7010.
 | ADC | 8 ch, simultaneous, 16 bit, 200 kSPS/ch |
 | Encoder | 5 V ABZ (confirmed 2026-10-10); existing differential A+/A-, B+/B-, Z+/Z- interface; current/startup/common-mode envelope pending |
 | Logic | 3.3 V |
-| PCB | 2 layer, 1.6 mm, 2 oz recommended |
+| PCB | Four layers, 1.6 mm; outer 2 oz / inner 1 oz candidate, manufacturer/material acceptance OPEN |
 
 The latest user instruction removes the brake circuit from scope (2026-10-10). No board brake is added and PSU regeneration absorption is not assumed. S03 system surge/regeneration qualification remains OPEN; brake sizing is not a prerequisite for the other repair work. See the [thermal and encoder design brief](brake_thermal_design_basis_2026-10-10.md). The 20 A operating peak is distinct from the hardware OCP threshold and its fault overshoot; it is not yet demonstrated as an absolute current ceiling. U26 local free-air temperature must remain <=85 degC to use the current maximum-delay budget; 40 degC ambient permits only 45 K local rise there, pending thermal proof or a qualified redesign.
 
@@ -87,7 +87,7 @@ Phase INA240A1 U2..U4 retain REF1=VA_5V and REF2=GND, nominal 2.55 V zero and 0.
 
 ## Grounding strategy
 
-The PCB uses one continuous ground reference on the bottom layer. High-current bridge return paths stay local to the DC-link negative node and do not share narrow traces with ADC/encoder return currents. The analog section is physically isolated from switch nodes rather than separated with a slit plane.
+Both current four-layer PCBs reserve In1.Cu for GND. High-current bridge return paths must stay local to the DC-link negative node and avoid narrow shared returns with ADC/encoder currents. The analog section is physically separated from switch nodes rather than isolated by a slit plane. The reserved-layer geometry check does not prove return impedance or rated-current/thermal performance; these require engineering review and measurement.
 
 ## Configuration-time default and restart policy
 

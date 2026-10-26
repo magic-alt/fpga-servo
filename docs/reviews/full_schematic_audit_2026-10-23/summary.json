@@ -1,0 +1,69 @@
+{
+  "ads": {
+    "manifest": "artifacts\\full-schematic-audit-20261023\\final-current-ads\\20261023T084501Z-82wykrjm\\manifest.json",
+    "erc": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "exclusions": 0
+    },
+    "drc": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "exclusions": 0,
+      "unconnected": 0,
+      "schematic_parity": 0
+    },
+    "netlist": {
+      "components": 180,
+      "nets": 145,
+      "physical_pins": 634
+    },
+    "nonpass": [
+      [
+        "protection.qualification",
+        "NOT_RUN",
+        "RuntimeError: ngspice executable unavailable: ngspice"
+      ]
+    ],
+    "sources_unchanged": true,
+    "release_status": "BLOCKED",
+    "pcb_release": "BLOCKED"
+  },
+  "ad": {
+    "manifest": "artifacts\\full-schematic-audit-20261023\\final-current-ad\\20261023T084501Z-_devpb6o\\manifest.json",
+    "erc": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "exclusions": 0
+    },
+    "drc": {
+      "status": "PASS",
+      "errors": 0,
+      "warnings": 0,
+      "exclusions": 0,
+      "unconnected": 0,
+      "schematic_parity": 0
+    },
+    "netlist": {
+      "components": 182,
+      "nets": 162,
+      "physical_pins": 674
+    },
+    "nonpass": [],
+    "sources_unchanged": true,
+    "release_status": "BLOCKED",
+    "pcb_release": "BLOCKED"
+  },
+  "regression": {
+    "tests": 366,
+    "failed": 0,
+    "skipped": 46,
+    "native_tests": 96,
+    "native_failed": 0,
+    "latest_focused_symbol_tests": 5,
+    "focused_failed": 0
+  }
+}

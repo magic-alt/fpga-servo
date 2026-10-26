@@ -1,0 +1,32 @@
+{
+  "ads8588s": {
+    "all_physical_pins_and_net_names_exact": true,
+    "all_values_footprints_MPNs_and_sourcing_fields_exact": true,
+    "component_identity_changes": {
+      "U1": {
+        "before": "ax7010_servo_reva:FD6288T",
+        "after": "ax7010_servo_reva:DRV8300D"
+      }
+    },
+    "components": 180,
+    "nets": 145,
+    "physical_memberships": 634,
+    "baseline": "artifacts\\full-schematic-audit-20261023\\baseline-ads\\20261023T082750Z-ot4z4azh\\netlist.xml",
+    "final": "artifacts\\full-schematic-audit-20261023\\accepted-ads\\20261023T084000Z-ikygznik\\netlist.xml"
+  },
+  "ad7606c": {
+    "all_physical_pins_and_net_names_exact": true,
+    "all_values_footprints_MPNs_and_sourcing_fields_exact": true,
+    "component_identity_changes": {
+      "U1": {
+        "before": "ax7010_servo_reva:FD6288T",
+        "after": "ax7010_servo_reva:DRV8300D"
+      }
+    },
+    "components": 182,
+    "nets": 162,
+    "physical_memberships": 674,
+    "baseline": "artifacts\\ad7606c-native-audit-20261023\\20261023T075906Z-e8qb4ql7\\netlist.xml",
+    "final": "artifacts\\full-schematic-audit-20261023\\accepted-ad\\20261023T084000Z-9i7pg561\\netlist.xml"
+  }
+}

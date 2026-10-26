@@ -8,6 +8,45 @@ PWM_CHANNELS = tuple(
 )
 
 
+def gate_driver_symbol_errors(project, source_text=None):
+    """TI SLVSFG5D Table 6-2: the fitted noninverting PW20, not FD6288.
+
+    Check the reusable library as well as the embedded definition; checking
+    only U1's displayed value cannot prevent a wrong future library update.
+    """
+    from ..kicad import direct_child_forms, extract_forms, head_string, property_value
+
+    expected = dict(zip(map(str, range(1, 21)), (
+        'INHA', 'INHB', 'INHC', 'INLA', 'INLB', 'INLC', 'GVDD', 'GND',
+        'GLC', 'GLB', 'GLA', 'SHC', 'GHC', 'BSTC', 'SHB', 'GHB', 'BSTB',
+        'SHA', 'GHA', 'BSTA')))
+    alias = 'DRV8300D'
+    source = source_text if source_text is not None else (
+        project.schematic.parent / 'gate_inverter.kicad_sch').read_text(encoding='utf-8')
+    errors = []
+    instances = [f.text for f in direct_child_forms(source, 'symbol')
+                 if property_value(f.text, 'Reference') == 'U1']
+    ids = direct_child_forms(instances[0], 'lib_id') if len(instances) == 1 else []
+    if (len(instances) != 1 or
+            len(ids) != 1 or head_string(ids[0].text, 'lib_id') != 'ax7010_servo_reva:' + alias or
+            property_value(instances[0], 'MPN') != 'DRV8300DPWR'):
+        errors.append('U1 must use the DRV8300D library identity and DRV8300DPWR MPN')
+    for label, text, name in (
+            ('embedded', source, 'ax7010_servo_reva:' + alias),
+            ('library', project.libraries[0].read_text(encoding='utf-8'), alias)):
+        definitions = [f.text for f in extract_forms(text, 'symbol')
+                       if head_string(f.text, 'symbol') == name]
+        if len(definitions) != 1:
+            errors.append(f'U1 {label}: exactly one {name} definition required')
+            continue
+        pins = extract_forms(definitions[0], 'pin')
+        actual = {head_string(extract_forms(f.text, 'number')[0].text, 'number'):
+                  head_string(extract_forms(f.text, 'name')[0].text, 'name') for f in pins}
+        if len(pins) != 20 or actual != expected:
+            errors.append(f'U1 {label}: physical pins differ from TI DRV8300D PW20 Table 6-2')
+    return errors
+
+
 def pwm_safety_errors(values, pins):
     """Require independent six-channel inhibition; this does not generate deadtime."""
     errors = []
@@ -91,6 +130,7 @@ def check_pwm_safety(project, xml=None):
     with project.bom.open(encoding='utf-8-sig', newline='') as stream:
         bom = {row['Ref']: row for row in csv.DictReader(stream)}
     errors = pwm_pulldown_selection_errors(parts, bom)
+    errors.extend(gate_driver_symbol_errors(project))
     if xml:
         root = ET.parse(xml).getroot()
         values = {c.get('ref'): c.findtext('value') for c in root.findall('./components/comp')}
